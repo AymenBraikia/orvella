@@ -1,0 +1,1473 @@
+{
+    "intrest": {
+        "title": "Interessiert?",
+        "subTitle": "Erfahren Sie, warum ich diese Website für Ihr Unternehmen erstellt habe, was sie für Sie tun kann und wie wir sie in etwas verwandeln können, das Ihre Kunden tatsächlich nutzen können.",
+        "cta": "Mehr erfahren"
+    },
+    "orders": {
+        "thankYou": "Herzlichen Dank",
+        "thankYouSuffix": "Ihr Erwerb ist bestätigt",
+        "ongoingOrders": "unterwegs",
+        "orderId": "Referenz",
+        "orderDate": "Bestellt",
+        "orderTotal": "Gesamt",
+        "paymentMethod": "Zahlung",
+        "shipping": "Lieferziel",
+        "status": "Status",
+        "noOngoingOrders": "Derzeit ist kein Stück unterwegs",
+        "deliveredOrders": "Ihre Sammlung",
+        "noDeliveredOrders": "Ihre Sammlung beginnt mit Ihrem ersten Stück",
+        "subtitle": "Ihre Bestellung ist erfasst. Ein Spezialist meldet sich innerhalb eines Werktags bei Ihnen.",
+        "orderCount": "{count, plural, =0 {Keine Bestellungen} one {# Bestellung} other {# Bestellungen}}",
+        "quantity": "Anzahl",
+        "localPickup": "Abholung in der Boutique",
+        "discount": "Rabatt",
+        "browse": "Kollektion entdecken"
+    },
+    "meta": {
+        "siteName": "ARVELL",
+        "titleDefault": "ARVELL | Exklusive Luxusuhren & professionelle Beratung",
+        "description": "Entdecken Sie unsere kuratierte Auswahl an neuwertigen gebrauchten und neuen Luxusuhren, darunter Rolex, Patek Philippe und Cartier. Buchen Sie noch heute eine professionelle Beratung mit unseren Uhrenexperten.",
+        "keywords": ["Luxusuhren", "gebrauchte Rolex", "Patek Philippe Calatrava", "Cartier Panthere", "Rolex Daytona", "Luxusuhren kaufen", "Uhrenberatung", "ARVELL"],
+        "ogDescription": "Unsere kuratierte Auswahl an gebrauchten und neuen Luxusuhren wartet auf Sie. Vertrauen Sie bei Ihren hochwertigen Uhrenwünschen auf unsere Experten.",
+        "ogImageAlt": "ARVELL Luxusuhren-Kollektion",
+        "twitterDescription": "Ihr Partner für hochwertige Luxusuhren. Entdecken Sie Rolex, Patek Philippe und Cartier und buchen Sie einen Termin mit unseren Experten."
+    },
+    "common": {
+        "brand": "ARVELL",
+        "nav": {
+            "watches": "Uhren",
+            "spareParts": "Ersatzteile",
+            "favorites": "Favoriten",
+            "aboutUs": "Über uns",
+            "store": "Geschäft",
+            "sellConsign": "Verkaufen / Kommissionieren",
+            "polishingServices": "Politur & Service",
+            "shippingPayments": "Versand & Zahlung",
+            "faq": "FAQ",
+            "vacancies": "Stellenangebote"
+        },
+        "footer": {
+            "shopHeading": "Geschäft",
+            "serviceHeading": "Service",
+            "settingsHeading": "Einstellungen",
+            "themeHeading": "Thema",
+            "currency": "Währung",
+            "language": "Sprache",
+            "otherPlatformsHeading": "Weitere Plattformen",
+            "legalHeading": "Rechtliches",
+            "chrono24": "Chrono24",
+            "ebay": "eBay",
+            "ebayKleinanzeigen": "eBay Kleinanzeigen",
+            "instagram": "Instagram",
+            "imprint": "Impressum",
+            "privacyPolicy": "Datenschutzerklärung",
+            "terms": "AGB",
+            "withdrawal": "Widerruf",
+            "disclaimer": "Haftungsausschluss",
+            "cookiePolicy": "Cookie-Richtlinie",
+            "disclaimerText": "Arvell ist ein unabhängiger Händler und weder mit einer anderen Marke verbunden noch ein autorisierter Wiederverkäufer.",
+            "copyright": "©{year} Arvell. Alle Rechte vorbehalten."
+        },
+        "contactLabels": {
+            "phonePrimary": "Telefon",
+            "phoneSecondary": "Telefon (Geschäft)",
+            "email": "E-Mail"
+        },
+        "buttons": {
+            "discover": "Entdecken",
+            "add_to_cart": "In den Warenkorb",
+            "adding_to_cart": "Wird hinzugefügt",
+            "register": "registrieren",
+            "quick_view": "Schnellansicht",
+            "viewAllWatches": "Alle Uhren anzeigen",
+            "begin": "Starten",
+            "bookNow": "Jetzt buchen",
+            "bookAppointment": "Termin buchen",
+            "learnMore": "Mehr erfahren",
+            "goToShop": "Zum Shop",
+            "submit": "Absenden",
+            "previous": "Zurück",
+            "next": "Weiter",
+            "clearFilters": "Filter zurücksetzen",
+            "confirmWithdrawal": "Widerruf bestätigen",
+            "sellYourWatch": "Ihre Uhr verkaufen",
+            "consignment": "Kommission"
+        },
+        "filters": {
+            "brands": "Marken",
+            "movement": "Uhrwerk",
+            "caseMaterial": "Gehäusematerial",
+            "braceletMaterial": "Armbandmaterial",
+            "dialColor": "Zifferblattfarbe",
+            "condition": "Zustand",
+            "caseDiameterMm": "Gehäusedurchmesser (mm)",
+            "year": "Jahr",
+            "waterResistance": "Wasserdichtigkeit",
+            "includes": "Enthalten",
+            "price": "Preis",
+            "availability": "Verfügbarkeit",
+            "from": "Von",
+            "to": "Bis",
+            "searchPlaceholder": "Suchen...",
+            "search": "Suchen",
+            "searching": "Suche...",
+            "noSearchResults": "Leider wurden keine Treffer für Ihre Suchbegriffe gefunden.",
+            "sort": "Sortieren",
+            "newest": "Neueste",
+            "relevance": "Relevanz",
+            "brand": "Marke",
+            "filtersLabel": "Filter",
+            "inStock": "Auf Lager",
+            "includesBox": "Box",
+            "includesPapers": "Papiere",
+            "includesFirstInvoice": "Erstrechnung",
+            "includesServiceInvoice": "Service-Rechnung",
+            "conditionNew": "Neu",
+            "conditionPreOwned": "Gebraucht",
+            "movementManual": "Handaufzug",
+            "movementAutomatic": "Automatik",
+            "movementQuartz": "Quarz",
+            "noResults": "Keine Ergebnisse entsprechen Ihren Filtern.",
+            "clearAll": "Alle zurücksetzen",
+            "close": "Schließen",
+            "remove": "Filter entfernen",
+            "activeFilters": "Aktive Filter",
+            "showAll": "{count} weitere anzeigen",
+            "showLess": "Weniger anzeigen",
+            "showResults": "{count, plural, =0 {Keine Uhren} one {# Uhr} other {# Uhren}} anzeigen",
+            "resultCount": "{count, plural, =0 {Keine Uhren} one {# Uhr} other {# Uhren}}",
+            "priceLowToHight": "Preis aufsteigend",
+            "priceHightToLow": "Preis absteigend"
+        },
+        "productCard": {
+            "movement": "Uhrwerk",
+            "caseSize": "Gehäusegröße",
+            "bracelet": "Armband",
+            "material": "Material",
+            "details": "Details",
+            "condition": "Zustand"
+        },
+        "formFields": {
+            "firstName": "Vorname",
+            "lastName": "Nachname",
+            "companyName": "Name der Firma (optional)",
+            "countryRegion": "Land / Region",
+            "streetAddress": "Straßenadresse",
+            "postCode": "Postleitzahl/PLZ",
+            "townCity": "Stadt",
+            "diffAddress": "An andere Adresse versenden",
+            "email": "E-Mail",
+            "phone": "Telefon",
+            "orderNotes": "Bestellhinweise (optional)",
+            "orderNoteExample": "Hinweise zu Ihrer Bestellung, z.B. Besondere Hinweise zur Lieferung",
+            "message": "Nachricht",
+            "attachImages": "Bilder anhängen",
+            "required": "Dieses Feld ist erforderlich",
+            "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+        }
+    },
+    "error": {
+        "heading": "Hoppla. Etwas ist schief gelaufen!",
+        "subHeading": "Es ist ein unerwarteter Fehler aufgetreten",
+        "subText": "Beim Laden dieser Seite ist etwas kaputt gegangen. Sie können es erneut versuchen oder zur Startseite zurückkehren.",
+        "tryAgain": "versuchen Sie es erneut",
+        "return": "Heimkehr"
+    },
+    "notFound": {
+        "heading": "404 Nicht gefunden",
+        "subHeading": "Die Zeit für diese Seite ist abgelaufen",
+        "subText": "Die von Ihnen gesuchte Seite oder Uhr wurde verschoben, umbenannt oder existiert nicht mehr.",
+        "return": "Heimkehr",
+        "explore": "Entdecken Sie unsere Sammlung"
+    },
+    "auth": {
+        "signUp": {
+            "homePage": "Startseite",
+            "title": "Konto erstellen",
+            "description": "Speichern Sie die Uhren, die Sie beobachten, verfolgen Sie Angebote und bezahlen Sie bei Ihrem nächsten Einkauf schneller.",
+            "firstName": "Vorname",
+            "lastName": "Nachname",
+            "email": "E-Mail",
+            "password": "Passwort",
+            "firstNamePlaceholder": "Jordan",
+            "lastNamePlaceholder": "Blake",
+            "emailPlaceholder": "Jordan@arvell.com",
+            "passwordPlaceholder": "Mindestens 8 Zeichen",
+            "agree": "den Allgemeinen Geschäftsbedingungen und der Datenschutzerklärung zustimmen",
+            "createAccount": "Konto erstellen",
+            "creatingAccount": "Konto wird erstellt…",
+            "alreadyHaveAccount": "Sie haben bereits ein Konto?",
+            "logIn": "Anmelden",
+            "termsRequired": "Sie müssen den Allgemeinen Geschäftsbedingungen zustimmen, um fortzufahren.",
+            "somethingWentWrong": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+        },
+        "login": {
+            "homePage": "Startseite",
+            "title": "In Ihrem Konto anmelden",
+            "description": "Speichern Sie die Uhren, die Sie beobachten, verfolgen Sie Angebote und bezahlen Sie bei Ihrem nächsten Einkauf schneller.",
+            "email": "E-Mail",
+            "password": "Passwort",
+            "emailPlaceholder": "Jordan@arvell.com",
+            "passwordPlaceholder": "Mindestens 8 Zeichen",
+            "logIn": "Anmelden",
+            "loggingIn": "Anmeldung läuft…",
+            "dontHaveAccount": "Sie haben noch kein Konto?",
+            "signUp": "Registrieren",
+            "somethingWentWrong": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+        }
+    },
+    "home": {
+        "heroTitle": "ARVELL",
+        "heroSubtitle": "Ihr Partner für hochwertige Luxusuhren",
+        "discover": "Entdecken",
+        "newArrivalsHeading": "Neu eingetroffen",
+        "newArrivalsSubtext": "Unsere kuratierte Auswahl an gebrauchten und neuen Uhren wartet auf Sie.",
+        "getInspiredHeading": "Lassen Sie sich inspirieren",
+        "getInspiredSubtext": "Ihre Reise beginnt hier. Nehmen Sie sich eine Minute Zeit, um diese Fragen zu beantworten, und wir helfen Ihnen herauszufinden, was Ihr erster Schritt sein sollte.",
+        "brandsHeading": "Ikonische Marken",
+        "brandsSubtext": "Entdecken Sie unsere Kollektion klassischer Armbanduhren weltbekannter Uhrenmanufakturen.",
+        "sellConsignCard": {
+            "title": "Verkaufen / Kommissionieren",
+            "cta": "Mehr erfahren"
+        },
+        "sparePartsCard": {
+            "title": "Ersatzteile",
+            "cta": "Zum Shop"
+        },
+        "polishCard": {
+            "title": "Politur & Service",
+            "cta": "Mehr erfahren"
+        },
+        "bookingBanner": {
+            "heading": "Termin buchen",
+            "subtext": "Als Experten geben wir Ihnen unsere professionelle Einschätzung zu allen Fragen rund um Ihre Uhr.",
+            "cta": "Jetzt buchen"
+        }
+    },
+    "shop": {
+        "title": "Uhren"
+    },
+    "spare": {
+        "title": "Ersatzteile"
+    },
+    "store": {
+        "heading": "Arvell Speichern Frankfurt",
+        "cta": "Termin buchen",
+        "welcomeText": "Wir freuen uns darauf, Sie bald in unserem Geschäft begrüßen zu dürfen.",
+        "appointmentNote": "Bitte vereinbaren Sie einen Termin, damit sichergestellt ist, dass die von Ihnen gesuchte Uhr zum Zeitpunkt Ihres Besuchs verfügbar ist.",
+        "highValueNote": "Bitte beachten Sie außerdem, dass für Uhren über 15.000 € ein Termin erforderlich ist.",
+        "addressHeading": "Adresse",
+        "parkingText": "Parken: Park One Parkhaus im selben Gebäude",
+        "parkingLinkText": "(auf Google Maps ansehen)",
+        "openingHoursHeading": "Öffnungszeiten",
+        "days": {
+            "monday": "Montag",
+            "tuesday": "Dienstag",
+            "wednesday": "Mittwoch",
+            "thursday": "Donnerstag",
+            "friday": "Freitag",
+            "saturday": "Samstag",
+            "sunday": "Sonntag"
+        },
+        "closed": "Geschlossen",
+        "contactHeading": "Kontakt"
+    },
+    "sell": {
+        "heading": "Verkaufen / Kommissionieren",
+        "formCtaHeading": "Formular ausfüllen",
+        "formCtaText": "Die Experten von Arvell erstellen schnell und detailliert eine Bewertung, damit Sie das Beste aus Ihrem Verkauf herausholen können.",
+        "beginCta": "Starten",
+        "howItWorksHeading": "So funktioniert es",
+        "consign": {
+            "heading": "Kommissionieren",
+            "intro": "Wenn Sie möchten, dass wir Ihre Uhr im Auftrag verkaufen, können wir sie auf unserer Website einstellen und zu einem von beiden Parteien vereinbarten Preis anbieten. Sobald die Uhr verkauft wurde, wird Ihnen der Verkaufserlös abzüglich der Kommissionsgebühr ausgezahlt.",
+            "steps": [
+                {
+                    "title": "Angaben zu Ihrer Uhr machen",
+                    "text": "Schaffen Sie die Grundlage für eine erfolgreiche Transaktion, indem Sie uns alle Details zu Ihrer Uhr und Ihren Wunschpreis mitteilen."
+                },
+                {
+                    "title": "Kommissionsvertrag und Versandetikett",
+                    "text": "Auf Wunsch senden wir Ihnen einen Kommissionsvertrag und ein vollständig versichertes Versandetikett. Alternativ können Sie einen Termin in unserem Geschäft in Frankfurt vereinbaren."
+                },
+                {
+                    "title": "Prüfung",
+                    "text": "Sobald wir die Uhr erhalten, prüfen wir sie gründlich, um ihre Echtheit zu bestätigen."
+                },
+                {
+                    "title": "Inserat",
+                    "text": "Die Uhr wird fotografiert und auf all unseren Plattformen eingestellt."
+                },
+                {
+                    "title": "Verkauf und Auszahlung",
+                    "text": "Nachdem wir Ihre Uhr verkauft haben und die 14-tägige Rückgabefrist abgelaufen ist, überweisen wir Ihnen den Verkaufserlös."
+                }
+            ]
+        },
+        "sellDirect": {
+            "heading": "Verkaufen",
+            "intro": "Die Experten von Arvell erstellen schnell und detailliert eine Bewertung, damit Sie das Beste aus Ihrem Verkauf herausholen können.",
+            "steps": [
+                {
+                    "title": "Angaben zu Ihrer Uhr machen",
+                    "text": "Füllen Sie dieses Formular aus, um uns Informationen über Ihre Uhr mitzuteilen. Wir melden uns innerhalb von 48 Stunden mit einem Preisangebot bei Ihnen."
+                },
+                {
+                    "title": "Vereinbarung und Versandetikett",
+                    "text": "Sobald wir uns geeinigt haben, können Sie zwischen einem Versandetikett für Ihre Uhr oder einem Besuch in unserem Geschäft wählen."
+                },
+                {
+                    "title": "Prüfung",
+                    "text": "Um die Echtheit Ihrer Uhr zu überprüfen, untersuchen wir sie nach Eingang zunächst gründlich."
+                },
+                {
+                    "title": "Auszahlung",
+                    "text": "Sobald die Prüfung abgeschlossen ist, wird der vereinbarte Betrag ausgezahlt."
+                }
+            ]
+        },
+        "form": {
+            "heading": "Kommission / Ihre Uhr verkaufen",
+            "intro": "Die Experten von Arvell erstellen schnell und detailliert eine Bewertung, damit Sie das Beste aus Ihrem Verkauf herausholen können.",
+            "sections": {
+                "personalInformation": "Persönliche Daten",
+                "salePreference": "Verkaufsart",
+                "watchDetails": "Angaben zur Uhr"
+            },
+            "salePreferenceOptions": {
+                "consignment": "Kommission",
+                "sell": "Ihre Uhr verkaufen"
+            },
+            "fields": {
+                "brand": "Marke",
+                "askingPrice": "Wunschpreis",
+                "model": "Modell",
+                "referenceNumber": "Referenznummer",
+                "boxPapersQuestion": "Haben Sie die Originalbox und die Originalpapiere? Bitte wählen Sie alles Zutreffende aus.",
+                "box": "Box",
+                "paper": "Papiere",
+                "messagePlaceholder": "Gibt es sonst noch etwas, das Sie hinzufügen möchten?",
+                "condition": "Zustand",
+                "conditionNew": "Neu",
+                "conditionMint": "Neuwertig",
+                "conditionPreOwned": "Gebraucht"
+            }
+        }
+    },
+    "polish": {
+        "heading": "Politur und Service",
+        "intro": "Bei Arvell bieten wir einen erstklassigen Politur- und Reparaturservice für renommierte Marken wie Rolex, IWC, Tudor, Omega und Cartier. Unser erfahrener Uhrmacher bringt Ihre Uhr wieder in Bestform – von präziser Politur bis hin zur professionellen Wartung.",
+        "servicesHeading": "Unsere Leistungen im Überblick:",
+        "polishing": {
+            "heading": "Politur & Aufarbeitung:",
+            "intro": "Wir entfernen Kratzer und leichte Gebrauchsspuren und verleihen Ihrer Uhr ihren ursprünglichen Glanz zurück:",
+            "items": ["Politur & Aufarbeitung ab 175 €", "Politur inklusive Materialauftrag & Aufarbeitung ab 249 €"]
+        },
+        "maintenance": {
+            "heading": "Wartung & Reparatur:",
+            "intro": "Wir führen alle notwendigen Reparaturen durch und bieten in unserer Meisterwerkstatt einen zuverlässigen Wartungsservice für Ihr Uhrwerk:",
+            "items": [
+                "Batteriewechsel für Standard-Quarzmodelle 45 €",
+                "Gangregulierung / Regulierung der täglichen Gangabweichung 79 €",
+                "Zifferblattwechsel (3 Zeiger) 199 €",
+                "Zifferblattwechsel (Chronograph) 249 €",
+                "Service für Handaufzugswerke mit 3 Zeigern ab 499 €",
+                "Service für Automatikuhren mit 3 Zeigern ab 599 € (z. B. Rolex, OMEGA, Panerai usw.)",
+                "Chronographen-Service ab 749 € (z. B. Rolex, OMEGA)"
+            ],
+            "note": "Gegebenenfalls zuzüglich Ersatzteile. Für individuelle Reparaturen wird ein Kostenvoranschlag erstellt."
+        },
+        "expertHeading": "Erfahrene Fachleute:",
+        "expertText": "Unser Uhrmacher ist auf die Pflege und Reparatur von Luxusuhren spezialisiert.",
+        "qualityHeading": "Höchste Qualität:",
+        "qualityText": "Wir verwenden ausschließlich Spezialwerkzeuge, die höchsten Ansprüchen entsprechen.",
+        "speedHeading": "Schnelligkeit & Zuverlässigkeit:",
+        "speedText": "Wir bieten Ihnen schnelle Bearbeitungszeiten und zuverlässige Ausführung – damit Sie Ihre Uhr schnell wieder bei sich haben."
+    },
+    "booking": {
+        "heading": "Termin buchen",
+        "intro": "Wir freuen uns darauf, Sie bald in unserem Geschäft begrüßen zu dürfen. Bitte vereinbaren Sie einen Termin, damit sichergestellt ist, dass die von Ihnen gesuchte Uhr zum Zeitpunkt Ihres Besuchs verfügbar ist. Bitte beachten Sie außerdem, dass für Uhren über 15.000 € ein Termin erforderlich ist.",
+        "fields": {
+            "firstName": "Vorname",
+            "lastName": "Nachname",
+            "email": "E-Mail",
+            "phone": "Telefon",
+            "reason": "Grund",
+            "submit": "Absenden",
+            "appointmentDate": "Wunschtermin"
+        }
+    },
+    "about": {
+        "heading": "Über uns",
+        "paragraphs": [
+            "Unsere Geschichte begann mit einem Funken – einer eleganten Uhr, die von einem legendären britischen Agenten getragen wurde und bei unserem Gründer Aymen Braikia eine lebenslange Leidenschaft entfachte. Diese Faszination für die Uhrmacherei führte Aymen vom jungen Enthusiasten zu einem angesehenen Händler hochwertiger Zeitmesser. Im Jahr 2019 gründete er während seines Maschinenbaustudiums Arvell und verwandelte seine Begeisterung in ein erfolgreiches Geschäft, das sich ikonischen Armbanduhren widmet.",
+            "Bei Arvell sind wir Ihre vertrauenswürdigen Experten für exquisite neue und gebrauchte Zeitmesser. Unsere Expertise wird von Leidenschaft angetrieben: Wir bieten ausschließlich feinste Zeitmesser an – jede einzelne Uhr ist eine Uhr, die wir selbst mit Stolz tragen würden. Unser hauseigener Uhrmacher prüft jede Uhr sorgfältig auf Echtheit und einwandfreie Funktion, damit Sie mit Vertrauen kaufen können.",
+            "Unser Team und unser hauseigener Uhrmacher prüfen jede Uhr vor dem Verkauf sorgfältig, um ihre Echtheit und Funktion zu gewährleisten.",
+            "Sie möchten Ihre Sammlung erweitern? Wir bieten eine beeindruckende Auswahl renommierter Marken.",
+            "Unsere Marken: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling und mehr",
+            "Sie besitzen eine Uhr, die Sie verkaufen möchten? Wir sind stets auf der Suche nach außergewöhnlichen Uhren. Ganz gleich, ob Sie Ihren Zeitmesser direkt verkaufen oder kommissionieren möchten – wir bieten nahtlose und vertrauenswürdige Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind."
+        ],
+        "sellCta": "Ihre Uhr verkaufen",
+        "consignmentCta": "Kommission"
+    },
+    "payments": {
+        "heading": "Versand und Zahlung",
+        "paymentsHeading": "Zahlungen",
+        "paymentsSubtext": "Schnelle und sichere Online-Zahlungen",
+        "paymentsTable": {
+            "headers": ["Zahlungsmethode", "Dauer", "Gebühren"],
+            "rows": [
+                ["Nationale Banküberweisung", "1–2 Werktage", "0%"],
+                ["Internationale Banküberweisung", "2–3 Werktage", "0%"],
+                ["PayPal", "sofort", "3%"],
+                ["Kredit-/Debitkartenzahlung", "sofort", "1,4%"]
+            ]
+        },
+        "shippingHeading": "Versand",
+        "germany": {
+            "heading": "Deutschland",
+            "text": "Lieferung innerhalb Deutschlands: 1–2 Werktage.",
+            "rows": [
+                ["DHL", "Bis 500 €", "6 €"],
+                ["UPS", "500 € – 10.000 €", "20 €"],
+                ["UPS", "10.000 € – 15.000 €", "50 €"],
+                ["UPS", "15.000 € – 25.000 €", "80 €"],
+                ["Prosegur", "25.000 € – 50.000 €", "150 €"],
+                ["Prosegur", "50.000 € – 250.000 €", "250 €"],
+                ["Prosegur", "250.000 € und mehr", "Auf Anfrage"]
+            ]
+        },
+        "eu": {
+            "heading": "Europäische Union",
+            "text": "Lieferung innerhalb der Europäischen Union: 1–2 Werktage.",
+            "rows": [
+                ["DHL", "Bis 500 €", "15 €"],
+                ["UPS", "500 € – 10.000 €", "50 €"],
+                ["UPS", "10.000 € – 15.000 €", "150 €"],
+                ["UPS", "15.000 € – 25.000 €", "300 €"],
+                ["Prosegur", "25.000 € – 50.000 €", "400 €"],
+                ["Prosegur", "50.000 € – 250.000 €", "500 €"],
+                ["Prosegur", "250.000 € und mehr", "Auf Anfrage"]
+            ]
+        },
+        "worldwide": {
+            "heading": "Weltweit",
+            "text": "Weltweiter Versand: 3–10 Werktage.",
+            "rows": [
+                ["DHL", "Bis 500 €", "25 €"],
+                ["DHL Express", "500 € – 10.000 €", "100 €"],
+                ["UPS", "10.000 € – 15.000 €", "150 €"],
+                ["UPS", "15.000 € – 25.000 €", "400 €"],
+                ["Prosegur", "25.000 € – 50.000 €", "750 €"],
+                ["Prosegur", "50.000 € – 250.000 €", "1.000 €"],
+                ["Prosegur", "250.000 € und mehr", "Auf Anfrage"]
+            ]
+        },
+        "value": "Wert",
+        "cost": "Kosten"
+    },
+    "faq": {
+        "heading": "Häufig gestellte Fragen",
+        "categories": {
+            "payments": {
+                "heading": "Zahlungen",
+                "items": [
+                    {
+                        "q": "Welche Zahlungsmethoden bieten Sie an?",
+                        "a": "Online: Banküberweisung, PayPal (+3 %), Kreditkarte (+1,4 %). Im Geschäft: Sofortzahlung, PayPal, Kreditkarte, Barzahlung (Personalausweis erforderlich)."
+                    },
+                    {
+                        "q": "Akzeptieren Sie Nachnahme oder Zahlungen nach Erhalt der Rechnung?",
+                        "a": "Leider können wir nur Vorauszahlungen oder sofortige Zahlungen akzeptieren."
+                    },
+                    {
+                        "q": "Ist ein Uhren-Tausch möglich?",
+                        "a": "Grundsätzlich ja. Gerne erstellen wir Ihnen ein Angebot. Kontaktieren Sie uns bitte mit den Angaben zu Ihrer Uhr."
+                    },
+                    {
+                        "q": "Akzeptieren Sie Ratenzahlungen?",
+                        "a": "Derzeit können wir keine Ratenzahlungen anbieten."
+                    }
+                ]
+            },
+            "watches": {
+                "heading": "Uhren",
+                "items": [
+                    {
+                        "q": "Was ist im Lieferumfang enthalten?",
+                        "a": "Der Lieferumfang variiert. Wir geben in der Produktbeschreibung immer klar an, was enthalten ist. Der Lieferumfang ist außerdem auf dem letzten Bild des Inserats dargestellt."
+                    },
+                    {
+                        "q": "Kann ich die Produkte vor dem Kauf persönlich ansehen?",
+                        "a": "Wir präsentieren Ihnen unsere Produkte gerne in unserem Geschäft und beantworten Ihre Fragen. Bitte vereinbaren Sie einen Termin. Für Uhren über 15.000 € ist ein Termin erforderlich."
+                    },
+                    {
+                        "q": "Kann ich eine Uhr reservieren?",
+                        "a": "Leider können wir keine Uhren für Sie reservieren."
+                    },
+                    {
+                        "q": "Wie kann ich sicher sein, dass der Zustand einer Uhr korrekt angegeben ist?",
+                        "a": "Der Zustand jeder Uhr wird in der Angebotsbeschreibung angegeben und durch aktuelle hochauflösende Produktbilder dargestellt."
+                    },
+                    {
+                        "q": "Können Sie die Echtheit einer Uhr überprüfen?",
+                        "a": "Wir bieten keine Echtheitsprüfung von Uhren an, die nicht bei uns gekauft wurden."
+                    },
+                    {
+                        "q": "Kann ich meine Uhr bei Ihnen zum Service und zur Wartung vorbeibringen?",
+                        "a": "Derzeit bieten wir keine Reparatur- oder Wartungsleistungen an."
+                    },
+                    {
+                        "q": "Garantieren Sie Wasserdichtigkeit?",
+                        "a": "Nein, die Wasserdichtigkeit ist nicht Bestandteil der Garantie."
+                    },
+                    {
+                        "q": "Passen Sie Uhren an kleinere oder größere Handgelenke an?",
+                        "a": "In den meisten Fällen sind unsere Uhren für einen Handgelenkumfang von 19 cm geeignet. Für kleinere Handgelenke können wir das Armband durch Entfernen von Gliedern kürzen. Für größere Handgelenke können zusätzliche Glieder eingesetzt werden, sofern diese verfügbar sind."
+                    },
+                    {
+                        "q": "Was passiert, wenn die Uhr während des Versands verloren geht?",
+                        "a": "Wenn die Uhr auf dem Weg zu Ihnen verloren geht, erstatten wir Ihre Bestellung vollständig."
+                    },
+                    {
+                        "q": "Wie lange dauert die Lieferung?",
+                        "a": "Weitere Informationen zum Versand finden Sie auf unserer Seite Versand & Zahlung."
+                    },
+                    {
+                        "q": "Können Sie zu einem bestimmten Datum liefern?",
+                        "a": "Gerne können wir Ihre Lieferung terminlich abstimmen. Bitte teilen Sie uns Ihr gewünschtes Versanddatum im Voraus mit."
+                    },
+                    {
+                        "q": "Was passiert, wenn ich eine Lieferung verpasse?",
+                        "a": "In der Regel versucht der Zusteller ein zweites Mal zuzustellen, wenn der erste Versuch erfolglos war. Bei Uhren bis zu einem Wert von 25.000 € können Sie die Lieferung anhand der Sendungsnummer verfolgen."
+                    }
+                ]
+            },
+            "withdrawalWarranty": {
+                "heading": "Widerruf und Garantie",
+                "items": [
+                    {
+                        "q": "Kann ich die Uhr zurückgeben?",
+                        "a": "Bei Bestellungen mit Versand können Sie Ihr Widerrufsrecht innerhalb von 14 Tagen ausüben. Wir können nur Produkte in unverändertem Zustand zurücknehmen."
+                    },
+                    {
+                        "q": "Wie lange gilt die gesetzliche Gewährleistung für meine Uhr?",
+                        "a": "Die Gewährleistung gilt ein Jahr ab dem Kauf."
+                    }
+                ]
+            }
+        }
+    },
+    "vacancies": {
+        "heading": "Stellenangebote",
+        "empty": "Derzeit sind keine Stellenangebote verfügbar."
+    },
+    "imprint": {
+        "heading": "Impressum",
+        "companyLabel": "Arvell",
+        "phoneLabel": "Telefonnummer:",
+        "emailLabel": "E-Mail:",
+        "vatIdLabel": "Umsatzsteuer-Identifikationsnummer:",
+        "representativesLabel": "Vertretungsberechtigte:",
+        "odrHeading": "Hinweis zur Online-Streitbeilegung",
+        "odrText": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die hier zu finden ist. Wir sind weder verpflichtet noch bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+        "note": "Persönliche/unternehmensbezogene Identitätsdaten (Name, Adresse, Telefon, USt-IdNr.) werden absichtlich NICHT als Übersetzungsstrings gespeichert – diese sollten aus Ihrer Geschäftskonfiguration/Ihrem CMS bezogen werden, nicht aus den i18n-Dateien."
+    },
+    "legal": {
+        "privacyPolicy": {
+            "heading": "Datenschutzerklärung",
+            "intro": [
+                "Personenbezogene Daten (im Folgenden meist nur als „Daten“ bezeichnet) werden von uns nur in dem Umfang verarbeitet, der für die Bereitstellung einer funktionsfähigen und benutzerfreundlichen Website einschließlich ihrer Inhalte und der dort angebotenen Leistungen erforderlich ist.",
+                "Gemäß Art. 4 Nr. 1 der Verordnung (EU) 2016/679, also der Datenschutz-Grundverordnung (im Folgenden „DSGVO“), bezeichnet „Verarbeitung“ jeden mit oder ohne Hilfe automatisierter Verfahren ausgeführten Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung sowie die Einschränkung, das Löschen oder die Vernichtung.",
+                "Die folgende Datenschutzerklärung informiert Sie insbesondere über Art, Umfang, Zweck, Dauer und Rechtsgrundlage der Verarbeitung solcher Daten, sei es unter unserer eigenen Kontrolle oder gemeinsam mit anderen. Außerdem informieren wir Sie über die von uns eingesetzten Komponenten Dritter zur Optimierung unserer Website und Verbesserung der Benutzererfahrung, durch die gegebenenfalls auch diese Dritten von ihnen erhobene und kontrollierte Daten verarbeiten.",
+                "Unsere Datenschutzerklärung ist wie folgt aufgebaut:"
+            ],
+            "structureList": ["Informationen über uns als Verantwortliche", "Rechte der Nutzer und betroffenen Personen", "Informationen zur Datenverarbeitung"],
+            "sections": {
+                "controller": {
+                    "heading": "Informationen über uns als Verantwortliche",
+                    "text": "Verantwortlicher für diese Website im Sinne des Datenschutzrechts ist Arvell, vertreten durch den Inhaber. Die Kontaktdaten sind im Impressum aufgeführt."
+                },
+                "rights": {
+                    "heading": "Rechte der Nutzer und betroffenen Personen",
+                    "intro": "Im Hinblick auf die nachfolgend näher beschriebene Datenverarbeitung haben Nutzer und betroffene Personen das Recht",
+                    "items": [
+                        "auf Bestätigung, ob sie betreffende Daten verarbeitet werden, auf Auskunft über die verarbeiteten Daten, weitere Informationen über die Art der Datenverarbeitung sowie Kopien der Daten (vgl. auch Art. 15 DSGVO);",
+                        "unrichtige oder unvollständige Daten berichtigen oder vervollständigen zu lassen (vgl. auch Art. 16 DSGVO);",
+                        "die unverzügliche Löschung sie betreffender Daten zu verlangen (vgl. auch Art. 17 DSGVO) oder, sofern eine weitere Verarbeitung nach Art. 17 Abs. 3 DSGVO erforderlich ist, eine Einschränkung dieser Verarbeitung gemäß Art. 18 DSGVO zu verlangen;",
+                        "Kopien der sie betreffenden und/oder von ihnen bereitgestellten Daten zu erhalten und diese an andere Anbieter/Verantwortliche übertragen zu lassen (vgl. auch Art. 20 DSGVO);",
+                        "sich bei der Aufsichtsbehörde zu beschweren, wenn sie der Ansicht sind, dass ihre Daten vom Verantwortlichen unter Verstoß gegen Datenschutzvorschriften verarbeitet werden (vgl. auch Art. 77 DSGVO)."
+                    ],
+                    "outro": "Darüber hinaus ist der Verantwortliche verpflichtet, alle Empfänger, denen er Daten offengelegt hat, über Berichtigungen, Löschungen oder Einschränkungen der Verarbeitung gemäß Art. 16, 17 Abs. 1 und 18 DSGVO zu informieren. Diese Verpflichtung besteht jedoch nicht, wenn eine solche Mitteilung unmöglich ist oder einen unverhältnismäßigen Aufwand erfordert. Dennoch haben Nutzer das Recht auf Auskunft über diese Empfänger. Ebenso haben Nutzer und betroffene Personen gemäß Art. 21 DSGVO das Recht, der künftigen Verarbeitung ihrer Daten durch den Verantwortlichen gemäß Art. 6 Abs. 1 lit. f DSGVO zu widersprechen. Insbesondere ist ein Widerspruch gegen die Datenverarbeitung zum Zwecke der Direktwerbung zulässig."
+                },
+                "dataProcessing": {
+                    "heading": "Informationen zur Datenverarbeitung",
+                    "text": "Ihre bei der Nutzung unserer Website verarbeiteten Daten werden gelöscht oder gesperrt, sobald der Zweck ihrer Speicherung entfällt, sofern die Löschung nicht gegen gesetzliche Aufbewahrungspflichten verstößt oder nachfolgend nichts anderes bestimmt ist."
+                },
+                "paypal": {
+                    "heading": "Nutzung von PayPal als Zahlungsmethode",
+                    "paragraphs": [
+                        "Wenn Sie sich während des Bestellvorgangs für den Online-Zahlungsdienstleister PayPal entscheiden, werden Ihre Kontaktdaten im Rahmen der dadurch ausgelösten Bestellung an PayPal übermittelt. PayPal ist ein Angebot der PayPal (Europe) S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxemburg. PayPal übernimmt dabei die Funktion eines Online-Zahlungsdienstleisters und Treuhänders und bietet Käuferschutzleistungen an.",
+                        "Die an PayPal übermittelten personenbezogenen Daten sind überwiegend Vorname, Nachname, Adresse, Telefonnummer, IP-Adresse, E-Mail-Adresse oder andere für die Bestellabwicklung erforderliche Daten sowie bestellbezogene Daten wie Anzahl der Artikel, Artikelnummer, Rechnungsbetrag und Steuersatz, Rechnungsinformationen usw.",
+                        "Diese Übermittlung ist zur Abwicklung Ihrer Bestellung mit der von Ihnen gewählten Zahlungsmethode erforderlich, insbesondere zur Bestätigung Ihrer Identität, zur Verwaltung Ihrer Zahlung und der Kundenbeziehung. Ihre Daten werden daher auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO an PayPal übermittelt.",
+                        "Bitte beachten Sie jedoch: PayPal kann personenbezogene Daten an Dienstleister, Subunternehmer oder andere verbundene Unternehmen weitergeben, soweit dies zur Erfüllung der vertraglichen Verpflichtungen aus Ihrer Bestellung oder zur Verarbeitung der Daten in unserem Auftrag erforderlich ist.",
+                        "Je nach über PayPal gewählter Zahlungsmethode, z. B. Rechnung oder Lastschrift, kann PayPal die übermittelten personenbezogenen Daten an Auskunfteien weitergeben. Diese Übermittlung dient der Identitäts- und Bonitätsprüfung im Zusammenhang mit Ihrer Bestellung. Informationen darüber, welche Auskunfteien beteiligt sind und welche Daten grundsätzlich erhoben, verarbeitet, gespeichert und weitergegeben werden, finden Sie in den Datenschutzbestimmungen von PayPal."
+                    ]
+                },
+                "cookies": {
+                    "heading": "Cookies",
+                    "sessionCookies": {
+                        "heading": "Session-Cookies",
+                        "paragraphs": [
+                            "Wir verwenden Cookies auf unserer Website. Cookies sind kleine Textdateien oder andere Speichertechnologien, die von Ihrem Browser auf Ihrem Computer gespeichert werden. Diese Cookies verarbeiten bestimmte Informationen über Sie, beispielsweise Ihren Browser, Standortdaten oder Ihre IP-Adresse.",
+                            "Diese Verarbeitung macht unsere Website benutzerfreundlicher, effizienter und sicherer und ermöglicht uns beispielsweise, unsere Website in verschiedenen Sprachen anzuzeigen oder eine Warenkorbfunktion anzubieten.",
+                            "Rechtsgrundlage für eine solche Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO, sofern diese Cookies zur Anbahnung oder Durchführung von Vertragsverhältnissen eingesetzt werden.",
+                            "Dient die Verarbeitung nicht der Anbahnung oder Durchführung eines Vertrags, liegt unser berechtigtes Interesse in der Verbesserung der Funktionalität unserer Website. Rechtsgrundlage ist dann Art. 6 Abs. 1 lit. f DSGVO.",
+                            "Beim Schließen Ihres Browsers werden diese Session-Cookies gelöscht."
+                        ]
+                    },
+                    "thirdPartyCookies": {
+                        "heading": "Cookies von Drittanbietern",
+                        "paragraphs": [
+                            "Falls erforderlich, kann unsere Website auch Cookies von Unternehmen verwenden, mit denen wir zu Werbe-, Analyse- oder Verbesserungszwecken zusammenarbeiten.",
+                            "Einzelheiten, insbesondere zur Rechtsgrundlage und zum Zweck der Erhebung und Verarbeitung der durch Cookies erfassten Daten, entnehmen Sie bitte den folgenden Informationen."
+                        ]
+                    },
+                    "disablingCookies": {
+                        "heading": "Cookies deaktivieren",
+                        "paragraphs": [
+                            "Sie können die Verwendung von Cookies ablehnen, indem Sie die Einstellungen Ihres Browsers ändern. Ebenso können Sie bereits gespeicherte Cookies über den Browser löschen. Die dafür erforderlichen Schritte und Maßnahmen unterscheiden sich je nach verwendetem Browser. Bei Fragen nutzen Sie bitte die Hilfefunktion oder Dokumentation Ihres Browsers oder wenden Sie sich an dessen Hersteller. Die Browsereinstellungen können nicht verhindern, dass sogenannte Flash-Cookies gesetzt werden. Stattdessen müssen Sie die Einstellungen Ihres Flash-Players ändern.",
+                            "Wenn Sie die Installation von Cookies verhindern oder einschränken, sind möglicherweise nicht alle Funktionen unserer Website vollständig nutzbar."
+                        ]
+                    }
+                },
+                "youtube": {
+                    "heading": "YouTube",
+                    "paragraphs": [
+                        "Wir unterhalten eine Online-Präsenz auf YouTube, um unser Unternehmen und unsere Dienstleistungen vorzustellen und mit Kunden bzw. Interessenten zu kommunizieren. YouTube ist ein Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, einer Tochtergesellschaft der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.",
+                        "Wir weisen darauf hin, dass dadurch Nutzerdaten außerhalb der Europäischen Union, insbesondere in den USA, verarbeitet werden können. Dies kann für Nutzer zu erhöhten Risiken führen, da beispielsweise der spätere Zugriff auf die Nutzerdaten erschwert sein kann. Wir haben keinen Zugriff auf diese Nutzerdaten. Der Zugriff ist ausschließlich YouTube möglich."
+                    ]
+                },
+                "facebook": {
+                    "heading": "Facebook",
+                    "paragraphs": [
+                        "Zur Bewerbung unserer Produkte und Dienstleistungen sowie zur Kommunikation mit Interessenten oder Kunden unterhalten wir eine Präsenz auf der Facebook-Plattform.",
+                        "Auf dieser Social-Media-Plattform sind wir gemeinsam mit der Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland, verantwortlich.",
+                        "Wir haben die gemeinsame Verantwortlichkeit in einer Vereinbarung über die jeweiligen Pflichten im Sinne der DSGVO festgelegt.",
+                        "Rechtsgrundlage für die Verarbeitung der daraus resultierenden und anschließend übermittelten personenbezogenen Daten ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der Analyse, Kommunikation, dem Verkauf und der Bewerbung unserer Produkte. Rechtsgrundlage kann auch Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO sein. Gemäß Art. 7 Abs. 3 DSGVO können Sie diese Einwilligung gegenüber dem Plattformbetreiber jederzeit mit Wirkung für die Zukunft widerrufen.",
+                        "Beim Aufruf unserer Online-Präsenz auf der Facebook-Plattform verarbeitet Meta Platforms Ireland Ltd. als Betreiber der Plattform in der EU Ihre Daten (z. B. personenbezogene Daten, IP-Adresse usw.) zu statistischen Zwecken, zur Marktforschung, für Werbezwecke und zur Erstellung von Nutzerprofilen. Wenn Sie uns über Facebook kontaktieren, werden die von Ihnen angegebenen personenbezogenen Daten zur Bearbeitung Ihrer Anfrage verwendet und nach vollständiger Beantwortung gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
+                        "Es kann nicht ausgeschlossen werden, dass die Verarbeitung durch Meta Platforms Ireland Ltd. auch in den USA durch Meta Platforms, Inc., 1601 Willow Road, Menlo Park, Kalifornien, USA, erfolgt."
+                    ]
+                },
+                "instagram": {
+                    "heading": "Instagram",
+                    "paragraphs": [
+                        "Zur Bewerbung unserer Produkte und Dienstleistungen sowie zur Kommunikation mit Interessenten oder Kunden unterhalten wir eine Präsenz auf der Instagram-Plattform.",
+                        "Auf dieser Social-Media-Plattform sind wir gemeinsam mit der Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland, verantwortlich.",
+                        "Rechtsgrundlage für die Verarbeitung der daraus resultierenden und anschließend übermittelten personenbezogenen Daten ist Art. 6 Abs. 1 lit. f DSGVO und kann auch Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO sein, die jederzeit gemäß Art. 7 Abs. 3 DSGVO widerrufen werden kann.",
+                        "Beim Aufruf unserer Online-Präsenz auf der Instagram-Plattform verarbeitet Meta Platforms Ireland Ltd. als Betreiber der Plattform in der EU Ihre Daten zu statistischen Zwecken, zur Marktforschung und zur Erstellung von Nutzerprofilen. Wenn Sie uns über Instagram kontaktieren, werden die von Ihnen angegebenen personenbezogenen Daten zur Bearbeitung Ihrer Anfrage verwendet und anschließend gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
+                        "Es kann nicht ausgeschlossen werden, dass die Verarbeitung durch Meta Platforms Ireland Ltd. auch in den USA durch Meta Platforms, Inc., 1601 Willow Road, Menlo Park, Kalifornien, USA, erfolgt."
+                    ]
+                }
+            }
+        },
+        "terms": {
+            "heading": "Allgemeine Geschäftsbedingungen",
+            "indexHeading": "Inhaltsverzeichnis",
+            "index": [
+                "Geltungsbereich",
+                "Angebot, Annahme und Vertragsschluss",
+                "Widerrufsrecht",
+                "Preise und Zahlungsbedingungen",
+                "Versand und Bedingungen",
+                "Eigentumsvorbehalt",
+                "Sachmängelhaftung / Gewährleistung",
+                "Haftung",
+                "Anwendbares Recht",
+                "Gerichtsstand",
+                "Alternative Streitbeilegung",
+                "Rücktrittsrecht des Verkäufers bei Zahlungsverzug des Kunden gemäß Abschnitt 4.5",
+                "Identifizierungspflicht: Geldwäschegesetz",
+                "Informationspflicht nach dem deutschen Batteriegesetz (BattG)"
+            ],
+            "acceptanceNote": "Durch die Nutzung der Website erklären Sie sich mit den Allgemeinen Geschäftsbedingungen einverstanden.",
+            "sections": [
+                {
+                    "number": "1",
+                    "heading": "Geltungsbereich",
+                    "items": [
+                        "Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) gelten für alle Verträge zwischen einem Verbraucher oder Unternehmen (nachfolgend Kunde oder Käufer) und dem Verkäufer über die auf dieser Website angebotenen Produkte und Dienstleistungen.",
+                        "Verbraucher: jede natürliche Person, die einen Vertrag zu Zwecken abschließt, die weder ihrer gewerblichen noch ihrer selbstständigen beruflichen Tätigkeit zugerechnet werden können. Unternehmer: jede natürliche oder juristische Person oder rechtsfähige Personengesellschaft, die bei Abschluss eines Vertrags in Ausübung ihrer gewerblichen oder selbstständigen beruflichen Tätigkeit handelt.",
+                        "Es gelten ausschließlich die zum Zeitpunkt des Vertragsschlusses angegebenen Allgemeinen Geschäftsbedingungen. Abweichende Bedingungen des Kunden werden vom Verkäufer nicht anerkannt, sofern ihnen nicht ausdrücklich zugestimmt wurde."
+                    ]
+                },
+                {
+                    "number": "2",
+                    "heading": "Angebot, Annahme und Vertragsschluss",
+                    "items": [
+                        "Jedes vom Verkäufer abgegebene Angebot ist unverbindlich und als Aufforderung an den Verbraucher zu verstehen, ein Gegenangebot abzugeben.",
+                        "Mit der Bestellung gibt der Kunde ein Angebot zum Abschluss eines Kaufvertrags an den Verkäufer ab. Die Annahme erfolgt vorbehaltlich der Verfügbarkeit der Ware.",
+                        "Die Annahme einer Bestellung wird per E-Mail zusammen mit den Kaufdetails und der Rechnung versandt. Diese schriftliche Bestellbestätigung stellt die Annahme der vom Kunden aufgegebenen Bestellung dar.",
+                        "Der Verkäufer behält sich das Recht vor, eine Bestellung in folgenden Fällen zu stornieren oder abzulehnen, ohne für daraus entstehende Schäden zu haften: das bestellte Produkt ist nicht auf Lager; es besteht der Verdacht auf Betrug; Fehler in Produktbeschreibung, Preis oder Bildern; eine Lieferung an den Verbraucher ist aufgrund von Versandbeschränkungen nicht möglich; der Kunde zahlt den Kaufpreis nicht innerhalb der in Abschnitt 4.5 angegebenen Frist."
+                    ]
+                },
+                {
+                    "number": "3",
+                    "heading": "Widerrufsrecht",
+                    "items": [
+                        "Handelt es sich beim Kunden um einen Verbraucher, steht ihm ein Widerrufsrecht zu.",
+                        "Weitere Informationen zum Widerrufsrecht finden Sie in der Widerrufsbelehrung des Verkäufers.",
+                        "Der Kunde hat einen etwaigen Wertverlust nur zu ersetzen, wenn dieser Wertverlust auf einen Umgang mit der Ware zurückzuführen ist, der zur Prüfung ihrer Beschaffenheit, Eigenschaften und Funktionsweise nicht erforderlich war.",
+                        "Das Widerrufsrecht gilt nicht für Verbraucher, die bei Vertragsschluss keinem Mitgliedstaat der Europäischen Union angehören und deren alleiniger Wohn- und/oder Lieferort außerhalb der Europäischen Union liegt.",
+                        "Für Verbraucher mit gewöhnlichem Aufenthalt in einem Staat außerhalb der Europäischen Union (EU) oder des Europäischen Wirtschaftsraums (EWR) gilt deutsches Recht unter Ausschluss des UN-Kaufrechts (CISG) und des deutschen Verbraucherschutzrechts, soweit anwendbar."
+                    ]
+                },
+                {
+                    "number": "4",
+                    "heading": "Preise und Zahlungsbedingungen",
+                    "items": [
+                        "Alle Preise auf dieser Website sind in Euro angegeben und enthalten, soweit anwendbar, die gesetzliche Mehrwertsteuer. Bei differenzbesteuerten Produkten ist die Mehrwertsteuer nicht ausweisbar.",
+                        "Alle Zahlungsoptionen sind in der Produktbeschreibung aufgeführt. Zahlungsgebühren, Versandkosten und/oder Einfuhrumsatzsteuern sind vom Kunden zu tragen.",
+                        "Der Verkäufer beginnt mit dem Versand erst nach Eingang des vollständigen Kaufpreises und der vom Kunden zu tragenden Versandkosten.",
+                        "In der Bestätigungs-E-Mail erhält der Kunde den endgültigen Preis einschließlich Mehrwertsteuer und/oder Versandkosten. Der Gesamtpreis ist mit Erhalt der Bestätigungs-E-Mail fällig.",
+                        "Der Kunde ist verpflichtet, den vollständigen Preis innerhalb von drei Tagen nach Erhalt der Bestellbestätigung zu zahlen. Erfolgt die Zahlung nicht innerhalb von fünf Tagen, ist der Verkäufer berechtigt, die Bestellung zu stornieren."
+                    ]
+                },
+                {
+                    "number": "5",
+                    "heading": "Versand und Bedingungen",
+                    "items": [
+                        "Das Produkt wird an die vom Kunden angegebene Adresse versandt. Wurde die Lieferadresse versehentlich falsch angegeben und muss geändert werden, sollte der Kunde den Verkäufer schnellstmöglich kontaktieren.",
+                        "Kann der Zusteller nicht liefern und wird die Ware an den Verkäufer zurückgesandt, trägt der Kunde etwaige weitere Versandkosten, sofern kein schwerwiegendes Hindernis vorliegt.",
+                        "Handelt der Kunde als Verbraucher, geht die Gefahr des zufälligen Untergangs und der zufälligen Verschlechterung der Ware erst mit der Übergabe an den Kunden oder eine zur Entgegennahme berechtigte Person über.",
+                        "Jeder Artikel kann persönlich am in der Produktbeschreibung angegebenen Standort abgeholt werden.",
+                        "Jeder Artikel wird so schnell wie möglich, in der Regel innerhalb von 1–3 Werktagen nach Zahlungseingang, versandt.",
+                        "Bei Transportschäden muss der Kunde den Verkäufer unverzüglich kontaktieren. Ansprüche wegen Transportschäden, die nicht innerhalb von 1–2 Tagen nach Erhalt mitgeteilt werden, sind nicht gültig.",
+                        "Handelt der Kunde als Unternehmer, trägt der Käufer die mit dem Transport verbundenen Risiken."
+                    ]
+                },
+                {
+                    "number": "6",
+                    "heading": "Eigentumsvorbehalt",
+                    "items": [
+                        "Für Kunden: Der Verkäufer behält sich das Eigentum an jedem Produkt bis zum vollständigen Zahlungseingang vor.",
+                        "Für Unternehmer: Der Verkäufer behält sich das Eigentum an jedem Produkt vor, bis der Käufer sämtliche Verpflichtungen aus der Geschäftsbeziehung erfüllt hat."
+                    ]
+                },
+                {
+                    "number": "7",
+                    "heading": "Sachmängelhaftung / Gewährleistung",
+                    "subsections": [
+                        {
+                            "heading": "7.1 Für Verbraucher",
+                            "items": [
+                                "Bei einem Mangel der gekauften Ware gelten die gesetzlichen Vorschriften zur Sachmängelhaftung.",
+                                "Die Gewährleistungsfrist für gebrauchte Waren beträgt ein Jahr ab dem Tag der Lieferung, mit Ausnahme von Schadensersatz- und Aufwendungsersatzansprüchen sowie bei arglistigem Verschweigen eines Mangels durch den Verkäufer.",
+                                "Die Gewährleistung ist in folgenden Fällen ausgeschlossen: Die Ware wurde nicht ordnungsgemäß verwendet; der Kunde hat den Verkäufer nicht innerhalb der genannten Frist über Transportschäden informiert; der Kunde versucht, die Uhr selbst oder durch Dritte zu reparieren, ohne den Verkäufer zu informieren.",
+                                "Von der Gewährleistung ausgeschlossen sind Probleme mit der Wasserdichtigkeit, übliche Gebrauchsspuren (z. B. Kratzer an Armband/Gehäuse und Verschleiß an Gewinden) sowie durch normalen Verschleiß verursachte Abweichungen der Ganggenauigkeit.",
+                                "Der Verkäufer haftet nicht für Mängel, die durch unsachgemäße Behandlung des Kaufgegenstands durch den Käufer oder Dritte verursacht wurden."
+                            ]
+                        },
+                        {
+                            "heading": "7.2 Für Unternehmer",
+                            "items": ["Bei einem Mangel der gekauften Ware entscheidet der Verkäufer über das weitere Vorgehen.", "Ansprüche hinsichtlich der Funktion einer gebrauchten Ware sind grundsätzlich ausgeschlossen."]
+                        }
+                    ]
+                },
+                {
+                    "number": "8",
+                    "heading": "Haftung",
+                    "intro": "Der Verkäufer haftet gegenüber dem Kunden für alle vertraglichen, vertragsähnlichen und gesetzlichen Schadensersatzansprüche wie folgt:",
+                    "items": [
+                        "Der Verkäufer haftet nur unter folgenden Voraussetzungen unbeschränkt: bei vorsätzlicher oder grob fahrlässiger Schadensverursachung durch den Verkäufer; bei einer übernommenen Garantie, sofern nichts anderes vereinbart wurde; bei zwingender Haftung nach dem Produkthaftungsgesetz.",
+                        "Bei fahrlässiger Verletzung einer wesentlichen Vertragspflicht ist die Haftung auf den vorhersehbaren, vertragstypischen Schaden begrenzt, sofern die Haftung nicht gesetzlich unbeschränkt ist.",
+                        "Im Übrigen ist die Haftung des Verkäufers ausgeschlossen, einschließlich der Haftung für Erfüllungsgehilfen und gesetzliche Vertreter."
+                    ]
+                },
+                {
+                    "number": "9",
+                    "heading": "Anwendbares Recht",
+                    "text": "Diese AGB unterliegen deutschem Recht unter Ausschluss der Vorschriften über den internationalen Kauf beweglicher Sachen. Für Verbraucher gilt diese Rechtswahl nur insoweit, als dadurch der Schutz nicht entzogen wird, der durch zwingende Bestimmungen des Rechts des Staates gewährt wird, in dem der Verbraucher seinen gewöhnlichen Aufenthalt hat. Das CISG findet keine Anwendung."
+                },
+                {
+                    "number": "10",
+                    "heading": "Gerichtsstand",
+                    "text": "Handelt der Kunde als Kaufmann oder juristische Person des öffentlichen Rechts, ist für alle Streitigkeiten aus diesem Vertrag ausschließlich der Geschäftssitz des Verkäufers in der Bundesrepublik Deutschland zuständig. Hat der Kunde seinen Sitz außerhalb des Gebiets der Bundesrepublik Deutschland, ist ebenfalls der Geschäftssitz des Verkäufers ausschließlicher Gerichtsstand."
+                },
+                {
+                    "number": "11",
+                    "heading": "Alternative Streitbeilegung",
+                    "items": [
+                        "Die EU-Kommission stellt eine Online-Plattform zur Beilegung von Streitigkeiten bereit. Diese Plattform dient als Anlaufstelle für die außergerichtliche Beilegung von Streitigkeiten aus Online-Kauf- oder Dienstleistungsverträgen.",
+                        "Der Verkäufer ist nicht verpflichtet, an einem Streitbeilegungsverfahren teilzunehmen."
+                    ]
+                },
+                {
+                    "number": "12",
+                    "heading": "Rücktrittsrecht des Verkäufers bei Zahlungsverzug des Kunden gemäß Abschnitt 4.5",
+                    "items": [
+                        "Kommt der Kunde seinen Zahlungsverpflichtungen innerhalb der in Abschnitt 4.5 genannten Frist nicht nach, ist der Verkäufer berechtigt, ohne vorherige Ankündigung vom Vertrag zurückzutreten. Vom Kunden geleistete Teilzahlungen werden innerhalb von maximal 21 Tagen zurückerstattet.",
+                        "Die Rücktrittserklärung erfolgt schriftlich per E-Mail."
+                    ]
+                },
+                {
+                    "number": "13",
+                    "heading": "Identifizierungspflicht: Geldwäschegesetz",
+                    "items": [
+                        "Bei Bargeschäften über 10.000 Euro besteht gemäß Geldwäschegesetz eine Identifizierungspflicht.",
+                        "Für Verbraucher: Zur Identitätsprüfung des Kunden ist ein international anerkanntes gültiges Ausweisdokument erforderlich (z. B. Reisepass).",
+                        "Für Unternehmer: Zur Identitätsprüfung eines Unternehmers kann ein Auszug aus dem Handels- oder Genossenschaftsregister verlangt werden."
+                    ]
+                },
+                {
+                    "number": "14",
+                    "heading": "Informationspflicht nach dem deutschen Batteriegesetz (BattG)",
+                    "text": "Entladene Batterien sind Sondermüll und dürfen nicht über den Hausmüll entsorgt werden. Jeder Kunde kann uns alte Batterien zusenden und wir entsorgen diese fachgerecht. Schadstoffhaltige Batterien, die giftige Stoffe enthalten, sind mit folgenden Kennzeichnungen und Grenzwerten versehen:",
+                    "items": ["\"Cd\" Batterie enthält mehr als 0,002 % Cadmium", "\"Hg\" Batterie enthält mehr als 0,0005 % Quecksilber", "\"Pb\" Batterie enthält mehr als 0,004 % Blei"]
+                }
+            ]
+        },
+        "withdrawal": {
+            "heading": "Widerrufsrecht",
+            "intro": "Widerrufsrecht für Kunden des Online-Shops.",
+            "rightHeading": "Widerrufsrecht",
+            "rightItems": [
+                "Ist der Kunde Verbraucher (wie in unseren AGB definiert) und hat er mit dem Verkäufer einen Fernabsatzvertrag oder einen Vertrag im Sinne des § 3 Abs. 2 BGB geschlossen, gilt Folgendes:",
+                "Der Verbraucher hat ab Erhalt der Ware 14 Tage Zeit, den Vertrag ohne Angabe von Gründen zu widerrufen.",
+                "Zur Ausübung des Widerrufsrechts muss der Verbraucher uns durch eine eindeutige Widerrufserklärung per E-Mail oder durch ein Schreiben an unsere Geschäftsadresse informieren. Zur Wahrung der Frist genügt die rechtzeitige Absendung der eindeutigen Widerrufserklärung."
+            ],
+            "consequencesHeading": "Folgen des Widerrufs",
+            "consequencesItems": [
+                "Wenn Sie diesen Vertrag widerrufen, erstatten wir Ihnen alle von Ihnen erhaltenen Zahlungen einschließlich der Lieferkosten (mit Ausnahme zusätzlicher Kosten, die sich daraus ergeben, dass Sie eine andere als die von uns angebotene günstigste Standardlieferung gewählt haben) unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag, an dem die Mitteilung über Ihren Widerruf bei uns eingegangen ist.",
+                "Sie müssen die Waren unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag, an dem Sie uns über den Widerruf informieren, an uns zurücksenden. Sie müssen nur für einen etwaigen Wertverlust der Waren aufkommen, wenn dieser auf einen Umgang zurückzuführen ist, der zur Feststellung von Art, Eigenschaften und Funktionsweise der Waren nicht erforderlich war."
+            ],
+            "formHeading": "Widerrufsformular",
+            "formNote": "(Wenn Sie den Vertrag widerrufen möchten, füllen Sie bitte dieses Formular aus und senden Sie es zurück.)",
+            "form": {
+                "orderNumber": "Bestellnummer",
+                "email": "E-Mail",
+                "firstName": "Vorname",
+                "lastName": "Nachname",
+                "comment": "Kommentar (optional)",
+                "submit": "Widerruf bestätigen"
+            }
+        },
+        "disclaimer": {
+            "heading": "Haftungsausschluss",
+            "paragraphs": [
+                "Der Verkäufer ist bemüht, diese Website aktuell und korrekt zu halten. Sollten Sie dennoch auf fehlerhafte oder veraltete Informationen stoßen, freuen wir uns über einen entsprechenden Hinweis. Bitte geben Sie an, wo auf der Website Sie die Information gefunden haben. Wir werden dies schnellstmöglich prüfen.",
+                "Wir haften nicht für Schäden infolge von Ungenauigkeiten oder Unvollständigkeiten sowie für Schäden, die aus Problemen entstehen, die durch die Verbreitung von Informationen über das Internet verursacht werden oder dieser innewohnen, wie Störungen oder Unterbrechungen. Bei der Verwendung von Webformularen bemühen wir uns, die Anzahl der Pflichtfelder auf ein Minimum zu beschränken. Für Schäden, die aus der Nutzung von Daten, Ratschlägen oder Ideen entstehen, die vom Verkäufer über diese Website bereitgestellt oder in dessen Namen erteilt werden, übernimmt der Verkäufer keine Haftung.",
+                "Die Nutzung der Website und aller ihrer Bestandteile (einschließlich Foren) unterliegt den Nutzungsbedingungen. Die bloße Nutzung dieser Website gilt als Kenntnisnahme und Annahme dieser Nutzungsbedingungen.",
+                "Alle geistigen Eigentumsrechte an den Inhalten dieser Website liegen beim Verkäufer.",
+                "Das Kopieren, Verbreiten und jede andere Nutzung dieser Materialien ist ohne schriftliche Genehmigung des Verkäufers nicht gestattet, es sei denn und nur soweit zwingende gesetzliche Vorschriften dies zulassen (z. B. das Zitatrecht), sofern für bestimmte Inhalte nichts anderes bestimmt ist.",
+                "Bei Fragen oder Problemen hinsichtlich der Barrierefreiheit der Website können Sie sich jederzeit an uns wenden."
+            ]
+        },
+        "cookiePolicy": {
+            "heading": "Cookie-Richtlinie",
+            "lastUpdatedNote": "Diese Cookie-Richtlinie wurde zuletzt am {date} aktualisiert und gilt für Bürger und dauerhaft aufenthaltsberechtigte Personen des Europäischen Wirtschaftsraums und der Schweiz.",
+            "introduction": {
+                "heading": "Einleitung",
+                "text": "Unsere Website (im Folgenden: „die Website“) verwendet Cookies und andere verwandte Technologien (der Einfachheit halber werden alle Technologien als „Cookies“ bezeichnet). Cookies werden auch von von uns beauftragten Dritten gesetzt. Im folgenden Dokument informieren wir Sie über die Verwendung von Cookies auf unserer Website."
+            },
+            "whatAreCookies": {
+                "heading": "Was sind Cookies?",
+                "text": "Ein Cookie ist eine kleine, einfache Datei, die zusammen mit Seiten dieser Website übertragen und von Ihrem Browser auf der Festplatte Ihres Computers oder einem anderen Gerät gespeichert wird. Die darin gespeicherten Informationen können bei einem späteren Besuch an unsere Server oder an die Server der jeweiligen Dritten zurückübermittelt werden."
+            },
+            "whatAreScripts": {
+                "heading": "Was sind Skripte?",
+                "text": "Ein Skript ist ein Stück Programmcode, das dazu dient, unsere Website ordnungsgemäß und interaktiv funktionieren zu lassen. Dieser Code wird auf unserem Server oder auf Ihrem Gerät ausgeführt."
+            },
+            "whatIsAWebBeacon": {
+                "heading": "Was ist ein Web Beacon?",
+                "text": "Ein Web Beacon oder Pixel-Tag ist ein kleines, unsichtbares Text- oder Bildelement auf einer Website, das zur Überwachung des Website-Verkehrs verwendet wird. Zu diesem Zweck werden verschiedene Daten über Sie mithilfe von Web Beacons gespeichert."
+            },
+            "cookieTypes": {
+                "heading": "Cookies",
+                "technical": {
+                    "heading": "Technische oder funktionale Cookies",
+                    "text": "Einige Cookies sorgen dafür, dass bestimmte Bereiche der Website ordnungsgemäß funktionieren und Ihre Benutzereinstellungen gespeichert bleiben. Durch das Setzen funktionaler Cookies erleichtern wir Ihnen den Besuch unserer Website. So müssen Sie beispielsweise nicht wiederholt dieselben Informationen eingeben und Artikel bleiben bis zur Bezahlung in Ihrem Warenkorb. Wir können diese Cookies ohne Ihre Einwilligung setzen."
+                },
+                "statistics": {
+                    "heading": "Statistik-Cookies",
+                    "text": "Wir verwenden Statistik-Cookies, um die Website-Erfahrung unserer Nutzer zu optimieren. Mit diesen Cookies erhalten wir Einblicke in die Nutzung unserer Website. Für das Setzen von Statistik-Cookies bitten wir um Ihre Einwilligung."
+                },
+                "marketing": {
+                    "heading": "Marketing-/Tracking-Cookies",
+                    "text": "Marketing-/Tracking-Cookies sind Cookies oder andere Formen des lokalen Speichers, die verwendet werden, um Nutzerprofile zu erstellen, Werbung anzuzeigen oder Nutzer auf dieser oder mehreren Websites für ähnliche Marketingzwecke zu verfolgen."
+                }
+            },
+            "consent": {
+                "heading": "Einwilligung",
+                "text": "Wenn Sie unsere Website zum ersten Mal besuchen, zeigen wir Ihnen ein Pop-up mit einer Erklärung zu Cookies. Sobald Sie auf „Einstellungen speichern“ klicken, stimmen Sie der Verwendung der im Pop-up ausgewählten Kategorien von Cookies und Plugins zu, wie in dieser Cookie-Richtlinie beschrieben. Sie können die Verwendung von Cookies über Ihren Browser deaktivieren. Bitte beachten Sie jedoch, dass unsere Website dann möglicherweise nicht mehr ordnungsgemäß funktioniert."
+            },
+            "consentSettings": {
+                "heading": "Einwilligungseinstellungen verwalten",
+                "functional": {
+                    "heading": "Funktional",
+                    "text": "Die technische Speicherung oder der Zugriff ist ausschließlich für den legitimen Zweck erforderlich, die Nutzung eines vom Abonnenten oder Nutzer ausdrücklich angeforderten bestimmten Dienstes zu ermöglichen oder ausschließlich zur Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen."
+                },
+                "statistics": {
+                    "heading": "Statistik",
+                    "text": "Die technische Speicherung oder der Zugriff wird ausschließlich zu statistischen Zwecken verwendet. Ohne Vorladung, freiwillige Mitwirkung Ihres Internetdienstanbieters oder zusätzliche Aufzeichnungen Dritter können die allein für diesen Zweck gespeicherten oder abgerufenen Informationen in der Regel nicht zur Identifizierung verwendet werden."
+                },
+                "marketing": {
+                    "heading": "Marketing",
+                    "text": "Die technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, Werbung zu versenden oder einen Nutzer auf einer Website bzw. über mehrere Websites hinweg für ähnliche Marketingzwecke zu verfolgen."
+                }
+            },
+            "managingCookies": {
+                "heading": "Cookies aktivieren/deaktivieren und löschen",
+                "text": "Sie können Cookies über Ihren Internetbrowser automatisch oder manuell löschen. Sie können auch festlegen, dass bestimmte Cookies nicht gesetzt werden dürfen. Eine weitere Möglichkeit besteht darin, die Einstellungen Ihres Internetbrowsers so zu ändern, dass Sie jedes Mal eine Meldung erhalten, wenn ein Cookie gesetzt wird. Weitere Informationen zu diesen Optionen finden Sie in der Hilfe Ihres Browsers. Bitte beachten Sie, dass unsere Website möglicherweise nicht ordnungsgemäß funktioniert, wenn alle Cookies deaktiviert sind. Wenn Sie Cookies in Ihrem Browser löschen, werden sie nach Ihrer Einwilligung bei Ihrem nächsten Besuch erneut gesetzt."
+            },
+            "yourRights": {
+                "heading": "Ihre Rechte bezüglich personenbezogener Daten",
+                "intro": "Sie haben hinsichtlich Ihrer personenbezogenen Daten folgende Rechte:",
+                "items": [
+                    "Sie haben das Recht zu erfahren, warum Ihre personenbezogenen Daten benötigt werden, was mit ihnen geschieht und wie lange sie gespeichert werden.",
+                    "Auskunftsrecht: Sie haben das Recht, auf die uns bekannten personenbezogenen Daten zuzugreifen.",
+                    "Recht auf Berichtigung: Sie haben das Recht, Ihre personenbezogenen Daten jederzeit zu ergänzen, zu berichtigen, löschen oder sperren zu lassen.",
+                    "Wenn Sie uns Ihre Einwilligung zur Verarbeitung Ihrer Daten erteilen, haben Sie das Recht, diese Einwilligung zu widerrufen und Ihre personenbezogenen Daten löschen zu lassen.",
+                    "Recht auf Datenübertragbarkeit: Sie können alle Ihre personenbezogenen Daten beim Verantwortlichen anfordern und vollständig an einen anderen Verantwortlichen übertragen lassen.",
+                    "Widerspruchsrecht: Sie können der Verarbeitung Ihrer Daten widersprechen. Wir kommen dem nach, sofern keine berechtigten Gründe für die Verarbeitung bestehen."
+                ]
+            },
+            "contact": {
+                "heading": "Kontaktdaten",
+                "intro": "Bei Fragen und/oder Anmerkungen zu unserer Cookie-Richtlinie und dieser Erklärung kontaktieren Sie uns bitte über die im Impressum angegebenen Kontaktdaten."
+            },
+            "placedCookies": {
+                "heading": "Gesetzte Cookies",
+                "text": "Unsere Website kann je nach Ihrer Einwilligung und den von Ihnen genutzten Funktionen technische, funktionale, statistische und Marketing-Cookies setzen. Technische und funktionale Cookies können für grundlegende Funktionen der Website erforderlich sein, beispielsweise für die Navigation, Spracheinstellungen und die Warenkorbfunktion. Statistik- und Marketing-Cookies werden nur gesetzt, wenn die entsprechende Einwilligung erteilt wurde. Sie können Ihre Cookie-Einstellungen jederzeit über die Einstellungen Ihres Browsers oder die Cookie-Einstellungen unserer Website verwalten oder Ihre Einwilligung widerrufen."
+            },
+            "syncNote": "Diese Cookie-Richtlinie wurde mit cookiedatabase.org am {date} synchronisiert."
+        }
+    },
+    "cart": {
+        "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against CartContext/cart components before shipping.",
+        "heading": "Warenkorb",
+        "summary": "Zusammenfassung",
+        "empty": "Ihr Warenkorb ist leer.",
+        "emptyCta": "Weiter einkaufen",
+        "viewCart": "Alle anzeigen",
+        "itemLabel": "Artikel",
+        "priceLabel": "Preis",
+        "quantityLabel": "Menge",
+        "subtotal": "Zwischensumme",
+        "total": "Gesamt",
+        "removeItem": "Entfernen",
+        "checkoutCta": "Zur Kasse",
+        "choose_shipping_country": "Versandland auswählen",
+        "shipping_to": "Versand nach {country}",
+        "shipping_costs": "Versandkosten",
+        "shipping": "Versand",
+        "localPickup": "Abholung vor Ort",
+        "moreAbout": "Mehr zum",
+        "continueShopping": "Weiter einkaufen"
+    },
+    "favorites": {
+        "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
+        "heading": "Favoriten",
+        "empty": "Sie haben noch keine Favoriten gespeichert.",
+        "emptyCta": "Uhren ansehen",
+        "removeFromFavorites": "Aus Favoriten entfernen",
+        "addToFavorites": "Zu Favoriten hinzufügen"
+    },
+    "checkout": {
+        "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your checkout/payment components before shipping.",
+        "heading": "Kasse",
+        "shippingHeading": "Versanddetails",
+        "paymentHeading": "Zahlungsmethode",
+        "orderSummaryHeading": "Bestellübersicht",
+        "placeOrder": "Bestellung aufgeben",
+        "subtotal": "Zwischensumme",
+        "billing": "Rechnungsadresse",
+        "shippingCost": "Versand",
+        "watchSpare": "Uhr / Ersatz",
+        "qty": "Menge",
+        "price": "Preis",
+        "taxes": "Steuern",
+        "fee": "Gebühr",
+        "agreement": "Mit dem Abschluss Ihres Kaufs stimmen Sie unseren Nutzungsbedingungen und unserer Datenschutzerklärung zu.",
+        "payment": "Zahlung",
+        "total": "Gesamt",
+        "missingBilling": "Rechnungsdetails fehlen",
+        "bankNote": "Bitte überweisen Sie den Betrag direkt auf unser Bankkonto. Geben Sie dabei bitte die Bestellnummer, den Markennamen und das Modell des Artikels als Verwendungszweck an. Bitte beachten Sie zudem, dass der Versand erst erfolgt, nachdem der Betrag auf unserem Konto gutgeschrieben wurde.",
+        "paypalNote": "Hinweis: Da es sich hier um eine Demo handelt, ist die Verwendung",
+        "email": "E-Mail",
+        "password": "Passwort",
+        "orderDate": "Bestelldatum",
+        "orderTotal": "Gesamtbetrag der Bestellung",
+        "paymentMethod": "Zahlungsmethode",
+        "continue": "Weitermachen",
+        "bankTransfer": "Banküberweisung",
+        "card": "Kredit-/Debitkarte",
+        "cardNumber": "Kartennummer",
+        "expirationDate": "Verfallsdatum",
+        "securityCode": "Sicherheitscode",
+        "orderNumber": "Bestellnummer"
+    },
+    "product": {
+        "reference": "Referenz",
+        "stock": "Verfügbarkeit",
+        "available": "Verfügbar",
+        "notAvailable": "Nicht verfügbar",
+        "scopeOfDelivery": "Lieferumfang",
+        "shippingText": "Profitieren Sie von einem kontaktlosen und risikofreien Versand mit unseren langjährigen Partnern DHL, UPS, DHL Express und Prosegur.",
+        "learnMoreShipping": "Erfahren Sie mehr über Versandkosten und Lieferzeiten",
+        "model": "Modell",
+        "dial": "Zifferblatt",
+        "here": "hier",
+        "findInStore": "Im Geschäft finden",
+        "bookApointment": "Buchen Sie einen Termin",
+        "consignmentBeforeLink": "Möchten Sie eine Ihrer Uhren in Zahlung geben? Kontaktieren Sie uns über die",
+        "consignmentAfterLink": "Seite mit den Angaben zu Ihrer Uhr und wir unterbreiten Ihnen ein Angebot."
+    },
+    "brands": {
+        "rolex": {
+            "sections": [
+                {
+                    "heading": "Gründung und frühe Jahre",
+                    "text": "Rolex, der renommierte Schweizer Luxusuhrenhersteller, wurde 1905 von Hans Wilsdorf und Alfred Davis in London gegründet. Das Unternehmen hieß zunächst „Wilsdorf and Davis“ und konzentrierte sich auf den Vertrieb von Zeitmessern. Wilsdorf wollte Armbanduhren entwickeln, die präzise und elegant zugleich waren – eine große Herausforderung in einer Zeit, in der Taschenuhren vorherrschten."
+                },
+                {
+                    "heading": "Der Umzug in die Schweiz und die Entstehung der Marke Rolex",
+                    "text": "1908 wurde die Marke Rolex eingetragen und der Firmenname offiziell in Rolex geändert. Wilsdorf wählte den Namen, weil er kurz war, sich in jeder Sprache leicht aussprechen ließ und gut auf ein Zifferblatt passte. Um den Ruf von Rolex für Präzision weiter zu stärken, zog das Unternehmen 1919 nach Genf in die Schweiz."
+                }
+            ]
+        },
+        "audemars_piguet": {
+            "sections": [
+                {
+                    "heading": "Ursprünge im Vallée de Joux",
+                    "text": "Audemars Piguet wurde 1875 von Jules Louis Audemars und Edward Auguste Piguet im Schweizer Ort Le Brassus gegründet. Die Marke etablierte sich schnell als Meister komplexer Uhrmechanik und spezialisierte sich auf Minutenrepetitionen, ewige Kalender und Chronographen."
+                },
+                {
+                    "heading": "Die Revolution der Royal Oak",
+                    "text": "1972 veränderte Audemars Piguet die Branche mit der Royal Oak. Das von Gérald Genta entworfene Modell war die erste luxuriöse Sportuhr aus Edelstahl und verfügte über eine markante achteckige Lünette mit sichtbaren Schrauben."
+                }
+            ]
+        },
+        "blancpain": {
+            "sections": [
+                {
+                    "heading": "Die älteste Uhrenmarke",
+                    "text": "Blancpain wurde 1735 von Jehan-Jacques Blancpain in Villeret, Schweiz, gegründet und gilt als die älteste eingetragene Uhrenmarke der Welt. Seit Jahrhunderten hält das Unternehmen konsequent an traditioneller mechanischer Uhrmacherei fest und betont, niemals eine Quarzuhr hergestellt zu haben."
+                },
+                {
+                    "heading": "Die Fifty Fathoms",
+                    "text": "1953 brachte Blancpain die Fifty Fathoms heraus, die weithin als eine der ersten modernen Taucheruhren gilt. Sie entstand in Zusammenarbeit mit den französischen Kampftauchern und prägte mit ihrer einseitig drehbaren Lünette und hohen Wasserdichtigkeit den Stil moderner Taucheruhren."
+                }
+            ]
+        },
+        "breitling": {
+            "sections": [
+                {
+                    "heading": "Pioniere des Chronographen",
+                    "text": "Breitling wurde 1884 von Léon Breitling in Saint-Imier, Schweiz, gegründet und konzentrierte sich zunächst auf präzise Chronographen für Sport, Wissenschaft und Industrie. 1915 entwickelte die Marke den ersten unabhängigen Chronographendrücker, eine wichtige Innovation der modernen Uhrmacherei."
+                },
+                {
+                    "heading": "Tradition in der Luftfahrt",
+                    "text": "Breitling ist eng mit der Luftfahrt verbunden. 1952 stellte die Marke die Navitimer vor, deren komplexe kreisförmige Rechenschieberlünette Piloten bei wichtigen Berechnungen während des Fluges unterstützte."
+                }
+            ]
+        },
+        "cartier": {
+            "sections": [
+                {
+                    "heading": "Der Juwelier der Könige",
+                    "text": "Cartier wurde 1847 von Louis-François Cartier in Paris gegründet und erlangte zunächst mit exquisitem Schmuck für den Adel seinen Ruf. Schon bald übertrug Cartier sein unverwechselbares Designverständnis auf die Uhrmacherei und verband Eleganz mit Funktionalität."
+                },
+                {
+                    "heading": "Die Entstehung der Herrenuhr",
+                    "text": "1904 entwarf Louis Cartier für den Luftfahrtpionier Alberto Santos-Dumont eine flache Armbanduhr mit markanter quadratischer Lünette. Die „Santos“ gilt weithin als erste speziell entwickelte Herrenar­mbanduhr und ging ikonischen Modellen wie der Tank von 1917 voraus."
+                }
+            ]
+        },
+        "chopard": {
+            "sections": [
+                {
+                    "heading": "Schweizer Präzision trifft Haute Joaillerie",
+                    "text": "Chopard wurde 1860 von Louis-Ulysse Chopard in Sonvilier, Schweiz, gegründet und begann mit der Herstellung hochpräziser Taschenuhren und Chronometer. Schon bald wurde die Marke für Zeitmesser für die Schweizer Eisenbahn und Zar Nikolaus II. von Russland bekannt."
+                },
+                {
+                    "heading": "Happy Diamonds und L.U.C",
+                    "text": "Nach der Übernahme durch die Familie Scheufele im Jahr 1963 erweiterte Chopard sein Geschäft um hochwertigen Schmuck und brachte die berühmte Kollektion „Happy Diamonds“ auf den Markt. 1996 kehrte die Marke mit der Chopard Manufacture und den L.U.C-Werken zu ihren Haute-Horlogerie-Wurzeln zurück."
+                }
+            ]
+        },
+        "chronoswiss": {
+            "sections": [
+                {
+                    "heading": "Eine moderne Renaissance",
+                    "text": "Chronoswiss wurde 1983 von Gerd-Rüdiger Lang in München gegründet und später nach Luzern verlegt. Die Marke entstand auf dem Höhepunkt der Quarzkrise mit dem Ziel, zur handwerklichen Kunst der mechanischen Uhrmacherei zurückzukehren."
+                },
+                {
+                    "heading": "Die Regulator-Ästhetik",
+                    "text": "Chronoswiss ist besonders für die Wiederbelebung des Regulator-Zifferblattlayouts bekannt, bei dem Stunden, Minuten und Sekunden auf getrennten Anzeigen erscheinen. Charakteristisch sind Zwiebelkronen, Münzrändelungen und aufwendig guillochierte Zifferblätter."
+                }
+            ]
+        },
+        "corum": {
+            "sections": [
+                {
+                    "heading": "Avantgardistisches Design in La Chaux-de-Fonds",
+                    "text": "Corum wurde 1955 von Gaston Ries und René Bannwart gegründet und erlangte schnell einen Ruf für kreative und unkonventionelle Uhrendesigns. Das aufrecht stehende Schlüsselsymbol steht für den Anspruch der Marke, neue uhrmacherische Geheimnisse zu erschließen."
+                },
+                {
+                    "heading": "Ikonische Kollektionen",
+                    "text": "Corum ist vor allem für die 1980 vorgestellte Golden Bridge mit ihrem spektakulären linearen Werk in einem transparenten Saphirgehäuse bekannt. Berühmt ist auch die Admiral's Cup mit zwölfeckigem Gehäuse und nautischen Wimpeln auf dem Zifferblatt."
+                }
+            ]
+        },
+        "frank_muller": {
+            "sections": [
+                {
+                    "heading": "Der Meister der Komplikationen",
+                    "text": "Franck Muller wurde 1991 in Genf vom Uhrmacher Franck Muller und dem Gehäusemacher Vartan Sirmakes gegründet und erlangte schnell Bekanntheit. Mullers außergewöhnliches Talent für komplexe Werke brachte ihm den Titel „Master of Complications“ und zahlreiche technische Weltpremieren ein."
+                },
+                {
+                    "heading": "Die Cintrée Curvex",
+                    "text": "Neben der komplexen Mechanik prägt das ikonische Cintrée-Curvex-Gehäuse die Marke – eine markante tonneauförmige Form mit starken Rundungen. Zusammen mit übergroßen, stilisierten Ziffern entsteht eine mutige und sofort erkennbare Ästhetik."
+                }
+            ]
+        },
+        "girard_perregaux": {
+            "sections": [
+                {
+                    "heading": "Jahrhunderte der Innovation",
+                    "text": "Girard-Perregaux geht auf den Uhrmacher Jean-François Bautte im Jahr 1791 zurück und wurde 1852 von Constant Girard offiziell gegründet. Die Marke gehört zu den ältesten echten Manufakturen der Schweiz und entwickelt ihre Werke seit jeher weitgehend im eigenen Haus."
+                },
+                {
+                    "heading": "Das Tourbillon mit drei Goldbrücken",
+                    "text": "Die legendärste Schöpfung der Marke ist das Tourbillon mit drei Goldbrücken. Das in den 1860er-Jahren als Taschenuhr eingeführte Meisterwerk gewann 1889 eine Goldmedaille bei der Pariser Weltausstellung und machte die Brücken des Uhrwerks zu einem gefeierten Designelement."
+                }
+            ]
+        },
+        "glashütte_original": {
+            "sections": [
+                {
+                    "heading": "Deutsche Uhrmachertradition",
+                    "text": "Glashütte Original steht für traditionelle deutsche Uhrmacherei und hat seine Wurzeln im sächsischen Glashütte, wo 1845 die industrielle Uhrmacherei begann. Nach dem Zweiten Weltkrieg und der deutschen Teilung wurden die örtlichen Uhrenbetriebe im staatlichen Unternehmen GUB zusammengeführt."
+                },
+                {
+                    "heading": "Neuanfang und feine Veredelung",
+                    "text": "Nach der deutschen Wiedervereinigung 1990 wurde das Unternehmen privatisiert und als Glashütte Original neu positioniert. Heute ist die Marke für eigene Fertigung, robuste Designs und traditionelle sächsische Finissierungen wie Dreiviertelplatine, Schwanenhals-Feinregulierung und Glashütter Streifenschliff bekannt."
+                }
+            ]
+        },
+        "grand_seiko": {
+            "sections": [
+                {
+                    "heading": "Die Suche nach der idealen Uhr",
+                    "text": "Grand Seiko wurde 1960 von einem engagierten Seiko-Team mit dem Ziel entwickelt, die „ideale“ Uhr zu schaffen – präzise, robust und schön. In den späten 1960er-Jahren stellte die Marke die Dominanz der Schweizer Chronometrie durch Erfolge bei renommierten Observatoriumsprüfungen infrage."
+                },
+                {
+                    "heading": "Spring Drive und von der Natur inspirierte Zifferblätter",
+                    "text": "Grand Seiko ist für die Zaratsu-Politur bekannt, die verzerrungsfreie Spiegeloberflächen erzeugt. Die Marke entwickelte zudem Spring Drive, das mechanische Energie mit einer elektromagnetischen Bremse verbindet und häufig mit von der japanischen Landschaft inspirierten Zifferblättern kombiniert wird."
+                }
+            ]
+        },
+        "hublot": {
+            "sections": [
+                {
+                    "heading": "The Art of Fusion",
+                    "text": "Hublot wurde 1980 vom Italiener Carlo Crocco gegründet und überraschte die traditionelle Uhrenwelt als erste Marke, die ein Edelmetallgehäuse aus Gold mit einem Naturkautschukband kombinierte. Daraus entstand die zentrale Philosophie der Marke: „The Art of Fusion“."
+                },
+                {
+                    "heading": "Die Big-Bang-Ära",
+                    "text": "Unter Jean-Claude Biver lancierte Hublot 2005 die Big Bang, einen äußerst erfolgreichen Chronographen, der das Fusionskonzept auf die Spitze trieb. Die Marke entwickelt weiterhin eigene Materialien wie Magic Gold und farbenreiche Saphire."
+                }
+            ]
+        },
+        "iwc": {
+            "sections": [
+                {
+                    "heading": "Amerikanische Ingenieurskunst, Schweizer Handwerk",
+                    "text": "Die International Watch Company (IWC) wurde 1868 in Schaffhausen vom amerikanischen Ingenieur Florentine Ariosto Jones gegründet. Sein Ziel war es, fortschrittliche amerikanische Fertigungstechniken mit der außergewöhnlichen Arbeit Schweizer Uhrmacher zu verbinden und hochwertige Taschenuhrwerke herzustellen."
+                },
+                {
+                    "heading": "Meister des Himmels und der Meere",
+                    "text": "IWC ist weltweit für robuste Toolwatches bekannt. Die seit den 1930er-Jahren bestehende Pilot's-Watches-Linie prägte die Luftfahrtästhetik, während Portugieser und Aquatimer die Verbindung aus anspruchsvollen Komplikationen und widerstandsfähiger Technik zeigen."
+                }
+            ]
+        },
+        "jaeger_lecoultre": {
+            "sections": [
+                {
+                    "heading": "Die Uhrmacher der Uhrmacher",
+                    "text": "Jaeger-LeCoultre wurde 1833 von Antoine LeCoultre im Vallée de Joux gegründet und wird häufig als „Uhrmacher der Uhrmacher“ bezeichnet. Im Laufe seiner Geschichte entwickelte die Manufaktur mehr als 1.200 Kaliber und lieferte Werke an Marken wie Patek Philippe, Audemars Piguet und Vacheron Constantin."
+                },
+                {
+                    "heading": "Die ikonische Reverso",
+                    "text": "1931 stellte die Marke die Reverso vor. Sie entstand auf Wunsch britischer Offiziere in Indien, die eine Uhr für Polospiele benötigten. Das wendbare Gehäuse schützte das Glas und wurde zu einem dauerhaften Symbol des Art-déco-Designs."
+                }
+            ]
+        },
+        "junghans": {
+            "sections": [
+                {
+                    "heading": "Der Riese aus dem Schwarzwald",
+                    "text": "Junghans wurde 1861 von Erhard Junghans in Schramberg gegründet und entwickelte sich bis zum Beginn des 20. Jahrhunderts zum weltweit größten Uhrenhersteller. Die Marke blickt auf eine lange Tradition zugänglicher und hochwertiger Zeitmesser zurück."
+                },
+                {
+                    "heading": "Bauhaus und Funksteuerung",
+                    "text": "Junghans steht für minimalistisches Bauhaus-Design, stark geprägt von der Zusammenarbeit mit dem Künstler und Architekten Max Bill in den 1950er-Jahren. 1990 brachte die Marke mit der Mega 1 zudem die weltweit erste funkgesteuerte Armbanduhr auf den Markt."
+                }
+            ]
+        },
+        "nomos": {
+            "sections": [
+                {
+                    "heading": "Moderner Glashütter Minimalismus",
+                    "text": "NOMOS Glashütte wurde 1990 von Roland Schwertner, nur wenige Monate nach dem Fall der Berliner Mauer, gegründet und brachte eine moderne Perspektive in die traditionsreiche deutsche Uhrenstadt. Die Marke widmet sich konsequent der mechanischen Uhrmacherei und fertigt ihre Kaliber selbst."
+                },
+                {
+                    "heading": "Inspiration durch das Bauhaus",
+                    "text": "NOMOS ist für seine preisgekrönte, minimalistische Ästhetik bekannt, die stark vom Bauhaus und dem Deutschen Werkbund beeinflusst ist. Modelle wie Tangente und Orion sind moderne Klassiker mit klarer Typografie, schlanken Zeigern und flachen Gehäusen."
+                }
+            ]
+        },
+        "omega": {
+            "sections": [
+                {
+                    "heading": "Ein Vermächtnis der Präzision",
+                    "text": "Omega wurde 1848 von Louis Brandt in La Chaux-de-Fonds gegründet und steht seit über einem Jahrhundert an der Spitze präziser Uhrmacherei. Seit 1932 ist Omega offizieller Zeitnehmer der Olympischen Spiele und prägte mit der Co-Axial-Hemmung die moderne mechanische Uhrmacherei."
+                },
+                {
+                    "heading": "Zum Mond und in die Tiefsee",
+                    "text": "Die historische Bedeutung von Omega ist außergewöhnlich. Die Speedmaster Professional war 1969 die erste Uhr auf dem Mond. Die Seamaster wurde zum bevorzugten Zeitmesser für Tiefseeforscher, Militärtaucher und berühmtlich auch für James Bond."
+                }
+            ]
+        },
+        "panerai": {
+            "sections": [
+                {
+                    "heading": "Florentinische Wurzeln und Marinegeschichte",
+                    "text": "Panerai wurde 1860 von Giovanni Panerai in Florenz gegründet und begann als Uhrenladen und Schule. Später wurde das Unternehmen offizieller Lieferant präziser Instrumente für die italienische Marine und spezialisierte sich auf gut ablesbare, wasserdichte Uhren für Kampftaucher."
+                },
+                {
+                    "heading": "Radiomir und Luminor",
+                    "text": "Panerai ist für übergroße Kissengehäuse und markante Kronenschutzbügel bekannt. Radiomir und später Luminor prägten mit ihren Leuchtstoffen und dem robusten, taktischen Design die Identität der Marke und gewannen in den 1990er-Jahren eine große Fangemeinde."
+                }
+            ]
+        },
+        "patek_philippe": {
+            "sections": [
+                {
+                    "heading": "Die Spitze der Haute Horlogerie",
+                    "text": "Patek Philippe wurde 1839 in Genf von Antoine Norbert de Patek und François Czapek gegründet, später ergänzt durch Jean Adrien Philippe. Die familiengeführte Manufaktur steht für die Spitze traditioneller Schweizer Uhrmacherei und gilt als Teil der renommierten „Holy Trinity“ der Uhrenmarken."
+                },
+                {
+                    "heading": "Unvergleichliche Eleganz und Komplexität",
+                    "text": "Von der eleganten Calatrava bis zur sportlichen Nautilus von Gérald Genta sind die Zeitmesser von Patek Philippe begehrt. Die Marke ist für einige der kompliziertesten mechanischen Uhren der Welt bekannt und verkörpert den Anspruch, eine Patek Philippe nur für die nächste Generation zu bewahren."
+                }
+            ]
+        },
+        "piaget": {
+            "sections": [
+                {
+                    "heading": "Meister der Ultrathin-Uhrmacherei",
+                    "text": "Piaget wurde 1874 von Georges Edouard Piaget in La Côte-aux-Fées gegründet. Das Unternehmen konzentrierte sich zunächst auf die Entwicklung und Fertigung hochpräziser Taschenuhrwerke für andere renommierte Marken, bevor es 1943 seinen eigenen Namen eintragen ließ."
+                },
+                {
+                    "heading": "Das Erbe der Altiplano",
+                    "text": "Piaget ist weltweit für seine Meisterschaft bei ultraflachen Uhren bekannt. 1957 stellte die Marke das legendäre Handaufzugswerk Calibre 9P mit nur 2 mm Bauhöhe vor und legte damit den Grundstein für die Altiplano-Kollektion."
+                }
+            ]
+        },
+        "sinn": {
+            "sections": [
+                {
+                    "heading": "Zweckorientierte Toolwatches",
+                    "text": "Sinn Spezialuhren wurde 1961 vom Fluglehrer und Piloten Helmut Sinn in Frankfurt gegründet und begann mit Navigationsuhren und Fliegerchronographen. Die Marke stellt Funktionalität, extreme Robustheit und hervorragende Ablesbarkeit über dekorative Elemente."
+                },
+                {
+                    "heading": "Materialinnovation",
+                    "text": "Sinn genießt bei Profis hohes Ansehen für technische Innovation. Dazu gehören Gehäuse aus deutschem U-Boot-Stahl, die TEGIMENT-Härtung gegen Kratzer und Ar-Dehumidifying-Technologien gegen das Beschlagen des Glases unter extremen Bedingungen."
+                }
+            ]
+        },
+        "tag_heuer": {
+            "sections": [
+                {
+                    "heading": "Motorsport-Erbe",
+                    "text": "TAG Heuer wurde 1860 von Edouard Heuer in St-Imier, Schweiz, gegründet und war früh eng mit Leistungssport und Autorennen verbunden. 1887 patentierte Heuer den Schwingtrieb, eine bedeutende Weiterentwicklung für mechanische Chronographen."
+                },
+                {
+                    "heading": "Carrera und Monaco",
+                    "text": "Das Erbe von TAG Heuer wird von ikonischen Rennchronographen geprägt. Die 1963 eingeführte Carrera bot Fahrern eine klare und gut ablesbare Zeitmessung. 1969 folgte die Monaco mit ihrem markanten quadratischen Gehäuse, bekannt aus dem Film „Le Mans“ mit Steve McQueen."
+                }
+            ]
+        },
+        "tudor": {
+            "sections": [
+                {
+                    "heading": "Der Schild von Rolex",
+                    "text": "Tudor wurde 1926 von Rolex-Gründer Hans Wilsdorf gegründet. Seine Vision war eine Uhr mit der legendären Zuverlässigkeit und Wasserdichtigkeit von Rolex zu einem zugänglicheren Preis, zunächst mithilfe bewährter zugekaufter mechanischer Werke."
+                },
+                {
+                    "heading": "Born to Dare",
+                    "text": "Im Laufe der Jahrzehnte entwickelte Tudor eine eigenständige Identität und stattete unter anderem militärische Taucheinheiten wie die französische Marine aus. Heute ist die Marke für die von der Vergangenheit inspirierte Black Bay und Pelagos sowie leistungsstarke Manufakturkaliber bekannt."
+                }
+            ]
+        },
+        "van_cleef_and_arpels": {
+            "sections": [
+                {
+                    "heading": "Haute Joaillerie und Romantik",
+                    "text": "Van Cleef & Arpels wurde 1896 von Alfred Van Cleef und seinem Schwiegervater Salomon Arpels in Paris gegründet und ist vor allem für spektakulären Luxusschmuck bekannt. In der Uhrmacherei überträgt die Maison denselben Zauber, handwerkliche Perfektion und erzählerische Ideen ans Handgelenk."
+                },
+                {
+                    "heading": "Poetische Komplikationen",
+                    "text": "Statt sich nur auf klassische Präzision zu konzentrieren, ist Van Cleef & Arpels für seine „Poetic Complications“ berühmt. Komplexe retrograde Anzeigen und mechanische Animationen erzählen die Zeit mit Feen, Planeten und Liebenden, die sich auf einer Brücke begegnen."
+                }
+            ]
+        },
+        "zenith": {
+            "sections": [
+                {
+                    "heading": "Die erste integrierte Schweizer Manufaktur",
+                    "text": "Zenith wurde 1865 von Georges Favre-Jacot in Le Locle, Schweiz, gegründet und revolutionierte die Branche, indem es alle uhrmacherischen Berufe unter einem Dach vereinte. Dieser Ansatz schuf eine der ersten echten integrierten Manufakturen der Schweizer Uhrengeschichte und ermöglichte außergewöhnliche Qualitätskontrolle."
+                },
+                {
+                    "heading": "Das legendäre El Primero",
+                    "text": "1969 veränderte Zenith die Uhrmacherei mit dem El Primero, das weithin als erstes automatisches Chronographenwerk der Welt gilt. Mit 36.000 Halbschwingungen pro Stunde ermöglichte es Zeitmessungen bis auf eine Zehntelsekunde und zählt bis heute zu den bekanntesten Kalibern."
+                }
+            ]
+        }
+    },
+    "note": {
+        "title": "Dein Instagram bringt bereits den Käufer.",
+        "heading": "Biete ihnen einen Ort, um deinen aktuellen Bestand zu durchstöbern, eine bestimmte Uhr zu öffnen und eine Anfrage zu stellen – ohne das Gespräch von vorne zu beginnen.",
+        "link": "Sieh dir an, wie das für deinen Shop aussehen könnte"
+    },
+    "why": {
+        "title": "Warum ein eigener Store?",
+        "hero": {
+            "eyebrow": "Instagram → Store → Anfrage",
+            "title": "Instagram erzeugt Aufmerksamkeit.<br></br><span>Geben Sie Interessenten einen Ort für den nächsten Schritt.</span>",
+            "description": "Es geht nicht darum, Instagram zu ersetzen. Es geht darum, Menschen, die Ihre Uhren bereits entdecken, einen Ort zu geben, an dem sie Ihr Angebot durchsuchen, einzelne Stücke ansehen und Kontakt aufnehmen können.",
+            "seeDifference": "Den Unterschied sehen",
+            "openStorefront": "Store öffnen"
+        },
+        "gap": {
+            "eyebrow": "01 / Die Lücke",
+            "title": "Instagram ist hervorragend für die Entdeckung.<br></br><span>Aber kein Katalog.</span>",
+            "description": "Ein Käufer kann eine Uhr auf Instagram finden und trotzdem keinen Ort haben, an dem er Ihren aktuellen Bestand durchsuchen, Stücke vergleichen, Details lesen oder eine strukturierte Anfrage stellen kann.",
+            "instagram": {
+                "title": "Instagram / DM",
+                "label": "Entdeckung",
+                "items": ["Der Käufer sieht eine Uhr in einem Beitrag oder einer Story.", "Er fragt, was sonst verfügbar ist.", "Sie senden Fotos, Preise und Details manuell.", "Termin oder Anfrage bleiben innerhalb des Chats."]
+            },
+            "storefront": {
+                "title": "Eigener Store",
+                "label": "Ihr Eigentum",
+                "items": [
+                    "Der Käufer kann den aktuellen Bestand selbst durchsuchen.",
+                    "Jede Uhr kann eine eigene Seite mit Details haben.",
+                    "Sie senden einen Link statt einer ganzen Reihe von Fotos.",
+                    "Anfragen und Terminwünsche haben ein klares Ziel."
+                ]
+            },
+            "footnote": "Es geht nicht darum, \"eine Website zu haben\", sondern die Lücke zwischen Aufmerksamkeit und Handlung zu schließen."
+        },
+        "buyer": {
+            "eyebrow": "02 / Für den Käufer",
+            "title": "Der Käufer erhält Antworten<br></br><span>bevor er die erste Nachricht sendet.</span>",
+            "steps": [
+                {
+                    "number": "01",
+                    "title": "Durchsuchen",
+                    "description": "Sehen Sie die aktuell verfügbaren Uhren, ohne erst nach dem Bestand fragen zu müssen."
+                },
+                {
+                    "number": "02",
+                    "title": "Ansehen",
+                    "description": "Öffnen Sie ein Stück und sehen Sie die von Ihnen bereitgestellten Fotos, Preise und Informationen."
+                },
+                {
+                    "number": "03",
+                    "title": "Auswählen",
+                    "description": "Der Käufer gelangt bereits mit einem konkreten Stück im Blick auf die Anfrage-Seite."
+                },
+                {
+                    "number": "04",
+                    "title": "Kontakt aufnehmen",
+                    "description": "Eine strukturierte Anfrage oder Terminbuchung gibt dem Gespräch einen klaren Ausgangspunkt."
+                }
+            ]
+        },
+        "dealer": {
+            "eyebrow": "03 / Für den Händler",
+            "title": "Ein besserer Link zum Versenden.<br></br><span>Ein sauberer Weg, Interesse zu bearbeiten.</span>",
+            "benefits": [
+                {
+                    "title": "Ein Link für den Bestand",
+                    "description": "Statt Screenshots zu senden oder jemanden durch Instagram suchen zu lassen, schicken Sie ihn an einen Ort, an dem Ihr Angebot bereits organisiert ist."
+                },
+                {
+                    "title": "Eine Seite pro Uhr",
+                    "description": "Wenn ein Käufer nach einer Referenz fragt, können Sie direkt die Seite dieser Uhr mit den gewünschten Informationen und Bildern senden."
+                },
+                {
+                    "title": "Weniger wiederholte Nachrichten",
+                    "description": "Der Store übernimmt das grundlegende Browsen und die Produktinformationen zuerst, sodass Ihr Gespräch weiter unten im Funnel beginnen kann."
+                },
+                {
+                    "title": "Sie kontrollieren den Bestand",
+                    "description": "Uhren hinzufügen, bearbeiten und entfernen – ohne bei jeder Bestandsänderung einen Entwickler zu benötigen."
+                }
+            ]
+        },
+        "role": {
+            "eyebrow": "04 / Die Rolle",
+            "title": "Behalten Sie Instagram.<br></br><span>Geben Sie ihm ein Ziel.</span>",
+            "description": "Sie müssen Ihr Publikum nicht von Instagram wegführen. Posten Sie weiterhin dort. Nutzen Sie weiterhin DMs, WhatsApp und Telefon. Der Store wird einfach zum Ort, an dem Interessenten Ihr Angebot tatsächlich durchsehen können.",
+            "existingFlowTitle": "Aktueller Ablauf",
+            "expandedFlowTitle": "Erweiterter Ablauf",
+            "existingFlow": "Instagram → DM",
+            "expandedFlow": "Instagram → Store → Anfrage",
+            "footnote": "Der Store ist eine zusätzliche Verkaufsfläche, kein Ersatz für Kanäle, die bereits funktionieren."
+        },
+        "gettingStarted": {
+            "eyebrow": "05 / Der Start",
+            "title": "Keine Präsentation vorbereiten.<br></br><span>Zeigen Sie mir einfach Ihren Bestand.</span>",
+            "description": "Das Konzept steht bereits. Der nächste sinnvolle Schritt ist zu sehen, wie es mit Ihrem tatsächlichen Bestand aussieht.",
+            "steps": [
+                {
+                    "number": "01 / SIE",
+                    "title": "Bestand senden",
+                    "description": "Senden Sie Ihre aktuelle Website, Chrono24-Seite, Instagram oder einige aktive Referenzen."
+                },
+                {
+                    "number": "02 / ICH",
+                    "title": "Ich setze ihn ein",
+                    "description": "Ich füge einige Ihrer tatsächlichen Uhren in den Store ein, damit Sie die Idee anhand Ihres eigenen Bestands beurteilen können."
+                },
+                {
+                    "number": "03 / ENTSCHEIDUNG",
+                    "title": "Sie entscheiden",
+                    "description": "Wenn der zusätzliche Store zu Ihrer Verkaufsweise passt, sprechen wir über die Umsetzung als echte Website."
+                }
+            ]
+        },
+        "cta": {
+            "eyebrow": "Nächster Schritt",
+            "title": "Sehen Sie, wie Ihre echten Uhren<br></br><span>hier aussehen.</span>",
+            "description": "Kein 60-minütiges Verkaufsgespräch. Senden Sie den Link zu Ihrem aktuellen Bestand oder drei Stücke, die Sie aktiv verkaufen. Ich kümmere mich um den Rest.",
+            "sendStock": "Vereinbaren Sie Ihre individuelle Demo",
+            "floatingCta": "Buche Arvell's Custom Demo",
+            "openStorefront": "Store öffnen",
+            "credit": "Aymen · Arvell"
+        },
+        "nav": {
+            "back": "Zurück zum Store",
+            "nextStep": "Nächsten Schritt sehen"
+        },
+        "footer": {
+            "tagline": "Private Store-Konzepte für unabhängige Uhrenhändler"
+        }
+    }
+}

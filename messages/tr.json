@@ -1,0 +1,1474 @@
+{
+    "intrest": {
+        "title": "İlgileniyor musunuz?",
+        "subTitle": "Bu web sitesini işletmeniz için neden kurduğumu, sizin için neler yapabileceğini ve bunu müşterilerinizin gerçekten kullanabileceği bir şeye nasıl dönüştürebileceğimizi görün.",
+        "cta": "Daha Fazla Bilgi"
+    },
+    "orders": {
+        "thankYou": "Teşekkürlerimizle",
+        "thankYouSuffix": "satın alımınız onaylandı",
+        "ongoingOrders": "teslimat bekleniyor",
+        "orderId": "referans",
+        "orderDate": "verildiği tarih",
+        "orderTotal": "toplam",
+        "paymentMethod": "ödeme",
+        "shipping": "teslimat adresi",
+        "status": "durum",
+        "noOngoingOrders": "şu anda yolda olan bir parça bulunmuyor",
+        "deliveredOrders": "koleksiyonunuz",
+        "noDeliveredOrders": "koleksiyonunuz ilk parçanızla başlıyor",
+        "subtitle": "Siparişiniz kaydedildi. Bir uzmanımız bir iş günü içinde sizinle iletişime geçecek.",
+        "orderCount": "{count, plural, =0 {Sipariş yok} other {# sipariş}}",
+        "quantity": "Adet",
+        "localPickup": "Butikten teslim alma",
+        "discount": "İndirim",
+        "browse": "Koleksiyonu keşfedin"
+    },
+    "meta": {
+        "siteName": "ARVELL",
+        "titleDefault": "ARVELL | Üst Segment Lüks Saatler ve Uzman Danışmanlığı",
+        "description": "Rolex, Patek Philippe ve Cartier dahil olmak üzere kusursuz durumdaki ikinci el ve sıfır lüks saatlerden oluşan özenle seçilmiş koleksiyonumuzu keşfedin. Saatçilik uzmanlarımızla bugün profesyonel bir danışmanlık randevusu alın.",
+        "keywords": ["lüks saatler", "ikinci el Rolex", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "lüks saat satın al", "saat danışmanlığı", "ARVELL"],
+        "ogDescription": "İkinci el ve sıfır lüks saatlerden oluşan özenle seçilmiş koleksiyonumuz sizi bekliyor. Üst segment saatçilik ihtiyaçlarınız için uzmanlarımızla çalışın.",
+        "ogImageAlt": "ARVELL Lüks Saat Koleksiyonu",
+        "twitterDescription": "Üst segment saatler için ortağınız. Rolex, Patek Philippe ve Cartier'yi keşfedin, uzman randevunuzu alın."
+    },
+    "common": {
+        "brand": "ARVELL",
+        "nav": {
+            "watches": "Saatler",
+            "spareParts": "Yedek Parçalar",
+            "favorites": "Favoriler",
+            "aboutUs": "Hakkımızda",
+            "store": "Mağaza",
+            "sellConsign": "Sat / Konsinye",
+            "polishingServices": "Parlatma ve Servis",
+            "shippingPayments": "Kargo ve Ödeme",
+            "faq": "SSS",
+            "vacancies": "Açık Pozisyonlar"
+        },
+        "footer": {
+            "shopHeading": "Mağaza",
+            "serviceHeading": "Servis",
+            "settingsHeading": "Ayarlar",
+            "themeHeading": "Tema",
+            "currency": "Para birimi",
+            "language": "dil",
+            "otherPlatformsHeading": "Diğer Platformlar",
+            "legalHeading": "Yasal",
+            "chrono24": "Chrono24",
+            "ebay": "eBay",
+            "ebayKleinanzeigen": "eBay Kleinanzeigen",
+            "instagram": "Instagram",
+            "imprint": "Künye",
+            "privacyPolicy": "Gizlilik Politikası",
+            "terms": "Şartlar ve Koşullar",
+            "withdrawal": "Cayma Hakkı",
+            "disclaimer": "Sorumluluk Reddi",
+            "cookiePolicy": "Çerez Politikası",
+            "disclaimerText": "Arvell bağımsız bir satıcıdır; herhangi bir markayla bağlantısı yoktur ve yetkili satıcı değildir.",
+            "copyright": "©{year} Arvell. Tüm hakları saklıdır."
+        },
+        "contactLabels": {
+            "phonePrimary": "Telefon",
+            "phoneSecondary": "Telefon (Mağaza)",
+            "email": "E-posta"
+        },
+        "buttons": {
+            "discover": "Keşfedin",
+            "add_to_cart": "sepete ekle",
+            "adding_to_cart": "sepete ekleniyor",
+            "register": "kayıt ol",
+            "quick_view": "hızlı bakış",
+            "viewAllWatches": "Tüm saatleri görüntüle",
+            "begin": "Yolculuğunuza başlayın",
+            "bookNow": "Hemen randevu alın",
+            "bookAppointment": "Randevu alın",
+            "learnMore": "Daha fazla bilgi",
+            "goToShop": "Mağazaya git",
+            "submit": "Gönder",
+            "previous": "Önceki",
+            "next": "Sonraki",
+            "clearFilters": "Filtreleri temizle",
+            "confirmWithdrawal": "Cayma talebini onayla",
+            "sellYourWatch": "Saatinizi satın",
+            "consignment": "Konsinye"
+        },
+        "filters": {
+            "brands": "Markalar",
+            "movement": "Mekanizma",
+            "caseMaterial": "Kasa Malzemesi",
+            "braceletMaterial": "Kordon Malzemesi",
+            "dialColor": "Kadran Rengi",
+            "condition": "Durum",
+            "caseDiameterMm": "Kasa Çapı (mm)",
+            "year": "Yıl",
+            "waterResistance": "Suya Dayanıklılık",
+            "includes": "İçerik",
+            "price": "Fiyat",
+            "availability": "Stok Durumu",
+            "from": "Alt sınır",
+            "to": "Üst sınır",
+            "searchPlaceholder": "Ara...",
+            "search": "Ara",
+            "searching": "Aranıyor...",
+            "noSearchResults": "Üzgünüz, arama teriminizle eşleşen bir sonuç bulunamadı.",
+            "sort": "Sırala",
+            "newest": "En yeni",
+            "relevance": "İlgi düzeyi",
+            "brand": "Marka",
+            "filtersLabel": "Filtreler",
+            "inStock": "Stokta",
+            "includesBox": "Kutu",
+            "includesPapers": "Belgeler",
+            "includesFirstInvoice": "İlk Fatura",
+            "includesServiceInvoice": "Servis Faturası",
+            "conditionNew": "Sıfır",
+            "conditionPreOwned": "İkinci El",
+            "movementManual": "Kurmalı",
+            "movementAutomatic": "Otomatik",
+            "movementQuartz": "Kuvars",
+            "noResults": "Filtrelerinizle eşleşen sonuç yok.",
+            "clearAll": "Tümünü temizle",
+            "close": "Kapat",
+            "remove": "Filtreyi kaldır",
+            "activeFilters": "Aktif filtreler",
+            "showAll": "{count} tane daha göster",
+            "showLess": "Daha az göster",
+            "showResults": "{count, plural, =0 {Saat yok} other {# saat}} göster",
+            "resultCount": "{count, plural, =0 {Saat yok} other {# saat}}",
+            "_fix": "Also swap these two values — they are currently inverted in en.json",
+            "priceLowToHight": "Fiyat: artan",
+            "priceHightToLow": "Fiyat: azalan"
+        },
+        "productCard": {
+            "movement": "Mekanizma",
+            "caseSize": "Kasa ölçüsü",
+            "bracelet": "Kordon",
+            "material": "Malzeme",
+            "details": "Detaylar",
+            "condition": "Durum"
+        },
+        "formFields": {
+            "firstName": "Ad",
+            "lastName": "Soyad",
+            "companyName": "Firma Adı (isteğe bağlı)",
+            "countryRegion": "Ülke / Bölge",
+            "streetAddress": "Açık Adres",
+            "postCode": "Posta Kodu",
+            "townCity": "İl/İlçe",
+            "diffAddress": "Farklı bir adrese gönder",
+            "email": "E-posta",
+            "phone": "Telefon",
+            "orderNotes": "Sipariş notları (isteğe bağlı)",
+            "orderNoteExample": "Siparişinizle ilgili notlar, ör. teslimata dair özel açıklamalar",
+            "message": "Mesaj",
+            "attachImages": "Görsel Ekle",
+            "required": "Bu alan zorunludur",
+            "invalidEmail": "Lütfen geçerli bir e-posta adresi girin"
+        }
+    },
+    "error": {
+        "heading": "Hay aksi. Bir şeyler ters gitti!",
+        "subHeading": "Beklenmeyen bir hata oluştu",
+        "subText": "Bu sayfa yüklenirken bir sorun oluştu. Tekrar deneyebilir veya ana sayfaya dönebilirsiniz.",
+        "tryAgain": "tekrar dene",
+        "return": "Ana Sayfaya Dön"
+    },
+    "notFound": {
+        "heading": "404 Bulunamadı",
+        "subHeading": "Bu Sayfanın Süresi Doldu",
+        "subText": "Aradığınız sayfa veya saat taşınmış, adı değiştirilmiş ya da artık mevcut değil.",
+        "return": "Ana Sayfaya Dön",
+        "explore": "Koleksiyonumuzu Keşfedin"
+    },
+    "auth": {
+        "signUp": {
+            "homePage": "Ana sayfa",
+            "title": "Hesabınızı oluşturun",
+            "description": "İlgilendiğiniz parçaları kaydedin, teklifleri takip edin ve bir dahaki sefere daha hızlı alışveriş yapın.",
+            "firstName": "Ad",
+            "lastName": "Soyad",
+            "email": "E-posta",
+            "password": "Şifre",
+            "firstNamePlaceholder": "Jordan",
+            "lastNamePlaceholder": "Blake",
+            "emailPlaceholder": "Jordan@arvell.com",
+            "passwordPlaceholder": "En az 8 karakter",
+            "agree": "Hizmet Şartları'nı ve Gizlilik Politikası'nı kabul ediyorum",
+            "createAccount": "Hesap oluştur",
+            "creatingAccount": "Hesap oluşturuluyor…",
+            "alreadyHaveAccount": "Zaten hesabınız var mı?",
+            "logIn": "Giriş yap",
+            "termsRequired": "Devam etmek için Hizmet Şartları'nı kabul etmeniz gerekir.",
+            "somethingWentWrong": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+        },
+        "login": {
+            "homePage": "Ana sayfa",
+            "title": "Hesabınıza giriş yapın",
+            "description": "İlgilendiğiniz parçaları kaydedin, teklifleri takip edin ve bir dahaki sefere daha hızlı alışveriş yapın.",
+            "email": "E-posta",
+            "password": "Şifre",
+            "emailPlaceholder": "Jordan@arvell.com",
+            "passwordPlaceholder": "En az 8 karakter",
+            "logIn": "Giriş yap",
+            "loggingIn": "Giriş yapılıyor…",
+            "dontHaveAccount": "Hesabınız yok mu?",
+            "signUp": "Kayıt ol",
+            "somethingWentWrong": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+        }
+    },
+    "home": {
+        "heroTitle": "ARVELL",
+        "heroSubtitle": "Üst segment saatler için ortağınız",
+        "discover": "Keşfedin",
+        "newArrivalsHeading": "Yeni Gelenler",
+        "newArrivalsSubtext": "İkinci el ve sıfır saatlerden oluşan özenle seçilmiş koleksiyonumuz sizi bekliyor.",
+        "getInspiredHeading": "İlham Alın",
+        "getInspiredSubtext": "Yolculuğunuz burada başlıyor. Bu soruları yanıtlamak için bir dakikanızı ayırın, ilk adımınızın ne olması gerektiğini birlikte belirleyelim.",
+        "brandsHeading": "İkonik Markalar",
+        "brandsSubtext": "Dünyaca ünlü saat üreticilerinin klasik kol saatlerinden oluşan koleksiyonumuza göz atın.",
+        "sellConsignCard": {
+            "title": "Sat / Konsinye",
+            "cta": "Daha fazla bilgi"
+        },
+        "sparePartsCard": {
+            "title": "Yedek Parçalar",
+            "cta": "Mağazaya git"
+        },
+        "polishCard": {
+            "title": "Parlatma ve Servis",
+            "cta": "Daha fazla bilgi"
+        },
+        "bookingBanner": {
+            "heading": "Randevu Alın",
+            "subtext": "Uzmanlar olarak, aklınıza takılan her konuda size profesyonel görüşümüzü sunuyoruz.",
+            "cta": "Hemen randevu alın"
+        }
+    },
+    "shop": {
+        "title": "Saatler"
+    },
+    "spare": {
+        "title": "Yedek Parçalar"
+    },
+    "store": {
+        "heading": "Arvell Mağazası Frankfurt",
+        "cta": "Randevu alın",
+        "welcomeText": "Sizi yakında mağazamızda ağırlamayı dört gözle bekliyoruz.",
+        "appointmentNote": "Aradığınız saatin ziyaretiniz sırasında hazır olduğundan emin olmak için lütfen randevu alın.",
+        "highValueNote": "Ayrıca, 15.000€ üzerindeki saatler için randevu alınmasının zorunlu olduğunu belirtmek isteriz.",
+        "addressHeading": "Adres",
+        "parkingText": "Otopark: aynı binadaki Park One garajı",
+        "parkingLinkText": "(Google Haritalar'da görüntüleyin)",
+        "openingHoursHeading": "Çalışma Saatleri",
+        "days": {
+            "monday": "Pazartesi",
+            "tuesday": "Salı",
+            "wednesday": "Çarşamba",
+            "thursday": "Perşembe",
+            "friday": "Cuma",
+            "saturday": "Cumartesi",
+            "sunday": "Pazar"
+        },
+        "closed": "Kapalı",
+        "contactHeading": "İletişim"
+    },
+    "sell": {
+        "heading": "Sat / Konsinye",
+        "formCtaHeading": "Formu doldurun",
+        "formCtaText": "Arvell'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+        "beginCta": "Başlayın",
+        "howItWorksHeading": "Nasıl çalışır",
+        "consign": {
+            "heading": "Konsinye",
+            "intro": "Saatinizi konsinye olarak satmamızı isterseniz, saati web sitemizde yayınlayabilir ve iki tarafın da mutabık kaldığı bir fiyattan satışa sunabiliriz. Saat satıldığında, konsinye komisyonu düşüldükten sonra ödeme size gönderilir.",
+            "steps": [
+                {
+                    "title": "Saatinizle İlgili Bilgileri Paylaşın",
+                    "text": "Saatinizle ilgili tüm ayrıntıları ve istediğiniz fiyatı bize ileterek başarılı bir işlemin zeminini hazırlayın."
+                },
+                {
+                    "title": "Konsinye Sözleşmesi ve Kargo Etiketi",
+                    "text": "Dilerseniz size bir konsinye sözleşmesi ve tamamen sigortalı bir kargo etiketi göndeririz. Alternatif olarak Frankfurt'taki mağazamızdan randevu alabilirsiniz."
+                },
+                {
+                    "title": "İnceleme",
+                    "text": "Saati teslim aldığımızda, orijinalliğini doğrulamak için ayrıntılı bir inceleme yaparız."
+                },
+                {
+                    "title": "Yayına Alma",
+                    "text": "Saatin fotoğrafları çekilir ve tüm platformlarımızda yayınlanır."
+                },
+                {
+                    "title": "Satış ve Ödeme",
+                    "text": "Saatinizi sattıktan ve 14 günlük iade süresi dolduktan sonra ödemeyi size gönderiyoruz."
+                }
+            ]
+        },
+        "sellDirect": {
+            "heading": "Sat",
+            "intro": "Arvell'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+            "steps": [
+                {
+                    "title": "Saatinizle İlgili Bilgileri Paylaşın",
+                    "text": "Saatinizi bize tanıtmak için bu formu doldurun; 48 saat içinde bir fiyat teklifiyle size geri dönelim."
+                },
+                {
+                    "title": "Anlaşma ve Kargo Etiketi",
+                    "text": "Anlaşmaya vardığımızda, saatiniz için bir kargo etiketi almak ile mağazamıza gelmek arasında seçim yapabilirsiniz."
+                },
+                {
+                    "title": "İnceleme",
+                    "text": "Saatinizin orijinalliğini doğrulamak için, ulaştığı anda önce ayrıntılı bir inceleme yaparız."
+                },
+                {
+                    "title": "Ödeme",
+                    "text": "İnceleme tamamlanır tamamlanmaz, üzerinde anlaşılan tutar ödenir."
+                }
+            ]
+        },
+        "form": {
+            "heading": "Konsinye / Saatinizi Satın",
+            "intro": "Arvell'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+            "sections": {
+                "personalInformation": "Kişisel Bilgiler",
+                "salePreference": "Satış tercihi",
+                "watchDetails": "Saat Bilgileri"
+            },
+            "salePreferenceOptions": {
+                "consignment": "Konsinye",
+                "sell": "Saatinizi satın"
+            },
+            "fields": {
+                "brand": "Marka",
+                "askingPrice": "İstenen Fiyat",
+                "model": "Model",
+                "referenceNumber": "Referans Numarası",
+                "boxPapersQuestion": "Orijinal kutu ve belgeler elinizde mi? Lütfen geçerli olan tüm seçenekleri işaretleyin.",
+                "box": "Kutu",
+                "paper": "Belge",
+                "messagePlaceholder": "Eklemek istediğiniz başka bir şey var mı?",
+                "condition": "Durum",
+                "conditionNew": "Sıfır",
+                "conditionMint": "Kusursuz",
+                "conditionPreOwned": "İkinci el"
+            }
+        }
+    },
+    "polish": {
+        "heading": "Parlatma ve Servis",
+        "intro": "Arvell olarak Rolex, IWC, Tudor, Omega ve Cartier gibi üst segment markalar için birinci sınıf parlatma ve onarım hizmeti sunuyoruz. Deneyimli saat ustamız, hassas parlatmadan profesyonel bakıma kadar saatinizi en iyi haline getirir.",
+        "servicesHeading": "Hizmetlerimize genel bakış:",
+        "polishing": {
+            "heading": "Parlatma ve yenileme:",
+            "intro": "Çizikleri ve hafif kullanım izlerini gidererek saatinize orijinal parlaklığını geri kazandırıyoruz:",
+            "items": ["Parlatma ve yenileme 175 €'dan başlayan fiyatlarla", "Malzeme dolgulu parlatma ve yenileme 249 €'dan başlayan fiyatlarla"]
+        },
+        "maintenance": {
+            "heading": "Bakım ve onarım:",
+            "intro": "Usta atölyemizde gerekli tüm onarımları gerçekleştiriyor ve mekanizmanız için güvenilir bir bakım hizmeti sunuyoruz:",
+            "items": [
+                "Standart kuvars modellerde pil değişimi 45 €",
+                "Hassasiyet ayarı / günlük sapmanın regülasyonu 79 €",
+                "Kadran değişimi (3 ibreli) 199 €",
+                "Kadran değişimi (kronograf) 249 €",
+                "3 ibreli kurmalı saatlerde bakım 499 €'dan başlayan fiyatlarla",
+                "3 ibreli otomatik saatlerde bakım 599 €'dan başlayan fiyatlarla (ör. Rolex, OMEGA, Panerai vb.)",
+                "Kronograflarda bakım 749 €'dan başlayan fiyatlarla (ör. Rolex, OMEGA)"
+            ],
+            "note": "Gerekmesi hâlinde yedek parçalar ayrıca hesaplanır. Özel onarımlar için maliyet tahmini sunulur."
+        },
+        "expertHeading": "Uzman profesyoneller:",
+        "expertText": "Saat ustamız lüks saatlerin bakımı ve onarımı konusunda uzmandır.",
+        "qualityHeading": "En yüksek kalite:",
+        "qualityText": "Yalnızca en yüksek standartları karşılayan özel aletler kullanıyoruz.",
+        "speedHeading": "Hız ve güvenilirlik:",
+        "speedText": "Size hızlı işlem süreleri ve güvenilir bir uygulama sunuyoruz; böylece saatiniz kısa sürede size geri döner."
+    },
+    "booking": {
+        "heading": "Randevu Alın",
+        "intro": "Sizi yakında mağazamızda ağırlamayı dört gözle bekliyoruz. Aradığınız saatin ziyaretiniz sırasında hazır olduğundan emin olmak için lütfen randevu alın. Ayrıca, 15.000€ üzerindeki saatler için randevu alınmasının zorunlu olduğunu belirtmek isteriz.",
+        "fields": {
+            "firstName": "Ad",
+            "lastName": "Soyad",
+            "email": "E-posta",
+            "phone": "Telefon",
+            "reason": "Görüşme konusu",
+            "submit": "Gönder",
+            "appointmentDate": "Randevu Tarihi"
+        }
+    },
+    "about": {
+        "heading": "Hakkımızda",
+        "paragraphs": [
+            "Hikâyemiz bir kıvılcımla başladı: efsanevi bir İngiliz ajanının taktığı zarif bir saat, kurucumuz Aymen Braikia'da ömür boyu sürecek bir tutku uyandırdı. Saatçiliğe duyduğu bu hayranlık, Aymen'i genç bir meraklıdan üst segment saatlerin saygın bir satıcısına dönüştürdü. 2019'da, makine mühendisliği eğitimini sürdürürken Arvell'i kurdu ve tutkusunu ikonik kol saatlerine adanmış, hızla büyüyen bir işletmeye dönüştürdü.",
+            "Arvell'de, hem sıfır hem de ikinci el seçkin saatler için güvenilir uzmanınızız. Uzmanlığımızın arkasında tutku var: yalnızca en iyi saatleri sunuyoruz; her biri kendi kolumuzda gururla taşıyacağımız parçalar. Kendi bünyemizdeki saat ustamız, orijinalliğinden ve en iyi performansından emin olmak için her saati titizlikle inceler; böylece alışverişinizden içiniz rahat eder.",
+            "Ekibimiz ve bünyemizdeki saat ustamız, orijinalliğini ve performansını garanti altına almak için her saati satıştan önce titizlikle inceler.",
+            "Koleksiyonunuza yeni bir parça mı eklemek istiyorsunuz? Prestijli markalardan oluşan etkileyici bir seçki sunuyoruz.",
+            "Markalarımız: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling ve daha fazlası",
+            "Satmak istediğiniz bir parça mı var? Olağanüstü saatleri her zaman arıyoruz. İster doğrudan satmak ister saatinizi konsinye vermek isteyin, ihtiyaçlarınıza göre uyarlanmış, sorunsuz ve güvenilir çözümler sunuyoruz."
+        ],
+        "sellCta": "Saatinizi satın",
+        "consignmentCta": "Konsinye"
+    },
+    "payments": {
+        "heading": "Kargo ve Ödeme",
+        "paymentsHeading": "Ödemeler",
+        "paymentsSubtext": "Hızlı ve güvenli çevrimiçi ödemeler",
+        "paymentsTable": {
+            "headers": ["Ödeme Yöntemi", "Süre", "Komisyon"],
+            "rows": [
+                ["Yurt İçi Havale", "1–2 iş günü", "%0"],
+                ["Uluslararası Havale", "2–3 iş günü", "%0"],
+                ["PayPal", "anında", "%3"],
+                ["Kredi/Banka Kartı", "anında", "%1,4"]
+            ]
+        },
+        "shippingHeading": "Kargo",
+        "germany": {
+            "heading": "Almanya",
+            "text": "Almanya içi teslimat: 1–2 iş günü.",
+            "rows": [
+                ["DHL", "500€'ya kadar", "6€"],
+                ["UPS", "500€ – 10.000€", "20€"],
+                ["UPS", "10.000€ – 15.000€", "50€"],
+                ["UPS", "15.000€ – 25.000€", "80€"],
+                ["Prosegur", "25.000€ – 50.000€", "150€"],
+                ["Prosegur", "50.000€ – 250.000€", "250€"],
+                ["Prosegur", "250.000€ ve üzeri", "Talep üzerine"]
+            ]
+        },
+        "eu": {
+            "heading": "Avrupa Birliği",
+            "text": "Avrupa Birliği içi teslimat: 1–2 iş günü.",
+            "rows": [
+                ["DHL", "500€'ya kadar", "15€"],
+                ["UPS", "500€ – 10.000€", "50€"],
+                ["UPS", "10.000€ – 15.000€", "150€"],
+                ["UPS", "15.000€ – 25.000€", "300€"],
+                ["Prosegur", "25.000€ – 50.000€", "400€"],
+                ["Prosegur", "50.000€ – 250.000€", "500€"],
+                ["Prosegur", "250.000€ ve üzeri", "Talep üzerine"]
+            ]
+        },
+        "worldwide": {
+            "heading": "Dünya Geneli",
+            "text": "Dünya geneli teslimat: 3–10 iş günü.",
+            "rows": [
+                ["DHL", "500€'ya kadar", "25€"],
+                ["DHL Express", "500€ – 10.000€", "100€"],
+                ["UPS", "10.000€ – 15.000€", "150€"],
+                ["UPS", "15.000€ – 25.000€", "400€"],
+                ["Prosegur", "25.000€ – 50.000€", "750€"],
+                ["Prosegur", "50.000€ – 250.000€", "1.000€"],
+                ["Prosegur", "250.000€ ve üzeri", "Talep üzerine"]
+            ]
+        },
+        "value": "Değer",
+        "cost": "Ücret"
+    },
+    "faq": {
+        "heading": "Sıkça Sorulan Sorular",
+        "categories": {
+            "payments": {
+                "heading": "Ödemeler",
+                "items": [
+                    {
+                        "q": "Hangi ödeme yöntemlerini sunuyorsunuz?",
+                        "a": "Çevrimiçi: havale, PayPal (+%3), kredi kartı (+%1,4). Mağazada: anında ödeme, PayPal, kredi kartı, nakit (kimlik belgesi gereklidir)."
+                    },
+                    {
+                        "q": "Kapıda ödeme veya fatura sonrası ödeme kabul ediyor musunuz?",
+                        "a": "Maalesef yalnızca peşin veya anında ödemeleri kabul edebiliyoruz."
+                    },
+                    {
+                        "q": "Saat takası mümkün mü?",
+                        "a": "Genel olarak evet. Sizin için memnuniyetle bir teklif hazırlarız. Lütfen saatinizin ayrıntılarıyla birlikte bizimle iletişime geçin."
+                    },
+                    {
+                        "q": "Taksitli ödeme kabul ediyor musunuz?",
+                        "a": "Şu anda taksitli ödeme kabul edemiyoruz."
+                    }
+                ]
+            },
+            "watches": {
+                "heading": "Saatler",
+                "items": [
+                    {
+                        "q": "Teslimata neler dahil?",
+                        "a": "Teslimat kapsamı değişkenlik gösterir. Nelerin dahil olduğunu ürün açıklamasında her zaman açıkça belirtiriz. Teslimat kapsamı ayrıca ilanın son görselinde de gösterilir."
+                    },
+                    {
+                        "q": "Satın almadan önce ürünleri yerinde görebilir miyim?",
+                        "a": "Ürünlerimizi mağazamızda memnuniyetle tanıtır ve sorularınızı yanıtlarız. Lütfen randevu alın. 15.000€ üzerindeki saatler için randevu alınmasının zorunlu olduğunu belirtmek isteriz."
+                    },
+                    {
+                        "q": "Bir saati rezerve ettirmek mümkün mü?",
+                        "a": "Üzgünüz, saatleri sizin adınıza rezerve edemiyoruz."
+                    },
+                    {
+                        "q": "Bir saatin durumundan nasıl emin olabilirim?",
+                        "a": "Her saatin durumu ilan açıklamasında ayrıntılı olarak belirtilir ve güncel, yüksek çözünürlüklü ürün görselleriyle gösterilir."
+                    },
+                    {
+                        "q": "Bir saatin orijinalliğini doğrulayabilir misiniz?",
+                        "a": "Bizden satın alınmamış saatler için orijinallik doğrulama hizmeti sunmuyoruz."
+                    },
+                    {
+                        "q": "Saatimi servis ve bakım için size getirebilir miyim?",
+                        "a": "Şu anda onarım veya bakım hizmeti sunmuyoruz."
+                    },
+                    {
+                        "q": "Suya dayanıklılık garantisi veriyor musunuz?",
+                        "a": "Hayır, suya dayanıklılık garanti kapsamında değildir."
+                    },
+                    {
+                        "q": "Saatleri ince veya geniş bileklere göre ayarlıyor musunuz?",
+                        "a": "Saatlerimiz çoğu durumda 19 cm bilek ölçüsüne (çevresine) kadar takılabilir. Daha ince bilekler için baklaları çıkararak kordonu kısaltabiliriz. Daha geniş bilekler için, elimizde mevcutsa ek bakla ekleyebiliriz."
+                    },
+                    {
+                        "q": "Saat kargoda kaybolursa ne olur?",
+                        "a": "Saat size ulaşmadan kaybolursa siparişinizin bedelini eksiksiz iade ederiz."
+                    },
+                    {
+                        "q": "Teslimat süreleriniz nedir?",
+                        "a": "Kargoyla ilgili daha fazla bilgi için Kargo ve Ödeme sayfamıza göz atın."
+                    },
+                    {
+                        "q": "Belirli bir tarihte gönderim yapabilir misiniz?",
+                        "a": "Teslimatınızı memnuniyetle planlarız. Lütfen istediğiniz gönderim tarihini önceden bize bildirin."
+                    },
+                    {
+                        "q": "Teslimatı kaçırırsam ne olur?",
+                        "a": "İlk teslimat denemesi başarısız olursa kurye genellikle ikinci kez teslimat dener. 25.000€ değerine kadar olan saatlerde gönderi numarasıyla teslimatınızı takip edebilirsiniz."
+                    }
+                ]
+            },
+            "withdrawalWarranty": {
+                "heading": "Cayma Hakkı ve Garanti",
+                "items": [
+                    {
+                        "q": "Saati iade edebilir miyim?",
+                        "a": "Kargoyla gönderilen siparişlerde 14 gün boyunca cayma hakkınızı kullanabilirsiniz. Yalnızca durumu değişmemiş ürünleri kabul edebiliyoruz."
+                    },
+                    {
+                        "q": "Saatim için yasal garanti ne kadar süre geçerli?",
+                        "a": "Garanti, satın alma tarihinden itibaren bir yıl geçerlidir."
+                    }
+                ]
+            }
+        }
+    },
+    "vacancies": {
+        "heading": "Açık Pozisyonlar",
+        "empty": "Şu anda açık pozisyon bulunmamaktadır."
+    },
+    "imprint": {
+        "heading": "Künye",
+        "companyLabel": "Arvell",
+        "phoneLabel": "Telefon numarası:",
+        "emailLabel": "E-posta:",
+        "vatIdLabel": "Katma değer vergisi kimlik numarası:",
+        "representativesLabel": "Yetkili temsilciler:",
+        "odrHeading": "Çevrimiçi Uyuşmazlık Çözümü Bildirimi",
+        "odrText": "Avrupa Komisyonu, buradan ulaşabileceğiniz bir çevrimiçi uyuşmazlık çözümü (ODR) platformu sunmaktadır. Bir tüketici hakem heyeti önünde uyuşmazlık çözümü sürecine katılma yükümlülüğümüz bulunmamakta olup buna istekli de değiliz.",
+        "note": "Personal/company identity fields (name, address, phone, VAT ID) are intentionally NOT stored as translation strings — pull those from your business config/CMS, not from i18n files."
+    },
+    "legal": {
+        "privacyPolicy": {
+            "heading": "Gizlilik Politikası",
+            "intro": [
+                "Kişisel veriler (aşağıda genel olarak yalnızca “veriler” olarak anılacaktır) tarafımızca yalnızca gerekli olduğu ölçüde ve işlevsel, kullanıcı dostu bir web sitesi ile içeriğini ve burada sunulan hizmetleri sağlamak amacıyla işlenir.",
+                "(AB) 2016/679 sayılı Tüzüğün, yani Genel Veri Koruma Tüzüğünün (bundan böyle “GDPR” olarak anılacaktır) 4. maddesinin 1. fıkrası uyarınca “işleme”, kişisel veriler üzerinde otomatik yollarla olsun ya da olmasın gerçekleştirilen toplama, kaydetme, düzenleme, yapılandırma, saklama, uyarlama, değiştirme, geri alma, danışma, kullanma, aktarım yoluyla açıklama, yayma veya başka biçimde erişilebilir kılma, hizalama veya birleştirme, kısıtlama, silme ya da yok etme gibi her türlü işlem veya işlem dizisini ifade eder.",
+                "Aşağıdaki gizlilik politikası, bu tür verilerin kendi kontrolümüz altında veya başkalarıyla birlikte işlenmesinin türü, kapsamı, amacı, süresi ve hukuki dayanağı hakkında sizi bilgilendirmeyi amaçlamaktadır. Ayrıca aşağıda, web sitemizi optimize etmek ve kullanıcı deneyimini iyileştirmek için kullandığımız üçüncü taraf bileşenleri hakkında da bilgi veriyoruz; bu durum, söz konusu üçüncü tarafların topladıkları ve kontrol ettikleri verileri de işlemesine yol açabilir.",
+                "Gizlilik politikamız aşağıdaki şekilde yapılandırılmıştır:"
+            ],
+            "structureList": ["Verilerinizin veri sorumlusu olarak bizimle ilgili bilgiler", "Kullanıcıların ve ilgili kişilerin hakları", "Veri işleme hakkında bilgiler"],
+            "sections": {
+                "controller": {
+                    "heading": "Verilerinizin veri sorumlusu olarak bizimle ilgili bilgiler",
+                    "text": "Veri koruma mevzuatı bakımından bu web sitesinden sorumlu taraf (“veri sorumlusu”), sahibi tarafından temsil edilen Arvell'dir. İletişim bilgileri Künye bölümünde yer almaktadır."
+                },
+                "rights": {
+                    "heading": "Kullanıcıların ve ilgili kişilerin hakları",
+                    "intro": "Aşağıda daha ayrıntılı açıklanacak veri işleme faaliyetleri bakımından kullanıcılar ve ilgili kişiler şu haklara sahiptir",
+                    "items": [
+                        "kendilerine ilişkin verilerin işlenip işlenmediğinin teyit edilmesini, işlenen veriler hakkında bilgi verilmesini, veri işlemenin niteliğine ilişkin ek bilgileri ve verilerin bir kopyasını talep etme (ayrıca bkz. GDPR Madde 15);",
+                        "hatalı veya eksik verilerin düzeltilmesini ya da tamamlanmasını talep etme (ayrıca bkz. GDPR Madde 16);",
+                        "kendilerine ilişkin verilerin derhâl silinmesini talep etme (ayrıca bkz. GDPR Madde 17) veya alternatif olarak, GDPR Madde 17 fıkra 3'te öngörüldüğü üzere işlemenin devamı gerekiyorsa, GDPR Madde 18 uyarınca söz konusu işlemenin kısıtlanmasını talep etme;",
+                        "kendilerine ilişkin ve/veya kendileri tarafından sağlanan verilerin bir kopyasını alma ve bunların diğer sağlayıcılara/veri sorumlularına aktarılmasını talep etme (ayrıca bkz. GDPR Madde 20);",
+                        "kendilerine ilişkin verilerin veri sorumlusu tarafından veri koruma hükümlerine aykırı şekilde işlendiğini düşünmeleri hâlinde denetim makamına şikâyette bulunma (ayrıca bkz. GDPR Madde 77)."
+                    ],
+                    "outro": "Ayrıca veri sorumlusu, GDPR Madde 16, Madde 17 fıkra 1 ve Madde 18 uyarınca yapılan her türlü düzeltme, silme veya işleme kısıtlamasını, verileri açıkladığı tüm alıcılara bildirmekle yükümlüdür. Ancak bu bildirimin imkânsız olması veya orantısız bir çaba gerektirmesi hâlinde bu yükümlülük uygulanmaz. Bununla birlikte kullanıcılar, bu alıcılar hakkında bilgi alma hakkına sahiptir. Aynı şekilde, GDPR Madde 21 uyarınca kullanıcılar ve ilgili kişiler, veri sorumlusunun GDPR Madde 6 fıkra 1 bent f) kapsamındaki gelecekteki veri işleme faaliyetlerine itiraz etme hakkına sahiptir. Özellikle doğrudan pazarlama amacıyla yapılan veri işlemeye itiraz edilmesi mümkündür."
+                },
+                "dataProcessing": {
+                    "heading": "Veri işleme hakkında bilgiler",
+                    "text": "Web sitemizi kullanırken işlenen verileriniz, saklanma amacı ortadan kalkar kalkmaz silinecek veya bloke edilecektir; bu işlem herhangi bir yasal saklama yükümlülüğüne aykırı olmadığı ve aşağıda aksi belirtilmediği sürece geçerlidir."
+                },
+                "paypal": {
+                    "heading": "Ödeme yöntemi olarak PayPal kullanımı",
+                    "paragraphs": [
+                        "Sipariş süreciniz sırasında çevrimiçi ödeme hizmeti sağlayıcısı PayPal ile ödeme yapmayı tercih ederseniz, iletişim bilgileriniz bu şekilde oluşturulan siparişin bir parçası olarak PayPal'a aktarılır. PayPal, PayPal (Europe) S.à r.l. & Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Lüksemburg tarafından sunulan bir hizmettir. PayPal böylece çevrimiçi ödeme hizmeti sağlayıcısı ve güvenilir aracı işlevi üstlenir ve alıcı koruma hizmetleri sunar.",
+                        "PayPal'a aktarılan kişisel veriler çoğunlukla ad, soyad, adres, telefon numarası, IP adresi, e-posta adresi veya sipariş işlemleri için gerekli diğer verilerin yanı sıra ürün adedi, ürün numarası, fatura tutarı ve vergi oranı, fatura bilgileri gibi siparişle ilgili verilerdir.",
+                        "Bu aktarım, seçtiğiniz ödeme yöntemiyle siparişinizin işlenmesi, özellikle kimliğinizin doğrulanması, ödemenizin ve müşteri ilişkisinin yönetilmesi için gereklidir. Verileriniz bu nedenle GDPR Madde 6 fıkra 1 bent b uyarınca PayPal'a aktarılır.",
+                        "Ancak lütfen dikkate alın: PayPal, siparişinizden doğan sözleşmesel yükümlülüklerin yerine getirilmesi veya verilerin sizin adınıza sipariş kapsamında işlenmesi için gerekli olduğu ölçüde kişisel verileri hizmet sağlayıcılara, alt yüklenicilere veya diğer bağlı şirketlere aktarabilir.",
+                        "PayPal üzerinden seçilen ödeme yöntemine bağlı olarak, örneğin fatura veya otomatik ödeme talimatı hâlinde, PayPal'a aktarılan kişisel veriler PayPal tarafından kredi derecelendirme kuruluşlarına iletilir. Bu aktarım, verdiğiniz siparişe ilişkin olarak kimliğinizin ve kredi değerliliğinizin kontrol edilmesi amacına hizmet eder. Hangi kredi derecelendirme kuruluşlarının sürece dahil olduğu ve PayPal tarafından genel olarak hangi verilerin toplandığı, işlendiği, saklandığı ve iletildiği hakkında bilgi için lütfen PayPal'ın veri koruma beyanına bakın."
+                    ]
+                },
+                "cookies": {
+                    "heading": "Çerezler",
+                    "sessionCookies": {
+                        "heading": "Oturum çerezleri",
+                        "paragraphs": [
+                            "Web sitemizde çerez kullanıyoruz. Çerezler, tarayıcınız tarafından bilgisayarınıza kaydedilen küçük metin dosyaları veya diğer depolama teknolojileridir. Bu çerezler, tarayıcınız, konum verileriniz veya IP adresiniz gibi sizinle ilgili belirli bilgileri işler.",
+                            "Bu işleme, web sitemizi daha kullanıcı dostu, verimli ve güvenli hâle getirir; örneğin sitemizi farklı dillerde göstermemize veya bir alışveriş sepeti işlevi sunmamıza olanak tanır.",
+                            "Bu çerezlerin sözleşme ilişkilerinin kurulması veya yürütülmesine yönelik veri toplamak için kullanıldığı ölçüde, söz konusu işlemenin hukuki dayanağı GDPR Madde 6 fıkra 1 bent b)'dir.",
+                            "İşleme bir sözleşmenin kurulmasına veya yürütülmesine hizmet etmiyorsa, meşru menfaatimiz web sitemizin işlevselliğini iyileştirmektir. Bu durumda hukuki dayanak GDPR Madde 6 fıkra 1 bent f)'dir.",
+                            "Tarayıcınızı kapattığınızda bu oturum çerezleri silinir."
+                        ]
+                    },
+                    "thirdPartyCookies": {
+                        "heading": "Üçüncü taraf çerezleri",
+                        "paragraphs": [
+                            "Gerektiğinde web sitemiz, reklam, analiz veya web sitemizin özelliklerini iyileştirme amacıyla iş birliği yaptığımız şirketlere ait çerezleri de kullanabilir.",
+                            "Ayrıntılar, özellikle çerezler aracılığıyla toplanan verilerin üçüncü taraflarca toplanmasının ve işlenmesinin hukuki dayanağı ve amacı için lütfen aşağıdaki bilgilere bakın."
+                        ]
+                    },
+                    "disablingCookies": {
+                        "heading": "Çerezleri devre dışı bırakma",
+                        "paragraphs": [
+                            "Tarayıcınızın ayarlarını değiştirerek çerez kullanımını reddedebilirsiniz. Aynı şekilde, daha önce kaydedilmiş çerezleri silmek için de tarayıcınızı kullanabilirsiniz. Ancak gerekli adımlar ve işlemler kullandığınız tarayıcıya göre değişir. Sorularınız için lütfen tarayıcınızın yardım işlevini kullanın, belgelerine başvurun veya destek için üreticisiyle iletişime geçin. Tarayıcı ayarları, sözde flash çerezlerin yerleştirilmesini engelleyemez. Bunun yerine Flash oynatıcınızın ayarını değiştirmeniz gerekir.",
+                            "Çerezlerin yüklenmesini engeller veya kısıtlarsanız sitemizdeki tüm işlevler tam olarak kullanılamayabilir."
+                        ]
+                    }
+                },
+                "youtube": {
+                    "heading": "YouTube",
+                    "paragraphs": [
+                        "Şirketimizi ve hizmetlerimizi tanıtmak, müşteriler ve potansiyel müşterilerle iletişim kurmak amacıyla YouTube'da bir çevrimiçi varlık sürdürüyoruz. YouTube, Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043 ABD'nin bir yan kuruluşu olan Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, İrlanda tarafından sunulan bir hizmettir.",
+                        "Bunun, kullanıcı verilerinin Avrupa Birliği dışında, özellikle Amerika Birleşik Devletleri'nde işlenmesine yol açabileceğini belirtmek isteriz. Bu durum kullanıcılar açısından riskleri artırabilir; örneğin kullanıcı verilerine sonradan erişimi zorlaştırabilir. Ayrıca bu kullanıcı verilerine bizim erişimimiz bulunmamaktadır. Erişim yalnızca YouTube'a açıktır."
+                    ]
+                },
+                "facebook": {
+                    "heading": "Facebook",
+                    "paragraphs": [
+                        "Ürünlerimizi ve hizmetlerimizi tanıtmak, ilgili kişiler veya müşterilerle iletişim kurmak amacıyla Facebook platformunda bir varlığımız bulunmaktadır.",
+                        "Bu sosyal medya platformunda Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, İrlanda ile ortak veri sorumlusuyuz.",
+                        "Ortak sorumluluğu, GDPR anlamındaki karşılıklı yükümlülüklere ilişkin bir sözleşmeyle belirledik.",
+                        "Bunun sonucunda ortaya çıkan ve sonrasında açıklanan kişisel verilerin işlenmesinin hukuki dayanağı GDPR Madde 6 fıkra 1 bent f'dir. Meşru menfaatimiz, ürün ve hizmetlerimizin analizi, iletişimi, satışı ve tanıtımıdır. Hukuki dayanak, GDPR Madde 6 fıkra 1 bent a uyarınca rızanız da olabilir. GDPR Madde 7 fıkra 3 uyarınca bu rızanızı, ileriye etkili olmak üzere dilediğiniz zaman platform işletmecisi nezdinde geri alabilirsiniz.",
+                        "Facebook platformundaki çevrimiçi varlığımıza eriştiğinizde, AB'deki platform işletmecisi olarak Meta Platforms Ireland Ltd. verilerinizi (ör. kişisel bilgiler, IP adresi vb.) istatistiksel bilgi, pazar araştırması, reklam amaçları ve kullanıcı profillerinin oluşturulması için işleyecektir. Bizimle Facebook üzerinden iletişime geçmeniz hâlinde, o sırada sağladığınız kişisel veriler talebin işlenmesi için kullanılacak ve sorunuzu eksiksiz yanıtladıktan sonra, verilerin saklanmasına ilişkin yasal yükümlülükler bulunmadığı sürece silinecektir.",
+                        "Meta Platforms Ireland Ltd. tarafından yapılan işlemenin, Amerika Birleşik Devletleri'nde Meta Platforms, Inc., 1601 Willow Road, Menlo Park, Kaliforniya 94025 tarafından da gerçekleştirilmesi ihtimali göz ardı edilemez."
+                    ]
+                },
+                "instagram": {
+                    "heading": "Instagram",
+                    "paragraphs": [
+                        "Ürünlerimizi ve hizmetlerimizi tanıtmak, ilgili kişiler veya müşterilerle iletişim kurmak amacıyla Instagram platformunda bir varlığımız bulunmaktadır.",
+                        "Bu sosyal medya platformunda Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, İrlanda ile ortak veri sorumlusuyuz.",
+                        "Bunun sonucunda ortaya çıkan ve sonrasında açıklanan kişisel verilerin işlenmesinin hukuki dayanağı GDPR Madde 6 fıkra 1 bent f olup, GDPR Madde 6 fıkra 1 bent a uyarınca rızanız da olabilir; bu rıza GDPR Madde 7 fıkra 3 uyarınca dilediğiniz zaman geri alınabilir.",
+                        "Instagram platformundaki çevrimiçi varlığımıza eriştiğinizde, AB'deki platform işletmecisi olarak Meta Platforms Ireland Ltd. verilerinizi istatistiksel bilgi, pazar araştırması, reklam amaçları ve kullanıcı profillerinin oluşturulması için işleyecektir. Bizimle Instagram üzerinden iletişime geçmeniz hâlinde, sağladığınız kişisel veriler talebin işlenmesi için kullanılacak ve yasal saklama yükümlülükleri bulunmadığı sürece ardından silinecektir.",
+                        "Meta Platforms Ireland Ltd. tarafından yapılan işlemenin, Amerika Birleşik Devletleri'nde Meta Platforms, Inc., 1601 Willow Road, Menlo Park, Kaliforniya 94025 tarafından da gerçekleştirilmesi ihtimali göz ardı edilemez."
+                    ]
+                }
+            }
+        },
+        "terms": {
+            "heading": "Şartlar ve Koşullar",
+            "indexHeading": "İçindekiler",
+            "index": [
+                "Kapsam",
+                "Teklif, kabul ve sözleşmenin kurulması",
+                "Cayma hakkı",
+                "Fiyatlar ve ödeme koşulları",
+                "Gönderim ve koşullar",
+                "Mülkiyeti muhafaza",
+                "Ayıptan sorumluluk / garanti",
+                "Sorumluluk",
+                "Uygulanacak hukuk",
+                "Yetkili mahkeme",
+                "Alternatif uyuşmazlık çözümü",
+                "Müşterinin 4.5 numaralı bölüme göre ödemeyi geciktirmesi hâlinde satıcının cayma hakkı",
+                "Kimlik tespiti yükümlülüğü: Kara Para Aklamanın Önlenmesi Kanunu",
+                "Alman Pil Yasası (BattG) uyarınca bilgilendirme yükümlülüğü"
+            ],
+            "acceptanceNote": "Web sitesini kullanmanız, şartları ve koşulları kabul ettiğiniz anlamına gelir.",
+            "sections": [
+                {
+                    "number": "1",
+                    "heading": "Kapsam",
+                    "items": [
+                        "Bu genel şartlar ve koşullar (aşağıda “Ş&K” olarak anılacaktır), bir tüketici veya bir şirket (aşağıda müşteri veya alıcı olarak anılacaktır) ile satıcı arasında, bu web sitesinde sunulan ürün ve hizmetlere ilişkin tüm sözleşmeler için geçerlidir.",
+                        "Tüketici: bir ticari veya mesleki faaliyet kapsamında olmaksızın sözleşme kuran her gerçek kişi. Girişimci: bir ticari veya mesleki faaliyet kapsamında sözleşme kuran, hak ehliyetine sahip her gerçek veya tüzel kişi ya da şahıs şirketi.",
+                        "Yalnızca sözleşmenin kurulduğu anda burada belirtilen şartlar ve koşullar geçerlidir. Satıcı, açıkça kabul edilmediği sürece müşterinin farklı koşullarını tanımaz."
+                    ]
+                },
+                {
+                    "number": "2",
+                    "heading": "Teklif, kabul ve sözleşmenin kurulması",
+                    "items": [
+                        "Satıcı tarafından yapılan her teklif bağlayıcı değildir ve tüketiciye karşı teklif sunması yönünde bir davet olarak anlaşılmalıdır.",
+                        "Bir sipariş verildiğinde, satıcıya bir satış sözleşmesi kurulmasına yönelik teklif iletilmiş olur. Kabul, malın stok durumuna bağlıdır.",
+                        "Siparişin kabulü, satın alma ayrıntıları ve fatura ile birlikte e-posta yoluyla gönderilir. Bu yazılı sipariş onayı, müşteri tarafından verilen siparişin kabulü anlamına gelir.",
+                        "Satıcı, aşağıdaki durumlarda herhangi bir tazminat sorumluluğu doğmaksızın bir siparişi iptal etme veya reddetme hakkını saklı tutar: sipariş edilen ürünün stokta bulunmaması; verilen siparişin hileli olduğundan şüphelenilmesi; ürün açıklamasında, fiyatta veya görsellerde hata bulunması; gönderim kısıtlamaları nedeniyle tüketiciye teslimatın mümkün olmaması; müşterinin satın alma bedelini 4.5 numaralı bölümde belirtilen süre içinde ödememesi."
+                    ]
+                },
+                {
+                    "number": "3",
+                    "heading": "Cayma hakkı",
+                    "items": [
+                        "Müşteri tüketici ise cayma hakkına sahiptir.",
+                        "Cayma hakkına ilişkin daha ayrıntılı bilgi, satıcının cayma hakkı politikasında yer almaktadır.",
+                        "Müşteri, değer kaybı yalnızca malın niteliğini, özelliklerini ve işleyişini test etmek için gerekli olmayan bir kullanımdan kaynaklanıyorsa bu değer kaybını karşılamak zorundadır.",
+                        "Cayma hakkı, sözleşmenin kurulduğu anda Avrupa Birliği üyesi bir devlete tabi olmayan ve sözleşmenin kurulduğu anda tek ikamet yeri ve/veya teslimat adresi Avrupa Birliği dışında bulunan tüketiciler için geçerli değildir.",
+                        "Mutat meskeni Avrupa Birliği (AB) veya Avrupa Ekonomik Alanı (AEA) üyesi olmayan bir ülkede bulunan tüketiciler için, Birleşmiş Milletler Milletlerarası Mal Satımına İlişkin Sözleşmeler Hakkında Antlaşma (CISG) ve uygulanabilir olduğu ölçüde Alman tüketici koruma hukuku hariç tutularak Alman hukuku uygulanır."
+                    ]
+                },
+                {
+                    "number": "4",
+                    "heading": "Fiyatlar ve ödeme koşulları",
+                    "items": [
+                        "Bu web sitesindeki tüm fiyatlar euro cinsindendir ve uygulanabilir olduğu durumlarda KDV dahildir. Ürün kâr marjı esaslı vergilendiriliyorsa KDV indirim konusu yapılamaz.",
+                        "Tüm ödeme seçenekleri ürün açıklamasında listelenmiştir. Ödeme ücretleri, kargo masrafları ve/veya ithalat satış vergileri müşteri tarafından ödenir.",
+                        "Satıcı, ancak satın alma bedelinin tamamı ve müşteriye ait kargo masrafları tahsil edildikten sonra gönderime başlar.",
+                        "Sipariş onayı e-postasında müşteri, KDV ve/veya kargo masrafları dahil nihai fiyatı öğrenir. Toplam bedel, sipariş onayı e-postasının alınmasıyla muaccel olur.",
+                        "Müşteri, sipariş onayı e-postasını aldıktan sonra üç gün içinde bedelin tamamını ödemekle yükümlüdür. Müşteri beş gün içinde ödeme yapmazsa satıcı siparişi iptal etme hakkına sahiptir."
+                    ]
+                },
+                {
+                    "number": "5",
+                    "heading": "Gönderim ve koşullar",
+                    "items": [
+                        "Ürün, müşteri tarafından bildirilen adrese gönderilir. Bir hata yapılmış ve teslimat adresinin değiştirilmesi gerekiyorsa müşteri en kısa sürede satıcıyla iletişime geçmelidir.",
+                        "Taşıyıcı teslimatı gerçekleştiremez ve mal satıcıya geri gönderilirse, ağır bir engel bulunmadığı sürece ek kargo masraflarını müşteri karşılamalıdır.",
+                        "Müşteri tüketici sıfatıyla hareket ediyorsa, malın kazara yok olması ve kazara bozulması riski yalnızca mal müşteriye veya teslim almaya yetkili bir kişiye teslim edildiğinde geçer.",
+                        "Ürün açıklamasında belirtilmişse her ürün, ürünün bulunduğu yerden bizzat teslim alınabilir.",
+                        "Her ürün mümkün olan en kısa sürede, genellikle ödemenin alınmasından sonraki 1-3 iş günü içinde gönderilir.",
+                        "Taşıma sırasında hasar meydana gelmesi hâlinde müşteri derhâl satıcıyla iletişime geçmelidir. Teslim alındıktan sonraki 1-2 gün içinde bildirilmeyen taşıma hasarı talepleri geçerli değildir.",
+                        "Müşteri girişimci ise taşımaya ilişkin riskler alıcıya aittir."
+                    ]
+                },
+                {
+                    "number": "6",
+                    "heading": "Mülkiyeti muhafaza",
+                    "items": [
+                        "Müşteriler için: Satıcı, ödeme tahsil edilene kadar her ürünün mülkiyetini elinde tutar.",
+                        "Girişimciler için: Satıcı, alıcı ticari ilişkiden doğan tüm yükümlülüklerini yerine getirene kadar her ürünün mülkiyetini elinde tutar."
+                    ]
+                },
+                {
+                    "number": "7",
+                    "heading": "Ayıptan sorumluluk / garanti",
+                    "subsections": [
+                        {
+                            "heading": "7.1 Tüketiciler için",
+                            "items": [
+                                "Satın alınan ürün ayıplıysa, ayıptan sorumluluğa ilişkin yasal düzenlemeler uygulanır.",
+                                "İkinci el ürünlerde garanti süresi, ürünün teslim edildiği günden itibaren bir yıldır; şu durumlar bunun dışındadır: müşterinin tazminat ve masrafların iadesi talepleri; satıcının bir ayıbı hileli şekilde gizlemesi.",
+                                "Bir ürün şu durumlarda garanti kapsamı dışında kalır: ürünün usulüne uygun kullanılmaması; müşterinin taşıma hasarlarını belirtilen süre içinde satıcıya bildirmemesi; müşterinin satıcıyı bilgilendirmeden saati kendisinin veya bir üçüncü kişinin onarmaya çalışması.",
+                                "Suya dayanıklılık sorunları, olağan kullanım izleri (ör. kordon/kasa üzerindeki çizikler ve diş aşınmaları) ve normal aşınma nedeniyle oluşan hassasiyet sapmaları garanti kapsamı dışındadır.",
+                                "Satıcı, satın alma konusunun alıcı veya üçüncü kişiler tarafından usulsüz kullanılmasından kaynaklanan ayıplardan sorumlu değildir."
+                            ]
+                        },
+                        {
+                            "heading": "7.2 Girişimciler için",
+                            "items": ["Satın alınan ürün ayıplıysa, izlenecek sürece satıcı karar verir.", "İkinci el bir ürünün işleyişine ilişkin talepler kural olarak geçerli değildir."]
+                        }
+                    ]
+                },
+                {
+                    "number": "8",
+                    "heading": "Sorumluluk",
+                    "intro": "Satıcı, sözleşmeden, sözleşme benzeri ilişkilerden ve kanundan doğan tüm tazminat talepleri bakımından müşteriye karşı aşağıdaki şekilde sorumludur:",
+                    "items": [
+                        "Satıcı yalnızca şu durumlarda sınırsız sorumludur: zararın satıcının kastı veya ağır ihmali sonucu meydana gelmesi; aksi kararlaştırılmadığı sürece bir garantinin ihlali; Ürün Sorumluluğu Kanunu'nda öngörülen zorunlu sorumluluk.",
+                        "Satıcı, esaslı bir sözleşme yükümlülüğünü ihmalle ihlal ederse, kanunen sorumluluk sınırsız olmadığı sürece sorumluluk, sözleşmeye özgü öngörülebilir zararla sınırlıdır.",
+                        "Bunun dışında satıcının sorumluluğu, ifa yardımcıları ve yasal temsilcileri bakımından da olmak üzere hariç tutulmuştur."
+                    ]
+                },
+                {
+                    "number": "9",
+                    "heading": "Uygulanacak hukuk",
+                    "text": "Bu Ş&K, taşınır malların uluslararası satımını düzenleyen kurallar hariç tutularak Alman hukukuna göre uygulanır. Tüketiciler bakımından bu hukuk seçimi, tüketicinin mutat meskeninin bulunduğu devletin hukukunun emredici hükümleriyle sağlanan korumanın ortadan kaldırılmadığı ölçüde geçerlidir. CISG uygulanmaz."
+                },
+                {
+                    "number": "10",
+                    "heading": "Yetkili mahkeme",
+                    "text": "Müşteri tacir veya kamu hukuku tüzel kişisi sıfatıyla hareket ediyorsa, bu sözleşmeden doğan tüm uyuşmazlıklarda münhasır yetkili yer, satıcının Almanya Federal Cumhuriyeti'ndeki işyeridir. Müşterinin Almanya Federal Cumhuriyeti sınırları dışında bulunması hâlinde, tüm uyuşmazlıklarda münhasır yetkili yer satıcının işyeridir."
+                },
+                {
+                    "number": "11",
+                    "heading": "Alternatif uyuşmazlık çözümü",
+                    "items": [
+                        "AB Komisyonu, uyuşmazlıkların çözümü için çevrimiçi bir platform sunmaktadır. Bu platform, çevrimiçi satış veya hizmet sözleşmelerinden doğan uyuşmazlıkların mahkeme dışı çözümü için bir başvuru noktası işlevi görür.",
+                        "Satıcı, uyuşmazlık çözümü sürecine katılmakla yükümlü değildir."
+                    ]
+                },
+                {
+                    "number": "12",
+                    "heading": "Müşterinin 4.5 numaralı bölüme göre ödemeyi geciktirmesi hâlinde satıcının cayma hakkı",
+                    "items": [
+                        "Müşteri, 4.5 numaralı bölümde belirtilen süre içinde ödeme yükümlülüklerini yerine getirmezse, satıcı önceden bildirimde bulunmaksızın sözleşmeden dönme hakkına sahiptir. Müşterinin yaptığı kısmi ödemeler en geç 21 gün içinde iade edilir.",
+                        "Cayma beyanı, e-posta yoluyla yazılı olarak yapılır."
+                    ]
+                },
+                {
+                    "number": "13",
+                    "heading": "Kimlik Tespiti Yükümlülüğü: Kara Para Aklamanın Önlenmesi Kanunu",
+                    "items": [
+                        "10.000 euroyu aşan nakit işlemlerde Kara Para Aklamanın Önlenmesi Kanunu uyarınca kimlik tespiti yükümlülüğü bulunmaktadır.",
+                        "Tüketiciler için: Müşterinin kimliğinin doğrulanması amacıyla uluslararası kabul gören geçerli bir kimlik belgesi gereklidir (ör. pasaport).",
+                        "Girişimciler için: Bir girişimcinin kimliğinin doğrulanması amacıyla ticaret sicili veya kooperatifler sicili kaydının bir örneği talep edilebilir."
+                    ]
+                },
+                {
+                    "number": "14",
+                    "heading": "Alman Pil Yasası (BattG) Uyarınca Bilgilendirme Yükümlülüğü",
+                    "text": "Boşalmış piller özel atıktır ve evsel atıklarla birlikte bertaraf edilmemelidir. Her müşteri kullanılmış pillerini bize gönderebilir; bunları usulüne uygun şekilde bertaraf ederiz. Zararlı madde içeren kirletici piller şu işaret ve eşik değerlerle işaretlenir:",
+                    "items": ["“Cd” Pil %0,002'den fazla kadmiyum içerir", "“Hg” Pil %0,0005'ten fazla cıva içerir", "“Pb” Pil %0,004'ten fazla kurşun içerir"]
+                }
+            ]
+        },
+        "withdrawal": {
+            "heading": "Cayma Hakkı",
+            "intro": "Çevrimiçi mağaza müşterileri için cayma hakkı.",
+            "rightHeading": "Cayma hakkı",
+            "rightItems": [
+                "Müşteri tüketici ise (Ş&K'mizde tanımlandığı şekilde) ve satıcıyla bir mesafeli sözleşme ya da BGB'nin 3.2 numaralı bölümünde belirtilen türde bir sözleşme kurmuşsa aşağıdakiler geçerlidir:",
+                "Tüketici, ürünü teslim aldığı tarihten itibaren 14 gün içinde hiçbir gerekçe göstermeksizin sözleşmeden cayabilir.",
+                "Cayma hakkını kullanmak için tüketicinin, e-posta yoluyla veya işyeri adresimize bir mektup göndererek açık bir cayma beyanıyla bizi yazılı olarak bilgilendirmesi gerekir. Süreye uymak için, açık cayma beyanının cayma süresi içinde gönderilmesi yeterlidir."
+            ],
+            "consequencesHeading": "Caymanın sonuçları",
+            "consequencesItems": [
+                "Bu sözleşmeden cayarsanız, teslimat masrafları dahil olmak üzere sizden aldığımız tüm ödemeleri (tarafımızca sunulan en ucuz standart teslimat dışında bir teslimat türü seçmenizden kaynaklanan ek masraflar hariç), gereksiz gecikme olmaksızın ve her hâlükârda cayma bildiriminizi aldığımız günden itibaren en geç on dört gün içinde size iade ederiz.",
+                "Malları bize gecikmeksizin ve her hâlükârda cayma bildiriminizi bize ilettiğiniz günden itibaren en geç on dört gün içinde iade etmelisiniz. Malların değer kaybını yalnızca, bu kayıp malların niteliğini, özelliklerini ve işleyişini belirlemek için gerekli olan kullanımın dışındaki bir kullanımdan kaynaklanıyorsa karşılamanız gerekir."
+            ],
+            "formHeading": "Cayma formu",
+            "formNote": "(Sözleşmeden caymak istiyorsanız lütfen bu formu doldurup gönderin.)",
+            "form": {
+                "orderNumber": "Sipariş numarası",
+                "email": "E-posta",
+                "firstName": "Ad",
+                "lastName": "Soyad",
+                "comment": "Açıklama (isteğe bağlı)",
+                "submit": "Cayma talebini onayla"
+            }
+        },
+        "disclaimer": {
+            "heading": "Sorumluluk Reddi",
+            "paragraphs": [
+                "Satıcı, bu web sitesini güncel ve doğru tutmayı taahhüt eder. Buna rağmen hatalı veya güncelliğini yitirmiş bir bilgiyle karşılaşırsanız bizi bilgilendirmenizden memnuniyet duyarız. Lütfen bu bilgiyi web sitesinin neresinde okuduğunuzu belirtin. Konuyu en kısa sürede inceleriz.",
+                "Yanlışlık veya eksikliklerden kaynaklanan zararlardan, aynı şekilde bilgilerin internet üzerinden yayılmasının yol açtığı ya da bu yayılmanın doğasında bulunan kesinti veya aksaklık gibi sorunlardan kaynaklanan zararlardan sorumlu değiliz. Web formlarını kullanırken zorunlu alan sayısını asgaride tutmaya çalışıyoruz. Bu web sitesi aracılığıyla satıcı tarafından veya satıcı adına sağlanan verilerin, tavsiyelerin ya da fikirlerin kullanılması sonucunda uğranan zararlar için satıcı hiçbir sorumluluk kabul etmez.",
+                "Web sitesinin ve tüm bileşenlerinin (forumlar dahil) kullanımı, kullanım koşullarına tabidir. Bu web sitesinin kullanılması, söz konusu kullanım koşullarının bilindiği ve kabul edildiği anlamına gelir.",
+                "Bu web sitesindeki içeriklere ilişkin tüm fikrî mülkiyet hakları satıcıya aittir.",
+                "Belirli bir içerik aksini öngörmedikçe ve emredici hukuk kurallarında (alıntı hakkı gibi) aksi düzenlenmediği ölçüde, bu materyallerin kopyalanması, yayılması ve başka herhangi bir şekilde kullanılması satıcının yazılı izni olmaksızın serbest değildir.",
+                "Web sitesinin erişilebilirliğiyle ilgili sorularınız veya sorunlarınız olursa lütfen bizimle iletişime geçmekten çekinmeyin."
+            ]
+        },
+        "cookiePolicy": {
+            "heading": "Çerez Politikası",
+            "lastUpdatedNote": "Bu Çerez Politikası en son {date} tarihinde güncellenmiştir ve Avrupa Ekonomik Alanı ile İsviçre vatandaşları ve yasal daimî ikamet sahipleri için geçerlidir.",
+            "introduction": {
+                "heading": "Giriş",
+                "text": "Web sitemiz (bundan böyle: “web sitesi”) çerezleri ve bunlarla ilgili diğer teknolojileri kullanmaktadır (kolaylık olması açısından tüm teknolojiler “çerezler” olarak anılmaktadır). Çerezler, hizmetlerinden yararlandığımız üçüncü taraflarca da yerleştirilmektedir. Aşağıdaki belgede sizi web sitemizdeki çerez kullanımı hakkında bilgilendiriyoruz."
+            },
+            "whatAreCookies": {
+                "heading": "Çerez nedir?",
+                "text": "Çerez, bu web sitesinin sayfalarıyla birlikte gönderilen ve tarayıcınız tarafından bilgisayarınızın ya da başka bir cihazın sabit diskine kaydedilen küçük ve basit bir dosyadır. İçinde saklanan bilgiler, sonraki bir ziyaret sırasında sunucularımıza veya ilgili üçüncü tarafların sunucularına geri gönderilebilir."
+            },
+            "whatAreScripts": {
+                "heading": "Betik (script) nedir?",
+                "text": "Betik, web sitemizin düzgün ve etkileşimli çalışmasını sağlamak için kullanılan bir program kodu parçasıdır. Bu kod sunucumuzda veya cihazınızda çalıştırılır."
+            },
+            "whatIsAWebBeacon": {
+                "heading": "Web işaretçisi (web beacon) nedir?",
+                "text": "Web işaretçisi (veya piksel etiketi), bir web sitesindeki trafiği izlemek için kullanılan, küçük ve görünmez bir metin ya da görsel parçasıdır. Bunun için web işaretçileri aracılığıyla sizinle ilgili çeşitli veriler saklanır."
+            },
+            "cookieTypes": {
+                "heading": "Çerezler",
+                "technical": {
+                    "heading": "Teknik veya işlevsel çerezler",
+                    "text": "Bazı çerezler, web sitesinin belirli bölümlerinin düzgün çalışmasını ve kullanıcı tercihlerinizin hatırlanmasını sağlar. İşlevsel çerezler yerleştirerek web sitemizi ziyaretinizi kolaylaştırıyoruz. Böylece sitemizi ziyaret ederken aynı bilgileri tekrar tekrar girmeniz gerekmez ve örneğin ödeme yapana kadar ürünler sepetinizde kalır. Bu çerezleri rızanız olmadan yerleştirebiliriz."
+                },
+                "statistics": {
+                    "heading": "İstatistik çerezleri",
+                    "text": "Kullanıcılarımız için web sitesi deneyimini optimize etmek amacıyla istatistik çerezleri kullanıyoruz. Bu istatistik çerezleri sayesinde web sitemizin nasıl kullanıldığına dair içgörüler elde ediyoruz. İstatistik çerezlerini yerleştirmek için izninizi istiyoruz."
+                },
+                "marketing": {
+                    "heading": "Pazarlama/izleme çerezleri",
+                    "text": "Pazarlama/izleme çerezleri, reklam göstermek amacıyla kullanıcı profilleri oluşturmak ya da benzer pazarlama amaçlarıyla kullanıcıyı bu web sitesinde veya birden fazla web sitesinde izlemek için kullanılan çerezler ya da diğer her türlü yerel depolama biçimidir."
+                }
+            },
+            "consent": {
+                "heading": "Rıza",
+                "text": "Web sitemizi ilk kez ziyaret ettiğinizde, size çerezlere ilişkin bir açıklama içeren bir açılır pencere gösteririz. “Tercihleri kaydet” seçeneğine tıkladığınız anda, bu Çerez Politikasında açıklandığı şekilde, açılır pencerede seçtiğiniz çerez ve eklenti kategorilerini kullanmamıza rıza göstermiş olursunuz. Çerez kullanımını tarayıcınız üzerinden devre dışı bırakabilirsiniz; ancak bu durumda web sitemizin artık düzgün çalışmayabileceğini lütfen unutmayın."
+            },
+            "consentSettings": {
+                "heading": "Rıza ayarlarınızı yönetin",
+                "functional": {
+                    "heading": "İşlevsel",
+                    "text": "Teknik depolama veya erişim, abone ya da kullanıcı tarafından açıkça talep edilen belirli bir hizmetin kullanılmasını mümkün kılma yönündeki meşru amaç için ya da yalnızca bir iletişimin elektronik iletişim şebekesi üzerinden iletilmesi amacıyla kesinlikle gereklidir."
+                },
+                "statistics": {
+                    "heading": "İstatistikler",
+                    "text": "Yalnızca istatistiksel amaçlarla kullanılan teknik depolama veya erişim. Bir mahkeme celbi, internet servis sağlayıcınızın gönüllü uyumu ya da üçüncü bir taraftan gelen ek kayıtlar olmaksızın, yalnızca bu amaçla saklanan veya elde edilen bilgiler genellikle sizi tanımlamak için kullanılamaz."
+                },
+                "marketing": {
+                    "heading": "Pazarlama",
+                    "text": "Teknik depolama veya erişim, reklam göndermek amacıyla kullanıcı profilleri oluşturmak ya da benzer pazarlama amaçlarıyla kullanıcıyı bir web sitesinde veya birden fazla web sitesinde izlemek için gereklidir."
+                }
+            },
+            "managingCookies": {
+                "heading": "Çerezleri etkinleştirme/devre dışı bırakma ve silme",
+                "text": "Çerezleri otomatik veya elle silmek için internet tarayıcınızı kullanabilirsiniz. Ayrıca belirli çerezlerin yerleştirilmemesini de belirleyebilirsiniz. Bir diğer seçenek, her çerez yerleştirildiğinde bir bildirim alacak şekilde tarayıcı ayarlarınızı değiştirmektir. Bu seçenekler hakkında daha fazla bilgi için lütfen tarayıcınızın Yardım bölümündeki talimatlara bakın. Tüm çerezler devre dışı bırakılırsa web sitemizin düzgün çalışmayabileceğini lütfen unutmayın. Tarayıcınızdaki çerezleri silerseniz, web sitemizi tekrar ziyaret ettiğinizde rızanızın ardından yeniden yerleştirilecektir."
+            },
+            "yourRights": {
+                "heading": "Kişisel verilerinize ilişkin haklarınız",
+                "intro": "Kişisel verilerinize ilişkin olarak aşağıdaki haklara sahipsiniz:",
+                "items": [
+                    "Kişisel verilerinize neden ihtiyaç duyulduğunu, bunlara ne olacağını ve ne kadar süreyle saklanacağını öğrenme hakkına sahipsiniz.",
+                    "Erişim hakkı: Tarafımızca bilinen kişisel verilerinize erişme hakkına sahipsiniz.",
+                    "Düzeltme hakkı: Kişisel verilerinizi dilediğiniz zaman tamamlatma, düzelttirme, sildirme veya bloke ettirme hakkına sahipsiniz.",
+                    "Verilerinizin işlenmesi için bize rıza vermeniz hâlinde, bu rızayı geri alma ve kişisel verilerinizin silinmesini isteme hakkına sahipsiniz.",
+                    "Verilerinizi aktarma hakkı: Tüm kişisel verilerinizi veri sorumlusundan talep etme ve bunları eksiksiz olarak başka bir veri sorumlusuna aktarma hakkına sahipsiniz.",
+                    "İtiraz hakkı: Verilerinizin işlenmesine itiraz edebilirsiniz. İşleme için haklı gerekçeler bulunmadığı sürece bu talebe uyarız."
+                ]
+            },
+            "contact": {
+                "heading": "İletişim bilgileri",
+                "intro": "Çerez Politikamız ve bu beyanla ilgili soru ve/veya görüşleriniz için lütfen Künye bölümünde belirtilen iletişim bilgilerini kullanarak bizimle iletişime geçin."
+            },
+            "placedCookies": {
+                "heading": "Yerleştirilen çerezler",
+                "text": "Web sitemiz, rızanıza ve kullandığınız özelliklere bağlı olarak teknik, işlevsel, istatistik ve pazarlama çerezleri yerleştirebilir. Teknik ve işlevsel çerezler; gezinme, dil tercihleri ve alışveriş sepeti işlevi gibi temel web sitesi işlevleri için gerekli olabilir. İstatistik ve pazarlama çerezleri yalnızca ilgili rıza verildiğinde yerleştirilir. Çerez tercihlerinizi dilediğiniz zaman tarayıcı ayarlarınız veya web sitemizdeki çerez rıza ayarları üzerinden yönetebilir ya da geri alabilirsiniz."
+            },
+            "syncNote": "Bu Çerez Politikası {date} tarihinde cookiedatabase.org ile eşitlenmiştir."
+        }
+    },
+    "cart": {
+        "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against CartContext/cart components before shipping.",
+        "heading": "Alışveriş Sepeti",
+        "summary": "Özet",
+        "empty": "Sepetiniz boş.",
+        "emptyCta": "Alışverişe devam et",
+        "viewCart": "Tümünü Gör",
+        "itemLabel": "Ürün",
+        "priceLabel": "Fiyat",
+        "quantityLabel": "Adet",
+        "subtotal": "Ara toplam",
+        "total": "Toplam",
+        "removeItem": "Kaldır",
+        "checkoutCta": "Ödemeye geç",
+        "choose_shipping_country": "Teslimat ülkesini seçin",
+        "shipping_to": "{country} ülkesine teslimat",
+        "shipping_costs": "Kargo ücreti",
+        "shipping": "Kargo",
+        "localPickup": "Yerinden teslim alma",
+        "moreAbout": "Hakkında daha fazla bilgi:",
+        "continueShopping": "Alışverişe devam et"
+    },
+    "favorites": {
+        "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
+        "heading": "Favoriler",
+        "empty": "Henüz favorilerinize bir şey eklemediniz.",
+        "emptyCta": "Saatlere göz atın",
+        "removeFromFavorites": "Favorilerden kaldır",
+        "addToFavorites": "Favorilere ekle"
+    },
+    "checkout": {
+        "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your checkout/payment components before shipping.",
+        "heading": "Ödeme",
+        "shippingHeading": "Teslimat bilgileri",
+        "paymentHeading": "Ödeme yöntemi",
+        "orderSummaryHeading": "Sipariş özeti",
+        "placeOrder": "Siparişi tamamla",
+        "subtotal": "Ara toplam",
+        "billing": "fatura adresi",
+        "shippingCost": "Kargo",
+        "watchSpare": "Saat / Yedek parça",
+        "qty": "Adet",
+        "price": "Fiyat",
+        "taxes": "Vergiler",
+        "fee": "Ücret",
+        "agreement": "Satın alma işleminizi tamamlayarak Hizmet Şartlarımızı ve Gizlilik Politikamızı kabul etmiş olursunuz.",
+        "payment": "Ödeme",
+        "missingBilling": "Fatura bilgileri eksik",
+        "total": "Toplam",
+        "bankNote": "Ödemenizi doğrudan banka hesabımıza yapın. Lütfen ödeme açıklaması kısmında sipariş numarasını, marka adını ve ürün modelini belirtin. Ayrıca, ödeme hesabımıza geçmeden herhangi bir ürünün gönderilmeyeceğini lütfen unutmayın.",
+        "paypalNote": "Not: bu bir demo olduğundan kullanım",
+        "email": "E-posta",
+        "password": "Şifre",
+        "orderDate": "Sipariş Tarihi",
+        "orderTotal": "Sipariş Toplamı",
+        "paymentMethod": "Ödeme Yöntemi",
+        "continue": "Devam et",
+        "bankTransfer": "Banka Havalesi",
+        "card": "Kredi/Banka Kartı",
+        "cardNumber": "Kart Numarası",
+        "expirationDate": "Son Kullanma Tarihi",
+        "securityCode": "Güvenlik Kodu",
+        "orderNumber": "Sipariş Numarası"
+    },
+    "product": {
+        "reference": "Referans",
+        "stock": "Stok",
+        "available": "Mevcut",
+        "notAvailable": "Mevcut değil",
+        "scopeOfDelivery": "Teslimat kapsamı",
+        "shippingText": "Uzun yıllardır çalıştığımız partnerlerimiz DHL, UPS, DHL Express ve Prosegur ile temassız ve risksiz kargonun keyfini çıkarın.",
+        "learnMoreShipping": "Kargo ücretleri ve süreleri hakkında daha fazla bilgi",
+        "model": "Model",
+        "dial": "Kadran",
+        "here": "buraya",
+        "findInStore": "Mağazada bul",
+        "bookAppointment": "Randevu al",
+        "consignmentBeforeLink": "Saatlerinizden birini takas etmek ister misiniz? Saatinizle ilgili bilgileri paylaşarak bizimle",
+        "consignmentAfterLink": "sayfası üzerinden iletişime geçin, size bir teklif sunalım."
+    },
+    "brands": {
+        "rolex": {
+            "sections": [
+                {
+                    "heading": "Kuruluş ve İlk Yıllar",
+                    "text": "Ünlü lüks saat üreticisi Rolex, 1905 yılında Hans Wilsdorf ve Alfred Davis tarafından İngiltere'nin Londra kentinde kuruldu. Şirket başlangıçta “Wilsdorf and Davis” adını taşıyor ve saat dağıtımına odaklanıyordu. Wilsdorf'un hedefi, hem hassas hem de zarif kol saatleri üretmekti; cep saatlerinin norm olduğu bir dönemde bu ciddi bir meydan okumaydı."
+                },
+                {
+                    "heading": "İsviçre'ye Taşınma ve Rolex Markasının Doğuşu",
+                    "text": "1908'de Rolex markası tescil edildi ve şirketin adı resmen Rolex olarak değiştirildi. Wilsdorf bu adı, kısa olduğu, her dilde kolay telaffuz edildiği ve bir saatin kadranına düzgünce sığdığı için seçti. Rolex'in hassasiyet konusundaki itibarını daha da güçlendirmek için şirket 1919'da İsviçre'nin Cenevre kentine taşındı."
+                }
+            ]
+        },
+        "audemars_piguet": {
+            "sections": [
+                {
+                    "heading": "Vallée de Joux'daki Kökenler",
+                    "text": "Audemars Piguet, 1875 yılında Jules Louis Audemars ve Edward Auguste Piguet tarafından İsviçre'nin Le Brassus köyünde kuruldu. Marka, dakika tekrarları, perpetual takvimler ve kronograflarda uzmanlaşarak kısa sürede karmaşık saat mekaniğinin ustası olarak kabul gördü."
+                },
+                {
+                    "heading": "Royal Oak Devrimi",
+                    "text": "Audemars Piguet, 1972'de Royal Oak'u tanıtarak sektörü altüst etti. Gérald Genta tarafından tasarlanan model, açıkta vidalarıyla dikkat çeken kendine özgü sekizgen çerçevesiyle dünyanın paslanmaz çelikten üretilmiş ilk lüks spor saati oldu ve markanın modern saatçilikteki yerini pekiştirdi."
+                }
+            ]
+        },
+        "blancpain": {
+            "sections": [
+                {
+                    "heading": "En Eski Saat Markası",
+                    "text": "1735 yılında Jehan-Jacques Blancpain tarafından İsviçre'nin Villeret kasabasında kurulan Blancpain, dünyanın tescilli en eski saat markası unvanını taşır. Şirket yüzyıllardır geleneksel mekanik saatçiliğe sıkı sıkıya bağlı kalmış ve hiçbir zaman kuvars saat üretmediğini, üretmeyeceğini de açıkça ilan etmiştir."
+                },
+                {
+                    "heading": "Fifty Fathoms",
+                    "text": "Blancpain 1953'te, büyük ölçüde ilk modern dalış saati kabul edilen Fifty Fathoms'u piyasaya sürdü. Fransız Donanması'nın seçkin muharip dalgıçlarıyla iş birliği içinde geliştirilen model, tek yönlü döner çerçevesi ve olağanüstü su geçirmezliğiyle dalış saatlerinin şablonunu oluşturdu."
+                }
+            ]
+        },
+        "breitling": {
+            "sections": [
+                {
+                    "heading": "Kronografın Öncüleri",
+                    "text": "1884 yılında Léon Breitling tarafından İsviçre'nin Saint-Imier kasabasında kurulan Breitling, başlangıçta spor, bilim ve sanayi için hassas kronograflara odaklandı. Marka 1915'te, modern saatçilikte belirleyici bir gelişme olan ilk bağımsız kronograf butonunu icat etti."
+                },
+                {
+                    "heading": "Havacılık Mirası",
+                    "text": "Breitling havacılıkla ayrılmaz biçimde özdeşleşmiştir. Marka 1952'de, pilotların uçuş sırasında kritik hesaplamalar yapmasına yardımcı olmak üzere tasarlanmış karmaşık dairesel hesap cetveli çerçevesine sahip Navitimer'ı tanıttı ve bu model havacılar için nihai alet saati hâline geldi."
+                }
+            ]
+        },
+        "cartier": {
+            "sections": [
+                {
+                    "heading": "Kralların Kuyumcusu",
+                    "text": "1847 yılında Paris'te Louis-François Cartier tarafından kurulan Maison, itibarını başlangıçta kraliyet ailelerine seçkin mücevherler üreterek kazandı. Cartier'nin eşsiz tasarım anlayışını saatçilik dünyasına taşıması ve zarafeti işlevle buluşturması ise uzun sürmedi."
+                },
+                {
+                    "heading": "Erkek Kol Saatinin Doğuşu",
+                    "text": "Louis Cartier, 1904'te arkadaşı, havacılığın öncülerinden Alberto Santos-Dumont için kendine özgü kare çerçeveli, ince bir kol saati tasarladı. “Santos”, 1917'de tanıtılan Tank gibi ikonik tasarımların da öncüsü olarak, erkekler için özel olarak tasarlanmış ilk kol saati kabul edilir."
+                }
+            ]
+        },
+        "chopard": {
+            "sections": [
+                {
+                    "heading": "İsviçre Hassasiyeti Yüksek Mücevherle Buluşuyor",
+                    "text": "1860 yılında Louis-Ulysse Chopard tarafından İsviçre'nin Sonvilier kasabasında kurulan şirket, işe son derece hassas cep saatleri ve kronometreler üreterek başladı. Chopard, İsviçre Demiryollarına ve Rusya Çarı II. Nikolay'a saat tedarik ederek kısa sürede ün kazandı."
+                },
+                {
+                    "heading": "Happy Diamonds ve L.U.C",
+                    "text": "1963'te Scheufele ailesi tarafından satın alınan Chopard, ünlü “Happy Diamonds” koleksiyonunu tanıtarak yüksek mücevher alanına açıldı. Marka 1996'da Chopard Manufacture'ı kurup büyük beğeni toplayan L.U.C mekanik mekanizmalarını tanıtarak yüksek saatçilik köklerine geri döndü."
+                }
+            ]
+        },
+        "chronoswiss": {
+            "sections": [
+                {
+                    "heading": "Modern Bir Rönesans",
+                    "text": "1983 yılında Gerd-Rüdiger Lang tarafından Almanya'nın Münih kentinde kurulan (daha sonra İsviçre'nin Luzern kentine taşınan) Chronoswiss, kuvars krizinin en yoğun döneminde ortaya çıktı. Lang'ın vizyonu, sektör pil gücüne yönelirken mekanik saatçilik sanatına meydan okurcasına geri dönmekti."
+                },
+                {
+                    "heading": "Regülatör Estetiği",
+                    "text": "Chronoswiss, saat, dakika ve saniyenin ayrı eksenlerde gösterildiği “regülatör” kadran düzenini yeniden canlandırmasıyla tanınır. Markanın saatleri, imzası hâline gelen soğan formundaki kurma kolları, madeni para kenarını andıran çerçeveleri ve karmaşık guilloché kadranlarıyla kolayca ayırt edilir."
+                }
+            ]
+        },
+        "corum": {
+            "sections": [
+                {
+                    "heading": "La Chaux-de-Fonds'ta Avangart Tasarım",
+                    "text": "1955 yılında Gaston Ries ve René Bannwart tarafından kurulan Corum, son derece yaratıcı ve alışılmadık saat tasarımlarıyla kısa sürede ün kazandı. Markanın amblemi olan dik duran anahtar, yeni saatçilik gizemlerinin kilidini açma arzusunu simgeler."
+                },
+                {
+                    "heading": "İkonik Koleksiyonlar",
+                    "text": "Corum en çok, 1980'de tanıtılan ve şeffaf safir kasa içinde asılı duran çarpıcı doğrusal mekanizmasıyla dikkat çeken “Golden Bridge” ile bilinir. Marka ayrıca on iki kenarlı kasası ve kadranındaki denizci flamalarıyla tanınan “Admiral's Cup” ile de ünlüdür."
+                }
+            ]
+        },
+        "frank_muller": {
+            "sections": [
+                {
+                    "heading": "Komplikasyonların Ustası",
+                    "text": "1991 yılında Cenevre'de saat ustası Franck Muller ve kasa üreticisi Vartan Sirmakes tarafından kurulan marka hızla yükselişe geçti. Muller'in karmaşık mekanizmalar yaratma konusundaki olağanüstü yeteneği, benzeri görülmemiş teknik mekanizmalara sahip dünya prömiyerleriyle ona “Komplikasyonların Ustası” unvanını kazandırdı."
+                },
+                {
+                    "heading": "Cintrée Curvex",
+                    "text": "Karmaşık mekaniğin ötesinde markayı tanımlayan unsur, ikonik Cintrée Curvex kasasıdır: belirgin kavisleriyle kendine özgü bir tonneau (fıçı) formu. Büyük boy, stilize rakamlarla birleşen Franck Muller saatleri, cesur ve anında tanınan bir estetik sunar."
+                }
+            ]
+        },
+        "girard_perregaux": {
+            "sections": [
+                {
+                    "heading": "Yüzyıllara Yayılan Yenilik",
+                    "text": "Kökleri 1791'de saat ustası Jean-François Bautte'a uzanan ve 1852'de Constant Girard tarafından resmen kurulan Girard-Perregaux, İsviçre'nin en eski gerçek manüfaktürlerinden biridir. Marka, mekanizmalarını tamamen kendi bünyesinde geliştirme konusunda uzun bir geçmişe sahiptir."
+                },
+                {
+                    "heading": "Üç Altın Köprülü Tourbillon",
+                    "text": "Markanın en efsanevi eseri, 1860'larda cep saati olarak tanıtılan ve 1889 Paris Dünya Sergisi'nde altın madalya kazanan Üç Altın Köprülü Tourbillon'dur. Bu başyapıt, mekanizmanın köprüsünü işlevsel bir bileşen olmaktan çıkarıp övgüyle anılan bir tasarım öğesine dönüştürdü."
+                }
+            ]
+        },
+        "glashütte_original": {
+            "sections": [
+                {
+                    "heading": "Alman Saatçilik Mirası",
+                    "text": "Glashütte Original, 1845'te Glashütte kasabasında doğan geleneksel Alman saatçiliğinin bayrağını taşıyor. İkinci Dünya Savaşı'nın ardından Almanya'nın bölünmesiyle birlikte kasabadaki saat üreticileri, GUB adıyla bilinen devlet mülkiyetindeki bir çatı altında birleştirildi."
+                },
+                {
+                    "heading": "Yeniden Doğuş ve İnce İşçilik",
+                    "text": "1990'daki Almanya'nın yeniden birleşmesinin ardından şirket özelleştirildi ve Glashütte Original adını aldı. Marka bugün kendi bünyesindeki üretimi, sağlam tasarımları ve üç çeyrek platin, kuğu boynu ince ayar ve Glashütte çizgileri gibi geleneksel Sakson işçiliğiyle takdir görüyor."
+                }
+            ]
+        },
+        "grand_seiko": {
+            "sections": [
+                {
+                    "heading": "İdeal Saatin Peşinde",
+                    "text": "1960 yılında Seiko bünyesindeki özel bir ekip tarafından yaratılan Grand Seiko, hassasiyet, dayanıklılık ve güzellikte üstün olan “ideal” saati üretme arzusundan doğdu. Marka, 1960'ların sonlarında prestijli gözlemevi yarışmalarını kazanarak İsviçre kronometrisinin hâkimiyetine meydan okudu."
+                },
+                {
+                    "heading": "Spring Drive ve Doğadan İlham Alan Kadranlar",
+                    "text": "Grand Seiko, bozulmasız ayna yüzeyler oluşturan Zaratsu parlatma tekniğiyle ünlüdür. Marka ayrıca, mekanik gücü elektromanyetik bir frenle birleştirerek eşsiz bir doğruluk sunan devrim niteliğindeki Spring Drive mekanizmasını tanıttı; bu mekanizma çoğunlukla Japon doğasından ilham alan etkileyici kadranlarla buluşuyor."
+                }
+            ]
+        },
+        "hublot": {
+            "sections": [
+                {
+                    "heading": "Füzyon Sanatı",
+                    "text": "1980 yılında İtalyan Carlo Crocco tarafından kurulan Hublot, değerli metal bir kasayı (altın) doğal kauçuk kayışla buluşturan ilk marka olarak geleneksel saatçilik dünyasını şaşkına çevirdi. Bu cesur birleşim, markanın temel felsefesini doğurdu: “Füzyon Sanatı”."
+                },
+                {
+                    "heading": "Big Bang Dönemi",
+                    "text": "Jean-Claude Biver'in liderliğinde Hublot, 2005'te füzyon fikrini uç noktaya taşıyan ve büyük başarı kazanan kronograf “Big Bang”i piyasaya sürdü. Marka, Magic Gold (çizilmeye dayanıklı altın) ve canlı renkli safirler gibi kendine özgü malzemelerle yenilik yapmayı sürdürüyor."
+                }
+            ]
+        },
+        "iwc": {
+            "sections": [
+                {
+                    "heading": "Amerikan Mühendisliği, İsviçre Zanaatkârlığı",
+                    "text": "International Watch Company (IWC), 1868 yılında Schaffhausen'de Amerikalı mühendis Florentine Ariosto Jones tarafından kuruldu. Amacı, ileri Amerikan üretim tekniklerini İsviçreli zanaatkârların olağanüstü becerisiyle birleştirerek yüksek kaliteli cep saati mekanizmaları üretmekti."
+                },
+                {
+                    "heading": "Göklerin ve Denizlerin Ustaları",
+                    "text": "IWC, sağlam alet saatleriyle dünya çapında takdir görür. 1930'lara uzanan Pilot Saatleri serisi havacılık estetiğini tanımlarken, zarif Portugieser ve dayanıklı Aquatimer koleksiyonları markanın sofistike komplikasyonlar ve sağlam mühendislikteki ustalığını ortaya koyar."
+                }
+            ]
+        },
+        "jaeger_lecoultre": {
+            "sections": [
+                {
+                    "heading": "Saat Ustalarının Saat Ustası",
+                    "text": "1833 yılında Antoine LeCoultre tarafından Vallée de Joux'da kurulan Jaeger-LeCoultre, sıklıkla “saat ustalarının saat ustası” olarak anılır. Manüfaktür tarihi boyunca 1.200'den fazla farklı kalibre üretmiş ve Patek Philippe, Audemars Piguet ile Vacheron Constantin gibi markalara mekanizma sağlamıştır."
+                },
+                {
+                    "heading": "İkonik Reverso",
+                    "text": "Marka 1931'de, Hindistan'daki İngiliz ordusu subaylarının polo maçlarına dayanabilecek bir saat talebinden doğan Reverso'yu tanıttı. Zekice tasarlanmış ters çevrilebilir kasa camı koruyordu ve model, Art Deco tasarımının kalıcı bir simgesi hâline geldi."
+                }
+            ]
+        },
+        "junghans": {
+            "sections": [
+                {
+                    "heading": "Kara Orman'ın Devi",
+                    "text": "1861 yılında Erhard Junghans tarafından Almanya'nın Schramberg kentinde kurulan Junghans, 20. yüzyılın başlarında dünyanın en büyük saat üreticisi olacak kadar hızlı büyüdü. Marka, erişilebilir ve yüksek kaliteli saatler üretme konusunda köklü bir geçmişe sahiptir."
+                },
+                {
+                    "heading": "Bauhaus ve Radyo Kontrol",
+                    "text": "Junghans, 1950'lerde sanatçı ve mimar Max Bill ile yaptığı iş birliğinden güçlü biçimde etkilenen minimalist Bauhaus tasarımıyla özdeşleşmiştir. Marka ayrıca 1990'da dünyanın ilk radyo kontrollü kol saati olan Mega 1'i piyasaya sürerek modern zaman ölçümüne öncülük etti."
+                }
+            ]
+        },
+        "nomos": {
+            "sections": [
+                {
+                    "heading": "Modern Glashütte Minimalizmi",
+                    "text": "Berlin Duvarı'nın yıkılmasından yalnızca birkaç ay sonra, 1990'da Roland Schwertner tarafından kurulan NOMOS Glashütte, Alman saatçiliğinin tarihî kasabasına taze ve modern bir bakış açısı getirdi. Marka yalnızca mekanik saatçiliğe adanmıştır ve kalibrelerini kendi bünyesinde üretir."
+                },
+                {
+                    "heading": "Bauhaus İlhamı",
+                    "text": "NOMOS, Bauhaus akımından ve Deutscher Werkbund'dan güçlü biçimde ilham alan, ödüllü minimalist estetiğiyle takdir görüyor. Tangente ve Orion gibi modeller; sade tipografileri, ince akrepleri ve zarif profilleriyle modern klasikler hâline geldi."
+                }
+            ]
+        },
+        "omega": {
+            "sections": [
+                {
+                    "heading": "Hassasiyet Mirası",
+                    "text": "1848 yılında Louis Brandt tarafından La Chaux-de-Fonds'ta kurulan Omega, bir asrı aşkın süredir saatçilikte hassasiyetin öncüsü olmuştur. Marka 1932'den bu yana Olimpiyat Oyunları'nın Resmî Zaman Ölçeri olup modern saatçilikte devrim niteliğindeki Co-Axial eşapmanına öncülük etmiştir."
+                },
+                {
+                    "heading": "Ay'a ve Derin Denizlere",
+                    "text": "Omega'nın tarihsel önemi eşsizdir. Speedmaster Professional, 1969'da Ay'da takılan ilk saat olarak üne kavuştu. Seamaster koleksiyonu ise derin deniz kâşiflerinin, askerî dalgıçların ve elbette James Bond'un tercih ettiği saat oldu."
+                }
+            ]
+        },
+        "panerai": {
+            "sections": [
+                {
+                    "heading": "Floransa Kökleri ve Deniz Kuvvetleri Geçmişi",
+                    "text": "1860 yılında İtalya'nın Floransa kentinde Giovanni Panerai tarafından kurulan şirket, bir saat dükkânı ve okulu olarak yola çıktı. Panerai zamanla İtalyan Kraliyet Donanması'nın resmî hassas alet tedarikçisi oldu ve kurbağa adamlar için son derece okunaklı, suya dayanıklı saatlerde uzmanlaştı."
+                },
+                {
+                    "heading": "Radiomir ve Luminor",
+                    "text": "Panerai, büyük boy yastık formundaki kasaları ve kendine özgü kurma kolu koruyucularıyla tanınır. Radiomir (aydınlatma için radyum bazlı bir toz kullanan) ve ardından Luminor (daha güvenli trityum bazlı bir bileşik kullanan), markanın 1990'larda sivil kullanıcılar arasında büyük bir kült kitle kazanan sağlam ve işlevsel estetiğini tanımladı."
+                }
+            ]
+        },
+        "patek_philippe": {
+            "sections": [
+                {
+                    "heading": "Yüksek Saatçiliğin Zirvesi",
+                    "text": "1839 yılında Cenevre'de Antoine Norbert de Patek ve François Czapek (sonradan Jean Adrien Philippe de katıldı) tarafından kurulan Patek Philippe, geleneksel İsviçre saatçiliğinin zirvesini temsil eder. Aile mülkiyetindeki manüfaktür, saat markalarının prestijli “Kutsal Üçlü”sünden biri kabul edilir."
+                },
+                {
+                    "heading": "Eşsiz Zarafet ve Karmaşıklık",
+                    "text": "Zarif Calatrava klasik saatinden Gérald Genta imzalı sportif Nautilus'a kadar Patek Philippe saatleri büyük ilgi görür. Marka, dünyanın en komplike mekanik saatlerinden bazılarını üretmesiyle tanınır ve şu sözle özdeşleşmiştir: “Bir Patek Philippe'e aslında hiçbir zaman sahip olmazsınız. Onu yalnızca bir sonraki kuşak için emanet alırsınız.”"
+                }
+            ]
+        },
+        "piaget": {
+            "sections": [
+                {
+                    "heading": "Ultra İncenin Ustaları",
+                    "text": "1874 yılında Georges Edouard Piaget tarafından La Côte-aux-Fées'te kurulan şirket, 1943'te kendi adını tescil ettirene kadar tamamen diğer prestijli markalar için son derece hassas cep saati mekanizmalarının tasarımına ve üretimine odaklandı."
+                },
+                {
+                    "heading": "Altiplano Mirası",
+                    "text": "Piaget, ultra ince saatçilikteki ustalığıyla dünya çapında tanınır. Marka 1957'de, yalnızca 2 mm kalınlığındaki elle kurmalı efsanevi Kalibre 9P'yi tanıttı; bu mekanizma, zarif ve son derece ince klasik saatlerin ölçütü sayılan Altiplano koleksiyonunun yolunu açtı."
+                }
+            ]
+        },
+        "sinn": {
+            "sections": [
+                {
+                    "heading": "Amaca Yönelik Üretilmiş Alet Saatleri",
+                    "text": "1961 yılında uçuş eğitmeni ve pilot Helmut Sinn tarafından Almanya'nın Frankfurt kentinde kurulan Sinn Spezialuhren, işe seyrüsefer saatleri ve pilot kronografları üreterek başladı. Marka, dekoratif süslemeler yerine mutlak işlevselliğe, olağanüstü dayanıklılığa ve üstün okunabilirliğe öncelik verir."
+                },
+                {
+                    "heading": "Malzemede Yenilik",
+                    "text": "Sinn, saat teknolojisinin sınırlarını zorlamasıyla profesyoneller arasında büyük saygı görür. Marka; Alman denizaltı çeliğinden üretilen kasalar, TEGIMENT çizilme direnci teknolojisi ve zorlu ortamlarda camın buğulanmasını önleyen Ar nem giderme sistemi gibi kendine özgü yenilikler kullanır."
+                }
+            ]
+        },
+        "tag_heuer": {
+            "sections": [
+                {
+                    "heading": "Motor Sporları Mirası",
+                    "text": "1860 yılında Edouard Heuer tarafından İsviçre'nin Saint-Imier kasabasında kurulan marka (başlangıçta yalnızca “Heuer”), rekabetçi sporlar ve otomobil yarışlarıyla derinden iç içe geçti. Heuer, 1887'de mekanik kronograflarda büyük bir ilerleme olan salınımlı pinyonun patentini aldı."
+                },
+                {
+                    "heading": "Carrera ve Monaco",
+                    "text": "TAG Heuer'in mirasını ikonik yarış kronografları tanımlar. 1963'te tanıtılan Carrera, sürücülere sade ve kolay okunan bir zaman göstergesi sundu. Marka 1969'da, kare kasasıyla anında tanınan ve Steve McQueen'in “Le Mans” filminde taktığı Monaco'yu piyasaya sürdü."
+                }
+            ]
+        },
+        "tudor": {
+            "sections": [
+                {
+                    "heading": "Rolex'in Kalkanı",
+                    "text": "Tudor, 1926 yılında Rolex'in kurucusu Hans Wilsdorf tarafından kuruldu. Wilsdorf'un vizyonu, bir Rolex'in efsanevi güvenilirliğini ve su geçirmezliğini daha erişilebilir bir fiyatla sunan bir saat yaratmaktı; bu hedefe başlangıçta hazır mekanik mekanizmalar kullanılarak ulaşıldı."
+                },
+                {
+                    "heading": "Born to Dare",
+                    "text": "Tudor, on yıllar içinde Fransız Donanması (Marine Nationale) gibi askerî dalış birimlerini donatarak kendine özgü bir kimlik geliştirdi. Marka bugün, artık yüksek performanslı kendi bünyesinde üretilen kalibrelere sahip, vintage esintili Black Bay ve Pelagos koleksiyonlarıyla takdir görüyor."
+                }
+            ]
+        },
+        "van_cleef_and_arpels": {
+            "sections": [
+                {
+                    "heading": "Yüksek Mücevher ve Romantizm",
+                    "text": "1896 yılında Alfred Van Cleef ve kayınpederi Salomon Arpels tarafından Paris'te kurulan Maison, temelde göz kamaştırıcı yüksek mücevherleriyle ünlüdür. Markanın saatçiliğe adım atması, aynı büyüleyicilik, zanaatkârlık ve hikâye anlatıcılığı ruhunu bileğe taşıdı."
+                },
+                {
+                    "heading": "Şiirsel Komplikasyonlar",
+                    "text": "Van Cleef & Arpels, yalnızca geleneksel zaman ölçüm hassasiyetine odaklanmak yerine “Şiirsel Komplikasyonlar”ıyla tanınır. Bu saatler; karmaşık retrograd mekanizmalar ve mekanik otomasyon kullanarak zamanı hareket eden periler, gezegenler ve bir köprüde buluşan âşıklar aracılığıyla anlatır."
+                }
+            ]
+        },
+        "zenith": {
+            "sections": [
+                {
+                    "heading": "İlk Entegre İsviçre Manüfaktürü",
+                    "text": "1865 yılında Georges Favre-Jacot tarafından İsviçre'nin Le Locle kentinde kurulan Zenith, saatçiliğin tüm meslek dallarını tek çatı altında toplayarak sektörde devrim yaptı. Bu vizyoner yaklaşım, İsviçre tarihindeki ilk gerçek entegre saat manüfaktürlerinden birini ortaya çıkardı ve o güne dek görülmemiş bir kalite kontrolü sağladı."
+                },
+                {
+                    "heading": "Efsanevi El Primero",
+                    "text": "Zenith, 1969'da geniş çapta dünyanın ilk otomatik kronograf mekanizması kabul edilen El Primero'yu tanıtarak saatçiliği sonsuza dek değiştirdi. Saatte 36.000 salınımlık yüksek frekansıyla çalışan mekanizma, zamanın saniyenin onda birine kadar ölçülmesine olanak tanıdı ve bugüne dek üretilmiş en ünlü kalibrelerden biri olmayı sürdürüyor."
+                }
+            ]
+        }
+    },
+    "note": {
+        "title": "Instagram'ınız alıcıyı zaten getiriyor.",
+        "heading": "Mevcut stoklarınızı inceleyebilecekleri, belirli bir saati görüntüleyebilecekleri ve sohbeti sıfırdan başlatmadan bilgi alabilecekleri bir alan sunun.",
+        "link": "Mağazanız için nasıl görünebileceğini görün"
+    },
+    "why": {
+        "title": "Neden özel bir vitrin?",
+        "hero": {
+            "eyebrow": "Instagram → Mağaza → Talep",
+            "title": "Instagram ilgiyi topluyor.<br></br><span>Alıcılara bundan sonra gidecekleri bir yer verin.</span>",
+            "description": "Amaç Instagram'ı değiştirmek değil. Saatlerinizi zaten keşfeden kişilere koleksiyonunuzu inceleyebilecekleri, belirli bir saati açabilecekleri ve sizinle iletişime geçebilecekleri düzgün bir alan sunmak.",
+            "seeDifference": "Farkı görün",
+            "openStorefront": "Mağazayı aç"
+        },
+        "gap": {
+            "eyebrow": "01 / Boşluk",
+            "title": "Instagram keşif için mükemmel.<br></br><span>Ama bir katalog değil.</span>",
+            "description": "Bir alıcı Instagram'da bir saat bulabilir ancak mevcut stokunuzu gezebileceği, parçaları karşılaştırabileceği, detayları okuyabileceği veya düzenli bir talep gönderebileceği bir yere sahip olmayabilir.",
+            "instagram": {
+                "title": "Instagram / DM",
+                "label": "Keşif",
+                "items": ["Alıcı bir gönderide veya hikâyede bir saat görür.", "Başka nelerin mevcut olduğunu sorar.", "Fotoğrafları, fiyatları ve detayları manuel olarak gönderirsiniz.", "Talep veya randevu sohbetin içinde kalır."]
+            },
+            "storefront": {
+                "title": "Özel vitrin",
+                "label": "Size ait",
+                "items": [
+                    "Alıcı mevcut koleksiyona kendi başına göz atabilir.",
+                    "Her saatin kendi sayfası ve detayları olabilir.",
+                    "Bir dizi fotoğraf yerine tek bir bağlantı gönderebilirsiniz.",
+                    "Talepler ve randevular için net bir hedef vardır."
+                ]
+            },
+            "footnote": "Mesele sadece \"bir web sitesine sahip olmak\" değil. İlgi ile aksiyon arasındaki boşluğu ortadan kaldırmak."
+        },
+        "buyer": {
+            "eyebrow": "02 / Alıcı için",
+            "title": "Alıcı, ilk DM'i göndermeden<br></br><span>önce cevaplarını alır.</span>",
+            "steps": [
+                {
+                    "number": "01",
+                    "title": "Göz at",
+                    "description": "Mevcut saatleri görmek için önce stokta ne olduğunu sormak zorunda kalmaz."
+                },
+                {
+                    "number": "02",
+                    "title": "İncele",
+                    "description": "Bir parçayı açıp yayınlamayı seçtiğiniz fotoğraf, fiyat ve bilgileri görebilir."
+                },
+                {
+                    "number": "03",
+                    "title": "Seç",
+                    "description": "Alıcı talep sayfasına hangi saat hakkında bilgi istediğini bilerek gelir."
+                },
+                {
+                    "number": "04",
+                    "title": "İletişime geç",
+                    "description": "Düzenli bir talep veya randevu isteği, görüşmeye net bir başlangıç noktası sağlar."
+                }
+            ]
+        },
+        "dealer": {
+            "eyebrow": "03 / Satıcı için",
+            "title": "Gönderebileceğiniz daha iyi bir bağlantı.<br></br><span>İlgiyi yönetmenin daha temiz bir yolu.</span>",
+            "benefits": [
+                {
+                    "title": "Stok için tek bağlantı",
+                    "description": "Ekran görüntüleri göndermek veya kişiden Instagram'da aramasını istemek yerine, koleksiyonunuzun düzenli olduğu tek bir yere gönderin."
+                },
+                {
+                    "title": "Her saat için bir sayfa",
+                    "description": "Bir alıcı belirli bir referansı sorduğunda, istediğiniz bilgiler ve fotoğraflarla doğrudan o saatin sayfasını gönderebilirsiniz."
+                },
+                {
+                    "title": "Daha az tekrarlayan mesaj",
+                    "description": "Vitrin temel gezinmeyi ve ürün bilgilerini önce üstlenir; böylece görüşmeniz sürecin daha ilerleyen bir noktasından başlayabilir."
+                },
+                {
+                    "title": "Stok sizin kontrolünüzde",
+                    "description": "Envanter değiştiğinde her seferinde geliştiriciye ihtiyaç duymadan saatleri panelden ekleyebilir, düzenleyebilir ve kaldırabilirsiniz."
+                }
+            ]
+        },
+        "role": {
+            "eyebrow": "04 / Rolü",
+            "title": "Instagram'ı kullanmaya devam edin.<br></br><span>Sadece ona bir hedef verin.</span>",
+            "description": "Kitlenizi Instagram'dan uzaklaştırmanız gerekmez. Orada paylaşmaya devam edin. DM, WhatsApp ve telefonu kullanmaya devam edin. Vitrin, ilgilenen kişilerin koleksiyona gerçekten göz atabileceği yer olur.",
+            "existingFlowTitle": "Mevcut akış",
+            "expandedFlowTitle": "Genişletilmiş akış",
+            "existingFlow": "Instagram → DM",
+            "expandedFlow": "Instagram → Vitrin → Talep",
+            "footnote": "Vitrin, çalışan kanalların yerine geçmez; onlara ek bir satış alanı sağlar."
+        },
+        "gettingStarted": {
+            "eyebrow": "05 / Başlangıç",
+            "title": "Sunum hazırlamayın.<br></br><span>Sadece stoğu gösterin.</span>",
+            "description": "Konsepti zaten oluşturdum. Şimdi önemli olan, bunun gerçek envanterinizle nasıl göründüğünü görmek.",
+            "steps": [
+                {
+                    "number": "01 / SİZ",
+                    "title": "Stoğu gönderin",
+                    "description": "Mevcut sitenizi, Chrono24 sayfanızı, Instagram hesabınızı veya birkaç aktif referansı gönderin."
+                },
+                {
+                    "number": "02 / BEN",
+                    "title": "Ben yerleştireyim",
+                    "description": "Gerçek saatlerinizden birkaçını vitrine ekleyeyim; böylece fikri kendi envanteriniz üzerinden değerlendirebilirsiniz."
+                },
+                {
+                    "number": "03 / KARAR",
+                    "title": "Karar sizin",
+                    "description": "Ek vitrinin satış şeklinize uyduğunu düşünürseniz, konsepti gerçek sitenize dönüştürmeyi konuşuruz."
+                }
+            ]
+        },
+        "cta": {
+            "eyebrow": "Sonraki adım",
+            "title": "Gerçek saatlerinizin<br></br><span>burada nasıl göründüğünü görün.</span>",
+            "description": "60 dakikalık satış görüşmesi yok. Mevcut stok bağlantınızı veya aktif olarak sattığınız üç parçayı gönderin. Gerisini ben hallederim.",
+            "sendStock": "Size Özel Demonuzu Ayırtın",
+            "floatingCta": "Arvell'in Özel Demosu İçin Randevu Alın",
+            "openStorefront": "Mağazayı aç",
+            "credit": "Aymen · Arvell"
+        },
+        "nav": {
+            "back": "Vitrine dön",
+            "nextStep": "Sonraki adımı gör"
+        },
+        "footer": {
+            "tagline": "Bağımsız saat satıcıları için özel vitrin konseptleri"
+        }
+    }
+}

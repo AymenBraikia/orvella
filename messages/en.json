@@ -1,0 +1,1475 @@
+{
+    "intrest": {
+        "title": "Interested?",
+        "subTitle": "See why I built this website for your business, what it can do for you, and how we can turn it into something your customers can actually use.",
+        "cta": "Learn More"
+    },
+    "orders": {
+        "thankYou": "With thanks",
+        "thankYouSuffix": "your acquisition is confirmed",
+        "ongoingOrders": "awaiting delivery",
+        "orderId": "reference",
+        "orderDate": "placed",
+        "orderTotal": "total",
+        "paymentMethod": "payment",
+        "shipping": "destination",
+        "status": "status",
+        "noOngoingOrders": "no pieces are currently in transit",
+        "deliveredOrders": "your collection",
+        "noDeliveredOrders": "your collection begins with your first piece",
+        "subtitle": "Your order is recorded. A specialist will be in touch within one business day.",
+        "orderCount": "{count, plural, =0 {No orders} one {# order} other {# orders}}",
+        "quantity": "Quantity",
+        "localPickup": "Collection in boutique",
+        "discount": "Discount",
+        "browse": "Browse the collection"
+    },
+    "meta": {
+        "siteName": "ARVELL",
+        "titleDefault": "ARVELL | High-End Luxury Watches & Expert Consultancy",
+        "description": "Explore our curated collection of pristine pre-owned and new luxury watches, including Rolex, Patek Philippe, and Cartier. Book a professional consultation with our horology experts today.",
+        "keywords": ["luxury watches", "pre-owned Rolex", "Patek Philippe Calatrava", "Cartier Panthere", "Rolex Daytona", "buy luxury watches", "watch consultancy", "ARVELL"],
+        "ogDescription": "Our curated collection of pre-owned and new luxury watches is waiting for you. Partner with experts for your high-end horology needs.",
+        "ogImageAlt": "ARVELL Luxury Watch Collection",
+        "twitterDescription": "Your partner for high-end watches. Explore Rolex, Patek Philippe, Cartier, and book expert appointments."
+    },
+    "common": {
+        "brand": "ARVELL",
+        "nav": {
+            "watches": "Watches",
+            "spareParts": "Spare Parts",
+            "favorites": "Favorites",
+            "aboutUs": "About Us",
+            "store": "Store",
+            "sellConsign": "Sell / Consign",
+            "polishingServices": "Polishing & Services",
+            "shippingPayments": "Shipping & Payments",
+            "faq": "FAQ",
+            "vacancies": "Vacancies"
+        },
+        "footer": {
+            "shopHeading": "Shop",
+            "serviceHeading": "Service",
+            "settingsHeading": "Settings",
+            "themeHeading": "Theme",
+            "currency": "Currency",
+            "language": "Language",
+            "otherPlatformsHeading": "Other Platforms",
+            "legalHeading": "Legal",
+            "chrono24": "Chrono 24",
+            "ebay": "Ebay",
+            "ebayKleinanzeigen": "Ebay Kleinanzeigen",
+            "instagram": "Instagram",
+            "imprint": "Imprint",
+            "privacyPolicy": "Privacy Policy",
+            "terms": "Terms",
+            "withdrawal": "Withdrawal",
+            "disclaimer": "Disclaimer",
+            "cookiePolicy": "Cookie Policy",
+            "disclaimerText": "Arvell is an independent dealer and is not affiliated with any other brand, nor is it an authorized reseller.",
+            "copyright": "©{year} Arvell. All Rights Reserved."
+        },
+        "contactLabels": {
+            "phonePrimary": "Phone",
+            "phoneSecondary": "Phone (Store)",
+            "email": "E-mail"
+        },
+        "buttons": {
+            "discover": "Discover",
+            "add_to_cart": "add to cart",
+            "adding_to_cart": "adding to cart",
+            "register": "register",
+            "quick_view": "quick view",
+            "viewAllWatches": "View all watches",
+            "begin": "Begin your journey",
+            "bookNow": "Book now",
+            "bookAppointment": "Book an appointment",
+            "learnMore": "Learn more",
+            "goToShop": "Go to shop",
+            "submit": "Submit",
+            "previous": "Previous",
+            "next": "Next",
+            "clearFilters": "Clear filters",
+            "confirmWithdrawal": "Confirm withdrawal",
+            "sellYourWatch": "Sell your watch",
+            "consignment": "Consignment"
+        },
+        "filters": {
+            "brands": "Brands",
+            "movement": "Movement",
+            "caseMaterial": "Case Material",
+            "braceletMaterial": "Bracelet Material",
+            "dialColor": "Dial Color",
+            "condition": "Condition",
+            "caseDiameterMm": "Case Diameter (mm)",
+            "year": "Year",
+            "waterResistance": "Water Resistance",
+            "includes": "Includes",
+            "price": "Price",
+            "availability": "Availability",
+            "from": "From",
+            "to": "To",
+            "searchPlaceholder": "Search...",
+            "search": "Search",
+            "searching": "Searching...",
+            "noSearchResults": "Sorry, but nothing matched your search terms.",
+            "sort": "Sort",
+            "newest": "Newest",
+            "relevance": "Relevance",
+            "brand": "Brand",
+            "filtersLabel": "Filters",
+            "inStock": "In Stock",
+            "includesBox": "Box",
+            "includesPapers": "Papers",
+            "includesFirstInvoice": "First Invoice",
+            "includesServiceInvoice": "Service Invoice",
+            "conditionNew": "New",
+            "conditionPreOwned": "Pre-Owned",
+            "movementManual": "Manual",
+            "movementAutomatic": "Automatic",
+            "movementQuartz": "Quartz",
+            "noResults": "No results match your filters.",
+            "clearAll": "Clear all",
+            "close": "Close",
+            "remove": "Remove filter",
+            "activeFilters": "Active filters",
+            "showAll": "Show {count} more",
+            "showLess": "Show less",
+            "showResults": "Show {count, plural, =0 {no watches} one {# watch} other {# watches}}",
+            "resultCount": "{count, plural, =0 {No watches} one {# watch} other {# watches}}",
+            "_fix": "Also swap these two values — they are currently inverted in en.json",
+            "priceLowToHight": "Price low to high",
+            "priceHightToLow": "Price high to low"
+        },
+        "productCard": {
+            "movement": "Movement",
+            "caseSize": "Case size",
+            "bracelet": "Bracelet",
+            "material": "Material",
+            "details": "Details",
+            "condition": "Condition"
+        },
+        "formFields": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "companyName": "Company Name (optional)",
+            "countryRegion": "Country / Region",
+            "streetAddress": "Street Address",
+            "postCode": "Postcode / ZIP",
+            "townCity": "Town/City",
+            "diffAddress": "Ship to different address",
+            "email": "Email",
+            "phone": "Phone",
+            "orderNotes": "Order notes (optional)",
+            "orderNoteExample": "Notes about your order , e.g. special notes for delivery",
+            "message": "Message",
+            "attachImages": "Attach Images",
+            "required": "This field is required",
+            "invalidEmail": "Please enter a valid email address"
+        }
+    },
+    "error": {
+        "heading": "Oops. Something went wrong!",
+        "subHeading": "An unexpected error occurred",
+        "subText": "Something broke while loading this page. You can try again, or head back to the homepage.",
+        "tryAgain": "try again",
+        "return": "Return Home"
+    },
+    "notFound": {
+        "heading": "404 Not Found",
+        "subHeading": "Time Has Run Out for This Page",
+        "subText": "The page or timepiece you are searching for has been moved, renamed, or no longer exists.",
+        "return": "Return Home",
+        "explore": "Explore Our Collection"
+    },
+    "auth": {
+        "signUp": {
+            "homePage": "Home page",
+            "title": "Create your account",
+            "description": "Save the pieces you're watching, track offers, and check out faster next time.",
+            "firstName": "First name",
+            "lastName": "Last name",
+            "email": "Email",
+            "password": "Password",
+            "firstNamePlaceholder": "Jordan",
+            "lastNamePlaceholder": "Blake",
+            "emailPlaceholder": "Jordan@arvell.com",
+            "passwordPlaceholder": "At least 8 characters",
+            "agree": "agree to the Terms of Service and Privacy Policy",
+            "createAccount": "Create account",
+            "creatingAccount": "Creating account…",
+            "alreadyHaveAccount": "Already have an account?",
+            "logIn": "Log in",
+            "termsRequired": "You need to agree to the Terms of Service to continue.",
+            "somethingWentWrong": "Something went wrong. Please try again."
+        },
+        "login": {
+            "homePage": "Home page",
+            "title": "Log in to your account",
+            "description": "Save the pieces you're watching, track offers, and check out faster next time.",
+            "email": "Email",
+            "password": "Password",
+            "emailPlaceholder": "Jordan@arvell.com",
+            "passwordPlaceholder": "At least 8 characters",
+            "logIn": "Log in",
+            "loggingIn": "Logging you in…",
+            "dontHaveAccount": "Don't have an account?",
+            "signUp": "Sign up",
+            "somethingWentWrong": "Something went wrong. Please try again."
+        }
+    },
+    "home": {
+        "heroTitle": "ARVELL",
+        "heroSubtitle": "Your partner for high-end watches",
+        "discover": "Discover",
+        "newArrivalsHeading": "New Arrivals",
+        "newArrivalsSubtext": "Our curated collection of pre-owned and new watches is waiting for you.",
+        "getInspiredHeading": "Get Inspired",
+        "getInspiredSubtext": "Your journey begins here. Take a minute to answer these questions, and we’ll help you figure out what your first step should be.",
+        "brandsHeading": "Iconic Brands",
+        "brandsSubtext": "Browse our collection of classic wrist watches from world-renowned watchmakers.",
+        "sellConsignCard": {
+            "title": "Sell / Consign",
+            "cta": "Learn more"
+        },
+        "sparePartsCard": {
+            "title": "Spare Parts",
+            "cta": "Go to shop"
+        },
+        "polishCard": {
+            "title": "Polishing & Services",
+            "cta": "Learn more"
+        },
+        "bookingBanner": {
+            "heading": "Book an Appointment",
+            "subtext": "As experts, we give you our professional opinion on any matter you may have.",
+            "cta": "Book now"
+        }
+    },
+    "shop": {
+        "title": "Watches"
+    },
+    "spare": {
+        "title": "Spare Parts"
+    },
+    "store": {
+        "heading": "Arvell Store Frankfurt",
+        "cta": "Book an appointment",
+        "welcomeText": "We look forward to welcoming you to our store soon.",
+        "appointmentNote": "Please make an appointment to ensure the watch you are looking for is available at your time of visit.",
+        "highValueNote": "Additionally, note that for watches above 15.000€ an appointment is required.",
+        "addressHeading": "Address",
+        "parkingText": "Parking: Park One garage in the same building",
+        "parkingLinkText": "(see on Google Maps)",
+        "openingHoursHeading": "Opening Hours",
+        "days": {
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday"
+        },
+        "closed": "Closed",
+        "contactHeading": "Contact"
+    },
+    "sell": {
+        "heading": "Sell/Consign",
+        "formCtaHeading": "Fill out the form",
+        "formCtaText": "Arvell’s expert appraisers provide prompt and detailed estimates so you can get the most out of your sale.",
+        "beginCta": "Begin",
+        "howItWorksHeading": "How it works",
+        "consign": {
+            "heading": "Consign",
+            "intro": "If you would like us to sell your watch on consignment, we can list it on our website and offer it at a price agreed upon by both parties. When the watch is sold the payment will be sent to you minus the consignment fee.",
+            "steps": [
+                {
+                    "title": "Provide Details about your Watch",
+                    "text": "Set the stage for a successful transaction by providing us with every detail about your watch and your asking price."
+                },
+                {
+                    "title": "Consignment Contract and Shipping Label",
+                    "text": "If you would like, we’ll send you a consignment contract and a fully insured shipping label. Alternatively, you can book an appointment in our store in Frankfurt."
+                },
+                {
+                    "title": "Inspection",
+                    "text": "Once we receive the watch, we will inspect it thoroughly to verify its authenticity."
+                },
+                {
+                    "title": "Listing",
+                    "text": "The watch will be photographed & listed across all of our platforms."
+                },
+                {
+                    "title": "Sale and Payment",
+                    "text": "After we have sold your watch and the 14-day return period has ended, we will send you the payment."
+                }
+            ]
+        },
+        "sellDirect": {
+            "heading": "Sell",
+            "intro": "Arvell’s expert appraisers provide prompt and detailed estimates so you can get the most out of your sale.",
+            "steps": [
+                {
+                    "title": "Provide Details about your Watch",
+                    "text": "Fill out this form to tell us about your watch and we’ll get back to you within 48 hours with a price quote."
+                },
+                {
+                    "title": "Agreement and Shipping Label",
+                    "text": "Once we’ve reached an agreement, you can choose between receiving a shipping label for your watch or coming into our store."
+                },
+                {
+                    "title": "Inspection",
+                    "text": "To verify the authenticity of your timepiece, we first thoroughly inspect it upon its arrival."
+                },
+                {
+                    "title": "Payment",
+                    "text": "As soon as the inspection is completed, the agreed amount will be paid."
+                }
+            ]
+        },
+        "form": {
+            "heading": "Consignment / Sell your Watch",
+            "intro": "Arvell's expert appraisers provide prompt and detailed estimates so you can get the most out of your sale.",
+            "sections": {
+                "personalInformation": "Personal Information",
+                "salePreference": "Sale preference",
+                "watchDetails": "Watch Details"
+            },
+            "salePreferenceOptions": {
+                "consignment": "Consignment",
+                "sell": "Sell your watch"
+            },
+            "fields": {
+                "brand": "Brand",
+                "askingPrice": "Asking Price",
+                "model": "Model",
+                "referenceNumber": "Reference Number",
+                "boxPapersQuestion": "Do you have the original box and papers? Please check all that apply.",
+                "box": "Box",
+                "paper": "Paper",
+                "messagePlaceholder": "Anything else you would like to add?",
+                "condition": "Condition",
+                "conditionNew": "New",
+                "conditionMint": "Mint",
+                "conditionPreOwned": "Pre-owned"
+            }
+        }
+    },
+    "polish": {
+        "heading": "Polishing and Service",
+        "intro": "At Arvell, we offer a first-class polishing and repair service for top-class brands such as Rolex, IWC, Tudor, Omega and Cartier. Our experienced watchmaker will get your watch in top shape – from precise polishing to professional maintenance.",
+        "servicesHeading": "Our services at a glance:",
+        "polishing": {
+            "heading": "Polishing & reconditioning:",
+            "intro": "We remove scratches and minor signs of wear, restoring your watch to its original shine:",
+            "items": ["Polishing & Refurbishment from €175", "Polishing including material application & refurbishment from €249"]
+        },
+        "maintenance": {
+            "heading": "Maintenance & repair:",
+            "intro": "We carry out all necessary repairs and provide a reliable maintenance service for your movement in our master workshop:",
+            "items": [
+                "Battery replacement for standard quartz models €45",
+                "Rate adjustment / regulation of the time deviation per day €79",
+                "Dial replacement (3 hands) €199",
+                "Dial replacement (chronograph) €249",
+                "Service for 3-hand manual wind watches from €499",
+                "Service for 3-hand automatic watches from €599 (e.g. Rolex, OMEGA, Panerai, etc.)",
+                "Service for chronographs from €749 (e.g. Rolex, OMEGA)"
+            ],
+            "note": "Plus spare parts if necessary. For individual repairs, a cost estimate will be provided."
+        },
+        "expertHeading": "Expert professionals:",
+        "expertText": "Our watchmaker specializes in the care and repair of luxury watches.",
+        "qualityHeading": "Highest quality:",
+        "qualityText": "We only use specialized tools that meet the highest standards.",
+        "speedHeading": "Speed & reliability:",
+        "speedText": "We offer you fast processing times and reliable execution - so that your watch is back with you quickly."
+    },
+    "booking": {
+        "heading": "Book an Appointment",
+        "intro": "We look forward to welcoming you to our store soon. Please make an appointment to ensure the watch you are looking for is available at the time of your visit. Additionally, note that for watches above 15.000€ an appointment is required.",
+        "fields": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phone": "Phone",
+            "reason": "Reason",
+            "submit": "Submit",
+            "appointmentDate": "Appointment Date"
+        }
+    },
+    "about": {
+        "heading": "About Us",
+        "paragraphs": [
+            "Our story began with a spark—an elegant timepiece worn by a legendary British agent that ignited a lifelong passion in our founder, Aymen Braikia. This fascination with horology transformed Aymen from a young enthusiast into a distinguished dealer of high-end timepieces. In 2019, while pursuing his degree in mechanical engineering, he founded Arvell, channeling his obsession into a thriving business dedicated to iconic wristwatches.",
+            "At Arvell, we are your trusted experts for exquisite timepieces both new and pre-owned. Our expertise is driven by passion: we offer only the finest timepieces, each one a piece we would proudly wear ourselves. Our in-house watchmaker meticulously inspects every watch to ensure its authenticity and optimal performance, providing you with confidence in your purchase.",
+            "Our team and in-house watch maker meticulously inspects every watch before selling it to guarantee its authenticity and performance.",
+            "Looking to add to your collection? We offer an impressive selection of prestigious brands.",
+            "Our brands: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling and more",
+            "Do you have a piece you’d like to sell? We are always on the lookout for exceptional watches. Whether you wish to sell outright or consign your timepiece, we offer seamless and trustworthy solutions tailored to your needs."
+        ],
+        "sellCta": "Sell your watch",
+        "consignmentCta": "Consignment"
+    },
+    "payments": {
+        "heading": "Shipping and Payments",
+        "paymentsHeading": "Payments",
+        "paymentsSubtext": "Fast and secure online payments",
+        "paymentsTable": {
+            "headers": ["Payment Method", "Duration", "Fees"],
+            "rows": [
+                ["National Bank Wire", "1–2 business days", "0%"],
+                ["International Bank Wire", "2–3 business days", "0%"],
+                ["PayPal", "immediate", "3%"],
+                ["Credit/Debit Payment", "immediate", "1.4%"]
+            ]
+        },
+        "shippingHeading": "Shipping",
+        "germany": {
+            "heading": "Germany",
+            "text": "Delivery within Germany: 1–2 business days.",
+            "rows": [
+                ["DHL", "Up to 500€", "6€"],
+                ["UPS", "500€ – 10.000€", "20€"],
+                ["UPS", "10.000€ – 15.000€", "50€"],
+                ["UPS", "15.000€ – 25.000€", "80€"],
+                ["Prosegur", "25.000€ – 50.000€", "150€"],
+                ["Prosegur", "50.000€ – 250.000€", "250€"],
+                ["Prosegur", "250.000€ and more", "On request"]
+            ]
+        },
+        "eu": {
+            "heading": "European Union",
+            "text": "Delivery within the European Union: 1–2 business days.",
+            "rows": [
+                ["DHL", "Up to 500€", "15€"],
+                ["UPS", "500€ – 10.000€", "50€"],
+                ["UPS", "10.000€ – 15.000€", "150€"],
+                ["UPS", "15.000€ – 25.000€", "300€"],
+                ["Prosegur", "25.000€ – 50.000€", "400€"],
+                ["Prosegur", "50.000€ – 250.000€", "500€"],
+                ["Prosegur", "250.000€ and more", "On request"]
+            ]
+        },
+        "worldwide": {
+            "heading": "Worldwide",
+            "text": "Worldwide delivery: 3–10 business days.",
+            "rows": [
+                ["DHL", "Up to 500€", "25€"],
+                ["DHL Express", "500€ – 10.000€", "100€"],
+                ["UPS", "10.000€ – 15.000€", "150€"],
+                ["UPS", "15.000€ – 25.000€", "400€"],
+                ["Prosegur", "25.000€ – 50.000€", "750€"],
+                ["Prosegur", "50.000€ – 250.000€", "1.000€"],
+                ["Prosegur", "250.000€ and more", "On request"]
+            ]
+        },
+        "value": "Value",
+        "cost": "Cost"
+    },
+    "faq": {
+        "heading": "Frequently Asked Questions",
+        "categories": {
+            "payments": {
+                "heading": "Payments",
+                "items": [
+                    {
+                        "q": "What payment methods do you offer?",
+                        "a": "Online: bank transfer, Paypal (+3%), credit card (+1.4%). In store: instant payment, Paypal, credit card, cash (Personal ID required)."
+                    },
+                    {
+                        "q": "Do you accept cash on delivery payments or payments after receipt of invoice?",
+                        "a": "Unfortunately we can only accept advance or instant payments."
+                    },
+                    {
+                        "q": "Is it possible to trade a watch?",
+                        "a": "Generally, yes. We are happy to prepare an offer for you. Please contact us with details about your watch."
+                    },
+                    {
+                        "q": "Do you accept payment in installments?",
+                        "a": "At the moment we can’t accept payment in installments."
+                    }
+                ]
+            },
+            "watches": {
+                "heading": "Watches",
+                "items": [
+                    {
+                        "q": "What is included in the delivery?",
+                        "a": "The scope of delivery varies. We always clearly lay out what’s included in the product description. The scope of delivery is also shown on the last listing image."
+                    },
+                    {
+                        "q": "Can I see the products in person before buying?",
+                        "a": "We’ll be happy to present our products and answer any questions at our store. Kindly make an appointment. Please note that for watches above 15.000€ an appointment is required."
+                    },
+                    {
+                        "q": "Is it possible to reserve a watch?",
+                        "a": "We’re sorry but we can’t reserve watches for you."
+                    },
+                    {
+                        "q": "How can I be sure about the condition of a watch?",
+                        "a": "The condition of each watch is spelled out in the listing description and shown in up-to-date high resolution product images."
+                    },
+                    {
+                        "q": "Can you verify the authenticity of a watch?",
+                        "a": "We don’t offer authentication of watches that haven’t been purchased from us."
+                    },
+                    {
+                        "q": "Can I take my watch back to you for service and maintenance?",
+                        "a": "We don’t currently offer repair or maintenance."
+                    },
+                    {
+                        "q": "Do you guarantee water resistance or waterproofness?",
+                        "a": "No, water resistance is not part of the warranty."
+                    },
+                    {
+                        "q": "Do you fit watches to small or large wrists?",
+                        "a": "In most cases, our watches are wearable for a wrist size (circumference) of 19cm. For smaller wrists we can shorten the bracelet by taking out links. For larger wrists we can insert additional links if we have them available."
+                    },
+                    {
+                        "q": "What happens if the watch is lost during shipping?",
+                        "a": "If the watch gets lost on the way to you we will fully refund your order."
+                    },
+                    {
+                        "q": "What are your delivery times?",
+                        "a": "For more information about shipping please see our page on Shipping & Payments."
+                    },
+                    {
+                        "q": "Can you ship to a specific date?",
+                        "a": "We will be happy to time your delivery. Please let us know your desired shipping date in advance."
+                    },
+                    {
+                        "q": "What happens if I miss a delivery?",
+                        "a": "Generally the courier will attempt delivery for a second time if the first try was unsuccessful. For watches with a value of up to 25.000€ you can track your delivery using the shipment ID."
+                    }
+                ]
+            },
+            "withdrawalWarranty": {
+                "heading": "Withdrawal and Warranty",
+                "items": [
+                    {
+                        "q": "Can I return the watch?",
+                        "a": "You may exercise your right of withdrawal for orders with shipping for 14 days. We can only accept products in unchanged condition."
+                    },
+                    {
+                        "q": "For how long is the implied warranty valid for my watch?",
+                        "a": "Warranty is valid for one year after purchase."
+                    }
+                ]
+            }
+        }
+    },
+    "vacancies": {
+        "heading": "Job Vacancies",
+        "empty": "At this time, there are no vacancies available."
+    },
+    "imprint": {
+        "heading": "Imprint",
+        "companyLabel": "Arvell",
+        "phoneLabel": "Phone number:",
+        "emailLabel": "E-mail:",
+        "vatIdLabel": "Sales tax identification number:",
+        "representativesLabel": "Authorized representatives:",
+        "odrHeading": "Online Dispute Resolution Notice",
+        "odrText": "The European Commission provides a platform for online dispute resolution (OS) which can be found here. We are neither obliged nor willing to participate in a dispute settlement procedure before a consumer arbitration board.",
+        "note": "Personal/company identity fields (name, address, phone, VAT ID) are intentionally NOT stored as translation strings — pull those from your business config/CMS, not from i18n files."
+    },
+    "legal": {
+        "privacyPolicy": {
+            "heading": "Privacy Policy",
+            "intro": [
+                "Personal data (usually referred to just as “data” below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.",
+                "Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the “GDPR”), “processing” refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.",
+                "The following privacy policy is intended to inform you in particular about the type, scope, purpose, duration, and legal basis for the processing of such data either under our own control or in conjunction with others. We also inform you below about the third-party components we use to optimize our website and improve the user experience which may result in said third parties also processing data they collect and control.",
+                "Our privacy policy is structured as follows:"
+            ],
+            "structureList": ["Information about us as controllers of your data", "The rights of users and data subjects", "Information about the data processing"],
+            "sections": {
+                "controller": {
+                    "heading": "Information about us as controllers of your data",
+                    "text": "The party responsible for this website (the “controller”) for purposes of data protection law is Arvell, represented by its owner. Contact details are listed in the Imprint."
+                },
+                "rights": {
+                    "heading": "The rights of users and data subjects",
+                    "intro": "With regard to the data processing to be described in more detail below, users and data subjects have the right",
+                    "items": [
+                        "to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR);",
+                        "to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR);",
+                        "to the immediate deletion of data concerning them (cf. also Art. 17 GDPR), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR;",
+                        "to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR);",
+                        "to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR)."
+                    ],
+                    "outro": "In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients. Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller’s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible."
+                },
+                "dataProcessing": {
+                    "heading": "Information about the data processing",
+                    "text": "Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below."
+                },
+                "paypal": {
+                    "heading": "Use of PayPal as a payment method",
+                    "paragraphs": [
+                        "If you decide to pay with the online payment service provider PayPal during your order process, your contact data is transmitted to PayPal as part of the order thus triggered. PayPal is an offer of PayPal (Europe) S.à.r.l. & Cie. S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg. PayPal thereby assumes the function of an online payment service provider and a trustee and offers buyer protection services.",
+                        "The personal data transmitted to PayPal is mostly first name, last name, address, telephone number, IP address, e-mail address, or other data, which is required for order processing, as well as data related to the order, such as the number of items, item number, invoice amount and tax percentage, billing information, etc.",
+                        "This transmission is necessary to process your order with the payment method you have selected, in particular to confirm your identity, to administer your payment and the customer relationship. Your data is therefore transmitted to PayPal on the basis of Article 6 para. 1 lit. b GDPR.",
+                        "However, please note: PayPal may transfer the personal data to service providers, to subcontractors or other affiliated companies, to the extent necessary to fulfill the contractual obligations arising from your order or to process the data in the order on your behalf.",
+                        "Depending on the payment method selected via PayPal, e.g., invoice or direct debit, the personal data transmitted to PayPal will be transmitted to credit agencies by PayPal. This transmission is used to check your identity and creditworthiness in relation to the order you have placed. For information on which credit agencies are involved and which data is generally collected, processed, saved and forwarded by PayPal, please refer to PayPal’s data protection statement."
+                    ]
+                },
+                "cookies": {
+                    "heading": "Cookies",
+                    "sessionCookies": {
+                        "heading": "Session cookies",
+                        "paragraphs": [
+                            "We use cookies on our website. Cookies are small text files or other storage technologies stored on your computer by your browser. These cookies process certain specific information about you, such as your browser, location data, or IP address.",
+                            "This processing makes our website more user-friendly, efficient, and secure, allowing us, for example, to display our website in different languages or to offer a shopping cart function.",
+                            "The legal basis for such processing is Art. 6 Para. 1 lit. b) GDPR, insofar as these cookies are used to collect data to initiate or process contractual relationships.",
+                            "If the processing does not serve to initiate or process a contract, our legitimate interest lies in improving the functionality of our website. The legal basis is then Art. 6 Para. 1 lit. f) GDPR.",
+                            "When you close your browser, these session cookies are deleted."
+                        ]
+                    },
+                    "thirdPartyCookies": {
+                        "heading": "Third-party cookies",
+                        "paragraphs": [
+                            "If necessary, our website may also use cookies from companies with whom we cooperate for the purpose of advertising, analyzing, or improving the features of our website.",
+                            "Please refer to the following information for details, in particular for the legal basis and purpose of such third-party collection and processing of data collected through cookies."
+                        ]
+                    },
+                    "disablingCookies": {
+                        "heading": "Disabling cookies",
+                        "paragraphs": [
+                            "You can refuse the use of cookies by changing the settings on your browser. Likewise, you can use the browser to delete cookies that have already been stored. However, the steps and measures required vary, depending on the browser you use. If you have any questions, please use the help function or consult the documentation for your browser or contact its maker for support. Browser settings cannot prevent so-called flash cookies from being set. Instead, you will need to change the setting of your Flash player.",
+                            "If you prevent or restrict the installation of cookies, not all of the functions on our site may be fully usable."
+                        ]
+                    }
+                },
+                "youtube": {
+                    "heading": "Youtube",
+                    "paragraphs": [
+                        "We maintain an online presence on YouTube to present our company and our services and to communicate with customers/prospects. YouTube is a service of Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, a subsidiary of Google LLC, 1600 Amphitheater Parkway, Mountain View, CA 94043 USA.",
+                        "We would like to point out that this might cause user data to be processed outside the European Union, particularly in the United States. This may increase risks for users that, for example, may make subsequent access to the user data more difficult. We also do not have access to this user data. Access is only available to YouTube."
+                    ]
+                },
+                "facebook": {
+                    "heading": "Facebook",
+                    "paragraphs": [
+                        "To advertise our products and services as well as to communicate with interested parties or customers, we have a presence on the Facebook platform.",
+                        "On this social media platform, we are jointly responsible with Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland.",
+                        "We have defined the joint responsibility in an agreement regarding the respective obligations within the meaning of the GDPR.",
+                        "The legal basis for the processing of the resulting and subsequently disclosed personal data is Art. 6 para. 1 lit. f GDPR. Our legitimate interest lies in the analysis, communication, sales, and promotion of our products and services. The legal basis may also be your consent per Art. 6 para. 1 lit. a GDPR. Per Art. 7 para. 3 GDPR, you may revoke this consent with the platform operator at any time with future effect.",
+                        "When accessing our online presence on the Facebook platform, Meta Platforms Ireland Ltd. as the operator of the platform in the EU will process your data (e.g. personal information, IP address, etc.) for statistical information, market research, advertising purposes and the creation of user profiles. If you contact us via Facebook, the personal data you provide at that time will be used to process the request and deleted once we have completely responded to your query, unless there are legal obligations to retain the data.",
+                        "It cannot be excluded that the processing by Meta Platforms Ireland Ltd. will also take place in the United States by Meta Platforms, Inc., 1601 Willow Road, Menlo Park, California 94025."
+                    ]
+                },
+                "instagram": {
+                    "heading": "Instagram",
+                    "paragraphs": [
+                        "To advertise our products and services as well as to communicate with interested parties or customers, we have a presence on the Instagram platform.",
+                        "On this social media platform, we are jointly responsible with Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland.",
+                        "The legal basis for the processing of the resulting and subsequently disclosed personal data is Art. 6 para. 1 lit. f GDPR, and may also be your consent per Art. 6 para. 1 lit. a GDPR, revocable at any time per Art. 7 para. 3 GDPR.",
+                        "When accessing our online presence on the Instagram platform, Meta Platforms Ireland Ltd. as the operator of the platform in the EU will process your data for statistical information, market research, advertising purposes and the creation of user profiles. If you contact us via Instagram, the personal data you provide will be used to process the request and deleted afterward unless legal retention obligations apply.",
+                        "It cannot be excluded that the processing by Meta Platforms Ireland Ltd. will also take place in the United States by Meta Platforms, Inc., 1601 Willow Road, Menlo Park, California 94025."
+                    ]
+                }
+            }
+        },
+        "terms": {
+            "heading": "Terms & Conditions",
+            "indexHeading": "Index",
+            "index": [
+                "Scope",
+                "Offer, acceptance and conclusion of contract",
+                "Right of withdrawal",
+                "Prices and payment conditions",
+                "Shipping and conditions",
+                "Reservation of property rights",
+                "Liability for defects / warranty",
+                "Liability",
+                "Applicable law",
+                "Competent court",
+                "Alternative dispute resolution",
+                "Right of withdrawal from the seller in the event of delayed payment by the customer according to section 4.5",
+                "Identification obligation: Money Laundering Act",
+                "Obligation to inform according to the German Battery Act (BattG)"
+            ],
+            "acceptanceNote": "Your use of the website constitutes your acceptance of the terms and conditions.",
+            "sections": [
+                {
+                    "number": "1",
+                    "heading": "Scope",
+                    "items": [
+                        "These general terms and conditions (below referred to as \"T&C\") apply to all contracts between a consumer or a company (below referred to as customer or buyer) and the seller concerning products and services offered on this website.",
+                        "Consumer: any natural person entering a contract not in the exercise of a trade or profession. Entrepreneur: any natural or legal person or partnership with legal capacity entering a contract in the exercise of a trade or profession.",
+                        "Only the terms and conditions stated here at the time of the agreement apply. The seller does not recognize deviating terms of the customer unless expressly agreed."
+                    ]
+                },
+                {
+                    "number": "2",
+                    "heading": "Offer, acceptance and conclusion of contract",
+                    "items": [
+                        "Every offer made by the seller is non-binding and is to be understood as an invitation to the consumer to provide a counter-offer.",
+                        "When an order is placed, an offer is sent to the seller to conclude a purchase agreement. Acceptance is subject to the availability of the goods.",
+                        "The acceptance of an order is sent via e-mail with the purchase details as well as invoice. This written order confirmation represents the acceptance of the order placed by the customer.",
+                        "The seller reserves the right to cancel or reject an order without being liable for any damages in the following situations: the ordered product is out of stock; the order placed is suspected to be fraudulent; there are errors in the product description, price or images; delivery to the consumer is not possible due to shipping limitations; the customer does not pay the purchase price within the time frame indicated in section 4.5."
+                    ]
+                },
+                {
+                    "number": "3",
+                    "heading": "Right of withdrawal",
+                    "items": [
+                        "If the customer is a consumer, he has a right of withdrawal.",
+                        "Further information on the right of withdrawal can be found in the seller's right of withdrawal policy.",
+                        "The customer will only have to pay for any loss in value if this loss in value is due to handling of the goods not necessary to test the condition, properties and functioning of the goods.",
+                        "The right of withdrawal does not apply to consumers who do not belong to a member state of the European Union at the time the contract is concluded and whose sole place of residence and/or delivery address are outside the European Union at the time the contract is concluded.",
+                        "For consumers who have their habitual residence in a country that does not belong to the European Union (EU) or the European Economic Area (EEA), German law applies excluding the United Nations Convention on Contracts for the International Sale of Goods (CISG) and German consumer protection law as applicable."
+                    ]
+                },
+                {
+                    "number": "4",
+                    "heading": "Prices and payment conditions",
+                    "items": [
+                        "All prices on this website are in euros and include VAT where applicable. If the product is differentially taxed the VAT is not deductible.",
+                        "All payment options are listed in the product description. Payment fees, shipping costs and/or import sales taxes are to be paid by the customer.",
+                        "The seller will only commence dispatch after receipt of the full purchase price and payment of any shipping costs incurred by the customer.",
+                        "In the order confirmation e-mail, the customer obtains the final price including VAT and/or shipping costs. The total price is due upon receipt of the order confirmation e-mail.",
+                        "The customer is obliged to pay the whole price within three days of receiving the order confirmation e-mail. If the customer does not pay within five days, the seller is entitled to cancel the order."
+                    ]
+                },
+                {
+                    "number": "5",
+                    "heading": "Shipping and conditions",
+                    "items": [
+                        "The product is sent to the address provided by the customer. If a mistake has been made and the shipping address needs to be changed, the customer should contact the seller as soon as possible.",
+                        "If the carrier is unable to deliver and the good is sent back to the seller, the customer must pay any further shipping costs unless prevented by a severe impediment.",
+                        "If the customer acts as a consumer, the risk of accidental loss and accidental deterioration of the goods only passes when the goods are handed over to the customer or a person authorized to receive them.",
+                        "Every item can be personally picked up at the product location if specified in the product description.",
+                        "Every item is shipped as soon as possible, usually within 1-3 business days after receipt of payment.",
+                        "In case of transport damage, the customer must contact the seller immediately. Any claims for transport damages not communicated within 1-2 days of receipt are not valid.",
+                        "If the customer is an entrepreneur, the risks associated with the transport lie with the buyer."
+                    ]
+                },
+                {
+                    "number": "6",
+                    "heading": "Reservation of property rights",
+                    "items": [
+                        "For customers: The seller maintains the property rights of every product until the receipt of payment.",
+                        "For entrepreneurs: The seller maintains the property rights of every product until the buyer has fulfilled every requirement of the business relationship."
+                    ]
+                },
+                {
+                    "number": "7",
+                    "heading": "Liability for defects / warranty",
+                    "subsections": [
+                        {
+                            "heading": "7.1 For consumers",
+                            "items": [
+                                "If the purchased item is defective, the legal regulations regarding liability for defects apply.",
+                                "The warranty period of used items is one year starting on the day the item is delivered with exception of the following situations: customer claims for damages and reimbursement of expenses; fraudulent concealment of a defect by the seller.",
+                                "An item will be excluded from warranty in the following situations: the item has not been properly used; the customer has not informed the seller about transport damages within the time frame stated; the customer tries to repair the watch by himself or third party without informing the seller.",
+                                "Excluded from the warranty are waterproofness issues, usual signs of wear (e.g. scratches on the bracelet/case and wear of threads) and watch precision deviations caused by normal wear and tear.",
+                                "The seller is not liable for defects caused by improper handling of the object of purchase by the buyer or third parties."
+                            ]
+                        },
+                        {
+                            "heading": "7.2 For entrepreneurs",
+                            "items": ["If the purchased item is defective, the seller decides about the subsequent procedure.", "Any claim concerning the function of a used item is in principle not valid."]
+                        }
+                    ]
+                },
+                {
+                    "number": "8",
+                    "heading": "Liability",
+                    "intro": "The seller is liable to the customer for all contractual, quasi-contractual and statutory claims for damages as follows:",
+                    "items": [
+                        "The seller is only unlimited liable under the following conditions: damage caused by intent or recklessness of the seller; warranty compromise unless agreed otherwise; obligatory liability as stated in the Product Liability Law.",
+                        "If the seller negligently violates an essential contractual obligation, liability is limited to foreseeable damage typical of the contract unless liability is unlimited by law.",
+                        "Apart from that, liability on the part of the seller is excluded, including for vicarious agents and legal representatives."
+                    ]
+                },
+                {
+                    "number": "9",
+                    "heading": "Applicable law",
+                    "text": "These T&C are applicable in accordance with German law excluding the laws governing the international purchase of movable goods. For consumers, this choice of law applies insofar as the protection granted is not withdrawn by mandatory provisions of the law of the state in which the consumer has his habitual residence. The CISG does not apply."
+                },
+                {
+                    "number": "10",
+                    "heading": "Competent court",
+                    "text": "If the customer acts as a merchant or legal entity under public law, the exclusive place of jurisdiction for all disputes arising from this contract is the place of business of the seller in the Federal Republic of Germany. If the customer is based outside the territory of the Federal Republic of Germany, the seller's place of business is the exclusive place of jurisdiction for all disputes."
+                },
+                {
+                    "number": "11",
+                    "heading": "Alternative dispute resolution",
+                    "items": [
+                        "The EU Commission provides an online platform to solve disputes. This platform serves as a contact point for out-of-court settlement of disputes arising from online purchase or service contracts.",
+                        "The seller is not obliged to participate in the dispute resolution procedure."
+                    ]
+                },
+                {
+                    "number": "12",
+                    "heading": "Right of withdrawal from the seller in the event of delayed payment by the customer according to section 4.5",
+                    "items": [
+                        "If the customer does not meet his payment obligations within the period specified under section 4.5, the seller is entitled to withdraw from the contract without prior notice. Any partial payments made by the customer will be returned within a maximum of 21 days.",
+                        "The declaration of withdrawal is made in writing by e-mail."
+                    ]
+                },
+                {
+                    "number": "13",
+                    "heading": "Identification Obligation: Money Laundering Act",
+                    "items": [
+                        "For cash transactions over 10,000 euros there is an identification obligation according to the Money Laundering Act.",
+                        "For consumers: To verify the identity of the customer an internationally accepted valid identity document is needed (e.g. passport).",
+                        "For entrepreneurs: To verify the identity of an entrepreneur an excerpt from the commercial or cooperatives register may be requested."
+                    ]
+                },
+                {
+                    "number": "14",
+                    "heading": "Obligation to Inform according to the German Battery Act (BattG)",
+                    "text": "Discharged batteries are special waste and should not be disposed of in domestic waste. Every customer can send us old batteries and we will correctly dispose of them. Pollutant batteries containing toxic substances are marked with the sign and thresholds:",
+                    "items": ["\"Cd\" Battery contains more than 0.002% cadmium", "\"Hg\" Battery contains more than 0.0005% mercury", "\"Pb\" Battery contains more than 0.004% lead"]
+                }
+            ]
+        },
+        "withdrawal": {
+            "heading": "Right of Withdrawal",
+            "intro": "Right of withdrawal for customers of the online webshop.",
+            "rightHeading": "Right of withdrawal",
+            "rightItems": [
+                "If the customer is a consumer (as defined in our T&C) and has entered a distance agreement or an agreement as stated in section 3.2 BGB with the seller, the following applies:",
+                "The consumer has 14 days from product receipt date to withdraw from the agreement without giving any reason.",
+                "To exercise the right of withdrawal the consumer must inform us in writing with a clear declaration of withdrawal by e-mail or by sending us a letter to our business address. To meet the deadline it is sufficient to submit the clear declaration of withdrawal within the cancellation period."
+            ],
+            "consequencesHeading": "Consequences of withdrawal",
+            "consequencesItems": [
+                "If you revoke this contract, we shall reimburse you for all payments we have received from you, including delivery costs (except additional costs resulting from choosing a type of delivery other than the least expensive standard delivery offered by us), without undue delay and in any event not later than fourteen days from the day on which we receive the notification of your withdrawal.",
+                "You must return the goods to us immediately and in any event no later than fourteen days from the day on which you notify us of the withdrawal. You will only have to pay for any loss in value of the goods that is due to handling other than what is necessary to establish the nature, characteristics and functioning of the goods."
+            ],
+            "formHeading": "Withdrawal form",
+            "formNote": "(If you want to withdraw from the contract, please complete and return this form.)",
+            "form": {
+                "orderNumber": "Order number",
+                "email": "Email",
+                "firstName": "First name",
+                "lastName": "Last name",
+                "comment": "Comment (optional)",
+                "submit": "Confirm withdrawal"
+            }
+        },
+        "disclaimer": {
+            "heading": "Disclaimer",
+            "paragraphs": [
+                "The seller is committed to keeping this website up to date and accurate. Should you nevertheless encounter anything that is incorrect or out of date, we would appreciate it if you could let us know. Please indicate where on the website you read the information. We will then look at this as soon as possible.",
+                "We are not liable for loss as a result of inaccuracies or incompleteness, nor for loss resulting from problems caused by or inherent to the dissemination of information through the internet, such as disruptions or interruptions. When using web forms, we strive to limit the number of required fields to a minimum. For any loss suffered as a result of the use of data, advice or ideas provided by or on behalf of the seller via this website, the seller accepts no liability.",
+                "The use of the website and all its components (including forums) is subject to terms of use. The mere use of this website implies the knowledge and the acceptance of these terms of use.",
+                "All intellectual property rights to content on this website are vested in the seller.",
+                "Copying, disseminating and any other use of these materials is not permitted without the written permission of the seller, except and only insofar as otherwise stipulated in regulations of mandatory law (such as the right to quote), unless specific content dictates otherwise.",
+                "If you have any questions or problems with the accessibility of the website, please do not hesitate to contact us."
+            ]
+        },
+        "cookiePolicy": {
+            "heading": "Cookie Policy",
+            "lastUpdatedNote": "This Cookie Policy was last updated on {date} and applies to citizens and legal permanent residents of the European Economic Area and Switzerland.",
+            "introduction": {
+                "heading": "Introduction",
+                "text": "Our website (hereinafter: \"the website\") uses cookies and other related technologies (for convenience all technologies are referred to as \"cookies\"). Cookies are also placed by third parties we have engaged. In the document below we inform you about the use of cookies on our website."
+            },
+            "whatAreCookies": {
+                "heading": "What are cookies?",
+                "text": "A cookie is a small simple file that is sent along with pages of this website and stored by your browser on the hard drive of your computer or another device. The information stored therein may be returned to our servers or to the servers of the relevant third parties during a subsequent visit."
+            },
+            "whatAreScripts": {
+                "heading": "What are scripts?",
+                "text": "A script is a piece of program code that is used to make our website function properly and interactively. This code is executed on our server or on your device."
+            },
+            "whatIsAWebBeacon": {
+                "heading": "What is a web beacon?",
+                "text": "A web beacon (or a pixel tag) is a small, invisible piece of text or image on a website that is used to monitor traffic on a website. In order to do this, various data about you is stored using web beacons."
+            },
+            "cookieTypes": {
+                "heading": "Cookies",
+                "technical": {
+                    "heading": "Technical or functional cookies",
+                    "text": "Some cookies ensure that certain parts of the website work properly and that your user preferences remain known. By placing functional cookies, we make it easier for you to visit our website. This way, you do not need to repeatedly enter the same information when visiting our website and, for example, the items remain in your shopping cart until you have paid. We may place these cookies without your consent."
+                },
+                "statistics": {
+                    "heading": "Statistics cookies",
+                    "text": "We use statistics cookies to optimize the website experience for our users. With these statistics cookies we get insights in the usage of our website. We ask your permission to place statistics cookies."
+                },
+                "marketing": {
+                    "heading": "Marketing/Tracking cookies",
+                    "text": "Marketing/Tracking cookies are cookies or any other form of local storage, used to create user profiles to display advertising or to track the user on this website or across several websites for similar marketing purposes."
+                }
+            },
+            "consent": {
+                "heading": "Consent",
+                "text": "When you visit our website for the first time, we will show you a pop-up with an explanation about cookies. As soon as you click on \"Save preferences\", you consent to us using the categories of cookies and plug-ins you selected in the pop-up, as described in this Cookie Policy. You can disable the use of cookies via your browser, but please note that our website may no longer work properly."
+            },
+            "consentSettings": {
+                "heading": "Manage your consent settings",
+                "functional": {
+                    "heading": "Functional",
+                    "text": "The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network."
+                },
+                "statistics": {
+                    "heading": "Statistics",
+                    "text": "The technical storage or access that is used exclusively for statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you."
+                },
+                "marketing": {
+                    "heading": "Marketing",
+                    "text": "The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes."
+                }
+            },
+            "managingCookies": {
+                "heading": "Enabling/disabling and deleting cookies",
+                "text": "You can use your internet browser to automatically or manually delete cookies. You can also specify that certain cookies may not be placed. Another option is to change the settings of your internet browser so that you receive a message each time a cookie is placed. For more information about these options, please refer to the instructions in the Help section of your browser. Please note that our website may not work properly if all cookies are disabled. If you do delete the cookies in your browser, they will be placed again after your consent when you visit our website again."
+            },
+            "yourRights": {
+                "heading": "Your rights with respect to personal data",
+                "intro": "You have the following rights with respect to your personal data:",
+                "items": [
+                    "You have the right to know why your personal data is needed, what will happen to it, and how long it will be retained for.",
+                    "Right of access: You have the right to access your personal data that is known to us.",
+                    "Right to rectification: you have the right to supplement, correct, have deleted or blocked your personal data whenever you wish.",
+                    "If you give us your consent to process your data, you have the right to revoke that consent and to have your personal data deleted.",
+                    "Right to transfer your data: you have the right to request all your personal data from the controller and transfer it in its entirety to another controller.",
+                    "Right to object: you may object to the processing of your data. We comply with this, unless there are justified grounds for processing."
+                ]
+            },
+            "contact": {
+                "heading": "Contact details",
+                "intro": "For questions and/or comments about our Cookie Policy and this statement, please contact us using the contact details listed in our Imprint."
+            },
+            "placedCookies": {
+                "heading": "Placed cookies",
+                "text": "Our website may place technical, functional, statistics, and marketing cookies depending on your consent and the features you use. Technical and functional cookies may be necessary for core website functions such as navigation, language preferences, and shopping cart functionality. Statistics and marketing cookies are only placed where the applicable consent has been given. You can manage or withdraw your cookie preferences at any time through your browser settings or the cookie consent settings on our website."
+            },
+            "syncNote": "This Cookie Policy was synchronized with cookiedatabase.org on {date}."
+        }
+    },
+    "cart": {
+        "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against CartContext/cart components before shipping.",
+        "heading": "Shopping Cart",
+        "summary": "Summary",
+        "empty": "Your cart is empty.",
+        "emptyCta": "Continue shopping",
+        "viewCart": "View All",
+        "itemLabel": "Item",
+        "priceLabel": "Price",
+        "quantityLabel": "Quantity",
+        "subtotal": "Subtotal",
+        "total": "Total",
+        "removeItem": "Remove",
+        "checkoutCta": "Proceed to checkout",
+        "choose_shipping_country": "Choose shipping country",
+        "shipping_to": "Shipping to {country}",
+        "shipping_costs": "Shipping costs",
+        "shipping": "Shipping",
+        "localPickup": "Local pickup",
+        "moreAbout": "More about",
+        "continueShopping": "Continue shopping"
+    },
+    "favorites": {
+        "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
+        "heading": "Favorites",
+        "empty": "You haven’t saved any favorites yet.",
+        "emptyCta": "Browse watches",
+        "removeFromFavorites": "Remove from favorites",
+        "addToFavorites": "Add to favorites"
+    },
+    "checkout": {
+        "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your checkout/payment components before shipping.",
+        "heading": "Checkout",
+        "shippingHeading": "Shipping details",
+        "paymentHeading": "Payment method",
+        "orderSummaryHeading": "Order summary",
+        "placeOrder": "Place order",
+        "subtotal": "Subtotal",
+        "billing": "billing address",
+        "shippingCost": "Shipping",
+        "watchSpare": "Watch / Spare",
+        "qty": "Qty",
+        "price": "Price",
+        "taxes": "Taxes",
+        "fee": "Fee",
+        "agreement": "By completing your purchase, you agree to our Terms of Service and Privacy Policy.",
+        "payment": "Payment",
+        "missingBilling": "Billing details is missing",
+        "total": "Total",
+        "paypalNote": "Note: since this is a demo the use",
+        "email": "Email",
+        "password": "Password",
+        "paymentMethod": "Payment Method",
+        "continue": "Continue",
+        "bankTransfer": "Bank Transfer",
+        "card": "Credit/Debit Card",
+        "cardNumber": "Card Number",
+        "expirationDate": "Expiration Date",
+        "securityCode": "Security Code",
+        "bankNote": "Make your payment directly into our bank account. Please include the order Number, brand name and model of the item as the payment reference. Additionally, please note that no item will be shipped before the funds have cleared in our account.",
+        "orderDate": "Order Date",
+        "orderTotal": "Order Total",
+        "orderNumber": "Order Number"
+    },
+    "product": {
+        "reference": "Reference",
+        "stock": "Stock",
+        "available": "Available",
+        "notAvailable": "Not available",
+        "scopeOfDelivery": "Scope of delivery",
+        "shippingText": "Enjoy contactless, risk-free shipping with our long-time partners DHL, UPS, DHL Express and Prosegur.",
+        "learnMoreShipping": "Learn more about shipping costs and times",
+        "model": "Model",
+        "dial": "Dial",
+        "here": "here",
+        "findInStore": "Find in store",
+        "bookAppointment": "Book an appointment",
+        "consignmentBeforeLink": "Do you wish to trade in one of your watches? Please contact us via the",
+        "consignmentAfterLink": "page with the details about your watch and we will make you an offer."
+    },
+    "brands": {
+        "rolex": {
+            "sections": [
+                {
+                    "heading": "Founding and Early Years",
+                    "text": "Rolex, the renowned luxury watchmaker, was founded in 1905 by Hans Wilsdorf and Alfred Davis in London, England. Initially, the company was named “Wilsdorf and Davis,” and it focused on distributing timepieces. Wilsdorf had a vision to create wristwatches that were both precise and elegant, which was a significant challenge at a time when pocket watches were the norm."
+                },
+                {
+                    "heading": "Move to Switzerland and Birth of the Rolex Brand",
+                    "text": "In 1908, the Rolex brand was registered, and the company name was officially changed to Rolex. Wilsdorf chose the name because it was short, easy to pronounce in any language, and could fit neatly on the dial of a watch. To further enhance the reputation of Rolex for precision, the company moved to Geneva, Switzerland, in 1919."
+                }
+            ]
+        },
+        "audemars_piguet": {
+            "sections": [
+                {
+                    "heading": "Origins in the Vallée de Joux",
+                    "text": "Audemars Piguet was founded in 1875 by Jules Louis Audemars and Edward Auguste Piguet in the village of Le Brassus, Switzerland. The brand quickly established itself as a master of complex watch mechanics, specializing in minute repeaters, perpetual calendars, and chronographs."
+                },
+                {
+                    "heading": "The Royal Oak Revolution",
+                    "text": "In 1972, Audemars Piguet disrupted the industry by introducing the Royal Oak. Designed by Gérald Genta, it was the world's first luxury sports watch made of stainless steel, featuring a distinctive octagonal bezel with exposed screws, cementing the brand's place in modern horology."
+                }
+            ]
+        },
+        "blancpain": {
+            "sections": [
+                {
+                    "heading": "The Oldest Watchmaking Brand",
+                    "text": "Founded in 1735 by Jehan-Jacques Blancpain in Villeret, Switzerland, Blancpain holds the title of the oldest registered watchmaking brand in the world. For centuries, the company has adhered strictly to traditional mechanical watchmaking, famously declaring that it has never made a quartz watch and never will."
+                },
+                {
+                    "heading": "The Fifty Fathoms",
+                    "text": "In 1953, Blancpain released the Fifty Fathoms, largely considered the first modern dive watch. Created in collaboration with the French Navy's elite combat divers, it established the blueprint for dive watches with its unidirectional rotating bezel and exceptional water resistance."
+                }
+            ]
+        },
+        "breitling": {
+            "sections": [
+                {
+                    "heading": "Pioneers of the Chronograph",
+                    "text": "Founded in 1884 by Léon Breitling in Saint-Imier, Switzerland, Breitling initially focused on precision chronographs for sports, science, and industry. In 1915, the brand invented the first independent chronograph pusher, a crucial development in modern watchmaking."
+                },
+                {
+                    "heading": "Aviation Heritage",
+                    "text": "Breitling is intrinsically linked to aviation. In 1952, they introduced the Navitimer, featuring a complex circular slide rule bezel designed to help pilots perform critical in-flight calculations, making it the ultimate tool watch for aviators."
+                }
+            ]
+        },
+        "cartier": {
+            "sections": [
+                {
+                    "heading": "The Jeweler of Kings",
+                    "text": "Founded in Paris in 1847 by Louis-François Cartier, the Maison initially built its reputation creating exquisite jewelry for royalty. It wasn't long before Cartier brought its unparalleled design sensibilities into the world of horology, merging elegance with function."
+                },
+                {
+                    "heading": "Birth of the Men's Wristwatch",
+                    "text": "In 1904, Louis Cartier designed a flat wristwatch with a distinctive square bezel for his friend, the pioneering aviator Alberto Santos-Dumont. The \"Santos\" is widely recognized as the first purpose-designed men's wristwatch, preceding iconic designs like the Tank, which debuted in 1917."
+                }
+            ]
+        },
+        "chopard": {
+            "sections": [
+                {
+                    "heading": "Swiss Precision Meets High Jewelry",
+                    "text": "Founded in 1860 by Louis-Ulysse Chopard in Sonvilier, Switzerland, the company began by crafting highly accurate pocket watches and chronometers. Chopard quickly gained fame for supplying timepieces to the Swiss Railway and Tsar Nicholas II of Russia."
+                },
+                {
+                    "heading": "The Happy Diamonds and L.U.C",
+                    "text": "Acquired by the Scheufele family in 1963, Chopard expanded into fine jewelry, famously launching the \"Happy Diamonds\" collection. In 1996, the brand returned to its haute horlogerie roots by establishing the Chopard Manufacture and introducing the critically acclaimed L.U.C mechanical movements."
+                }
+            ]
+        },
+        "chronoswiss": {
+            "sections": [
+                {
+                    "heading": "A Modern Renaissance",
+                    "text": "Founded in 1983 by Gerd-Rüdiger Lang in Munich, Germany (later relocating to Lucerne, Switzerland), Chronoswiss was established during the height of the Quartz Crisis. Lang's vision was a defiant return to the artistry of mechanical watchmaking when the industry was pivoting to battery power."
+                },
+                {
+                    "heading": "The Regulator Aesthetic",
+                    "text": "Chronoswiss is highly recognized for reviving the \"Regulator\" dial layout, where hours, minutes, and seconds are displayed on separate axes. Their timepieces are easily identifiable by their signature onion crowns, coined-edge bezels, and complex guilloché dials."
+                }
+            ]
+        },
+        "corum": {
+            "sections": [
+                {
+                    "heading": "Avant-Garde Design in La Chaux-de-Fonds",
+                    "text": "Founded in 1955 by Gaston Ries and René Bannwart, Corum quickly established a reputation for highly creative and unconventional watch designs. Their emblem, an upright key, symbolizes the brand's drive to unlock new horological mysteries."
+                },
+                {
+                    "heading": "Iconic Collections",
+                    "text": "Corum is best known for the \"Golden Bridge,\" introduced in 1980, featuring a spectacular linear movement suspended in a transparent sapphire case. The brand is also famous for the \"Admiral's Cup,\" recognized by its twelve-sided case and nautical pennants on the dial."
+                }
+            ]
+        },
+        "frank_muller": {
+            "sections": [
+                {
+                    "heading": "The Master of Complications",
+                    "text": "Founded in Geneva in 1991 by watchmaker Franck Muller and case-maker Vartan Sirmakes, the brand quickly soared to prominence. Muller's exceptional talent for creating complex movements earned him the title \"Master of Complications,\" releasing world premieres with unprecedented technical mechanisms."
+                },
+                {
+                    "heading": "The Cintrée Curvex",
+                    "text": "Beyond the complex mechanics, the brand is defined by its iconic Cintrée Curvex case—a distinctive tonneau (barrel) shape with dramatic curves. Combined with oversized, stylized numerals, Franck Muller watches offer a bold, instantly recognizable aesthetic."
+                }
+            ]
+        },
+        "girard_perregaux": {
+            "sections": [
+                {
+                    "heading": "Centuries of Innovation",
+                    "text": "Tracing its roots back to 1791 with watchmaker Jean-François Bautte, and officially formed in 1852 by Constant Girard, Girard-Perregaux is one of the oldest true manufactures in Switzerland. The brand has a long history of developing their movements entirely in-house."
+                },
+                {
+                    "heading": "The Tourbillon with Three Gold Bridges",
+                    "text": "The brand's most legendary creation is the Tourbillon with Three Gold Bridges, a masterpiece introduced as a pocket watch in the 1860s that won a gold medal at the 1889 Paris Universal Exhibition. It elevated the movement's bridge from a functional component into a celebrated design element."
+                }
+            ]
+        },
+        "glashütte_original": {
+            "sections": [
+                {
+                    "heading": "German Watchmaking Heritage",
+                    "text": "Glashütte Original carries the torch of traditional German watchmaking, originating in the town of Glashütte in 1845. After World War II and the division of Germany, the town's watchmaking enterprises were consolidated into a state-owned entity known as GUB."
+                },
+                {
+                    "heading": "Rebirth and Fine Finishing",
+                    "text": "Following German reunification in 1990, the company was privatized and rebranded as Glashütte Original. Today, it is revered for its in-house manufacturing, robust designs, and traditional Saxon finishings, such as the three-quarter plate, swan-neck fine adjustment, and Glashütte ribbing."
+                }
+            ]
+        },
+        "grand_seiko": {
+            "sections": [
+                {
+                    "heading": "The Pursuit of the Ideal Watch",
+                    "text": "Created in 1960 by a dedicated team at Seiko, Grand Seiko was born from a desire to build the \"ideal\" watch—one that excelled in precision, durability, and beauty. The brand challenged the dominance of Swiss chronometry by winning prestigious observatory trials in the late 1960s."
+                },
+                {
+                    "heading": "Spring Drive and Nature-Inspired Dials",
+                    "text": "Grand Seiko is famous for its Zaratsu polishing, creating distortion-free mirror finishes. They also introduced the revolutionary Spring Drive movement, combining mechanical force with an electromagnetic brake for unparalleled accuracy, often paired with stunning dials inspired by the Japanese landscape."
+                }
+            ]
+        },
+        "hublot": {
+            "sections": [
+                {
+                    "heading": "The Art of Fusion",
+                    "text": "Founded in 1980 by Italian Carlo Crocco, Hublot shocked the traditional watchmaking world by being the first brand to pair a precious metal case (gold) with a natural rubber strap. This daring combination birthed the brand's core philosophy: \"The Art of Fusion.\""
+                },
+                {
+                    "heading": "The Big Bang Era",
+                    "text": "Under the leadership of Jean-Claude Biver in 2005, Hublot released the \"Big Bang,\" a massively successful chronograph that took the fusion concept to the extreme. The brand continues to innovate with proprietary materials like Magic Gold (scratch-resistant gold) and vibrant colored sapphires."
+                }
+            ]
+        },
+        "iwc": {
+            "sections": [
+                {
+                    "heading": "American Engineering, Swiss Craftsmanship",
+                    "text": "The International Watch Company (IWC) was founded in Schaffhausen in 1868 by American engineer Florentine Ariosto Jones. His goal was to combine advanced American manufacturing techniques with the exceptional skill of Swiss craftsmen to produce high-quality pocket watch movements."
+                },
+                {
+                    "heading": "Masters of the Skies and Seas",
+                    "text": "IWC is universally celebrated for its robust tool watches. Their Pilot's Watches line, dating back to the 1930s, defined the aviation aesthetic, while the elegant Portugieser and the rugged Aquatimer collections showcase the brand's mastery over sophisticated complications and durable engineering."
+                }
+            ]
+        },
+        "jaeger_lecoultre": {
+            "sections": [
+                {
+                    "heading": "The Watchmaker of Watchmakers",
+                    "text": "Founded in 1833 by Antoine LeCoultre in the Vallée de Joux, Jaeger-LeCoultre is frequently referred to as the \"watchmaker's watchmaker.\" Over its history, the manufacture has created over 1,200 different calibers and supplied movements to brands like Patek Philippe, Audemars Piguet, and Vacheron Constantin."
+                },
+                {
+                    "heading": "The Iconic Reverso",
+                    "text": "In 1931, the brand introduced the Reverso, a watch born from a request by British army officers in India who needed a timepiece that could survive polo matches. The clever reversible case protected the crystal and became an enduring symbol of Art Deco design."
+                }
+            ]
+        },
+        "junghans": {
+            "sections": [
+                {
+                    "heading": "The Black Forest Giant",
+                    "text": "Founded in 1861 by Erhard Junghans in Schramberg, Germany, Junghans grew rapidly to become the largest clock manufacturer in the world by the early 20th century. The brand has a deep history of producing accessible, high-quality timepieces."
+                },
+                {
+                    "heading": "Bauhaus and Radio Control",
+                    "text": "Junghans is synonymous with minimalist Bauhaus design, heavily influenced by their collaboration with artist and architect Max Bill in the 1950s. Furthermore, they pioneered modern timekeeping by releasing the Mega 1 in 1990, the world's first radio-controlled wristwatch."
+                }
+            ]
+        },
+        "nomos": {
+            "sections": [
+                {
+                    "heading": "Modern Glashütte Minimalism",
+                    "text": "Founded by Roland Schwertner in 1990, just months after the fall of the Berlin Wall, NOMOS Glashütte brought a fresh, modern perspective to the historic German watchmaking town. The brand is strictly dedicated to mechanical watchmaking and builds its calibers in-house."
+                },
+                {
+                    "heading": "Bauhaus Inspiration",
+                    "text": "NOMOS is celebrated for its award-winning, minimalist aesthetics heavily inspired by the Bauhaus movement and the Deutscher Werkbund. Models like the Tangente and Orion have become modern classics, characterized by clean typography, slender hands, and slim profiles."
+                }
+            ]
+        },
+        "omega": {
+            "sections": [
+                {
+                    "heading": "A Legacy of Precision",
+                    "text": "Founded in 1848 by Louis Brandt in La Chaux-de-Fonds, Omega has been at the forefront of horological precision for over a century. They have been the Official Timekeeper of the Olympic Games since 1932 and pioneered the revolutionary Co-Axial escapement in modern watchmaking."
+                },
+                {
+                    "heading": "To the Moon and the Deep Sea",
+                    "text": "Omega's historical significance is unmatched. The Speedmaster Professional famously became the first watch worn on the moon in 1969. Meanwhile, the Seamaster collection has been the watch of choice for deep-sea explorers, military divers, and, famously, James Bond."
+                }
+            ]
+        },
+        "panerai": {
+            "sections": [
+                {
+                    "heading": "Florentine Roots and Naval History",
+                    "text": "Founded in Florence, Italy in 1860 by Giovanni Panerai, the company started as a watch shop and school. Panerai eventually became the official supplier of precision instruments to the Royal Italian Navy, specializing in highly legible, water-resistant watches for frogmen."
+                },
+                {
+                    "heading": "Radiomir and Luminor",
+                    "text": "Panerai is known for its oversized cushion cases and distinctive crown guards. The Radiomir (using a radium-based powder for luminosity) and later the Luminor (using a safer tritium-based compound) defined the brand's rugged, tactical aesthetic that gained a massive civilian cult following in the 1990s."
+                }
+            ]
+        },
+        "patek_philippe": {
+            "sections": [
+                {
+                    "heading": "The Pinnacle of Haute Horlogerie",
+                    "text": "Established in 1839 in Geneva by Antoine Norbert de Patek and François Czapek (later joined by Jean Adrien Philippe), Patek Philippe represents the zenith of traditional Swiss watchmaking. The family-owned manufacture is considered one of the prestigious \"Holy Trinity\" of watch brands."
+                },
+                {
+                    "heading": "Unrivaled Elegance and Complexity",
+                    "text": "From the elegant Calatrava dress watch to the sporty Nautilus designed by Gérald Genta, Patek Philippe timepieces are highly coveted. The brand is renowned for creating some of the most complicated mechanical watches in the world, embodying the motto: \"You never actually own a Patek Philippe. You merely look after it for the next generation.\""
+                }
+            ]
+        },
+        "piaget": {
+            "sections": [
+                {
+                    "heading": "Masters of the Ultra-Thin",
+                    "text": "Founded in 1874 by Georges Edouard Piaget in La Côte-aux-Fées, the company initially focused entirely on the design and manufacture of highly precise pocket watch movements for other prestigious brands before registering its own name in 1943."
+                },
+                {
+                    "heading": "The Altiplano Legacy",
+                    "text": "Piaget is world-renowned for its mastery of ultra-thin watchmaking. In 1957, they introduced the legendary Calibre 9P, a hand-wound movement just 2mm thick, which paved the way for the Altiplano collection—a benchmark for elegant, razor-thin dress watches."
+                }
+            ]
+        },
+        "sinn": {
+            "sections": [
+                {
+                    "heading": "Purpose-Built Tool Watches",
+                    "text": "Founded in 1961 by flight instructor and pilot Helmut Sinn in Frankfurt, Germany, Sinn Spezialuhren began by manufacturing navigational clocks and pilot chronographs. The brand prioritizes ultimate functionality, extreme durability, and exceptional legibility over decorative embellishments."
+                },
+                {
+                    "heading": "Material Innovation",
+                    "text": "Sinn is highly respected among professionals for pushing the boundaries of watch technology. They incorporate unique innovations such as cases made from German submarine steel, TEGIMENT scratch-resistance technology, and Ar-Dehumidifying concepts to prevent crystal fogging in extreme environments."
+                }
+            ]
+        },
+        "tag_heuer": {
+            "sections": [
+                {
+                    "heading": "Motorsport Heritage",
+                    "text": "Founded in 1860 by Edouard Heuer in St-Imier, Switzerland, the brand (originally just \"Heuer\") became heavily intertwined with competitive sports and automobile racing. Heuer patented the oscillating pinion in 1887, a major advancement in mechanical chronographs."
+                },
+                {
+                    "heading": "Carrera and Monaco",
+                    "text": "TAG Heuer’s legacy is defined by its iconic racing chronographs. The Carrera, launched in 1963, provided clean, legible timekeeping for drivers. In 1969, the brand released the Monaco, instantly recognizable by its square case and worn by Steve McQueen in the film \"Le Mans.\""
+                }
+            ]
+        },
+        "tudor": {
+            "sections": [
+                {
+                    "heading": "The Shield of Rolex",
+                    "text": "Tudor was established in 1926 by Hans Wilsdorf, the founder of Rolex. Wilsdorf's vision was to create a watch that offered the legendary dependability and waterproof characteristics of a Rolex but at a more accessible price point, initially achieved by using off-the-shelf mechanical movements."
+                },
+                {
+                    "heading": "Born to Dare",
+                    "text": "Over the decades, Tudor developed its own distinct identity, equipping military dive units like the French Navy (Marine Nationale). Today, Tudor is celebrated for its vintage-inspired Black Bay and Pelagos collections, now boasting high-performance in-house calibers."
+                }
+            ]
+        },
+        "van_cleef_and_arpels": {
+            "sections": [
+                {
+                    "heading": "High Jewelry and Romance",
+                    "text": "Founded in 1896 by Alfred Van Cleef and his father-in-law Salomon Arpels in Paris, the Maison is fundamentally celebrated for its spectacular high jewelry. Their foray into watchmaking brings that same spirit of enchantment, craftsmanship, and storytelling to the wrist."
+                },
+                {
+                    "heading": "Poetic Complications",
+                    "text": "Rather than focusing solely on traditional timekeeping precision, Van Cleef & Arpels is famous for its \"Poetic Complications.\" These watches utilize complex retrograde movements and mechanical automation to tell time through moving fairies, planets, and lovers meeting on a bridge."
+                }
+            ]
+        },
+        "zenith": {
+            "sections": [
+                {
+                    "heading": "The First Integrated Swiss Manufacture",
+                    "text": "Founded in 1865 by Georges Favre-Jacot in Le Locle, Switzerland, Zenith revolutionized the industry by bringing all watchmaking professions under one roof. This visionary approach created one of the very first true integrated watch manufactures in Swiss history, allowing for unprecedented quality control."
+                },
+                {
+                    "heading": "The Legendary El Primero",
+                    "text": "In 1969, Zenith changed horology forever by introducing the El Primero, widely regarded as the world's first automatic chronograph movement. Beating at a high frequency of 36,000 vibrations per hour, it allowed for time measurement to the nearest 1/10th of a second and remains one of the most famous calibers ever made."
+                }
+            ]
+        }
+    },
+
+    "note": {
+        "title": "Your Instagram already brings the buyer.",
+        "heading": "Give them a place to browse your current stock, open a specific watch, and enquire without starting the conversation from scratch.",
+        "link": "See what this could look like for your store"
+    },
+    "why": {
+        "title": "Why a dedicated storefront?",
+        "hero": {
+            "eyebrow": "Instagram → Storefront → Enquiry",
+            "title": "Your Instagram gets the attention.<br></br><span>Give buyers somewhere to go next.</span>",
+            "description": "This isn't about replacing Instagram. It's about giving the people who already discover your watches a proper place to browse the collection, open a specific piece, and contact you.",
+            "seeDifference": "See the difference",
+            "openStorefront": "Open the storefront"
+        },
+        "gap": {
+            "eyebrow": "01 / The gap",
+            "title": "Instagram is excellent at discovery.<br></br><span>It isn't a catalogue.</span>",
+            "description": "A buyer can find a watch on Instagram and still have nowhere to browse your current stock, compare pieces, read the details, or submit a structured enquiry.",
+            "instagram": {
+                "title": "Instagram / DM",
+                "label": "Discovery",
+                "items": ["Buyer sees a watch in a post or story.", "They ask what else you have.", "You send photos, prices and details manually.", "Booking or enquiry stays inside the conversation."]
+            },
+            "storefront": {
+                "title": "Dedicated storefront",
+                "label": "Owned",
+                "items": [
+                    "Buyer can browse the current collection themselves.",
+                    "Every watch can have its own page and details.",
+                    "You can send one link instead of a stack of photos.",
+                    "Enquiries and appointment requests have a clear destination."
+                ]
+            },
+            "footnote": "The point isn't \"having a website.\" The point is removing the gap between attention and action."
+        },
+        "buyer": {
+            "eyebrow": "02 / For the buyer",
+            "title": "The buyer gets answers<br></br><span>before sending the first DM.</span>",
+            "steps": [
+                {
+                    "number": "1",
+                    "title": "Browse",
+                    "description": "See the watches you currently have available instead of asking what's in stock."
+                },
+                {
+                    "number": "2",
+                    "title": "Inspect",
+                    "description": "Open a piece and see the photos, price and information you choose to publish."
+                },
+                {
+                    "number": "3",
+                    "title": "Choose",
+                    "description": "The buyer can arrive at your enquiry page already knowing which watch they want to ask about."
+                },
+                {
+                    "number": "4",
+                    "title": "Contact",
+                    "description": "A structured enquiry or appointment request gives the conversation a clear starting point."
+                }
+            ]
+        },
+        "dealer": {
+            "eyebrow": "03 / For the dealer",
+            "title": "A better link to send.<br></br><span>A cleaner way to handle interest.</span>",
+            "benefits": [
+                {
+                    "title": "One link for stock",
+                    "description": "Instead of sending screenshots or telling someone to scroll through Instagram, send them to one place where the collection is already organized."
+                },
+                {
+                    "title": "One page per watch",
+                    "description": "When a buyer asks about a reference, you can send the actual watch page with the information and photography you want them to see."
+                },
+                {
+                    "title": "Less repetitive messaging",
+                    "description": "The storefront handles the basic browsing and product information first, so your conversation can start further down the funnel."
+                },
+                {
+                    "title": "You control the stock",
+                    "description": "Add, edit and remove pieces from the dashboard instead of relying on a developer every time your inventory changes."
+                }
+            ]
+        },
+        "role": {
+            "eyebrow": "04 / The role",
+            "title": "Keep Instagram.<br></br><span>Give it a destination.</span>",
+            "description": "You don't need to move your audience away from Instagram. Keep posting there. Keep using DMs, WhatsApp and phone calls. The storefront simply becomes the place people can go when they want to actually browse the dealership.",
+            "existingFlowTitle": "Existing flow",
+            "expandedFlowTitle": "Expanded flow",
+            "existingFlow": "Instagram → DM",
+            "expandedFlow": "Instagram → Storefront → Enquiry",
+            "footnote": "The storefront is an additional sales surface, not a replacement for the channels that already work."
+        },
+        "gettingStarted": {
+            "eyebrow": "05 / Getting started",
+            "title": "Don't prepare a presentation.<br></br><span>Just show me the stock.</span>",
+            "description": "I already built the concept. The useful next step is seeing what it looks like with your actual inventory.",
+            "steps": [
+                {
+                    "number": "01 / YOU",
+                    "title": "Send the stock",
+                    "description": "Send your current site, Chrono24 page, Instagram or a few active references."
+                },
+                {
+                    "number": "02 / ME",
+                    "title": "I stage it",
+                    "description": "I put a few of your actual watches into the storefront so you can judge the idea on your own inventory."
+                },
+                {
+                    "number": "03 / DECISION",
+                    "title": "You decide",
+                    "description": "If the added storefront makes sense for the way you sell, we talk about turning the concept into your real site."
+                }
+            ]
+        },
+        "cta": {
+            "eyebrow": "Next step",
+            "title": "See what your actual watches<br></br><span>look like here.</span>",
+            "description": "No 60-minute sales call. Send the current stock link or three pieces you're actively selling. I'll take it from there.",
+            "sendStock": "Book Your Custom Demo",
+            "floatingCta": "Book Arvell's Custom Demo",
+            "openStorefront": "Open the storefront",
+            "credit": "Aymen · Arvell"
+        },
+        "nav": {
+            "back": "Back to storefront",
+            "nextStep": "See the next step"
+        },
+        "footer": {
+            "tagline": "Private storefront concepts for independent watch dealers"
+        }
+    }
+}
