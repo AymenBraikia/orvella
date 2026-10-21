@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import get_watches from "./server/get_watches";
+import get_items from "./server/get_items";
 
 const baseUrl = "https://arvell.vercel.app";
 
@@ -30,7 +30,7 @@ const routes = [
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const now = new Date();
 
-    const watches = await get_watches();
+    const watches = await get_items();
 
     const staticPages: MetadataRoute.Sitemap = locales.flatMap((locale) =>
         routes.map((route) => ({

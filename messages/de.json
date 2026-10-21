@@ -35,6 +35,11 @@
     },
     "common": {
         "brand": "ARVELL",
+        "watches": "Uhren",
+        "rings": "Ringe",
+        "necklaces": "Halsketten",
+        "bracelets": "Armbänder",
+        "explore": "mehr entdecken",
         "nav": {
             "watches": "Uhren",
             "spareParts": "Ersatzteile",
@@ -78,9 +83,10 @@
             "discover": "Entdecken",
             "add_to_cart": "In den Warenkorb",
             "adding_to_cart": "Wird hinzugefügt",
+            "already_in_cart": "Bereits im Warenkorb",
             "register": "registrieren",
             "quick_view": "Schnellansicht",
-            "viewAllWatches": "Alle Uhren anzeigen",
+            "viewAllWatches": "Alle anzeigen",
             "begin": "Starten",
             "bookNow": "Jetzt buchen",
             "bookAppointment": "Termin buchen",
@@ -145,6 +151,7 @@
             "caseSize": "Gehäusegröße",
             "bracelet": "Armband",
             "material": "Material",
+            "gemstones": "Edelsteine",
             "details": "Details",
             "condition": "Zustand"
         },
@@ -219,14 +226,17 @@
     },
     "home": {
         "heroTitle": "ARVELL",
-        "heroSubtitle": "Ihr Partner für hochwertige Luxusuhren",
+        "heroSubtitle": "Ihre Adresse für feinen Schmuck und Luxusuhren",
         "discover": "Entdecken",
         "newArrivalsHeading": "Neu eingetroffen",
         "newArrivalsSubtext": "Unsere kuratierte Auswahl an gebrauchten und neuen Uhren wartet auf Sie.",
-        "getInspiredHeading": "Lassen Sie sich inspirieren",
-        "getInspiredSubtext": "Ihre Reise beginnt hier. Nehmen Sie sich eine Minute Zeit, um diese Fragen zu beantworten, und wir helfen Ihnen herauszufinden, was Ihr erster Schritt sein sollte.",
-        "brandsHeading": "Ikonische Marken",
+        "getInspiredHeading": "Für Dich Ausgewählt",
+        "getInspiredSubtext": "Entdecke deinen ganz persönlichen Stil. Beantworte ein paar kurze Fragen, und unser Atelier wählt außergewöhnliche Zeitmesser und feinen Schmuck aus, die perfekt zu deinem Geschmack passen.",
+        "getInspiredCTA": "Beratung Starten",
+        "brandsHeading": "Ikonische Uhrenmarken",
         "brandsSubtext": "Entdecken Sie unsere Kollektion klassischer Armbanduhren weltbekannter Uhrenmanufakturen.",
+        "sectionsHeading": "Finde dein Stück für die Ewigkeit.",
+        "sectionsSubtext": "Von ikonischen Zeitmessern bis zum dezente Glanz feiner Schmuckstücke – finde etwas, das sich unverkennbar nach dir anfühlt.",
         "sellConsignCard": {
             "title": "Verkaufen / Kommissionieren",
             "cta": "Mehr erfahren"
@@ -272,6 +282,13 @@
         },
         "closed": "Geschlossen",
         "contactHeading": "Kontakt"
+    },
+    "trade": {
+        "heading": "Kommission & Inzahlungnahme",
+        "subHeading": "Möchtest du deine Uhr verkaufen oder eintauschen?",
+        "subText": "Verwandle deine Luxusuhr oder deinen feinen Schmuck in sofortiges Kapital oder steige auf dein nächstes Traumstück um. Erhalte noch heute eine schnelle, vertrauliche und professionelle Bewertung von unseren Uhrenexperten.",
+        "cta1": "sofortiges Angebot erhalten",
+        "cta2": "erfahre wie es funktioniert"
     },
     "sell": {
         "heading": "Verkaufen / Kommissionieren",

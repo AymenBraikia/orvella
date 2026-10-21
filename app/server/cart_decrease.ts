@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { users_collection } from "../db/collections";
 import getUser from "./get_user";
 
-export default async function decrease_cart(reference: string): Promise<boolean> {
+export default async function decrease_cart(slug: string): Promise<boolean> {
     try {
         const user = await getUser();
         if (!user) return false;
@@ -14,7 +14,7 @@ export default async function decrease_cart(reference: string): Promise<boolean>
         ).updateOne(
             {
                 email: user.email,
-                cart: { $elemMatch: { reference, quantity: { $gt: 1 } } },
+                cart: { $elemMatch: { slug, quantity: { $gt: 1 } } },
             },
             { $inc: { "cart.$.quantity": -1 } },
         );

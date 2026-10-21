@@ -131,7 +131,7 @@ export default function Nav({ savedCurrency, dispatch, ui, ref }: { savedCurrenc
                 </div>
 
                 <div className="flex flex-col gap-3 md:gap-6">
-                    <h5 className="title3 font-primary">{footer("shopHeading")}</h5>
+                    <h5 className="title3 font-primary text-gold">{footer("shopHeading")}</h5>
                     <ul className="gap-2!">
                         <li>
                             <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="watches list" href="/shop">
@@ -152,7 +152,7 @@ export default function Nav({ savedCurrency, dispatch, ui, ref }: { savedCurrenc
                     </ul>
                 </div>
                 <div className="flex flex-col gap-3 md:gap-6">
-                    <h5 className="title3 font-primary">{footer("serviceHeading")}</h5>
+                    <h5 className="title3 font-primary text-gold">{footer("serviceHeading")}</h5>
                     <ul className="gap-2!">
                         <li>
                             <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="Store" href="/store">

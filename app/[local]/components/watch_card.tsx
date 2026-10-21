@@ -1,12 +1,12 @@
 "use client";
-import { memo } from "react";
+import { memo, useState } from "react";
 
-import Image from "next/image";
 import { format_price } from "../(site)/lib/price_format";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Supported_Currencies } from "@/currency";
 import { read_cookie } from "../(site)/lib/read_cookie";
+import Display_Image from "./display_image";
 
 export default memo(function Watch_card({
     brand,
@@ -19,6 +19,7 @@ export default memo(function Watch_card({
     condition,
     price,
     image_src,
+    video_src,
     slug,
 }: {
     brand: string;
@@ -31,13 +32,22 @@ export default memo(function Watch_card({
     condition: string;
     price: number;
     image_src: string;
+    video_src?: string;
     slug: string;
 }) {
     const t = useTranslations("common.productCard");
+
+    const [play_video, set_play_video] = useState<boolean>(false);
+
     return (
-        <Link href={`/product/${slug}`} className="group overflow-hidden transition-default hover:-translate-y-1 cursor-pointer font-secondary sm:px-0 px-4 w-full">
-            <div className="sm:aspect-4/3 aspect-4/3 relative w-full">
-                <Image src={image_src} alt={image_src} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 40vw" className="group-hover:brightness-100 brightness-80 transition-default" />
+        <Link
+            href={`/product/${slug}`}
+            className="group overflow-hidden transition-default hover:-translate-y-1 cursor-pointer font-secondary sm:px-0 px-4 w-full"
+            onMouseEnter={() => set_play_video(true)}
+            onMouseLeave={() => set_play_video(false)}
+        >
+            <div className="sm:aspect-4/3 aspect-4/3 relative w-full overflow-hidden">
+                <Display_Image image_src={image_src} vid_src={video_src} play={play_video} />
             </div>
             <div className="py-4 flex flex-col justify-start items-start gap-3 min-h-50">
                 <span className="text-xs uppercase tracking-[0.3em] text-secondary">{brand}</span>

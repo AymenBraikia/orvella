@@ -20,7 +20,7 @@ export default async function Items({ currency, items }: { items: User_Cart; cur
 
                         <div className="flex justify-between items-center flex-wrap gap-4 h-full w-full">
                             <div className="w-full flex justify-inset-s-items-start gap-2 tracking-wider capitalize">
-                                <h6 className="text-shine">{i.brand + " " + i.model}</h6>
+                                <h6 className="text-gold">{i.brand + " " + i.model}</h6>
                             </div>
                             <p className="text-base font-medium min-w-20 max-w-30 block font-sans">Quantity: {i.quantity}</p>
                             <p className="text-base sm:text-base font-medium w-fit sm:w-25 font-sans">{format_price(i.price * i.quantity, currency)}</p>

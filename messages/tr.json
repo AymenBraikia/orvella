@@ -35,6 +35,11 @@
     },
     "common": {
         "brand": "ARVELL",
+        "watches": "saatler",
+        "rings": "yüzükler",
+        "necklaces": "kolyeler",
+        "bracelets": "bilezikler",
+        "explore": "daha fazlasını keşfet",
         "nav": {
             "watches": "Saatler",
             "spareParts": "Yedek Parçalar",
@@ -78,9 +83,10 @@
             "discover": "Keşfedin",
             "add_to_cart": "sepete ekle",
             "adding_to_cart": "sepete ekleniyor",
+            "already_in_cart": "Zaten Sepette",
             "register": "kayıt ol",
             "quick_view": "hızlı bakış",
-            "viewAllWatches": "Tüm saatleri görüntüle",
+            "viewAllWatches": "Tümünü gör",
             "begin": "Yolculuğunuza başlayın",
             "bookNow": "Hemen randevu alın",
             "bookAppointment": "Randevu alın",
@@ -146,6 +152,7 @@
             "caseSize": "Kasa ölçüsü",
             "bracelet": "Kordon",
             "material": "Malzeme",
+            "gemstones": "Değerli Taşlar",
             "details": "Detaylar",
             "condition": "Durum"
         },
@@ -220,14 +227,17 @@
     },
     "home": {
         "heroTitle": "ARVELL",
-        "heroSubtitle": "Üst segment saatler için ortağınız",
+        "heroSubtitle": "Zarif Mücevherler ve Lüks Saatler İçin Adresiniz",
         "discover": "Keşfedin",
         "newArrivalsHeading": "Yeni Gelenler",
         "newArrivalsSubtext": "İkinci el ve sıfır saatlerden oluşan özenle seçilmiş koleksiyonumuz sizi bekliyor.",
-        "getInspiredHeading": "İlham Alın",
-        "getInspiredSubtext": "Yolculuğunuz burada başlıyor. Bu soruları yanıtlamak için bir dakikanızı ayırın, ilk adımınızın ne olması gerektiğini birlikte belirleyelim.",
-        "brandsHeading": "İkonik Markalar",
+        "getInspiredHeading": "Sizin İçin Seçildi",
+        "getInspiredSubtext": "Kendi tarzınızı keşfedin. Birkaç kısa soruyu yanıtlayın, atölyemiz sizi zevkinize özel benzersiz saatler ve zarif mücevherlerle buluştursun.",
+        "getInspiredCTA": "Danışmanlığa Başla",
+        "brandsHeading": "İkonik Saat Markaları",
         "brandsSubtext": "Dünyaca ünlü saat üreticilerinin klasik kol saatlerinden oluşan koleksiyonumuza göz atın.",
+        "sectionsHeading": "Ömürlük parçanı bul.",
+        "sectionsSubtext": "İkonik saatlerden ince mücevherlerin zarif ışıltısına kadar, tamamen sana ait hissettiren bir parça bul.",
         "sellConsignCard": {
             "title": "Sat / Konsinye",
             "cta": "Daha fazla bilgi"
@@ -273,6 +283,14 @@
         },
         "closed": "Kapalı",
         "contactHeading": "İletişim"
+    },
+
+    "trade": {
+        "heading": "Consignment ve Takas",
+        "subHeading": "Saatinizi Satmak veya Takas Etmek İster misiniz?",
+        "subText": "Lüks saatinizi veya zarif mücevherlerinizi anında nakde çevirin ya da hayalinizdeki yeni parçayla değiştirin. Uzman saat ustalarımızdan bugün hızlı, gizli ve profesyonel bir değerleme alın.",
+        "cta1": "anında teklif alın",
+        "cta2": "nasıl çalıştığını öğrenin"
     },
     "sell": {
         "heading": "Sat / Konsinye",

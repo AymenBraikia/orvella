@@ -1,4 +1,4 @@
-import { appointments_collection, consignments_collection, orders_collection, sell_collection, spares_collection, users_collection, watches_collection } from "@/app/db/collections";
+import { appointments_collection, consignments_collection, orders_collection, sell_collection, spares_collection, users_collection, items_collection } from "@/app/db/collections";
 import { Order } from "@/types/order";
 import { Watch } from "@/types/watch";
 
@@ -16,14 +16,14 @@ export interface AdminStats {
 
 export async function get_admin_stats(): Promise<AdminStats> {
     const [watches, inStock, spares, users, orders, pendingOrders, completed, stock, sells, consignments, appointments] = await Promise.all([
-        (await watches_collection()).countDocuments({}),
-        (await watches_collection()).countDocuments({ inStock: true }),
+        (await items_collection()).countDocuments({}),
+        (await items_collection()).countDocuments({ inStock: true }),
         (await spares_collection()).countDocuments({}),
         (await users_collection()).countDocuments({}),
         (await orders_collection()).countDocuments({}),
         (await orders_collection()).countDocuments({ status: "Pending" }),
         (await orders_collection()).find({ status: "Completed" }, { projection: { amount_to_pay: 1 } }).toArray(),
-        (await watches_collection()).find({ inStock: true }, { projection: { price: 1 } }).toArray(),
+        (await items_collection()).find({ inStock: true }, { projection: { price: 1 } }).toArray(),
         (await sell_collection()).countDocuments({ handled: { $ne: true } }),
         (await consignments_collection()).countDocuments({ handled: { $ne: true } }),
         (await appointments_collection()).countDocuments({ handled: { $ne: true } }),
@@ -54,6 +54,6 @@ export async function get_admin_watches(search?: string): Promise<Watch[]> {
           }
         : {};
 
-    const data = await (await watches_collection()).find(query).sort({ date_added: -1 }).toArray();
+    const data = await (await items_collection()).find(query).sort({ date_added: -1 }).toArray();
     return JSON.parse(JSON.stringify(data));
 }

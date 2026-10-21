@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath, revalidateTag } from "next/cache";
-import { spares_collection, watches_collection } from "@/app/db/collections";
+import { spares_collection, items_collection } from "@/app/db/collections";
 import { Watch } from "@/types/watch";
 
 import { get_admin_session } from "./session";
@@ -102,13 +102,13 @@ export async function save_watch(_prev: ActionResult | null, data: FormData): Pr
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const { date_added, relevance_score, ...updatable } = parsed;
 
-            const result = await (await watches_collection()).updateOne({ slug: originalSlug }, { $set: updatable });
+            const result = await (await items_collection()).updateOne({ slug: originalSlug }, { $set: updatable });
             if (result.matchedCount === 0) return { success: false, error: "That watch no longer exists." };
         } else {
-            const clash = await (await watches_collection()).findOne({ slug: parsed.slug }, { projection: { slug: 1 } });
+            const clash = await (await items_collection()).findOne({ slug: parsed.slug }, { projection: { slug: 1 } });
             if (clash) return { success: false, error: "A watch with this brand, model, reference and year already exists." };
 
-            await (await watches_collection()).insertOne(parsed);
+            await (await items_collection()).insertOne(parsed);
         }
 
         refresh(parsed.slug);
@@ -123,7 +123,7 @@ export async function delete_watch(slug: string): Promise<ActionResult> {
     if (!(await get_admin_session())) return { success: false, error: "Not authorised." };
 
     try {
-        await (await watches_collection()).deleteOne({ slug });
+        await (await items_collection()).deleteOne({ slug });
         refresh(slug);
         return { success: true };
     } catch (err) {
@@ -137,7 +137,7 @@ export async function toggle_watch_flag(slug: string, field: "inStock" | "featur
     if (!(await get_admin_session())) return { success: false, error: "Not authorised." };
 
     try {
-        await (await watches_collection()).updateOne({ slug }, { $set: { [field]: value } });
+        await (await items_collection()).updateOne({ slug }, { $set: { [field]: value } });
         refresh(slug);
         return { success: true };
     } catch (err) {

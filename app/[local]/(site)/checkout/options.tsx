@@ -12,21 +12,21 @@ export default function Payment_Options({ default_option }: { default_option: "P
             <button
                 type="button"
                 onClick={async () => option != "Bank Transfer" && (await updateUser({ payment_method: "Bank Transfer" })) && set_option("Bank Transfer")}
-                className={`w-full h-full button2 sm:px-2 sm:py-4 p-2 transition-default border-b ${option == "Bank Transfer" ? "bg-secondary border-b-foreground brightness-100" : "brightness-75 border-b-transparent"}`}
+                className={`w-full h-full sm:px-2 sm:py-4 p-2 transition-default ${option == "Bank Transfer" ? "bg-gold brightness-100 button3" : "brightness-75 button2"}`}
             >
                 {t("bankTransfer")}
             </button>
             <button
                 type="button"
                 onClick={async () => option != "PayPal" && (await updateUser({ payment_method: "PayPal" })) && set_option("PayPal")}
-                className={`w-full h-full button2 sm:px-2 sm:py-4 p-2 transition-default border-b ${option == "PayPal" ? "bg-secondary border-b-foreground brightness-100" : "brightness-75 border-b-transparent"}`}
+                className={`w-full h-full sm:px-2 sm:py-4 p-2 transition-default ${option == "PayPal" ? "bg-gold brightness-100 button3" : "brightness-75 button2"}`}
             >
                 PayPal
             </button>
             <button
                 type="button"
                 onClick={async () => option != "Credit/Debit Card" && (await updateUser({ payment_method: "Credit/Debit Card" })) && set_option("Credit/Debit Card")}
-                className={`w-full h-full button2 sm:px-2 sm:py-4 p-2 transition-default border-b ${option == "Credit/Debit Card" ? "bg-secondary border-b-foreground brightness-100" : "brightness-75 border-b-transparent"}`}
+                className={`w-full h-full sm:px-2 sm:py-4 p-2 transition-default ${option == "Credit/Debit Card" ? "bg-gold brightness-100 button3" : "brightness-75 button2"}`}
             >
                 {t("card")}
             </button>

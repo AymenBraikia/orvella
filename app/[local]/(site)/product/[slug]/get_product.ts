@@ -1,9 +1,9 @@
 import { unstable_cache } from "next/cache";
-import { watches_collection } from "@/app/db/collections";
+import { items_collection } from "@/app/db/collections";
 import { Watch } from "@/app/types/watch";
 
 async function query_product(slug: string): Promise<Watch> {
-    const data = await (await watches_collection()).findOne({ slug: { $regex: slug, $options: "i" } }, { projection: { _id: 0 } });
+    const data = await (await items_collection()).findOne({ slug: { $regex: slug, $options: "i" } }, { projection: { _id: 0 } });
     return JSON.parse(JSON.stringify(data));
 }
 

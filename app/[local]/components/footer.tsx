@@ -30,7 +30,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <h5 className="lg:title5 title4 font-primary">{t("shopHeading")}</h5>
+                    <h5 className="lg:title5 title4 font-secondary text-gold">{t("shopHeading")}</h5>
                     <ul className="flex flex-col justify-start items-start gap-2">
                         <li>
                             <Link aria-label="watches" href={"/shop"} className="underline text-secondary hover:text-primary transition-default">
@@ -51,7 +51,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <h5 className="lg:title5 title4 font-primary">{t("serviceHeading")}</h5>
+                    <h5 className="lg:title5 title4 font-secondary text-gold">{t("serviceHeading")}</h5>
                     <ul className="flex flex-col justify-start items-start gap-2">
                         <li>
                             <Link aria-label="store" href={"/store"} className="underline text-secondary hover:text-primary transition-default">
@@ -86,7 +86,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <h5 className="lg:title5 title4 font-primary">{t("otherPlatformsHeading")}</h5>
+                    <h5 className="lg:title5 title4 font-secondary text-gold">{t("otherPlatformsHeading")}</h5>
                     <ul className="flex flex-col justify-start items-start gap-2">
                         <li>
                             <Link target={"_blank"} aria-label="visit chrono 24" href={"https://www.chrono24.com"} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
@@ -115,7 +115,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <h5 className="lg:title5 title4 font-primary">{t("legalHeading")}</h5>
+                    <h5 className="lg:title5 title4 font-secondary text-gold">{t("legalHeading")}</h5>
                     <ul className="flex flex-col justify-start items-start gap-2">
                         <li>
                             <Link aria-label="imprint" href={"/info/imprint"} className="underline text-secondary hover:text-primary transition-default">

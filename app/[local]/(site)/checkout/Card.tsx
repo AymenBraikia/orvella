@@ -34,21 +34,17 @@ export default function Cards() {
         set_sec_code(formattedValue);
     }
 
-
     function check_info(): boolean {
         if (card_number.replaceAll(" ", "").length != 16) {
             console.clear();
-            console.log(16);
             return false;
         }
         if (expire.length != 5) {
             console.clear();
-            console.log(4);
             return false;
         }
         if (sec_code.length != 3) {
             console.clear();
-            console.log(3);
             return false;
         }
 

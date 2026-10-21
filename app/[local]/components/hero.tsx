@@ -11,11 +11,11 @@ export default async function Hero() {
             </video>
 
             <div className="flex-center flex-col font-primary gap-2 text-center">
-                <h1 className="tracking-widest font-light!">{t("heroTitle")}</h1>
+                <h1 className="tracking-widest font-light! text-gold text-6xl">{t("heroTitle")}</h1>
 
                 <h2 className="sm:title5 title4 tracking-wider dark:text-shine text-(--bg-secondary) italic font-secondary">{t("heroSubtitle")}</h2>
 
-                <Link href="#new" aria-label={t("discover")} className="underline dark:text-shine text-(--bg-secondary) tracking-wider title4">
+                <Link href="#sections" aria-label={t("discover")} className="underline text-gold tracking-wider title4">
                     {t("discover")}
                 </Link>
             </div>

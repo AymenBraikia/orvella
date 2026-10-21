@@ -16,17 +16,17 @@ export default async function New() {
         <section className="flex flex-col justify-center items-start sm:p-16 p-4 py-8 w-dvw gap-6 scroll-mt-20" id="new">
             <div className="w-fit flex justify-center items-start flex-col">
                 <FadeInObserver>
-                    <h1 className={`text-5xl font-secondary tracking-wide`}>{t("newArrivalsHeading")}</h1>
+                    <h1 className={`text-5xl font-secondary tracking-wide sections text-gold`}>{t("newArrivalsHeading")}</h1>
                 </FadeInObserver>
             </div>
             <div className="w-fit flex justify-center items-start flex-col">
-                <FadeInObserver>
+                <FadeInObserver delay={100}>
                     <p className="text-shine">{t("newArrivalsSubtext")}</p>
                 </FadeInObserver>
             </div>
             <div className="w-fit flex justify-center items-start flex-col font-secondary">
-                <FadeInObserver>
-                    <Link aria-label={t_btn("viewAllWatches")} href={"/shop"} className="underline italic" prefetch={true}>
+                <FadeInObserver delay={200}>
+                    <Link aria-label={t_btn("viewAllWatches")} href={"/shop"} className="underline text-xl text-gold" prefetch={true}>
                         {t_btn("viewAllWatches")}
                     </Link>
                 </FadeInObserver>
@@ -35,7 +35,7 @@ export default async function New() {
             <div className={`w-full sm-w-fit`}>
                 <List display={{ base: 1, sm: 2, md: 2, lg: 3, xl: 4 }}>
                     {watches.map((data) => (
-                        <NewCardWrapper data={data} key={data.slug} />
+                        <NewCardWrapper data={data} />
                     ))}
                 </List>
             </div>

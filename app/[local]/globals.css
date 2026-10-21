@@ -15,6 +15,8 @@
     --bg-primary: #f5f5f5;
     --bg-secondary: #ebebeb;
 
+    --clr-gold: #bf953f;
+
     --transition: 0.3s ease;
     --transition-long: 0.8s ease-in-out;
 }
@@ -32,6 +34,8 @@ html.dark {
 
     --clr-shine-primary: #969696;
     --clr-shine-secondary: #fff;
+
+    --clr-gold: #bf953f;
 
     * {
         scrollbar-width: thin;
@@ -74,7 +78,7 @@ img {
 }
 
 ::selection {
-    background-color: var(--foreground);
+    background-color: var(--clr-gold);
     color: var(--background);
 }
 
@@ -129,6 +133,13 @@ h6 {
 
     --background-color-primary: var(--bg-primary);
     --background-color-secondary: var(--bg-secondary);
+}
+
+@utility bg-gold {
+    background-color: var(--clr-gold);
+}
+@utility text-gold {
+    color: var(--clr-gold);
 }
 
 @utility font-primary {
@@ -252,6 +263,20 @@ ul {
     }
 }
 
+@utility button3 {
+    color: var(--clr-primary);
+    background-color: transparent;
+    font-weight: 600;
+    width: fit-content;
+    padding: 16px;
+    user-select: none;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
 @utility button2 {
     color: var(--clr-primary);
     background-color: transparent;

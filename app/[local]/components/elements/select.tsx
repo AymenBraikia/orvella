@@ -27,7 +27,7 @@ export default function Select({ options, value, set_value, label, classnames }:
                 {new Array(...new Set(options)).map((o) => (
                     <p
                         key={o}
-                        className="whitespace-nowrap text-secondary hover:text-foreground bg-secondary hover:bg-background transition-default cursor-pointer px-2 py-1"
+                        className="whitespace-nowrap text-secondary hover:text-gold bg-secondary hover:bg-background transition-default cursor-pointer px-2 py-1"
                         onClick={() => {
                             set_value(o);
                             set_active(false);

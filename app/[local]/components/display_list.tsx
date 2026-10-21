@@ -6,11 +6,13 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import Watch_card from "@/app/components/watch_card";
-import WatchFilters, { ActiveFilters } from "@/app/components/watch_filters";
+import ItemsFilter, { ActiveFilters } from "@/app/components/items_filter";
 import Select from "./elements/select";
 import Input from "./elements/input";
 
-import { apply_filters, build_facets, count_active, empty_selection, facet_counts, selection_from_params, selection_to_params, type Item, type Selection } from "../(site)/lib/filters";
+import { apply_filters, build_facets, count_active, empty_selection, facet_counts, selection_from_params, selection_to_params, type Selection } from "../(site)/lib/filters";
+import Item_card from "./Item_card";
+import { Item } from "@/types/item";
 
 const QuickViewModal = dynamic(() => import("@/app/components/quick_view"), { ssr: false });
 
@@ -34,10 +36,10 @@ const COMPARATORS: Record<SortKey, (a: Item, b: Item) => number> = {
     relevance: (a, b) => b.relevance_score - a.relevance_score,
     priceLowToHigh: (a, b) => a.price - b.price,
     priceHighToLow: (a, b) => b.price - a.price,
-    brand: (a, b) => a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model),
+    brand: (a, b) => ((a.type == "watch" || a.type == "spare") && (b.type == "watch" || b.type == "spare") ? a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model) : a.display_name.localeCompare(b.display_name)),
 };
 
-export default function Watches_list({ watches }: { watches: Item[] }) {
+export default function Display_list({ items }: { items: Item[] }) {
     const t = useTranslations("common.filters");
     const router = useRouter();
     const pathname = usePathname();
@@ -49,7 +51,7 @@ export default function Watches_list({ watches }: { watches: Item[] }) {
     const [sortKey, setSortKey] = useState<SortKey>("newest");
     const [limit, setLimit] = useState(PAGE_SIZE);
 
-    const facets = useMemo(() => build_facets(watches), [watches]);
+    const facets = useMemo(() => build_facets(items), [items]);
 
     const [selection, setSelection] = useState<Selection>(() => empty_selection());
 
@@ -74,8 +76,8 @@ export default function Watches_list({ watches }: { watches: Item[] }) {
         [pathname, router],
     );
 
-    const filtered = useMemo(() => apply_filters(watches, selection, query), [watches, selection, query]);
-    const counts = useMemo(() => facet_counts(watches, facets, selection, query), [watches, facets, selection, query]);
+    const filtered = useMemo(() => apply_filters(items, selection, query), [items, selection, query]);
+    const counts = useMemo(() => facet_counts(items, facets, selection, query), [items, facets, selection, query]);
 
     /* Sort the whole result set, then slice. The old code truncated inside the
        filter predicate, so "price low to high" only sorted the first 30 matches. */
@@ -101,7 +103,7 @@ export default function Watches_list({ watches }: { watches: Item[] }) {
     return (
         <>
             <div className="flex w-full min-w-0 flex-col items-stretch gap-6 lg:flex-row lg:items-start lg:gap-10">
-                <WatchFilters facets={facets} counts={counts} selection={selection} onChange={updateSelection} resultCount={sorted.length} open={drawerOpen} setOpen={setDrawerOpen} />
+                <ItemsFilter facets={facets} counts={counts} selection={selection} onChange={updateSelection} resultCount={sorted.length} open={drawerOpen} setOpen={setDrawerOpen} />
 
                 <div className="flex min-w-0 flex-1 flex-col gap-4">
                     <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
@@ -148,22 +150,30 @@ export default function Watches_list({ watches }: { watches: Item[] }) {
 
                     {sorted.length > 0 ? (
                         <div className="grid w-full grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3">
-                            {visible.map((watch) => (
-                                <Watch_card
-                                    key={watch.slug}
-                                    slug={watch.slug}
-                                    brand={watch.brand}
-                                    name={`${watch.brand} ${watch.model}`}
-                                    movement={watch.movement}
-                                    size={watch.caseDiameterMm}
-                                    caseMaterial={watch.caseMaterial}
-                                    condition={watch.condition}
-                                    price={watch.price}
-                                    image_src={watch.images[0]}
-                                    braceletMaterial={watch.braceletMaterial}
-                                    description={watch.description}
-                                />
-                            ))}
+                            {visible.map((item) =>
+                                item.type == "watch" || item.type == "spare" ? (
+                                    <Watch_card
+                                        key={item.slug}
+                                        slug={item.slug}
+                                        brand={item.brand}
+                                        name={item.brand + " " + item.model}
+                                        movement={item.movement}
+                                        size={item.caseDiameterMm}
+                                        caseMaterial={item.caseMaterial}
+                                        condition={item.condition}
+                                        price={item.price}
+                                        image_src={item.images[0]}
+                                        video_src={item.video}
+                                        braceletMaterial={item.braceletMaterial}
+                                        description={item.description}
+                                    />
+                                ) : (
+                                    <Item_card
+                                        key={item.slug}
+                                        data={item}
+                                    />
+                                ),
+                            )}
                         </div>
                     ) : (
                         <div className="flex flex-col items-start gap-4 py-16">

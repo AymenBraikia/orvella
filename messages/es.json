@@ -35,6 +35,11 @@
     },
     "common": {
         "brand": "ARVELL",
+        "watches": "relojes",
+        "rings": "anillos",
+        "necklaces": "collares",
+        "bracelets": "pulseras",
+        "explore": "explorar más",
         "nav": {
             "watches": "Relojes",
             "spareParts": "Recambios",
@@ -78,9 +83,10 @@
             "discover": "Descubrir",
             "add_to_cart": "añadir al carrito",
             "adding_to_cart": "añadiendo al carrito",
+            "already_in_cart": "Ya está en el carrito",
             "register": "registrarse",
             "quick_view": "vista rápida",
-            "viewAllWatches": "Ver todos los relojes",
+            "viewAllWatches": "Ver todo",
             "begin": "Comience su viaje",
             "bookNow": "Reservar ahora",
             "bookAppointment": "Reservar una cita",
@@ -145,6 +151,7 @@
             "caseSize": "Tamaño de la caja",
             "bracelet": "Brazalete",
             "material": "Material",
+            "gemstones": "Gemas",
             "details": "Detalles",
             "condition": "Estado"
         },
@@ -219,14 +226,17 @@
     },
     "home": {
         "heroTitle": "ARVELL",
-        "heroSubtitle": "Su socio en relojes de alta gama",
+        "heroSubtitle": "Tu destino de alta joyería y relojes de lujo",
         "discover": "Descubrir",
         "newArrivalsHeading": "Novedades",
         "newArrivalsSubtext": "Nuestra colección seleccionada de relojes nuevos y de segunda mano le está esperando.",
-        "getInspiredHeading": "Inspírese",
-        "getInspiredSubtext": "Su viaje comienza aquí. Dedique un minuto a responder estas preguntas y le ayudaremos a decidir cuál debe ser su primer paso.",
-        "brandsHeading": "Marcas icónicas",
+        "getInspiredHeading": "Seleccionado Para Ti",
+        "getInspiredSubtext": "Descubre tu estilo propio. Responde a unas breves preguntas y nuestro atelier te recomendará relojes excepcionales y alta joyería adaptados a tus gustos.",
+        "getInspiredCTA": "Comenzar Consulta",
+        "brandsHeading": "Marcas de Relojes Icónicas",
         "brandsSubtext": "Explore nuestra colección de relojes de pulsera clásicos de las casas relojeras más reconocidas del mundo.",
+        "sectionsHeading": "Encuentra tu pieza para siempre.",
+        "sectionsSubtext": "Desde relojes icónicos hasta el brillo sutil de la alta joyería, encuentra algo que se sienta inconfundiblemente tuyo.",
         "sellConsignCard": {
             "title": "Vender / Consignar",
             "cta": "Más información"
@@ -272,6 +282,13 @@
         },
         "closed": "Cerrado",
         "contactHeading": "Contacto"
+    },
+    "trade": {
+        "heading": "Consignación y Intercambio",
+        "subHeading": "¿Quieres vender o cambiar tu reloj?",
+        "subText": "Convierte tu reloj de lujo o alta joyería en capital instantáneo o cambia a tu próxima pieza de ensueño. Obtén hoy mismo una valoración rápida, confidencial y profesional de nuestros expertos relojeros.",
+        "cta1": "obtén una oferta instantánea",
+        "cta2": "descubre cómo funciona"
     },
     "sell": {
         "heading": "Vender/Consignar",

@@ -5,7 +5,6 @@ import { create_order } from "@/app/paypal/create_order";
 import { Supported_Currencies } from "@/currency";
 import { PayPalButtons, PayPalScriptProvider, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import { DISPATCH_ACTION } from "@paypal/react-paypal-js";
-import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -24,7 +23,6 @@ export default function PayPal_Btn({ disabled, currency }: { disabled: boolean; 
 
 function PayPal_Btn_Inner({ disabled, currency }: { disabled: boolean; currency: Supported_Currencies }) {
     const router = useRouter();
-    const { resolvedTheme } = useTheme();
 
     const [{ options }, dispatch] = usePayPalScriptReducer();
 
@@ -44,10 +42,10 @@ function PayPal_Btn_Inner({ disabled, currency }: { disabled: boolean; currency:
         <PayPalButtons
             disabled={disabled}
             fundingSource="paypal"
-            forceReRender={[resolvedTheme, currency]}
+            forceReRender={[currency]}
             style={{
                 layout: "vertical",
-                color: resolvedTheme === "dark" ? "black" : "white",
+                color: "gold",
                 shape: "sharp",
                 label: "checkout",
                 height: 45,

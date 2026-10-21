@@ -1,8 +1,8 @@
 import { unstable_cache } from "next/cache";
 import { cookies } from "next/headers";
 
-import { watches_collection } from "../db/collections";
-import type { Watch } from "../types/watch";
+import { items_collection } from "../db/collections";
+import { Item } from "@/types/item";
 
 // The card grid never reads these, but you're currently shipping them for
 // every watch on every request.
@@ -27,7 +27,22 @@ const CARD_PROJECTION = {
     date_added: 1,
     relevance_score: 1,
     images: { $slice: 1 },
+    video: 1,
 
+    length: 1,
+    length_unit: 1,
+    clasp_type: 1,
+    ring_size: 1,
+    band_width: 1,
+    display_name: 1,
+    
+    weight: 1,
+    measurement_unit: 1,
+    metal_type: 1,
+    fineness: 1,
+    karats: 1,
+    stones: 1,
+    type: 1,
     // Needed because the result is filtered by preview
     preview: 1,
 } as const;
@@ -38,9 +53,9 @@ const CARD_PROJECTION = {
  * IMPORTANT:
  * No cookies(), headers(), searchParams, etc. inside this function.
  */
-const get_cached_watches = unstable_cache(
-    async (): Promise<Watch[]> => {
-        const collection = await watches_collection();
+const get_cached_items = unstable_cache(
+    async (): Promise<Item[]> => {
+        const collection = await items_collection();
 
         return collection.find({}, { projection: CARD_PROJECTION }).toArray();
     },
@@ -56,11 +71,11 @@ const get_cached_watches = unstable_cache(
  *
  * cookies() lives OUTSIDE the cache scope.
  */
-async function get_watches(): Promise<Watch[]> {
+async function get_items(): Promise<Item[]> {
     const cookieStore = await cookies();
     const ref = cookieStore.get("ref")?.value;
 
-    const data = await get_cached_watches();
+    const data = await get_cached_items();
 
     // No ref cookie => return all watches.
     if (!ref) {
@@ -73,4 +88,4 @@ async function get_watches(): Promise<Watch[]> {
     return JSON.parse(JSON.stringify(previewed.length ? previewed : data.filter((e) => e.preview == undefined)));
 }
 
-export default get_watches;
+export default get_items;

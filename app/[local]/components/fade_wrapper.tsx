@@ -2,39 +2,50 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function FadeInObserver({ children }: { children: React.ReactNode }) {
-	const [isVisible, setIsVisible] = useState(false);
-	const elementRef = useRef<HTMLDivElement>(null);
+export default function FadeInObserver({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+    const [isVisible, setIsVisible] = useState(false);
+    const elementRef = useRef<HTMLDivElement>(null);
 
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					setIsVisible(true);
-					// // Stop observing once it animates in (optional)
-					if (elementRef.current) {
-						observer.unobserve(elementRef.current);
-					}
-				}
-			},
-			{
-				threshold: 0.15, // Triggers when 15% of the element is visible
-			}
-		);
+    useEffect(() => {
+        const element = elementRef.current;
+        if (!element) return;
 
-		if (elementRef.current) {
-			observer.observe(elementRef.current);
-		}
+        let timeout: ReturnType<typeof setTimeout> | undefined;
 
-		return () => observer.disconnect();
-	}, []);
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting) return;
 
-	return (
-		<div 
-			ref={elementRef} 
-			className={isVisible ? "fade-in w-full flex-center flex-col " : "opacity-0"}
-		>
-			{children}
-		</div>
-	);
+                observer.unobserve(element);
+
+                if (delay > 0) {
+                    timeout = setTimeout(() => {
+                        setIsVisible(true);
+                    }, delay);
+                } else {
+                    setIsVisible(true);
+                }
+            },
+            {
+                threshold: 0.15,
+                rootMargin: "0px",
+            },
+        );
+
+        observer.observe(element);
+
+        return () => {
+            observer.disconnect();
+
+            if (timeout) {
+                clearTimeout(timeout);
+            }
+        };
+    },);
+
+    return (
+        <div ref={elementRef} className={isVisible ? "fade-in w-full h-full flex-center flex-col" : "opacity-0 overflow-hidden"}>
+            {children}
+        </div>
+    );
 }

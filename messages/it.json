@@ -35,6 +35,11 @@
     },
     "common": {
         "brand": "ARVELL",
+        "watches": "orologi",
+        "rings": "anelli",
+        "necklaces": "collane",
+        "bracelets": "bracciali",
+        "explore": "esplora di più",
         "nav": {
             "watches": "Orologi",
             "spareParts": "Ricambi",
@@ -78,9 +83,10 @@
             "discover": "Scopri",
             "add_to_cart": "aggiungi al carrello",
             "adding_to_cart": "aggiunta al carrello",
+            "already_in_cart": "Già nel carrello",
             "register": "registrati",
             "quick_view": "anteprima rapida",
-            "viewAllWatches": "Vedi tutti gli orologi",
+            "viewAllWatches": "Mostra tutti",
             "begin": "Inizia il tuo percorso",
             "bookNow": "Prenota ora",
             "bookAppointment": "Prenota un appuntamento",
@@ -146,6 +152,7 @@
             "caseSize": "Dimensione della cassa",
             "bracelet": "Bracciale",
             "material": "Materiale",
+             "gemstones": "Pietre preziose",
             "details": "Dettagli",
             "condition": "Condizione"
         },
@@ -220,14 +227,17 @@
     },
     "home": {
         "heroTitle": "ARVELL",
-        "heroSubtitle": "Il tuo partner per gli orologi di alta gamma",
+        "heroSubtitle": "La tua destinazione per l'alta gioielleria e gli orologi di lusso",
         "discover": "Scopri",
         "newArrivalsHeading": "Nuovi arrivi",
         "newArrivalsSubtext": "La nostra collezione selezionata di orologi nuovi e usati ti aspetta.",
-        "getInspiredHeading": "Lasciati ispirare",
-        "getInspiredSubtext": "Il tuo percorso inizia qui. Prenditi un minuto per rispondere a queste domande e ti aiuteremo a capire quale dovrebbe essere il tuo primo passo.",
-        "brandsHeading": "Marchi iconici",
+        "getInspiredHeading": "Selezionato Per Te",
+        "getInspiredSubtext": "Scopri il tuo stile inconfondibile. Rispondi a poche brevi domande e il nostro atelier selezionerà per te segnatempo eccezionali e alta gioielleria su misura per i tuoi gusti.",
+        "getInspiredCTA": "Inizia la Consulenza",
+        "brandsHeading": "Marchi di Orologi Iconici",
         "brandsSubtext": "Sfoglia la nostra collezione di orologi da polso classici firmati da maestri orologiai di fama mondiale.",
+        "sectionsHeading": "Trova il tuo pezzo per sempre.",
+        "sectionsSubtext": "Dai segnatempo iconici alla discreta brillantezza dell'alta gioielleria, trova qualcosa che ti appartenga in modo inconfondibile.",
         "sellConsignCard": {
             "title": "Vendi / Conto vendita",
             "cta": "Scopri di più"
@@ -273,6 +283,13 @@
         },
         "closed": "Chiuso",
         "contactHeading": "Contatti"
+    },
+    "trade": {
+        "heading": "Conto Vendita e Permuta",
+        "subHeading": "Vuoi vendere o permutare il tuo orologio?",
+        "subText": "Trasforma il tuo orologio di lusso o la tua alta gioielleria in capitale immediato o passa al tuo prossimo pezzo dei sogni. Ricevi oggi stesso una valutazione rapida, riservata e professionale dai nostri esperti orologiai.",
+        "cta1": "ricevi un'offerta immediata",
+        "cta2": "scopri come funziona"
     },
     "sell": {
         "heading": "Vendi / Conto vendita",

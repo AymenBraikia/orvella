@@ -9,8 +9,8 @@ export default async function Paypal_component({ currency }: { currency: Support
         <div className="w-full">
             <PayPal_Btn currency={currency} disabled={false} />
             <p className="w-full">
-                {t("paypalNote")} <br /> <br /> <span className="text-shine">{t("email")}: </span> <span className="font-semibold">test@arvell.com</span>
-                <br /> <span className="text-shine">{t("password")}: </span> <span className="font-semibold">Arvell_123</span>
+                {t("paypalNote")} <br /> <br /> <span className="text-gold">{t("email")}: </span> <span className="font-semibold font-sans">test@arvell.com</span>
+                <br /> <span className="text-gold">{t("password")}: </span> <span className="font-semibold font-sans">Arvell_123</span>
             </p>
         </div>
     );

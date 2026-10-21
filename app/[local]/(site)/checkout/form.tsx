@@ -27,7 +27,8 @@ export default function Form() {
     const [diff_addr, set_diff_addr] = useState<boolean>(false);
 
     useEffect(() => {
-        const address = { country, address1, address2, city, phone, postCode };
+        // const address = { country, address1, address2, city, phone, postCode };
+        const address = { shipping_costs: 49.99, country, address1, address2, city, phone, postCode };
         updateUser({ address });
     }, [country, address1, address2, city, phone, postCode]);
 
@@ -39,8 +40,8 @@ export default function Form() {
     const [diff_postCode, set_diff_postCode] = useState<string | undefined>(undefined);
 
     useEffect(() => {
-        const diff_address = { active: diff_addr, country: diff_country, address1: diff_address1, address2: diff_address2, city: diff_city, phone: diff_phone, postCode: diff_postCode };
-
+        // const diff_address = { active: diff_addr, country: diff_country, address1: diff_address1, address2: diff_address2, city: diff_city, phone: diff_phone, postCode: diff_postCode };
+        const diff_address = { shipping_costs: 49.99, active: diff_addr, country: diff_country, address1: diff_address1, address2: diff_address2, city: diff_city, phone: diff_phone, postCode: diff_postCode };
         updateUser({ diff_address });
     }, [diff_country, diff_address1, diff_address2, diff_city, diff_phone, diff_postCode, diff_addr]);
 

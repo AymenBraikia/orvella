@@ -1,3 +1,5 @@
+import { BaseItem } from "./item";
+import { Bracelet, Necklace, Ring } from "./jewelry";
 import { Order } from "./order";
 import { Spare } from "./spare";
 import { Watch } from "./watch";
@@ -18,8 +20,18 @@ export interface User {
 
     local_pickup: boolean;
 
-    address: { country: string; province?: string; address1: string | undefined; address2?: string; postCode: string | undefined; city: string | undefined; phone: string | undefined };
-    diff_address: { active: boolean; country: string; province?: string; address1: string | undefined; address2?: string | undefined; postCode: string | undefined; city: string | undefined; phone: string | undefined };
+    address: { shipping_costs: number; country: string; province?: string; address1: string | undefined; address2?: string; postCode: string | undefined; city: string | undefined; phone: string | undefined };
+    diff_address: {
+        shipping_costs: number;
+        active: boolean;
+        country: string;
+        province?: string;
+        address1: string | undefined;
+        address2?: string | undefined;
+        postCode: string | undefined;
+        city: string | undefined;
+        phone: string | undefined;
+    };
 }
 
 export interface UserData {
@@ -34,18 +46,16 @@ export interface UserData {
     last_name: string;
     local_pickup: boolean;
     email: string;
-    address: { country: string; province?: string; address1: string | undefined; address2?: string | undefined; postCode: string | undefined; city: string | undefined; phone: string | undefined };
-    diff_address: { active: boolean; country: string; province?: string; address1: string | undefined; address2?: string; postCode: string | undefined; city: string | undefined; phone: string | undefined };
+    address: { shipping_costs: number; country: string; province?: string; address1: string | undefined; address2?: string | undefined; postCode: string | undefined; city: string | undefined; phone: string | undefined };
+    diff_address: { active: boolean; shipping_costs: number; country: string; province?: string; address1: string | undefined; address2?: string; postCode: string | undefined; city: string | undefined; phone: string | undefined };
 }
 
 export type User_Cart = Cart_Item[];
 
-export type Cart_Item = Watch_Item | Spare_Item;
+// export type Cart_Item = Watch_Item | Spare_Item | Ring_Item | Bracelet_Item | Necklace_Item;
+export type Cart_Item = CI;
 
-interface Watch_Item extends Watch {
-    quantity: number;
-}
-interface Spare_Item extends Spare {
+interface CI extends BaseItem {
     quantity: number;
 }
 

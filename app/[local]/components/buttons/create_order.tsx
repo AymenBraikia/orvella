@@ -25,7 +25,7 @@ export default function CreateOrderBtn({ enabled = true }: { enabled?: boolean }
     const validated = check_address();
 
     return (
-        <button type="button" onClick={async () => validated && (await create_order())} className={`button w-full mt-4 sm:text-base text-sm ${validated ? "" : "disabled"} `}>
+        <button type="button" onClick={async () => validated && (await create_order())} className={`button3 text-primary bg-gold hover:text-gold hover:bg-background w-full mt-4 sm:text-base text-sm ${validated ? "" : "disabled"} `}>
             {t("placeOrder")}
         </button>
     );

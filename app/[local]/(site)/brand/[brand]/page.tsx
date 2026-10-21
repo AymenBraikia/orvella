@@ -1,4 +1,4 @@
-import Watches_list from "@/app/components/watches_list";
+import Display_list from "@/app/components/display_list";
 import get_brand from "../get_brand";
 
 interface PageProps {
@@ -17,7 +17,7 @@ export default async function DynamicPage({ params }: PageProps) {
                 <h1 className="capitalize font-secondary">{brand}</h1>
                 <Description brand={brand} />
             </div>
-            {<Watches_list watches={data} />}
+            {<Display_list items={data} />}
         </div>
     );
 }

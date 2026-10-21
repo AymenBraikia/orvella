@@ -35,6 +35,11 @@
     },
     "common": {
         "brand": "ARVELL",
+        "watches": "Watches",
+        "rings": "Rings",
+        "necklaces": "Necklaces",
+        "bracelets": "Bracelets",
+        "explore": "explore more",
         "nav": {
             "watches": "Watches",
             "spareParts": "Spare Parts",
@@ -78,9 +83,10 @@
             "discover": "Discover",
             "add_to_cart": "add to cart",
             "adding_to_cart": "adding to cart",
+            "already_in_cart": "Already in Cart",
             "register": "register",
             "quick_view": "quick view",
-            "viewAllWatches": "View all watches",
+            "viewAllWatches": "View All",
             "begin": "Begin your journey",
             "bookNow": "Book now",
             "bookAppointment": "Book an appointment",
@@ -146,6 +152,7 @@
             "caseSize": "Case size",
             "bracelet": "Bracelet",
             "material": "Material",
+            "gemstones": "Gemstones",
             "details": "Details",
             "condition": "Condition"
         },
@@ -220,14 +227,17 @@
     },
     "home": {
         "heroTitle": "ARVELL",
-        "heroSubtitle": "Your partner for high-end watches",
+        "heroSubtitle": "Your Destination for Fine Jewelry & High-End Watches",
         "discover": "Discover",
         "newArrivalsHeading": "New Arrivals",
         "newArrivalsSubtext": "Our curated collection of pre-owned and new watches is waiting for you.",
-        "getInspiredHeading": "Get Inspired",
-        "getInspiredSubtext": "Your journey begins here. Take a minute to answer these questions, and we’ll help you figure out what your first step should be.",
-        "brandsHeading": "Iconic Brands",
+        "getInspiredHeading": "Curated For You",
+        "getInspiredSubtext": "Discover your signature style. Answer a few brief questions, and our atelier will match you with exceptional timepieces and fine jewelry tailored to your taste.",
+        "getInspiredCTA": "Begin Consultation",
+        "brandsHeading": "Iconic Watch Brands",
         "brandsSubtext": "Browse our collection of classic wrist watches from world-renowned watchmakers.",
+        "sectionsHeading": "Find your forever piece.",
+        "sectionsSubtext": "From iconic timepieces to the quiet brilliance of fine jewelry, find something that feels unmistakably yours.",
         "sellConsignCard": {
             "title": "Sell / Consign",
             "cta": "Learn more"
@@ -273,6 +283,13 @@
         },
         "closed": "Closed",
         "contactHeading": "Contact"
+    },
+    "trade": {
+        "heading": "Consignment & Trade",
+        "subHeading": "Wanna Sell or Trade Your Timepiece?",
+        "subText": "Turn your luxury watch or fine jewelry into instant capital or upgrade to your next dream piece. Get a fast, confidential, and professional valuation from our expert horologists today.",
+        "cta1": "get an instant offer",
+        "cta2": "learn how it works"
     },
     "sell": {
         "heading": "Sell/Consign",

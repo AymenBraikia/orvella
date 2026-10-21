@@ -30,9 +30,9 @@ export default function AtcBtn({ slug, children }: { slug: string; children?: Re
             onClick={is_in_cart ? undefined : handleClick}
             aria-label={t("add_to_cart")}
             type="button"
-            className={`button w-full h-fit p-4 active:scale-95 select-none transition-default flex-center capitalize ${is_in_cart || inserting ? "cursor-not-allowed brightness-75" : "cursor-pointer"}`}
+            className={`button3 bg-gold hover:text-background hover:bg-foreground w-full h-fit active:scale-95 select-none transition-default flex-center capitalize ${is_in_cart || inserting ? "cursor-not-allowed brightness-75" : "cursor-pointer"}`}
         >
-            {children ? children : inserting ? t("adding_to_cart") : t("add_to_cart")}
+            {is_in_cart ? t("already_in_cart") : children ? children : inserting ? t("adding_to_cart") : t("add_to_cart")}
         </button>
     );
 }

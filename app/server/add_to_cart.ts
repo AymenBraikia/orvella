@@ -20,7 +20,7 @@ export default async function addToCart(slug: string): Promise<boolean> {
         const newCart = user.cart.find((i) => i.slug == slug)
             ? {
                   $inc: {
-                      "$.cart.quanitity": 1,
+                      "$.cart.quantity": 1,
                   },
               }
             : { $push: { cart: { ...item, quantity: 1 } } };

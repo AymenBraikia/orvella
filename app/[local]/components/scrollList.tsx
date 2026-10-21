@@ -2,6 +2,7 @@
 
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Next from "./svg/next";
+import FadeInObserver from "./fade_wrapper";
 
 interface Breakpoints {
     base?: number;
@@ -171,7 +172,7 @@ export default function List({ children, display }: { children: React.ReactNode;
                             width: `calc(
                                 ${100 / currentDisplay}%
                                 - ${(gap * (currentDisplay - 1)) / currentDisplay}px
-                            )`,
+                                )`,
                         }}
                     >
                         {child}

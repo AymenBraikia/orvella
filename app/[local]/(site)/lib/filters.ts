@@ -1,7 +1,8 @@
 import type { Watch } from "@/types/watch";
 import type { Spare } from "@/types/spare";
+import type { Bracelet, Necklace, Ring } from "@/types/jewelry";
 
-export type Item = Watch | Spare;
+export type Item = Watch | Spare | Necklace | Ring | Bracelet;
 export type Bounds = { min: number; max: number };
 
 export const LIST_FACETS = ["brand", "condition", "movement", "caseMaterial", "braceletMaterial", "dialColor"] as const;
@@ -16,19 +17,15 @@ export type IncludesKey = (typeof INCLUDES_KEYS)[number];
 export type Dimension = ListFacet | RangeFacet | "includes" | "availability" | "query";
 
 const ALL_DIMENSIONS: Dimension[] = [...LIST_FACETS, ...RANGE_FACETS, "includes", "availability", "query"];
-
 const UNVERIFIED = "UNVERIFIED";
 
-/** What the catalogue actually contains. Derived once from the data. */
 export type Facets = {
     lists: Partial<Record<ListFacet, string[]>>;
     ranges: Partial<Record<RangeFacet, Bounds>>;
     includes: IncludesKey[];
-    /** Only true when the catalogue holds both in-stock and sold-out items. */
     hasStockSplit: boolean;
 };
 
-/** What the user has picked. An absent range means "untouched". */
 export type Selection = {
     lists: Partial<Record<ListFacet, string[]>>;
     ranges: Partial<Record<RangeFacet, [number, number]>>;
@@ -36,43 +33,47 @@ export type Selection = {
     inStockOnly: boolean;
 };
 
-/* ---------------------------------- accessors --------------------------- */
+function isWatchOrSpare(item: Item): item is Watch | Spare {
+    return item.type === "watch" || item.type === "spare";
+}
 
-function list_value(item: Item, facet: ListFacet): string {
+function list_value(item: Item, facet: ListFacet): string | undefined {
     switch (facet) {
         case "brand":
-            return item.brand;
+            return isWatchOrSpare(item) ? item.brand : undefined;
         case "condition":
             return item.condition;
         case "movement":
-            return item.movement;
+            return isWatchOrSpare(item) ? item.movement : undefined;
         case "caseMaterial":
-            return item.caseMaterial;
+            return isWatchOrSpare(item) ? item.caseMaterial : undefined;
         case "braceletMaterial":
-            return item.braceletMaterial;
+            return isWatchOrSpare(item) ? item.braceletMaterial : undefined;
         case "dialColor":
-            return item.dialColor;
+            return isWatchOrSpare(item) ? item.dialColor : undefined;
     }
 }
 
-function range_value(item: Item, facet: RangeFacet): number {
+function range_value(item: Item, facet: RangeFacet): number | undefined {
     switch (facet) {
         case "price":
             return item.price;
         case "caseDiameterMm":
-            return item.caseDiameterMm;
+            return isWatchOrSpare(item) ? item.caseDiameterMm : undefined;
         case "year":
-            return item.year;
+            return isWatchOrSpare(item) ? item.year : undefined;
         case "waterResistanceM":
-            return item.waterResistanceM;
+            return isWatchOrSpare(item) ? item.waterResistanceM : undefined;
     }
 }
 
-/* ---------------------------------- facets ------------------------------ */
+function box_papers(item: Item): Watch["boxPapers"] | undefined {
+    return isWatchOrSpare(item) ? item.boxPapers : undefined;
+}
 
 export function build_facets(items: Item[]): Facets {
-    const sets = Object.fromEntries(LIST_FACETS.map((f) => [f, new Set<string>()])) as Record<ListFacet, Set<string>>;
-    const ranges = Object.fromEntries(RANGE_FACETS.map((f) => [f, { min: Infinity, max: -Infinity }])) as Record<RangeFacet, Bounds>;
+    const sets = Object.fromEntries(LIST_FACETS.map((facet) => [facet, new Set<string>()])) as Record<ListFacet, Set<string>>;
+    const ranges = Object.fromEntries(RANGE_FACETS.map((facet) => [facet, { min: Infinity, max: -Infinity }])) as Record<RangeFacet, Bounds>;
     const includes = new Set<IncludesKey>();
 
     let inStock = 0;
@@ -87,15 +88,13 @@ export function build_facets(items: Item[]): Facets {
         for (const facet of RANGE_FACETS) {
             const value = range_value(item, facet);
             if (typeof value !== "number" || !Number.isFinite(value)) continue;
-
-            // Two separate ifs. The original used `if / else if`, so on the very
-            // first item the `if` always won and `max` was left at -Infinity.
             if (value < ranges[facet].min) ranges[facet].min = value;
             if (value > ranges[facet].max) ranges[facet].max = value;
         }
 
+        const extras = box_papers(item);
         for (const key of INCLUDES_KEYS) {
-            if (item.boxPapers?.[key]) includes.add(key);
+            if (extras?.[key]) includes.add(key);
         }
 
         if (item.inStock) inStock++;
@@ -104,7 +103,6 @@ export function build_facets(items: Item[]): Facets {
 
     const lists: Facets["lists"] = {};
     for (const facet of LIST_FACETS) {
-        // A facet with one value can't narrow anything, so don't show it.
         if (sets[facet].size > 1) lists[facet] = [...sets[facet]].sort(compare_option(facet));
     }
 
@@ -117,12 +115,11 @@ export function build_facets(items: Item[]): Facets {
     return {
         lists,
         ranges: usable_ranges,
-        includes: INCLUDES_KEYS.filter((k) => includes.has(k)),
+        includes: INCLUDES_KEYS.filter((key) => includes.has(key)),
         hasStockSplit: inStock > 0 && soldOut > 0,
     };
 }
 
-/** Movement and condition read better in a fixed order than alphabetically. */
 function compare_option(facet: ListFacet) {
     const fixed: Partial<Record<ListFacet, string[]>> = {
         condition: ["New", "Pre-Owned"],
@@ -138,15 +135,13 @@ function compare_option(facet: ListFacet) {
     };
 }
 
-/* --------------------------------- selection ---------------------------- */
-
 export function empty_selection(): Selection {
     return { lists: {}, ranges: {}, includes: [], inStockOnly: false };
 }
 
 export function toggle_list_value(selection: Selection, facet: ListFacet, value: string): Selection {
     const current = selection.lists[facet] ?? [];
-    const next = current.includes(value) ? current.filter((v) => v !== value) : [...current, value];
+    const next = current.includes(value) ? current.filter((entry) => entry !== value) : [...current, value];
 
     const lists = { ...selection.lists };
     if (next.length) lists[facet] = next;
@@ -156,11 +151,10 @@ export function toggle_list_value(selection: Selection, facet: ListFacet, value:
 }
 
 export function toggle_include(selection: Selection, key: IncludesKey): Selection {
-    const next = selection.includes.includes(key) ? selection.includes.filter((k) => k !== key) : [...selection.includes, key];
+    const next = selection.includes.includes(key) ? selection.includes.filter((entry) => entry !== key) : [...selection.includes, key];
     return { ...selection, includes: next };
 }
 
-/** Dropping back to the full bounds clears the range instead of storing a no-op. */
 export function set_range(selection: Selection, facet: RangeFacet, value: [number, number], facets: Facets): Selection {
     const bounds = facets.ranges[facet];
     const ranges = { ...selection.ranges };
@@ -172,17 +166,32 @@ export function set_range(selection: Selection, facet: RangeFacet, value: [numbe
 }
 
 export function count_active(selection: Selection): number {
-    const lists = Object.values(selection.lists).reduce((n, values) => n + (values?.length ?? 0), 0);
+    const lists = Object.values(selection.lists).reduce((count, values) => count + (values?.length ?? 0), 0);
     return lists + Object.keys(selection.ranges).length + selection.includes.length + (selection.inStockOnly ? 1 : 0);
 }
-
-/* --------------------------------- matching ----------------------------- */
 
 export function match_query(item: Item, query: string): boolean {
     const q = query.trim().toLowerCase();
     if (!q) return true;
 
-    const haystack = [item.brand, item.model, item.reference, item.caseMaterial, item.dialColor, item.movement, item.year?.toString() ?? ""].join(" ").toLowerCase();
+    const values: unknown[] = [item.slug, item.display_name, item.description, item.condition, item.gender, item.price, item.type];
+
+    if (isWatchOrSpare(item)) {
+        values.push(item.brand, item.brandSlug, item.model, item.reference, item.year, item.movement, item.caseMaterial, item.caseDiameterMm, item.braceletMaterial, item.dialColor, item.waterResistanceM);
+
+        if (item.type === "spare") values.push(item.partName, item.spareCategory, item.compatibleModels, item.tags);
+    } else {
+        values.push(item.weight, item.measurement_unit, item.metal_type, item.fineness, item.karats, item.stones);
+
+        if (item.type === "ring") values.push(item.ring_size, item.band_width);
+        else values.push(item.length, item.length_unit, item.clasp_type);
+    }
+
+    const haystack = values
+        .flatMap((value) => (Array.isArray(value) ? value : [value]))
+        .filter((value) => value !== undefined && value !== null)
+        .join(" ")
+        .toLowerCase();
 
     return q.split(/\s+/).every((term) => haystack.includes(term));
 }
@@ -190,14 +199,11 @@ export function match_query(item: Item, query: string): boolean {
 function matches(item: Item, dimension: Dimension, selection: Selection, query: string): boolean {
     if (dimension === "query") return match_query(item, query);
 
-    if (dimension === "availability") {
-        // Unticking must mean "no constraint", not "sold out only".
-        return !selection.inStockOnly || item.inStock;
-    }
+    if (dimension === "availability") return !selection.inStockOnly || item.inStock;
 
     if (dimension === "includes") {
-        // Every ticked extra must be present. Extras the watch also has are fine.
-        return selection.includes.every((key) => Boolean(item.boxPapers?.[key]));
+        const extras = box_papers(item);
+        return selection.includes.every((key) => Boolean(extras?.[key]));
     }
 
     if ((RANGE_FACETS as readonly string[]).includes(dimension)) {
@@ -206,27 +212,20 @@ function matches(item: Item, dimension: Dimension, selection: Selection, query: 
         if (!range) return true;
 
         const value = range_value(item, facet);
-        return value >= range[0] && value <= range[1];
+        return value !== undefined && value >= range[0] && value <= range[1];
     }
 
     const facet = dimension as ListFacet;
     const chosen = selection.lists[facet];
     if (!chosen?.length) return true;
 
-    // OR within a facet, AND across facets — the standard faceting contract.
-    return chosen.includes(list_value(item, facet));
+    const value = list_value(item, facet);
+    return value !== undefined && chosen.includes(value);
 }
 
-/**
- * `except` skips one dimension. That's what makes honest option counts possible:
- * counts for Brand are computed with every filter applied *but* Brand, so ticking
- * a second brand widens the results rather than showing zero everywhere.
- */
 export function apply_filters(items: Item[], selection: Selection, query: string, except?: Dimension): Item[] {
     return items.filter((item) => ALL_DIMENSIONS.every((dimension) => dimension === except || matches(item, dimension, selection, query)));
 }
-
-/* ----------------------------------- counts ----------------------------- */
 
 export type FacetCounts = {
     lists: Partial<Record<ListFacet, Record<string, number>>>;
@@ -241,23 +240,21 @@ export function facet_counts(items: Item[], facets: Facets, selection: Selection
         const values = facets.lists[facet];
         if (!values) continue;
 
-        const counts: Record<string, number> = Object.fromEntries(values.map((v) => [v, 0]));
+        const counts: Record<string, number> = Object.fromEntries(values.map((value) => [value, 0]));
         for (const item of apply_filters(items, selection, query, facet)) {
             const value = list_value(item, facet);
-            if (value in counts) counts[value]++;
+            if (value !== undefined && value in counts) counts[value]++;
         }
         lists[facet] = counts;
     }
 
     const includes_pool = apply_filters(items, selection, query, "includes");
-    const includes = Object.fromEntries(INCLUDES_KEYS.map((key) => [key, includes_pool.filter((item) => Boolean(item.boxPapers?.[key])).length])) as Record<IncludesKey, number>;
+    const includes = Object.fromEntries(INCLUDES_KEYS.map((key) => [key, includes_pool.filter((item) => Boolean(box_papers(item)?.[key])).length])) as Record<IncludesKey, number>;
 
     const inStock = apply_filters(items, selection, query, "availability").filter((item) => item.inStock).length;
 
     return { lists, includes, inStock };
 }
-
-/* ----------------------------------- chips ------------------------------ */
 
 export type ActiveChip = { kind: "list"; facet: ListFacet; value: string } | { kind: "range"; facet: RangeFacet; value: [number, number] } | { kind: "include"; value: IncludesKey } | { kind: "stock" };
 
@@ -293,8 +290,6 @@ export function remove_chip(selection: Selection, chip: ActiveChip): Selection {
     }
 }
 
-/* ---------------------------------- url sync ---------------------------- */
-
 export function selection_to_params(selection: Selection): URLSearchParams {
     const params = new URLSearchParams();
 
@@ -312,7 +307,6 @@ export function selection_to_params(selection: Selection): URLSearchParams {
     return params;
 }
 
-/** Values not present in the catalogue are dropped, so a stale link degrades quietly. */
 export function selection_from_params(params: URLSearchParams, facets: Facets): Selection {
     const selection = empty_selection();
 
@@ -321,7 +315,7 @@ export function selection_from_params(params: URLSearchParams, facets: Facets): 
         const allowed = facets.lists[facet];
         if (!raw || !allowed) continue;
 
-        const values = raw.split(",").filter((v) => allowed.includes(v));
+        const values = raw.split(",").filter((value) => allowed.includes(value));
         if (values.length) selection.lists[facet] = values;
     }
 
@@ -338,7 +332,7 @@ export function selection_from_params(params: URLSearchParams, facets: Facets): 
     }
 
     const includes = params.get("includes");
-    if (includes) selection.includes = includes.split(",").filter((k): k is IncludesKey => facets.includes.includes(k as IncludesKey));
+    if (includes) selection.includes = includes.split(",").filter((key): key is IncludesKey => facets.includes.includes(key as IncludesKey));
 
     selection.inStockOnly = params.get("inStock") === "1" && facets.hasStockSplit;
 

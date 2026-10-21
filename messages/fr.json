@@ -35,6 +35,11 @@
     },
     "common": {
         "brand": "ARVELL",
+        "watches": "montres",
+        "rings": "bagues",
+        "necklaces": "colliers",
+        "bracelets": "bracelets",
+        "explore": "en savoir plus",
         "nav": {
             "watches": "Montres",
             "spareParts": "Pièces détachées",
@@ -78,9 +83,10 @@
             "discover": "Découvrir",
             "add_to_cart": "ajouter au panier",
             "adding_to_cart": "ajout au panier",
+            "already_in_cart":"Déjà dans le panier",
             "register": "s'inscrire",
             "quick_view": "aperçu rapide",
-            "viewAllWatches": "Voir toutes les montres",
+            "viewAllWatches": "Tout voir",
             "begin": "Commencez votre parcours",
             "bookNow": "Réserver",
             "bookAppointment": "Prendre rendez-vous",
@@ -146,6 +152,7 @@
             "caseSize": "Taille du boîtier",
             "bracelet": "Bracelet",
             "material": "Matériau",
+            "gemstones": "Pierres précieuses",
             "details": "Détails",
             "condition": "État"
         },
@@ -220,14 +227,17 @@
     },
     "home": {
         "heroTitle": "ARVELL",
-        "heroSubtitle": "Votre partenaire pour les montres haut de gamme",
+        "heroSubtitle": "Votre destination pour la haute joaillerie et les montres de prestige",
         "discover": "Découvrir",
         "newArrivalsHeading": "Nouveautés",
         "newArrivalsSubtext": "Notre collection sélectionnée de montres neuves et d'occasion vous attend.",
-        "getInspiredHeading": "Inspirez-vous",
-        "getInspiredSubtext": "Votre parcours commence ici. Prenez une minute pour répondre à ces questions et nous vous aiderons à déterminer votre première étape.",
-        "brandsHeading": "Marques emblématiques",
+        "getInspiredHeading": "Sélectionné Pour Vous",
+        "getInspiredSubtext": "Découvrez votre style signature. Répondez à quelques questions rapides, et notre atelier sélectionnera pour vous des garde-temps d'exception et des bijoux raffinés adaptés à vos goûts.",
+        "getInspiredCTA": "Commencer la Consultation",
+        "brandsHeading": "Marques de Montres Iconiques",
         "brandsSubtext": "Parcourez notre collection de montres-bracelets classiques signées par des horlogers de renommée mondiale.",
+        "sectionsHeading": "Trouvez votre pièce pour la vie.",
+        "sectionsSubtext": "Des garde-temps iconiques me à l'éclat discret de la haute joaillerie, trouvez la pièce qui vous ressemble absolument.",
         "sellConsignCard": {
             "title": "Vendre / Déposer",
             "cta": "En savoir plus"
@@ -273,6 +283,13 @@
         },
         "closed": "Fermé",
         "contactHeading": "Contact"
+    },
+    "trade": {
+        "heading": "Dépôt-Vente & Échange",
+        "subHeading": "Vous souhaitez vendre ou échanger votre garde-temps ?",
+        "subText": "Transformez votre montre de luxe ou vos bijoux raffinés en capital instantané ou passez à la pièce de vos rêves. Obtenez dès aujourd'hui une estimation rapide, confidentielle et professionnelle par nos experts horlogers.",
+        "cta1": "obtenir une offre instantanée",
+        "cta2": "découvrir le fonctionnement"
     },
     "sell": {
         "heading": "Vendre / Déposer",

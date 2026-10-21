@@ -1,12 +1,11 @@
 import { unstable_cache } from "next/cache";
-import { Watch } from "@/types/watch";
-import { spares_collection, watches_collection } from "../db/collections";
-import type { Spare } from "../types/spare";
+import { items_collection } from "../db/collections";
+import { BaseItem } from "@/types/item";
 
 const options = { projection: { _id: 0 } };
 
-async function query_item(slug: string): Promise<Spare | Watch> {
-    const data = (await (await watches_collection()).findOne({ slug }, options)) || (await (await spares_collection()).findOne({ slug }, options));
+async function query_item(slug: string): Promise<BaseItem> {
+    const data = await (await items_collection()).findOne({ slug }, options);
     return data!;
 }
 

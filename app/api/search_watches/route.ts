@@ -1,5 +1,5 @@
 import { unstable_cache } from "next/cache";
-import { watches_collection } from "@/app/db/collections";
+import { items_collection } from "@/app/db/collections";
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { Watch } from "@/types/watch";
@@ -8,7 +8,7 @@ const SEARCH_PROJECTION = { _id: 0, slug: 1, brand: 1, model: 1, reference: 1, p
 
 async function query_search(query: string) {
     const data = await (
-        await watches_collection()
+        await items_collection()
     )
         .find({ $or: [{ brand: { $regex: query, $options: "i" } }, { model: { $regex: query, $options: "i" } }, { reference: { $regex: query, $options: "i" } }] }, { projection: SEARCH_PROJECTION })
         .limit(10)
@@ -34,7 +34,7 @@ export async function GET(req: NextRequest) {
 
     if (!ref || !watches.find((e: Watch) => e.preview == ref))
         return NextResponse.json(
-            watches.filter((e:Watch) => e.preview == undefined),
+            watches.filter((e: Watch) => e.preview == undefined),
             {
                 headers: { "Cache-Control": "public, s-maxage=300, stale-while-revalidate=3600" },
             },

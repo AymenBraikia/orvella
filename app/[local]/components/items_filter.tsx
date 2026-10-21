@@ -71,7 +71,7 @@ interface WatchFiltersProps {
     setOpen: (open: boolean) => void;
 }
 
-export default function WatchFilters({ facets, counts, selection, onChange, resultCount, open, setOpen }: WatchFiltersProps) {
+export default function ItemsFilter({ facets, counts, selection, onChange, resultCount, open, setOpen }: WatchFiltersProps) {
     const t = useTranslations("common.filters");
     const panel = useRef<HTMLDivElement>(null);
     const closeButton = useRef<HTMLButtonElement>(null);

@@ -34,7 +34,7 @@ export default function Input({ placeholder, label, type, required = false, name
 
     return (
         <div className={`w-full h-fit flex ${type == "radio" ? "items-center" : "flex-col items-start"} justify-center gap-2 ${allowed ? "" : "cursor-not-allowed! brightness-50"}`}>
-            <label className={`min-w-fit ${type == "radio" ? "w-full" : ""}`} htmlFor={label}>
+            <label className={`min-w-fit ${type == "radio" ? "w-full" : ""} text-gold`} htmlFor={label}>
                 {label + (required && type != "radio" ? "*" : "")}
             </label>
             <input

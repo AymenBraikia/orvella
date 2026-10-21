@@ -48,35 +48,35 @@ export default async function Order_list() {
         <div className="flex justify-start items-start flex-col gap-4 w-full h-fit font-secondary">
             <Items currency={currency} items={session.cart} />
 
-            <div className="w-full flex justify-between items-center mt-2 border-b">
+            <div className="w-full flex justify-between items-center mt-2 border-b text-gold">
                 <h5>{t("subtotal")}</h5>
                 <h5>{format_price(total, currency)}</h5>
             </div>
 
-            <div className="w-full flex flex-col justify-center items-start gap-4 border-b tracking-wider">
+            <div className="w-full flex flex-col justify-center items-start gap-4 border-b border-(--clr-gold) tracking-wider">
                 <Pickup_wrapper />
                 <div className={`w-full flex justify-between items-center ${local_pickup ? "line-through brightness-75" : ""}`}>
-                    <p>{t_cart("shipping_to", { country: session.address.country })}</p>
+                    <p className="">{t_cart("shipping_to", { country: session.address.country })}</p>
                     <p>{format_price(shipping.shipping_cost, currency)}</p>
                 </div>
                 <div className="w-full flex justify-between items-center">
-                    <p>{t("taxes")}</p>
+                    <p className="">{t("taxes")}</p>
                     <p>{format_price(0, currency)}</p>
                 </div>
                 <div className="w-full flex justify-between items-center">
-                    <p>
+                    <p className="">
                         {payments[payment_method as keyof typeof payments].name} {t("fee")}
                     </p>
                     <p>{format_price(payments[payment_method as keyof typeof payments].fee * total, currency)}</p>
                 </div>
 
-                <div className="w-full flex justify-between items-center">
+                <div className="w-full flex justify-between items-center text-gold">
                     <h5>{t_cart("total")}</h5>
                     <h5>{format_price(total + total * payments[payment_method as keyof typeof payments].fee + (local_pickup ? 0 : shipping.shipping_cost), currency)}</h5>
                 </div>
             </div>
 
-            <div className="w-full border-b">
+            <div className="w-full text-gold">
                 <h2>{t("payment")}</h2>
             </div>
             <Payment_Options default_option={payment_method} />
@@ -85,7 +85,7 @@ export default async function Order_list() {
             {payment_method == "Credit/Debit Card" && <Cards />}
             {payment_method == "PayPal" && <Paypal_component currency={currency} />}
 
-            <p className="text-secondary">{t("agreement")}</p>
+            <p className="text-shine">{t("agreement")}</p>
         </div>
     );
 }
