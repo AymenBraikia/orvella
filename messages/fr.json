@@ -71,8 +71,8 @@
             "withdrawal": "Rétractation",
             "disclaimer": "Avis de non-responsabilité",
             "cookiePolicy": "Politique relative aux cookies",
-            "disclaimerText": "Arvell est un revendeur indépendant, non affilié à une quelconque marque et n'est pas un revendeur agréé.",
-            "copyright": "©{year} Arvell. Tous droits réservés."
+            "disclaimerText": "Orvella est un revendeur indépendant, non affilié à une quelconque marque et n'est pas un revendeur agréé.",
+            "copyright": "©{year} Orvella. Tous droits réservés."
         },
         "contactLabels": {
             "phonePrimary": "Téléphone",
@@ -83,7 +83,7 @@
             "discover": "Découvrir",
             "add_to_cart": "ajouter au panier",
             "adding_to_cart": "ajout au panier",
-            "already_in_cart":"Déjà dans le panier",
+            "already_in_cart": "Déjà dans le panier",
             "register": "s'inscrire",
             "quick_view": "aperçu rapide",
             "viewAllWatches": "Tout voir",
@@ -263,7 +263,7 @@
         "title": "Pièces détachées"
     },
     "store": {
-        "heading": "Boutique Arvell Francfort",
+        "heading": "Boutique Orvella Francfort",
         "cta": "Prendre rendez-vous",
         "welcomeText": "Nous nous réjouissons de vous accueillir prochainement dans notre boutique.",
         "appointmentNote": "Merci de prendre rendez-vous afin de vous assurer que la montre que vous recherchez sera disponible lors de votre visite.",
@@ -294,7 +294,7 @@
     "sell": {
         "heading": "Vendre / Déposer",
         "formCtaHeading": "Remplissez le formulaire",
-        "formCtaText": "Les experts estimateurs d'Arvell établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
+        "formCtaText": "Les experts estimateurs d'Orvella établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
         "beginCta": "Commencer",
         "howItWorksHeading": "Comment ça marche",
         "consign": {
@@ -325,7 +325,7 @@
         },
         "sellDirect": {
             "heading": "Vendre",
-            "intro": "Les experts estimateurs d'Arvell établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
+            "intro": "Les experts estimateurs d'Orvella établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
             "steps": [
                 {
                     "title": "Communiquez les détails de votre montre",
@@ -347,7 +347,7 @@
         },
         "form": {
             "heading": "Dépôt-vente / Vendre votre montre",
-            "intro": "Les experts estimateurs d'Arvell établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
+            "intro": "Les experts estimateurs d'Orvella établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
             "sections": {
                 "personalInformation": "Informations personnelles",
                 "salePreference": "Préférence de vente",
@@ -375,7 +375,7 @@
     },
     "polish": {
         "heading": "Polissage et service",
-        "intro": "Chez Arvell, nous proposons un service de polissage et de réparation de premier ordre pour les grandes marques telles que Rolex, IWC, Tudor, Omega et Cartier. Notre horloger expérimenté remettra votre montre en parfait état – du polissage de précision à l'entretien professionnel.",
+        "intro": "Chez Orvella, nous proposons un service de polissage et de réparation de premier ordre pour les grandes marques telles que Rolex, IWC, Tudor, Omega et Cartier. Notre horloger expérimenté remettra votre montre en parfait état – du polissage de précision à l'entretien professionnel.",
         "servicesHeading": "Nos services en un coup d'œil :",
         "polishing": {
             "heading": "Polissage & remise en état :",
@@ -419,8 +419,8 @@
     "about": {
         "heading": "À propos",
         "paragraphs": [
-            "Notre histoire a commencé par une étincelle : une montre élégante portée par un légendaire agent britannique, qui a éveillé chez notre fondateur, Aymen Braikia, une passion de toute une vie. Cette fascination pour l'horlogerie a transformé Aymen, jeune passionné, en un négociant reconnu de montres haut de gamme. En 2019, alors qu'il poursuivait ses études d'ingénieur en mécanique, il a fondé Arvell, transformant son obsession en une entreprise florissante dédiée aux montres-bracelets emblématiques.",
-            "Chez Arvell, nous sommes vos experts de confiance pour des montres d'exception, neuves comme d'occasion. Notre expertise est portée par la passion : nous ne proposons que les plus belles pièces, chacune étant une montre que nous porterions nous-mêmes avec fierté. Notre horloger interne inspecte méticuleusement chaque montre afin d'en garantir l'authenticité et le fonctionnement optimal, pour que vous achetiez en toute confiance.",
+            "Notre histoire a commencé par une étincelle : une montre élégante portée par un légendaire agent britannique, qui a éveillé chez notre fondateur, Aymen Braikia, une passion de toute une vie. Cette fascination pour l'horlogerie a transformé Aymen, jeune passionné, en un négociant reconnu de montres haut de gamme. En 2019, alors qu'il poursuivait ses études d'ingénieur en mécanique, il a fondé Orvella, transformant son obsession en une entreprise florissante dédiée aux montres-bracelets emblématiques.",
+            "Chez Orvella, nous sommes vos experts de confiance pour des montres d'exception, neuves comme d'occasion. Notre expertise est portée par la passion : nous ne proposons que les plus belles pièces, chacune étant une montre que nous porterions nous-mêmes avec fierté. Notre horloger interne inspecte méticuleusement chaque montre afin d'en garantir l'authenticité et le fonctionnement optimal, pour que vous achetiez en toute confiance.",
             "Notre équipe et notre horloger interne inspectent minutieusement chaque montre avant sa vente afin d'en garantir l'authenticité et la performance.",
             "Vous souhaitez enrichir votre collection ? Nous proposons une sélection impressionnante de marques prestigieuses.",
             "Nos marques : Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling et bien d'autres",
@@ -583,7 +583,7 @@
     },
     "imprint": {
         "heading": "Mentions légales",
-        "companyLabel": "Arvell",
+        "companyLabel": "Orvella",
         "phoneLabel": "Numéro de téléphone :",
         "emailLabel": "E-mail :",
         "vatIdLabel": "Numéro d'identification à la TVA :",
@@ -605,7 +605,7 @@
             "sections": {
                 "controller": {
                     "heading": "Informations nous concernant en tant que responsables du traitement de vos données",
-                    "text": "La partie responsable de ce site web (le « responsable du traitement ») au sens de la législation sur la protection des données est Arvell, représentée par son propriétaire. Les coordonnées figurent dans les mentions légales."
+                    "text": "La partie responsable de ce site web (le « responsable du traitement ») au sens de la législation sur la protection des données est Orvella, représentée par son propriétaire. Les coordonnées figurent dans les mentions légales."
                 },
                 "rights": {
                     "heading": "Les droits des utilisateurs et des personnes concernées",
@@ -1481,9 +1481,9 @@
             "title": "Voyez à quoi ressemblent vos vraies montres<br></br><span>ici.</span>",
             "description": "Pas d'appel commercial de 60 minutes. Envoyez le lien de votre stock actuel ou trois pièces que vous vendez activement. Je m'occupe du reste.",
             "sendStock": "Réservez votre démonstration personnalisée",
-            "floatingCta": "Réservez la démo personnalisée d'Arvell",
+            "floatingCta": "Réservez la démo personnalisée d'Orvella",
             "openStorefront": "Ouvrir la vitrine",
-            "credit": "Aymen · Arvell"
+            "credit": "Aymen · Orvella"
         },
         "nav": {
             "back": "Retour à la vitrine",

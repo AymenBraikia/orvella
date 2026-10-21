@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     creator: "Aymen Braikia",
     publisher: "Aymen Braikia",
 
-    metadataBase: new URL("https://arvell.vercel.app/"),
+    metadataBase: new URL("https://orvella.vercel.app/"),
     alternates: {
         canonical: "/en",
         languages: {
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Luxury Watch Platform Concept",
         description: "A full-stack e-commerce concept for the luxury watch trade — consignment, appointments, multilingual UX.",
-        url: "https://arvell.vercel.app/en",
+        url: "https://orvella.vercel.app/en",
         siteName: "ARVELL",
         images: [
             {
@@ -132,7 +132,6 @@ export default async function RootLayout({
     params: Promise<{ local: string }>;
 }>) {
     const { local } = await params;
-
 
     const direction = getDirection(local);
 

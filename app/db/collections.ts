@@ -16,8 +16,8 @@ export async function db() {
         console.clear();
         console.log("Connecting to db...");
         client = await clientPromise;
-        return client.db("arvell");
-    } else return client.db("arvell");
+        return client.db("orvella");
+    } else return client.db("orvella");
 }
 
 export const items_collection = async () => (await db()).collection<Item>("items");

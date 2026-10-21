@@ -19,7 +19,7 @@ export default function Sidebar({ name }: { name: string }) {
     return (
         <aside className="md:w-60 md:min-h-dvh shrink-0 border-b md:border-b-0 md:border-r border-(--foreground)/15 p-5 flex md:flex-col gap-4 md:gap-6 items-center md:items-stretch justify-between">
             <div className="hidden md:block">
-                <p className="font-secondary tracking-[0.2em] text-lg">{params.get("ref") || "Arvell"}</p>
+                <p className="font-secondary tracking-[0.2em] text-lg">{params.get("ref") || "Orvella"}</p>
                 <p className="text-xs opacity-50 mt-1">Signed in as {name}</p>
             </div>
 

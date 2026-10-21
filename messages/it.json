@@ -71,8 +71,8 @@
             "withdrawal": "Recesso",
             "disclaimer": "Esclusione di responsabilità",
             "cookiePolicy": "Cookie policy",
-            "disclaimerText": "Arvell è un rivenditore indipendente, non affiliato ad alcun altro marchio e non è un rivenditore autorizzato.",
-            "copyright": "©{year} Arvell. Tutti i diritti riservati."
+            "disclaimerText": "Orvella è un rivenditore indipendente, non affiliato ad alcun altro marchio e non è un rivenditore autorizzato.",
+            "copyright": "©{year} Orvella. Tutti i diritti riservati."
         },
         "contactLabels": {
             "phonePrimary": "Telefono",
@@ -152,7 +152,7 @@
             "caseSize": "Dimensione della cassa",
             "bracelet": "Bracciale",
             "material": "Materiale",
-             "gemstones": "Pietre preziose",
+            "gemstones": "Pietre preziose",
             "details": "Dettagli",
             "condition": "Condizione"
         },
@@ -200,7 +200,7 @@
             "password": "Password",
             "firstNamePlaceholder": "Jordan",
             "lastNamePlaceholder": "Blake",
-            "emailPlaceholder": "Jordan@arvell.com",
+            "emailPlaceholder": "Jordan@orvella.com",
             "passwordPlaceholder": "Almeno 8 caratteri",
             "agree": "accetto i Termini di servizio e l'Informativa sulla privacy",
             "createAccount": "Crea account",
@@ -216,7 +216,7 @@
             "description": "Salva gli esemplari che stai seguendo, tieni traccia delle offerte e concludi l'acquisto più rapidamente la prossima volta.",
             "email": "E-mail",
             "password": "Password",
-            "emailPlaceholder": "Jordan@arvell.com",
+            "emailPlaceholder": "Jordan@orvella.com",
             "passwordPlaceholder": "Almeno 8 caratteri",
             "logIn": "Accedi",
             "loggingIn": "Accesso in corso…",
@@ -263,7 +263,7 @@
         "title": "Ricambi"
     },
     "store": {
-        "heading": "Negozio Arvell Francoforte",
+        "heading": "Negozio Orvella Francoforte",
         "cta": "Prenota un appuntamento",
         "welcomeText": "Saremo lieti di accoglierti presto nel nostro negozio.",
         "appointmentNote": "Ti preghiamo di fissare un appuntamento per assicurarti che l'orologio che stai cercando sia disponibile al momento della tua visita.",
@@ -294,7 +294,7 @@
     "sell": {
         "heading": "Vendi / Conto vendita",
         "formCtaHeading": "Compila il modulo",
-        "formCtaText": "I periti esperti di Arvell forniscono valutazioni rapide e dettagliate, così da permetterti di ottenere il massimo dalla tua vendita.",
+        "formCtaText": "I periti esperti di Orvella forniscono valutazioni rapide e dettagliate, così da permetterti di ottenere il massimo dalla tua vendita.",
         "beginCta": "Inizia",
         "howItWorksHeading": "Come funziona",
         "consign": {
@@ -325,7 +325,7 @@
         },
         "sellDirect": {
             "heading": "Vendi",
-            "intro": "I periti esperti di Arvell forniscono valutazioni rapide e dettagliate, così da permetterti di ottenere il massimo dalla tua vendita.",
+            "intro": "I periti esperti di Orvella forniscono valutazioni rapide e dettagliate, così da permetterti di ottenere il massimo dalla tua vendita.",
             "steps": [
                 {
                     "title": "Fornisci i dettagli del tuo orologio",
@@ -347,7 +347,7 @@
         },
         "form": {
             "heading": "Conto vendita / Vendi il tuo orologio",
-            "intro": "I periti esperti di Arvell forniscono valutazioni rapide e dettagliate, così da permetterti di ottenere il massimo dalla tua vendita.",
+            "intro": "I periti esperti di Orvella forniscono valutazioni rapide e dettagliate, così da permetterti di ottenere il massimo dalla tua vendita.",
             "sections": {
                 "personalInformation": "Dati personali",
                 "salePreference": "Preferenza di vendita",
@@ -375,7 +375,7 @@
     },
     "polish": {
         "heading": "Lucidatura e assistenza",
-        "intro": "In Arvell offriamo un servizio di lucidatura e riparazione di prim'ordine per marchi di alto livello come Rolex, IWC, Tudor, Omega e Cartier. Il nostro orologiaio esperto rimetterà il tuo orologio in condizioni ottimali, dalla lucidatura di precisione alla manutenzione professionale.",
+        "intro": "In Orvella offriamo un servizio di lucidatura e riparazione di prim'ordine per marchi di alto livello come Rolex, IWC, Tudor, Omega e Cartier. Il nostro orologiaio esperto rimetterà il tuo orologio in condizioni ottimali, dalla lucidatura di precisione alla manutenzione professionale.",
         "servicesHeading": "I nostri servizi in sintesi:",
         "polishing": {
             "heading": "Lucidatura e ripristino:",
@@ -419,8 +419,8 @@
     "about": {
         "heading": "Chi siamo",
         "paragraphs": [
-            "La nostra storia è nata da una scintilla: un elegante segnatempo indossato da un leggendario agente britannico che ha acceso nel nostro fondatore, Aymen Braikia, una passione destinata a durare tutta la vita. Questo fascino per l'orologeria ha trasformato Aymen da giovane appassionato in un affermato rivenditore di orologi di alta gamma. Nel 2019, mentre studiava ingegneria meccanica, ha fondato Arvell, trasformando la sua ossessione in un'attività fiorente dedicata agli orologi da polso più iconici.",
-            "In Arvell siamo i tuoi esperti di fiducia per segnatempo pregiati, nuovi e usati. La nostra competenza nasce dalla passione: proponiamo soltanto orologi eccellenti, ognuno dei quali indosseremmo con orgoglio noi stessi. Il nostro orologiaio interno esamina meticolosamente ogni orologio per garantirne l'autenticità e il funzionamento ottimale, offrendoti la massima sicurezza nell'acquisto.",
+            "La nostra storia è nata da una scintilla: un elegante segnatempo indossato da un leggendario agente britannico che ha acceso nel nostro fondatore, Aymen Braikia, una passione destinata a durare tutta la vita. Questo fascino per l'orologeria ha trasformato Aymen da giovane appassionato in un affermato rivenditore di orologi di alta gamma. Nel 2019, mentre studiava ingegneria meccanica, ha fondato Orvella, trasformando la sua ossessione in un'attività fiorente dedicata agli orologi da polso più iconici.",
+            "In Orvella siamo i tuoi esperti di fiducia per segnatempo pregiati, nuovi e usati. La nostra competenza nasce dalla passione: proponiamo soltanto orologi eccellenti, ognuno dei quali indosseremmo con orgoglio noi stessi. Il nostro orologiaio interno esamina meticolosamente ogni orologio per garantirne l'autenticità e il funzionamento ottimale, offrendoti la massima sicurezza nell'acquisto.",
             "Il nostro team e il nostro orologiaio interno esaminano meticolosamente ogni orologio prima della vendita per garantirne l'autenticità e le prestazioni.",
             "Vuoi arricchire la tua collezione? Offriamo una selezione straordinaria di marchi prestigiosi.",
             "I nostri marchi: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling e molti altri",
@@ -583,7 +583,7 @@
     },
     "imprint": {
         "heading": "Note legali",
-        "companyLabel": "Arvell",
+        "companyLabel": "Orvella",
         "phoneLabel": "Numero di telefono:",
         "emailLabel": "E-mail:",
         "vatIdLabel": "Partita IVA:",
@@ -605,7 +605,7 @@
             "sections": {
                 "controller": {
                     "heading": "Informazioni su di noi in qualità di titolari del trattamento dei tuoi dati",
-                    "text": "Il soggetto responsabile di questo sito web (il «titolare del trattamento») ai fini della normativa sulla protezione dei dati è Arvell, rappresentata dal suo titolare. I dati di contatto sono indicati nelle note legali."
+                    "text": "Il soggetto responsabile di questo sito web (il «titolare del trattamento») ai fini della normativa sulla protezione dei dati è Orvella, rappresentata dal suo titolare. I dati di contatto sono indicati nelle note legali."
                 },
                 "rights": {
                     "heading": "I diritti degli utenti e degli interessati",
@@ -1476,9 +1476,9 @@
             "title": "Guarda come appaiono i tuoi orologi reali<br></br><span>qui.</span>",
             "description": "Nessuna call commerciale di 60 minuti. Invia il link al tuo stock attuale o tre pezzi che stai vendendo. Al resto penso io.",
             "sendStock": "Prenota la tua demo personalizzata",
-            "floatingCta": "Prenota la demo personalizzata di Arvell",
+            "floatingCta": "Prenota la demo personalizzata di Orvella",
             "openStorefront": "Apri lo store",
-            "credit": "Aymen · Arvell"
+            "credit": "Aymen · Orvella"
         },
         "nav": {
             "back": "Torna allo store",

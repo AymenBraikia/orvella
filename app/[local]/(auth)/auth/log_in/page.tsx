@@ -43,7 +43,7 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
         <div className="relative w-full max-w-md flex-center flex-col gap-4 rounded-2xl border border-(--bg-primary) p-6 sm:p-10">
             <div className="flex-center">
                 <Link aria-label={"home"} href={"/"} className="relative aspect-video w-30">
-                    <Image src={"/logo_dark.png"} alt={params.ref || "Arvell"} fill className={`object-cover object-center bright-img `} />
+                    <Image src={"/logo_dark.png"} alt={params.ref || "Orvella"} fill className={`object-cover object-center bright-img `} />
                 </Link>
             </div>
 

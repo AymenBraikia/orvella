@@ -71,8 +71,8 @@
             "withdrawal": "Widerruf",
             "disclaimer": "Haftungsausschluss",
             "cookiePolicy": "Cookie-Richtlinie",
-            "disclaimerText": "Arvell ist ein unabhängiger Händler und weder mit einer anderen Marke verbunden noch ein autorisierter Wiederverkäufer.",
-            "copyright": "©{year} Arvell. Alle Rechte vorbehalten."
+            "disclaimerText": "Orvella ist ein unabhängiger Händler und weder mit einer anderen Marke verbunden noch ein autorisierter Wiederverkäufer.",
+            "copyright": "©{year} Orvella. Alle Rechte vorbehalten."
         },
         "contactLabels": {
             "phonePrimary": "Telefon",
@@ -262,7 +262,7 @@
         "title": "Ersatzteile"
     },
     "store": {
-        "heading": "Arvell Speichern Frankfurt",
+        "heading": "Orvella Speichern Frankfurt",
         "cta": "Termin buchen",
         "welcomeText": "Wir freuen uns darauf, Sie bald in unserem Geschäft begrüßen zu dürfen.",
         "appointmentNote": "Bitte vereinbaren Sie einen Termin, damit sichergestellt ist, dass die von Ihnen gesuchte Uhr zum Zeitpunkt Ihres Besuchs verfügbar ist.",
@@ -293,7 +293,7 @@
     "sell": {
         "heading": "Verkaufen / Kommissionieren",
         "formCtaHeading": "Formular ausfüllen",
-        "formCtaText": "Die Experten von Arvell erstellen schnell und detailliert eine Bewertung, damit Sie das Beste aus Ihrem Verkauf herausholen können.",
+        "formCtaText": "Die Experten von Orvella erstellen schnell und detailliert eine Bewertung, damit Sie das Beste aus Ihrem Verkauf herausholen können.",
         "beginCta": "Starten",
         "howItWorksHeading": "So funktioniert es",
         "consign": {
@@ -324,7 +324,7 @@
         },
         "sellDirect": {
             "heading": "Verkaufen",
-            "intro": "Die Experten von Arvell erstellen schnell und detailliert eine Bewertung, damit Sie das Beste aus Ihrem Verkauf herausholen können.",
+            "intro": "Die Experten von Orvella erstellen schnell und detailliert eine Bewertung, damit Sie das Beste aus Ihrem Verkauf herausholen können.",
             "steps": [
                 {
                     "title": "Angaben zu Ihrer Uhr machen",
@@ -346,7 +346,7 @@
         },
         "form": {
             "heading": "Kommission / Ihre Uhr verkaufen",
-            "intro": "Die Experten von Arvell erstellen schnell und detailliert eine Bewertung, damit Sie das Beste aus Ihrem Verkauf herausholen können.",
+            "intro": "Die Experten von Orvella erstellen schnell und detailliert eine Bewertung, damit Sie das Beste aus Ihrem Verkauf herausholen können.",
             "sections": {
                 "personalInformation": "Persönliche Daten",
                 "salePreference": "Verkaufsart",
@@ -374,7 +374,7 @@
     },
     "polish": {
         "heading": "Politur und Service",
-        "intro": "Bei Arvell bieten wir einen erstklassigen Politur- und Reparaturservice für renommierte Marken wie Rolex, IWC, Tudor, Omega und Cartier. Unser erfahrener Uhrmacher bringt Ihre Uhr wieder in Bestform – von präziser Politur bis hin zur professionellen Wartung.",
+        "intro": "Bei Orvella bieten wir einen erstklassigen Politur- und Reparaturservice für renommierte Marken wie Rolex, IWC, Tudor, Omega und Cartier. Unser erfahrener Uhrmacher bringt Ihre Uhr wieder in Bestform – von präziser Politur bis hin zur professionellen Wartung.",
         "servicesHeading": "Unsere Leistungen im Überblick:",
         "polishing": {
             "heading": "Politur & Aufarbeitung:",
@@ -418,8 +418,8 @@
     "about": {
         "heading": "Über uns",
         "paragraphs": [
-            "Unsere Geschichte begann mit einem Funken – einer eleganten Uhr, die von einem legendären britischen Agenten getragen wurde und bei unserem Gründer Aymen Braikia eine lebenslange Leidenschaft entfachte. Diese Faszination für die Uhrmacherei führte Aymen vom jungen Enthusiasten zu einem angesehenen Händler hochwertiger Zeitmesser. Im Jahr 2019 gründete er während seines Maschinenbaustudiums Arvell und verwandelte seine Begeisterung in ein erfolgreiches Geschäft, das sich ikonischen Armbanduhren widmet.",
-            "Bei Arvell sind wir Ihre vertrauenswürdigen Experten für exquisite neue und gebrauchte Zeitmesser. Unsere Expertise wird von Leidenschaft angetrieben: Wir bieten ausschließlich feinste Zeitmesser an – jede einzelne Uhr ist eine Uhr, die wir selbst mit Stolz tragen würden. Unser hauseigener Uhrmacher prüft jede Uhr sorgfältig auf Echtheit und einwandfreie Funktion, damit Sie mit Vertrauen kaufen können.",
+            "Unsere Geschichte begann mit einem Funken – einer eleganten Uhr, die von einem legendären britischen Agenten getragen wurde und bei unserem Gründer Aymen Braikia eine lebenslange Leidenschaft entfachte. Diese Faszination für die Uhrmacherei führte Aymen vom jungen Enthusiasten zu einem angesehenen Händler hochwertiger Zeitmesser. Im Jahr 2019 gründete er während seines Maschinenbaustudiums Orvella und verwandelte seine Begeisterung in ein erfolgreiches Geschäft, das sich ikonischen Armbanduhren widmet.",
+            "Bei Orvella sind wir Ihre vertrauenswürdigen Experten für exquisite neue und gebrauchte Zeitmesser. Unsere Expertise wird von Leidenschaft angetrieben: Wir bieten ausschließlich feinste Zeitmesser an – jede einzelne Uhr ist eine Uhr, die wir selbst mit Stolz tragen würden. Unser hauseigener Uhrmacher prüft jede Uhr sorgfältig auf Echtheit und einwandfreie Funktion, damit Sie mit Vertrauen kaufen können.",
             "Unser Team und unser hauseigener Uhrmacher prüfen jede Uhr vor dem Verkauf sorgfältig, um ihre Echtheit und Funktion zu gewährleisten.",
             "Sie möchten Ihre Sammlung erweitern? Wir bieten eine beeindruckende Auswahl renommierter Marken.",
             "Unsere Marken: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling und mehr",
@@ -582,7 +582,7 @@
     },
     "imprint": {
         "heading": "Impressum",
-        "companyLabel": "Arvell",
+        "companyLabel": "Orvella",
         "phoneLabel": "Telefonnummer:",
         "emailLabel": "E-Mail:",
         "vatIdLabel": "Umsatzsteuer-Identifikationsnummer:",
@@ -604,7 +604,7 @@
             "sections": {
                 "controller": {
                     "heading": "Informationen über uns als Verantwortliche",
-                    "text": "Verantwortlicher für diese Website im Sinne des Datenschutzrechts ist Arvell, vertreten durch den Inhaber. Die Kontaktdaten sind im Impressum aufgeführt."
+                    "text": "Verantwortlicher für diese Website im Sinne des Datenschutzrechts ist Orvella, vertreten durch den Inhaber. Die Kontaktdaten sind im Impressum aufgeführt."
                 },
                 "rights": {
                     "heading": "Rechte der Nutzer und betroffenen Personen",
@@ -1475,9 +1475,9 @@
             "title": "Sehen Sie, wie Ihre echten Uhren<br></br><span>hier aussehen.</span>",
             "description": "Kein 60-minütiges Verkaufsgespräch. Senden Sie den Link zu Ihrem aktuellen Bestand oder drei Stücke, die Sie aktiv verkaufen. Ich kümmere mich um den Rest.",
             "sendStock": "Vereinbaren Sie Ihre individuelle Demo",
-            "floatingCta": "Buche Arvell's Custom Demo",
+            "floatingCta": "Buche Orvella's Custom Demo",
             "openStorefront": "Store öffnen",
-            "credit": "Aymen · Arvell"
+            "credit": "Aymen · Orvella"
         },
         "nav": {
             "back": "Zurück zum Store",

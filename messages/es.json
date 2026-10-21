@@ -71,8 +71,8 @@
             "withdrawal": "Desistimiento",
             "disclaimer": "Aviso de responsabilidad",
             "cookiePolicy": "Política de cookies",
-            "disclaimerText": "Arvell es un distribuidor independiente, no está afiliado a ninguna otra marca ni es un distribuidor autorizado.",
-            "copyright": "©{year} Arvell. Todos los derechos reservados."
+            "disclaimerText": "Orvella es un distribuidor independiente, no está afiliado a ninguna otra marca ni es un distribuidor autorizado.",
+            "copyright": "©{year} Orvella. Todos los derechos reservados."
         },
         "contactLabels": {
             "phonePrimary": "Teléfono",
@@ -262,7 +262,7 @@
         "title": "Recambios"
     },
     "store": {
-        "heading": "Tienda Arvell Frankfurt",
+        "heading": "Tienda Orvella Frankfurt",
         "cta": "Reservar una cita",
         "welcomeText": "Estaremos encantados de recibirle pronto en nuestra tienda.",
         "appointmentNote": "Le rogamos que concierte una cita para asegurarse de que el reloj que busca esté disponible en el momento de su visita.",
@@ -293,7 +293,7 @@
     "sell": {
         "heading": "Vender/Consignar",
         "formCtaHeading": "Rellene el formulario",
-        "formCtaText": "Los tasadores expertos de Arvell elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
+        "formCtaText": "Los tasadores expertos de Orvella elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
         "beginCta": "Comenzar",
         "howItWorksHeading": "Cómo funciona",
         "consign": {
@@ -324,7 +324,7 @@
         },
         "sellDirect": {
             "heading": "Vender",
-            "intro": "Los tasadores expertos de Arvell elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
+            "intro": "Los tasadores expertos de Orvella elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
             "steps": [
                 {
                     "title": "Facilítenos los datos de su reloj",
@@ -346,7 +346,7 @@
         },
         "form": {
             "heading": "Consignación / Venda su reloj",
-            "intro": "Los tasadores expertos de Arvell elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
+            "intro": "Los tasadores expertos de Orvella elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
             "sections": {
                 "personalInformation": "Datos personales",
                 "salePreference": "Preferencia de venta",
@@ -374,7 +374,7 @@
     },
     "polish": {
         "heading": "Pulido y servicio",
-        "intro": "En Arvell ofrecemos un servicio de pulido y reparación de primer nivel para marcas de primera categoría como Rolex, IWC, Tudor, Omega y Cartier. Nuestro relojero, con amplia experiencia, dejará su reloj en perfecto estado: desde el pulido de precisión hasta el mantenimiento profesional.",
+        "intro": "En Orvella ofrecemos un servicio de pulido y reparación de primer nivel para marcas de primera categoría como Rolex, IWC, Tudor, Omega y Cartier. Nuestro relojero, con amplia experiencia, dejará su reloj en perfecto estado: desde el pulido de precisión hasta el mantenimiento profesional.",
         "servicesHeading": "Nuestros servicios de un vistazo:",
         "polishing": {
             "heading": "Pulido y restauración:",
@@ -418,8 +418,8 @@
     "about": {
         "heading": "Sobre nosotros",
         "paragraphs": [
-            "Nuestra historia empezó con una chispa: el elegante reloj que lucía un legendario agente británico encendió una pasión para toda la vida en nuestro fundador, Aymen Braikia. Esa fascinación por la relojería convirtió a Aymen, de joven aficionado, en un distinguido comerciante de relojes de alta gama. En 2019, mientras cursaba sus estudios de ingeniería mecánica, fundó Arvell y transformó su obsesión en un negocio próspero dedicado a los relojes de pulsera más icónicos.",
-            "En Arvell somos sus expertos de confianza en relojes excepcionales, tanto nuevos como de segunda mano. Nuestro conocimiento nace de la pasión: solo ofrecemos las mejores piezas, cada una de ellas un reloj que nosotros mismos llevaríamos con orgullo. Nuestro relojero interno inspecciona minuciosamente cada reloj para garantizar su autenticidad y su óptimo funcionamiento, de modo que usted compre con total confianza.",
+            "Nuestra historia empezó con una chispa: el elegante reloj que lucía un legendario agente británico encendió una pasión para toda la vida en nuestro fundador, Aymen Braikia. Esa fascinación por la relojería convirtió a Aymen, de joven aficionado, en un distinguido comerciante de relojes de alta gama. En 2019, mientras cursaba sus estudios de ingeniería mecánica, fundó Orvella y transformó su obsesión en un negocio próspero dedicado a los relojes de pulsera más icónicos.",
+            "En Orvella somos sus expertos de confianza en relojes excepcionales, tanto nuevos como de segunda mano. Nuestro conocimiento nace de la pasión: solo ofrecemos las mejores piezas, cada una de ellas un reloj que nosotros mismos llevaríamos con orgullo. Nuestro relojero interno inspecciona minuciosamente cada reloj para garantizar su autenticidad y su óptimo funcionamiento, de modo que usted compre con total confianza.",
             "Nuestro equipo y nuestro relojero interno revisan con detalle cada reloj antes de venderlo para garantizar su autenticidad y su correcto funcionamiento.",
             "¿Quiere ampliar su colección? Le ofrecemos una impresionante selección de marcas prestigiosas.",
             "Nuestras marcas: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling y muchas más.",
@@ -529,7 +529,7 @@
                     },
                     {
                         "q": "¿Pueden verificar la autenticidad de un reloj?",
-                        "a": "No ofrecemos la autentificación de relojes que no se hayan comprado en Arvell."
+                        "a": "No ofrecemos la autentificación de relojes que no se hayan comprado en Orvella."
                     },
                     {
                         "q": "¿Puedo traerles mi reloj para su servicio y mantenimiento?",
@@ -582,7 +582,7 @@
     },
     "imprint": {
         "heading": "Aviso legal",
-        "companyLabel": "Arvell",
+        "companyLabel": "Orvella",
         "phoneLabel": "Teléfono:",
         "emailLabel": "Correo electrónico:",
         "vatIdLabel": "Número de identificación a efectos del IVA:",
@@ -604,7 +604,7 @@
             "sections": {
                 "controller": {
                     "heading": "Información sobre nosotros como responsables del tratamiento de sus datos",
-                    "text": "La parte responsable de este sitio web (el “responsable del tratamiento”) a efectos de la normativa de protección de datos es Arvell, representada por su propietario. Los datos de contacto figuran en el Aviso legal."
+                    "text": "La parte responsable de este sitio web (el “responsable del tratamiento”) a efectos de la normativa de protección de datos es Orvella, representada por su propietario. Los datos de contacto figuran en el Aviso legal."
                 },
                 "rights": {
                     "heading": "Los derechos de los usuarios y los interesados",
@@ -1478,9 +1478,9 @@
             "title": "Mira cómo quedan tus relojes reales<br></br><span>aquí.</span>",
             "description": "No hay llamada de ventas de 60 minutos. Envía el enlace de tu stock actual o tres piezas que estés vendiendo. Yo me encargo del resto.",
             "sendStock": "Reserva tu demostración personalizada",
-            "floatingCta": "Reserva la demo personalizada de Arvell",
+            "floatingCta": "Reserva la demo personalizada de Orvella",
             "openStorefront": "Abrir la tienda",
-            "credit": "Aymen · Arvell"
+            "credit": "Aymen · Orvella"
         },
         "nav": {
             "back": "Volver a la tienda",

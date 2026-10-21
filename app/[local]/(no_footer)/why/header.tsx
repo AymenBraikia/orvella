@@ -11,8 +11,8 @@ export default async function Header() {
                 {t("back")}
             </Link>
             <Link aria-label={"home"} href={"/"} className="relative aspect-square w-8 md:aspect-video md:w-25">
-                <Image src={"/logo_dark.png"} sizes="(max-width: 768px) 175px, 200px" alt="Arvell" fill className={`md:block hidden object-cover object-center dark:brightness-100 brightness-0 `} />
-                <Image src={"/logo_dark_compact.png"} sizes="(max-width: 768px) 175px, 200px" alt="Arvell" fill className={`md:hidden block object-cover object-center dark:brightness-100 brightness-0 `} />
+                <Image src={"/logo_dark.png"} sizes="(max-width: 768px) 175px, 200px" alt="Orvella" fill className={`md:block hidden object-cover object-center dark:brightness-100 brightness-0 `} />
+                <Image src={"/logo_dark_compact.png"} sizes="(max-width: 768px) 175px, 200px" alt="Orvella" fill className={`md:hidden block object-cover object-center dark:brightness-100 brightness-0 `} />
             </Link>
             <Link aria-label={"see the next step"} href={"#cta"} className="min-w-fit w-25 sm:w-fit whitespace-nowrap text-xs sm:text-sm sm:button2 font-normal md:text-base ">
                 {t("nextStep")}

@@ -7,17 +7,16 @@ import { getDirection } from "@/i18n/direction";
 
 const tajawal = Tajawal({
     subsets: ["arabic"],
-    weight: ["200", "300", "400", "500", "700","800","900"],
+    weight: ["200", "300", "400", "500", "700", "800", "900"],
     variable: "--font-sans",
     display: "swap",
 });
 const lateef = Lateef({
     subsets: ["arabic"],
-    weight: ["200", "300", "400", "500", "600", "700","800"],
+    weight: ["200", "300", "400", "500", "600", "700", "800"],
     variable: "--font-primary",
     display: "swap",
 });
-
 
 const openSans = Open_Sans({
     subsets: ["latin"],
@@ -41,11 +40,11 @@ export const metadata: Metadata = {
     keywords: ["luxury watches", "pre-owned Rolex", "Patek Philippe Calatrava", "Cartier Panthere", "Rolex Daytona", "buy luxury watches", "watch consultancy", "ARVELL"],
     authors: [{ name: "ARVELL" }],
     creator: "ARVELL",
-    metadataBase: new URL("https://arvell.vercel.app/"),
+    metadataBase: new URL("https://orvella.vercel.app/"),
     openGraph: {
         title: "ARVELL | High-End Luxury Watches & Expert Consultancy",
         description: "Our curated collection of pre-owned and new luxury watches is waiting for you. Partner with experts for your high-end horology needs.",
-        url: "https://arvell.vercel.app/",
+        url: "https://orvella.vercel.app/",
         siteName: "ARVELL",
         images: [
             {
@@ -77,12 +76,12 @@ export default async function AuthLayout({
     children: React.ReactNode;
     params: Promise<{ local: string }>;
 }>) {
-        const { local } = await params;
-    
-        const direction = getDirection(local);
-    
-        const fonts_classes = direction == "ltr" ? `${openSans.variable} ${cormorantGaramond.variable}` : `${lateef.variable} ${tajawal.variable}`;
-    
+    const { local } = await params;
+
+    const direction = getDirection(local);
+
+    const fonts_classes = direction == "ltr" ? `${openSans.variable} ${cormorantGaramond.variable}` : `${lateef.variable} ${tajawal.variable}`;
+
     return (
         <html lang={local} dir={direction} className={`${fonts_classes} h-full antialiased`} suppressHydrationWarning>
             <body className="font-sans">

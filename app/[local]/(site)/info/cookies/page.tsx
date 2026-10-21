@@ -145,7 +145,7 @@ export default async function CookiesPage({ params }: Props) {
                         <p>{t("contact.intro")}</p>
 
                         <p>Aymen Braikia</p>
-                        <p>{ref || "Arvell"}</p>
+                        <p>{ref || "Orvella"}</p>
                         <p>Walther-von-Cronberg-Platz 18</p>
                         <p>60594 Frankfurt am Main</p>
                         <p>Germany</p>

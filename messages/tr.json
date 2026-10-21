@@ -71,8 +71,8 @@
             "withdrawal": "Cayma Hakkı",
             "disclaimer": "Sorumluluk Reddi",
             "cookiePolicy": "Çerez Politikası",
-            "disclaimerText": "Arvell bağımsız bir satıcıdır; herhangi bir markayla bağlantısı yoktur ve yetkili satıcı değildir.",
-            "copyright": "©{year} Arvell. Tüm hakları saklıdır."
+            "disclaimerText": "Orvella bağımsız bir satıcıdır; herhangi bir markayla bağlantısı yoktur ve yetkili satıcı değildir.",
+            "copyright": "©{year} Orvella. Tüm hakları saklıdır."
         },
         "contactLabels": {
             "phonePrimary": "Telefon",
@@ -200,7 +200,7 @@
             "password": "Şifre",
             "firstNamePlaceholder": "Jordan",
             "lastNamePlaceholder": "Blake",
-            "emailPlaceholder": "Jordan@arvell.com",
+            "emailPlaceholder": "Jordan@orvella.com",
             "passwordPlaceholder": "En az 8 karakter",
             "agree": "Hizmet Şartları'nı ve Gizlilik Politikası'nı kabul ediyorum",
             "createAccount": "Hesap oluştur",
@@ -216,7 +216,7 @@
             "description": "İlgilendiğiniz parçaları kaydedin, teklifleri takip edin ve bir dahaki sefere daha hızlı alışveriş yapın.",
             "email": "E-posta",
             "password": "Şifre",
-            "emailPlaceholder": "Jordan@arvell.com",
+            "emailPlaceholder": "Jordan@orvella.com",
             "passwordPlaceholder": "En az 8 karakter",
             "logIn": "Giriş yap",
             "loggingIn": "Giriş yapılıyor…",
@@ -263,7 +263,7 @@
         "title": "Yedek Parçalar"
     },
     "store": {
-        "heading": "Arvell Mağazası Frankfurt",
+        "heading": "Orvella Mağazası Frankfurt",
         "cta": "Randevu alın",
         "welcomeText": "Sizi yakında mağazamızda ağırlamayı dört gözle bekliyoruz.",
         "appointmentNote": "Aradığınız saatin ziyaretiniz sırasında hazır olduğundan emin olmak için lütfen randevu alın.",
@@ -295,7 +295,7 @@
     "sell": {
         "heading": "Sat / Konsinye",
         "formCtaHeading": "Formu doldurun",
-        "formCtaText": "Arvell'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+        "formCtaText": "Orvella'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
         "beginCta": "Başlayın",
         "howItWorksHeading": "Nasıl çalışır",
         "consign": {
@@ -326,7 +326,7 @@
         },
         "sellDirect": {
             "heading": "Sat",
-            "intro": "Arvell'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+            "intro": "Orvella'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
             "steps": [
                 {
                     "title": "Saatinizle İlgili Bilgileri Paylaşın",
@@ -348,7 +348,7 @@
         },
         "form": {
             "heading": "Konsinye / Saatinizi Satın",
-            "intro": "Arvell'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+            "intro": "Orvella'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
             "sections": {
                 "personalInformation": "Kişisel Bilgiler",
                 "salePreference": "Satış tercihi",
@@ -376,7 +376,7 @@
     },
     "polish": {
         "heading": "Parlatma ve Servis",
-        "intro": "Arvell olarak Rolex, IWC, Tudor, Omega ve Cartier gibi üst segment markalar için birinci sınıf parlatma ve onarım hizmeti sunuyoruz. Deneyimli saat ustamız, hassas parlatmadan profesyonel bakıma kadar saatinizi en iyi haline getirir.",
+        "intro": "Orvella olarak Rolex, IWC, Tudor, Omega ve Cartier gibi üst segment markalar için birinci sınıf parlatma ve onarım hizmeti sunuyoruz. Deneyimli saat ustamız, hassas parlatmadan profesyonel bakıma kadar saatinizi en iyi haline getirir.",
         "servicesHeading": "Hizmetlerimize genel bakış:",
         "polishing": {
             "heading": "Parlatma ve yenileme:",
@@ -420,8 +420,8 @@
     "about": {
         "heading": "Hakkımızda",
         "paragraphs": [
-            "Hikâyemiz bir kıvılcımla başladı: efsanevi bir İngiliz ajanının taktığı zarif bir saat, kurucumuz Aymen Braikia'da ömür boyu sürecek bir tutku uyandırdı. Saatçiliğe duyduğu bu hayranlık, Aymen'i genç bir meraklıdan üst segment saatlerin saygın bir satıcısına dönüştürdü. 2019'da, makine mühendisliği eğitimini sürdürürken Arvell'i kurdu ve tutkusunu ikonik kol saatlerine adanmış, hızla büyüyen bir işletmeye dönüştürdü.",
-            "Arvell'de, hem sıfır hem de ikinci el seçkin saatler için güvenilir uzmanınızız. Uzmanlığımızın arkasında tutku var: yalnızca en iyi saatleri sunuyoruz; her biri kendi kolumuzda gururla taşıyacağımız parçalar. Kendi bünyemizdeki saat ustamız, orijinalliğinden ve en iyi performansından emin olmak için her saati titizlikle inceler; böylece alışverişinizden içiniz rahat eder.",
+            "Hikâyemiz bir kıvılcımla başladı: efsanevi bir İngiliz ajanının taktığı zarif bir saat, kurucumuz Aymen Braikia'da ömür boyu sürecek bir tutku uyandırdı. Saatçiliğe duyduğu bu hayranlık, Aymen'i genç bir meraklıdan üst segment saatlerin saygın bir satıcısına dönüştürdü. 2019'da, makine mühendisliği eğitimini sürdürürken Orvella'i kurdu ve tutkusunu ikonik kol saatlerine adanmış, hızla büyüyen bir işletmeye dönüştürdü.",
+            "Orvella'de, hem sıfır hem de ikinci el seçkin saatler için güvenilir uzmanınızız. Uzmanlığımızın arkasında tutku var: yalnızca en iyi saatleri sunuyoruz; her biri kendi kolumuzda gururla taşıyacağımız parçalar. Kendi bünyemizdeki saat ustamız, orijinalliğinden ve en iyi performansından emin olmak için her saati titizlikle inceler; böylece alışverişinizden içiniz rahat eder.",
             "Ekibimiz ve bünyemizdeki saat ustamız, orijinalliğini ve performansını garanti altına almak için her saati satıştan önce titizlikle inceler.",
             "Koleksiyonunuza yeni bir parça mı eklemek istiyorsunuz? Prestijli markalardan oluşan etkileyici bir seçki sunuyoruz.",
             "Markalarımız: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling ve daha fazlası",
@@ -584,7 +584,7 @@
     },
     "imprint": {
         "heading": "Künye",
-        "companyLabel": "Arvell",
+        "companyLabel": "Orvella",
         "phoneLabel": "Telefon numarası:",
         "emailLabel": "E-posta:",
         "vatIdLabel": "Katma değer vergisi kimlik numarası:",
@@ -606,7 +606,7 @@
             "sections": {
                 "controller": {
                     "heading": "Verilerinizin veri sorumlusu olarak bizimle ilgili bilgiler",
-                    "text": "Veri koruma mevzuatı bakımından bu web sitesinden sorumlu taraf (“veri sorumlusu”), sahibi tarafından temsil edilen Arvell'dir. İletişim bilgileri Künye bölümünde yer almaktadır."
+                    "text": "Veri koruma mevzuatı bakımından bu web sitesinden sorumlu taraf (“veri sorumlusu”), sahibi tarafından temsil edilen Orvella'dir. İletişim bilgileri Künye bölümünde yer almaktadır."
                 },
                 "rights": {
                     "heading": "Kullanıcıların ve ilgili kişilerin hakları",
@@ -1477,9 +1477,9 @@
             "title": "Gerçek saatlerinizin<br></br><span>burada nasıl göründüğünü görün.</span>",
             "description": "60 dakikalık satış görüşmesi yok. Mevcut stok bağlantınızı veya aktif olarak sattığınız üç parçayı gönderin. Gerisini ben hallederim.",
             "sendStock": "Size Özel Demonuzu Ayırtın",
-            "floatingCta": "Arvell'in Özel Demosu İçin Randevu Alın",
+            "floatingCta": "Orvella'in Özel Demosu İçin Randevu Alın",
             "openStorefront": "Mağazayı aç",
-            "credit": "Aymen · Arvell"
+            "credit": "Aymen · Orvella"
         },
         "nav": {
             "back": "Vitrine dön",

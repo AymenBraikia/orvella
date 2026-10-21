@@ -81,7 +81,7 @@ export default async function StorePage({ params }: Props) {
                             <div className="flex justify-between items-start flex-col text-sm">
                                 <p>+213 559 07 8448</p>
                                 <p>+213 559 07 8448</p>
-                                <p>info@{ref || "arvell"}.com</p>
+                                <p>info@{ref || "orvella"}.com</p>
                             </div>
                         </div>
                     </div>

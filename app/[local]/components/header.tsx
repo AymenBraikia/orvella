@@ -188,7 +188,6 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
         setCurrency(currencies_map.get(currency)!);
     }, [currency]);
 
-
     const [ui, dispatch] = useReducer(headerReducer, initialUIState);
     const cartRef = useRef<HTMLDivElement>(null);
     const navRef = useRef<HTMLElement>(null);
@@ -330,8 +329,8 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
 
                     <div className="w-1/3 flex-center">
                         <Link aria-label={"home"} href={"/"} className="relative aspect-square sm:aspect-video w-8 sm:w-25">
-                            <Image src={"/logo_dark.png"} sizes="(max-width: 768px) 175px, 200px" alt="Arvell" fill className={`object-cover object-center dark:brightness-100 brightness-0 hidden sm:block `} />
-                            <Image src={"/logo_dark_compact.png"} sizes="100px" alt="Arvell" fill className={`object-cover object-center dark:brightness-100 brightness-0 sm:hidden `} />
+                            <Image src={"/logo_dark.png"} sizes="(max-width: 768px) 175px, 200px" alt="Orvella" fill className={`object-cover object-center dark:brightness-100 brightness-0 hidden sm:block `} />
+                            <Image src={"/logo_dark_compact.png"} sizes="100px" alt="Orvella" fill className={`object-cover object-center dark:brightness-100 brightness-0 sm:hidden `} />
                         </Link>
                     </div>
 

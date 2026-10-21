@@ -74,7 +74,7 @@ export async function create_order(): Promise<string> {
             purchase_units: [
                 {
                     reference_id: ref_id,
-                    description: "arvell",
+                    description: "orvella",
                     items,
 
                     amount: {
@@ -93,14 +93,14 @@ export async function create_order(): Promise<string> {
                     },
 
                     application_context: {
-                        brand_name: "arvell",
+                        brand_name: "orvella",
                         locale: "en-US",
                         landing_page: "LOGIN",
                         shipping_preference: "NO_SHIPPING",
                         user_action: "PAY_NOW",
 
-                        return_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://arvell.vercel.app") + "/thank_you/",
-                        cancel_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://arvell.vercel.app") + "/cart/",
+                        return_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://orvella.vercel.app") + "/thank_you/",
+                        cancel_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://orvella.vercel.app") + "/cart/",
                     },
                 },
             ],

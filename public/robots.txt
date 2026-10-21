@@ -8,4 +8,4 @@ Disallow: /api/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://arvell.vercel.app/sitemap.xml
+Sitemap: https://orvella.vercel.app/sitemap.xml

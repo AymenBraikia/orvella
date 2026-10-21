@@ -19,7 +19,7 @@ export default function Footer() {
             <section className="w-full lg:h-75 lg:flex-row flex-col flex justify-between lg:items-center items-start">
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
                     <div className="relative w-40 aspect-19/4">
-                        <Image src={"/logo_horizontal_light.png"} sizes="300px" alt={params.get("ref") || "Arvell"} fill className={`object-cover object-center bright-img`} />
+                        <Image src={"/logo_horizontal_light.png"} sizes="300px" alt={params.get("ref") || "Orvella"} fill className={`object-cover object-center bright-img`} />
                     </div>
                     <ul className="flex flex-col justify-start items-start gap-2 tracking-wider">
                         <li>Marie-Curie-Straße 14</li>

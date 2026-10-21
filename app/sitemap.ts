@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import get_items from "./server/get_items";
 
-const baseUrl = "https://arvell.vercel.app";
+const baseUrl = "https://orvella.vercel.app";
 
 const locales = ["en", "de"] as const;
 

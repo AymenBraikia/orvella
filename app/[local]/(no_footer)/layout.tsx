@@ -12,17 +12,16 @@ import Header from "./why/header";
 
 const tajawal = Tajawal({
     subsets: ["arabic"],
-    weight: ["200", "300", "400", "500", "700","800","900"],
+    weight: ["200", "300", "400", "500", "700", "800", "900"],
     variable: "--font-sans",
     display: "swap",
 });
 const lateef = Lateef({
     subsets: ["arabic"],
-    weight: ["200", "300", "400", "500", "600", "700","800"],
+    weight: ["200", "300", "400", "500", "600", "700", "800"],
     variable: "--font-primary",
     display: "swap",
 });
-
 
 const openSans = Open_Sans({
     subsets: ["latin"],
@@ -53,7 +52,7 @@ export const metadata: Metadata = {
     creator: "Aymen Braikia",
     publisher: "Aymen Braikia",
 
-    metadataBase: new URL("https://arvell.vercel.app/"),
+    metadataBase: new URL("https://orvella.vercel.app/"),
     alternates: {
         canonical: "/en",
         languages: {
@@ -63,7 +62,7 @@ export const metadata: Metadata = {
             fr: "/fr",
             it: "/it",
             es: "/es",
-            ar: '/ar',
+            ar: "/ar",
         },
     },
     robots: {
@@ -81,7 +80,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Luxury Watch Platform Concept",
         description: "A full-stack e-commerce concept for the luxury watch trade — consignment, appointments, multilingual UX.",
-        url: "https://arvell.vercel.app/en",
+        url: "https://orvella.vercel.app/en",
         siteName: "ARVELL",
         images: [
             {
@@ -133,7 +132,6 @@ export default async function NoFooterLayout({
     const direction = getDirection(local);
 
     const fonts_classes = direction == "ltr" ? `${openSans.variable} ${gelasio.variable} ${cormorantGaramond.variable}` : `${lateef.variable} ${tajawal.variable}`;
-
 
     return (
         <html lang={local} dir={direction} className={`${fonts_classes} h-full antialiased`} suppressHydrationWarning>
