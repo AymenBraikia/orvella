@@ -1,3 +1,4 @@
+import { Item } from "@/app/(site)/lib/filters";
 import { BaseItem } from "./item";
 import { Bracelet, Necklace, Ring } from "./jewelry";
 import { Order } from "./order";
@@ -52,11 +53,8 @@ export interface UserData {
 
 export type User_Cart = Cart_Item[];
 
-// export type Cart_Item = Watch_Item | Spare_Item | Ring_Item | Bracelet_Item | Necklace_Item;
-export type Cart_Item = CI;
-
-interface CI extends BaseItem {
+export type Cart_Item = Item & {
     quantity: number;
-}
+};
 
 export type UpdateUserProps = Partial<User>;

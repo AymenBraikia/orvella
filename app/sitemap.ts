@@ -3,7 +3,7 @@ import get_items from "./server/get_items";
 
 const baseUrl = "https://orvella.vercel.app";
 
-const locales = ["en", "de"] as const;
+const locales = ["en", "de", "es", "ar", "it", "tr", "fr"] as const;
 
 const routes = [
     "",
@@ -30,7 +30,7 @@ const routes = [
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const now = new Date();
 
-    const watches = await get_items();
+    const watches = (await get_items()).filter((e) => e.type == "watch");
 
     const staticPages: MetadataRoute.Sitemap = locales.flatMap((locale) =>
         routes.map((route) => ({

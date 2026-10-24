@@ -6,11 +6,11 @@ import Input from "@/app/components/elements/input";
 import { useRouter } from "next/navigation";
 import Log_in from "../actions/log_in";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 export default function LoginPage({ searchParams }: { searchParams: Promise<{ redirect?: string; ref?: string }> }) {
     const params = use(searchParams);
     const t = useTranslations("auth.login");
+        const t2 = useTranslations("home");
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -42,12 +42,12 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
     return (
         <div className="relative w-full max-w-md flex-center flex-col gap-4 rounded-2xl border border-(--bg-primary) p-6 sm:p-10">
             <div className="flex-center">
-                <Link aria-label={"home"} href={"/"} className="relative aspect-video w-30">
-                    <Image src={"/logo_dark.png"} alt={params.ref || "Orvella"} fill className={`object-cover object-center bright-img `} />
+                <Link aria-label={"home"} href={"/"} className="w-fit text-gold font-primary text-2xl">
+                    {t2("heroTitle")}
                 </Link>
             </div>
 
-            <h1 className="text-center font-secondary">{t("title")}</h1>
+            <h4 className="text-center font-secondary">{t("title")}</h4>
 
             <p className="text-sm leading-relaxed text-secondary">{t("description")}</p>
 

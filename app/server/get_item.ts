@@ -1,10 +1,10 @@
 import { unstable_cache } from "next/cache";
 import { items_collection } from "../db/collections";
-import { BaseItem } from "@/types/item";
+import { Item } from "@/app/(site)/lib/filters";
 
 const options = { projection: { _id: 0 } };
 
-async function query_item(slug: string): Promise<BaseItem> {
+async function query_item(slug: string): Promise<Item> {
     const data = await (await items_collection()).findOne({ slug }, options);
     return data!;
 }

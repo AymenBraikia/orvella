@@ -7,11 +7,11 @@ import CheckBox from "@/app/components/elements/checkbox";
 import Sign_up from "../actions/sign_up";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 export default function SignUpPage({ searchParams }: { searchParams: Promise<{ redirect?: string; ref?: string }> }) {
     const params = use(searchParams);
     const t = useTranslations("auth.signUp");
+    const t2 = useTranslations("home");
 
     const [agreed, setAgreed] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -48,12 +48,12 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
     return (
         <div className="relative w-full max-w-md flex-center flex-col gap-4 rounded-2xl border border-(--bg-primary) p-6 sm:p-10">
             <div className="flex-center">
-                <Link aria-label={"home"} href={"/"} className="relative aspect-video w-30">
-                    <Image src={"/logo_dark.png"} alt={params.ref || "Orvella"} fill className={`object-cover object-center bright-img `} />
+                <Link aria-label={"home"} href={"/"} className="w-fit text-gold font-primary text-2xl">
+                    {t2("heroTitle")}
                 </Link>
             </div>
 
-            <h1 className="text-center font-secondary">{t("title")}</h1>
+            <h4 className="text-center font-secondary">{t("title")}</h4>
 
             <p className="text-sm leading-relaxed text-secondary">{t("description")}</p>
 

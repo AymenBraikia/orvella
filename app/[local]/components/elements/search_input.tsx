@@ -66,7 +66,11 @@ export default function Search_input({ route, SearchChildComponent, placeholder,
                 ) : value ? (
                     <div className="absolute hidden md:flex-center top-[calc(100%+8px)] inset-s-0 w-full min-w-100 max-w-100 h-fit max-h-100 overflow-y-auto font-secondary py-2 bg-background">
                         {fetching ? (
-                            <div className="w-full h-fit flex flex-col justify-start items-start">{Array.from({length:5}).map((e,i)=><SearchChildLoader key={i}/>)}</div>
+                            <div className="w-full h-fit flex flex-col justify-start items-start">
+                                {Array.from({ length: 5 }).map((e, i) => (
+                                    <SearchChildLoader key={i} />
+                                ))}
+                            </div>
                         ) : (
                             t("noSearchResults")
                         )}
@@ -91,7 +95,11 @@ export default function Search_input({ route, SearchChildComponent, placeholder,
                     ) : value ? (
                         <div className="flex md:hidden top-[calc(100%+8px)] inset-s-0 w-full h-fit overflow-y-auto font-secondary py-2 text-shine">
                             {fetching ? (
-                                <div className="w-full h-fit flex flex-col justify-start items-start">{Array.from({length:5}).map((e,i)=><SearchChildLoader key={i}/>)}</div>
+                                <div className="w-full h-fit flex flex-col justify-start items-start">
+                                    {Array.from({ length: 5 }).map((e, i) => (
+                                        <SearchChildLoader key={i} />
+                                    ))}
+                                </div>
                             ) : (
                                 t("noSearchResults")
                             )}

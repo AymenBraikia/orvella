@@ -25,16 +25,16 @@
         "browse": "Scopri la collezione"
     },
     "meta": {
-        "siteName": "ARVELL",
-        "titleDefault": "ARVELL | Orologi di lusso di alta gamma e consulenza di esperti",
+        "siteName": "ORVELLA",
+        "titleDefault": "ORVELLA | Orologi di lusso di alta gamma e consulenza di esperti",
         "description": "Scopri la nostra collezione selezionata di orologi di lusso nuovi e usati in condizioni impeccabili, tra cui Rolex, Patek Philippe e Cartier. Prenota oggi stesso una consulenza professionale con i nostri esperti di orologeria.",
-        "keywords": ["orologi di lusso", "Rolex usati", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "comprare orologi di lusso", "consulenza orologiera", "ARVELL"],
+        "keywords": ["orologi di lusso", "Rolex usati", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "comprare orologi di lusso", "consulenza orologiera", "ORVELLA"],
         "ogDescription": "La nostra collezione selezionata di orologi di lusso nuovi e usati ti aspetta. Affidati ai nostri esperti per ogni esigenza di alta orologeria.",
-        "ogImageAlt": "Collezione di orologi di lusso ARVELL",
+        "ogImageAlt": "Collezione di orologi di lusso ORVELLA",
         "twitterDescription": "Il tuo partner per gli orologi di alta gamma. Scopri Rolex, Patek Philippe e Cartier e prenota un appuntamento con i nostri esperti."
     },
     "common": {
-        "brand": "ARVELL",
+        "brand": "ORVELLA",
         "watches": "orologi",
         "rings": "anelli",
         "necklaces": "collane",
@@ -154,6 +154,10 @@
             "material": "Materiale",
             "gemstones": "Pietre preziose",
             "details": "Dettagli",
+            "weight": "peso",
+            "length": "lunghezza",
+            "bandWidth": "larghezza del cinturino",
+            "size": "taglia",
             "condition": "Condizione"
         },
         "formFields": {
@@ -226,7 +230,7 @@
         }
     },
     "home": {
-        "heroTitle": "ARVELL",
+        "heroTitle": "ORVELLA",
         "heroSubtitle": "La tua destinazione per l'alta gioielleria e gli orologi di lusso",
         "discover": "Scopri",
         "newArrivalsHeading": "Nuovi arrivi",

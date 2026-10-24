@@ -26,16 +26,16 @@
         "browse": "تصفّح المجموعة"
     },
     "meta": {
-        "siteName": "ARVELL",
-        "titleDefault": "ARVELL | ساعات فاخرة راقية واستشارات متخصصة",
+        "siteName": "ORVELLA",
+        "titleDefault": "ORVELLA | ساعات فاخرة راقية واستشارات متخصصة",
         "description": "اكتشف مجموعتنا المنتقاة من الساعات الفاخرة الجديدة والمستعملة بحالة ممتازة، بما في ذلك رولكس وباتيك فيليب وكارتييه. احجز اليوم استشارة احترافية مع خبراء صناعة الساعات لدينا.",
-        "keywords": ["ساعات فاخرة", "رولكس مستعملة", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "شراء ساعات فاخرة", "استشارات الساعات", "ARVELL"],
+        "keywords": ["ساعات فاخرة", "رولكس مستعملة", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "شراء ساعات فاخرة", "استشارات الساعات", "ORVELLA"],
         "ogDescription": "مجموعتنا المنتقاة من الساعات الفاخرة الجديدة والمستعملة في انتظارك. تعاون مع الخبراء لتلبية احتياجاتك في عالم الساعات الراقية.",
-        "ogImageAlt": "مجموعة ARVELL للساعات الفاخرة",
+        "ogImageAlt": "مجموعة ORVELLA للساعات الفاخرة",
         "twitterDescription": "شريكك في عالم الساعات الراقية. اكتشف رولكس وباتيك فيليب وكارتييه، واحجز موعدًا مع خبرائنا."
     },
     "common": {
-        "brand": "ARVELL",
+        "brand": "ORVELLA",
         "watches": "ساعات",
         "rings": "خواتم",
         "necklaces": "قلائد",
@@ -155,6 +155,10 @@
             "material": "المادة",
             "gemstones": "الأحجار الكريمة",
             "details": "التفاصيل",
+            "weight": "الوزن",
+            "length": "الطول",
+            "bandWidth": "عرض السوار",
+            "size": "المقاس",
             "condition": "الحالة"
         },
         "formFields": {
@@ -227,7 +231,7 @@
         }
     },
     "home": {
-        "heroTitle": "ARVELL",
+        "heroTitle": "ORVELLA",
         "heroSubtitle": "وجهتك الأولى للمجوهرات الرفيعة والساعات الفاخرة",
         "discover": "اكتشف",
         "newArrivalsHeading": "أحدث الإضافات",

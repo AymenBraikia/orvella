@@ -149,8 +149,8 @@ export default async function CookiesPage({ params }: Props) {
                         <p>Walther-von-Cronberg-Platz 18</p>
                         <p>60594 Frankfurt am Main</p>
                         <p>Germany</p>
-                        <p>Website: https://{ref || "arvell"}.com</p>
-                        <p>Email: info@{ref || "arvell"}.com</p>
+                        <p>Website: https://{ref || "orvella"}.com</p>
+                        <p>Email: info@{ref || "orvella"}.com</p>
                         <p>{common("contactLabels.phonePrimary")}: +4915255443810</p>
 
                         <p className="mt-2">

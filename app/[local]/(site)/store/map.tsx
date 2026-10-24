@@ -1,5 +1,5 @@
 export default function Map() {
-    const address = encodeURIComponent("ARVELL, Marie-Curie-Straße 14, 60439 Frankfurt am Main, Germany");
+    const address = encodeURIComponent("ORVELLA, Marie-Curie-Straße 14, 60439 Frankfurt am Main, Germany");
     return (
         <div className="w-full overflow-hidden ">
             <iframe
@@ -10,7 +10,7 @@ export default function Map() {
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="ARVELL Location Map"
+                title="ORVELLA Location Map"
             ></iframe>
         </div>
     );

@@ -40,7 +40,7 @@ export async function create_order(): Promise<string> {
     const isZeroDecimal = zeroDecimalCurrencies.has(currency);
 
     const items = cart.map((item) => ({
-        name: item.brand + item.model,
+        name: item.type == "watch" || item.type == "spare" ? item.brand + item.model : item.display_name,
         description: item.description,
         quantity: item.quantity.toString(),
         unit_amount: {

@@ -5,11 +5,11 @@ import Watch from "./svg/watch";
 import Ebay from "./svg/ebay";
 import { useTranslations } from "next-intl";
 import WhatsApp from "./svg/whatsapp";
-import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
 export default function Footer() {
     const t = useTranslations("common.footer");
+    const t2 = useTranslations("home");
     const t_nav = useTranslations("common.nav");
 
     const params = useSearchParams();
@@ -19,14 +19,16 @@ export default function Footer() {
             <section className="w-full lg:h-75 lg:flex-row flex-col flex justify-between lg:items-center items-start">
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
                     <div className="relative w-40 aspect-19/4">
-                        <Image src={"/logo_horizontal_light.png"} sizes="300px" alt={params.get("ref") || "Orvella"} fill className={`object-cover object-center bright-img`} />
+                        <Link aria-label={"home"} href={"/"} className="w-fit text-gold font-primary text-3xl tracking-widest font-normal">
+                            {t2("heroTitle")}
+                        </Link>{" "}
                     </div>
                     <ul className="flex flex-col justify-start items-start gap-2 tracking-wider">
                         <li>Marie-Curie-Straße 14</li>
                         <li>60439 Frankfurt am Main</li>
                         <li>Germany</li>
                         <li>+49 30 2312 5100</li>
-                        <li>info@{params.get("ref") || "arvell"}.com</li>
+                        <li>info@{params.get("ref") || "orvella"}.com</li>
                     </ul>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">

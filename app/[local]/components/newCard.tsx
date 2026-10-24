@@ -1,5 +1,4 @@
 "use client";
-import { Watch } from "@/types/watch";
 import Image from "next/image";
 import AtcBtn from "./buttons/addToCart";
 import { format_price } from "../(site)/lib/price_format";
@@ -8,14 +7,15 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import { read_cookie } from "../(site)/lib/read_cookie";
 import { Supported_Currencies } from "@/currency";
+import { Item } from "../(site)/lib/filters";
 
 const QuickViewModal = dynamic(() => import("./quick_view"), {
     ssr: false,
 });
 
-export default function Card({ data }: { data: Watch }) {
+export default function Card({ data }: { data: Item }) {
     const t_btn = useTranslations("common.buttons");
-    const [view, set_view] = useState<null | Watch>(null);
+    const [view, set_view] = useState<null | Item>(null);
 
     return (
         <>

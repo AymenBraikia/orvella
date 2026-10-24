@@ -25,16 +25,16 @@
         "browse": "Explorar la colección"
     },
     "meta": {
-        "siteName": "ARVELL",
-        "titleDefault": "ARVELL | Relojes de lujo de alta gama y asesoramiento experto",
+        "siteName": "ORVELLA",
+        "titleDefault": "ORVELLA | Relojes de lujo de alta gama y asesoramiento experto",
         "description": "Descubra nuestra colección seleccionada de relojes de lujo nuevos y de segunda mano en perfecto estado, entre ellos Rolex, Patek Philippe y Cartier. Reserve hoy mismo una asesoría profesional con nuestros expertos en relojería.",
-        "keywords": ["relojes de lujo", "Rolex de segunda mano", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "comprar relojes de lujo", "asesoría relojera", "ARVELL"],
+        "keywords": ["relojes de lujo", "Rolex de segunda mano", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "comprar relojes de lujo", "asesoría relojera", "ORVELLA"],
         "ogDescription": "Nuestra colección seleccionada de relojes de lujo nuevos y de segunda mano le está esperando. Cuente con verdaderos expertos para sus relojes de alta gama.",
-        "ogImageAlt": "Colección de relojes de lujo ARVELL",
+        "ogImageAlt": "Colección de relojes de lujo ORVELLA",
         "twitterDescription": "Su socio en relojes de alta gama. Descubra Rolex, Patek Philippe y Cartier, y reserve una cita con nuestros expertos."
     },
     "common": {
-        "brand": "ARVELL",
+        "brand": "ORVELLA",
         "watches": "relojes",
         "rings": "anillos",
         "necklaces": "collares",
@@ -153,6 +153,10 @@
             "material": "Material",
             "gemstones": "Gemas",
             "details": "Detalles",
+            "weight": "peso",
+            "length": "longitud",
+            "bandWidth": "ancho de la correa",
+            "size": "talla",
             "condition": "Estado"
         },
         "formFields": {
@@ -199,7 +203,7 @@
             "password": "Contraseña",
             "firstNamePlaceholder": "Jordan",
             "lastNamePlaceholder": "Blake",
-            "emailPlaceholder": "Jordan@arvell.com",
+            "emailPlaceholder": "Jordan@orvella.com",
             "passwordPlaceholder": "Al menos 8 caracteres",
             "agree": "acepto los Términos del servicio y la Política de privacidad",
             "createAccount": "Crear cuenta",
@@ -215,7 +219,7 @@
             "description": "Guarde las piezas que le interesan, siga las ofertas y finalice su compra más rápido la próxima vez.",
             "email": "Correo electrónico",
             "password": "Contraseña",
-            "emailPlaceholder": "Jordan@arvell.com",
+            "emailPlaceholder": "Jordan@orvella.com",
             "passwordPlaceholder": "Al menos 8 caracteres",
             "logIn": "Iniciar sesión",
             "loggingIn": "Iniciando sesión…",
@@ -225,7 +229,7 @@
         }
     },
     "home": {
-        "heroTitle": "ARVELL",
+        "heroTitle": "ORVELLA",
         "heroSubtitle": "Tu destino de alta joyería y relojes de lujo",
         "discover": "Descubrir",
         "newArrivalsHeading": "Novedades",

@@ -1,13 +1,13 @@
 "use client";
 import dynamic from "next/dynamic";
 import NewCardLoader from "../loaders/newCard";
-import { Watch } from "@/types/watch";
+import { Item } from "@/app/(site)/lib/filters";
 
 const Card = dynamic(() => import("../newCard"), {
     ssr: false,
     loading: () => <NewCardLoader />,
 });
 
-export default function NewCardWrapper({ data }: { data: Watch }) {
+export default function NewCardWrapper({ data }: { data: Item }) {
     return <Card data={data} key={data.slug} />;
 }

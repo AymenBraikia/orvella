@@ -25,7 +25,7 @@ export default async function ImprintPage({ params }: Props) {
 
                 <div className="flex-center gap-2">
                     <p className="font-bold">{t("emailLabel")}</p>
-                    info@{ref || "arvell"}.com
+                    info@{ref || "orvella"}.com
                 </div>
 
                 <div className="flex-center gap-2">

@@ -13,7 +13,7 @@ export function applyBrand<T>(node: T, brand: string): T {
     if (typeof node === "string") {
         return node
             .replace(/orvella\.com/g, `${brand.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`)
-            .replace(/ARVELL/g, brand.toUpperCase())
+            .replace(/ORVELLA/g, brand.toUpperCase())
             .replace(/Orvella/g, brand) as T;
     }
     if (Array.isArray(node)) return node.map((n) => applyBrand(n, brand)) as T;

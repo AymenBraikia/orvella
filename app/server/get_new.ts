@@ -2,13 +2,12 @@ import { unstable_cache } from "next/cache";
 import { cookies } from "next/headers";
 
 import { items_collection } from "../db/collections";
-import type { Watch } from "../types/watch";
-import { BaseItem } from "@/types/item";
+import { Item } from "@/app/(site)/lib/filters";
 
 const limit = 8;
 
 const get_cached_new = unstable_cache(
-    async (ref: string | undefined): Promise<BaseItem[]> => {
+    async (ref: string | undefined): Promise<Item[]> => {
         const collection = await items_collection();
 
         const refED = collection
@@ -42,7 +41,7 @@ const get_cached_new = unstable_cache(
     },
 );
 
-async function get_new(): Promise<Watch[]> {
+async function get_new(): Promise<Item[]> {
     const cookieStore = await cookies();
     const ref = cookieStore.get("ref")?.value;
 

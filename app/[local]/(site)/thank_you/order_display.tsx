@@ -36,7 +36,7 @@ export default async function Order_display({ data, last }: { data: Order; last:
                         </div>
 
                         <div className="w-full h-full flex flex-col justify-between items-start tracking-wider">
-                            <h6 className="capitalize font-thin">{item.brand + " " + item.model}</h6>
+                            <h6 className="capitalize font-thin">{item.type == "watch" || item.type == "spare" ? item.brand + item.model : item.display_name}</h6>
 
                             <p className="text-xl">
                                 {item.quantity}x · {format_price(item.price, country)}

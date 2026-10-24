@@ -25,6 +25,7 @@ import { ThemeToggle } from "./theme";
 import { format_price } from "../(site)/lib/price_format";
 import { Supported_Currencies } from "@/currency";
 import setCurrency from "@/app/server/set_currency";
+import { Item } from "../(site)/lib/filters";
 
 const CartDrawer = dynamic(() => import("./cart_drawer"), {
     ssr: false,
@@ -170,6 +171,7 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
     const { session } = useAuth();
     const locale = useLocale() as Locales;
     const t = useTranslations("common");
+    const t2 = useTranslations("home");
 
     const [lang, set_lang] = useState<Locales>(locale);
 
@@ -322,32 +324,36 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
                         <button aria-label={"menu"} type="button" className="button2 p-1 md:p-auto" onClick={() => dispatch({ type: "OPEN_NAV" })}>
                             <MenuBurger classnames="w-5 sm:w-8" clr={"currentColor"} />
                         </button>
-                        <div className="xl:hidden block">
-                            <Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search_watches" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />
+                        <div className="">
+                            <Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />
                         </div>
                     </div>
 
                     <div className="w-1/3 flex-center">
-                        <Link aria-label={"home"} href={"/"} className="relative aspect-square sm:aspect-video w-8 sm:w-25">
-                            <Image src={"/logo_dark.png"} sizes="(max-width: 768px) 175px, 200px" alt="Orvella" fill className={`object-cover object-center dark:brightness-100 brightness-0 hidden sm:block `} />
-                            <Image src={"/logo_dark_compact.png"} sizes="100px" alt="Orvella" fill className={`object-cover object-center dark:brightness-100 brightness-0 sm:hidden `} />
+                        <Link aria-label={"home"} href={"/"} className="w-fit font-primary flex-center text-base sm:text-xl md:text-2xl xl:text-4xl tracking-widest">
+                            {t2("heroTitle")}
                         </Link>
                     </div>
 
                     <div className="flex justify-end items-center gap-2 w-1/3">
-                        <div className="xl:block hidden">
+                        {/* <div className="xl:block hidden">
                             <Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search_watches" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />
-                        </div>
+                        </div> */}
 
                         {!session?.email && (
-                            <Link aria-label={t("buttons.register")} className={`button2 hidden md:block hover:text-primary capitalize`} href={"/auth/sign_up"}>
+                            <Link aria-label={t("buttons.register")} className={`button2 hidden lg:block hover:text-primary capitalize`} href={"/auth/sign_up"}>
                                 {t("buttons.register")}
                             </Link>
                         )}
 
-                        <Select classnames="flex text-sm sm:text-base" options={["English", "Arabic", "Spanish", "Deutsch", "French", "Italian", "Turkish"]} value={selected_locale} set_value={set_lang as Dispatch<SetStateAction<string>>} />
+                        <Select
+                            classnames="max-w-25 flex text-sm sm:text-base"
+                            options={["English", "Arabic", "Spanish", "Deutsch", "French", "Italian", "Turkish"]}
+                            value={selected_locale}
+                            set_value={set_lang as Dispatch<SetStateAction<string>>}
+                        />
 
-                        <Select classnames="hidden sm:flex text-sm sm:text-base" options={currencies_options.keys().toArray()} value={currencies_map.get(currency)!} set_value={set_currency as Dispatch<SetStateAction<string>>} />
+                        <Select classnames="max-w-25 hidden sm:flex text-sm sm:text-base" options={currencies_options.keys().toArray()} value={currencies_map.get(currency)!} set_value={set_currency as Dispatch<SetStateAction<string>>} />
 
                         <button aria-label={"cart"} type="button" onClick={() => dispatch({ type: "OPEN_CART" })} className={`button2 p-1 sm:p-2 relative ${ui.isGlassy ? "" : "hover:text-primary"}`}>
                             <Cart clr={"currentColor"} classnames="w-5 sm:w-6" />
@@ -365,7 +371,7 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
     );
 }
 
-function SearchChildComponent({ item }: { item: Watch }) {
+function SearchChildComponent({ item }: { item: Item }) {
     return (
         <Link
             href={"/product/" + item.slug}
@@ -373,10 +379,10 @@ function SearchChildComponent({ item }: { item: Watch }) {
             className="flex justify-between items-center w-full h-full text-sm capitalize gap-2 bg-transparent hover:bg-primary border-b sm:border-0 cursor-pointer transition-default p-2"
         >
             <div className="relative min-w-15 aspect-square">
-                <Image src={item.images[0]} alt={item.brand + " " + item.model} fill sizes="(max-width: 768px) 150px, 100px" />
+                <Image src={item.images[0]} alt={item.display_name} fill sizes="(max-width: 768px) 150px, 100px" />
             </div>
             <div className="w-full h-full flex flex-col justify-start items-start gap-2">
-                <p className="w-full">{item.brand + " " + item.model + " " + (item.year || "") + " Ref. " + item.reference}</p>
+                {item.type == "watch" ? <p className="w-full">{item.brand + " " + item.model + " " + (item.year || "") + " Ref. " + item.reference}</p> : <p className="w-full">{item.display_name}</p>}
                 <p>{format_price(item.price)}</p>
             </div>
         </Link>

@@ -44,10 +44,10 @@ const gelasio = Gelasio({
 export const metadata: Metadata = {
     title: {
         default: "Luxury Watch Platform | Concept by Aymen Braikia",
-        template: "%s | ARVELL",
+        template: "%s | ORVELLA",
     },
     description: "A full-stack luxury watch marketplace concept — consignment, spare parts, appointment booking, and multilingual storefront. Built by Aymen Braikia as a demonstration of production-grade e-commerce architecture.",
-    applicationName: "ARVELL",
+    applicationName: "ORVELLA",
     authors: [{ name: "Aymen Braikia" }],
     creator: "Aymen Braikia",
     publisher: "Aymen Braikia",
@@ -81,13 +81,13 @@ export const metadata: Metadata = {
         title: "Luxury Watch Platform Concept",
         description: "A full-stack e-commerce concept for the luxury watch trade — consignment, appointments, multilingual UX.",
         url: "https://orvella.vercel.app/en",
-        siteName: "ARVELL",
+        siteName: "ORVELLA",
         images: [
             {
                 url: "/banner.png",
                 width: 1200,
                 height: 630,
-                alt: "ARVELL Platform Preview",
+                alt: "ORVELLA Platform Preview",
             },
         ],
         locale: "en",

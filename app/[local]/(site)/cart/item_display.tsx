@@ -8,40 +8,51 @@ import Remove_cart_btn from "./remove_cart";
 import Decrease_cart_btn from "./decrease_cart";
 import Increase_cart_btn from "./increase_cart";
 
-export default async function Item_Display({ brand, model, slug, price, quantity, images, reference }: Cart_Item) {
+export default async function Item_Display(data: Cart_Item) {
     const country = await get_Currency();
     return (
         <div className="flex flex-wrap md:flex-nowrap justify-between items-center w-full gap-4 border-b-foreground border-b p-4 font-secondary">
             <div className="hidden md:block">
-                <Remove_cart_btn slug={slug} />
+                <Remove_cart_btn slug={data.slug} />
             </div>
 
             <div className="flex-center gap-4 h-full w-full md:w-fit">
                 <div className="relative aspect-square min-h-30 h-full">
-                    <Image fill src={images[0]} alt={slug} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw" />
+                    <Image fill src={data.images[0]} alt={data.slug} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw" />
                 </div>
                 <div className="capitalize h-full md:hidden flex flex-col justify-center items-start w-full md:min-w-60">
-                    <h6 className="text-gold">{brand}</h6>
-                    <p className="text-primary">{model}</p>
+                    {data.type == "watch" || data.type == "spare" ? (
+                        <>
+                            <h6 className="text-gold">{data.brand}</h6>
+                            <p className="text-primary">{data.model}</p>
+                        </>
+                    ) : (
+                        <h6>{data.display_name}</h6>
+                    )}
                 </div>
                 <div className="md:hidden">
-                    <Remove_cart_btn slug={slug} />
+                    <Remove_cart_btn slug={data.slug} />
                 </div>
             </div>
             <div className="flex justify-between items-center flex-col md:flex-row w-full gap-4 h-full">
                 <div className="capitalize h-full hidden md:flex flex-col justify-center items-start w-full md:min-w-60">
-                    <h4 className="text-gold">{brand}</h4>
-                    <h6 className="text-primary">{model}</h6>
+                    {data.type == "watch" || data.type == "spare" ? (
+                        <>
+                            <h4 className="text-gold">{data.brand}</h4> <h6 className="text-primary">{data.model}</h6>
+                        </>
+                    ) : (
+                        <h6 className="text-primary">{data.display_name}</h6>
+                    )}
                 </div>
 
                 <div className="w-full h-full flex justify-between items-center">
                     <div className="flex-center h-full">
-                        <Increase_cart_btn quantity={quantity} slug={slug} />
-                        <p className="aspect-square w-10 flex-center text-xl font-medium cursor-default">{quantity}</p>
-                        <Decrease_cart_btn quantity={quantity} slug={slug} />
+                        <Increase_cart_btn quantity={data.quantity} slug={data.slug} />
+                        <p className="aspect-square w-10 flex-center text-xl font-medium cursor-default">{data.quantity}</p>
+                        <Decrease_cart_btn quantity={data.quantity} slug={data.slug} />
                     </div>
 
-                    <p className="w-40 text-xl text-end">{format_price(price * quantity, country)}</p>
+                    <p className="w-40 text-xl text-end">{format_price(data.price * data.quantity, country)}</p>
                 </div>
             </div>
         </div>

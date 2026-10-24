@@ -25,16 +25,16 @@
         "browse": "Koleksiyonu keşfedin"
     },
     "meta": {
-        "siteName": "ARVELL",
-        "titleDefault": "ARVELL | Üst Segment Lüks Saatler ve Uzman Danışmanlığı",
+        "siteName": "ORVELLA",
+        "titleDefault": "ORVELLA | Üst Segment Lüks Saatler ve Uzman Danışmanlığı",
         "description": "Rolex, Patek Philippe ve Cartier dahil olmak üzere kusursuz durumdaki ikinci el ve sıfır lüks saatlerden oluşan özenle seçilmiş koleksiyonumuzu keşfedin. Saatçilik uzmanlarımızla bugün profesyonel bir danışmanlık randevusu alın.",
-        "keywords": ["lüks saatler", "ikinci el Rolex", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "lüks saat satın al", "saat danışmanlığı", "ARVELL"],
+        "keywords": ["lüks saatler", "ikinci el Rolex", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "lüks saat satın al", "saat danışmanlığı", "ORVELLA"],
         "ogDescription": "İkinci el ve sıfır lüks saatlerden oluşan özenle seçilmiş koleksiyonumuz sizi bekliyor. Üst segment saatçilik ihtiyaçlarınız için uzmanlarımızla çalışın.",
-        "ogImageAlt": "ARVELL Lüks Saat Koleksiyonu",
+        "ogImageAlt": "ORVELLA Lüks Saat Koleksiyonu",
         "twitterDescription": "Üst segment saatler için ortağınız. Rolex, Patek Philippe ve Cartier'yi keşfedin, uzman randevunuzu alın."
     },
     "common": {
-        "brand": "ARVELL",
+        "brand": "ORVELLA",
         "watches": "saatler",
         "rings": "yüzükler",
         "necklaces": "kolyeler",
@@ -154,6 +154,10 @@
             "material": "Malzeme",
             "gemstones": "Değerli Taşlar",
             "details": "Detaylar",
+            "weight": "ağırlık",
+            "length": "uzunluk",
+            "bandWidth": "kordon genişliği",
+            "size": "beden / boyut",
             "condition": "Durum"
         },
         "formFields": {
@@ -226,7 +230,7 @@
         }
     },
     "home": {
-        "heroTitle": "ARVELL",
+        "heroTitle": "ORVELLA",
         "heroSubtitle": "Zarif Mücevherler ve Lüks Saatler İçin Adresiniz",
         "discover": "Keşfedin",
         "newArrivalsHeading": "Yeni Gelenler",

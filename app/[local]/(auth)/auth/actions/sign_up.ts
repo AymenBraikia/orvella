@@ -47,6 +47,7 @@ export default async function Sign_up(data: FormData): Promise<{ success: boolea
             local_pickup: false,
             payment_method: "PayPal",
             address: {
+                shipping_costs: 55,
                 country: "Germany",
                 address1: undefined,
                 address2: undefined,
@@ -55,6 +56,7 @@ export default async function Sign_up(data: FormData): Promise<{ success: boolea
                 phone: undefined,
             },
             diff_address: {
+                shipping_costs: 55,
                 country: "Germany",
                 address1: undefined,
                 address2: undefined,
