@@ -16,7 +16,7 @@ export default function GlobalError() {
                         fontFamily: "sans-serif",
                     }}
                 >
-                    <h1>Something went wrong</h1>
+                    <h1>Something went wrong!</h1>
 
                     <p>An unexpected error occurred.</p>
 
