@@ -2,9 +2,9 @@
 
 import { ZoomableImage } from "@/app/components/elements/zoomableImage";
 import List from "@/app/components/scrollList";
-import { Watch } from "@/types/watch";
+import { Item } from "@/types/item";
 
-export default function Images_list({ data }: { data: Watch }) {
+export default function Images_list({ data }: { data: Item }) {
     return (
         <List display={{ base: 1, sm: 1, md: 1, lg: 1 }}>
             {data.images.map((url, index) => (

@@ -22,7 +22,15 @@
         "quantity": "Adet",
         "localPickup": "Butikten teslim alma",
         "discount": "İndirim",
-        "browse": "Koleksiyonu keşfedin"
+        "browse": "Koleksiyonu keşfedin",
+        "statuses": {
+            "pending_payment": "Ödeme bekleniyor",
+            "paid": "Ödendi",
+            "shipped": "Kargoya verildi",
+            "delivered": "Teslim edildi",
+            "cancelled": "İptal edildi",
+            "refunded": "İade edildi"
+        }
     },
     "meta": {
         "siteName": "ORVELLA",
@@ -177,6 +185,11 @@
             "attachImages": "Görsel Ekle",
             "required": "Bu alan zorunludur",
             "invalidEmail": "Lütfen geçerli bir e-posta adresi girin"
+        },
+        "stock": {
+            "available": "Mevcut",
+            "reserved": "Rezerve",
+            "sold": "Satıldı"
         }
     },
     "error": {
@@ -288,7 +301,6 @@
         "closed": "Kapalı",
         "contactHeading": "İletişim"
     },
-
     "trade": {
         "heading": "Consignment ve Takas",
         "subHeading": "Saatinizi Satmak veya Takas Etmek İster misiniz?",
@@ -983,11 +995,12 @@
         "checkoutCta": "Ödemeye geç",
         "choose_shipping_country": "Teslimat ülkesini seçin",
         "shipping_to": "{country} ülkesine teslimat",
-        "shipping_costs": "Kargo ücreti",
+        "shipping_costs": "Kargo ücreti: {cost}",
         "shipping": "Kargo",
         "localPickup": "Yerinden teslim alma",
         "moreAbout": "Hakkında daha fazla bilgi:",
-        "continueShopping": "Alışverişe devam et"
+        "continueShopping": "Alışverişe devam et",
+        "unavailable": "Bu parça artık mevcut değil. Devam etmek için lütfen kaldırın."
     },
     "favorites": {
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
@@ -1029,7 +1042,22 @@
         "cardNumber": "Kart Numarası",
         "expirationDate": "Son Kullanma Tarihi",
         "securityCode": "Güvenlik Kodu",
-        "orderNumber": "Sipariş Numarası"
+        "orderNumber": "Sipariş Numarası",
+        "errors": {
+            "auth": "Siparişinizi tamamlamak için lütfen tekrar giriş yapın.",
+            "empty": "Sepetiniz boş.",
+            "address": "Siparişi vermeden önce lütfen teslimat adresinizi tamamlayın.",
+            "unavailable": "Bazı parçalar artık mevcut değil: {items}. Lütfen bunları sepetinizden kaldırın.",
+            "payment": "Ödeme başlatılamadı. Lütfen tekrar deneyin.",
+            "declined": "Ödeme tamamlanmadı. Parçalarınız serbest bırakıldı; lütfen tekrar deneyin.",
+            "pending": "Ödemeniz işleniyor. Siparişinizi e-posta ile onaylayacağız.",
+            "method": "Lütfen bir ödeme yöntemi seçin.",
+            "not_found": "Bu sipariş bulunamadı. Lütfen tekrar deneyin."
+        },
+        "vatIncluded": "%{rate} KDV dahil",
+        "vatAdded": "KDV (%{rate})",
+        "marginScheme": "Alman KDV Kanunu §25a uyarınca marj vergilendirmesi — KDV ayrıca gösterilmez.",
+        "discount": "İndirim"
     },
     "product": {
         "reference": "Referans",
@@ -1045,7 +1073,8 @@
         "findInStore": "Mağazada bul",
         "bookAppointment": "Randevu al",
         "consignmentBeforeLink": "Saatlerinizden birini takas etmek ister misiniz? Saatinizle ilgili bilgileri paylaşarak bizimle",
-        "consignmentAfterLink": "sayfası üzerinden iletişime geçin, size bir teklif sunalım."
+        "consignmentAfterLink": "sayfası üzerinden iletişime geçin, size bir teklif sunalım.",
+        "clasp": "Kilit"
     },
     "brands": {
         "rolex": {
@@ -1387,12 +1416,7 @@
             "storefront": {
                 "title": "Özel vitrin",
                 "label": "Size ait",
-                "items": [
-                    "Alıcı mevcut koleksiyona kendi başına göz atabilir.",
-                    "Her saatin kendi sayfası ve detayları olabilir.",
-                    "Bir dizi fotoğraf yerine tek bir bağlantı gönderebilirsiniz.",
-                    "Talepler ve randevular için net bir hedef vardır."
-                ]
+                "items": ["Alıcı mevcut koleksiyona kendi başına göz atabilir.", "Her saatin kendi sayfası ve detayları olabilir.", "Bir dizi fotoğraf yerine tek bir bağlantı gönderebilirsiniz.", "Talepler ve randevular için net bir hedef vardır."]
             },
             "footnote": "Mesele sadece \"bir web sitesine sahip olmak\" değil. İlgi ile aksiyon arasındaki boşluğu ortadan kaldırmak."
         },

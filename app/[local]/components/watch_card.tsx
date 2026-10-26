@@ -7,6 +7,8 @@ import Link from "next/link";
 import { Supported_Currencies } from "@/currency";
 import { read_cookie } from "../(site)/lib/read_cookie";
 import Display_Image from "./display_image";
+import StockBadge from "./stock_badge";
+import type { ItemStatus } from "@/types/item";
 
 export default memo(function Watch_card({
     brand,
@@ -21,6 +23,7 @@ export default memo(function Watch_card({
     image_src,
     video_src,
     slug,
+    status,
 }: {
     brand: string;
     name: string;
@@ -34,6 +37,7 @@ export default memo(function Watch_card({
     image_src: string;
     video_src?: string;
     slug: string;
+    status?: ItemStatus;
 }) {
     const t = useTranslations("common.productCard");
 
@@ -47,6 +51,7 @@ export default memo(function Watch_card({
             onMouseLeave={() => set_play_video(false)}
         >
             <div className="sm:aspect-4/3 aspect-4/3 relative w-full overflow-hidden">
+                <StockBadge status={status} />
                 <Display_Image image_src={image_src} vid_src={video_src} play={play_video} />
             </div>
             <div className="py-4 flex flex-col justify-start items-start gap-3 min-h-50">

@@ -8,6 +8,7 @@ import dynamic from "next/dynamic";
 import { read_cookie } from "../(site)/lib/read_cookie";
 import { Supported_Currencies } from "@/currency";
 import { Item } from "../(site)/lib/filters";
+import StockBadge from "./stock_badge";
 
 const QuickViewModal = dynamic(() => import("./quick_view"), {
     ssr: false,
@@ -21,6 +22,7 @@ export default function Card({ data }: { data: Item }) {
         <>
             <div aria-label={`${data.display_name}`} className="h-fit sm:h-110 w-full flex flex-col justify-start items-start gap-4 transition-long group" key={data.slug} onClick={() => innerWidth < 1536 && set_view(data)}>
                 <div className="relative w-full sm:h-fit flex-center overflow-hidden aspect-square">
+                    <StockBadge status={data.stock_status} />
                     <Image
                         src={data.images[0]}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
@@ -38,7 +40,7 @@ export default function Card({ data }: { data: Item }) {
                             {t_btn("quick_view")}
                         </button>
                         <div className="w-fit text-white hover:text-foreground transition-default capitalize min-w-fit whitespace-nowrap text-sm">
-                            <AtcBtn slug={data.slug} />
+                            <AtcBtn slug={data.slug} status={data.stock_status} />
                         </div>
                     </div>
                 </div>

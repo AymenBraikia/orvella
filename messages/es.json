@@ -22,7 +22,15 @@
         "quantity": "Cantidad",
         "localPickup": "Recogida en boutique",
         "discount": "Descuento",
-        "browse": "Explorar la colección"
+        "browse": "Explorar la colección",
+        "statuses": {
+            "pending_payment": "Pendiente de pago",
+            "paid": "Pagado",
+            "shipped": "Enviado",
+            "delivered": "Entregado",
+            "cancelled": "Cancelado",
+            "refunded": "Reembolsado"
+        }
     },
     "meta": {
         "siteName": "ORVELLA",
@@ -176,6 +184,11 @@
             "attachImages": "Adjuntar imágenes",
             "required": "Este campo es obligatorio",
             "invalidEmail": "Introduzca una dirección de correo electrónico válida"
+        },
+        "stock": {
+            "available": "Disponible",
+            "reserved": "Reservado",
+            "sold": "Vendido"
         }
     },
     "error": {
@@ -792,10 +805,7 @@
                         },
                         {
                             "heading": "7.2 Para empresarios",
-                            "items": [
-                                "Si el artículo adquirido presenta defectos, el vendedor decide sobre el procedimiento posterior.",
-                                "En principio, no se admite ninguna reclamación relativa al funcionamiento de un artículo de segunda mano."
-                            ]
+                            "items": ["Si el artículo adquirido presenta defectos, el vendedor decide sobre el procedimiento posterior.", "En principio, no se admite ninguna reclamación relativa al funcionamiento de un artículo de segunda mano."]
                         }
                     ]
                 },
@@ -984,11 +994,12 @@
         "checkoutCta": "Finalizar compra",
         "choose_shipping_country": "Elija el país de envío",
         "shipping_to": "Envío a {country}",
-        "shipping_costs": "Gastos de envío",
+        "shipping_costs": "Gastos de envío: {cost}",
         "shipping": "Envío",
         "localPickup": "Recogida en tienda",
         "moreAbout": "Más información sobre",
-        "continueShopping": "Seguir comprando"
+        "continueShopping": "Seguir comprando",
+        "unavailable": "Esta pieza ya no está disponible. Elimínela para continuar."
     },
     "favorites": {
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
@@ -1030,7 +1041,22 @@
         "cardNumber": "Número de tarjeta",
         "expirationDate": "Fecha de caducidad",
         "securityCode": "Código de seguridad",
-        "orderNumber": "Número de pedido"
+        "orderNumber": "Número de pedido",
+        "errors": {
+            "auth": "Inicie sesión de nuevo para completar su pedido.",
+            "empty": "Su carrito está vacío.",
+            "address": "Complete su dirección de envío antes de realizar el pedido.",
+            "unavailable": "Algunas piezas ya no están disponibles: {items}. Elimínelas de su carrito.",
+            "payment": "No se pudo iniciar el pago. Inténtelo de nuevo.",
+            "declined": "El pago no se completó. Sus piezas se han liberado; inténtelo de nuevo.",
+            "pending": "Su pago se está procesando. Le confirmaremos el pedido por correo electrónico.",
+            "method": "Elija un método de pago.",
+            "not_found": "No se encontró este pedido. Inténtelo de nuevo."
+        },
+        "vatIncluded": "IVA del {rate} % incluido",
+        "vatAdded": "IVA ({rate} %)",
+        "marginScheme": "Régimen especial de bienes usados según el §25a UStG: el IVA no se indica por separado.",
+        "discount": "Descuento"
     },
     "product": {
         "reference": "Referencia",
@@ -1046,7 +1072,8 @@
         "findInStore": "Buscar en tienda",
         "bookAppointment": "Reserva una cita",
         "consignmentBeforeLink": "¿Desea entregar uno de sus relojes como parte del pago? Póngase en contacto con nosotros a través de la página",
-        "consignmentAfterLink": "con los datos de su reloj y le haremos una oferta."
+        "consignmentAfterLink": "con los datos de su reloj y le haremos una oferta.",
+        "clasp": "Cierre"
     },
     "brands": {
         "rolex": {

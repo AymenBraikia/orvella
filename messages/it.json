@@ -22,7 +22,15 @@
         "quantity": "Quantità",
         "localPickup": "Ritiro in boutique",
         "discount": "Sconto",
-        "browse": "Scopri la collezione"
+        "browse": "Scopri la collezione",
+        "statuses": {
+            "pending_payment": "In attesa di pagamento",
+            "paid": "Pagato",
+            "shipped": "Spedito",
+            "delivered": "Consegnato",
+            "cancelled": "Annullato",
+            "refunded": "Rimborsato"
+        }
     },
     "meta": {
         "siteName": "ORVELLA",
@@ -177,6 +185,11 @@
             "attachImages": "Allega immagini",
             "required": "Questo campo è obbligatorio",
             "invalidEmail": "Inserisci un indirizzo e-mail valido"
+        },
+        "stock": {
+            "available": "Disponibile",
+            "reserved": "Riservato",
+            "sold": "Venduto"
         }
     },
     "error": {
@@ -982,11 +995,12 @@
         "checkoutCta": "Procedi al pagamento",
         "choose_shipping_country": "Scegli il paese di spedizione",
         "shipping_to": "Spedizione in {country}",
-        "shipping_costs": "Spese di spedizione",
+        "shipping_costs": "Spese di spedizione: {cost}",
         "shipping": "Spedizione",
         "localPickup": "Ritiro in loco",
         "moreAbout": "Maggiori informazioni su",
-        "continueShopping": "Continua lo shopping"
+        "continueShopping": "Continua lo shopping",
+        "unavailable": "Questo pezzo non è più disponibile. Rimuovilo per continuare."
     },
     "favorites": {
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
@@ -1028,7 +1042,22 @@
         "cardNumber": "Numero della carta",
         "expirationDate": "Data di scadenza",
         "securityCode": "Codice di sicurezza",
-        "orderNumber": "Numero d'ordine"
+        "orderNumber": "Numero d'ordine",
+        "errors": {
+            "auth": "Accedi di nuovo per completare l’ordine.",
+            "empty": "Il tuo carrello è vuoto.",
+            "address": "Completa l’indirizzo di spedizione prima di effettuare l’ordine.",
+            "unavailable": "Alcuni pezzi non sono più disponibili: {items}. Rimuovili dal carrello.",
+            "payment": "Non è stato possibile avviare il pagamento. Riprova.",
+            "declined": "Il pagamento non è stato completato. I pezzi sono stati rilasciati; riprova.",
+            "pending": "Il pagamento è in elaborazione. Ti confermeremo l’ordine via e-mail.",
+            "method": "Scegli un metodo di pagamento.",
+            "not_found": "Impossibile trovare questo ordine. Riprova."
+        },
+        "vatIncluded": "IVA {rate}% inclusa",
+        "vatAdded": "IVA ({rate}%)",
+        "marginScheme": "Regime del margine ai sensi del §25a UStG: l’IVA non è esposta separatamente.",
+        "discount": "Sconto"
     },
     "product": {
         "reference": "Riferimento",
@@ -1044,7 +1073,8 @@
         "findInStore": "Trova in negozio",
         "bookAppointment": "Prenota un appuntamento",
         "consignmentBeforeLink": "Desideri dare in permuta uno dei tuoi orologi? Contattaci tramite la pagina",
-        "consignmentAfterLink": "indicando i dettagli del tuo orologio e ti faremo un'offerta."
+        "consignmentAfterLink": "indicando i dettagli del tuo orologio e ti faremo un'offerta.",
+        "clasp": "Chiusura"
     },
     "brands": {
         "rolex": {

@@ -22,7 +22,15 @@
         "quantity": "Quantity",
         "localPickup": "Collection in boutique",
         "discount": "Discount",
-        "browse": "Browse the collection"
+        "browse": "Browse the collection",
+        "statuses": {
+            "pending_payment": "Awaiting payment",
+            "paid": "Paid",
+            "shipped": "Shipped",
+            "delivered": "Delivered",
+            "cancelled": "Cancelled",
+            "refunded": "Refunded"
+        }
     },
     "meta": {
         "siteName": "ORVELLA",
@@ -157,7 +165,7 @@
             "weight": "Weight",
             "length": "Length",
             "bandWidth": "Band Width",
-            "size":"size",
+            "size": "size",
             "condition": "Condition"
         },
         "formFields": {
@@ -177,6 +185,11 @@
             "attachImages": "Attach Images",
             "required": "This field is required",
             "invalidEmail": "Please enter a valid email address"
+        },
+        "stock": {
+            "available": "Available",
+            "reserved": "Reserved",
+            "sold": "Sold"
         }
     },
     "error": {
@@ -982,11 +995,12 @@
         "checkoutCta": "Proceed to checkout",
         "choose_shipping_country": "Choose shipping country",
         "shipping_to": "Shipping to {country}",
-        "shipping_costs": "Shipping costs",
+        "shipping_costs": "Shipping costs: {cost}",
         "shipping": "Shipping",
         "localPickup": "Local pickup",
         "moreAbout": "More about",
-        "continueShopping": "Continue shopping"
+        "continueShopping": "Continue shopping",
+        "unavailable": "This piece is no longer available. Please remove it to continue."
     },
     "favorites": {
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
@@ -1028,7 +1042,22 @@
         "bankNote": "Make your payment directly into our bank account. Please include the order Number, brand name and model of the item as the payment reference. Additionally, please note that no item will be shipped before the funds have cleared in our account.",
         "orderDate": "Order Date",
         "orderTotal": "Order Total",
-        "orderNumber": "Order Number"
+        "orderNumber": "Order Number",
+        "errors": {
+            "auth": "Please log in again to complete your order.",
+            "empty": "Your cart is empty.",
+            "address": "Please complete your shipping address before placing the order.",
+            "unavailable": "Some pieces are no longer available: {items}. Please remove them from your cart.",
+            "payment": "The payment could not be started. Please try again.",
+            "declined": "The payment was not completed. Your pieces have been released; please try again.",
+            "pending": "Your payment is being processed. We will confirm your order by email.",
+            "method": "Please choose a payment method.",
+            "not_found": "This order could not be found. Please try again."
+        },
+        "vatIncluded": "Includes {rate}% VAT",
+        "vatAdded": "VAT ({rate}%)",
+        "marginScheme": "Margin scheme according to §25a UStG — VAT is not shown separately.",
+        "discount": "Discount"
     },
     "product": {
         "reference": "Reference",
@@ -1044,7 +1073,8 @@
         "findInStore": "Find in store",
         "bookAppointment": "Book an appointment",
         "consignmentBeforeLink": "Do you wish to trade in one of your watches? Please contact us via the",
-        "consignmentAfterLink": "page with the details about your watch and we will make you an offer."
+        "consignmentAfterLink": "page with the details about your watch and we will make you an offer.",
+        "clasp": "Clasp"
     },
     "brands": {
         "rolex": {
@@ -1360,7 +1390,6 @@
             ]
         }
     },
-
     "note": {
         "title": "Your Instagram already brings the buyer.",
         "heading": "Give them a place to browse your current stock, open a specific watch, and enquire without starting the conversation from scratch.",
@@ -1387,12 +1416,7 @@
             "storefront": {
                 "title": "Dedicated storefront",
                 "label": "Owned",
-                "items": [
-                    "Buyer can browse the current collection themselves.",
-                    "Every watch can have its own page and details.",
-                    "You can send one link instead of a stack of photos.",
-                    "Enquiries and appointment requests have a clear destination."
-                ]
+                "items": ["Buyer can browse the current collection themselves.", "Every watch can have its own page and details.", "You can send one link instead of a stack of photos.", "Enquiries and appointment requests have a clear destination."]
             },
             "footnote": "The point isn't \"having a website.\" The point is removing the gap between attention and action."
         },

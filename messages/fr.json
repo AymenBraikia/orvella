@@ -22,7 +22,15 @@
         "quantity": "Quantité",
         "localPickup": "Retrait en boutique",
         "discount": "Remise",
-        "browse": "Découvrir la collection"
+        "browse": "Découvrir la collection",
+        "statuses": {
+            "pending_payment": "En attente de paiement",
+            "paid": "Payée",
+            "shipped": "Expédiée",
+            "delivered": "Livrée",
+            "cancelled": "Annulée",
+            "refunded": "Remboursée"
+        }
     },
     "meta": {
         "siteName": "ORVELLA",
@@ -177,6 +185,11 @@
             "attachImages": "Joindre des images",
             "required": "Ce champ est obligatoire",
             "invalidEmail": "Veuillez saisir une adresse e-mail valide"
+        },
+        "stock": {
+            "available": "Disponible",
+            "reserved": "Réservé",
+            "sold": "Vendu"
         }
     },
     "error": {
@@ -982,11 +995,12 @@
         "checkoutCta": "Passer à la caisse",
         "choose_shipping_country": "Choisir le pays de livraison",
         "shipping_to": "Livraison vers {country}",
-        "shipping_costs": "Frais de livraison",
+        "shipping_costs": "Frais de livraison : {cost}",
         "shipping": "Livraison",
         "localPickup": "Retrait sur place",
         "moreAbout": "En savoir plus sur",
-        "continueShopping": "Poursuivre vos achats"
+        "continueShopping": "Poursuivre vos achats",
+        "unavailable": "Cette pièce n’est plus disponible. Veuillez la retirer pour continuer."
     },
     "favorites": {
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
@@ -1028,7 +1042,22 @@
         "cardNumber": "Numéro de carte",
         "expirationDate": "Date d'expiration",
         "securityCode": "Code de sécurité",
-        "orderNumber": "Numéro de commande"
+        "orderNumber": "Numéro de commande",
+        "errors": {
+            "auth": "Veuillez vous reconnecter pour finaliser votre commande.",
+            "empty": "Votre panier est vide.",
+            "address": "Veuillez compléter votre adresse de livraison avant de passer commande.",
+            "unavailable": "Certaines pièces ne sont plus disponibles : {items}. Veuillez les retirer de votre panier.",
+            "payment": "Le paiement n’a pas pu être lancé. Veuillez réessayer.",
+            "declined": "Le paiement n’a pas abouti. Vos pièces ont été libérées ; veuillez réessayer.",
+            "pending": "Votre paiement est en cours de traitement. Nous vous confirmerons la commande par e-mail.",
+            "method": "Veuillez choisir un mode de paiement.",
+            "not_found": "Cette commande est introuvable. Veuillez réessayer."
+        },
+        "vatIncluded": "TVA de {rate} % incluse",
+        "vatAdded": "TVA ({rate} %)",
+        "marginScheme": "Régime de la marge selon le §25a UStG — la TVA n’est pas indiquée séparément.",
+        "discount": "Remise"
     },
     "product": {
         "reference": "Référence",
@@ -1044,7 +1073,8 @@
         "findInStore": "Trouver en magasin",
         "bookAppointment": "Prendre rendez-vous",
         "consignmentBeforeLink": "Souhaitez-vous reprendre l'une de vos montres en échange ? Contactez-nous via la page",
-        "consignmentAfterLink": "en précisant les détails de votre montre et nous vous ferons une offre."
+        "consignmentAfterLink": "en précisant les détails de votre montre et nous vous ferons une offre.",
+        "clasp": "Fermoir"
     },
     "brands": {
         "rolex": {
@@ -1381,12 +1411,7 @@
             "instagram": {
                 "title": "Instagram / DM",
                 "label": "Découverte",
-                "items": [
-                    "L'acheteur voit une montre dans une publication ou une story.",
-                    "Il demande ce que vous avez d'autre.",
-                    "Vous envoyez manuellement photos, prix et détails.",
-                    "La demande ou le rendez-vous reste dans la conversation."
-                ]
+                "items": ["L'acheteur voit une montre dans une publication ou une story.", "Il demande ce que vous avez d'autre.", "Vous envoyez manuellement photos, prix et détails.", "La demande ou le rendez-vous reste dans la conversation."]
             },
             "storefront": {
                 "title": "Vitrine dédiée",

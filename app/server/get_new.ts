@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 
 import { items_collection } from "../db/collections";
 import { Item } from "@/app/(site)/lib/filters";
+import { to_public_item } from "@/app/(site)/lib/stock";
 
 const limit = 8;
 
@@ -12,7 +13,7 @@ const get_cached_new = unstable_cache(
 
         const refED = collection
             .find(
-                { preview: ref },
+                { preview: ref, deleted: { $ne: true } },
                 {
                     sort: { _id: -1 },
                     limit,
@@ -25,7 +26,7 @@ const get_cached_new = unstable_cache(
             ? refED
             : collection
                   .find(
-                      { preview: { $exists: false } },
+                      { preview: { $exists: false }, deleted: { $ne: true } },
                       {
                           sort: { _id: -1 },
                           limit,
@@ -45,7 +46,8 @@ async function get_new(): Promise<Item[]> {
     const cookieStore = await cookies();
     const ref = cookieStore.get("ref")?.value;
 
-    const data = await get_cached_new(ref);
+    const now = Date.now();
+    const data = (await get_cached_new(ref)).map((item) => to_public_item(item, now));
 
     // No ref -> normal new arrivals
     if (!ref) {

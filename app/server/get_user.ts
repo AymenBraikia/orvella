@@ -4,6 +4,7 @@ import { UserData } from "@/types/user";
 import { cookies } from "next/headers";
 import { users_collection } from "../db/collections";
 import { verifyJwt } from "@/app/(auth)/auth/jwt";
+import { hydrate_cart } from "./cart";
 
 export default async function getUser(): Promise<UserData | undefined> {
     const cookieStore = await cookies();
@@ -29,8 +30,8 @@ export default async function getUser(): Promise<UserData | undefined> {
     if (!user) return;
 
     const data: UserData = {
-        cart: user.cart,
-        wish_list: user.wish_list,
+        cart: await hydrate_cart(user.cart),
+        wish_list: await hydrate_cart(user.wish_list),
         ongoing_orders: user.ongoing_orders,
         fulfilled_orders: user.fulfilled_orders,
         first_name: user.firstName,

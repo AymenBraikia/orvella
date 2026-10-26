@@ -1,39 +1,100 @@
 import { Supported_Currencies } from "@/currency";
-import { Cart_Item } from "./user";
+import type { Item } from "./item";
+
+export type OrderStatus = "pending_payment" | "paid" | "shipped" | "delivered" | "cancelled" | "refunded";
+
+export type PaymentMethod = "PayPal" | "Credit/Debit Card" | "Bank Transfer";
+
+export type TaxMode = "included" | "added" | "margin_scheme";
+
+export interface ShippingInfo {
+    country_name: string;
+    region: string;
+    currency: string;
+    shipping_cost: number;
+    estimated_delivery: string;
+    carrier: string;
+    insurance_included: boolean;
+    requires_signature: boolean;
+    special_notes: string;
+}
+
+export interface OrderAddress {
+    address1: string;
+    address2?: string;
+    city: string;
+    province?: string;
+    postCode: string;
+    country: string;
+    phone?: string;
+}
+
+/** A purchased line, frozen at order time. Prices are in the order currency unless noted. */
+export interface OrderLine {
+    slug: string;
+    type: Item["type"];
+    name: string;
+    reference?: string;
+    image?: string;
+    quantity: number;
+    unit_price_eur: number;
+    unit_price: number;
+    total: number;
+}
+
+/** All in the order currency, major units (e.g. 1234.5 = €1,234.50). */
+export interface OrderTotals {
+    items: number;
+    shipping: number;
+    /** VAT added on top of the prices ("added" tax mode). */
+    tax: number;
+    /** VAT already contained in the prices ("included" tax mode) — informational only. */
+    tax_included: number;
+    discount: number;
+    total: number;
+}
+
+export interface StatusEvent {
+    status: OrderStatus;
+    at: Date | string;
+    note?: string;
+    by?: string;
+}
 
 export interface Order {
+    /** Human-friendly order number, also used as the bank transfer reference. */
     id: string;
-    items: Cart_Item[];
-    currency: Supported_Currencies;
-    payment_method: "PayPal" | "Credit/Debit Card" | "Bank Transfer";
-    shipping:
-        | {
-              country_name: string;
-              region: string;
-              currency: string;
-              shipping_cost: number;
-              estimated_delivery: string;
-              carrier: string;
-              insurance_included: boolean;
-              requires_signature: boolean;
-              special_notes: string;
-          }
-        | false;
-    address:
-        | "Local Pickup"
-        | {
-              address1: string;
-              address2?: string;
-              city: string;
-              postCode: string;
-              country: string;
-          };
-    total: number;
-    discount_amount: number;
-    amount_to_pay: number;
-    status: "Pending" | "Failed" | "Completed";
+    paypal_order_id?: string;
+    paypal_capture_id?: string;
+
     email: string;
-    created_at: Date;
+    first_name?: string;
+    last_name?: string;
+    phone?: string;
+    locale?: string;
+
+    items: OrderLine[];
+    currency: Supported_Currencies;
+    /** 1 EUR = exchange_rate units of `currency` at the time the order was placed. */
+    exchange_rate: number;
+    totals: OrderTotals;
+    tax: { mode: TaxMode; rate: number };
+
+    payment_method: PaymentMethod;
+    shipping: ShippingInfo | false;
+    address: "Local Pickup" | OrderAddress;
+
+    status: OrderStatus;
+    status_history: StatusEvent[];
+    reserved_until?: Date | string;
+    /** Pieces that could not be taken out of stock when payment arrived (oversold). */
+    stock_conflicts?: string[];
+
+    tracking?: { carrier: string; number: string };
+    admin_notes?: string;
+
+    created_at: Date | string;
+    updated_at?: Date | string;
 }
 
 export interface capture_result {
@@ -80,6 +141,4 @@ export interface capture_result {
         rel: string;
         method: string;
     }[];
-
-    redirect?: string;
 }

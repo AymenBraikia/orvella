@@ -1,148 +1,116 @@
 "use server";
 
 import { cookies } from "next/headers";
+import { getLocale } from "next-intl/server";
 import { verifyJwt } from "@/app/(auth)/auth/jwt";
-import { getAccessToken } from "./paypal";
+import { getAccessToken, PAYPAL_API } from "./paypal";
 import { orders_collection, users_collection } from "../db/collections";
+import { build_quote, is_address_complete, normalise_currency, ONLINE_RESERVATION_MINUTES, order_from_quote } from "../server/checkout";
+import { reserve_items } from "../server/inventory";
+import { cancel_order } from "../server/orders";
+import { next_order_number } from "../server/order_number";
+import { minor_to_string } from "@/app/(site)/lib/order_totals";
 
-import { get_Currency } from "@/app/(site)/lib/get_currency";
-import { calc_price } from "@/app/(site)/lib/calc_price";
-import shippin_data from "@/app/shipping.json";
+export type CreateOrderResult = { id: string } | { error: "auth" | "empty" | "address" | "unavailable" | "payment"; items?: string[] };
 
-const shipping_values = Object.values(shippin_data);
-
-const TAX_RATE = 0.03;
-
-export async function create_order(): Promise<string> {
-    const token = await getAccessToken();
-
+export async function create_order(): Promise<CreateOrderResult> {
     const cookieStore = await cookies();
     const jwt_token = cookieStore.get("accessToken")?.value;
 
-    let payload = null;
+    const payload = jwt_token ? verifyJwt(jwt_token) : null;
+    if (!payload) return { error: "auth" };
 
-    if (!jwt_token) return "";
-    else {
-        payload = verifyJwt(jwt_token);
+    const user = await (await users_collection()).findOne({ email: payload.email });
+    if (!user) return { error: "auth" };
 
-        if (!payload) return "";
-    }
-    const user = await (await users_collection()).findOne({ email: payload!.email });
+    const quote = await build_quote(user.cart ?? [], user, normalise_currency(cookieStore.get("Currency")?.value));
 
-    if (!user) return "";
+    if (quote.unavailable.length) return { error: "unavailable", items: quote.unavailable };
+    if (!quote.lines.length) return { error: "empty" };
+    if (!is_address_complete(quote.address)) return { error: "address" };
 
-    const shipping = !user.local_pickup && shipping_values.find((e) => e.country_name == user.address.country)!;
+    const id = await next_order_number();
+    const reserved_until = new Date(Date.now() + ONLINE_RESERVATION_MINUTES * 60_000);
 
-    const cart = user.cart;
+    const failed = await reserve_items(
+        id,
+        quote.lines.map((l) => ({ slug: l.slug, quantity: l.quantity })),
+        reserved_until,
+    );
+    if (failed.length) return { error: "unavailable", items: quote.lines.filter((l) => failed.includes(l.slug)).map((l) => l.name) };
 
-    const currency = await get_Currency();
-    const zeroDecimalCurrencies = new Set(["JPY", "HUF", "TWD", "KRW", "UGX", "VND"]);
-    const isZeroDecimal = zeroDecimalCurrencies.has(currency);
+    await (await orders_collection()).insertOne(order_from_quote(id, quote, user, "PayPal", reserved_until, await getLocale()));
 
-    const items = cart.map((item) => ({
-        name: item.type == "watch" || item.type == "spare" ? item.brand + item.model : item.display_name,
-        description: item.description,
-        quantity: item.quantity.toString(),
-        unit_amount: {
-            currency_code: currency,
-            // value: calc_price(item.price, currency),
-            value: calc_price(item.price, currency).toFixed(isZeroDecimal ? 0 : 2),
-        },
-    }));
+    const { currency, minor } = quote;
+    const money = (value: number) => ({ currency_code: currency, value: minor_to_string(value, currency) });
 
-    const ref_id = `ORDER-${Math.random().toString(36).substring(2, 10).toUpperCase()}`;
-
-    const shipping_amount = shipping ? shipping.shipping_cost : 0;
-
-    const total_amount: number = items.reduce((prev: number, item) => prev + Number(item.unit_amount.value) * Number(item.quantity), 0);
-
-    const tax_amount: number = Math.floor(total_amount * TAX_RATE);
-
-    const discount_amount = 0;
-
-    const amount_to_pay = total_amount + shipping_amount + tax_amount - discount_amount;
-    // const amount_to_pay = isZeroDecimal ? Math.floor(amount_to_pay_cents / 100) : amount_to_pay_cents / 100;
-
-    const res = await fetch("https://api-m.sandbox.paypal.com/v2/checkout/orders", {
-        method: "POST",
-        headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            intent: "CAPTURE",
-            purchase_units: [
-                {
-                    reference_id: ref_id,
-                    description: "orvella",
-                    items,
-
-                    amount: {
-                        currency_code: currency,
-                        value: amount_to_pay,
-                        breakdown: {
-                            item_total: { currency_code: currency, value: total_amount },
-                            tax_total: { currency_code: currency, value: tax_amount },
-                            handling: { currency_code: currency, value: isZeroDecimal ? "0" : "0.00" },
-                            discount: { currency_code: currency, value: discount_amount },
-                            shipping: {
-                                currency_code: currency,
-                                value: shipping_amount,
+    try {
+        const res = await fetch(`${PAYPAL_API}/v2/checkout/orders`, {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${await getAccessToken()}`,
+                "Content-Type": "application/json",
+                "PayPal-Request-Id": id,
+            },
+            body: JSON.stringify({
+                intent: "CAPTURE",
+                purchase_units: [
+                    {
+                        reference_id: id,
+                        invoice_id: id,
+                        custom_id: id,
+                        description: `Order ${id}`,
+                        items: quote.lines.map((line, i) => ({
+                            name: line.name.slice(0, 127),
+                            sku: line.reference?.slice(0, 127),
+                            quantity: String(line.quantity),
+                            category: "PHYSICAL_GOODS",
+                            unit_amount: money(minor.unit_minor[i]),
+                        })),
+                        amount: {
+                            ...money(minor.total_minor),
+                            breakdown: {
+                                item_total: money(minor.items_minor),
+                                tax_total: money(minor.tax_minor),
+                                shipping: money(minor.shipping_minor),
+                                discount: money(minor.discount_minor),
                             },
                         },
                     },
+                ],
+                application_context: {
+                    brand_name: "orvella",
+                    landing_page: "LOGIN",
+                    shipping_preference: "NO_SHIPPING",
+                    user_action: "PAY_NOW",
 
-                    application_context: {
-                        brand_name: "orvella",
-                        locale: "en-US",
-                        landing_page: "LOGIN",
-                        shipping_preference: "NO_SHIPPING",
-                        user_action: "PAY_NOW",
-
-                        return_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://orvella.vercel.app") + "/thank_you/",
-                        cancel_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://orvella.vercel.app") + "/cart/",
-                    },
+                    return_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://orvella.vercel.app") + "/thank_you/",
+                    cancel_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://orvella.vercel.app") + "/cart/",
                 },
-            ],
-        }),
-    });
-
-    const order = await res.json();
-
-    const target_address = user.diff_address.active
-        ? {
-              country: user.diff_address.country!,
-              address1: user.diff_address.address1!,
-              address2: user.diff_address.address2,
-              city: user.diff_address.city!,
-              postCode: user.diff_address.postCode!,
-          }
-        : {
-              country: user.address.country!,
-              address1: user.address.address1!,
-              address2: user.address.address2,
-              city: user.address.city!,
-              postCode: user.address.postCode!,
-          };
-
-    if (order.id) {
-        await (
-            await orders_collection()
-        ).insertOne({
-            id: order.id,
-            email: payload.email,
-            currency,
-            items: cart,
-            total: total_amount,
-            discount_amount: Number(discount_amount),
-            amount_to_pay: Number(amount_to_pay),
-            status: "Pending",
-            created_at: new Date(),
-            payment_method: "PayPal",
-            shipping,
-            address: user.local_pickup ? "Local Pickup" : target_address,
+            }),
         });
 
-        return order.id;
-    } else return "";
+        const paypal_order = await res.json();
+        if (!res.ok || !paypal_order.id) throw new Error(`PayPal order creation failed (${res.status}): ${JSON.stringify(paypal_order)}`);
+
+        await (await orders_collection()).updateOne({ id }, { $set: { paypal_order_id: paypal_order.id } });
+
+        return { id: paypal_order.id };
+    } catch (error) {
+        console.error(error);
+        await cancel_order(id, "PayPal order could not be created");
+        return { error: "payment" };
+    }
+}
+
+/** The buyer closed the PayPal window or PayPal reported an error: free the pieces again. */
+export async function cancel_paypal_order(paypal_order_id: string): Promise<void> {
+    const cookieStore = await cookies();
+    const jwt_token = cookieStore.get("accessToken")?.value;
+
+    const payload = jwt_token ? verifyJwt(jwt_token) : null;
+    if (!payload || typeof paypal_order_id !== "string") return;
+
+    const order = await (await orders_collection()).findOne({ paypal_order_id, email: payload.email, status: "pending_payment" });
+    if (order) await cancel_order(order.id, "PayPal payment cancelled by the customer");
 }

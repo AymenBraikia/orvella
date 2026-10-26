@@ -1,14 +1,16 @@
 import { Supported_Countries, Supported_Currencies } from "@/currency";
 import { calc_price } from "./calc_price";
+import { currency_decimals } from "./order_totals";
 
+/** Format a EUR catalogue price in the visitor's currency. */
 export function format_price(n: number, currency: Supported_Currencies = "USD"): string {
-    const converted = calc_price(n, currency);
+    return format_money(calc_price(n, currency), currency);
+}
 
-    const intl = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency,
-    });
-    return intl.format(converted);
+/** Format an amount that is already in `currency` (order totals) — no conversion. */
+export function format_money(amount: number, currency: string): string {
+    const decimals = currency_decimals(currency);
+    return new Intl.NumberFormat("en-US", { style: "currency", currency, minimumFractionDigits: decimals, maximumFractionDigits: decimals }).format(amount);
 }
 
 export const country_to_currency: Map<Supported_Countries, Supported_Currencies> = new Map([

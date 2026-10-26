@@ -22,7 +22,15 @@
         "quantity": "Anzahl",
         "localPickup": "Abholung in der Boutique",
         "discount": "Rabatt",
-        "browse": "Kollektion entdecken"
+        "browse": "Kollektion entdecken",
+        "statuses": {
+            "pending_payment": "Zahlung ausstehend",
+            "paid": "Bezahlt",
+            "shipped": "Versandt",
+            "delivered": "Zugestellt",
+            "cancelled": "Storniert",
+            "refunded": "Erstattet"
+        }
     },
     "meta": {
         "siteName": "ORVELLA",
@@ -176,6 +184,11 @@
             "attachImages": "Bilder anhängen",
             "required": "Dieses Feld ist erforderlich",
             "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+        },
+        "stock": {
+            "available": "Verfügbar",
+            "reserved": "Reserviert",
+            "sold": "Verkauft"
         }
     },
     "error": {
@@ -981,11 +994,12 @@
         "checkoutCta": "Zur Kasse",
         "choose_shipping_country": "Versandland auswählen",
         "shipping_to": "Versand nach {country}",
-        "shipping_costs": "Versandkosten",
+        "shipping_costs": "Versandkosten: {cost}",
         "shipping": "Versand",
         "localPickup": "Abholung vor Ort",
         "moreAbout": "Mehr zum",
-        "continueShopping": "Weiter einkaufen"
+        "continueShopping": "Weiter einkaufen",
+        "unavailable": "Dieses Stück ist nicht mehr verfügbar. Bitte entfernen Sie es, um fortzufahren."
     },
     "favorites": {
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
@@ -1027,7 +1041,22 @@
         "cardNumber": "Kartennummer",
         "expirationDate": "Verfallsdatum",
         "securityCode": "Sicherheitscode",
-        "orderNumber": "Bestellnummer"
+        "orderNumber": "Bestellnummer",
+        "errors": {
+            "auth": "Bitte melden Sie sich erneut an, um Ihre Bestellung abzuschließen.",
+            "empty": "Ihr Warenkorb ist leer.",
+            "address": "Bitte vervollständigen Sie Ihre Lieferadresse, bevor Sie die Bestellung aufgeben.",
+            "unavailable": "Einige Stücke sind nicht mehr verfügbar: {items}. Bitte entfernen Sie sie aus Ihrem Warenkorb.",
+            "payment": "Die Zahlung konnte nicht gestartet werden. Bitte versuchen Sie es erneut.",
+            "declined": "Die Zahlung wurde nicht abgeschlossen. Ihre Stücke wurden freigegeben – bitte versuchen Sie es erneut.",
+            "pending": "Ihre Zahlung wird bearbeitet. Wir bestätigen Ihre Bestellung per E-Mail.",
+            "method": "Bitte wählen Sie eine Zahlungsart.",
+            "not_found": "Diese Bestellung wurde nicht gefunden. Bitte versuchen Sie es erneut."
+        },
+        "vatIncluded": "inkl. {rate} % MwSt.",
+        "vatAdded": "MwSt. ({rate} %)",
+        "marginScheme": "Differenzbesteuerung gemäß §25a UStG – die Mehrwertsteuer wird nicht gesondert ausgewiesen.",
+        "discount": "Rabatt"
     },
     "product": {
         "reference": "Referenz",
@@ -1043,7 +1072,8 @@
         "findInStore": "Im Geschäft finden",
         "bookApointment": "Buchen Sie einen Termin",
         "consignmentBeforeLink": "Möchten Sie eine Ihrer Uhren in Zahlung geben? Kontaktieren Sie uns über die",
-        "consignmentAfterLink": "Seite mit den Angaben zu Ihrer Uhr und wir unterbreiten Ihnen ein Angebot."
+        "consignmentAfterLink": "Seite mit den Angaben zu Ihrer Uhr und wir unterbreiten Ihnen ein Angebot.",
+        "clasp": "Verschluss"
     },
     "brands": {
         "rolex": {
@@ -1385,12 +1415,7 @@
             "storefront": {
                 "title": "Eigener Store",
                 "label": "Ihr Eigentum",
-                "items": [
-                    "Der Käufer kann den aktuellen Bestand selbst durchsuchen.",
-                    "Jede Uhr kann eine eigene Seite mit Details haben.",
-                    "Sie senden einen Link statt einer ganzen Reihe von Fotos.",
-                    "Anfragen und Terminwünsche haben ein klares Ziel."
-                ]
+                "items": ["Der Käufer kann den aktuellen Bestand selbst durchsuchen.", "Jede Uhr kann eine eigene Seite mit Details haben.", "Sie senden einen Link statt einer ganzen Reihe von Fotos.", "Anfragen und Terminwünsche haben ein klares Ziel."]
             },
             "footnote": "Es geht nicht darum, \"eine Website zu haben\", sondern die Lücke zwischen Aufmerksamkeit und Handlung zu schließen."
         },

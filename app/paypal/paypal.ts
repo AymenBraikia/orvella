@@ -1,6 +1,6 @@
 import { unstable_cache } from "next/cache";
 
-const PAYPAL_API = "https://api-m.sandbox.paypal.com";
+export const PAYPAL_API = "https://api-m.sandbox.paypal.com";
 
 const get_token = unstable_cache(
     async () => {

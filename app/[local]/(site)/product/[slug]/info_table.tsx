@@ -1,11 +1,11 @@
 "use client";
 
-import { Watch } from "@/types/watch";
+import { Item } from "@/types/item";
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
-export default function InfoTable({ watch }: { watch: Watch }) {
+export default function InfoTable({ item }: { item: Item }) {
     const [tab, set_tab] = useState<0 | 1 | 2 | 3>(0);
 
     const common = useTranslations("common");
@@ -48,19 +48,19 @@ export default function InfoTable({ watch }: { watch: Watch }) {
                 </button>
             </div>
 
-            <Displayed_Data watch={watch} tab={tab} common={common} payments={payments} product={product} />
+            <Displayed_Data item={item} tab={tab} common={common} payments={payments} product={product} />
         </div>
     );
 }
 
 function Displayed_Data({
-    watch,
+    item,
     tab,
     common,
     payments,
     product,
 }: {
-    watch: Watch;
+    item: Item;
     tab: 0 | 1 | 2 | 3;
     common: ReturnType<typeof useTranslations>;
     payments: ReturnType<typeof useTranslations>;
@@ -68,6 +68,31 @@ function Displayed_Data({
 }) {
     switch (tab) {
         case 0: {
+            if (item.type != "watch" && item.type != "spare") {
+                const material = [item.karats ? `${item.karats}K` : item.fineness ? String(item.fineness) : "", item.metal_type].filter(Boolean).join(" ");
+
+                return (
+                    <div className="w-full flex flex-col gap-2 py-4">
+                        <Row label={common("productCard.material")} value={material} />
+                        {item.stones?.length ? <Row label={common("productCard.gemstones")} value={item.stones.join(", ")} /> : null}
+                        {item.weight ? <Row label={common("productCard.weight")} value={`${item.weight} ${item.measurement_unit}`} /> : null}
+                        {item.type == "ring" ? (
+                            <>
+                                <Row label={common("productCard.size")} value={String(item.ring_size)} />
+                                {item.band_width ? <Row label={common("productCard.bandWidth")} value={`${item.band_width} mm`} /> : null}
+                            </>
+                        ) : (
+                            <>
+                                {item.length ? <Row label={common("productCard.length")} value={`${item.length} ${item.length_unit}`} /> : null}
+                                {item.clasp_type ? <Row label={product("clasp")} value={item.clasp_type} /> : null}
+                            </>
+                        )}
+                        <Row label={common("productCard.condition")} value={item.condition} />
+                    </div>
+                );
+            }
+
+            const watch = item;
             const included = [
                 watch.boxPapers.papers ? common("filters.includesPapers") : "",
                 watch.boxPapers.box ? common("filters.includesBox") : "",

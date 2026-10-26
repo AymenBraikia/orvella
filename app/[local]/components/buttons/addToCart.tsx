@@ -5,14 +5,20 @@ import addToCart from "@/app/server/add_to_cart";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import type { ItemStatus } from "@/types/item";
 
-export default function AtcBtn({ slug, children }: { slug: string; children?: React.ReactNode }) {
+export default function AtcBtn({ slug, status = "available", children }: { slug: string; status?: ItemStatus; children?: React.ReactNode }) {
     const t = useTranslations("common.buttons");
+    const t_stock = useTranslations("common.stock");
     const router = useRouter();
     const { session } = useAuth();
 
     const [inserting, set_insert] = useState<boolean>(false);
     const [is_in_cart, set_is_in_cart] = useState<boolean>(session?.cart.find((i) => i.slug == slug) ? true : false);
+
+    if (status != "available") {
+        return <div className="border border-gold text-gold w-full h-fit p-4 select-none flex-center uppercase tracking-widest cursor-default">{t_stock(status)}</div>;
+    }
 
     async function handleClick() {
         if (session) {

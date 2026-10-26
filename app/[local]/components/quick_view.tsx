@@ -101,7 +101,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
 
                         <div className="w-full flex-center gap-4 flex-col sm:flex-row">
                             <div className="w-full">
-                                <AtcBtn slug={view.slug} />
+                                <AtcBtn slug={view.slug} status={view.stock_status} />
                             </div>
                             <Link href={"/product/" + view.slug} className="w-full button2 flex-center">
                                 {t("productCard.details")}
@@ -176,7 +176,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
 
                         <div className="w-full flex-center gap-4 flex-col sm:flex-row">
                             <div className="w-full">
-                                <AtcBtn slug={view.slug} />
+                                <AtcBtn slug={view.slug} status={view.stock_status} />
                             </div>
                             <Link href={"/product/" + view.slug} className="w-full button2 flex-center">
                                 {t("productCard.details")}

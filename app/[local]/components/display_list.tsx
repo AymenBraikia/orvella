@@ -166,6 +166,7 @@ export default function Display_list({ items }: { items: Item[] }) {
                                         video_src={item.video}
                                         braceletMaterial={item.braceletMaterial}
                                         description={item.description}
+                                        status={item.stock_status}
                                     />
                                 ) : (
                                     <Item_card

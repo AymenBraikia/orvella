@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 
 import { items_collection } from "../db/collections";
 import { Item } from "@/types/item";
+import { to_public_item } from "@/app/(site)/lib/stock";
 
 // The card grid never reads these, but you're currently shipping them for
 // every watch on every request.
@@ -24,6 +25,10 @@ const CARD_PROJECTION = {
     waterResistanceM: 1,
     boxPapers: 1,
     inStock: 1,
+    quantity: 1,
+    status: 1,
+    reservations: 1,
+    featured: 1,
     date_added: 1,
     relevance_score: 1,
     images: { $slice: 1 },
@@ -57,7 +62,7 @@ const get_cached_items = unstable_cache(
     async (): Promise<Item[]> => {
         const collection = await items_collection();
 
-        return collection.find({}, { projection: CARD_PROJECTION }).toArray();
+        return collection.find({ deleted: { $ne: true } }, { projection: CARD_PROJECTION }).toArray();
     },
     ["watches:all"],
     {
@@ -75,7 +80,8 @@ async function get_items(): Promise<Item[]> {
     const cookieStore = await cookies();
     const ref = cookieStore.get("ref")?.value;
 
-    const data = await get_cached_items();
+    const now = Date.now();
+    const data = (await get_cached_items()).map((item) => to_public_item(item, now));
 
     // No ref cookie => return all watches.
     if (!ref) {
