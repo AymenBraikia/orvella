@@ -10,6 +10,7 @@ import { usePathname, useRouter } from "@/i18n/routing";
 import { Supported_Currencies } from "@/currency";
 import setCurrency from "@/app/server/set_currency";
 import LearnMore from "./buttons/learnMore";
+import { DEMO_MODE } from "../(site)/lib/demo";
 
 type UIAction = { type: "OPEN_NAV" } | { type: "CLOSE_NAV" } | { type: "OPEN_CART" } | { type: "CLOSE_CART" } | { type: "TOGGLE_LANG" } | { type: "SET_GLASSY"; payload: boolean };
 
@@ -187,7 +188,7 @@ export default function Nav({ savedCurrency, dispatch, ui, ref }: { savedCurrenc
                     </ul>
                 </div>
             </div>
-            <LearnMore />
+            {DEMO_MODE && <LearnMore />}
             <button aria-label={"close"} type="button" className="absolute top-4 inset-e-4 p-0 cursor-pointer" onClick={() => dispatch({ type: "CLOSE_NAV" })}>
                 <Cross classnames={"w-10"} />
             </button>

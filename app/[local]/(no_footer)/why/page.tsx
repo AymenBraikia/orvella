@@ -6,8 +6,13 @@ import Hero from "./hero";
 import CTA from "./cta";
 import Role from "./role";
 import { Floating_Cta } from "./floating_cta";
+import { notFound } from "next/navigation";
+import { DEMO_MODE } from "../../(site)/lib/demo";
 
 export default function Home() {
+    // The dealer pitch only exists on the demo; a dealer's own shop has no /why page.
+    if (!DEMO_MODE) notFound();
+
     return (
         <>
             <Hero />

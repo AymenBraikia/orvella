@@ -1,7 +1,8 @@
 import "server-only";
 
 import { cookies } from "next/headers";
-import { get_settings } from "./settings";
+import { DEFAULT_SETTINGS, get_settings } from "./settings";
+import { DEMO_MODE } from "@/app/(site)/lib/demo";
 import { DEFAULT_BRAND } from "@/i18n/brand";
 import type { PublicStoreDetails, StoreSettings } from "@/types/settings";
 
@@ -12,11 +13,29 @@ import type { PublicStoreDetails, StoreSettings } from "@/types/settings";
  * the email domain, so a demo can be shown "as" a prospective dealer's shop.
  */
 export async function store_identity(): Promise<StoreSettings & { ref?: string }> {
-    const settings = await get_settings();
+    const settings = demo_safe(await get_settings());
     const ref = (await cookies()).get("ref")?.value;
     if (!ref) return settings;
 
     return { ...settings, ref, store_name: ref, email: `info@${ref.toLowerCase().replace(/[^a-z0-9]/g, "")}.com` };
+}
+
+/**
+ * In DEMO_MODE, legal and payment details are always obvious placeholders — whatever was typed into
+ * the demo's settings — so nothing looks like a real business (imprint, privacy, contact, bank).
+ */
+export function demo_safe(settings: StoreSettings): StoreSettings {
+    if (!DEMO_MODE) return settings;
+    return {
+        ...settings,
+        legal_name: DEFAULT_SETTINGS.legal_name,
+        representative: DEFAULT_SETTINGS.representative,
+        address: { street: "Your address", postcode: "00000", city: "Your city", country: "Germany" },
+        phone: DEFAULT_SETTINGS.phone,
+        email: DEFAULT_SETTINGS.email,
+        vat_id: DEFAULT_SETTINGS.vat_id,
+        bank: DEFAULT_SETTINGS.bank,
+    };
 }
 
 export function public_details(s: StoreSettings): PublicStoreDetails {

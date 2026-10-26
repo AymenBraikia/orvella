@@ -1082,7 +1082,7 @@
         "missingBilling": "Les informations de facturation sont manquantes",
         "total": "Total",
         "bankNote": "Veuillez effectuer votre paiement directement sur notre compte bancaire. Merci d'indiquer le numéro de commande, la marque et le modèle de l'article comme référence de paiement. Veuillez également noter qu'aucun article ne sera expédié avant que les fonds ne soient effectivement crédités sur notre compte.",
-        "paypalNote": "Remarque : comme il s'agit d'une démonstration, l'utilisation",
+        "paypalNote": "Connectez-vous à PayPal avec ce compte de test sandbox :",
         "email": "E-mail",
         "password": "Mot de passe",
         "orderDate": "Date de la commande",
@@ -1692,5 +1692,13 @@
             "preowned": "D’occasion",
             "any": "Peu importe"
         }
+    },
+    "demo": {
+        "banner": "Boutique de démonstration — réalisée par Aymen Braikia",
+        "learnMore": "En savoir plus",
+        "dismiss": "Fermer",
+        "testPayment": "Paiement test — aucun argent réel n’est débité.",
+        "testCard": "Utilisez la carte 4242 4242 4242 4242 avec une date future et un CVC quelconques.",
+        "bankNote": "Boutique de démonstration : merci de ne virer aucun argent."
     }
 }

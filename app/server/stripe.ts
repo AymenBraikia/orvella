@@ -5,6 +5,7 @@ import { minor_to_string } from "@/app/(site)/lib/order_totals";
 import { absolute_url } from "@/app/(site)/lib/site_url";
 import type { Quote } from "./checkout";
 import type { Order } from "@/types/order";
+import { DEMO_MODE } from "@/app/(site)/lib/demo";
 
 /*
  * Card payments through Stripe Checkout (Stripe's hosted payment page), via the REST API.
@@ -21,7 +22,9 @@ const API = "https://api.stripe.com/v1";
 export const STRIPE_SESSION_MINUTES = 30;
 
 export function stripe_configured(): boolean {
-    return Boolean(process.env.STRIPE_SECRET_KEY);
+    const key = process.env.STRIPE_SECRET_KEY;
+    // A demo never takes real card payments: only test keys are accepted there.
+    return Boolean(key) && (!DEMO_MODE || key!.startsWith("sk_test_"));
 }
 
 /** Stripe's form encoding with nested keys: line_items[0][price_data][currency]=eur */

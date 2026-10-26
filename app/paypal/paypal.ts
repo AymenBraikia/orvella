@@ -1,7 +1,9 @@
 import { unstable_cache } from "next/cache";
 
-/** PAYPAL_ENV=live switches to real payments; anything else (default) uses the sandbox. */
-export const PAYPAL_ENV = process.env.PAYPAL_ENV === "live" ? "live" : "sandbox";
+import { DEMO_MODE } from "@/app/(site)/lib/demo";
+
+/** PAYPAL_ENV=live switches to real payments; anything else (default) uses the sandbox. A demo always uses the sandbox. */
+export const PAYPAL_ENV = process.env.PAYPAL_ENV === "live" && !DEMO_MODE ? "live" : "sandbox";
 
 export const PAYPAL_API = PAYPAL_ENV === "live" ? "https://api-m.paypal.com" : "https://api-m.sandbox.paypal.com";
 

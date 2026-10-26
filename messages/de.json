@@ -1081,7 +1081,7 @@
         "total": "Gesamt",
         "missingBilling": "Rechnungsdetails fehlen",
         "bankNote": "Bitte überweisen Sie den Betrag direkt auf unser Bankkonto. Geben Sie dabei bitte die Bestellnummer, den Markennamen und das Modell des Artikels als Verwendungszweck an. Bitte beachten Sie zudem, dass der Versand erst erfolgt, nachdem der Betrag auf unserem Konto gutgeschrieben wurde.",
-        "paypalNote": "Hinweis: Da es sich hier um eine Demo handelt, ist die Verwendung",
+        "paypalNote": "Melden Sie sich bei PayPal mit diesem Sandbox-Testkonto an:",
         "email": "E-Mail",
         "password": "Passwort",
         "orderDate": "Bestelldatum",
@@ -1686,5 +1686,13 @@
             "preowned": "Gebraucht",
             "any": "Beides"
         }
+    },
+    "demo": {
+        "banner": "Demo-Shop – entwickelt von Aymen Braikia",
+        "learnMore": "Mehr erfahren",
+        "dismiss": "Ausblenden",
+        "testPayment": "Testzahlung – es wird kein echtes Geld abgebucht.",
+        "testCard": "Verwenden Sie die Karte 4242 4242 4242 4242 mit einem beliebigen zukünftigen Datum und einer beliebigen Prüfnummer.",
+        "bankNote": "Demo-Shop: Bitte überweisen Sie kein Geld."
     }
 }

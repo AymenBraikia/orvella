@@ -1082,7 +1082,7 @@
         "missingBilling": "Mancano i dati di fatturazione",
         "total": "Totale",
         "bankNote": "Effettua il pagamento direttamente sul nostro conto bancario. Ti preghiamo di indicare l'ID dell'ordine, il marchio e il modello dell'articolo nella causale del pagamento. Ti informiamo inoltre che nessun articolo verrà spedito prima dell'effettivo accredito dei fondi sul nostro conto.",
-        "paypalNote": "Nota: trattandosi di una demo, l'utilizzo",
+        "paypalNote": "Accedi a PayPal con questo account di prova sandbox:",
         "email": "E-mail",
         "password": "Password",
         "orderDate": "Data dell'ordine",
@@ -1692,5 +1692,13 @@
             "preowned": "Usato",
             "any": "Indifferente"
         }
+    },
+    "demo": {
+        "banner": "Negozio dimostrativo — realizzato da Aymen Braikia",
+        "learnMore": "Scopri di più",
+        "dismiss": "Chiudi",
+        "testPayment": "Pagamento di prova: non viene addebitato denaro reale.",
+        "testCard": "Usa la carta 4242 4242 4242 4242 con una data futura e un CVC qualsiasi.",
+        "bankNote": "Negozio dimostrativo: non trasferire denaro."
     }
 }

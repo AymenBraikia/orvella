@@ -1081,7 +1081,7 @@
         "payment": "Payment",
         "missingBilling": "Billing details is missing",
         "total": "Total",
-        "paypalNote": "Note: since this is a demo the use",
+        "paypalNote": "Log in to PayPal with this sandbox test account:",
         "email": "Email",
         "password": "Password",
         "paymentMethod": "Payment Method",
@@ -1687,5 +1687,13 @@
             "preowned": "Pre-owned",
             "any": "Either"
         }
+    },
+    "demo": {
+        "banner": "Demo store — built by Aymen Braikia",
+        "learnMore": "Learn more",
+        "dismiss": "Dismiss",
+        "testPayment": "Test payment — no real money is charged.",
+        "testCard": "Use card 4242 4242 4242 4242 with any future date and any CVC.",
+        "bankNote": "Demo store: please do not transfer any money."
     }
 }

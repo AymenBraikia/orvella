@@ -1082,7 +1082,7 @@
         "missingBilling": "Fatura bilgileri eksik",
         "total": "Toplam",
         "bankNote": "Ödemenizi doğrudan banka hesabımıza yapın. Lütfen ödeme açıklaması kısmında sipariş numarasını, marka adını ve ürün modelini belirtin. Ayrıca, ödeme hesabımıza geçmeden herhangi bir ürünün gönderilmeyeceğini lütfen unutmayın.",
-        "paypalNote": "Not: bu bir demo olduğundan kullanım",
+        "paypalNote": "PayPal’a bu sandbox test hesabıyla giriş yapın:",
         "email": "E-posta",
         "password": "Şifre",
         "orderDate": "Sipariş Tarihi",
@@ -1687,5 +1687,13 @@
             "preowned": "İkinci el",
             "any": "Fark etmez"
         }
+    },
+    "demo": {
+        "banner": "Demo mağaza — Aymen Braikia tarafından geliştirildi",
+        "learnMore": "Daha fazla bilgi",
+        "dismiss": "Kapat",
+        "testPayment": "Test ödemesi — gerçek para çekilmez.",
+        "testCard": "4242 4242 4242 4242 kartını gelecekteki herhangi bir tarih ve herhangi bir CVC ile kullanın.",
+        "bankNote": "Demo mağaza: lütfen para göndermeyin."
     }
 }

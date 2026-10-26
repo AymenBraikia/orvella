@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { get_settings } from "@/app/server/settings";
+import { store_identity } from "@/app/server/store_identity";
 import { format_money } from "../lib/price_format";
 import type { Order } from "@/types/order";
 
@@ -7,7 +7,7 @@ import type { Order } from "@/types/order";
 export default async function BankDetails({ order }: { order: Order }) {
     const t = await getTranslations("orders.bank");
     const locale = await getLocale();
-    const { bank } = await get_settings();
+    const { bank } = await store_identity();
 
     const deadline = order.reserved_until ? new Intl.DateTimeFormat(locale, { dateStyle: "long" }).format(new Date(order.reserved_until)) : "";
 

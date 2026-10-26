@@ -2,8 +2,7 @@ import { Suspense } from "react";
 import AuthGate from "@/app/components/AuthGate";
 import AuthShell from "@/app/components/AuthShell";
 
-import { absolute_url, BASE_URL } from "@/app/(site)/lib/site_url";
-import { store_identity } from "@/app/server/store_identity";
+import { site_metadata } from "@/app/(site)/lib/site_metadata";
 import type { Metadata, Viewport } from "next";
 import { Open_Sans, Gelasio, Cormorant_Garamond, Tajawal, Lateef } from "next/font/google";
 import "../globals.css";
@@ -47,79 +46,8 @@ const gelasio = Gelasio({
     display: "swap",
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-    const { store_name } = await store_identity();
-
-    return {
-        title: {
-            default: "Luxury Watch Platform | Concept by Aymen Braikia",
-            template: `%s | ${store_name}`,
-        },
-        description: "A full-stack luxury watch marketplace concept — consignment, spare parts, appointment booking, and multilingual storefront. Built by Aymen Braikia as a demonstration of production-grade e-commerce architecture.",
-        applicationName: store_name,
-        authors: [{ name: "Aymen Braikia" }],
-        creator: "Aymen Braikia",
-        publisher: "Aymen Braikia",
-
-        metadataBase: new URL(BASE_URL),
-        alternates: {
-            canonical: "/en",
-            languages: {
-                en: "/en",
-                de: "/de",
-                tr: "/tr",
-                fr: "/fr",
-                it: "/it",
-                es: "/es",
-                ar: "/ar",
-            },
-        },
-        robots: {
-            index: true,
-            follow: true,
-            googleBot: {
-                index: true,
-                follow: true,
-                "max-image-preview": "large",
-                "max-snippet": -1,
-                "max-video-preview": -1,
-            },
-        },
-
-        openGraph: {
-            title: "Luxury Watch Platform Concept",
-            description: "A full-stack e-commerce concept for the luxury watch trade — consignment, appointments, multilingual UX.",
-            url: absolute_url("/en"),
-            siteName: store_name,
-            images: [
-                {
-                    url: "/banner.png",
-                    width: 1200,
-                    height: 630,
-                    alt: "ORVELLA Platform Preview",
-                },
-            ],
-            locale: "en",
-            alternateLocale: ["de"],
-            type: "website",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Luxury Watch Platform Concept",
-            description: "A full-stack e-commerce concept for the luxury watch trade.",
-            images: ["/banner.png"],
-        },
-        icons: {
-            icon: "/favicon.ico",
-            apple: "/apple-touch-icon.png",
-        },
-        formatDetection: {
-            telephone: false,
-            email: false,
-            address: false,
-        },
-        category: "ecommerce",
-    };
+export async function generateMetadata({ params }: { params: Promise<{ local: string }> }): Promise<Metadata> {
+    return site_metadata((await params).local);
 }
 
 export const viewport: Viewport = {

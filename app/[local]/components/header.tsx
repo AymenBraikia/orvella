@@ -19,7 +19,7 @@ import { useCart } from "../(site)/context/cartContext";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/routing";
 
-import Credits from "./credits";
+import DemoBanner from "./demo_banner";
 import Select from "./elements/select";
 import Search_input from "./elements/search_input";
 import { ThemeToggle } from "./theme";
@@ -321,7 +321,7 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
     return (
         <>
             <header className={`flex flex-col w-dvw fixed top-0 inset-s-0 z-4000 h-fit min-h-20 text-primary bg-background`}>
-                <Credits />
+                <DemoBanner />
                 <div className="w-full flex justify-between items-center sm:px-8 py-4 sm:py-2 px-[5dvw]">
                     <div className={`w-1/3 flex justify-between items-center transition-default ${ui.isNavOpen ? "opacity-0" : "opacity-100"} gap-2`}>
                         <button aria-label={"menu"} type="button" className="button2 p-1 md:p-auto" onClick={() => dispatch({ type: "OPEN_NAV" })}>

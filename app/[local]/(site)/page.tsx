@@ -8,6 +8,7 @@ import NewLoader from "../components/loaders/new";
 import HeroLoader from "../components/loaders/hero";
 import Sections from "../components/sections";
 import Trade from "../components/trade";
+import { DEMO_MODE } from "./lib/demo";
 
 export default function Home() {
     return (
@@ -28,7 +29,8 @@ export default function Home() {
                     <Iconic />
                     <Trade />
                     {/* <Services /> */}
-                    <Booking />
+                    {/* The "Interested?" pitch to dealers belongs to the demo only */}
+                    {DEMO_MODE && <Booking />}
                 </Suspense>
             </div>
         </div>

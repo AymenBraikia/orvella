@@ -3,7 +3,8 @@ import "server-only";
 import { createTranslator } from "next-intl";
 import { send_email } from "./email";
 import { render_email, type Block } from "./render";
-import { get_settings, DEFAULT_SETTINGS } from "../settings";
+import { get_settings as get_saved_settings, DEFAULT_SETTINGS } from "../settings";
+import { demo_safe } from "../store_identity";
 import { applyBrand, DEFAULT_BRAND } from "@/i18n/brand";
 import { routing } from "@/i18n/routing";
 import { getDirection } from "@/i18n/direction";
@@ -15,6 +16,11 @@ import type { Sell } from "@/types/sell";
 import type { Consignment } from "@/types/consignment";
 import type { Appointment } from "@/types/appointment";
 import type { Enquiry } from "@/types/enquiry";
+
+/** Settings as customers may see them (placeholder legal / bank details on a demo). */
+async function get_settings() {
+    return demo_safe(await get_saved_settings());
+}
 
 /*
  * Who gets which email. Customer emails are written in the customer's language (stored on the
