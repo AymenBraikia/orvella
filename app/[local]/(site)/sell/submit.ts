@@ -5,6 +5,8 @@ import { getLocale } from "next-intl/server";
 import { consignments_collection, sell_collection } from "@/app/db/collections";
 import { is_stored_url } from "@/app/server/storage";
 import { sell_schema } from "./schema";
+import { after } from "next/server";
+import { notify_lead } from "@/app/server/email/notifications";
 
 export type SubmitResult = { ok: true } | { ok: false; error: "invalid" | "server" };
 
@@ -28,6 +30,8 @@ export default async function Submit(input: unknown): Promise<SubmitResult> {
     try {
         if (lead.intent == "consign") await (await consignments_collection()).insertOne({ ...lead, intent: "consign" });
         else await (await sell_collection()).insertOne({ ...lead, intent: "sell" });
+
+        after(() => notify_lead(lead));
 
         return { ok: true };
     } catch (error) {

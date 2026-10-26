@@ -1554,5 +1554,61 @@
         "footer": {
             "tagline": "Bağımsız saat satıcıları için özel vitrin konseptleri"
         }
+    },
+    "emails": {
+        "greeting": "Merhaba {name},",
+        "signoff": "Saygılarımızla,\n{store}",
+        "orderNumber": "Sipariş",
+        "subtotal": "Ara toplam",
+        "shipping": "Kargo",
+        "pickup": "Mağazadan teslim",
+        "discount": "İndirim",
+        "total": "Toplam",
+        "vatAdded": "KDV (%{rate})",
+        "vatIncluded": "%{rate} KDV dahil",
+        "viewOrders": "Siparişlerinizi görüntüleyin",
+        "orderConfirmed": {
+            "subject": "{id} numaralı siparişiniz onaylandı",
+            "heading": "Siparişiniz için teşekkürler",
+            "text": "Ödemenizi aldık. Siparişinizi şimdi hazırlıyoruz ve kargoya verildiğinde size haber vereceğiz."
+        },
+        "orderReceivedBank": {
+            "subject": "{id} numaralı siparişiniz — ödeme bilgileri",
+            "heading": "Siparişiniz için teşekkürler",
+            "text": "Lütfen {amount} tutarını {date} tarihine kadar havale edin ve açıklama olarak sipariş numaranızı ({id}) yazın. Parçalarınız o tarihe kadar sizin için ayrılmıştır; ödeme ulaştığında kargoya veririz."
+        },
+        "paymentReceived": {
+            "subject": "{id} numaralı sipariş için ödeme alındı",
+            "heading": "Ödeme alındı",
+            "text": "Teşekkürler — ödemeniz ulaştı. Siparişinizi hazırlıyoruz ve kargoya verildiğinde takip bilgilerini göndereceğiz."
+        },
+        "shipped": {
+            "subject": "{id} numaralı siparişiniz yolda",
+            "heading": "Siparişiniz kargoya verildi",
+            "text": "Güzel haber: {id} numaralı siparişiniz {carrier} firmasına teslim edildi. Aşağıdaki takip numarasıyla izleyebilirsiniz.",
+            "carrier": "Kargo firması",
+            "tracking": "Takip numarası"
+        },
+        "cancelled": {
+            "subject": "{id} numaralı siparişiniz iptal edildi",
+            "heading": "Sipariş iptal edildi",
+            "text": "{id} numaralı siparişiniz iptal edildi. Ödeme yaptıysanız tutar iade edilecektir. Sorularınız mı var? Bu e-postayı yanıtlamanız yeterli.",
+            "expiredText": "{id} numaralı siparişin ödemesi zamanında ulaşmadığı için rezervasyon sona erdi ve sipariş iptal edildi. Parayı zaten gönderdiyseniz lütfen bu e-postayı yanıtlayın, konuyu çözelim."
+        },
+        "leadReceived": {
+            "subject": "Talebinizi aldık",
+            "heading": "Talebiniz için teşekkürler",
+            "text": "{watch} saatinizin bilgilerini ve fotoğraflarını aldık. Uzmanlarımız inceleyip 48 saat içinde size dönüş yapacak."
+        },
+        "appointmentRequested": {
+            "subject": "{date} tarihli randevu talebiniz",
+            "heading": "Randevu talebi alındı",
+            "text": "{date} tarihinde bizi ziyaret etme talebiniz için teşekkürler. Randevuyu kısa süre içinde onaylayacağız."
+        },
+        "appointmentConfirmed": {
+            "subject": "{date} tarihli randevunuz onaylandı",
+            "heading": "Randevu onaylandı",
+            "text": "Sizi {date} tarihinde {address} adresinde ağırlamaktan memnuniyet duyacağız."
+        }
     }
 }

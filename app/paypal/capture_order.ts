@@ -11,6 +11,8 @@ import { extend_reservation, holds_reservation, reserve_items } from "../server/
 import { cancel_order, mark_order_paid } from "../server/orders";
 import { minor_to_string, to_minor } from "@/app/(site)/lib/order_totals";
 import { ONLINE_RESERVATION_MINUTES } from "../server/checkout";
+import { after } from "next/server";
+import { notify_order_paid } from "../server/email/notifications";
 
 export type CaptureResult = { redirect: string } | { error: "auth" | "not_found" | "unavailable" | "declined" | "pending" };
 
@@ -76,7 +78,8 @@ export async function capture_order({ orderID }: { orderID: string }): Promise<C
             return { error: "pending" };
         }
 
-        await mark_order_paid(order.id, `PayPal capture ${capture.id}`, { paypal_capture_id: capture.id });
+        const paid = await mark_order_paid(order.id, `PayPal capture ${capture.id}`, { paypal_capture_id: capture.id });
+        if (paid) after(() => notify_order_paid(paid, "online"));
 
         for (const slug of slugs) increase_relevance_score(slug, score_rewards.purchase);
 

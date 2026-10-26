@@ -1558,5 +1558,61 @@
         "footer": {
             "tagline": "Conceptos de tiendas privadas para vendedores independientes de relojes"
         }
+    },
+    "emails": {
+        "greeting": "Hola, {name}:",
+        "signoff": "Un cordial saludo,\n{store}",
+        "orderNumber": "Pedido",
+        "subtotal": "Subtotal",
+        "shipping": "Envío",
+        "pickup": "Recogida en tienda",
+        "discount": "Descuento",
+        "total": "Total",
+        "vatAdded": "IVA ({rate} %)",
+        "vatIncluded": "IVA del {rate} % incluido",
+        "viewOrders": "Ver sus pedidos",
+        "orderConfirmed": {
+            "subject": "Su pedido {id} está confirmado",
+            "heading": "Gracias por su pedido",
+            "text": "Hemos recibido su pago. Ya estamos preparando su pedido y le avisaremos en cuanto se envíe."
+        },
+        "orderReceivedBank": {
+            "subject": "Su pedido {id}: datos de pago",
+            "heading": "Gracias por su pedido",
+            "text": "Transfiera {amount} antes del {date} e indique su número de pedido {id} como concepto. Hasta entonces, sus piezas quedan reservadas; las enviaremos en cuanto recibamos el pago."
+        },
+        "paymentReceived": {
+            "subject": "Pago recibido para el pedido {id}",
+            "heading": "Pago recibido",
+            "text": "Gracias: hemos recibido su pago. Estamos preparando su pedido y le enviaremos el número de seguimiento cuando salga."
+        },
+        "shipped": {
+            "subject": "Su pedido {id} está en camino",
+            "heading": "Su pedido ha sido enviado",
+            "text": "Buenas noticias: su pedido {id} se ha entregado a {carrier}. Puede seguirlo con el número de seguimiento que aparece abajo.",
+            "carrier": "Transportista",
+            "tracking": "Número de seguimiento"
+        },
+        "cancelled": {
+            "subject": "Su pedido {id} ha sido cancelado",
+            "heading": "Pedido cancelado",
+            "text": "Su pedido {id} ha sido cancelado. Si ya ha pagado, le reembolsaremos el importe. ¿Tiene preguntas? Responda a este correo.",
+            "expiredText": "No recibimos a tiempo el pago del pedido {id}, por lo que la reserva ha finalizado y el pedido se ha cancelado. Si ya ha enviado el dinero, responda a este correo y lo solucionaremos."
+        },
+        "leadReceived": {
+            "subject": "Hemos recibido su solicitud",
+            "heading": "Gracias por su solicitud",
+            "text": "Hemos recibido los datos y las fotos de su {watch}. Nuestros especialistas los revisarán y le responderán en un plazo de 48 horas."
+        },
+        "appointmentRequested": {
+            "subject": "Su solicitud de cita para el {date}",
+            "heading": "Solicitud de cita recibida",
+            "text": "Gracias por solicitar una visita el {date}. Le confirmaremos la cita en breve."
+        },
+        "appointmentConfirmed": {
+            "subject": "Su cita del {date} está confirmada",
+            "heading": "Cita confirmada",
+            "text": "Será un placer recibirle el {date} en {address}."
+        }
     }
 }

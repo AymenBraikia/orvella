@@ -1559,5 +1559,61 @@
         "footer": {
             "tagline": "Concepts de vitrines privées pour revendeurs de montres indépendants"
         }
+    },
+    "emails": {
+        "greeting": "Bonjour {name},",
+        "signoff": "Bien cordialement,\n{store}",
+        "orderNumber": "Commande",
+        "subtotal": "Sous-total",
+        "shipping": "Livraison",
+        "pickup": "Retrait en boutique",
+        "discount": "Remise",
+        "total": "Total",
+        "vatAdded": "TVA ({rate} %)",
+        "vatIncluded": "TVA de {rate} % incluse",
+        "viewOrders": "Voir vos commandes",
+        "orderConfirmed": {
+            "subject": "Votre commande {id} est confirmée",
+            "heading": "Merci pour votre commande",
+            "text": "Nous avons bien reçu votre paiement. Nous préparons maintenant votre commande et vous préviendrons dès son expédition."
+        },
+        "orderReceivedBank": {
+            "subject": "Votre commande {id} — coordonnées de paiement",
+            "heading": "Merci pour votre commande",
+            "text": "Veuillez virer {amount} avant le {date} en indiquant votre numéro de commande {id} comme référence. Vos pièces vous sont réservées jusqu’à cette date ; nous expédions dès réception du paiement."
+        },
+        "paymentReceived": {
+            "subject": "Paiement reçu pour la commande {id}",
+            "heading": "Paiement reçu",
+            "text": "Merci — votre paiement est arrivé. Nous préparons votre commande et vous enverrons le numéro de suivi dès son expédition."
+        },
+        "shipped": {
+            "subject": "Votre commande {id} est en route",
+            "heading": "Votre commande a été expédiée",
+            "text": "Bonne nouvelle : votre commande {id} a été remise à {carrier}. Vous pouvez la suivre avec le numéro ci-dessous.",
+            "carrier": "Transporteur",
+            "tracking": "Numéro de suivi"
+        },
+        "cancelled": {
+            "subject": "Votre commande {id} a été annulée",
+            "heading": "Commande annulée",
+            "text": "Votre commande {id} a été annulée. Si vous avez déjà payé, le montant vous sera remboursé. Des questions ? Répondez simplement à cet e-mail.",
+            "expiredText": "Nous n’avons pas reçu à temps le paiement de la commande {id} : la réservation a pris fin et la commande a été annulée. Si vous avez déjà envoyé l’argent, répondez à cet e-mail et nous réglerons cela."
+        },
+        "leadReceived": {
+            "subject": "Nous avons bien reçu votre demande",
+            "heading": "Merci pour votre demande",
+            "text": "Nous avons bien reçu les informations et les photos de votre {watch}. Nos spécialistes les examineront et vous répondront sous 48 heures."
+        },
+        "appointmentRequested": {
+            "subject": "Votre demande de rendez-vous pour le {date}",
+            "heading": "Demande de rendez-vous reçue",
+            "text": "Merci pour votre demande de visite le {date}. Nous vous confirmerons le rendez-vous très prochainement."
+        },
+        "appointmentConfirmed": {
+            "subject": "Votre rendez-vous du {date} est confirmé",
+            "heading": "Rendez-vous confirmé",
+            "text": "Nous serons ravis de vous accueillir le {date} à l’adresse {address}."
+        }
     }
 }

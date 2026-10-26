@@ -1559,5 +1559,61 @@
         "footer": {
             "tagline": "Concept di store privati per rivenditori di orologi indipendenti"
         }
+    },
+    "emails": {
+        "greeting": "Gentile {name},",
+        "signoff": "Cordiali saluti,\n{store}",
+        "orderNumber": "Ordine",
+        "subtotal": "Subtotale",
+        "shipping": "Spedizione",
+        "pickup": "Ritiro in negozio",
+        "discount": "Sconto",
+        "total": "Totale",
+        "vatAdded": "IVA ({rate}%)",
+        "vatIncluded": "IVA {rate}% inclusa",
+        "viewOrders": "Vedi i tuoi ordini",
+        "orderConfirmed": {
+            "subject": "Il tuo ordine {id} è confermato",
+            "heading": "Grazie per il tuo ordine",
+            "text": "Abbiamo ricevuto il pagamento. Stiamo preparando l’ordine e ti avviseremo appena verrà spedito."
+        },
+        "orderReceivedBank": {
+            "subject": "Il tuo ordine {id}: dati per il pagamento",
+            "heading": "Grazie per il tuo ordine",
+            "text": "Effettua un bonifico di {amount} entro il {date} indicando il numero d’ordine {id} come causale. Fino ad allora i pezzi restano riservati per te; spediremo appena riceveremo il pagamento."
+        },
+        "paymentReceived": {
+            "subject": "Pagamento ricevuto per l’ordine {id}",
+            "heading": "Pagamento ricevuto",
+            "text": "Grazie: il pagamento è arrivato. Stiamo preparando l’ordine e ti invieremo il codice di tracciamento alla spedizione."
+        },
+        "shipped": {
+            "subject": "Il tuo ordine {id} è in viaggio",
+            "heading": "Il tuo ordine è stato spedito",
+            "text": "Buone notizie: il tuo ordine {id} è stato affidato a {carrier}. Puoi seguirlo con il codice di tracciamento qui sotto.",
+            "carrier": "Corriere",
+            "tracking": "Codice di tracciamento"
+        },
+        "cancelled": {
+            "subject": "Il tuo ordine {id} è stato annullato",
+            "heading": "Ordine annullato",
+            "text": "Il tuo ordine {id} è stato annullato. Se hai già pagato, l’importo ti verrà rimborsato. Domande? Rispondi semplicemente a questa e-mail.",
+            "expiredText": "Non abbiamo ricevuto in tempo il pagamento dell’ordine {id}: la prenotazione è scaduta e l’ordine è stato annullato. Se hai già inviato il denaro, rispondi a questa e-mail e risolveremo."
+        },
+        "leadReceived": {
+            "subject": "Abbiamo ricevuto la tua richiesta",
+            "heading": "Grazie per la tua richiesta",
+            "text": "Abbiamo ricevuto i dati e le foto del tuo {watch}. I nostri esperti li esamineranno e ti risponderanno entro 48 ore."
+        },
+        "appointmentRequested": {
+            "subject": "La tua richiesta di appuntamento per il {date}",
+            "heading": "Richiesta di appuntamento ricevuta",
+            "text": "Grazie per la richiesta di visitarci il {date}. Ti confermeremo l’appuntamento a breve."
+        },
+        "appointmentConfirmed": {
+            "subject": "Il tuo appuntamento del {date} è confermato",
+            "heading": "Appuntamento confermato",
+            "text": "Saremo lieti di accoglierti il {date} in {address}."
+        }
     }
 }

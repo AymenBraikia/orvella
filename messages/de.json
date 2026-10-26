@@ -1553,5 +1553,61 @@
         "footer": {
             "tagline": "Private Store-Konzepte für unabhängige Uhrenhändler"
         }
+    },
+    "emails": {
+        "greeting": "Hallo {name},",
+        "signoff": "Mit freundlichen Grüßen\n{store}",
+        "orderNumber": "Bestellung",
+        "subtotal": "Zwischensumme",
+        "shipping": "Versand",
+        "pickup": "Abholung im Geschäft",
+        "discount": "Rabatt",
+        "total": "Gesamt",
+        "vatAdded": "MwSt. ({rate} %)",
+        "vatIncluded": "inkl. {rate} % MwSt.",
+        "viewOrders": "Ihre Bestellungen ansehen",
+        "orderConfirmed": {
+            "subject": "Ihre Bestellung {id} ist bestätigt",
+            "heading": "Vielen Dank für Ihre Bestellung",
+            "text": "Wir haben Ihre Zahlung erhalten und bereiten Ihre Bestellung jetzt vor. Sobald sie versandt ist, geben wir Ihnen Bescheid."
+        },
+        "orderReceivedBank": {
+            "subject": "Ihre Bestellung {id} – Zahlungsinformationen",
+            "heading": "Vielen Dank für Ihre Bestellung",
+            "text": "Bitte überweisen Sie {amount} bis zum {date} und geben Sie Ihre Bestellnummer {id} als Verwendungszweck an. Bis dahin sind Ihre Stücke für Sie reserviert; wir versenden, sobald die Zahlung eingegangen ist."
+        },
+        "paymentReceived": {
+            "subject": "Zahlung für Bestellung {id} erhalten",
+            "heading": "Zahlung erhalten",
+            "text": "Vielen Dank – Ihre Zahlung ist eingegangen. Wir bereiten Ihre Bestellung vor und senden Ihnen die Sendungsverfolgung, sobald sie unterwegs ist."
+        },
+        "shipped": {
+            "subject": "Ihre Bestellung {id} ist unterwegs",
+            "heading": "Ihre Bestellung wurde versandt",
+            "text": "Gute Nachrichten: Ihre Bestellung {id} wurde an {carrier} übergeben. Mit der folgenden Sendungsnummer können Sie sie verfolgen.",
+            "carrier": "Versanddienstleister",
+            "tracking": "Sendungsnummer"
+        },
+        "cancelled": {
+            "subject": "Ihre Bestellung {id} wurde storniert",
+            "heading": "Bestellung storniert",
+            "text": "Ihre Bestellung {id} wurde storniert. Falls Sie bereits bezahlt haben, wird der Betrag erstattet. Fragen? Antworten Sie einfach auf diese E-Mail.",
+            "expiredText": "Die Zahlung für Bestellung {id} ist nicht rechtzeitig eingegangen. Die Reservierung ist daher abgelaufen und die Bestellung wurde storniert. Falls Sie das Geld bereits überwiesen haben, antworten Sie bitte auf diese E-Mail – wir klären das."
+        },
+        "leadReceived": {
+            "subject": "Wir haben Ihre Anfrage erhalten",
+            "heading": "Vielen Dank für Ihre Anfrage",
+            "text": "Wir haben die Angaben und Fotos Ihrer {watch} erhalten. Unsere Experten prüfen sie und melden sich innerhalb von 48 Stunden."
+        },
+        "appointmentRequested": {
+            "subject": "Ihre Terminanfrage für den {date}",
+            "heading": "Terminanfrage erhalten",
+            "text": "Vielen Dank für Ihre Anfrage, uns am {date} zu besuchen. Wir bestätigen den Termin in Kürze."
+        },
+        "appointmentConfirmed": {
+            "subject": "Ihr Termin am {date} ist bestätigt",
+            "heading": "Termin bestätigt",
+            "text": "Wir freuen uns, Sie am {date} in {address} begrüßen zu dürfen."
+        }
     }
 }

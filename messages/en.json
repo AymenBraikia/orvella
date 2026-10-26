@@ -1554,5 +1554,61 @@
         "footer": {
             "tagline": "Private storefront concepts for independent watch dealers"
         }
+    },
+    "emails": {
+        "greeting": "Hello {name},",
+        "signoff": "Kind regards,\n{store}",
+        "orderNumber": "Order",
+        "subtotal": "Subtotal",
+        "shipping": "Shipping",
+        "pickup": "Local pickup",
+        "discount": "Discount",
+        "total": "Total",
+        "vatAdded": "VAT ({rate}%)",
+        "vatIncluded": "Includes {rate}% VAT",
+        "viewOrders": "View your orders",
+        "orderConfirmed": {
+            "subject": "Your order {id} is confirmed",
+            "heading": "Thank you for your order",
+            "text": "We have received your payment. We are now preparing your order and will let you know as soon as it ships."
+        },
+        "orderReceivedBank": {
+            "subject": "Your order {id} — payment details",
+            "heading": "Thank you for your order",
+            "text": "Please transfer {amount} by {date} and use your order number {id} as the payment reference. Your pieces are reserved for you until then, and we will ship as soon as the payment has arrived."
+        },
+        "paymentReceived": {
+            "subject": "Payment received for order {id}",
+            "heading": "Payment received",
+            "text": "Thank you — your payment has arrived. We are preparing your order and will send you the tracking details once it ships."
+        },
+        "shipped": {
+            "subject": "Your order {id} is on its way",
+            "heading": "Your order has shipped",
+            "text": "Good news: your order {id} has been handed to {carrier}. You can follow it with the tracking number below.",
+            "carrier": "Carrier",
+            "tracking": "Tracking number"
+        },
+        "cancelled": {
+            "subject": "Your order {id} has been cancelled",
+            "heading": "Order cancelled",
+            "text": "Your order {id} has been cancelled. If you have already paid, the amount will be refunded. Questions? Simply reply to this email.",
+            "expiredText": "We did not receive the payment for order {id} in time, so the reservation has ended and the order was cancelled. If you have already sent the money, please reply to this email and we will sort it out."
+        },
+        "leadReceived": {
+            "subject": "We received your request",
+            "heading": "Thank you for your request",
+            "text": "We have received the details and photos of your {watch}. Our specialists will review them and reply within 48 hours."
+        },
+        "appointmentRequested": {
+            "subject": "Your appointment request for {date}",
+            "heading": "Appointment request received",
+            "text": "Thank you for your request to visit us on {date}. We will confirm the appointment shortly."
+        },
+        "appointmentConfirmed": {
+            "subject": "Your appointment on {date} is confirmed",
+            "heading": "Appointment confirmed",
+            "text": "We look forward to welcoming you on {date} at {address}."
+        }
     }
 }

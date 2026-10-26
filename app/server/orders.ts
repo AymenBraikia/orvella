@@ -4,6 +4,7 @@ import { orders_collection, users_collection } from "../db/collections";
 import { mark_items_sold, release_expired_reservations, release_reservation } from "./inventory";
 import type { Order, OrderStatus, StatusEvent } from "@/types/order";
 import type { WithId } from "mongodb";
+import { notify_order_cancelled } from "./email/notifications";
 
 /*
  * Order state changes. Every change goes through here so stock, status and history stay in step.
@@ -65,7 +66,11 @@ export async function release_expired_orders(): Promise<string[]> {
     const cancelled: string[] = [];
 
     for (const id of order_ids) {
-        if (await cancel_order(id, "Reservation expired before payment was received")) cancelled.push(id);
+        const order = await cancel_order(id, "Reservation expired before payment was received");
+        if (!order) continue;
+        cancelled.push(id);
+        // Bank transfer customers hear that the hold ended; abandoned PayPal windows do not.
+        await notify_order_cancelled(order, "expired");
     }
 
     return cancelled;

@@ -4,6 +4,8 @@ import { cookies } from "next/headers";
 import { getLocale } from "next-intl/server";
 import { orders_collection, users_collection } from "../db/collections";
 import { revalidatePath } from "next/cache";
+import { after } from "next/server";
+import { notify_order_placed } from "./email/notifications";
 import { build_quote, is_address_complete, normalise_currency, order_from_quote } from "./checkout";
 import { reserve_items } from "./inventory";
 import { next_order_number } from "./order_number";
@@ -45,7 +47,11 @@ export default async function create_order(): Promise<BankOrderResult> {
     );
     if (failed.length) return { error: "unavailable", items: quote.lines.filter((l) => failed.includes(l.slug)).map((l) => l.name) };
 
-    await (await orders_collection()).insertOne(order_from_quote(id, quote, user, "Bank Transfer", reserved_until, await getLocale()));
+    const order = order_from_quote(id, quote, user, "Bank Transfer", reserved_until, await getLocale());
+    await (await orders_collection()).insertOne({ ...order });
+
+    // Customer gets the bank details, the dealer a heads-up — after the response, never blocking it.
+    after(() => notify_order_placed(order));
 
     // The pieces now belong to this order; the cart starts fresh.
     await users.updateOne({ email: user.email }, { $pull: { cart: { slug: { $in: quote.lines.map((l) => l.slug) } } } });
