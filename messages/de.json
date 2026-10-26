@@ -1108,7 +1108,11 @@
         "marginScheme": "Differenzbesteuerung gemäß §25a UStG – die Mehrwertsteuer wird nicht gesondert ausgewiesen.",
         "discount": "Rabatt",
         "guestNote": "Kein Konto nötig – geben Sie einfach Ihre Daten ein. Nach dem Kauf können Sie ein Konto erstellen.",
-        "placingOrder": "Bestellung wird aufgegeben …"
+        "placingOrder": "Bestellung wird aufgegeben …",
+        "payByCard": "Mit Karte bezahlen",
+        "redirectingToPayment": "Sichere Zahlung wird geöffnet …",
+        "cardNote": "Sie werden zur sicheren Zahlungsseite von Stripe weitergeleitet. Ihre Stücke sind während der Zahlung für Sie reserviert.",
+        "cardCancelled": "Die Kartenzahlung wurde abgebrochen. Die Stücke sind wieder in Ihrem Warenkorb – versuchen Sie es erneut oder wählen Sie eine andere Zahlungsart."
     },
     "product": {
         "reference": "Referenz",

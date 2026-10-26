@@ -66,6 +66,8 @@ export interface Order {
     id: string;
     paypal_order_id?: string;
     paypal_capture_id?: string;
+    stripe_session_id?: string;
+    stripe_payment_intent?: string;
 
     email: string;
     /** Placed without an account: reachable with access_token, payable from the guest cart's browser. */

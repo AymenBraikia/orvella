@@ -1109,7 +1109,11 @@
         "marginScheme": "Régime de la marge selon le §25a UStG — la TVA n’est pas indiquée séparément.",
         "discount": "Remise",
         "guestNote": "Aucun compte nécessaire — saisissez simplement vos coordonnées. Vous pourrez créer un compte après l’achat.",
-        "placingOrder": "Commande en cours…"
+        "placingOrder": "Commande en cours…",
+        "payByCard": "Payer par carte",
+        "redirectingToPayment": "Ouverture du paiement sécurisé…",
+        "cardNote": "Vous allez être redirigé vers la page de paiement sécurisée de Stripe. Vos pièces vous sont réservées pendant le paiement.",
+        "cardCancelled": "Le paiement par carte a été annulé. Les pièces sont toujours dans votre panier — vous pouvez réessayer ou choisir un autre moyen de paiement."
     },
     "product": {
         "reference": "Référence",

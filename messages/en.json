@@ -1109,7 +1109,11 @@
         "marginScheme": "Margin scheme according to §25a UStG — VAT is not shown separately.",
         "discount": "Discount",
         "guestNote": "No account needed — just enter your details. You can create an account after your purchase.",
-        "placingOrder": "Placing order…"
+        "placingOrder": "Placing order…",
+        "payByCard": "Pay by card",
+        "redirectingToPayment": "Opening secure payment…",
+        "cardNote": "You will be redirected to Stripe’s secure payment page. Your pieces are reserved for you while you pay.",
+        "cardCancelled": "Card payment was cancelled. The pieces are back in your cart — you can try again or choose another payment method."
     },
     "product": {
         "reference": "Reference",

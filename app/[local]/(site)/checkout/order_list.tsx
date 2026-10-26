@@ -13,6 +13,8 @@ import BankTransfer from "./bank";
 import Payment_Options from "./options";
 import TotalsBreakdown from "./totals";
 import { details_complete } from "./details_complete";
+import StripeButton from "@/app/components/buttons/stripe";
+import { stripe_configured } from "@/app/server/stripe";
 
 const Paypal_component = dynamic(() => import("@/app/paypal/component"), {
     ssr: true,
@@ -27,8 +29,8 @@ export default async function Order_list({ customer }: { customer: CheckoutCusto
     const quote = await build_quote(customer.cart, customer, currency);
 
     const { payments } = await get_settings();
-    // Card payments return with Stripe (task 4.3); until then only PayPal and bank transfer are offered.
-    const methods = ([payments.bank_transfer && "Bank Transfer", payments.paypal && "PayPal"] as const).filter((m): m is "Bank Transfer" | "PayPal" => Boolean(m));
+    // Card payments go through Stripe, offered once it is enabled in the settings and configured.
+    const methods = ([payments.bank_transfer && "Bank Transfer", payments.paypal && "PayPal", payments.stripe && stripe_configured() && "Credit/Debit Card"] as const).filter((m): m is "Bank Transfer" | "PayPal" | "Credit/Debit Card" => Boolean(m));
     const payment_method = methods.find((m) => m == customer.payment_method) ?? methods[0];
 
     const shipping_country = quote.address == "Local Pickup" ? "" : quote.address.country;
@@ -54,6 +56,7 @@ export default async function Order_list({ customer }: { customer: CheckoutCusto
             {payment_method && <Payment_Options default_option={payment_method} methods={methods} />}
 
             {payment_method == "Bank Transfer" && <BankTransfer customer={customer} />}
+            {payment_method == "Credit/Debit Card" && <StripeButton ready={details_complete(customer)} />}
             {payment_method == "PayPal" && <Paypal_component currency={currency} ready={details_complete(customer)} />}
 
             <p className="text-shine">{t("agreement")}</p>

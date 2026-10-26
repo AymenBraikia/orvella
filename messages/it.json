@@ -1109,7 +1109,11 @@
         "marginScheme": "Regime del margine ai sensi del §25a UStG: l’IVA non è esposta separatamente.",
         "discount": "Sconto",
         "guestNote": "Non serve un account: inserisci i tuoi dati. Potrai creare un account dopo l’acquisto.",
-        "placingOrder": "Invio dell’ordine…"
+        "placingOrder": "Invio dell’ordine…",
+        "payByCard": "Paga con carta",
+        "redirectingToPayment": "Apertura del pagamento sicuro…",
+        "cardNote": "Verrai reindirizzato alla pagina di pagamento sicura di Stripe. I pezzi restano riservati per te durante il pagamento.",
+        "cardCancelled": "Il pagamento con carta è stato annullato. I pezzi sono di nuovo nel carrello: puoi riprovare o scegliere un altro metodo di pagamento."
     },
     "product": {
         "reference": "Riferimento",

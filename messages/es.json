@@ -1108,7 +1108,11 @@
         "marginScheme": "Régimen especial de bienes usados según el §25a UStG: el IVA no se indica por separado.",
         "discount": "Descuento",
         "guestNote": "No necesita cuenta: introduzca sus datos. Podrá crear una cuenta después de la compra.",
-        "placingOrder": "Realizando el pedido…"
+        "placingOrder": "Realizando el pedido…",
+        "payByCard": "Pagar con tarjeta",
+        "redirectingToPayment": "Abriendo el pago seguro…",
+        "cardNote": "Se le redirigirá a la página de pago seguro de Stripe. Sus piezas quedan reservadas mientras paga.",
+        "cardCancelled": "Se canceló el pago con tarjeta. Las piezas siguen en su carrito: puede intentarlo de nuevo o elegir otro método de pago."
     },
     "product": {
         "reference": "Referencia",

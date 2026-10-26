@@ -1109,7 +1109,11 @@
         "marginScheme": "Alman KDV Kanunu §25a uyarınca marj vergilendirmesi — KDV ayrıca gösterilmez.",
         "discount": "İndirim",
         "guestNote": "Hesap gerekmez — bilgilerinizi girmeniz yeterli. Satın alma sonrasında hesap oluşturabilirsiniz.",
-        "placingOrder": "Sipariş veriliyor…"
+        "placingOrder": "Sipariş veriliyor…",
+        "payByCard": "Kartla öde",
+        "redirectingToPayment": "Güvenli ödeme açılıyor…",
+        "cardNote": "Stripe’ın güvenli ödeme sayfasına yönlendirileceksiniz. Ödeme sırasında parçalarınız sizin için ayrılır.",
+        "cardCancelled": "Kartla ödeme iptal edildi. Parçalar sepetinizde — tekrar deneyebilir veya başka bir ödeme yöntemi seçebilirsiniz."
     },
     "product": {
         "reference": "Referans",

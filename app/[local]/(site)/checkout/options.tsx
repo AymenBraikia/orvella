@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-type Option = "PayPal" | "Bank Transfer";
+type Option = "PayPal" | "Bank Transfer" | "Credit/Debit Card";
 
 export default function Payment_Options({ default_option, methods }: { default_option: Option; methods: Option[] }) {
     const [option, set_option] = useState<Option>(default_option);
@@ -27,6 +27,9 @@ export default function Payment_Options({ default_option, methods }: { default_o
             </button>}
             {methods.includes("PayPal") && <button type="button" onClick={() => choose("PayPal")} className={`w-full h-full sm:px-2 sm:py-4 p-2 transition-default ${option == "PayPal" ? "bg-gold brightness-100 button3" : "brightness-75 button2"}`}>
                 PayPal
+            </button>}
+            {methods.includes("Credit/Debit Card") && <button type="button" onClick={() => choose("Credit/Debit Card")} className={`w-full h-full sm:px-2 sm:py-4 p-2 transition-default ${option == "Credit/Debit Card" ? "bg-gold brightness-100 button3" : "brightness-75 button2"}`}>
+                {t("card")}
             </button>}
         </div>
     );
