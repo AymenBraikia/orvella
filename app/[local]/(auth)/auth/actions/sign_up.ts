@@ -1,6 +1,6 @@
 "use server";
 
-import { users_collection } from "@/app/db/collections";
+import { orders_collection, users_collection } from "@/app/db/collections";
 import { User } from "@/app/types/user";
 import bcrypt from "bcrypt";
 
@@ -10,6 +10,7 @@ import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
 import { authRegex } from "../regex";
 import { safe_redirect } from "../safe_redirect";
+import { merge_guest_cart } from "@/app/server/cart";
 
 export default async function Sign_up(data: FormData): Promise<{ success: boolean; error?: string; redirect?: string | null }> {
     try {
@@ -70,6 +71,13 @@ export default async function Sign_up(data: FormData): Promise<{ success: boolea
 
         const operation = await (await users_collection()).insertOne(user_document);
 
+        // Account created right after a guest purchase: attach that order (proved by its access token).
+        const claim_order = data.get("claim_order");
+        const claim_token = data.get("claim_token");
+        if (typeof claim_order == "string" && typeof claim_token == "string" && claim_order && claim_token.length >= 32) {
+            await (await orders_collection()).updateOne({ id: claim_order, access_token: claim_token, email, guest: true }, { $set: { guest: false }, $unset: { cart_id: "" } });
+        }
+
         const payload = {
             email: email,
             full_name: firstName + " " + lastName,
@@ -93,6 +101,9 @@ export default async function Sign_up(data: FormData): Promise<{ success: boolea
             secure: process.env.NODE_ENV === "production",
             maxAge: 60 * 60 * 24 * 7,
         });
+
+        // Pieces picked as a guest move into the account.
+        await merge_guest_cart(email);
 
         revalidatePath("/");
 

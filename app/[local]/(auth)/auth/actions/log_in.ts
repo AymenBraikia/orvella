@@ -9,6 +9,7 @@ import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
 import { authRegex } from "../regex";
 import { safe_redirect } from "../safe_redirect";
+import { merge_guest_cart } from "@/app/server/cart";
 
 export default async function Log_in(data: FormData): Promise<{ success: boolean; error?: string; redirect?: string | null }> {
     try {
@@ -56,6 +57,9 @@ export default async function Log_in(data: FormData): Promise<{ success: boolean
             secure: process.env.NODE_ENV === "production",
             maxAge: 60 * 60 * 24 * 7,
         });
+
+        // Pieces picked as a guest move into the account.
+        await merge_guest_cart(email);
 
         revalidatePath("/");
 

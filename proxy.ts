@@ -9,7 +9,8 @@ import { Supported_Countries, Supported_Currencies } from "./currency";
 
 const handleI18nRouting = createMiddleware(routing);
 
-const protectedRoutes = ["/cart", "/thank_you", "/checkout"];
+// Cart, checkout and the thank-you page work for guests too (guest cart cookie / order access link).
+const protectedRoutes: string[] = [];
 const adminRoutes = ["/admin"];
 
 function matches(pathname: string, routes: string[]): boolean {

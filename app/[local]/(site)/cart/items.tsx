@@ -7,34 +7,35 @@ import { build_quote, get_exchange_rate, shipping_for_country } from "@/app/serv
 import { convert_eur } from "../lib/order_totals";
 import { get_settings } from "@/app/server/settings";
 
-import getUser from "@/app/server/get_user";
+import { get_checkout_customer, hydrate_cart } from "@/app/server/cart";
 import { getTranslations } from "next-intl/server";
 import { get_Currency } from "../lib/get_currency";
 import Select_country from "@/app/components/shipping_related/select_country";
 import LocalPickup_checkbox from "@/app/components/shipping_related/localPickup";
 
 export default async function Items() {
-    const session = await getUser();
+    const customer = await get_checkout_customer();
     const t = await getTranslations("cart");
     const t_checkout = await getTranslations("checkout");
 
-    if (!session) return;
+    const lines = await hydrate_cart(customer?.cart);
+    if (!customer || !lines.length) return <h1>{t("empty")}</h1>;
 
     const { payments } = await get_settings();
-    const pickup = session.local_pickup && payments.local_pickup;
-    const country = session.address.country || "Germany";
+    const pickup = customer.local_pickup && payments.local_pickup;
+    const country = customer.address.country || "Germany";
 
     const currency = await get_Currency();
     // Same pricing as the order that will be charged (current catalogue prices, converted shipping, tax).
-    const { totals, tax } = await build_quote(session.cart, { ...session, diff_address: { ...session.diff_address, active: false } }, currency);
+    const { totals, tax } = await build_quote(customer.cart, { ...customer, diff_address: { ...customer.diff_address, active: false } }, currency);
     const shipping_costs = convert_eur(shipping_for_country(country)?.shipping_cost ?? 0, currency, await get_exchange_rate(currency));
 
     return (
         <div className="w-full h-fit flex xl:flex-row flex-col justify-between items-start gap-12 xl:gap-4">
-            {session!.cart.length ? (
+            {
                 <>
                     <div className=" xl:min-w-190 w-full h-full max-h-[75dvh] overflow-y-auto overflow-x-hidden flex justify-start items-start flex-col gap-4 pe-2">
-                        {session!.cart.map((i) => (
+                        {lines.map((i) => (
                             <Item_Display key={i.slug} {...i} />
                         ))}
                     </div>
@@ -51,14 +52,14 @@ export default async function Items() {
                             <div className="flex justify-between items-center w-full gap-4">
                                 <div className="flex flex-col justify-start items-start gap-2 text-sm xl:text-base">
                                     <p>{t("shipping_to", { country })}</p>
-                                    <Select_country />
+                                    <Select_country address={customer.address} />
                                 </div>
                                 <p className={`xl:flex hidden ${pickup ? "line-through" : ""}`}>{format_money(shipping_costs, currency)}</p>
                             </div>
 
                             <p className={`xl:hidden flex ${pickup ? "line-through" : ""}`}>{t("shipping_costs", { cost: format_money(shipping_costs, currency) })}</p>
 
-                            {payments.local_pickup && <LocalPickup_checkbox />}
+                            {payments.local_pickup && <LocalPickup_checkbox initial={customer.local_pickup} />}
 
                             <p className="text-sm text-secondary">
                                 {t("moreAbout")}{" "}
@@ -93,9 +94,7 @@ export default async function Items() {
                         </div>
                     </div>
                 </>
-            ) : (
-                <h1>{t("empty")}</h1>
-            )}
+            }
         </div>
     );
 }

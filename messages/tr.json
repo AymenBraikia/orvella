@@ -40,6 +40,17 @@
             "bic": "BIC",
             "reference": "Ödeme açıklaması",
             "amount": "Tutar"
+        },
+        "notFound": "Bu sipariş bulunamadı. Lütfen onay e-postanızdaki bağlantıyı kullanın.",
+        "nextSteps": {
+            "processing": "Ödemeniz işleniyor. Onaylanır onaylanmaz size e-posta göndereceğiz.",
+            "paid": "Ödemeniz onaylandı. Siparişinizi hazırlıyoruz ve kargoya verildiğinde takip bilgilerini e-postayla göndereceğiz.",
+            "shipped": "Siparişiniz yolda."
+        },
+        "createAccount": {
+            "heading": "Siparişlerinizi takip edin",
+            "text": "Bu siparişi takip etmek ve bir dahaki sefere daha hızlı alışveriş yapmak için hesap oluşturun.",
+            "cta": "Hesap oluştur"
         }
     },
     "meta": {
@@ -1090,12 +1101,15 @@
             "declined": "Ödeme tamamlanmadı. Parçalarınız serbest bırakıldı; lütfen tekrar deneyin.",
             "pending": "Ödemeniz işleniyor. Siparişinizi e-posta ile onaylayacağız.",
             "method": "Lütfen bir ödeme yöntemi seçin.",
-            "not_found": "Bu sipariş bulunamadı. Lütfen tekrar deneyin."
+            "not_found": "Bu sipariş bulunamadı. Lütfen tekrar deneyin.",
+            "details": "Siparişi vermeden önce lütfen adınızı, e-postanızı ve tam adresinizi girin."
         },
         "vatIncluded": "%{rate} KDV dahil",
         "vatAdded": "KDV (%{rate})",
         "marginScheme": "Alman KDV Kanunu §25a uyarınca marj vergilendirmesi — KDV ayrıca gösterilmez.",
-        "discount": "İndirim"
+        "discount": "İndirim",
+        "guestNote": "Hesap gerekmez — bilgilerinizi girmeniz yeterli. Satın alma sonrasında hesap oluşturabilirsiniz.",
+        "placingOrder": "Sipariş veriliyor…"
     },
     "product": {
         "reference": "Referans",

@@ -40,6 +40,17 @@
             "bic": "BIC",
             "reference": "Verwendungszweck",
             "amount": "Betrag"
+        },
+        "notFound": "Diese Bestellung wurde nicht gefunden. Bitte nutzen Sie den Link aus Ihrer Bestätigungs-E-Mail.",
+        "nextSteps": {
+            "processing": "Ihre Zahlung wird bearbeitet. Sobald sie bestätigt ist, erhalten Sie eine E-Mail.",
+            "paid": "Ihre Zahlung ist bestätigt. Wir bereiten Ihre Bestellung vor und senden Ihnen die Sendungsverfolgung per E-Mail, sobald sie unterwegs ist.",
+            "shipped": "Ihre Bestellung ist unterwegs."
+        },
+        "createAccount": {
+            "heading": "Behalten Sie Ihre Bestellungen im Blick",
+            "text": "Erstellen Sie ein Konto, um diese Bestellung zu verfolgen und beim nächsten Mal schneller zu bestellen.",
+            "cta": "Konto erstellen"
         }
     },
     "meta": {
@@ -1089,12 +1100,15 @@
             "declined": "Die Zahlung wurde nicht abgeschlossen. Ihre Stücke wurden freigegeben – bitte versuchen Sie es erneut.",
             "pending": "Ihre Zahlung wird bearbeitet. Wir bestätigen Ihre Bestellung per E-Mail.",
             "method": "Bitte wählen Sie eine Zahlungsart.",
-            "not_found": "Diese Bestellung wurde nicht gefunden. Bitte versuchen Sie es erneut."
+            "not_found": "Diese Bestellung wurde nicht gefunden. Bitte versuchen Sie es erneut.",
+            "details": "Bitte geben Sie Ihren Namen, Ihre E-Mail-Adresse und die vollständige Adresse ein, bevor Sie bestellen."
         },
         "vatIncluded": "inkl. {rate} % MwSt.",
         "vatAdded": "MwSt. ({rate} %)",
         "marginScheme": "Differenzbesteuerung gemäß §25a UStG – die Mehrwertsteuer wird nicht gesondert ausgewiesen.",
-        "discount": "Rabatt"
+        "discount": "Rabatt",
+        "guestNote": "Kein Konto nötig – geben Sie einfach Ihre Daten ein. Nach dem Kauf können Sie ein Konto erstellen.",
+        "placingOrder": "Bestellung wird aufgegeben …"
     },
     "product": {
         "reference": "Referenz",

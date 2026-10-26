@@ -40,6 +40,17 @@
             "bic": "BIC",
             "reference": "Payment reference",
             "amount": "Amount"
+        },
+        "notFound": "We could not find this order. Please use the link from your confirmation email.",
+        "nextSteps": {
+            "processing": "Your payment is being processed. We will email you as soon as it is confirmed.",
+            "paid": "Your payment is confirmed. We are preparing your order and will email you the tracking details once it ships.",
+            "shipped": "Your order is on its way."
+        },
+        "createAccount": {
+            "heading": "Keep track of your orders",
+            "text": "Create an account to follow this order and check out faster next time.",
+            "cta": "Create account"
         }
     },
     "meta": {
@@ -1090,12 +1101,15 @@
             "declined": "The payment was not completed. Your pieces have been released; please try again.",
             "pending": "Your payment is being processed. We will confirm your order by email.",
             "method": "Please choose a payment method.",
-            "not_found": "This order could not be found. Please try again."
+            "not_found": "This order could not be found. Please try again.",
+            "details": "Please enter your name, email and full address before placing the order."
         },
         "vatIncluded": "Includes {rate}% VAT",
         "vatAdded": "VAT ({rate}%)",
         "marginScheme": "Margin scheme according to §25a UStG — VAT is not shown separately.",
-        "discount": "Discount"
+        "discount": "Discount",
+        "guestNote": "No account needed — just enter your details. You can create an account after your purchase.",
+        "placingOrder": "Placing order…"
     },
     "product": {
         "reference": "Reference",

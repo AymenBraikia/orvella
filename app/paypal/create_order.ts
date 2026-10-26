@@ -1,50 +1,25 @@
 "use server";
 
-import { cookies } from "next/headers";
-import { getLocale } from "next-intl/server";
-import { verifyJwt } from "@/app/(auth)/auth/jwt";
 import { getAccessToken, PAYPAL_API } from "./paypal";
-import { orders_collection, users_collection } from "../db/collections";
-import { build_quote, is_address_complete, normalise_currency, ONLINE_RESERVATION_MINUTES, order_from_quote } from "../server/checkout";
-import { reserve_items } from "../server/inventory";
+import { orders_collection } from "../db/collections";
+import { ONLINE_RESERVATION_MINUTES } from "../server/checkout";
 import { cancel_order } from "../server/orders";
-import { next_order_number } from "../server/order_number";
+import { owns_order, place_pending_order, type PlaceError } from "../server/place_order";
 import { minor_to_string } from "@/app/(site)/lib/order_totals";
 import { get_settings } from "../server/settings";
 import { absolute_url } from "@/app/(site)/lib/site_url";
 
-export type CreateOrderResult = { id: string } | { error: "auth" | "empty" | "address" | "unavailable" | "payment"; items?: string[] };
+export type CreateOrderResult = { id: string } | { error: PlaceError; items?: string[] };
 
+/** Signed-in customers and guests: reserve for 15 minutes, then open the PayPal order. */
 export async function create_order(): Promise<CreateOrderResult> {
-    const cookieStore = await cookies();
-    const jwt_token = cookieStore.get("accessToken")?.value;
-
-    const payload = jwt_token ? verifyJwt(jwt_token) : null;
-    if (!payload) return { error: "auth" };
-
-    const user = await (await users_collection()).findOne({ email: payload.email });
-    if (!user) return { error: "auth" };
-
     if (!(await get_settings()).payments.paypal) return { error: "payment" };
 
-    const quote = await build_quote(user.cart ?? [], user, normalise_currency(cookieStore.get("Currency")?.value));
+    const placed = await place_pending_order("PayPal", new Date(Date.now() + ONLINE_RESERVATION_MINUTES * 60_000));
+    if (!placed.ok) return { error: placed.error, items: placed.items };
 
-    if (quote.unavailable.length) return { error: "unavailable", items: quote.unavailable };
-    if (!quote.lines.length) return { error: "empty" };
-    if (!is_address_complete(quote.address)) return { error: "address" };
-
-    const id = await next_order_number();
-    const reserved_until = new Date(Date.now() + ONLINE_RESERVATION_MINUTES * 60_000);
-
-    const failed = await reserve_items(
-        id,
-        quote.lines.map((l) => ({ slug: l.slug, quantity: l.quantity })),
-        reserved_until,
-    );
-    if (failed.length) return { error: "unavailable", items: quote.lines.filter((l) => failed.includes(l.slug)).map((l) => l.name) };
-
-    await (await orders_collection()).insertOne(order_from_quote(id, quote, user, "PayPal", reserved_until, await getLocale()));
-
+    const { order, quote } = placed;
+    const id = order.id;
     const { currency, minor } = quote;
     const money = (value: number) => ({ currency_code: currency, value: minor_to_string(value, currency) });
 
@@ -109,12 +84,8 @@ export async function create_order(): Promise<CreateOrderResult> {
 
 /** The buyer closed the PayPal window or PayPal reported an error: free the pieces again. */
 export async function cancel_paypal_order(paypal_order_id: string): Promise<void> {
-    const cookieStore = await cookies();
-    const jwt_token = cookieStore.get("accessToken")?.value;
+    if (typeof paypal_order_id !== "string") return;
 
-    const payload = jwt_token ? verifyJwt(jwt_token) : null;
-    if (!payload || typeof paypal_order_id !== "string") return;
-
-    const order = await (await orders_collection()).findOne({ paypal_order_id, email: payload.email, status: "pending_payment" });
-    if (order) await cancel_order(order.id, "PayPal payment cancelled by the customer");
+    const order = await (await orders_collection()).findOne({ paypal_order_id, status: "pending_payment" });
+    if (order && (await owns_order(order))) await cancel_order(order.id, "PayPal payment cancelled by the customer");
 }

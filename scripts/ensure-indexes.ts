@@ -15,6 +15,8 @@ const INDEXES: Record<string, IndexDescription[]> = {
     items: [{ key: { slug: 1 }, unique: true }, { key: { type: 1, date_added: -1 } }, { key: { "reservations.until": 1 } }],
     orders: [{ key: { id: 1 }, unique: true }, { key: { paypal_order_id: 1 }, unique: true, sparse: true }, { key: { email: 1, created_at: -1 } }, { key: { status: 1, created_at: -1 } }],
     users: [{ key: { email: 1 }, unique: true }],
+    // Guest carts disappear after 90 days without changes.
+    carts: [{ key: { updated_at: 1 }, expireAfterSeconds: 90 * 24 * 60 * 60 }],
     sell: [{ key: { id: 1 } }, { key: { created_at: -1 } }],
     consignment: [{ key: { id: 1 } }, { key: { created_at: -1 } }],
     appointment: [{ key: { id: 1 } }, { key: { date: 1 } }],
@@ -34,7 +36,7 @@ try {
     for (const [collection, indexes] of Object.entries(INDEXES)) {
         for (const index of indexes) {
             try {
-                const name = await db.collection(collection).createIndex(index.key, { unique: index.unique, sparse: index.sparse });
+                const name = await db.collection(collection).createIndex(index.key, { unique: index.unique, sparse: index.sparse, expireAfterSeconds: index.expireAfterSeconds });
                 console.log(`✓ ${collection}.${name}`);
             } catch (error) {
                 // Usually existing duplicates blocking a unique index — report and continue.

@@ -15,6 +15,7 @@ import increase_relevance_score from "@/app/server/increase_relevance_score";
 import score_rewards from "../(site)/lib/relevance_score";
 
 import { useAuth } from "../(site)/context/authContext";
+import { useCart } from "../(site)/context/cartContext";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/routing";
 
@@ -169,6 +170,7 @@ function headerReducer(state: UIState, action: UIAction): UIState {
 
 export default function Header({ savedCurrency = "USD" }: { savedCurrency: Supported_Currencies }) {
     const { session } = useAuth();
+    const { cart } = useCart();
     const locale = useLocale() as Locales;
     const t = useTranslations("common");
     const t2 = useTranslations("home");
@@ -357,7 +359,7 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
 
                         <button aria-label={"cart"} type="button" onClick={() => dispatch({ type: "OPEN_CART" })} className={`button2 p-1 sm:p-2 relative ${ui.isGlassy ? "" : "hover:text-primary"}`}>
                             <Cart clr={"currentColor"} classnames="w-5 sm:w-6" />
-                            {session && session.cart.length ? <p className="absolute inset-s-1/2 top-1/2 text-[10px] flex-center p-1 bg-foreground text-background aspect-square rounded-full w-4 h-4">{session.cart.length}</p> : <></>}
+                            {cart.length ? <p className="absolute inset-s-1/2 top-1/2 text-[10px] flex-center p-1 bg-foreground text-background aspect-square rounded-full w-4 h-4">{cart.length}</p> : <></>}
                         </button>
                         <div className="sm:block hidden">
                             <ThemeToggle />

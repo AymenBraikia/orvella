@@ -1,35 +1,19 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { users_collection } from "../db/collections";
-import getUser from "./get_user";
+import { cart_target } from "./cart";
 
 export default async function revmove_from_cart(slug: string): Promise<boolean> {
     try {
-        const user = await getUser();
-        if (!user) return false;
+        const target = await cart_target();
+        if (!target || typeof slug !== "string") return false;
 
-        const is_in_cart = user.cart.find((i) => i.slug == slug);
-
-        if (!is_in_cart) return false;
-
-        const operation = await (
-            await users_collection()
-        ).updateOne(
-            { email: user.email },
-            {
-                $pull: {
-                    cart: {
-                        slug,
-                    },
-                },
-            },
-        );
+        const operation = await target.collection.updateOne(target.filter, { $pull: { cart: { slug } } });
 
         revalidatePath("/");
-        return operation.acknowledged;
+        return operation.modifiedCount > 0;
     } catch (error) {
-        console.log("an error occured during adding item to cart: ");
+        console.log("an error occured during removing item from cart: ");
         console.error(error);
 
         return false;

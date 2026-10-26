@@ -88,7 +88,9 @@ async function customer_order_email(order: Order, kind: OrderEmail) {
     if (kind != "cancelled" && kind != "expired") blocks.push({ kind: "rows", title: `${t("emails.orderNumber")} ${order.id}`, rows: order_rows(order, t) });
     if (order.tax.mode == "margin_scheme" && kind != "cancelled" && kind != "expired") blocks.push({ kind: "p", text: t("checkout.marginScheme") });
 
-    blocks.push({ kind: "button", label: t("emails.viewOrders"), href: absolute_url(`/${locale}/thank_you`) });
+    // The private order link works for guests and account holders alike.
+    const order_link = order.access_token ? `/${locale}/thank_you?order=${encodeURIComponent(order.id)}&token=${order.access_token}` : `/${locale}/thank_you`;
+    blocks.push({ kind: "button", label: t("emails.viewOrders"), href: absolute_url(order_link) });
     blocks.push({ kind: "p", text: t("emails.signoff", { store: s.store_name }) });
 
     const { html, text } = render_email({ store: s.store_name, heading: t(`emails.${key}.heading`), blocks, footer: footer(s), dir: getDirection(locale) });

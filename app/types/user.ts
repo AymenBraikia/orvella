@@ -60,3 +60,17 @@ export type Cart_Item = Item & {
 };
 
 export type UpdateUserProps = Partial<User>;
+
+/** A guest's cart and checkout details (carts collection, keyed by the cart_id cookie). Same field names as User. */
+export interface GuestCart {
+    _id: string;
+    cart: Cart_Line[];
+    email?: string;
+    firstName?: string;
+    lastName?: string;
+    address?: User["address"];
+    diff_address?: User["diff_address"];
+    local_pickup?: boolean;
+    payment_method?: User["payment_method"];
+    updated_at: Date;
+}

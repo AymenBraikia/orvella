@@ -40,6 +40,17 @@
             "bic": "BIC",
             "reference": "Causale",
             "amount": "Importo"
+        },
+        "notFound": "Non abbiamo trovato questo ordine. Usa il link nell’e-mail di conferma.",
+        "nextSteps": {
+            "processing": "Il pagamento è in elaborazione. Ti scriveremo appena sarà confermato.",
+            "paid": "Il pagamento è confermato. Stiamo preparando l’ordine e ti invieremo il codice di tracciamento alla spedizione.",
+            "shipped": "Il tuo ordine è in viaggio."
+        },
+        "createAccount": {
+            "heading": "Segui i tuoi ordini",
+            "text": "Crea un account per seguire questo ordine e acquistare più velocemente la prossima volta.",
+            "cta": "Crea account"
         }
     },
     "meta": {
@@ -1090,12 +1101,15 @@
             "declined": "Il pagamento non è stato completato. I pezzi sono stati rilasciati; riprova.",
             "pending": "Il pagamento è in elaborazione. Ti confermeremo l’ordine via e-mail.",
             "method": "Scegli un metodo di pagamento.",
-            "not_found": "Impossibile trovare questo ordine. Riprova."
+            "not_found": "Impossibile trovare questo ordine. Riprova.",
+            "details": "Inserisci nome, e-mail e indirizzo completo prima di effettuare l’ordine."
         },
         "vatIncluded": "IVA {rate}% inclusa",
         "vatAdded": "IVA ({rate}%)",
         "marginScheme": "Regime del margine ai sensi del §25a UStG: l’IVA non è esposta separatamente.",
-        "discount": "Sconto"
+        "discount": "Sconto",
+        "guestNote": "Non serve un account: inserisci i tuoi dati. Potrai creare un account dopo l’acquisto.",
+        "placingOrder": "Invio dell’ordine…"
     },
     "product": {
         "reference": "Riferimento",

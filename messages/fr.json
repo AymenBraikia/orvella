@@ -40,6 +40,17 @@
             "bic": "BIC",
             "reference": "Référence du paiement",
             "amount": "Montant"
+        },
+        "notFound": "Commande introuvable. Veuillez utiliser le lien de votre e-mail de confirmation.",
+        "nextSteps": {
+            "processing": "Votre paiement est en cours de traitement. Nous vous écrirons dès sa confirmation.",
+            "paid": "Votre paiement est confirmé. Nous préparons votre commande et vous enverrons le numéro de suivi dès son expédition.",
+            "shipped": "Votre commande est en route."
+        },
+        "createAccount": {
+            "heading": "Suivez vos commandes",
+            "text": "Créez un compte pour suivre cette commande et commander plus vite la prochaine fois.",
+            "cta": "Créer un compte"
         }
     },
     "meta": {
@@ -1090,12 +1101,15 @@
             "declined": "Le paiement n’a pas abouti. Vos pièces ont été libérées ; veuillez réessayer.",
             "pending": "Votre paiement est en cours de traitement. Nous vous confirmerons la commande par e-mail.",
             "method": "Veuillez choisir un mode de paiement.",
-            "not_found": "Cette commande est introuvable. Veuillez réessayer."
+            "not_found": "Cette commande est introuvable. Veuillez réessayer.",
+            "details": "Veuillez saisir votre nom, votre e-mail et votre adresse complète avant de passer commande."
         },
         "vatIncluded": "TVA de {rate} % incluse",
         "vatAdded": "TVA ({rate} %)",
         "marginScheme": "Régime de la marge selon le §25a UStG — la TVA n’est pas indiquée séparément.",
-        "discount": "Remise"
+        "discount": "Remise",
+        "guestNote": "Aucun compte nécessaire — saisissez simplement vos coordonnées. Vous pourrez créer un compte après l’achat.",
+        "placingOrder": "Commande en cours…"
     },
     "product": {
         "reference": "Référence",

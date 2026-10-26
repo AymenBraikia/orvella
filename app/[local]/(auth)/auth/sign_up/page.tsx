@@ -8,7 +8,7 @@ import Sign_up from "../actions/sign_up";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
-export default function SignUpPage({ searchParams }: { searchParams: Promise<{ redirect?: string; ref?: string }> }) {
+export default function SignUpPage({ searchParams }: { searchParams: Promise<{ redirect?: string; ref?: string; email?: string; order?: string; token?: string }> }) {
     const params = use(searchParams);
     const t = useTranslations("auth.signUp");
     const t2 = useTranslations("home");
@@ -59,6 +59,9 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
 
             <form onSubmit={handleSubmit} className="flex-center flex-col gap-6 w-full" noValidate>
                 <input type="hidden" name="redirect" value={params.redirect ?? ""} />
+                {/* Coming from a guest order: the access token lets that order move into the new account. */}
+                <input type="hidden" name="claim_order" value={params.order ?? ""} />
+                <input type="hidden" name="claim_token" value={params.token ?? ""} />
 
                 <div className="w-full flex flex-col sm:flex-row items-stretch gap-6">
                     <Input placeholder={t("firstNamePlaceholder")} name="firstName" type="text" required label={t("firstName")} />
@@ -66,7 +69,7 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
                     <Input placeholder={t("lastNamePlaceholder")} name="lastName" type="text" required label={t("lastName")} />
                 </div>
 
-                <Input placeholder={t("emailPlaceholder")} name="email" type="email" required label={t("email")} />
+                <Input placeholder={t("emailPlaceholder")} name="email" type="email" required label={t("email")} def_value={params.email} />
 
                 <Input placeholder={t("passwordPlaceholder")} name="password" type="password" required label={t("password")} />
 

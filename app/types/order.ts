@@ -68,6 +68,10 @@ export interface Order {
     paypal_capture_id?: string;
 
     email: string;
+    /** Placed without an account: reachable with access_token, payable from the guest cart's browser. */
+    guest?: boolean;
+    cart_id?: string;
+    access_token?: string;
     first_name?: string;
     last_name?: string;
     phone?: string;

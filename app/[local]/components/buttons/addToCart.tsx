@@ -1,6 +1,6 @@
 "use client";
 
-import { useAuth } from "@/app/(site)/context/authContext";
+import { useCart } from "@/app/(site)/context/cartContext";
 import addToCart from "@/app/server/add_to_cart";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -11,24 +11,25 @@ export default function AtcBtn({ slug, status = "available", children }: { slug:
     const t = useTranslations("common.buttons");
     const t_stock = useTranslations("common.stock");
     const router = useRouter();
-    const { session } = useAuth();
+    const { cart } = useCart();
 
     const [inserting, set_insert] = useState<boolean>(false);
-    const [is_in_cart, set_is_in_cart] = useState<boolean>(session?.cart.find((i) => i.slug == slug) ? true : false);
+    const [added, set_added] = useState<boolean>(false);
+    const is_in_cart = added || cart.some((i) => i.slug == slug);
 
     if (status != "available") {
         return <div className="border border-gold text-gold w-full h-fit p-4 select-none flex-center uppercase tracking-widest cursor-default">{t_stock(status)}</div>;
     }
 
+    // Guests can shop too; the cart is merged into their account if they sign in later.
     async function handleClick() {
-        if (session) {
-            set_insert(true);
-
-            const success = await addToCart(slug);
-
-            set_insert(false);
-            success && set_is_in_cart(true);
-        } else router.push("/auth/log_in");
+        set_insert(true);
+        const success = await addToCart(slug);
+        set_insert(false);
+        if (success) {
+            set_added(true);
+            router.refresh();
+        }
     }
 
     return (

@@ -1,6 +1,4 @@
 "use server";
-import { cookies } from "next/headers";
-import { verifyJwt } from "@/app/(auth)/auth/jwt";
 import { getAccessToken, PAYPAL_API } from "./paypal";
 import { orders_collection } from "../db/collections";
 import { capture_result } from "@/types/order";
@@ -11,23 +9,19 @@ import { extend_reservation, holds_reservation, reserve_items } from "../server/
 import { cancel_order, mark_order_paid } from "../server/orders";
 import { minor_to_string, to_minor } from "@/app/(site)/lib/order_totals";
 import { ONLINE_RESERVATION_MINUTES } from "../server/checkout";
+import { owns_order, thank_you_path } from "../server/place_order";
 import { after } from "next/server";
 import { notify_order_paid } from "../server/email/notifications";
 
 export type CaptureResult = { redirect: string } | { error: "auth" | "not_found" | "unavailable" | "declined" | "pending" };
 
 export async function capture_order({ orderID }: { orderID: string }): Promise<CaptureResult> {
-    const cookieStore = await cookies();
-    const token = cookieStore.get("accessToken")?.value;
-
-    const payload = token ? verifyJwt(token) : null;
-    if (!payload) return { error: "auth" };
-
     const orders = await orders_collection();
-    const order = await orders.findOne({ paypal_order_id: orderID }, { projection: { _id: 0 } });
+    const order = typeof orderID == "string" ? await orders.findOne({ paypal_order_id: orderID }, { projection: { _id: 0 } }) : null;
 
-    if (!order || order.email != payload.email) return { error: "not_found" };
-    if (order.status == "paid") return { redirect: "/thank_you/" };
+    // The account that placed it, or the guest's browser (cart cookie).
+    if (!order || !(await owns_order(order))) return { error: "not_found" };
+    if (order.status == "paid") return { redirect: thank_you_path(order) };
     if (order.status != "pending_payment") return { error: "not_found" };
 
     const lines = order.items.map((i) => ({ slug: i.slug, quantity: i.quantity }));
@@ -85,7 +79,7 @@ export async function capture_order({ orderID }: { orderID: string }): Promise<C
 
         revalidatePath("/", "layout");
 
-        return { redirect: "/thank_you/" };
+        return { redirect: thank_you_path(order) };
     } catch (error) {
         console.log("Caught an error: ", error);
         return { error: "pending" };

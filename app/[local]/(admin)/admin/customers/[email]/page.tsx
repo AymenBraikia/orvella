@@ -14,7 +14,7 @@ export default async function CustomerPage({ params }: { params: Promise<{ email
     const user = await (await users_collection()).findOne({ email }, { projection: { email: 1, firstName: 1, lastName: 1, admin: 1, address: 1 } });
     if (!user) notFound();
 
-    const orders = await orders_for_email(email);
+    const orders = await orders_for_email(email, true);
     const name = `${user.firstName ?? ""} ${user.lastName ?? ""}`.trim();
     const address = user.address;
 

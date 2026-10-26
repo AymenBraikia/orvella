@@ -1,22 +1,23 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import shipping_data from "@/app/shipping.json";
-import { useAuth } from "@/app/(site)/context/authContext";
 import Select from "../elements/select";
 import { useTranslations } from "next-intl";
 import updateUser from "@/app/server/update_user";
+import type { User } from "@/types/user";
 
 const shipping_options: string[] = Object.values(shipping_data).map((c) => c.country_name);
 
-export default function Select_country() {
-    const { session } = useAuth();
-    const [country, set_country] = useState<string>(session?.address.country || "Germany");
-
+export default function Select_country({ address }: { address: User["address"] }) {
+    const [country, set_country] = useState<string>(address.country || "Germany");
+    const router = useRouter();
     const t = useTranslations("cart");
 
-    useEffect(() => {
-        updateUser({ address: { ...session!.address, country } });
-    }, [country]);
+    async function choose(next: string) {
+        set_country(next);
+        if (await updateUser({ address: { ...address, country: next } })) router.refresh();
+    }
 
-    return <Select options={shipping_options} set_value={set_country} value={country} label={t("choose_shipping_country")} />;
+    return <Select options={shipping_options} set_value={choose as never} value={country} label={t("choose_shipping_country")} />;
 }

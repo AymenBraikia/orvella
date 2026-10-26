@@ -40,6 +40,17 @@
             "bic": "BIC",
             "reference": "Concepto",
             "amount": "Importe"
+        },
+        "notFound": "No hemos encontrado este pedido. Utilice el enlace de su correo de confirmación.",
+        "nextSteps": {
+            "processing": "Su pago se está procesando. Le enviaremos un correo en cuanto se confirme.",
+            "paid": "Su pago está confirmado. Estamos preparando su pedido y le enviaremos el número de seguimiento cuando salga.",
+            "shipped": "Su pedido está en camino."
+        },
+        "createAccount": {
+            "heading": "Siga sus pedidos",
+            "text": "Cree una cuenta para seguir este pedido y comprar más rápido la próxima vez.",
+            "cta": "Crear cuenta"
         }
     },
     "meta": {
@@ -1089,12 +1100,15 @@
             "declined": "El pago no se completó. Sus piezas se han liberado; inténtelo de nuevo.",
             "pending": "Su pago se está procesando. Le confirmaremos el pedido por correo electrónico.",
             "method": "Elija un método de pago.",
-            "not_found": "No se encontró este pedido. Inténtelo de nuevo."
+            "not_found": "No se encontró este pedido. Inténtelo de nuevo.",
+            "details": "Introduzca su nombre, correo electrónico y dirección completa antes de realizar el pedido."
         },
         "vatIncluded": "IVA del {rate} % incluido",
         "vatAdded": "IVA ({rate} %)",
         "marginScheme": "Régimen especial de bienes usados según el §25a UStG: el IVA no se indica por separado.",
-        "discount": "Descuento"
+        "discount": "Descuento",
+        "guestNote": "No necesita cuenta: introduzca sus datos. Podrá crear una cuenta después de la compra.",
+        "placingOrder": "Realizando el pedido…"
     },
     "product": {
         "reference": "Referencia",

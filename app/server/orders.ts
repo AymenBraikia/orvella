@@ -1,6 +1,7 @@
 import "server-only";
 
-import { orders_collection, users_collection } from "../db/collections";
+import { orders_collection } from "../db/collections";
+import { remove_from_cart } from "./cart";
 import { mark_items_sold, release_expired_reservations, release_reservation } from "./inventory";
 import type { Order, OrderStatus, StatusEvent } from "@/types/order";
 import type { WithId } from "mongodb";
@@ -55,7 +56,8 @@ export async function mark_order_paid(id: string, note: string, extra: Partial<O
         await orders.updateOne({ id }, { $set: { stock_conflicts: conflicts } });
     }
 
-    await (await users_collection()).updateOne({ email: order.email }, { $pull: { cart: { slug: { $in: order.items.map((i) => i.slug) } } } });
+    // Bought pieces leave the cart that placed the order (account or guest cart).
+    await remove_from_cart(order.guest && order.cart_id ? { guest: true, id: order.cart_id } : { guest: false, id: order.email }, order.items.map((i) => i.slug));
 
     return { ...order, ...(conflicts.length ? { stock_conflicts: conflicts } : {}) };
 }
@@ -116,8 +118,10 @@ export function normalize_order(doc: WithId<Order> | Order | LegacyOrder): Order
     };
 }
 
-export async function orders_for_email(email: string): Promise<Order[]> {
-    const docs = await (await orders_collection()).find({ email }, { projection: { _id: 0 }, sort: { created_at: -1 } }).toArray();
+export async function orders_for_email(email: string, include_guest_orders = false): Promise<Order[]> {
+    // Guest orders stay out of account pages: emails are not verified, so an account with the same
+    // address must not reveal them. Guests open their order through its access link instead.
+    const docs = await (await orders_collection()).find(include_guest_orders ? { email } : { email, guest: { $ne: true } }, { projection: { _id: 0 }, sort: { created_at: -1 } }).toArray();
     return JSON.parse(JSON.stringify(docs.map(normalize_order)));
 }
 
@@ -172,4 +176,11 @@ export async function transition_order(id: string, next: OrderStatus, options: {
 
     const order = await orders.findOneAndUpdate({ id, status }, { $set: set, $push: { status_history: event(next, history_note, options.by) } }, { returnDocument: "after", projection: { _id: 0 } });
     return order ? { ok: true, order } : { ok: false, error: "The order changed in the meantime — reload and try again." };
+}
+
+/** An order opened through its private access link (thank-you page, emails) — works without an account. */
+export async function order_by_token(id: string, token: string): Promise<Order | null> {
+    if (typeof id !== "string" || typeof token !== "string" || token.length < 32) return null;
+    const doc = await (await orders_collection()).findOne({ id, access_token: token }, { projection: { _id: 0 } });
+    return doc ? JSON.parse(JSON.stringify(normalize_order(doc))) : null;
 }

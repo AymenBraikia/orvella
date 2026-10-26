@@ -1,23 +1,14 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { users_collection } from "../db/collections";
-import getUser from "./get_user";
+import { cart_target } from "./cart";
 
 export default async function decrease_cart(slug: string): Promise<boolean> {
     try {
-        const user = await getUser();
-        if (!user) return false;
+        const target = await cart_target();
+        if (!target || typeof slug !== "string") return false;
 
-        const operation = await (
-            await users_collection()
-        ).updateOne(
-            {
-                email: user.email,
-                cart: { $elemMatch: { slug, quantity: { $gt: 1 } } },
-            },
-            { $inc: { "cart.$.quantity": -1 } },
-        );
+        const operation = await target.collection.updateOne({ ...target.filter, cart: { $elemMatch: { slug, quantity: { $gt: 1 } } } }, { $inc: { "cart.$.quantity": -1 } });
 
         revalidatePath("/");
         return operation.modifiedCount > 0;
