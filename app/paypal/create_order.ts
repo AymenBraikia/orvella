@@ -11,6 +11,7 @@ import { cancel_order } from "../server/orders";
 import { next_order_number } from "../server/order_number";
 import { minor_to_string } from "@/app/(site)/lib/order_totals";
 import { get_settings } from "../server/settings";
+import { absolute_url } from "@/app/(site)/lib/site_url";
 
 export type CreateOrderResult = { id: string } | { error: "auth" | "empty" | "address" | "unavailable" | "payment"; items?: string[] };
 
@@ -87,8 +88,8 @@ export async function create_order(): Promise<CreateOrderResult> {
                     shipping_preference: "NO_SHIPPING",
                     user_action: "PAY_NOW",
 
-                    return_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://orvella.vercel.app") + "/thank_you/",
-                    cancel_url: (process.env.NODE_ENV == "development" ? "http://localhost:3000" : "https://orvella.vercel.app") + "/cart/",
+                    return_url: absolute_url("/thank_you/"),
+                    cancel_url: absolute_url("/cart/"),
                 },
             }),
         });

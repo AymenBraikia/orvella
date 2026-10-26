@@ -1,3 +1,4 @@
+import { absolute_url, BASE_URL } from "@/app/(site)/lib/site_url";
 import type { Metadata } from "next";
 import { Open_Sans, Cormorant_Garamond, Lateef, Tajawal } from "next/font/google";
 import "../../globals.css";
@@ -40,11 +41,11 @@ export const metadata: Metadata = {
     keywords: ["luxury watches", "pre-owned Rolex", "Patek Philippe Calatrava", "Cartier Panthere", "Rolex Daytona", "buy luxury watches", "watch consultancy", "ORVELLA"],
     authors: [{ name: "ORVELLA" }],
     creator: "ORVELLA",
-    metadataBase: new URL("https://orvella.vercel.app/"),
+    metadataBase: new URL(BASE_URL),
     openGraph: {
         title: "ORVELLA | High-End Luxury Watches & Expert Consultancy",
         description: "Our curated collection of pre-owned and new luxury watches is waiting for you. Partner with experts for your high-end horology needs.",
-        url: "https://orvella.vercel.app/",
+        url: absolute_url("/"),
         siteName: "ORVELLA",
         images: [
             {

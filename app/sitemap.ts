@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
 import get_items from "./server/get_items";
 
-const baseUrl = "https://orvella.vercel.app";
+import { BASE_URL } from "@/app/(site)/lib/site_url";
+
+const baseUrl = BASE_URL;
 
 const locales = ["en", "de", "es", "ar", "it", "tr", "fr"] as const;
 

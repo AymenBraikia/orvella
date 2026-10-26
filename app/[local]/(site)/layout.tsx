@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import AuthGate from "@/app/components/AuthGate";
 import AuthShell from "@/app/components/AuthShell";
 
+import { absolute_url, BASE_URL } from "@/app/(site)/lib/site_url";
 import type { Metadata, Viewport } from "next";
 import { Open_Sans, Gelasio, Cormorant_Garamond, Tajawal, Lateef } from "next/font/google";
 import "../globals.css";
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     creator: "Aymen Braikia",
     publisher: "Aymen Braikia",
 
-    metadataBase: new URL("https://orvella.vercel.app/"),
+    metadataBase: new URL(BASE_URL),
     alternates: {
         canonical: "/en",
         languages: {
@@ -84,7 +85,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Luxury Watch Platform Concept",
         description: "A full-stack e-commerce concept for the luxury watch trade — consignment, appointments, multilingual UX.",
-        url: "https://orvella.vercel.app/en",
+        url: absolute_url("/en"),
         siteName: "ORVELLA",
         images: [
             {

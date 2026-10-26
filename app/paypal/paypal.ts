@@ -1,6 +1,9 @@
 import { unstable_cache } from "next/cache";
 
-export const PAYPAL_API = "https://api-m.sandbox.paypal.com";
+/** PAYPAL_ENV=live switches to real payments; anything else (default) uses the sandbox. */
+export const PAYPAL_ENV = process.env.PAYPAL_ENV === "live" ? "live" : "sandbox";
+
+export const PAYPAL_API = PAYPAL_ENV === "live" ? "https://api-m.paypal.com" : "https://api-m.sandbox.paypal.com";
 
 const get_token = unstable_cache(
     async () => {
@@ -20,7 +23,7 @@ const get_token = unstable_cache(
         const data = await res.json();
         return data.access_token as string;
     },
-    ["paypal:token"],
+    ["paypal:token", PAYPAL_ENV],
     { revalidate: 28800 },
 );
 
