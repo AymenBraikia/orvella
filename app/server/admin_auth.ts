@@ -18,3 +18,10 @@ export async function get_admin(): Promise<{ email: string; name: string } | nul
 
     return { email: user.email, name: `${user.firstName} ${user.lastName}`.trim() };
 }
+
+/** For admin server actions: throws unless the caller is (still) an admin. */
+export async function require_admin(): Promise<{ email: string; name: string }> {
+    const admin = await get_admin();
+    if (!admin) throw new Error("Not authorised");
+    return admin;
+}

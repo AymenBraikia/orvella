@@ -95,6 +95,27 @@ th {
     padding: 8px;
 }
 
+/* Admin tables: the unlayered td/th rule above would otherwise win over utility classes */
+.admin-table th,
+.admin-table td {
+    border: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--clr-secondary) 25%, transparent);
+    padding: 10px 12px;
+    text-align: start;
+    vertical-align: middle;
+}
+.admin-table th {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--clr-secondary);
+    white-space: nowrap;
+}
+.admin-table tbody tr:hover {
+    background-color: var(--bg-primary);
+}
+
 /* Headings */
 h1 {
     font-size: 40px;
