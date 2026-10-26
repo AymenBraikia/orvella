@@ -23,7 +23,6 @@ const routes = [
     "/info/imprint",
     "/info/payments",
     "/info/policy",
-    "/info/polishing",
     "/info/terms",
     "/info/vacancies",
     "/info/withdraw",

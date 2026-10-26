@@ -15,6 +15,13 @@ const nextConfig: NextConfig = {
     //     loader: "custom",
     //     loaderFile: "./image_loader.ts",
     // },
+    async redirects() {
+        // One polishing page: /polish. The old /info/polishing duplicate redirects there.
+        return [
+            { source: "/:locale(en|de|es|ar|fr|tr|it)/info/polishing", destination: "/:locale/polish", permanent: true },
+            { source: "/info/polishing", destination: "/polish", permanent: true },
+        ];
+    },
     experimental: {
         optimizeCss: true,
     },
