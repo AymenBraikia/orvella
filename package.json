@@ -9,7 +9,8 @@
         "start": "next start",
         "lint": "eslint",
         "create-admin": "node scripts/create-admin.ts",
-        "ensure-indexes": "node scripts/ensure-indexes.ts"
+        "ensure-indexes": "node scripts/ensure-indexes.ts",
+        "check-links": "node scripts/check-links.ts"
     },
     "dependencies": {
         "@hookform/resolvers": "^5.4.0",
