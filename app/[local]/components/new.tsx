@@ -35,7 +35,7 @@ export default async function New() {
             <div className={`w-full sm-w-fit`}>
                 <List display={{ base: 1, sm: 2, md: 2, lg: 3, xl: 4 }}>
                     {watches.map((data) => (
-                        <NewCardWrapper data={data} />
+                        <NewCardWrapper key={data.slug} data={data} />
                     ))}
                 </List>
             </div>

@@ -8,6 +8,7 @@ import shipping from "@/app/shipping.json";
 import CheckBox from "@/app/components/elements/checkbox";
 import updateUser from "@/app/server/update_user";
 import { useTranslations } from "next-intl";
+import { UserData } from "@/types/user";
 
 const region_options = Object.values(shipping).map((e) => e.country_name);
 
@@ -15,6 +16,10 @@ export default function Form() {
     const { session } = useAuth();
     if (!session) return <></>;
 
+    return <AddressForm session={session} />;
+}
+
+function AddressForm({ session }: { session: UserData }) {
     const t = useTranslations("common.formFields");
 
     const [country, set_country] = useState<string>(session.address.country);

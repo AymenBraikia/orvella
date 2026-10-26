@@ -1,6 +1,7 @@
 "use client";
 import { createPortal } from "react-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
+import { useMounted } from "./hooks/use_mounted";
 import List from "./scrollList";
 import { ZoomableImage } from "./elements/zoomableImage";
 import AtcBtn from "./buttons/addToCart";
@@ -23,16 +24,15 @@ interface QuickViewProps {
 export default function QuickViewModal({ view, onClose }: QuickViewProps) {
     const t = useTranslations("common");
 
-    const [increased, set_increased] = useState(false);
-    const [mounted, set_mounted] = useState(false);
+    const mounted = useMounted();
+    const scored = useRef<string | null>(null);
 
     useEffect(() => {
-        set_mounted(true);
-        if (!increased && view) {
+        if (view && scored.current !== view.slug) {
+            scored.current = view.slug;
             increase_relevance_score(view.slug, score_rewards.quick_view);
-            set_increased(true);
         }
-    }, [view, increased]);
+    }, [view]);
 
     if (!view || !mounted) return null;
 

@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Map from "./map";
 import Gallery from "./gallery";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 type Props = {
     params: Promise<{ ref: string }>;
 };
 
 export default async function StorePage({ params }: Props) {
     const { ref } = await params;
-    const t = useTranslations("store");
+    const t = await getTranslations("store");
     return (
         <div className="flex justify-start items-start flex-wrap w-full gap-10 py-20 px-5 md:px-10 xl:px-20">
             <h1>{t("heading")}</h1>

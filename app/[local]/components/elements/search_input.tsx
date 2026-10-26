@@ -4,17 +4,17 @@ import Search from "../svg/search";
 import Cross from "../svg/cross";
 import { useTranslations } from "next-intl";
 
-interface searchProps {
-    SearchChildComponent: React.ComponentType<{ item: any }>;
+interface searchProps<T> {
+    SearchChildComponent: React.ComponentType<{ item: T }>;
     SearchChildLoader: React.ComponentType;
     route: string;
     placeholder: string;
 }
 
-export default function Search_input({ route, SearchChildComponent, placeholder, SearchChildLoader }: searchProps) {
+export default function Search_input<T>({ route, SearchChildComponent, placeholder, SearchChildLoader }: searchProps<T>) {
     const t = useTranslations("common.filters");
 
-    const [data, set_data] = useState<any[]>([]);
+    const [data, set_data] = useState<T[]>([]);
     const [fetching, set_fetching] = useState<boolean>(false);
     const [active, set_active] = useState<boolean>(false);
     const [value, set_value] = useState<string>("");

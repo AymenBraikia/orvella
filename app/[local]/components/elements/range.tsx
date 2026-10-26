@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 
 interface RangeProps {
     min: number;
@@ -129,10 +129,6 @@ export default function Range({ min, max, value, onChange, step = 1, label, form
 function NumberField({ id, label, value, min, max, format, onCommit }: { id: string; label: string; value: number; min: number; max: number; format: (n: number) => string; onCommit: (n: number) => void }) {
     const [draft, setDraft] = useState<string>(String(value));
     const [editing, setEditing] = useState(false);
-
-    useEffect(() => {
-        if (!editing) setDraft(String(value));
-    }, [value, editing]);
 
     const commit = () => {
         setEditing(false);

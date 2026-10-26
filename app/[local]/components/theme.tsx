@@ -1,17 +1,14 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useMounted } from "./hooks/use_mounted";
 import Sun from "./svg/sun";
 import Moon from "./svg/moon";
 
 export function ThemeToggle() {
-    const [mounted, setMounted] = useState(false);
+    const mounted = useMounted();
     const { resolvedTheme, setTheme } = useTheme();
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     if (!mounted) return null;
 

@@ -1,9 +1,8 @@
 "use client";
 import CreateOrderBtn from "@/app/components/buttons/create_order";
 import Input from "@/app/components/elements/input";
-import { UserData } from "@/types/user";
 import { useTranslations } from "next-intl";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 export default function Cards() {
     const t = useTranslations("checkout");
@@ -36,26 +35,19 @@ export default function Cards() {
 
     function check_info(): boolean {
         if (card_number.replaceAll(" ", "").length != 16) {
-            console.clear();
             return false;
         }
         if (expire.length != 5) {
-            console.clear();
             return false;
         }
         if (sec_code.length != 3) {
-            console.clear();
             return false;
         }
 
         return true;
     }
 
-    const [enabled, set_enabled] = useState<boolean>(check_info());
-
-    useEffect(() => {
-        set_enabled(check_info());
-    }, [card_number, expire, sec_code]);
+    const enabled = check_info();
 
     return (
         <div className="w-full flex flex-wrap gap-4">

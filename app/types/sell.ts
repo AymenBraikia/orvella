@@ -7,7 +7,7 @@ export interface Sell {
     brand: string;
     price: number;
     condition: "new" | "mint" | "pre-owned";
-    images: any;
+    images: string[];
     model?: string | undefined;
     refNum?: string | undefined;
     box?: boolean | undefined;
