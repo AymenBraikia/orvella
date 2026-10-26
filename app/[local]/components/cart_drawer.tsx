@@ -11,9 +11,8 @@ import Cross from "./svg/cross";
 import Info from "./svg/info";
 
 import { format_price } from "../(site)/lib/price_format";
-import { read_cookie } from "../(site)/lib/read_cookie";
+import { useCurrency } from "../(site)/context/currencyContext";
 
-import { Supported_Currencies } from "@/currency";
 import { Watch } from "@/types/watch";
 
 type UIAction = { type: "OPEN_NAV" } | { type: "CLOSE_NAV" } | { type: "OPEN_CART" } | { type: "CLOSE_CART" } | { type: "TOGGLE_LANG" } | { type: "SET_GLASSY"; payload: boolean };
@@ -27,7 +26,7 @@ export default function Cart_drawer({ dispatch, ui, ref }: { ref: RefObject<HTML
     const t = useTranslations("cart");
     const [view, set_view] = useState<null | Watch>(null);
 
-    const currency = read_cookie("Currency") as Supported_Currencies;
+    const currency = useCurrency();
 
     return (
         <div

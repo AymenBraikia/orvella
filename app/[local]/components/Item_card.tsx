@@ -4,8 +4,7 @@ import { memo, useState } from "react";
 import { format_price } from "../(site)/lib/price_format";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Supported_Currencies } from "@/currency";
-import { read_cookie } from "../(site)/lib/read_cookie";
+import { useCurrency } from "../(site)/context/currencyContext";
 import Display_Image from "./display_image";
 import { Bracelet, Necklace, Ring } from "@/types/jewelry";
 import AtcBtn from "./buttons/addToCart";
@@ -13,6 +12,7 @@ import StockBadge from "./stock_badge";
 
 export default memo(function Item_Card({ data }: { data: Ring | Necklace | Bracelet }) {
     const t = useTranslations("common.productCard");
+    const currency = useCurrency();
 
     const [play_video, set_play_video] = useState<boolean>(false);
 
@@ -48,7 +48,7 @@ export default memo(function Item_Card({ data }: { data: Ring | Necklace | Brace
                         </p>
                     )}
                 </div>
-                <span className="text-xl font-semibold text-foreground font-sans">{format_price(data.price, read_cookie("Currency") as Supported_Currencies)}</span>
+                <span className="text-xl font-semibold text-foreground font-sans">{format_price(data.price, currency)}</span>
                 <button type="button" className="button bg-primary text-gold hover:bg-gold hover:text-primary font-secondary font-thin w-full tracking-wider">
                     Request Private Viewing
                 </button>

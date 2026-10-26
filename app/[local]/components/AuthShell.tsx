@@ -1,5 +1,6 @@
 import { AuthProvider } from "@/app/(site)/context/authContext";
 import { CartProvider } from "@/app/(site)/context/cartContext";
+import { CurrencyProvider } from "@/app/(site)/context/currencyContext";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import type { UserData } from "@/types/user";
@@ -13,6 +14,7 @@ export default async function AuthShell({ session, children }: { session: UserDa
         const savedCurrency = (cookieStore.get("Currency")?.value as Supported_Currencies) || "USD";
         const store = public_details(await store_identity());
     return (
+        <CurrencyProvider currency={savedCurrency}>
         <AuthProvider initialSession={session}>
             <CartProvider>
                 <Header savedCurrency={savedCurrency} />
@@ -22,5 +24,6 @@ export default async function AuthShell({ session, children }: { session: UserDa
                 </div>
             </CartProvider>
         </AuthProvider>
+        </CurrencyProvider>
     );
 }

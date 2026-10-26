@@ -12,8 +12,7 @@ import increase_relevance_score from "@/app/server/increase_relevance_score";
 import score_rewards from "../(site)/lib/relevance_score";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { read_cookie } from "../(site)/lib/read_cookie";
-import { Supported_Currencies } from "@/currency";
+import { useCurrency } from "../(site)/context/currencyContext";
 import { Item } from "../(site)/lib/filters";
 
 interface QuickViewProps {
@@ -23,6 +22,7 @@ interface QuickViewProps {
 
 export default function QuickViewModal({ view, onClose }: QuickViewProps) {
     const t = useTranslations("common");
+    const currency = useCurrency();
 
     const mounted = useMounted();
     const scored = useRef<string | null>(null);
@@ -67,7 +67,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                             <p className="hidden sm:block font-semibold tracking-tight capitalize text-2xl sm:text-3xl lg:text-4xl">{view.brand}</p>
                             <p className="hidden sm:block tracking-wide capitalize text-secondary text-lg sm:text-xl lg:text-2xl">{view.model}</p>
 
-                            <p className="font-medium tracking-wide text-base sm:text-2xl">{format_price(view.price, read_cookie("Currency") as Supported_Currencies)}</p>
+                            <p className="font-medium tracking-wide text-base sm:text-2xl">{format_price(view.price, currency)}</p>
 
                             <div className="hidden md:flex flex-col gap-2 leading-relaxed tracking-wide text-sm text-secondary">
                                 <p>
@@ -139,7 +139,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
 
                             <p className="hidden sm:block font-semibold tracking-tight capitalize text-2xl sm:text-3xl lg:text-4xl">{view.display_name}</p>
 
-                            <p className="font-medium tracking-wide text-base sm:text-2xl text-gold">{format_price(view.price, read_cookie("Currency") as Supported_Currencies)}</p>
+                            <p className="font-medium tracking-wide text-base sm:text-2xl text-gold">{format_price(view.price, currency)}</p>
 
                             <div className="hidden md:flex flex-col gap-2 leading-relaxed tracking-wide text-sm text-primary capitalize">
                                 <p className={`${view.metal_type ? "block" : "hidden"}`}>

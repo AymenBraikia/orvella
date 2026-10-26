@@ -5,8 +5,7 @@ import { format_price } from "../(site)/lib/price_format";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import { read_cookie } from "../(site)/lib/read_cookie";
-import { Supported_Currencies } from "@/currency";
+import { useCurrency } from "../(site)/context/currencyContext";
 import { Item } from "../(site)/lib/filters";
 import StockBadge from "./stock_badge";
 
@@ -16,6 +15,7 @@ const QuickViewModal = dynamic(() => import("./quick_view"), {
 
 export default function Card({ data }: { data: Item }) {
     const t_btn = useTranslations("common.buttons");
+    const currency = useCurrency();
     const [view, set_view] = useState<null | Item>(null);
 
     return (
@@ -46,7 +46,7 @@ export default function Card({ data }: { data: Item }) {
                 </div>
                 <div className="w-full flex flex-col justify-start items-start max-h-30 min-h-20">
                     <h5 className="sm:title6 title4 font-secondary capitalize text-shine">{data.display_name}</h5>
-                    <h6 className="sm:title6 title5 font-secondary">{format_price(data.price, read_cookie("Currency") as Supported_Currencies)}</h6>
+                    <h6 className="sm:title6 title5 font-secondary">{format_price(data.price, currency)}</h6>
                 </div>
             </div>
             <QuickViewModal view={view} onClose={() => set_view(null)} />

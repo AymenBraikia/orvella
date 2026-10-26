@@ -4,8 +4,7 @@ import { memo, useState } from "react";
 import { format_price } from "../(site)/lib/price_format";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Supported_Currencies } from "@/currency";
-import { read_cookie } from "../(site)/lib/read_cookie";
+import { useCurrency } from "../(site)/context/currencyContext";
 import Display_Image from "./display_image";
 import StockBadge from "./stock_badge";
 import type { ItemStatus } from "@/types/item";
@@ -40,6 +39,7 @@ export default memo(function Watch_card({
     status?: ItemStatus;
 }) {
     const t = useTranslations("common.productCard");
+    const currency = useCurrency();
 
     const [play_video, set_play_video] = useState<boolean>(false);
 
@@ -91,7 +91,7 @@ export default memo(function Watch_card({
                         </p>
                     )}
                 </div>
-                <span className="text-xl font-semibold text-foreground font-sans">{format_price(price, read_cookie("Currency") as Supported_Currencies)}</span>
+                <span className="text-xl font-semibold text-foreground font-sans">{format_price(price, currency)}</span>
             </div>
         </Link>
     );

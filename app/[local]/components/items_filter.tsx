@@ -23,7 +23,7 @@ import {
     type RangeFacet,
     type Selection,
 } from "../(site)/lib/filters";
-import { read_cookie } from "../(site)/lib/read_cookie";
+import { useCurrency } from "../(site)/context/currencyContext";
 import { Supported_Currencies } from "@/currency";
 
 const T_KEY: Record<string, string> = {
@@ -73,6 +73,7 @@ interface WatchFiltersProps {
 
 export default function ItemsFilter({ facets, counts, selection, onChange, resultCount, open, setOpen }: WatchFiltersProps) {
     const t = useTranslations("common.filters");
+    const currency = useCurrency();
     const panel = useRef<HTMLDivElement>(null);
     const closeButton = useRef<HTMLButtonElement>(null);
     const restoreFocus = useRef<HTMLElement | null>(null);
@@ -164,7 +165,7 @@ export default function ItemsFilter({ facets, counts, selection, onChange, resul
                                         onChange={(value) => onChange(set_range(selection, section.facet, value, facets))}
                                         fromLabel={t("from")}
                                         toLabel={t("to")}
-                                        format={section.money ? format_price.bind(window, 1, read_cookie("Currency") as Supported_Currencies) : (n) => `${n}${section.unit ? ` ${section.unit}` : ""}`}
+                                        format={section.money ? (n: number) => format_price(n, currency) : (n) => `${n}${section.unit ? ` ${section.unit}` : ""}`}
                                     />
                                 )}
 
@@ -320,6 +321,7 @@ function translate_option(t: ReturnType<typeof useTranslations>, facet: ListFace
 
 export function ActiveFilters({ selection, onChange }: { selection: Selection; onChange: (selection: Selection) => void }) {
     const t = useTranslations("common.filters");
+    const currency = useCurrency();
     const chips = active_chips(selection);
     if (chips.length === 0) return null;
 
@@ -328,7 +330,7 @@ export function ActiveFilters({ selection, onChange }: { selection: Selection; o
             {chips.map((chip) => (
                 <li key={chip_key(chip)}>
                     <button type="button" onClick={() => onChange(remove_chip(selection, chip))} className="flex cursor-pointer items-center gap-2 border border-secondary/50 px-3 py-1 text-xs transition-default hover:border-foreground">
-                        <span>{chip_label(t, chip)}</span>
+                        <span>{chip_label(t, chip, currency)}</span>
                         <span aria-hidden="true" className="text-secondary">
                             ×
                         </span>
@@ -359,14 +361,14 @@ function chip_key(chip: ActiveChip): string {
     }
 }
 
-function chip_label(t: ReturnType<typeof useTranslations>, chip: ActiveChip): string {
+function chip_label(t: ReturnType<typeof useTranslations>, chip: ActiveChip, currency: Supported_Currencies): string {
     switch (chip.kind) {
         case "list":
             return translate_option(t, chip.facet, chip.value);
         case "range": {
             const money = chip.facet === "price";
             const unit = chip.facet === "caseDiameterMm" ? " mm" : chip.facet === "waterResistanceM" ? " m" : "";
-            const fmt = (n: number) => (money ? format_price(n, read_cookie("Currency") as Supported_Currencies) : `${n}${unit}`);
+            const fmt = (n: number) => (money ? format_price(n, currency) : `${n}${unit}`);
             return `${t(T_KEY[chip.facet])}: ${fmt(chip.value[0])} – ${fmt(chip.value[1])}`;
         }
         case "include":
