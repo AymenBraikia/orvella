@@ -227,6 +227,9 @@
             "remove": "Remove photo",
             "add": "Add photos",
             "uploading": "{progress}%"
+        },
+        "errors": {
+            "rateLimited": "Too many attempts. Please wait a moment and try again."
         }
     },
     "error": {
@@ -277,6 +280,14 @@
             "dontHaveAccount": "Don't have an account?",
             "signUp": "Sign up",
             "somethingWentWrong": "Something went wrong. Please try again."
+        },
+        "errors": {
+            "missing": "Please fill in all required fields.",
+            "invalid_email": "Please enter a valid email address.",
+            "weak_password": "Your password needs at least 8 characters.",
+            "wrong_credentials": "Wrong email or password.",
+            "email_taken": "An account with this email already exists. Log in instead?",
+            "rate": "Too many attempts. Please wait a few minutes and try again."
         }
     },
     "home": {

@@ -3,73 +3,57 @@
 import { orders_collection, users_collection } from "@/app/db/collections";
 import { User } from "@/app/types/user";
 import bcrypt from "bcrypt";
-
-import { signJwtAccessToken } from "../jwt";
-import { cookies } from "next/headers";
-
+import { z } from "zod";
 import { revalidatePath } from "next/cache";
-import { authRegex } from "../regex";
 import { safe_redirect } from "../safe_redirect";
 import { merge_guest_cart } from "@/app/server/cart";
+import { is_bot, within_limit } from "@/app/server/rate_limit";
+import { email_field, password_field, start_session, type AuthResult } from "./session";
 
-export default async function Sign_up(data: FormData): Promise<{ success: boolean; error?: string; redirect?: string | null }> {
+const sign_up_schema = z.object({
+    firstName: z.string().trim().min(1).max(60),
+    lastName: z.string().trim().min(1).max(60),
+    email: email_field,
+    password: password_field,
+});
+
+const EMPTY_ADDRESS = { shipping_costs: 55, country: "Germany", address1: undefined, address2: undefined, postCode: undefined, city: undefined, phone: undefined };
+
+export default async function Sign_up(data: FormData): Promise<AuthResult> {
     try {
+        // Bots filling the hidden field get a "success" and no account.
+        if (is_bot({ website: data.get("website") })) return { success: true, redirect: "/" };
+        if (!(await within_limit("sign_up"))) return { success: false, error: "rate" };
+
         const redirect = safe_redirect(data.get("redirect") as string | null);
-        const firstName = data.get("firstName") as string | null;
-        const lastName = data.get("lastName") as string | null;
+        const parsed = sign_up_schema.safeParse(Object.fromEntries(["firstName", "lastName", "email", "password"].map((k) => [k, data.get(k) ?? ""])));
+        if (!parsed.success) {
+            const field = parsed.error.issues[0]?.path[0];
+            return { success: false, error: field == "email" && data.get("email") ? "invalid_email" : field == "password" && data.get("password") ? "weak_password" : "missing" };
+        }
 
-        const email = data.get("email") as string | null;
+        const { firstName, lastName, email, password } = parsed.data;
+        const users = await users_collection();
 
-        const password = data.get("password") as string | null;
-
-        if (!firstName || !lastName || !email || !password) return { success: false, error: "Make sure to enter all the required information." };
-
-        if (!authRegex.email.test(email)) return { success: false, error: "Enter a valid email." };
-        if (!authRegex.password.test(password)) return { success: false, error: "Password should be atleast 8 characters long." };
-        // if (!authRegex.password.test(password)) return { success: false, error: "Password should include atleast 1 special character, 1 upper case letter, 1 number." };
-
-        const exists = await (await users_collection()).findOne({ email });
-
-        if (exists) return { success: false, error: "Someone else already uses this email address use another one." };
-
-        const cookieStore = await cookies();
-
-        const saltRounds = 10;
-        const hashedPassword = await bcrypt.hash(password, saltRounds);
+        const taken = await users.findOne({ email: { $regex: `^${email.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, $options: "i" } }, { projection: { _id: 1 } });
+        if (taken) return { success: false, error: "email_taken" };
 
         const user_document: User = {
             email,
             firstName,
             lastName,
-            password: hashedPassword,
+            password: await bcrypt.hash(password, 10),
             cart: [],
             wish_list: [],
             ongoing_orders: [],
             fulfilled_orders: [],
             local_pickup: false,
             payment_method: "PayPal",
-            address: {
-                shipping_costs: 55,
-                country: "Germany",
-                address1: undefined,
-                address2: undefined,
-                postCode: undefined,
-                city: undefined,
-                phone: undefined,
-            },
-            diff_address: {
-                shipping_costs: 55,
-                country: "Germany",
-                address1: undefined,
-                address2: undefined,
-                postCode: undefined,
-                city: undefined,
-                phone: undefined,
-                active: false,
-            },
+            address: EMPTY_ADDRESS,
+            diff_address: { ...EMPTY_ADDRESS, active: false },
         };
 
-        const operation = await (await users_collection()).insertOne(user_document);
+        await users.insertOne(user_document);
 
         // Account created right after a guest purchase: attach that order (proved by its access token).
         const claim_order = data.get("claim_order");
@@ -78,39 +62,15 @@ export default async function Sign_up(data: FormData): Promise<{ success: boolea
             await (await orders_collection()).updateOne({ id: claim_order, access_token: claim_token, email, guest: true }, { $set: { guest: false }, $unset: { cart_id: "" } });
         }
 
-        const payload = {
-            email: email,
-            full_name: firstName + " " + lastName,
-        };
-
-        const accessToken = signJwtAccessToken(payload);
-
-        cookieStore.set({
-            name: "accessToken",
-            value: accessToken,
-            httpOnly: true,
-            path: "/",
-            secure: process.env.NODE_ENV === "production",
-            maxAge: 60 * 60 * 24 * 7,
-        });
-        cookieStore.set({
-            name: "name",
-            value: firstName,
-            httpOnly: false,
-            path: "/",
-            secure: process.env.NODE_ENV === "production",
-            maxAge: 60 * 60 * 24 * 7,
-        });
+        await start_session(user_document);
 
         // Pieces picked as a guest move into the account.
         await merge_guest_cart(email);
 
         revalidatePath("/");
-
-        return operation.acknowledged ? { success: true, redirect } : { success: false, error: "There was an error while trying to sign you up." };
+        return { success: true, redirect };
     } catch (err) {
-        console.log("There was an error during a sign up attempt:");
-        console.error(err);
-        return { success: false, error: "There was an error while trying to sign you up." };
+        console.error("Sign-up failed:", err);
+        return { success: false, error: "server" };
     }
 }

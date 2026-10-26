@@ -7,6 +7,7 @@ import CheckBox from "@/app/components/elements/checkbox";
 import Sign_up from "../actions/sign_up";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import Honeypot from "@/app/components/elements/honeypot";
 
 export default function SignUpPage({ searchParams }: { searchParams: Promise<{ redirect?: string; ref?: string; email?: string; order?: string; token?: string }> }) {
     const params = use(searchParams);
@@ -14,6 +15,7 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
     const t2 = useTranslations("home");
 
     const [agreed, setAgreed] = useState(false);
+    const t_errors = useTranslations("auth.errors");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -38,7 +40,7 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
             }
 
             setIsSubmitting(false);
-            return setError(result.error || t("somethingWentWrong"));
+            return setError(result.error == "server" ? t("somethingWentWrong") : t_errors(result.error));
         } catch {
             setIsSubmitting(false);
             setError(t("somethingWentWrong"));
@@ -60,6 +62,7 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
             <form onSubmit={handleSubmit} className="flex-center flex-col gap-6 w-full" noValidate>
                 <input type="hidden" name="redirect" value={params.redirect ?? ""} />
                 {/* Coming from a guest order: the access token lets that order move into the new account. */}
+                <Honeypot />
                 <input type="hidden" name="claim_order" value={params.order ?? ""} />
                 <input type="hidden" name="claim_token" value={params.token ?? ""} />
 

@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { is_upload_kind, UPLOAD_RULES } from "@/app/(site)/lib/upload_rules";
 import { get_admin } from "@/app/server/admin_auth";
 import { STORAGE_DRIVER } from "@/app/server/storage";
+import { within_limit } from "@/app/server/rate_limit";
 
 /**
  * Issues short-lived Vercel Blob tokens so the browser uploads straight to storage
@@ -20,6 +21,7 @@ export async function POST(request: Request): Promise<NextResponse> {
             request,
             onBeforeGenerateToken: async (pathname, client_payload) => {
                 if (!is_upload_kind(client_payload)) throw new Error("Unknown upload kind");
+                if (!(await within_limit("upload"))) throw new Error("Too many uploads, try again later");
 
                 const rule = UPLOAD_RULES[client_payload];
                 if (!pathname.startsWith(`${rule.prefix}/`) || pathname.includes("..")) throw new Error("Invalid upload path");

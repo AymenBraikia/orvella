@@ -31,7 +31,7 @@ const update_schema = z
         payment_method: z.enum(["PayPal", "Credit/Debit Card", "Bank Transfer"]),
         local_pickup: z.boolean(),
         // Guests only (an account's email and name are not changed here):
-        email: z.union([z.literal(""), z.string().trim().email().max(200)]),
+        email: z.union([z.literal(""), z.string().trim().toLowerCase().email().max(200)]),
         firstName: z.string().trim().max(60),
         lastName: z.string().trim().max(60),
     })

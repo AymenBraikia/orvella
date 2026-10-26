@@ -12,6 +12,7 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
     const t = useTranslations("auth.login");
         const t2 = useTranslations("home");
 
+    const t_errors = useTranslations("auth.errors");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -32,7 +33,7 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
             }
 
             setIsSubmitting(false);
-            return setError(result.error || t("somethingWentWrong"));
+            return setError(result.error == "server" ? t("somethingWentWrong") : t_errors(result.error));
         } catch {
             setIsSubmitting(false);
             setError(t("somethingWentWrong"));

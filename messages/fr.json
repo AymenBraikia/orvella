@@ -227,6 +227,9 @@
             "remove": "Supprimer la photo",
             "add": "Ajouter des photos",
             "uploading": "{progress} %"
+        },
+        "errors": {
+            "rateLimited": "Trop de tentatives. Veuillez patienter un instant puis réessayer."
         }
     },
     "error": {
@@ -277,6 +280,14 @@
             "dontHaveAccount": "Vous n'avez pas de compte ?",
             "signUp": "S'inscrire",
             "somethingWentWrong": "Une erreur s'est produite. Veuillez réessayer."
+        },
+        "errors": {
+            "missing": "Veuillez remplir tous les champs obligatoires.",
+            "invalid_email": "Veuillez saisir une adresse e-mail valide.",
+            "weak_password": "Votre mot de passe doit contenir au moins 8 caractères.",
+            "wrong_credentials": "E-mail ou mot de passe incorrect.",
+            "email_taken": "Un compte existe déjà avec cette adresse e-mail. Vous connecter ?",
+            "rate": "Trop de tentatives. Veuillez patienter quelques minutes puis réessayer."
         }
     },
     "home": {

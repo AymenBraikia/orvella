@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import Honeypot from "@/app/components/elements/honeypot";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
@@ -15,6 +16,9 @@ export default function EnquiryForm({ slug, can_reserve }: { slug: string; can_r
 
     const schema = useMemo(() => enquiry_schema({ required: t_fields("required"), invalidEmail: t_fields("invalidEmail") }), [t_fields]);
     const [state, set_state] = useState<"editing" | "sending" | "sent" | "failed">("editing");
+    const [rate_limited, set_rate_limited] = useState(false);
+    const honeypot = useRef<HTMLInputElement>(null);
+    const t_errors = useTranslations("common.errors");
 
     const {
         register,
@@ -29,7 +33,8 @@ export default function EnquiryForm({ slug, can_reserve }: { slug: string; can_r
 
     const send = async (data: EnquiryInput) => {
         set_state("sending");
-        const result = await submit_enquiry(data);
+        const result = await submit_enquiry({ ...data, website: honeypot.current?.value ?? "" });
+        set_rate_limited(!result.ok && result.error == "rate");
         set_state(result.ok ? "sent" : "failed");
     };
 
@@ -54,6 +59,7 @@ export default function EnquiryForm({ slug, can_reserve }: { slug: string; can_r
 
     return (
         <form id="enquire" onSubmit={handleSubmit(send)} className="w-full border border-secondary/40 p-4 sm:p-6 flex flex-col gap-5 scroll-mt-28 font-sans normal-case" noValidate>
+            <Honeypot ref={honeypot} />
             <h4 className="font-secondary">{t("heading")}</h4>
 
             {can_reserve && (
@@ -89,7 +95,7 @@ export default function EnquiryForm({ slug, can_reserve }: { slug: string; can_r
             </button>
             {state == "failed" && (
                 <p role="alert" className="text-red-400 text-sm">
-                    {t("error")}
+                    {rate_limited ? t_errors("rateLimited") : t("error")}
                 </p>
             )}
         </form>

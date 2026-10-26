@@ -2,71 +2,40 @@
 
 import { users_collection } from "@/app/db/collections";
 import bcrypt from "bcrypt";
-
-import { signJwtAccessToken } from "../jwt";
-import { cookies } from "next/headers";
-
+import { z } from "zod";
 import { revalidatePath } from "next/cache";
-import { authRegex } from "../regex";
 import { safe_redirect } from "../safe_redirect";
 import { merge_guest_cart } from "@/app/server/cart";
+import { within_limit } from "@/app/server/rate_limit";
+import { email_field, start_session, type AuthResult } from "./session";
 
-export default async function Log_in(data: FormData): Promise<{ success: boolean; error?: string; redirect?: string | null }> {
+const login_schema = z.object({ email: email_field, password: z.string().min(1).max(128) });
+
+export default async function Log_in(data: FormData): Promise<AuthResult> {
     try {
+        if (!(await within_limit("login"))) return { success: false, error: "rate" };
+
         const redirect = safe_redirect(data.get("redirect") as string | null);
-        const email = data.get("email") as string | null;
-        const password = data.get("password") as string | null;
+        const parsed = login_schema.safeParse({ email: data.get("email"), password: data.get("password") });
+        if (!parsed.success) return { success: false, error: parsed.error.issues.some((i) => i.path[0] == "email" && i.code != "too_small") ? "invalid_email" : "missing" };
 
-        if (!email || !password) return { success: false, error: "Make sure to enter all the required information." };
+        const { email, password } = parsed.data;
+        const users = await users_collection();
+        // New accounts are stored lower-case; older ones as typed.
+        const user = (await users.findOne({ email })) ?? (await users.findOne({ email: String(data.get("email")).trim() }));
 
-        if (!authRegex.email.test(email)) return { success: false, error: "Enter a valid email." };
-        if (!authRegex.password.test(password)) return { success: false, error: "Password should be atleast 8 characters long." };
-        // if (!authRegex.password.test(password)) return { success: false, error: "Password should include atleast 1 special character, 1 upper case letter, 1 number." };
+        // Same answer for "no account" and "wrong password", so emails cannot be probed.
+        if (!user || !(await bcrypt.compare(password, user.password))) return { success: false, error: "wrong_credentials" };
 
-        const exists = await (await users_collection()).findOne({ email });
-
-        if (!exists) return { success: false, error: "Wrong email or password" };
-
-        const isPasswordValid = await bcrypt.compare(password, exists.password);
-
-        if (!isPasswordValid) return { success: false, error: "Wrong email or password" };
-
-        const cookieStore = await cookies();
-
-        const payload = {
-            email: email,
-            full_name: exists.firstName + " " + exists.lastName,
-            admin: exists.admin === true,
-        };
-
-        const accessToken = signJwtAccessToken(payload);
-
-        cookieStore.set({
-            name: "accessToken",
-            value: accessToken,
-            httpOnly: true,
-            path: "/",
-            secure: process.env.NODE_ENV === "production",
-            maxAge: 60 * 60 * 24 * 7,
-        });
-        cookieStore.set({
-            name: "name",
-            value: exists.firstName + " " + exists.lastName,
-            httpOnly: false,
-            path: "/",
-            secure: process.env.NODE_ENV === "production",
-            maxAge: 60 * 60 * 24 * 7,
-        });
+        await start_session(user);
 
         // Pieces picked as a guest move into the account.
-        await merge_guest_cart(email);
+        await merge_guest_cart(user.email);
 
         revalidatePath("/");
-
         return { success: true, redirect };
     } catch (err) {
-        console.log("There was an error during a login attempt:");
-        console.error(err);
-        return { success: false, error: "There was an error while trying to sign you up." };
+        console.error("Login failed:", err);
+        return { success: false, error: "server" };
     }
 }

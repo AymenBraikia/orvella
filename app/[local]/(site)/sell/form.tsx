@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
+import Honeypot from "@/app/components/elements/honeypot";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "@/app/components/elements/input";
@@ -41,6 +42,9 @@ export default function Form() {
     const [step, set_step] = useState<number>(0);
 
     const [state, set_state] = useState<"editing" | "sending" | "sent" | "failed">("editing");
+    const [rate_limited, set_rate_limited] = useState(false);
+    const honeypot = useRef<HTMLInputElement>(null);
+    const t_errors = useTranslations("common.errors");
     const [uploading, set_uploading] = useState(false);
     const [picker_key, set_picker_key] = useState(0);
 
@@ -76,7 +80,8 @@ export default function Form() {
     const onValid = async (data: FormOutput) => {
         if (uploading) return;
         set_state("sending");
-        const result = await Submit(data);
+        const result = await Submit({ ...data, website: honeypot.current?.value ?? "" });
+        set_rate_limited(!result.ok && result.error == "rate");
         set_state(result.ok ? "sent" : "failed");
     };
 
@@ -113,6 +118,7 @@ export default function Form() {
             </div>
 
             <form onSubmit={handleSubmit(onValid)} className="w-full h-fit p-4 flex-center flex-col gap-6">
+            <Honeypot ref={honeypot} />
                 <div className={`sm:w-full w-dvw h-fit ${step == 2 ? "min-h-210" : step == 1 ? "sm:min-h-50 min-h-30" : "sm:min-h-50 min-h-100"} relative flex-center overflow-hidden`}>
                     <div className="w-full px-4 sm:px-0 sm:max-w-200 absolute inset-s-1/2 top-1/2 -translate-1/2 gap-4 sm:grid-cols-2 grid-cols-1 grid transition-default" style={{ transform: `translateX(${step * -100}dvw)` }}>
                         <div className="flex-center flex-col w-full">
@@ -197,7 +203,7 @@ export default function Form() {
                 {uploading && step == 2 && <p className="text-sm text-secondary">{t("waitForUploads")}</p>}
                 {state == "failed" && (
                     <p role="alert" className="text-red-400 text-sm">
-                        {t("error")}
+                        {rate_limited ? t_errors("rateLimited") : t("error")}
                     </p>
                 )}
             </form>

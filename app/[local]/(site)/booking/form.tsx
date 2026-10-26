@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import Honeypot from "@/app/components/elements/honeypot";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "@/app/components/elements/input";
@@ -19,6 +20,9 @@ export default function Form() {
     );
 
     const [state, set_state] = useState<"editing" | "sending" | "sent" | "failed">("editing");
+    const [rate_limited, set_rate_limited] = useState(false);
+    const honeypot = useRef<HTMLInputElement>(null);
+    const t_errors = useTranslations("common.errors");
 
     const {
         register,
@@ -32,7 +36,8 @@ export default function Form() {
 
     const onValid = async (data: BookingOutput) => {
         set_state("sending");
-        const result = await Submit(data);
+        const result = await Submit({ ...data, website: honeypot.current?.value ?? "" });
+        set_rate_limited(!result.ok && result.error == "rate");
         set_state(result.ok ? "sent" : "failed");
     };
 
@@ -64,6 +69,7 @@ export default function Form() {
 
     return (
         <form onSubmit={handleSubmit(onValid)} className="w-full h-fit p-4 flex-center flex-col gap-6">
+            <Honeypot ref={honeypot} />
             <div className={`w-full h-fit min-h-80 relative flex-center overflow-hidden`}>
                 <div className="w-full max-w-200 gap-4 flex-center flex-wrap">
                     <div className="w-full sm:w-[calc(50%-8px)]">
@@ -108,7 +114,7 @@ export default function Form() {
             </button>
             {state == "failed" && (
                 <p role="alert" className="text-red-400 text-sm">
-                    {t_booking("error")}
+                    {rate_limited ? t_errors("rateLimited") : t_booking("error")}
                 </p>
             )}
         </form>

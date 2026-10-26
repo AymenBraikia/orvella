@@ -227,6 +227,9 @@
             "remove": "Fotoğrafı kaldır",
             "add": "Fotoğraf ekle",
             "uploading": "%{progress}"
+        },
+        "errors": {
+            "rateLimited": "Çok fazla deneme. Lütfen biraz bekleyip tekrar deneyin."
         }
     },
     "error": {
@@ -277,6 +280,14 @@
             "dontHaveAccount": "Hesabınız yok mu?",
             "signUp": "Kayıt ol",
             "somethingWentWrong": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+        },
+        "errors": {
+            "missing": "Lütfen tüm zorunlu alanları doldurun.",
+            "invalid_email": "Lütfen geçerli bir e-posta adresi girin.",
+            "weak_password": "Şifreniz en az 8 karakter olmalıdır.",
+            "wrong_credentials": "E-posta veya şifre hatalı.",
+            "email_taken": "Bu e-posta ile zaten bir hesap var. Giriş yapmak ister misiniz?",
+            "rate": "Çok fazla deneme. Lütfen birkaç dakika bekleyip tekrar deneyin."
         }
     },
     "home": {

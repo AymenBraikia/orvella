@@ -8,11 +8,16 @@ import { read_items_fresh } from "@/app/server/inventory";
 import { notify_enquiry } from "@/app/server/email/notifications";
 import { item_name } from "../../../lib/item_name";
 import { enquiry_schema } from "./schema";
+import { is_bot, within_limit } from "@/app/server/rate_limit";
 import type { Enquiry } from "@/types/enquiry";
 
-export type EnquiryResult = { ok: true } | { ok: false; error: "invalid" | "server" };
+export type EnquiryResult = { ok: true } | { ok: false; error: "invalid" | "server" | "rate" };
 
 export default async function submit_enquiry(input: unknown): Promise<EnquiryResult> {
+    // Spam trap and per-IP limit (silently "succeed" for bots so they do not retry).
+    if (is_bot(input)) return { ok: true };
+    if (!(await within_limit("enquiry"))) return { ok: false, error: "rate" };
+
     const parsed = enquiry_schema().safeParse(input);
     if (!parsed.success) return { ok: false, error: "invalid" };
 
