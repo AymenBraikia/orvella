@@ -20,7 +20,8 @@
 # production
 /build
 /local*
-*scripts
+# old local helper (wrote to the wrong database); replaced by scripts/create-admin.ts
+/scripts/make_admin.mjs
 
 # misc
 .DS_Store

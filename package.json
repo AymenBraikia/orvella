@@ -7,7 +7,9 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "eslint"
+        "lint": "eslint",
+        "create-admin": "node scripts/create-admin.ts",
+        "ensure-indexes": "node scripts/ensure-indexes.ts"
     },
     "dependencies": {
         "@hookform/resolvers": "^5.4.0",
