@@ -14,6 +14,8 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useCurrency } from "../(site)/context/currencyContext";
 import { Item } from "../(site)/lib/filters";
+import { brand_name } from "../(site)/lib/brand_name";
+import { item_name } from "../(site)/lib/item_name";
 
 interface QuickViewProps {
     view: Item | null;
@@ -43,7 +45,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                     tabIndex={-1}
                     role="dialog"
                     aria-modal="true"
-                    aria-label={`${view.brand} ${view.model} quick view`}
+                    aria-label={`${item_name(view)} quick view`}
                     className="relative p-4 sm:pt-30 pt-25 flex w-full h-full flex-col md:flex-row bg-background font-secondary outline-none flex-center"
                 >
                     <button aria-label={"close"} type="button" className="button absolute top-34 inset-e-4 z-20 p-0" onClick={onClose}>
@@ -62,9 +64,9 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
 
                     <div className="flex w-full flex-col justify-center px-4 md:px-8 gap-2 md:h-full md:gap-6">
                         <div className="flex flex-col gap-1 md:gap-2">
-                            <p className="sm:hidden font-semibold tracking-tight capitalize text-xl sm:text-3xl lg:text-4xl text-gold">{view.brand + " " + view.model}</p>
+                            <p className="sm:hidden font-semibold tracking-tight capitalize text-xl sm:text-3xl lg:text-4xl text-gold">{item_name(view)}</p>
 
-                            <p className="hidden sm:block font-semibold tracking-tight capitalize text-2xl sm:text-3xl lg:text-4xl">{view.brand}</p>
+                            <p className="hidden sm:block font-semibold tracking-tight capitalize text-2xl sm:text-3xl lg:text-4xl">{brand_name(view.brand)}</p>
                             <p className="hidden sm:block tracking-wide capitalize text-secondary text-lg sm:text-xl lg:text-2xl">{view.model}</p>
 
                             <p className="font-medium tracking-wide text-base sm:text-2xl">{format_price(view.price, currency)}</p>

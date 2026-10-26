@@ -1,6 +1,7 @@
 "use client";
 
 import { Item } from "@/types/item";
+import { brand_name } from "../../lib/brand_name";
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
@@ -104,7 +105,7 @@ function Displayed_Data({
 
             return (
                 <div className="w-full flex flex-col gap-2 py-4">
-                    <Row label={common("filters.brand")} value={watch.brand} />
+                    <Row label={common("filters.brand")} value={brand_name(watch.brand)} />
 
                     <Row label={product("model")} value={watch.model} />
 
@@ -196,7 +197,7 @@ function Row({ label, value }: { label: string; value: string }) {
     return (
         <div className="border-b border-b-secondary flex justify-between md:justify-start items-center py-2">
             <p className="w-fit md:w-100">{label}</p>
-            <p className="lowercase">{value}</p>
+            <p>{value}</p>
         </div>
     );
 }

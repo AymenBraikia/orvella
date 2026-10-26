@@ -4,6 +4,7 @@ import Image from "next/image";
 import { format_price } from "../lib/price_format";
 import { get_Currency } from "../lib/get_currency";
 import { getTranslations } from "next-intl/server";
+import { brand_name } from "../lib/brand_name";
 
 import Remove_cart_btn from "./remove_cart";
 import Decrease_cart_btn from "./decrease_cart";
@@ -27,7 +28,7 @@ export default async function Item_Display(data: Cart_Item) {
                 <div className="capitalize h-full md:hidden flex flex-col justify-center items-start w-full md:min-w-60">
                     {data.type == "watch" || data.type == "spare" ? (
                         <>
-                            <h6 className="text-gold">{data.brand}</h6>
+                            <h6 className="text-gold">{brand_name(data.brand)}</h6>
                             <p className="text-primary">{data.model}</p>
                         </>
                     ) : (
@@ -42,7 +43,7 @@ export default async function Item_Display(data: Cart_Item) {
                 <div className="capitalize h-full hidden md:flex flex-col justify-center items-start w-full md:min-w-60">
                     {data.type == "watch" || data.type == "spare" ? (
                         <>
-                            <h4 className="text-gold">{data.brand}</h4> <h6 className="text-primary">{data.model}</h6>
+                            <h4 className="text-gold">{brand_name(data.brand)}</h4> <h6 className="text-primary">{data.model}</h6>
                         </>
                     ) : (
                         <h6 className="text-primary">{data.display_name}</h6>

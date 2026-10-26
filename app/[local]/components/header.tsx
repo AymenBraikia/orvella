@@ -27,6 +27,7 @@ import { format_price } from "../(site)/lib/price_format";
 import { Supported_Currencies } from "@/currency";
 import setCurrency from "@/app/server/set_currency";
 import { Item } from "../(site)/lib/filters";
+import { item_name } from "../(site)/lib/item_name";
 
 const CartDrawer = dynamic(() => import("./cart_drawer"), {
     ssr: false,
@@ -384,7 +385,7 @@ function SearchChildComponent({ item }: { item: Item }) {
                 <Image src={item.images[0]} alt={item.display_name} fill sizes="(max-width: 768px) 150px, 100px" />
             </div>
             <div className="w-full h-full flex flex-col justify-start items-start gap-2">
-                {item.type == "watch" ? <p className="w-full">{item.brand + " " + item.model + " " + (item.year || "") + " Ref. " + item.reference}</p> : <p className="w-full">{item.display_name}</p>}
+                {item.type == "watch" ? <p className="w-full">{`${item_name(item)} ${item.year || ""} Ref. ${item.reference}`}</p> : <p className="w-full">{item_name(item)}</p>}
                 <p>{format_price(item.price)}</p>
             </div>
         </Link>

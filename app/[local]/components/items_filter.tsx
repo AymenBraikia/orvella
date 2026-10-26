@@ -24,6 +24,7 @@ import {
     type Selection,
 } from "../(site)/lib/filters";
 import { useCurrency } from "../(site)/context/currencyContext";
+import { brand_name } from "../(site)/lib/brand_name";
 import { Supported_Currencies } from "@/currency";
 
 const T_KEY: Record<string, string> = {
@@ -316,7 +317,8 @@ function translate_option(t: ReturnType<typeof useTranslations>, facet: ListFace
         "movement:Quartz": "movementQuartz",
     };
     const key = map[`${facet}:${option}`];
-    return key ? t(key as never) : option;
+    if (key) return t(key as never);
+    return facet == "brand" ? brand_name(option) : option;
 }
 
 export function ActiveFilters({ selection, onChange }: { selection: Selection; onChange: (selection: Selection) => void }) {

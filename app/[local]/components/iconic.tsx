@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 let id = 0;
 const data = [
     { id: id++, src: "/brands/Audemars Piguet.webp", name: "Audemars Piguet" },
-    { id: id++, src: "/brands/breitling.webp", name: "breitling" },
+    { id: id++, src: "/brands/breitling.webp", name: "Breitling" },
     { id: id++, src: "/brands/cartier.webp", name: "Cartier" },
     { id: id++, src: "/brands/iwc.webp", name: "IWC" },
     { id: id++, src: "/brands/omega.webp", name: "Omega" },

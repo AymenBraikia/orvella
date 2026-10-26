@@ -13,6 +13,8 @@ import Input from "./elements/input";
 import { apply_filters, build_facets, count_active, empty_selection, facet_counts, selection_from_params, selection_to_params, type Selection } from "../(site)/lib/filters";
 import Item_card from "./Item_card";
 import { Item } from "@/types/item";
+import { brand_name } from "../(site)/lib/brand_name";
+import { item_name } from "../(site)/lib/item_name";
 
 const QuickViewModal = dynamic(() => import("@/app/components/quick_view"), { ssr: false });
 
@@ -155,8 +157,8 @@ export default function Display_list({ items }: { items: Item[] }) {
                                     <Watch_card
                                         key={item.slug}
                                         slug={item.slug}
-                                        brand={item.brand}
-                                        name={item.brand + " " + item.model}
+                                        brand={brand_name(item.brand)}
+                                        name={item_name(item)}
                                         movement={item.movement}
                                         size={item.caseDiameterMm}
                                         caseMaterial={item.caseMaterial}

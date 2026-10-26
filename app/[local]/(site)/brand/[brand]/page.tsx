@@ -1,6 +1,7 @@
 import Display_list from "@/app/components/display_list";
 import get_brand from "../get_brand";
 import { getTranslations } from "next-intl/server";
+import { brand_name } from "../../lib/brand_name";
 
 interface PageProps {
     params: Promise<{
@@ -30,7 +31,7 @@ export default async function DynamicPage({ params }: PageProps) {
     return (
         <div className="h-fit w-dvw py-4 sm:px-16 px-4 flex-center flex-col mt-10">
             <div className="w-full flex flex-col justify-start items-start gap-4">
-                <h1 className="capitalize font-secondary">{brand}</h1>
+                <h1 className="font-secondary">{brand_name(brand)}</h1>
                 <Description brand={brand} />
             </div>
             {<Display_list items={data} />}
