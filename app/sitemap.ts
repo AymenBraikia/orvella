@@ -15,6 +15,7 @@ const routes = [
     "/polish",
     "/store",
     "/booking",
+    "/consultation",
 
     "/info/about",
     "/info/cookies",

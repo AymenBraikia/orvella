@@ -174,7 +174,10 @@
             "resultCount": "{count, plural, =0 {No watches} one {# watch} other {# watches}}",
             "_fix": "Also swap these two values — they are currently inverted in en.json",
             "priceLowToHight": "Price low to high",
-            "priceHightToLow": "Price high to low"
+            "priceHightToLow": "Price high to low",
+            "gender": "For",
+            "genderMen": "Men",
+            "genderWomen": "Women"
         },
         "productCard": {
             "movement": "Movement",
@@ -1652,6 +1655,37 @@
             "heading": "Thank you for your enquiry",
             "text": "We have received your question about the {item} and will reply shortly.",
             "reservationText": "We have received your reservation request for the {item}. We will confirm shortly whether we can hold it for you."
+        }
+    },
+    "consultation": {
+        "heading": "Private consultation",
+        "intro": "Four quick questions, and we will show you the pieces that suit you.",
+        "step": "Question {current} of {total}",
+        "back": "Back",
+        "q1": {
+            "question": "What are you looking for?",
+            "watch": "A watch",
+            "ring": "A ring",
+            "bracelet": "A bracelet",
+            "necklace": "A necklace"
+        },
+        "q2": {
+            "question": "Who is it for?",
+            "women": "For her",
+            "men": "For him",
+            "any": "No preference"
+        },
+        "q3": {
+            "question": "What is your budget?",
+            "upTo": "Up to {amount}",
+            "over": "Above {amount}",
+            "any": "Open budget"
+        },
+        "q4": {
+            "question": "New or with a history?",
+            "new": "New",
+            "preowned": "Pre-owned",
+            "any": "Either"
         }
     }
 }

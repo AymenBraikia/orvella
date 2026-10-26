@@ -174,7 +174,10 @@
             "resultCount": "{count, plural, =0 {Aucune montre} one {# montre} other {# montres}}",
             "_fix": "Also swap these two values — they are currently inverted in en.json",
             "priceLowToHight": "Prix croissant",
-            "priceHightToLow": "Prix décroissant"
+            "priceHightToLow": "Prix décroissant",
+            "gender": "Pour",
+            "genderMen": "Homme",
+            "genderWomen": "Femme"
         },
         "productCard": {
             "movement": "Mouvement",
@@ -1657,6 +1660,37 @@
             "heading": "Merci pour votre demande",
             "text": "Nous avons bien reçu votre question concernant {item} et vous répondrons très prochainement.",
             "reservationText": "Nous avons bien reçu votre demande de réservation pour {item}. Nous vous confirmerons très prochainement si nous pouvons vous la réserver."
+        }
+    },
+    "consultation": {
+        "heading": "Consultation privée",
+        "intro": "Quatre questions rapides, et nous vous montrons les pièces qui vous correspondent.",
+        "step": "Question {current} sur {total}",
+        "back": "Retour",
+        "q1": {
+            "question": "Que recherchez-vous ?",
+            "watch": "Une montre",
+            "ring": "Une bague",
+            "bracelet": "Un bracelet",
+            "necklace": "Un collier"
+        },
+        "q2": {
+            "question": "Pour qui ?",
+            "women": "Pour elle",
+            "men": "Pour lui",
+            "any": "Sans préférence"
+        },
+        "q3": {
+            "question": "Quel est votre budget ?",
+            "upTo": "Jusqu’à {amount}",
+            "over": "Plus de {amount}",
+            "any": "Budget ouvert"
+        },
+        "q4": {
+            "question": "Neuve ou avec une histoire ?",
+            "new": "Neuve",
+            "preowned": "D’occasion",
+            "any": "Peu importe"
         }
     }
 }

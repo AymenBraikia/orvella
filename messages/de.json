@@ -173,7 +173,10 @@
             "showResults": "{count, plural, =0 {Keine Uhren} one {# Uhr} other {# Uhren}} anzeigen",
             "resultCount": "{count, plural, =0 {Keine Uhren} one {# Uhr} other {# Uhren}}",
             "priceLowToHight": "Preis aufsteigend",
-            "priceHightToLow": "Preis absteigend"
+            "priceHightToLow": "Preis absteigend",
+            "gender": "Für",
+            "genderMen": "Herren",
+            "genderWomen": "Damen"
         },
         "productCard": {
             "movement": "Uhrwerk",
@@ -1651,6 +1654,37 @@
             "heading": "Vielen Dank für Ihre Anfrage",
             "text": "Wir haben Ihre Frage zu {item} erhalten und melden uns in Kürze.",
             "reservationText": "Wir haben Ihre Reservierungsanfrage für {item} erhalten und bestätigen Ihnen in Kürze, ob wir das Stück für Sie zurücklegen können."
+        }
+    },
+    "consultation": {
+        "heading": "Persönliche Beratung",
+        "intro": "Vier kurze Fragen – und wir zeigen Ihnen die Stücke, die zu Ihnen passen.",
+        "step": "Frage {current} von {total}",
+        "back": "Zurück",
+        "q1": {
+            "question": "Wonach suchen Sie?",
+            "watch": "Eine Uhr",
+            "ring": "Einen Ring",
+            "bracelet": "Ein Armband",
+            "necklace": "Eine Halskette"
+        },
+        "q2": {
+            "question": "Für wen ist es?",
+            "women": "Für sie",
+            "men": "Für ihn",
+            "any": "Keine Präferenz"
+        },
+        "q3": {
+            "question": "Wie hoch ist Ihr Budget?",
+            "upTo": "Bis {amount}",
+            "over": "Über {amount}",
+            "any": "Offenes Budget"
+        },
+        "q4": {
+            "question": "Neu oder mit Geschichte?",
+            "new": "Neu",
+            "preowned": "Gebraucht",
+            "any": "Beides"
         }
     }
 }

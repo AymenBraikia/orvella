@@ -29,6 +29,7 @@ import { Supported_Currencies } from "@/currency";
 
 const T_KEY: Record<string, string> = {
     brand: "brands",
+    gender: "gender",
     condition: "condition",
     movement: "movement",
     caseMaterial: "caseMaterial",
@@ -47,6 +48,7 @@ type Section = { kind: "list"; facet: ListFacet; searchable?: boolean } | { kind
 const SECTIONS: Section[] = [
     { kind: "list", facet: "brand", searchable: true },
     { kind: "range", facet: "price", money: true },
+    { kind: "list", facet: "gender" },
     { kind: "list", facet: "condition" },
     { kind: "list", facet: "movement" },
     { kind: "list", facet: "caseMaterial" },
@@ -310,6 +312,8 @@ function Option({ label, count, checked, onToggle }: { label: string; count: num
 
 function translate_option(t: ReturnType<typeof useTranslations>, facet: ListFacet, option: string): string {
     const map: Record<string, string> = {
+        "gender:Men": "genderMen",
+        "gender:Women": "genderWomen",
         "condition:New": "conditionNew",
         "condition:Pre-Owned": "conditionPreOwned",
         "movement:Manual": "movementManual",

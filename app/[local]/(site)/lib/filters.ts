@@ -5,7 +5,7 @@ import type { Bracelet, Necklace, Ring } from "@/types/jewelry";
 export type Item = Watch | Spare | Necklace | Ring | Bracelet;
 export type Bounds = { min: number; max: number };
 
-export const LIST_FACETS = ["brand", "condition", "movement", "caseMaterial", "braceletMaterial", "dialColor"] as const;
+export const LIST_FACETS = ["brand", "gender", "condition", "movement", "caseMaterial", "braceletMaterial", "dialColor"] as const;
 export type ListFacet = (typeof LIST_FACETS)[number];
 
 export const RANGE_FACETS = ["price", "caseDiameterMm", "year", "waterResistanceM"] as const;
@@ -41,6 +41,8 @@ function list_value(item: Item, facet: ListFacet): string | undefined {
     switch (facet) {
         case "brand":
             return isWatchOrSpare(item) ? item.brand : undefined;
+        case "gender":
+            return item.gender;
         case "condition":
             return item.condition;
         case "movement":
@@ -123,6 +125,7 @@ export function build_facets(items: Item[]): Facets {
 function compare_option(facet: ListFacet) {
     const fixed: Partial<Record<ListFacet, string[]>> = {
         condition: ["New", "Pre-Owned"],
+        gender: ["Women", "Men"],
         movement: ["Automatic", "Manual", "Quartz"],
     };
     const order = fixed[facet];

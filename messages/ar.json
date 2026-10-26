@@ -174,7 +174,10 @@
             "resultCount": "{count, plural, =0 {لا توجد ساعات} zero {لا توجد ساعات} one {ساعة واحدة} two {ساعتان} few {# ساعات} many {# ساعة} other {# ساعة}}",
             "_fix": "Also swap these two values — they are currently inverted in en.json",
             "priceLowToHight": "السعر: من الأقل إلى الأعلى",
-            "priceHightToLow": "السعر: من الأعلى إلى الأقل"
+            "priceHightToLow": "السعر: من الأعلى إلى الأقل",
+            "gender": "لـ",
+            "genderMen": "رجالي",
+            "genderWomen": "نسائي"
         },
         "productCard": {
             "movement": "الحركة",
@@ -1646,6 +1649,37 @@
             "heading": "شكرًا لاستفسارك",
             "text": "لقد استلمنا سؤالك عن {item} وسنرد عليك قريبًا.",
             "reservationText": "لقد استلمنا طلب حجز {item}. سنؤكد لك قريبًا إن كان بإمكاننا حجزها لك."
+        }
+    },
+    "consultation": {
+        "heading": "استشارة خاصة",
+        "intro": "أربعة أسئلة سريعة، وسنعرض لك القطع التي تناسبك.",
+        "step": "السؤال {current} من {total}",
+        "back": "رجوع",
+        "q1": {
+            "question": "ما الذي تبحث عنه؟",
+            "watch": "ساعة",
+            "ring": "خاتم",
+            "bracelet": "سوار",
+            "necklace": "قلادة"
+        },
+        "q2": {
+            "question": "لمن هي؟",
+            "women": "لها",
+            "men": "له",
+            "any": "بدون تفضيل"
+        },
+        "q3": {
+            "question": "ما هي ميزانيتك؟",
+            "upTo": "حتى {amount}",
+            "over": "أكثر من {amount}",
+            "any": "ميزانية مفتوحة"
+        },
+        "q4": {
+            "question": "جديدة أم ذات تاريخ؟",
+            "new": "جديدة",
+            "preowned": "مستعملة",
+            "any": "أيّهما"
         }
     }
 }

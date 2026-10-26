@@ -173,7 +173,10 @@
             "showResults": "{count, plural, =0 {No hay relojes} one {Ver # reloj} other {Ver # relojes}}",
             "resultCount": "{count, plural, =0 {Ningún reloj} one {# reloj} other {# relojes}}",
             "priceLowToHight": "Precio: de menor a mayor",
-            "priceHightToLow": "Precio: de mayor a menor"
+            "priceHightToLow": "Precio: de mayor a menor",
+            "gender": "Para",
+            "genderMen": "Hombre",
+            "genderWomen": "Mujer"
         },
         "productCard": {
             "movement": "Movimiento",
@@ -1656,6 +1659,37 @@
             "heading": "Gracias por su consulta",
             "text": "Hemos recibido su pregunta sobre {item} y le responderemos en breve.",
             "reservationText": "Hemos recibido su solicitud de reserva de {item}. Le confirmaremos en breve si podemos reservarla para usted."
+        }
+    },
+    "consultation": {
+        "heading": "Asesoramiento personal",
+        "intro": "Cuatro preguntas rápidas y le mostraremos las piezas que le van.",
+        "step": "Pregunta {current} de {total}",
+        "back": "Atrás",
+        "q1": {
+            "question": "¿Qué está buscando?",
+            "watch": "Un reloj",
+            "ring": "Un anillo",
+            "bracelet": "Una pulsera",
+            "necklace": "Un collar"
+        },
+        "q2": {
+            "question": "¿Para quién es?",
+            "women": "Para ella",
+            "men": "Para él",
+            "any": "Sin preferencia"
+        },
+        "q3": {
+            "question": "¿Cuál es su presupuesto?",
+            "upTo": "Hasta {amount}",
+            "over": "Más de {amount}",
+            "any": "Presupuesto abierto"
+        },
+        "q4": {
+            "question": "¿Nuevo o con historia?",
+            "new": "Nuevo",
+            "preowned": "De segunda mano",
+            "any": "Cualquiera"
         }
     }
 }
