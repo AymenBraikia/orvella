@@ -30,6 +30,16 @@
             "delivered": "Zugestellt",
             "cancelled": "Storniert",
             "refunded": "Erstattet"
+        },
+        "bank": {
+            "heading": "Zahlungsinformationen",
+            "instructions": "Bitte überweisen Sie {amount} bis zum {date} und geben Sie Ihre Bestellnummer {id} als Verwendungszweck an. Bis dahin sind Ihre Stücke für Sie reserviert.",
+            "accountHolder": "Kontoinhaber",
+            "bank": "Bank",
+            "iban": "IBAN",
+            "bic": "BIC",
+            "reference": "Verwendungszweck",
+            "amount": "Betrag"
         }
     },
     "meta": {

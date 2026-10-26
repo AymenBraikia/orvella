@@ -30,6 +30,16 @@
             "delivered": "Teslim edildi",
             "cancelled": "İptal edildi",
             "refunded": "İade edildi"
+        },
+        "bank": {
+            "heading": "Ödeme bilgileri",
+            "instructions": "Lütfen {amount} tutarını {date} tarihine kadar havale edin ve açıklama olarak sipariş numaranızı ({id}) yazın. Parçalarınız o tarihe kadar sizin için ayrılmıştır.",
+            "accountHolder": "Hesap sahibi",
+            "bank": "Banka",
+            "iban": "IBAN",
+            "bic": "BIC",
+            "reference": "Ödeme açıklaması",
+            "amount": "Tutar"
         }
     },
     "meta": {

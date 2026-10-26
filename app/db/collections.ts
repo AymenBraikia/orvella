@@ -8,6 +8,7 @@ import type { Appointment } from "@/types/appointment";
 import { Visitor } from "@/types/visitor";
 import { MongoClient } from "mongodb";
 import { Item } from "@/types/item";
+import type { StoreSettings } from "@/types/settings";
 
 let client: MongoClient | null = null;
 
@@ -27,5 +28,6 @@ export const sell_collection = async () => (await db()).collection<Sell>("sell")
 export const consignments_collection = async () => (await db()).collection<Consignment>("consignment");
 export const appointments_collection = async () => (await db()).collection<Appointment>("appointment");
 export const visitors_collection = async () => (await db()).collection<Visitor>("visitors");
+export const settings_collection = async () => (await db()).collection<StoreSettings & { _id: string }>("settings");
 
 export {};

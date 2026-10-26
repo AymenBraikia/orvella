@@ -7,17 +7,12 @@ import { max_cart_quantity } from "@/app/(site)/lib/stock";
 import { item_name } from "@/app/(site)/lib/item_name";
 import { read_items_fresh } from "./inventory";
 import update_currency_rates from "./update_currency_rates";
+import { get_settings } from "./settings";
 import type { Order, OrderAddress, OrderLine, OrderTotals, ShippingInfo } from "@/types/order";
 import type { Cart_Line, User } from "@/types/user";
 
 /** How long an online payment (PayPal) may take before the pieces go back on sale. */
 export const ONLINE_RESERVATION_MINUTES = 15;
-
-/** Bank transfers hold the pieces this many days (until the dealer marks payment received or cancels). Becomes a setting in 1.5. */
-export const BANK_RESERVATION_DAYS = 3;
-
-/** Until settings exist (task 1.5): prices include VAT, nothing is added at checkout. */
-export const DEFAULT_TAX: TaxConfig = { mode: "included", rate: 19 };
 
 const shipping_values = Object.values(shipping_data) as ShippingInfo[];
 
@@ -83,7 +78,10 @@ export type Quote = {
  * Price a cart from the database — never from what the cart or the browser says. Used for the
  * summaries shown to the customer and, unchanged, for the order that gets charged.
  */
-export async function build_quote(cart: Cart_Line[], customer: CustomerDetails, currency: Supported_Currencies, tax: TaxConfig = DEFAULT_TAX): Promise<Quote> {
+export async function build_quote(cart: Cart_Line[], customer: CustomerDetails, currency: Supported_Currencies, tax?: TaxConfig): Promise<Quote> {
+    // Tax comes from the store settings and never depends on the payment method.
+    tax ??= (await get_settings()).tax;
+
     const wanted = cart.filter((l) => l.quantity > 0);
     const items = await read_items_fresh(wanted.map((l) => l.slug));
     const now = Date.now();

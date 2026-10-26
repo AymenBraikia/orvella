@@ -30,6 +30,16 @@
             "delivered": "Entregado",
             "cancelled": "Cancelado",
             "refunded": "Reembolsado"
+        },
+        "bank": {
+            "heading": "Datos de pago",
+            "instructions": "Transfiera {amount} antes del {date} e indique su número de pedido {id} como concepto. Hasta entonces, sus piezas quedan reservadas.",
+            "accountHolder": "Titular de la cuenta",
+            "bank": "Banco",
+            "iban": "IBAN",
+            "bic": "BIC",
+            "reference": "Concepto",
+            "amount": "Importe"
         }
     },
     "meta": {

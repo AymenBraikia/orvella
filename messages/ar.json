@@ -30,6 +30,16 @@
             "delivered": "تم التسليم",
             "cancelled": "ملغى",
             "refunded": "مُسترد"
+        },
+        "bank": {
+            "heading": "بيانات الدفع",
+            "instructions": "يرجى تحويل {amount} قبل {date} مع ذكر رقم الطلب {id} كمرجع للدفع. ستبقى القطع محجوزة لك حتى ذلك الحين.",
+            "accountHolder": "صاحب الحساب",
+            "bank": "البنك",
+            "iban": "IBAN",
+            "bic": "BIC",
+            "reference": "مرجع الدفع",
+            "amount": "المبلغ"
         }
     },
     "meta": {

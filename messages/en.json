@@ -30,6 +30,16 @@
             "delivered": "Delivered",
             "cancelled": "Cancelled",
             "refunded": "Refunded"
+        },
+        "bank": {
+            "heading": "Payment details",
+            "instructions": "Please transfer {amount} by {date} and use your order number {id} as the payment reference. Your pieces are reserved for you until then.",
+            "accountHolder": "Account holder",
+            "bank": "Bank",
+            "iban": "IBAN",
+            "bic": "BIC",
+            "reference": "Payment reference",
+            "amount": "Amount"
         }
     },
     "meta": {

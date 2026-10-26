@@ -5,6 +5,8 @@ import { format_money } from "../lib/price_format";
 
 export default async function Order_display({ data, last }: { data: Order; last: boolean }) {
     const t = await getTranslations("orders");
+    const t_checkout = await getTranslations("checkout");
+    const { totals, currency, tax } = data;
 
     const address = typeof data.address == "string" ? t("localPickup") : `${data.address.city}, ${data.address.address1 + (data.address.address2 ? `, ${data.address.address2}` : "")}`;
 
@@ -47,6 +49,34 @@ export default async function Order_display({ data, last }: { data: Order; last:
                         </div>
                     </div>
                 ))}
+            </div>
+
+            <div className="w-full flex flex-wrap justify-end items-center gap-x-8 gap-y-1 px-2 pb-4 text-sm text-secondary">
+                <p>
+                    {t_checkout("subtotal")}: {format_money(totals.items, currency)}
+                </p>
+                <p>
+                    {t_checkout("shippingCost")}: {format_money(totals.shipping, currency)}
+                </p>
+                {totals.discount > 0 && (
+                    <p>
+                        {t_checkout("discount")}: - {format_money(totals.discount, currency)}
+                    </p>
+                )}
+                {tax.mode == "added" && (
+                    <p>
+                        {t_checkout("vatAdded", { rate: tax.rate })}: {format_money(totals.tax, currency)}
+                    </p>
+                )}
+                {tax.mode == "included" && totals.tax_included > 0 && (
+                    <p>
+                        {t_checkout("vatIncluded", { rate: tax.rate })}: {format_money(totals.tax_included, currency)}
+                    </p>
+                )}
+                {tax.mode == "margin_scheme" && <p>{t_checkout("marginScheme")}</p>}
+                <p className="text-foreground font-semibold">
+                    {t_checkout("total")}: {format_money(totals.total, currency)}
+                </p>
             </div>
         </div>
     );

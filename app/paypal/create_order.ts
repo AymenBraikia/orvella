@@ -10,6 +10,7 @@ import { reserve_items } from "../server/inventory";
 import { cancel_order } from "../server/orders";
 import { next_order_number } from "../server/order_number";
 import { minor_to_string } from "@/app/(site)/lib/order_totals";
+import { get_settings } from "../server/settings";
 
 export type CreateOrderResult = { id: string } | { error: "auth" | "empty" | "address" | "unavailable" | "payment"; items?: string[] };
 
@@ -22,6 +23,8 @@ export async function create_order(): Promise<CreateOrderResult> {
 
     const user = await (await users_collection()).findOne({ email: payload.email });
     if (!user) return { error: "auth" };
+
+    if (!(await get_settings()).payments.paypal) return { error: "payment" };
 
     const quote = await build_quote(user.cart ?? [], user, normalise_currency(cookieStore.get("Currency")?.value));
 

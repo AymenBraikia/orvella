@@ -3,6 +3,7 @@ import getUser from "@/app/server/get_user";
 import { getTranslations } from "next-intl/server";
 import Order_display from "./order_display";
 import { orders_for_email } from "@/app/server/orders";
+import BankDetails from "./bank_details";
 
 export default async function thank_you_page() {
     const user = (await getUser())!;
@@ -11,6 +12,7 @@ export default async function thank_you_page() {
     const orders = await orders_for_email(user.email);
     const ongoing_orders = orders.filter((o) => o.status == "pending_payment" || o.status == "paid" || o.status == "shipped");
     const fulfilled_orders = orders.filter((o) => o.status == "delivered");
+    const awaiting_transfer = orders.filter((o) => o.status == "pending_payment" && o.payment_method == "Bank Transfer");
 
     return (
         <div className="font-secondary py-8 w-full flex-center flex-col gap-12 capitalize">
@@ -25,6 +27,10 @@ export default async function thank_you_page() {
             </Banner>
 
             <div className="flex-center flex-col gap-16 w-full px-4 sm:px-12 font-sans">
+                {awaiting_transfer.map((order) => (
+                    <BankDetails key={order.id} order={order} />
+                ))}
+
                 <div className="w-full">
                     <h2 className="text-shine">{t("ongoingOrders")}</h2>
 

@@ -4,9 +4,10 @@ import { cookies } from "next/headers";
 import { getLocale } from "next-intl/server";
 import { orders_collection, users_collection } from "../db/collections";
 import { revalidatePath } from "next/cache";
-import { BANK_RESERVATION_DAYS, build_quote, is_address_complete, normalise_currency, order_from_quote } from "./checkout";
+import { build_quote, is_address_complete, normalise_currency, order_from_quote } from "./checkout";
 import { reserve_items } from "./inventory";
 import { next_order_number } from "./order_number";
+import { get_settings } from "./settings";
 
 export type BankOrderResult = { id: string } | { error: "auth" | "empty" | "address" | "unavailable" | "method"; items?: string[] };
 
@@ -32,7 +33,10 @@ export default async function create_order(): Promise<BankOrderResult> {
     if (!is_address_complete(quote.address)) return { error: "address" };
 
     const id = await next_order_number();
-    const reserved_until = new Date(Date.now() + BANK_RESERVATION_DAYS * 24 * 60 * 60_000);
+    const { reservation_days, payments } = await get_settings();
+    if (!payments.bank_transfer) return { error: "method" };
+
+    const reserved_until = new Date(Date.now() + reservation_days * 24 * 60 * 60_000);
 
     const failed = await reserve_items(
         id,

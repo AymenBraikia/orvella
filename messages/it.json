@@ -30,6 +30,16 @@
             "delivered": "Consegnato",
             "cancelled": "Annullato",
             "refunded": "Rimborsato"
+        },
+        "bank": {
+            "heading": "Dati per il pagamento",
+            "instructions": "Effettua un bonifico di {amount} entro il {date} indicando il numero d’ordine {id} come causale. Fino ad allora i pezzi restano riservati per te.",
+            "accountHolder": "Intestatario del conto",
+            "bank": "Banca",
+            "iban": "IBAN",
+            "bic": "BIC",
+            "reference": "Causale",
+            "amount": "Importo"
         }
     },
     "meta": {

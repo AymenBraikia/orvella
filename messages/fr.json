@@ -30,6 +30,16 @@
             "delivered": "Livrée",
             "cancelled": "Annulée",
             "refunded": "Remboursée"
+        },
+        "bank": {
+            "heading": "Coordonnées de paiement",
+            "instructions": "Veuillez virer {amount} avant le {date} en indiquant votre numéro de commande {id} comme référence. Vos pièces vous sont réservées jusqu’à cette date.",
+            "accountHolder": "Titulaire du compte",
+            "bank": "Banque",
+            "iban": "IBAN",
+            "bic": "BIC",
+            "reference": "Référence du paiement",
+            "amount": "Montant"
         }
     },
     "meta": {

@@ -15,6 +15,7 @@ import LocalPickup_checkbox from "@/app/components/shipping_related/localPickup"
 export default async function Items() {
     const session = await getUser();
     const t = await getTranslations("cart");
+    const t_checkout = await getTranslations("checkout");
 
     if (!session) return;
 
@@ -23,7 +24,7 @@ export default async function Items() {
 
     const currency = await get_Currency();
     // Same pricing as the order that will be charged (current catalogue prices, converted shipping, tax).
-    const { totals } = await build_quote(session.cart, { ...session, diff_address: { ...session.diff_address, active: false } }, currency);
+    const { totals, tax } = await build_quote(session.cart, { ...session, diff_address: { ...session.diff_address, active: false } }, currency);
     const shipping_costs = convert_eur(shipping_for_country(country)?.shipping_cost ?? 0, currency, await get_exchange_rate(currency));
 
     return (
@@ -65,10 +66,23 @@ export default async function Items() {
                             </p>
                         </div>
 
+                        {tax.mode == "added" && (
+                            <div className="flex justify-between items-center w-full border-b py-1">
+                                <h4 className="text-gold">{t_checkout("vatAdded", { rate: tax.rate })}</h4>
+                                <h4>{format_money(totals.tax, currency)}</h4>
+                            </div>
+                        )}
+
                         <div className="flex justify-between items-center w-full border-b py-1 text-gold">
                             <h2>{t("total")}</h2>
                             <h2>{format_money(totals.total, currency)}</h2>
                         </div>
+                        {tax.mode == "included" && (
+                            <p className="w-full text-end text-sm text-secondary -mt-6">
+                                {t_checkout("vatIncluded", { rate: tax.rate })}: {format_money(totals.tax_included, currency)}
+                            </p>
+                        )}
+                        {tax.mode == "margin_scheme" && <p className="w-full text-end text-sm text-secondary -mt-6">{t_checkout("marginScheme")}</p>}
 
                         <div className="flex justify-between items-center w-full py-1">
                             <Link href={"/checkout"} className="button3 text-primary bg-gold hover:bg-background hover:text-gold w-full flex-center text-xl">
