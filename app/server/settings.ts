@@ -33,6 +33,7 @@ export const DEFAULT_SETTINGS: StoreSettings = {
         bic: "XXXXDEXXXXX",
     },
     reservation_days: 3,
+    order_prefix: "ORV",
 
     payments: { paypal: true, bank_transfer: true, stripe: false, local_pickup: true },
 

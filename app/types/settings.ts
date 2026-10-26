@@ -30,6 +30,9 @@ export interface StoreSettings {
         iban: string;
         bic: string;
     };
+    /** Order numbers look like PREFIX-2026-000123. */
+    order_prefix: string;
+
     /** How long a bank transfer order holds the pieces before they go back on sale. */
     reservation_days: number;
 

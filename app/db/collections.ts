@@ -28,6 +28,7 @@ export const sell_collection = async () => (await db()).collection<Sell>("sell")
 export const consignments_collection = async () => (await db()).collection<Consignment>("consignment");
 export const appointments_collection = async () => (await db()).collection<Appointment>("appointment");
 export const visitors_collection = async () => (await db()).collection<Visitor>("visitors");
+export const counters_collection = async () => (await db()).collection<{ _id: string; seq: number }>("counters");
 export const settings_collection = async () => (await db()).collection<StoreSettings & { _id: string }>("settings");
 
 export {};
