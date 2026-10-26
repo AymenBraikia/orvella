@@ -36,7 +36,7 @@ export default async function SellPage() {
             </div>
 
             <div className="w-full py-4 flex flex-col gap-8">
-                <h3 className="font-medium">{t("howItWorksHeading")}</h3>
+                <h3 id="how-it-works" className="font-medium scroll-mt-28">{t("howItWorksHeading")}</h3>
                 <div className="flex justify-start items-start flex-col gap-4">
                     <h4 className="underline">{t("consign.heading")}</h4>
                     <p className="text-sm tracking-widest text-shine">{t("consign.intro")}</p>

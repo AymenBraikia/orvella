@@ -16,11 +16,11 @@ export default async function Trade() {
                 <p className="z-10 text-base tracking-wider leading-10 font-normal font-secondary sm:max-w-1/2 max-w-4/5">{t("subText")}</p>
 
                 <div className="flex-col sm:flex-row flex-center gap-4">
-                    <Link aria-label={t("cta1")} className="z-10 sm:text-xl text-base font-normal sm:font-thin font-sans button3 bg-gold hover:bg-white hover:text-black uppercase tracking-widest" href={"/why"} prefetch={true}>
+                    <Link aria-label={t("cta1")} className="z-10 sm:text-xl text-base font-normal sm:font-thin font-sans button3 bg-gold hover:bg-white hover:text-black uppercase tracking-widest" href={"/sell#form"} prefetch={true}>
                         {t("cta1")}
                     </Link>
 
-                    <Link aria-label={t("cta2")} className="z-10 sm:text-xl text-base font-normal sm:font-thin font-sans button3 hover:bg-white hover:text-black  uppercase tracking-widest" href={"/why"} prefetch={true}>
+                    <Link aria-label={t("cta2")} className="z-10 sm:text-xl text-base font-normal sm:font-thin font-sans button3 hover:bg-white hover:text-black  uppercase tracking-widest" href={"/sell#how-it-works"} prefetch={true}>
                         {t("cta2")}
                     </Link>
                 </div>
