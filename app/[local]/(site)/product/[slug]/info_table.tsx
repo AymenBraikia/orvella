@@ -40,13 +40,17 @@ export default function InfoTable({ item }: { item: Item }) {
                     {payments("paymentsHeading")}
                 </button>
 
-                <button
-                    type="button"
-                    className={`sm:w-full w-1/2 border-b text-xs sm:text-base px-2 py-4 sm:px-4 sm:py-4 ${tab == 3 ? "button brightness-100 border-b-foreground" : "button2 brightness-80 border-b-transparent"} transition-default`}
-                    onClick={() => set_tab(3)}
-                >
-                    {common("buttons.consignment")}
-                </button>
+                {item.type == "watch" || item.type == "spare" ? (
+                    <button
+                        type="button"
+                        className={`sm:w-full w-1/2 border-b text-xs sm:text-base px-2 py-4 sm:px-4 sm:py-4 ${tab == 3 ? "button brightness-100 border-b-foreground" : "button2 brightness-80 border-b-transparent"} transition-default`}
+                        onClick={() => set_tab(3)}
+                    >
+                        {common("buttons.consignment")}
+                    </button>
+                ) : (
+                    <></>
+                )}
             </div>
 
             <Displayed_Data item={item} tab={tab} common={common} payments={payments} product={product} />
@@ -54,19 +58,7 @@ export default function InfoTable({ item }: { item: Item }) {
     );
 }
 
-function Displayed_Data({
-    item,
-    tab,
-    common,
-    payments,
-    product,
-}: {
-    item: Item;
-    tab: 0 | 1 | 2 | 3;
-    common: ReturnType<typeof useTranslations>;
-    payments: ReturnType<typeof useTranslations>;
-    product: ReturnType<typeof useTranslations>;
-}) {
+function Displayed_Data({ item, tab, common, payments, product }: { item: Item; tab: 0 | 1 | 2 | 3; common: ReturnType<typeof useTranslations>; payments: ReturnType<typeof useTranslations>; product: ReturnType<typeof useTranslations> }) {
     switch (tab) {
         case 0: {
             if (item.type != "watch" && item.type != "spare") {

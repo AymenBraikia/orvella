@@ -177,7 +177,19 @@
             "priceHightToLow": "Prix décroissant",
             "gender": "Pour",
             "genderMen": "Homme",
-            "genderWomen": "Femme"
+            "genderWomen": "Femme",
+            "metal": "Métal",
+            "purity": "Titre",
+            "stones": "Pierres précieuses",
+            "ringSize": "Taille de bague",
+            "clasp": "Fermoir",
+            "weight": "Poids",
+            "length": "Longueur",
+            "bandWidth": "Largeur de l'anneau",
+            "metalGold": "Or",
+            "metalWhiteGold": "Or blanc",
+            "metalSilver": "Argent",
+            "metalPlatinum": "Platine"
         },
         "productCard": {
             "movement": "Mouvement",

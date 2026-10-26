@@ -39,29 +39,53 @@ const T_KEY: Record<string, string> = {
     caseDiameterMm: "caseDiameterMm",
     year: "year",
     waterResistanceM: "waterResistance",
+    metal: "metal",
+    purity: "purity",
+    stones: "stones",
+    ringSize: "ringSize",
+    clasp: "clasp",
+    weightG: "weight",
+    lengthCm: "length",
+    bandWidthMm: "bandWidth",
     includes: "includes",
     availability: "availability",
 };
 
-type Section = { kind: "list"; facet: ListFacet; searchable?: boolean } | { kind: "range"; facet: RangeFacet; unit?: string; money?: boolean } | { kind: "includes" } | { kind: "availability" };
+const RANGE_UNIT: Partial<Record<RangeFacet, string>> = {
+    caseDiameterMm: "mm",
+    waterResistanceM: "m",
+    weightG: "g",
+    lengthCm: "cm",
+    bandWidthMm: "mm",
+};
+
+type Section = { kind: "list"; facet: ListFacet; searchable?: boolean } | { kind: "range"; facet: RangeFacet; money?: boolean } | { kind: "includes" } | { kind: "availability" };
 
 const SECTIONS: Section[] = [
     { kind: "list", facet: "brand", searchable: true },
     { kind: "range", facet: "price", money: true },
+    { kind: "list", facet: "metal" },
+    { kind: "list", facet: "purity" },
+    { kind: "list", facet: "stones", searchable: true },
     { kind: "list", facet: "gender" },
     { kind: "list", facet: "condition" },
     { kind: "list", facet: "movement" },
     { kind: "list", facet: "caseMaterial" },
     { kind: "list", facet: "braceletMaterial" },
     { kind: "list", facet: "dialColor" },
-    { kind: "range", facet: "caseDiameterMm", unit: "mm" },
+    { kind: "list", facet: "ringSize" },
+    { kind: "range", facet: "bandWidthMm" },
+    { kind: "range", facet: "lengthCm" },
+    { kind: "list", facet: "clasp" },
+    { kind: "range", facet: "weightG" },
+    { kind: "range", facet: "caseDiameterMm" },
     { kind: "range", facet: "year" },
-    { kind: "range", facet: "waterResistanceM", unit: "m" },
+    { kind: "range", facet: "waterResistanceM" },
     { kind: "includes" },
     { kind: "availability" },
 ];
 
-const DEFAULT_OPEN = new Set(["brand", "price"]);
+const DEFAULT_OPEN = new Set(["brand", "price", "metal"]);
 const COLLAPSED_OPTIONS = 8;
 
 interface WatchFiltersProps {
@@ -168,7 +192,7 @@ export default function ItemsFilter({ facets, counts, selection, onChange, resul
                                         onChange={(value) => onChange(set_range(selection, section.facet, value, facets))}
                                         fromLabel={t("from")}
                                         toLabel={t("to")}
-                                        format={section.money ? (n: number) => format_price(n, currency) : (n) => `${n}${section.unit ? ` ${section.unit}` : ""}`}
+                                        format={section.money ? (n: number) => format_price(n, currency) : (n) => with_unit(n, section.facet)}
                                     />
                                 )}
 
@@ -198,6 +222,11 @@ export default function ItemsFilter({ facets, counts, selection, onChange, resul
             </div>
         </>
     );
+}
+
+function with_unit(n: number, facet: RangeFacet): string {
+    const unit = RANGE_UNIT[facet];
+    return unit ? `${n} ${unit}` : String(n);
 }
 
 function section_badge(section: Section, selection: Selection): number {
@@ -319,6 +348,10 @@ function translate_option(t: ReturnType<typeof useTranslations>, facet: ListFace
         "movement:Manual": "movementManual",
         "movement:Automatic": "movementAutomatic",
         "movement:Quartz": "movementQuartz",
+        "metal:Gold": "metalGold",
+        "metal:White Gold": "metalWhiteGold",
+        "metal:Silver": "metalSilver",
+        "metal:Platinum": "metalPlatinum",
     };
     const key = map[`${facet}:${option}`];
     if (key) return t(key as never);
@@ -373,8 +406,7 @@ function chip_label(t: ReturnType<typeof useTranslations>, chip: ActiveChip, cur
             return translate_option(t, chip.facet, chip.value);
         case "range": {
             const money = chip.facet === "price";
-            const unit = chip.facet === "caseDiameterMm" ? " mm" : chip.facet === "waterResistanceM" ? " m" : "";
-            const fmt = (n: number) => (money ? format_price(n, currency) : `${n}${unit}`);
+            const fmt = (n: number) => (money ? format_price(n, currency) : with_unit(n, chip.facet));
             return `${t(T_KEY[chip.facet])}: ${fmt(chip.value[0])} – ${fmt(chip.value[1])}`;
         }
         case "include":

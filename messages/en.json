@@ -177,7 +177,19 @@
             "priceHightToLow": "Price high to low",
             "gender": "For",
             "genderMen": "Men",
-            "genderWomen": "Women"
+            "genderWomen": "Women",
+            "metal": "Metal",
+            "purity": "Purity",
+            "stones": "Gemstones",
+            "ringSize": "Ring Size",
+            "clasp": "Clasp",
+            "weight": "Weight",
+            "length": "Length",
+            "bandWidth": "Band Width",
+            "metalGold": "Gold",
+            "metalWhiteGold": "White Gold",
+            "metalSilver": "Silver",
+            "metalPlatinum": "Platinum"
         },
         "productCard": {
             "movement": "Movement",

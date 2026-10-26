@@ -176,7 +176,19 @@
             "priceHightToLow": "Precio: de mayor a menor",
             "gender": "Para",
             "genderMen": "Hombre",
-            "genderWomen": "Mujer"
+            "genderWomen": "Mujer",
+            "metal": "Metal",
+            "purity": "Pureza",
+            "stones": "Piedras preciosas",
+            "ringSize": "Talla de anillo",
+            "clasp": "Cierre",
+            "weight": "Peso",
+            "length": "Longitud",
+            "bandWidth": "Ancho del aro",
+            "metalGold": "Oro",
+            "metalWhiteGold": "Oro blanco",
+            "metalSilver": "Plata",
+            "metalPlatinum": "Platino"
         },
         "productCard": {
             "movement": "Movimiento",

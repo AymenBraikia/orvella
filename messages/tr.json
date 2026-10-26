@@ -177,7 +177,19 @@
             "priceHightToLow": "Fiyat: azalan",
             "gender": "Kimin için",
             "genderMen": "Erkek",
-            "genderWomen": "Kadın"
+            "genderWomen": "Kadın",
+            "metal": "Metal",
+            "purity": "Ayar",
+            "stones": "Değerli Taşlar",
+            "ringSize": "Yüzük Ölçüsü",
+            "clasp": "Kilit",
+            "weight": "Ağırlık",
+            "length": "Uzunluk",
+            "bandWidth": "Bant Genişliği",
+            "metalGold": "Altın",
+            "metalWhiteGold": "Beyaz Altın",
+            "metalSilver": "Gümüş",
+            "metalPlatinum": "Platin"
         },
         "productCard": {
             "movement": "Mekanizma",

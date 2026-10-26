@@ -177,7 +177,19 @@
             "priceHightToLow": "السعر: من الأعلى إلى الأقل",
             "gender": "لـ",
             "genderMen": "رجالي",
-            "genderWomen": "نسائي"
+            "genderWomen": "نسائي",
+            "metal": "المعدن",
+            "purity": "العيار",
+            "stones": "الأحجار الكريمة",
+            "ringSize": "مقاس الخاتم",
+            "clasp": "القفل",
+            "weight": "الوزن",
+            "length": "الطول",
+            "bandWidth": "عرض الخاتم",
+            "metalGold": "ذهب",
+            "metalWhiteGold": "ذهب أبيض",
+            "metalSilver": "فضة",
+            "metalPlatinum": "بلاتين"
         },
         "productCard": {
             "movement": "الحركة",

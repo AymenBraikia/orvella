@@ -176,7 +176,19 @@
             "priceHightToLow": "Preis absteigend",
             "gender": "Für",
             "genderMen": "Herren",
-            "genderWomen": "Damen"
+            "genderWomen": "Damen",
+            "metal": "Metall",
+            "purity": "Feingehalt",
+            "stones": "Edelsteine",
+            "ringSize": "Ringgröße",
+            "clasp": "Verschluss",
+            "weight": "Gewicht",
+            "length": "Länge",
+            "bandWidth": "Ringbreite",
+            "metalGold": "Gold",
+            "metalWhiteGold": "Weißgold",
+            "metalSilver": "Silber",
+            "metalPlatinum": "Platin"
         },
         "productCard": {
             "movement": "Uhrwerk",
