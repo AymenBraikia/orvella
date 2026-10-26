@@ -303,7 +303,7 @@
         "title": "Yedek Parçalar"
     },
     "store": {
-        "heading": "Orvella Mağazası Frankfurt",
+        "heading": "Orvella Mağazası {city}",
         "cta": "Randevu alın",
         "welcomeText": "Sizi yakında mağazamızda ağırlamayı dört gözle bekliyoruz.",
         "appointmentNote": "Aradığınız saatin ziyaretiniz sırasında hazır olduğundan emin olmak için lütfen randevu alın.",
@@ -347,7 +347,7 @@
                 },
                 {
                     "title": "Konsinye Sözleşmesi ve Kargo Etiketi",
-                    "text": "Dilerseniz size bir konsinye sözleşmesi ve tamamen sigortalı bir kargo etiketi göndeririz. Alternatif olarak Frankfurt'taki mağazamızdan randevu alabilirsiniz."
+                    "text": "Dilerseniz size bir konsinye sözleşmesi ve tamamen sigortalı bir kargo etiketi göndeririz. Alternatif olarak {city} mağazamızdan randevu alabilirsiniz."
                 },
                 {
                     "title": "İnceleme",

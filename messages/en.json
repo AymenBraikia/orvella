@@ -303,7 +303,7 @@
         "title": "Spare Parts"
     },
     "store": {
-        "heading": "Orvella Store Frankfurt",
+        "heading": "Orvella Store {city}",
         "cta": "Book an appointment",
         "welcomeText": "We look forward to welcoming you to our store soon.",
         "appointmentNote": "Please make an appointment to ensure the watch you are looking for is available at your time of visit.",
@@ -347,7 +347,7 @@
                 },
                 {
                     "title": "Consignment Contract and Shipping Label",
-                    "text": "If you would like, we’ll send you a consignment contract and a fully insured shipping label. Alternatively, you can book an appointment in our store in Frankfurt."
+                    "text": "If you would like, we’ll send you a consignment contract and a fully insured shipping label. Alternatively, you can book an appointment in our store in {city}."
                 },
                 {
                     "title": "Inspection",

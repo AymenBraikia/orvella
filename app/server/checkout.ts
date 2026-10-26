@@ -79,8 +79,11 @@ export type Quote = {
  * summaries shown to the customer and, unchanged, for the order that gets charged.
  */
 export async function build_quote(cart: Cart_Line[], customer: CustomerDetails, currency: Supported_Currencies, tax?: TaxConfig): Promise<Quote> {
+    const settings = await get_settings();
     // Tax comes from the store settings and never depends on the payment method.
-    tax ??= (await get_settings()).tax;
+    tax ??= settings.tax;
+    // Pickup only counts while the store offers it.
+    if (customer.local_pickup && !settings.payments.local_pickup) customer = { ...customer, local_pickup: false };
 
     const wanted = cart.filter((l) => l.quantity > 0);
     const items = await read_items_fresh(wanted.map((l) => l.slug));

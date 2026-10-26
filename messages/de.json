@@ -302,7 +302,7 @@
         "title": "Ersatzteile"
     },
     "store": {
-        "heading": "Orvella Speichern Frankfurt",
+        "heading": "Orvella Boutique {city}",
         "cta": "Termin buchen",
         "welcomeText": "Wir freuen uns darauf, Sie bald in unserem Geschäft begrüßen zu dürfen.",
         "appointmentNote": "Bitte vereinbaren Sie einen Termin, damit sichergestellt ist, dass die von Ihnen gesuchte Uhr zum Zeitpunkt Ihres Besuchs verfügbar ist.",
@@ -346,7 +346,7 @@
                 },
                 {
                     "title": "Kommissionsvertrag und Versandetikett",
-                    "text": "Auf Wunsch senden wir Ihnen einen Kommissionsvertrag und ein vollständig versichertes Versandetikett. Alternativ können Sie einen Termin in unserem Geschäft in Frankfurt vereinbaren."
+                    "text": "Auf Wunsch senden wir Ihnen einen Kommissionsvertrag und ein vollständig versichertes Versandetikett. Alternativ können Sie einen Termin in unserem Geschäft in {city} vereinbaren."
                 },
                 {
                     "title": "Prüfung",

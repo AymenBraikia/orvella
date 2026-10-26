@@ -303,7 +303,7 @@
         "title": "Ricambi"
     },
     "store": {
-        "heading": "Negozio Orvella Francoforte",
+        "heading": "Negozio Orvella {city}",
         "cta": "Prenota un appuntamento",
         "welcomeText": "Saremo lieti di accoglierti presto nel nostro negozio.",
         "appointmentNote": "Ti preghiamo di fissare un appuntamento per assicurarti che l'orologio che stai cercando sia disponibile al momento della tua visita.",
@@ -347,7 +347,7 @@
                 },
                 {
                     "title": "Contratto di conto vendita ed etichetta di spedizione",
-                    "text": "Se lo desideri, ti invieremo un contratto di conto vendita e un'etichetta di spedizione completamente assicurata. In alternativa, puoi prenotare un appuntamento nel nostro negozio di Francoforte."
+                    "text": "Se lo desideri, ti invieremo un contratto di conto vendita e un'etichetta di spedizione completamente assicurata. In alternativa, puoi prenotare un appuntamento nel nostro negozio di {city}."
                 },
                 {
                     "title": "Verifica",

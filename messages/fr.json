@@ -303,7 +303,7 @@
         "title": "Pièces détachées"
     },
     "store": {
-        "heading": "Boutique Orvella Francfort",
+        "heading": "Boutique Orvella {city}",
         "cta": "Prendre rendez-vous",
         "welcomeText": "Nous nous réjouissons de vous accueillir prochainement dans notre boutique.",
         "appointmentNote": "Merci de prendre rendez-vous afin de vous assurer que la montre que vous recherchez sera disponible lors de votre visite.",
@@ -347,7 +347,7 @@
                 },
                 {
                     "title": "Contrat de dépôt-vente et étiquette d'expédition",
-                    "text": "Si vous le souhaitez, nous vous enverrons un contrat de dépôt-vente et une étiquette d'expédition entièrement assurée. Vous pouvez également prendre rendez-vous dans notre boutique à Francfort."
+                    "text": "Si vous le souhaitez, nous vous enverrons un contrat de dépôt-vente et une étiquette d'expédition entièrement assurée. Vous pouvez également prendre rendez-vous dans notre boutique à {city}."
                 },
                 {
                     "title": "Contrôle",

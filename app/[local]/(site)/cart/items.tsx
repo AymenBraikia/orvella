@@ -5,6 +5,7 @@ import Link from "next/link";
 import { format_money } from "../lib/price_format";
 import { build_quote, get_exchange_rate, shipping_for_country } from "@/app/server/checkout";
 import { convert_eur } from "../lib/order_totals";
+import { get_settings } from "@/app/server/settings";
 
 import getUser from "@/app/server/get_user";
 import { getTranslations } from "next-intl/server";
@@ -19,7 +20,8 @@ export default async function Items() {
 
     if (!session) return;
 
-    const pickup = session.local_pickup;
+    const { payments } = await get_settings();
+    const pickup = session.local_pickup && payments.local_pickup;
     const country = session.address.country || "Germany";
 
     const currency = await get_Currency();
@@ -56,7 +58,7 @@ export default async function Items() {
 
                             <p className={`xl:hidden flex ${pickup ? "line-through" : ""}`}>{t("shipping_costs", { cost: format_money(shipping_costs, currency) })}</p>
 
-                            <LocalPickup_checkbox />
+                            {payments.local_pickup && <LocalPickup_checkbox />}
 
                             <p className="text-sm text-secondary">
                                 {t("moreAbout")}{" "}

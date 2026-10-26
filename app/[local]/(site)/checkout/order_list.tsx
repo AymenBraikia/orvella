@@ -5,6 +5,7 @@ import { get_Currency } from "../lib/get_currency";
 import { getTranslations } from "next-intl/server";
 import getUser from "@/app/server/get_user";
 import { build_quote } from "@/app/server/checkout";
+import { get_settings } from "@/app/server/settings";
 
 import Items from "./items";
 import Pickup_wrapper from "@/app/components/wrappers/pickup";
@@ -27,8 +28,10 @@ export default async function Order_list() {
     const currency = await get_Currency();
     const quote = await build_quote(session.cart, session, currency);
 
+    const { payments } = await get_settings();
     // Card payments return with Stripe (task 4.3); until then only PayPal and bank transfer are offered.
-    const payment_method = session.payment_method == "Bank Transfer" ? "Bank Transfer" : "PayPal";
+    const methods = ([payments.bank_transfer && "Bank Transfer", payments.paypal && "PayPal"] as const).filter((m): m is "Bank Transfer" | "PayPal" => Boolean(m));
+    const payment_method = methods.find((m) => m == session.payment_method) ?? methods[0];
 
     const shipping_country = quote.address == "Local Pickup" ? "" : quote.address.country;
 
@@ -43,14 +46,14 @@ export default async function Order_list() {
             )}
 
             <div className="w-full flex flex-col justify-center items-start gap-4 border-b border-(--clr-gold) pb-4">
-                <Pickup_wrapper />
-                <TotalsBreakdown totals={quote.totals} currency={currency} tax={quote.tax} pickup={session.local_pickup} shipping_label={t_cart("shipping_to", { country: shipping_country })} />
+                {payments.local_pickup && <Pickup_wrapper />}
+                <TotalsBreakdown totals={quote.totals} currency={currency} tax={quote.tax} pickup={quote.address == "Local Pickup"} shipping_label={t_cart("shipping_to", { country: shipping_country })} />
             </div>
 
             <div className="w-full text-gold">
                 <h2>{t("payment")}</h2>
             </div>
-            <Payment_Options default_option={payment_method} />
+            {payment_method && <Payment_Options default_option={payment_method} methods={methods} />}
 
             {payment_method == "Bank Transfer" && <BankTransfer />}
             {payment_method == "PayPal" && <Paypal_component currency={currency} />}

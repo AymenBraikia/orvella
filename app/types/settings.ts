@@ -1,5 +1,8 @@
 import type { TaxMode } from "./order";
 
+export const WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"] as const;
+export type Weekday = (typeof WEEKDAYS)[number];
+
 /** Store-wide configuration, edited in Admin → Settings. One document in the `settings` collection. */
 export interface StoreSettings {
     store_name: string;
@@ -16,7 +19,15 @@ export interface StoreSettings {
     /** International format without "+" or spaces, e.g. 4915112345678 (used for wa.me links). */
     whatsapp: string;
     instagram_url: string;
+    /** Optional dealer profiles on marketplaces, shown in the footer when set. */
+    chrono24_url: string;
+    ebay_url: string;
     vat_id: string;
+
+    /** Free text per day, e.g. "11:00 – 17:00"; empty means closed. */
+    opening_hours: Record<Weekday, string>;
+    /** Optional Google Maps link to nearby parking (store page). */
+    parking_url: string;
 
     tax: {
         mode: TaxMode;
@@ -48,3 +59,6 @@ export interface StoreSettings {
 
     updated_at?: Date | string;
 }
+
+/** The part of the settings that may be sent to the browser (no bank details or notification emails). */
+export type PublicStoreDetails = Pick<StoreSettings, "store_name" | "address" | "phone" | "email" | "whatsapp" | "instagram_url" | "chrono24_url" | "ebay_url">;

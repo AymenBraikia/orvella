@@ -5,14 +5,19 @@ import Watch from "./svg/watch";
 import Ebay from "./svg/ebay";
 import { useTranslations } from "next-intl";
 import WhatsApp from "./svg/whatsapp";
-import { useSearchParams } from "next/navigation";
+import type { PublicStoreDetails } from "@/types/settings";
 
-export default function Footer() {
+export default function Footer({ store }: { store: PublicStoreDetails }) {
     const t = useTranslations("common.footer");
     const t2 = useTranslations("home");
     const t_nav = useTranslations("common.nav");
 
-    const params = useSearchParams();
+    const platforms = [
+        { href: store.chrono24_url, label: "Chrono 24", icon: <Watch classnames={"w-6"} /> },
+        { href: store.ebay_url, label: "Ebay", icon: <Ebay classnames={"w-6"} /> },
+        { href: store.whatsapp ? `https://wa.me/${store.whatsapp.replace(/\D/g, "")}` : "", label: "WhatsApp", icon: <WhatsApp classnames={"w-6"} /> },
+        { href: store.instagram_url, label: "Instagram", icon: <Instagram classnames={"w-6"} /> },
+    ].filter((p) => p.href);
 
     return (
         <footer className="w-full py-8 md:px-15 lg:px-20 px-4 flex-center flex-col bg-background font-bold z-30">
@@ -24,11 +29,17 @@ export default function Footer() {
                         </Link>{" "}
                     </div>
                     <ul className="flex flex-col justify-start items-start gap-2 tracking-wider">
-                        <li>Marie-Curie-Straße 14</li>
-                        <li>60439 Frankfurt am Main</li>
-                        <li>Germany</li>
-                        <li>+49 30 2312 5100</li>
-                        <li>info@{params.get("ref") || "orvella"}.com</li>
+                        <li>{store.address.street}</li>
+                        <li>
+                            {store.address.postcode} {store.address.city}
+                        </li>
+                        <li>{store.address.country}</li>
+                        <li>
+                            <a href={`tel:${store.phone.replace(/[^\d+]/g, "")}`}>{store.phone}</a>
+                        </li>
+                        <li>
+                            <a href={`mailto:${store.email}`}>{store.email}</a>
+                        </li>
                     </ul>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
@@ -87,35 +98,22 @@ export default function Footer() {
                         </li>
                     </ul>
                 </div>
-                <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <h5 className="lg:title5 title4 font-secondary text-gold">{t("otherPlatformsHeading")}</h5>
-                    <ul className="flex flex-col justify-start items-start gap-2">
-                        <li>
-                            <Link target={"_blank"} aria-label="visit chrono 24" href={"https://www.chrono24.com"} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
-                                {<Watch classnames={"w-6"} />}
-                                <p>Chrono 24</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link target={"_blank"} aria-label="ebay store" href={"https://www.ebay.com"} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
-                                {<Ebay classnames={"w-6"} />}
-                                <p>Ebay</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link target={"_blank"} aria-label="WhatsApp" href={"https://wa.me/213559078448"} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
-                                {<WhatsApp classnames={"w-6"} />}
-                                <p>WhatsApp</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link target={"_blank"} aria-label="instagram page" href={"https://www.instagram.com/ayme.n0412/"} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
-                                {<Instagram classnames={"w-6"} />}
-                                <p>Instagram</p>
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+                {/* Only the profiles the store has filled in under Admin → Settings */}
+                {platforms.length > 0 && (
+                    <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
+                        <h5 className="lg:title5 title4 font-secondary text-gold">{t("otherPlatformsHeading")}</h5>
+                        <ul className="flex flex-col justify-start items-start gap-2">
+                            {platforms.map((p) => (
+                                <li key={p.label}>
+                                    <Link target={"_blank"} rel="noreferrer" aria-label={p.label} href={p.href} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
+                                        {p.icon}
+                                        <p>{p.label}</p>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
                     <h5 className="lg:title5 title4 font-secondary text-gold">{t("legalHeading")}</h5>
                     <ul className="flex flex-col justify-start items-start gap-2">
@@ -154,7 +152,7 @@ export default function Footer() {
             </section>
             <section className="w-full lg:gap-0 gap-4 flex-col lg:flex-row flex justify-between items-center font-normal text-xs lg:tracking-normal tracking-wider">
                 <p className="">{t("disclaimerText")}</p>
-                <p className="">{t("copyright", { year: 2026 })}</p>
+                <p className="">{t("copyright", { year: new Date().getFullYear() })}</p>
                 <div className="flex-center flex-wrap gap-4 lg:gap-3">
                     <Link aria-label="imprint" href={"/info/imprint"} className="underline text-secondary hover:text-primary transition-default">
                         {t("imprint")}

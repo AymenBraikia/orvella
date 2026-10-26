@@ -1,41 +1,43 @@
 import { getTranslations } from "next-intl/server";
-type Props = {
-    params: Promise<{ ref: string }>;
-};
+import { store_identity } from "@/app/server/store_identity";
 
-export default async function ImprintPage({ params }: Props) {
-    const { ref } = await params;
+export default async function ImprintPage() {
     const t = await getTranslations("imprint");
+    const store = await store_identity();
 
     return (
         <div className="flex justify-center items-start flex-col w-full gap-10 py-20">
             <h1>{t("heading")}</h1>
 
             <div className="flex justify-center items-start flex-col gap-2 text-[14px]">
-                <p className="font-bold">Aymen Braikia</p>
-                <p>{ref || "Orvella"}</p>
-                <p>Marie-Curie-Straße 14</p>
-                <p>60439 Frankfurt am Main</p>
-                <p>Germany</p>
+                <p className="font-bold">{store.legal_name}</p>
+                {store.store_name != store.legal_name && <p>{store.store_name}</p>}
+                <p>{store.address.street}</p>
+                <p>
+                    {store.address.postcode} {store.address.city}
+                </p>
+                <p>{store.address.country}</p>
 
                 <div className="flex-center gap-2">
                     <p className="font-bold">{t("phoneLabel")}</p>
-                    +49 30 2312 5100
+                    {store.phone}
                 </div>
 
                 <div className="flex-center gap-2">
                     <p className="font-bold">{t("emailLabel")}</p>
-                    info@{ref || "orvella"}.com
+                    {store.email}
                 </div>
 
-                <div className="flex-center gap-2">
-                    <p className="font-bold">{t("vatIdLabel")}</p>
-                    DE385492701
-                </div>
+                {store.vat_id && (
+                    <div className="flex-center gap-2">
+                        <p className="font-bold">{t("vatIdLabel")}</p>
+                        {store.vat_id}
+                    </div>
+                )}
 
                 <div className="flex-center gap-2">
                     <p className="font-bold">{t("representativesLabel")}</p>
-                    Aymen Braikia
+                    {store.representative}
                 </div>
 
                 <br />

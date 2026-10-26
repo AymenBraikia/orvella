@@ -22,7 +22,12 @@ export const DEFAULT_SETTINGS: StoreSettings = {
     email: "info@example.com",
     whatsapp: "",
     instagram_url: "",
+    chrono24_url: "",
+    ebay_url: "",
     vat_id: "DE000000000",
+
+    opening_hours: { monday: "11:00 – 17:00", tuesday: "11:00 – 17:00", wednesday: "11:00 – 17:00", thursday: "11:00 – 17:00", friday: "11:00 – 17:00", saturday: "11:00 – 17:00", sunday: "" },
+    parking_url: "",
 
     tax: { mode: "included", rate: 19 },
 
@@ -48,6 +53,7 @@ function with_defaults(saved: Partial<StoreSettings> | null): StoreSettings {
         ...DEFAULT_SETTINGS,
         ...s,
         address: { ...DEFAULT_SETTINGS.address, ...s.address },
+        opening_hours: { ...DEFAULT_SETTINGS.opening_hours, ...s.opening_hours },
         tax: { ...DEFAULT_SETTINGS.tax, ...s.tax },
         bank: { ...DEFAULT_SETTINGS.bank, ...s.bank },
         payments: { ...DEFAULT_SETTINGS.payments, ...s.payments },

@@ -302,7 +302,7 @@
         "title": "Recambios"
     },
     "store": {
-        "heading": "Tienda Orvella Frankfurt",
+        "heading": "Tienda Orvella {city}",
         "cta": "Reservar una cita",
         "welcomeText": "Estaremos encantados de recibirle pronto en nuestra tienda.",
         "appointmentNote": "Le rogamos que concierte una cita para asegurarse de que el reloj que busca esté disponible en el momento de su visita.",
@@ -346,7 +346,7 @@
                 },
                 {
                     "title": "Contrato de consignación y etiqueta de envío",
-                    "text": "Si lo desea, le enviaremos un contrato de consignación y una etiqueta de envío totalmente asegurada. También puede reservar una cita en nuestra tienda de Frankfurt."
+                    "text": "Si lo desea, le enviaremos un contrato de consignación y una etiqueta de envío totalmente asegurada. También puede reservar una cita en nuestra tienda de {city}."
                 },
                 {
                     "title": "Inspección",

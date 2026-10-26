@@ -1,4 +1,5 @@
 import { absolute_url, BASE_URL } from "@/app/(site)/lib/site_url";
+import { store_identity } from "@/app/server/store_identity";
 import type { Metadata } from "next";
 import { Open_Sans, Cormorant_Garamond, Lateef, Tajawal } from "next/font/google";
 import "../../globals.css";
@@ -32,43 +33,47 @@ const cormorantGaramond = Cormorant_Garamond({
     display: "swap",
 });
 
-export const metadata: Metadata = {
-    title: {
-        default: "ORVELLA | High-End Luxury Watches & Expert Consultancy",
-        template: "%s | ORVELLA",
-    },
-    description: "Explore our curated collection of pristine pre-owned and new luxury watches, including Rolex, Patek Philippe, and Cartier. Book a professional consultation with our horology experts today.",
-    keywords: ["luxury watches", "pre-owned Rolex", "Patek Philippe Calatrava", "Cartier Panthere", "Rolex Daytona", "buy luxury watches", "watch consultancy", "ORVELLA"],
-    authors: [{ name: "ORVELLA" }],
-    creator: "ORVELLA",
-    metadataBase: new URL(BASE_URL),
-    openGraph: {
-        title: "ORVELLA | High-End Luxury Watches & Expert Consultancy",
-        description: "Our curated collection of pre-owned and new luxury watches is waiting for you. Partner with experts for your high-end horology needs.",
-        url: absolute_url("/"),
-        siteName: "ORVELLA",
-        images: [
-            {
-                url: "/banner.png",
-                width: 1200,
-                height: 630,
-                alt: "ORVELLA Luxury Watch Collection",
-            },
-        ],
-        locale: "en",
-        type: "website",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "ORVELLA | High-End Luxury Watches",
-        description: "Your partner for high-end watches. Explore Rolex, Patek Philippe, Cartier, and book expert appointments.",
-        images: ["/banner.png"],
-    },
-    robots: {
-        index: true,
-        follow: true,
-    },
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const { store_name } = await store_identity();
+
+    return {
+        title: {
+            default: "ORVELLA | High-End Luxury Watches & Expert Consultancy",
+            template: `%s | ${store_name}`,
+        },
+        description: "Explore our curated collection of pristine pre-owned and new luxury watches, including Rolex, Patek Philippe, and Cartier. Book a professional consultation with our horology experts today.",
+        keywords: ["luxury watches", "pre-owned Rolex", "Patek Philippe Calatrava", "Cartier Panthere", "Rolex Daytona", "buy luxury watches", "watch consultancy", "ORVELLA"],
+        authors: [{ name: "ORVELLA" }],
+        creator: "ORVELLA",
+        metadataBase: new URL(BASE_URL),
+        openGraph: {
+            title: "ORVELLA | High-End Luxury Watches & Expert Consultancy",
+            description: "Our curated collection of pre-owned and new luxury watches is waiting for you. Partner with experts for your high-end horology needs.",
+            url: absolute_url("/"),
+            siteName: store_name,
+            images: [
+                {
+                    url: "/banner.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "ORVELLA Luxury Watch Collection",
+                },
+            ],
+            locale: "en",
+            type: "website",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "ORVELLA | High-End Luxury Watches",
+            description: "Your partner for high-end watches. Explore Rolex, Patek Philippe, Cartier, and book expert appointments.",
+            images: ["/banner.png"],
+        },
+        robots: {
+            index: true,
+            follow: true,
+        },
+    };
+}
 
 export default async function AuthLayout({
     children,

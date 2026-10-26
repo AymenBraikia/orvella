@@ -7,7 +7,7 @@ import { useState } from "react";
 
 type Option = "PayPal" | "Bank Transfer";
 
-export default function Payment_Options({ default_option }: { default_option: Option }) {
+export default function Payment_Options({ default_option, methods }: { default_option: Option; methods: Option[] }) {
     const [option, set_option] = useState<Option>(default_option);
     const t = useTranslations("checkout");
     const router = useRouter();
@@ -22,12 +22,12 @@ export default function Payment_Options({ default_option }: { default_option: Op
 
     return (
         <div className="w-full flex-center">
-            <button type="button" onClick={() => choose("Bank Transfer")} className={`w-full h-full sm:px-2 sm:py-4 p-2 transition-default ${option == "Bank Transfer" ? "bg-gold brightness-100 button3" : "brightness-75 button2"}`}>
+            {methods.includes("Bank Transfer") && <button type="button" onClick={() => choose("Bank Transfer")} className={`w-full h-full sm:px-2 sm:py-4 p-2 transition-default ${option == "Bank Transfer" ? "bg-gold brightness-100 button3" : "brightness-75 button2"}`}>
                 {t("bankTransfer")}
-            </button>
-            <button type="button" onClick={() => choose("PayPal")} className={`w-full h-full sm:px-2 sm:py-4 p-2 transition-default ${option == "PayPal" ? "bg-gold brightness-100 button3" : "brightness-75 button2"}`}>
+            </button>}
+            {methods.includes("PayPal") && <button type="button" onClick={() => choose("PayPal")} className={`w-full h-full sm:px-2 sm:py-4 p-2 transition-default ${option == "PayPal" ? "bg-gold brightness-100 button3" : "brightness-75 button2"}`}>
                 PayPal
-            </button>
+            </button>}
         </div>
     );
 }
