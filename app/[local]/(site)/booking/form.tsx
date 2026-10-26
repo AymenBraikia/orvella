@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
-import Honeypot from "@/app/components/elements/honeypot";
+import { useMemo, useState } from "react";
+import Honeypot, { honeypot_value } from "@/app/components/elements/honeypot";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "@/app/components/elements/input";
@@ -21,7 +21,6 @@ export default function Form() {
 
     const [state, set_state] = useState<"editing" | "sending" | "sent" | "failed">("editing");
     const [rate_limited, set_rate_limited] = useState(false);
-    const honeypot = useRef<HTMLInputElement>(null);
     const t_errors = useTranslations("common.errors");
 
     const {
@@ -34,9 +33,9 @@ export default function Form() {
         mode: "onSubmit",
     });
 
-    const onValid = async (data: BookingOutput) => {
+    const onValid = async (data: BookingOutput, event?: React.BaseSyntheticEvent) => {
         set_state("sending");
-        const result = await Submit({ ...data, website: honeypot.current?.value ?? "" });
+        const result = await Submit({ ...data, website: honeypot_value(event) });
         set_rate_limited(!result.ok && result.error == "rate");
         set_state(result.ok ? "sent" : "failed");
     };
@@ -69,7 +68,7 @@ export default function Form() {
 
     return (
         <form onSubmit={handleSubmit(onValid)} className="w-full h-fit p-4 flex-center flex-col gap-6">
-            <Honeypot ref={honeypot} />
+            <Honeypot />
             <div className={`w-full h-fit min-h-80 relative flex-center overflow-hidden`}>
                 <div className="w-full max-w-200 gap-4 flex-center flex-wrap">
                     <div className="w-full sm:w-[calc(50%-8px)]">
