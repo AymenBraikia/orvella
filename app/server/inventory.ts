@@ -190,3 +190,44 @@ export async function mark_items_sold(order_id: string, lines: StockLine[]): Pro
 export async function read_items_fresh(slugs: string[]): Promise<Item[]> {
     return (await items_collection()).find({ slug: { $in: slugs } }, { projection: { _id: 0 } }).toArray();
 }
+
+/** Far-future expiry for holds the dealer places by hand ("reserved for a customer"). */
+const MANUAL_HOLD_UNTIL = new Date("2100-01-01T00:00:00.000Z");
+export const MANUAL_HOLD_ID = "manual";
+
+/** Wrap plain values so a pipeline $set never reads strings like "$500" as field paths. */
+function literal_set(fields: Record<string, unknown>): Document {
+    return { $set: Object.fromEntries(Object.entries(fields).map(([k, v]) => [k, { $literal: v }])) };
+}
+
+/** Write product fields and keep status/inStock consistent with the (possibly changed) quantity. */
+export async function write_item_fields(slug: string, fields: Record<string, unknown>): Promise<boolean> {
+    const result = await (await items_collection()).updateOne({ slug }, [NORMALISE_STAGE, literal_set(fields), STATUS_STAGE]);
+    return result.matchedCount === 1;
+}
+
+/**
+ * The dealer sets the stock state by hand (sold in the boutique, back on sale, held for a client).
+ * Existing holds are dropped; pending orders for this piece will then fail their stock check.
+ */
+export async function admin_set_status(slug: string, status: "available" | "reserved" | "sold", unique: boolean): Promise<boolean> {
+    const items = await items_collection();
+    await normalise([slug]);
+
+    const stages: Record<typeof status, Document[]> = {
+        sold: [{ $set: { quantity: 0, reservations: [], sold_at: "$$NOW" } }],
+        available: [{ $set: { quantity: unique ? 1 : { $max: [1, "$quantity"] }, reservations: [] } }, { $unset: "sold_at" }],
+        reserved: [
+            {
+                $set: {
+                    quantity: unique ? 0 : { $max: [0, { $subtract: ["$quantity", 1] }] },
+                    reservations: [{ order_id: MANUAL_HOLD_ID, quantity: 1, until: MANUAL_HOLD_UNTIL }],
+                },
+            },
+        ],
+    };
+
+    const result = await items.updateOne({ slug }, [...stages[status], STATUS_STAGE]);
+    invalidate_items([slug]);
+    return result.matchedCount === 1;
+}

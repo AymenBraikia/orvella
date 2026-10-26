@@ -35,7 +35,9 @@ export interface BaseItem {
     status?: ItemStatus;
     reservations?: Reservation[];
     sold_at?: Date | string;
+    /** Soft delete: hidden from the storefront, restorable in the admin. */
     deleted?: boolean;
+    deleted_at?: Date | string;
     updated_at?: Date | string;
 
     /** Resolved on the server before an item is sent to the browser (see to_public_item). */
