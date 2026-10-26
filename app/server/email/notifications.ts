@@ -14,6 +14,7 @@ import type { StoreSettings } from "@/types/settings";
 import type { Sell } from "@/types/sell";
 import type { Consignment } from "@/types/consignment";
 import type { Appointment } from "@/types/appointment";
+import type { Enquiry } from "@/types/enquiry";
 
 /*
  * Who gets which email. Customer emails are written in the customer's language (stored on the
@@ -269,4 +270,51 @@ export async function notify_appointment_requested(a: Appointment) {
 
 export async function notify_appointment_confirmed(a: Appointment) {
     await safely("customer appointment confirmed", () => customer_appointment_email(a, "appointmentConfirmed"));
+}
+
+/* ───────────────────────── product enquiries ───────────────────────── */
+
+export async function notify_enquiry(e: Enquiry) {
+    const label = e.type == "reservation" ? "Reservation request" : "Enquiry";
+
+    await Promise.all([
+        safely("customer enquiry received", async () => {
+            const s = await get_settings();
+            const { t, locale } = await translator(e.locale, s);
+            const { html, text } = render_email({
+                store: s.store_name,
+                heading: t("emails.enquiryReceived.heading"),
+                blocks: [
+                    { kind: "p", text: t("emails.greeting", { name: e.name }) },
+                    { kind: "p", text: t(e.type == "reservation" ? "emails.enquiryReceived.reservationText" : "emails.enquiryReceived.text", { item: e.item.name }) },
+                    { kind: "p", text: t("emails.signoff", { store: s.store_name }) },
+                ],
+                footer: footer(s),
+                dir: getDirection(locale),
+            });
+            await send_email({ to: e.email, subject: t("emails.enquiryReceived.subject", { item: e.item.name }), html, text, reply_to: s.email });
+        }),
+        safely("dealer enquiry", () =>
+            dealer_email(
+                `${label}: ${e.item.name}${e.item.reference ? ` (Ref. ${e.item.reference})` : ""}`,
+                `${label} from ${e.name}`,
+                [
+                    {
+                        kind: "rows",
+                        rows: [
+                            ["Piece", e.item.name],
+                            ["Reference", e.item.reference || "—"],
+                            ["Price", format_money(e.item.price, "EUR")],
+                            ["Customer", e.name],
+                            ["Email", e.email],
+                            ["Phone", e.phone || "—"],
+                        ],
+                    },
+                    ...(e.message ? [{ kind: "p" as const, text: e.message }] : []),
+                    { kind: "button", label: "Open enquiry in admin", href: absolute_url(`/en/admin/enquiries/${encodeURIComponent(e.id)}`) },
+                ],
+                e.email,
+            ),
+        ),
+    ]);
 }

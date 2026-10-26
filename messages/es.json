@@ -1125,7 +1125,26 @@
         "bookAppointment": "Reserva una cita",
         "consignmentBeforeLink": "¿Desea entregar uno de sus relojes como parte del pago? Póngase en contacto con nosotros a través de la página",
         "consignmentAfterLink": "con los datos de su reloj y le haremos una oferta.",
-        "clasp": "Cierre"
+        "clasp": "Cierre",
+        "enquiry": {
+            "enquire": "Consultar sobre esta pieza",
+            "reserve": "Solicitar una reserva",
+            "whatsapp": "Preguntar por WhatsApp",
+            "whatsappText": "Hola, me interesa {name}{ref}: {url}",
+            "heading": "Consultar sobre esta pieza",
+            "typeQuestion": "Pregunta",
+            "typeReservation": "Solicitud de reserva",
+            "reservationNote": "Le confirmaremos si podemos reservarle la pieza; todavía no se cobra nada.",
+            "name": "Su nombre",
+            "messagePlaceholder": "Preguntas sobre el estado, el historial de servicio, verla en la tienda…",
+            "submit": "Enviar consulta",
+            "submitReservation": "Solicitar reserva",
+            "sending": "Enviando…",
+            "successHeading": "Gracias: su mensaje está en camino",
+            "successText": "Normalmente respondemos en un día laborable.",
+            "again": "Enviar otro mensaje",
+            "error": "No se pudo enviar su mensaje. Revise sus datos e inténtelo de nuevo."
+        }
     },
     "brands": {
         "rolex": {
@@ -1627,6 +1646,12 @@
             "subject": "Su cita del {date} está confirmada",
             "heading": "Cita confirmada",
             "text": "Será un placer recibirle el {date} en {address}."
+        },
+        "enquiryReceived": {
+            "subject": "Su consulta sobre {item}",
+            "heading": "Gracias por su consulta",
+            "text": "Hemos recibido su pregunta sobre {item} y le responderemos en breve.",
+            "reservationText": "Hemos recibido su solicitud de reserva de {item}. Le confirmaremos en breve si podemos reservarla para usted."
         }
     }
 }

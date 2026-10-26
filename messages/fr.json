@@ -1126,7 +1126,26 @@
         "bookAppointment": "Prendre rendez-vous",
         "consignmentBeforeLink": "Souhaitez-vous reprendre l'une de vos montres en échange ? Contactez-nous via la page",
         "consignmentAfterLink": "en précisant les détails de votre montre et nous vous ferons une offre.",
-        "clasp": "Fermoir"
+        "clasp": "Fermoir",
+        "enquiry": {
+            "enquire": "Se renseigner sur cette pièce",
+            "reserve": "Demander une réservation",
+            "whatsapp": "Demander sur WhatsApp",
+            "whatsappText": "Bonjour, je suis intéressé par {name}{ref} : {url}",
+            "heading": "Se renseigner sur cette pièce",
+            "typeQuestion": "Question",
+            "typeReservation": "Demande de réservation",
+            "reservationNote": "Nous vous confirmerons si nous pouvons vous réserver la pièce ; rien n’est encore débité.",
+            "name": "Votre nom",
+            "messagePlaceholder": "Questions sur l’état, l’historique d’entretien, une présentation en boutique…",
+            "submit": "Envoyer la demande",
+            "submitReservation": "Demander la réservation",
+            "sending": "Envoi en cours…",
+            "successHeading": "Merci — votre message est envoyé",
+            "successText": "Nous répondons généralement sous un jour ouvré.",
+            "again": "Envoyer un autre message",
+            "error": "Votre message n’a pas pu être envoyé. Veuillez vérifier vos informations et réessayer."
+        }
     },
     "brands": {
         "rolex": {
@@ -1628,6 +1647,12 @@
             "subject": "Votre rendez-vous du {date} est confirmé",
             "heading": "Rendez-vous confirmé",
             "text": "Nous serons ravis de vous accueillir le {date} à l’adresse {address}."
+        },
+        "enquiryReceived": {
+            "subject": "Votre demande concernant {item}",
+            "heading": "Merci pour votre demande",
+            "text": "Nous avons bien reçu votre question concernant {item} et vous répondrons très prochainement.",
+            "reservationText": "Nous avons bien reçu votre demande de réservation pour {item}. Nous vous confirmerons très prochainement si nous pouvons vous la réserver."
         }
     }
 }

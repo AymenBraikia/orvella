@@ -12,6 +12,7 @@ import StockBadge from "./stock_badge";
 
 export default memo(function Item_Card({ data }: { data: Ring | Necklace | Bracelet }) {
     const t = useTranslations("common.productCard");
+    const t_enquiry = useTranslations("product.enquiry");
     const currency = useCurrency();
 
     const [play_video, set_play_video] = useState<boolean>(false);
@@ -49,9 +50,9 @@ export default memo(function Item_Card({ data }: { data: Ring | Necklace | Brace
                     )}
                 </div>
                 <span className="text-xl font-semibold text-foreground font-sans">{format_price(data.price, currency)}</span>
-                <button type="button" className="button bg-primary text-gold hover:bg-gold hover:text-primary font-secondary font-thin w-full tracking-wider">
-                    Request Private Viewing
-                </button>
+                <Link href={`/product/${data.slug}#enquire`} className="button bg-primary text-gold hover:bg-gold hover:text-primary font-secondary font-thin w-full tracking-wider text-center">
+                    {t_enquiry("enquire")}
+                </Link>
                 <AtcBtn slug={data.slug} status={data.stock_status} />
             </div>
         </div>

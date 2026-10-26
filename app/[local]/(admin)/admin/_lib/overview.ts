@@ -1,6 +1,6 @@
 import "server-only";
 
-import { appointments_collection, consignments_collection, items_collection, orders_collection, sell_collection } from "@/app/db/collections";
+import { appointments_collection, consignments_collection, enquiries_collection, items_collection, orders_collection, sell_collection } from "@/app/db/collections";
 import { stock_status } from "@/app/(site)/lib/stock";
 import type { ItemStatus } from "@/types/item";
 import type { Order } from "@/types/order";
@@ -22,9 +22,9 @@ export async function overview_stats() {
     month_start.setUTCDate(1);
     month_start.setUTCHours(0, 0, 0, 0);
 
-    const [items, orders, sell, consign, appointments] = await Promise.all([items_collection(), orders_collection(), sell_collection(), consignments_collection(), appointments_collection()]);
+    const [items, orders, sell, consign, appointments, enquiries] = await Promise.all([items_collection(), orders_collection(), sell_collection(), consignments_collection(), appointments_collection(), enquiries_collection()]);
 
-    const [stock_docs, pending_payment, to_ship, new_sell, new_consign, upcoming, month_orders, recent_orders] = await Promise.all([
+    const [stock_docs, pending_payment, to_ship, new_sell, new_consign, upcoming, month_orders, recent_orders, new_enquiries] = await Promise.all([
         items.find({ deleted: { $ne: true } }, { projection: { _id: 0, quantity: 1, inStock: 1, reservations: 1 } }).toArray(),
         orders.countDocuments({ status: "pending_payment" }),
         orders.countDocuments({ status: "paid" }),
@@ -33,6 +33,7 @@ export async function overview_stats() {
         appointments.countDocuments({ date: { $gte: start_of_today() }, status: { $nin: ["cancelled", "done"] } }),
         orders.find({ status: { $in: ["paid", "shipped", "delivered"] }, created_at: { $gte: month_start } }, { projection: { _id: 0, totals: 1, exchange_rate: 1 } }).toArray(),
         orders.find({}, { projection: { _id: 0 }, sort: { created_at: -1 }, limit: 6 }).toArray(),
+        enquiries.countDocuments({ status: "new" }),
     ]);
 
     // Stock is resolved the same way the storefront does (lapsed holds count as available).
@@ -48,6 +49,7 @@ export async function overview_stats() {
         pending_payment,
         to_ship,
         new_leads: new_sell + new_consign,
+        new_enquiries,
         upcoming,
         revenue_eur,
         month_order_count: month_orders.length,

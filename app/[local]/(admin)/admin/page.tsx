@@ -14,7 +14,8 @@ export default async function AdminOverview() {
         <>
             <PageHeader title="Overview" subtitle="What needs your attention today." />
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-3">
+                <StatCard label="New enquiries" value={stats.new_enquiries} href="/admin/enquiries?status=new" />
                 <StatCard label="New sell / consign leads" value={stats.new_leads} href="/admin/leads?status=new" />
                 <StatCard label="Awaiting payment" value={stats.pending_payment} href="/admin/orders?status=pending_payment" />
                 <StatCard label="Paid, to ship" value={stats.to_ship} href="/admin/orders?status=paid" />

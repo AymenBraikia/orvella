@@ -1126,7 +1126,26 @@
         "bookAppointment": "Randevu al",
         "consignmentBeforeLink": "Saatlerinizden birini takas etmek ister misiniz? Saatinizle ilgili bilgileri paylaşarak bizimle",
         "consignmentAfterLink": "sayfası üzerinden iletişime geçin, size bir teklif sunalım.",
-        "clasp": "Kilit"
+        "clasp": "Kilit",
+        "enquiry": {
+            "enquire": "Bu parça hakkında bilgi alın",
+            "reserve": "Rezervasyon talep edin",
+            "whatsapp": "WhatsApp ile sorun",
+            "whatsappText": "Merhaba, {name}{ref} ile ilgileniyorum: {url}",
+            "heading": "Bu parça hakkında bilgi alın",
+            "typeQuestion": "Soru",
+            "typeReservation": "Rezervasyon talebi",
+            "reservationNote": "Parçayı sizin için ayırıp ayıramayacağımızı onaylayacağız; şimdilik ücret alınmaz.",
+            "name": "Adınız",
+            "messagePlaceholder": "Durum, servis geçmişi, mağazada inceleme hakkında sorular…",
+            "submit": "Talebi gönder",
+            "submitReservation": "Rezervasyon talep et",
+            "sending": "Gönderiliyor…",
+            "successHeading": "Teşekkürler — mesajınız iletildi",
+            "successText": "Genellikle bir iş günü içinde yanıt veririz.",
+            "again": "Başka bir mesaj gönder",
+            "error": "Mesajınız gönderilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin."
+        }
     },
     "brands": {
         "rolex": {
@@ -1623,6 +1642,12 @@
             "subject": "{date} tarihli randevunuz onaylandı",
             "heading": "Randevu onaylandı",
             "text": "Sizi {date} tarihinde {address} adresinde ağırlamaktan memnuniyet duyacağız."
+        },
+        "enquiryReceived": {
+            "subject": "{item} hakkındaki talebiniz",
+            "heading": "Talebiniz için teşekkürler",
+            "text": "{item} hakkındaki sorunuzu aldık ve kısa süre içinde yanıt vereceğiz.",
+            "reservationText": "{item} için rezervasyon talebinizi aldık. Sizin için ayırıp ayıramayacağımızı kısa süre içinde onaylayacağız."
         }
     }
 }

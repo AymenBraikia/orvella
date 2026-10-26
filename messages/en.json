@@ -1126,7 +1126,26 @@
         "bookAppointment": "Book an appointment",
         "consignmentBeforeLink": "Do you wish to trade in one of your watches? Please contact us via the",
         "consignmentAfterLink": "page with the details about your watch and we will make you an offer.",
-        "clasp": "Clasp"
+        "clasp": "Clasp",
+        "enquiry": {
+            "enquire": "Enquire about this piece",
+            "reserve": "Request a reservation",
+            "whatsapp": "Ask on WhatsApp",
+            "whatsappText": "Hello, I am interested in the {name}{ref}: {url}",
+            "heading": "Enquire about this piece",
+            "typeQuestion": "Question",
+            "typeReservation": "Reservation request",
+            "reservationNote": "We will confirm whether we can hold the piece for you; nothing is charged yet.",
+            "name": "Your name",
+            "messagePlaceholder": "Questions about condition, service history, viewing in the boutique…",
+            "submit": "Send enquiry",
+            "submitReservation": "Request reservation",
+            "sending": "Sending…",
+            "successHeading": "Thank you — your message is on its way",
+            "successText": "We usually reply within one business day.",
+            "again": "Send another message",
+            "error": "Your message could not be sent. Please check your details and try again."
+        }
     },
     "brands": {
         "rolex": {
@@ -1623,6 +1642,12 @@
             "subject": "Your appointment on {date} is confirmed",
             "heading": "Appointment confirmed",
             "text": "We look forward to welcoming you on {date} at {address}."
+        },
+        "enquiryReceived": {
+            "subject": "Your enquiry about the {item}",
+            "heading": "Thank you for your enquiry",
+            "text": "We have received your question about the {item} and will reply shortly.",
+            "reservationText": "We have received your reservation request for the {item}. We will confirm shortly whether we can hold it for you."
         }
     }
 }

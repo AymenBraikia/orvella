@@ -8,7 +8,11 @@ import Link from "next/link";
 import InfoTable from "./info_table";
 import increase_relevance_score from "@/app/server/increase_relevance_score";
 import score_rewards from "../../lib/relevance_score";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import { store_identity } from "@/app/server/store_identity";
+import { absolute_url } from "../../lib/site_url";
+import EnquiryForm from "./enquiry/enquiry_form";
+import WhatsApp from "@/app/components/svg/whatsapp";
 import { get_Currency } from "../../lib/get_currency";
 import { item_name } from "../../lib/item_name";
 
@@ -30,6 +34,12 @@ export default async function DynamicPage({ params }: PageProps) {
     after(() => increase_relevance_score(slug, score_rewards.view_details));
 
     const status = data.stock_status ?? "available";
+
+    // Most buyers of pre-owned luxury pieces ask first: WhatsApp with the piece prefilled, or the form below.
+    const t_enquiry = await getTranslations("product.enquiry");
+    const { whatsapp } = await store_identity();
+    const reference = (data.type == "watch" || data.type == "spare") && data.reference ? ` (Ref. ${data.reference})` : "";
+    const whatsapp_href = whatsapp ? `https://wa.me/${whatsapp}?text=${encodeURIComponent(t_enquiry("whatsappText", { name: item_name(data), ref: reference, url: absolute_url(`/${await getLocale()}/product/${data.slug}`) }))}` : null;
 
     return (
         <div className="h-fit w-dvw py-4 xl:px-16 px-4 flex items-start justify-start flex-col lg:flex-row mt-10 gap-8 tracking-wider">
@@ -55,7 +65,24 @@ export default async function DynamicPage({ params }: PageProps) {
                         </Link>
                     </div>
                 </div>
+                <div className="flex flex-wrap gap-2 w-full font-sans text-sm sm:text-base normal-case">
+                    <a href="#enquire" className="button2 border border-secondary/40">
+                        {t_enquiry("enquire")}
+                    </a>
+                    {status == "available" && (
+                        <a href="#enquire" className="button2 border border-secondary/40">
+                            {t_enquiry("reserve")}
+                        </a>
+                    )}
+                    {whatsapp_href && (
+                        <a href={whatsapp_href} target="_blank" rel="noreferrer" className="button2 border border-secondary/40 flex items-center gap-2">
+                            <WhatsApp classnames="w-5" />
+                            {t_enquiry("whatsapp")}
+                        </a>
+                    )}
+                </div>
                 <InfoTable item={data} />
+                <EnquiryForm slug={data.slug} can_reserve={status == "available"} />
             </div>
         </div>
     );

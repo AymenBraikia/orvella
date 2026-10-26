@@ -20,6 +20,7 @@ const INDEXES: Record<string, IndexDescription[]> = {
     sell: [{ key: { id: 1 } }, { key: { created_at: -1 } }],
     consignment: [{ key: { id: 1 } }, { key: { created_at: -1 } }],
     appointment: [{ key: { id: 1 } }, { key: { date: 1 } }],
+    enquiries: [{ key: { id: 1 } }, { key: { status: 1, created_at: -1 } }],
 };
 
 if (!process.env.MONGO_URI) {

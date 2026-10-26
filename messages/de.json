@@ -1125,7 +1125,26 @@
         "bookAppointment": "Buchen Sie einen Termin",
         "consignmentBeforeLink": "Möchten Sie eine Ihrer Uhren in Zahlung geben? Kontaktieren Sie uns über die",
         "consignmentAfterLink": "Seite mit den Angaben zu Ihrer Uhr und wir unterbreiten Ihnen ein Angebot.",
-        "clasp": "Verschluss"
+        "clasp": "Verschluss",
+        "enquiry": {
+            "enquire": "Anfrage zu diesem Stück",
+            "reserve": "Reservierung anfragen",
+            "whatsapp": "Per WhatsApp fragen",
+            "whatsappText": "Hallo, ich interessiere mich für {name}{ref}: {url}",
+            "heading": "Anfrage zu diesem Stück",
+            "typeQuestion": "Frage",
+            "typeReservation": "Reservierungsanfrage",
+            "reservationNote": "Wir bestätigen Ihnen, ob wir das Stück für Sie zurücklegen können; es wird noch nichts berechnet.",
+            "name": "Ihr Name",
+            "messagePlaceholder": "Fragen zu Zustand, Servicehistorie, Besichtigung im Geschäft …",
+            "submit": "Anfrage senden",
+            "submitReservation": "Reservierung anfragen",
+            "sending": "Wird gesendet …",
+            "successHeading": "Vielen Dank – Ihre Nachricht ist unterwegs",
+            "successText": "Wir antworten in der Regel innerhalb eines Werktags.",
+            "again": "Weitere Nachricht senden",
+            "error": "Ihre Nachricht konnte nicht gesendet werden. Bitte prüfen Sie Ihre Angaben und versuchen Sie es erneut."
+        }
     },
     "brands": {
         "rolex": {
@@ -1622,6 +1641,12 @@
             "subject": "Ihr Termin am {date} ist bestätigt",
             "heading": "Termin bestätigt",
             "text": "Wir freuen uns, Sie am {date} in {address} begrüßen zu dürfen."
+        },
+        "enquiryReceived": {
+            "subject": "Ihre Anfrage zu {item}",
+            "heading": "Vielen Dank für Ihre Anfrage",
+            "text": "Wir haben Ihre Frage zu {item} erhalten und melden uns in Kürze.",
+            "reservationText": "Wir haben Ihre Reservierungsanfrage für {item} erhalten und bestätigen Ihnen in Kürze, ob wir das Stück für Sie zurücklegen können."
         }
     }
 }

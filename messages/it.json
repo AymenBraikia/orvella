@@ -1126,7 +1126,26 @@
         "bookAppointment": "Prenota un appuntamento",
         "consignmentBeforeLink": "Desideri dare in permuta uno dei tuoi orologi? Contattaci tramite la pagina",
         "consignmentAfterLink": "indicando i dettagli del tuo orologio e ti faremo un'offerta.",
-        "clasp": "Chiusura"
+        "clasp": "Chiusura",
+        "enquiry": {
+            "enquire": "Chiedi informazioni su questo pezzo",
+            "reserve": "Richiedi una prenotazione",
+            "whatsapp": "Chiedi su WhatsApp",
+            "whatsappText": "Buongiorno, sono interessato a {name}{ref}: {url}",
+            "heading": "Chiedi informazioni su questo pezzo",
+            "typeQuestion": "Domanda",
+            "typeReservation": "Richiesta di prenotazione",
+            "reservationNote": "Ti confermeremo se possiamo riservarti il pezzo; per ora non viene addebitato nulla.",
+            "name": "Il tuo nome",
+            "messagePlaceholder": "Domande su condizioni, storico dei servizi, visione in negozio…",
+            "submit": "Invia richiesta",
+            "submitReservation": "Richiedi prenotazione",
+            "sending": "Invio in corso…",
+            "successHeading": "Grazie: il tuo messaggio è stato inviato",
+            "successText": "Di solito rispondiamo entro un giorno lavorativo.",
+            "again": "Invia un altro messaggio",
+            "error": "Non è stato possibile inviare il messaggio. Controlla i dati e riprova."
+        }
     },
     "brands": {
         "rolex": {
@@ -1628,6 +1647,12 @@
             "subject": "Il tuo appuntamento del {date} è confermato",
             "heading": "Appuntamento confermato",
             "text": "Saremo lieti di accoglierti il {date} in {address}."
+        },
+        "enquiryReceived": {
+            "subject": "La tua richiesta su {item}",
+            "heading": "Grazie per la tua richiesta",
+            "text": "Abbiamo ricevuto la tua domanda su {item} e ti risponderemo a breve.",
+            "reservationText": "Abbiamo ricevuto la tua richiesta di prenotazione per {item}. Ti confermeremo a breve se possiamo riservarlo per te."
         }
     }
 }
