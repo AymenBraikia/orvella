@@ -9,10 +9,11 @@ import { cookies } from "next/headers";
 
 import { revalidatePath } from "next/cache";
 import { authRegex } from "../regex";
+import { safe_redirect } from "../safe_redirect";
 
 export default async function Sign_up(data: FormData): Promise<{ success: boolean; error?: string; redirect?: string | null }> {
     try {
-        const redirect = data.get("redirect") as string | null;
+        const redirect = safe_redirect(data.get("redirect") as string | null);
         const firstName = data.get("firstName") as string | null;
         const lastName = data.get("lastName") as string | null;
 

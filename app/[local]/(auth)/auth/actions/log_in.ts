@@ -8,10 +8,11 @@ import { cookies } from "next/headers";
 
 import { revalidatePath } from "next/cache";
 import { authRegex } from "../regex";
+import { safe_redirect } from "../safe_redirect";
 
 export default async function Log_in(data: FormData): Promise<{ success: boolean; error?: string; redirect?: string | null }> {
     try {
-        const redirect = data.get("redirect") as string | null;
+        const redirect = safe_redirect(data.get("redirect") as string | null);
         const email = data.get("email") as string | null;
         const password = data.get("password") as string | null;
 

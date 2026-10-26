@@ -52,7 +52,7 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
             <p className="text-sm leading-relaxed text-secondary">{t("description")}</p>
 
             <form onSubmit={handleSubmit} className="flex-center flex-col gap-6 w-full" noValidate>
-                <input type="hidden" name="recordId" value={params.redirect} />
+                <input type="hidden" name="redirect" value={params.redirect ?? ""} />
 
                 <Input placeholder={t("emailPlaceholder")} name="email" type="email" required label={t("email")} />
 

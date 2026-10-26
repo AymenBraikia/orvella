@@ -58,7 +58,7 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
             <p className="text-sm leading-relaxed text-secondary">{t("description")}</p>
 
             <form onSubmit={handleSubmit} className="flex-center flex-col gap-6 w-full" noValidate>
-                <input type="hidden" name="recordId" value={params.redirect} />
+                <input type="hidden" name="redirect" value={params.redirect ?? ""} />
 
                 <div className="w-full flex flex-col sm:flex-row items-stretch gap-6">
                     <Input placeholder={t("firstNamePlaceholder")} name="firstName" type="text" required label={t("firstName")} />
