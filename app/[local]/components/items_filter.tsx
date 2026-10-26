@@ -115,7 +115,7 @@ export default function ItemsFilter({ facets, counts, selection, onChange, resul
         <>
             <div aria-hidden="true" onClick={() => setOpen(false)} className={`fixed inset-0 z-90 bg-black/50 transition-default lg:hidden ${open ? "opacity-100" : "pointer-events-none opacity-0"}`} />
 
-            <aside
+            <div
                 ref={panel}
                 role="dialog"
                 aria-modal={open || undefined}
@@ -195,7 +195,7 @@ export default function ItemsFilter({ facets, counts, selection, onChange, resul
                         {t("showResults", { count: resultCount })}
                     </button>
                 </footer>
-            </aside>
+            </div>
         </>
     );
 }

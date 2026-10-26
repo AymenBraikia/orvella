@@ -8,6 +8,7 @@ import dynamic from "next/dynamic";
 import { useCurrency } from "../(site)/context/currencyContext";
 import { Item } from "../(site)/lib/filters";
 import StockBadge from "./stock_badge";
+import { item_name } from "../(site)/lib/item_name";
 
 const QuickViewModal = dynamic(() => import("./quick_view"), {
     ssr: false,
@@ -20,19 +21,19 @@ export default function Card({ data }: { data: Item }) {
 
     return (
         <>
-            <div aria-label={`${data.display_name}`} className="h-fit sm:h-110 w-full flex flex-col justify-start items-start gap-4 transition-long group" key={data.slug} onClick={() => innerWidth < 1536 && set_view(data)}>
+            <div aria-label={`${item_name(data)}`} className="h-fit sm:h-110 w-full flex flex-col justify-start items-start gap-4 transition-long group" key={data.slug} onClick={() => innerWidth < 1536 && set_view(data)}>
                 <div className="relative w-full sm:h-fit flex-center overflow-hidden aspect-square">
                     <StockBadge status={data.stock_status} />
                     <Image
                         src={data.images[0]}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
                         fill
-                        alt={data.display_name}
+                        alt={item_name(data)}
                         className="object-contain select-none scale-100 brightness-100 transition-long group-hover:scale-105 group-hover:brightness-50"
                     />
                     <div className="2xl:flex-center relative w-full h-15 fade-out group-hover:fade-in transition-long hidden gap-4 z-10">
                         <button
-                            aria-label={`quick view ${data.display_name}`}
+                            aria-label={`quick view ${item_name(data)}`}
                             type="button"
                             className="button cursor-pointer p-4 select-none transition-default capitalize min-w-fit whitespace-nowrap text-sm h-fit"
                             onClick={() => set_view(data)}
@@ -45,7 +46,7 @@ export default function Card({ data }: { data: Item }) {
                     </div>
                 </div>
                 <div className="w-full flex flex-col justify-start items-start max-h-30 min-h-20">
-                    <h5 className="sm:title6 title4 font-secondary capitalize text-shine">{data.display_name}</h5>
+                    <h5 className="sm:title6 title4 font-secondary capitalize text-shine">{item_name(data)}</h5>
                     <h6 className="sm:title6 title5 font-secondary">{format_price(data.price, currency)}</h6>
                 </div>
             </div>
