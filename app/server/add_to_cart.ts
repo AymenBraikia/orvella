@@ -17,15 +17,11 @@ export default async function addToCart(slug: string): Promise<boolean> {
 
         increase_relevance_score(slug, score_rewards.add_to_cart);
 
-        const newCart = user.cart.find((i) => i.slug == slug)
-            ? {
-                  $inc: {
-                      "$.cart.quantity": 1,
-                  },
-              }
-            : { $push: { cart: { ...item, quantity: 1 } } };
+        const users = await users_collection();
 
-        const operation = await (await users_collection()).updateOne({ email: user.email }, newCart);
+        const operation = user.cart.find((i) => i.slug == slug)
+            ? await users.updateOne({ email: user.email, "cart.slug": slug }, { $inc: { "cart.$.quantity": 1 } })
+            : await users.updateOne({ email: user.email }, { $push: { cart: { ...item, quantity: 1 } } });
 
         revalidatePath("/");
         return operation.acknowledged;
