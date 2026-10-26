@@ -115,3 +115,56 @@ export async function orders_for_email(email: string): Promise<Order[]> {
     const docs = await (await orders_collection()).find({ email }, { projection: { _id: 0 }, sort: { created_at: -1 } }).toArray();
     return JSON.parse(JSON.stringify(docs.map(normalize_order)));
 }
+
+/** Status changes the dealer can make from the admin, and from which states. */
+export const ORDER_TRANSITIONS: Record<OrderStatus, OrderStatus[]> = {
+    pending_payment: ["paid", "cancelled"],
+    paid: ["shipped", "refunded"],
+    shipped: ["delivered", "refunded"],
+    delivered: ["refunded"],
+    cancelled: ["paid"],
+    refunded: [],
+};
+
+export type TransitionResult = { ok: true; order: Order } | { ok: false; error: string };
+
+/**
+ * Move an order to `next`. Payment and cancellation go through mark_order_paid / cancel_order so
+ * stock follows; the rest only change status (refunds are made in PayPal / the bank, not here).
+ */
+export async function transition_order(id: string, next: OrderStatus, options: { by: string; note?: string; tracking?: { carrier: string; number: string } }): Promise<TransitionResult> {
+    const orders = await orders_collection();
+    const current = await orders.findOne({ id }, { projection: { _id: 0 } });
+    if (!current) return { ok: false, error: "Order not found." };
+
+    const normalized = normalize_order(current);
+    const status = normalized.status;
+    if (!ORDER_TRANSITIONS[status].includes(next)) return { ok: false, error: `An order that is "${status}" cannot become "${next}".` };
+
+    // Orders from before the status rework ("Pending", "Completed"...) are upgraded in place first.
+    if ((current.status as string) !== status || !current.status_history || !current.totals) {
+        await orders.updateOne({ id, status: current.status }, { $set: { status, status_history: normalized.status_history, totals: normalized.totals, tax: normalized.tax, exchange_rate: normalized.exchange_rate, items: normalized.items } });
+    }
+
+    const note = options.note?.trim() || undefined;
+
+    if (next == "paid") {
+        const order = await mark_order_paid(id, note ?? (current.payment_method == "Bank Transfer" ? "Bank transfer received" : "Marked as paid"), {}, options.by);
+        return order ? { ok: true, order } : { ok: false, error: "The order could not be marked as paid." };
+    }
+
+    if (next == "cancelled") {
+        const order = await cancel_order(id, note ?? "Cancelled by the store", options.by);
+        return order ? { ok: true, order } : { ok: false, error: "The order could not be cancelled." };
+    }
+
+    if (next == "shipped" && !(options.tracking?.carrier.trim() && options.tracking.number.trim())) return { ok: false, error: "Carrier and tracking number are required to mark an order as shipped." };
+
+    const set: Partial<Order> = { status: next, updated_at: new Date() };
+    if (next == "shipped" && options.tracking) set.tracking = { carrier: options.tracking.carrier.trim(), number: options.tracking.number.trim() };
+
+    const history_note = next == "shipped" && set.tracking ? [note, `${set.tracking.carrier} ${set.tracking.number}`].filter(Boolean).join(" · ") : note;
+
+    const order = await orders.findOneAndUpdate({ id, status }, { $set: set, $push: { status_history: event(next, history_note, options.by) } }, { returnDocument: "after", projection: { _id: 0 } });
+    return order ? { ok: true, order } : { ok: false, error: "The order changed in the meantime — reload and try again." };
+}
