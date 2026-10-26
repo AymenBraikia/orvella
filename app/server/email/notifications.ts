@@ -324,3 +324,25 @@ export async function notify_enquiry(e: Enquiry) {
         ),
     ]);
 }
+
+/* ───────────────────────── account ───────────────────────── */
+
+export async function notify_password_reset({ email, name, token, locale: wanted }: { email: string; name?: string; token: string; locale?: string }) {
+    await safely("password reset", async () => {
+        const s = await get_settings();
+        const { t, locale } = await translator(wanted, s);
+        const { html, text } = render_email({
+            store: s.store_name,
+            heading: t("emails.passwordReset.heading"),
+            blocks: [
+                { kind: "p", text: t("emails.greeting", { name: name ?? "" }).replace(/ ,/, ",") },
+                { kind: "p", text: t("emails.passwordReset.text") },
+                { kind: "button", label: t("emails.passwordReset.button"), href: absolute_url(`/${locale}/auth/reset?token=${token}`) },
+                { kind: "p", text: t("emails.passwordReset.ignore") },
+            ],
+            footer: footer(s),
+            dir: getDirection(locale),
+        });
+        await send_email({ to: email, subject: t("emails.passwordReset.subject"), html, text });
+    });
+}

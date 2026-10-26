@@ -279,7 +279,8 @@
             "loggingIn": "Connexion en cours…",
             "dontHaveAccount": "Vous n'avez pas de compte ?",
             "signUp": "S'inscrire",
-            "somethingWentWrong": "Une erreur s'est produite. Veuillez réessayer."
+            "somethingWentWrong": "Une erreur s'est produite. Veuillez réessayer.",
+            "forgot": "Mot de passe oublié ?"
         },
         "errors": {
             "missing": "Veuillez remplir tous les champs obligatoires.",
@@ -288,6 +289,24 @@
             "wrong_credentials": "E-mail ou mot de passe incorrect.",
             "email_taken": "Un compte existe déjà avec cette adresse e-mail. Vous connecter ?",
             "rate": "Trop de tentatives. Veuillez patienter quelques minutes puis réessayer."
+        },
+        "forgot": {
+            "title": "Réinitialiser le mot de passe",
+            "description": "Saisissez l’adresse e-mail de votre compte et nous vous enverrons un lien pour choisir un nouveau mot de passe.",
+            "email": "E-mail",
+            "submit": "Envoyer le lien",
+            "sending": "Envoi en cours…",
+            "sent": "Si un compte existe pour cette adresse, vous recevrez dans quelques minutes un e-mail avec un lien. Le lien est valable une heure.",
+            "back": "Retour à la connexion"
+        },
+        "reset": {
+            "title": "Choisissez un nouveau mot de passe",
+            "description": "Au moins 8 caractères.",
+            "password": "Nouveau mot de passe",
+            "submit": "Enregistrer",
+            "saving": "Enregistrement…",
+            "invalid": "Ce lien n’est pas valide ou a expiré.",
+            "newLink": "Demander un nouveau lien"
         }
     },
     "home": {
@@ -1671,6 +1690,13 @@
             "heading": "Merci pour votre demande",
             "text": "Nous avons bien reçu votre question concernant {item} et vous répondrons très prochainement.",
             "reservationText": "Nous avons bien reçu votre demande de réservation pour {item}. Nous vous confirmerons très prochainement si nous pouvons vous la réserver."
+        },
+        "passwordReset": {
+            "subject": "Réinitialisez votre mot de passe",
+            "heading": "Réinitialisez votre mot de passe",
+            "text": "Nous avons reçu une demande de réinitialisation du mot de passe de votre compte. Le lien ci-dessous est valable une heure.",
+            "button": "Choisir un nouveau mot de passe",
+            "ignore": "Si vous n’êtes pas à l’origine de cette demande, ignorez cet e-mail : votre mot de passe reste inchangé."
         }
     },
     "consultation": {

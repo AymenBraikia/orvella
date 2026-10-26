@@ -279,7 +279,8 @@
             "loggingIn": "Accesso in corso…",
             "dontHaveAccount": "Non hai un account?",
             "signUp": "Registrati",
-            "somethingWentWrong": "Qualcosa è andato storto. Riprova."
+            "somethingWentWrong": "Qualcosa è andato storto. Riprova.",
+            "forgot": "Password dimenticata?"
         },
         "errors": {
             "missing": "Compila tutti i campi obbligatori.",
@@ -288,6 +289,24 @@
             "wrong_credentials": "E-mail o password errate.",
             "email_taken": "Esiste già un account con questa e-mail. Vuoi accedere?",
             "rate": "Troppi tentativi. Attendi qualche minuto e riprova."
+        },
+        "forgot": {
+            "title": "Reimposta la password",
+            "description": "Inserisci l’e-mail del tuo account e ti invieremo un link per scegliere una nuova password.",
+            "email": "E-mail",
+            "submit": "Invia link",
+            "sending": "Invio in corso…",
+            "sent": "Se esiste un account con questo indirizzo, riceverai a breve un’e-mail con un link. Il link è valido per un’ora.",
+            "back": "Torna all’accesso"
+        },
+        "reset": {
+            "title": "Scegli una nuova password",
+            "description": "Almeno 8 caratteri.",
+            "password": "Nuova password",
+            "submit": "Salva password",
+            "saving": "Salvataggio…",
+            "invalid": "Questo link non è valido o è scaduto.",
+            "newLink": "Richiedi un nuovo link"
         }
     },
     "home": {
@@ -1671,6 +1690,13 @@
             "heading": "Grazie per la tua richiesta",
             "text": "Abbiamo ricevuto la tua domanda su {item} e ti risponderemo a breve.",
             "reservationText": "Abbiamo ricevuto la tua richiesta di prenotazione per {item}. Ti confermeremo a breve se possiamo riservarlo per te."
+        },
+        "passwordReset": {
+            "subject": "Reimposta la tua password",
+            "heading": "Reimposta la tua password",
+            "text": "Abbiamo ricevuto una richiesta di reimpostazione della password del tuo account. Il link seguente è valido per un’ora.",
+            "button": "Scegli una nuova password",
+            "ignore": "Se non l’hai richiesto, puoi ignorare questa e-mail: la password resta invariata."
         }
     },
     "consultation": {

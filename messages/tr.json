@@ -279,7 +279,8 @@
             "loggingIn": "Giriş yapılıyor…",
             "dontHaveAccount": "Hesabınız yok mu?",
             "signUp": "Kayıt ol",
-            "somethingWentWrong": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+            "somethingWentWrong": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+            "forgot": "Şifrenizi mi unuttunuz?"
         },
         "errors": {
             "missing": "Lütfen tüm zorunlu alanları doldurun.",
@@ -288,6 +289,24 @@
             "wrong_credentials": "E-posta veya şifre hatalı.",
             "email_taken": "Bu e-posta ile zaten bir hesap var. Giriş yapmak ister misiniz?",
             "rate": "Çok fazla deneme. Lütfen birkaç dakika bekleyip tekrar deneyin."
+        },
+        "forgot": {
+            "title": "Şifrenizi sıfırlayın",
+            "description": "Hesabınızın e-posta adresini girin; yeni bir şifre belirlemeniz için size bir bağlantı gönderelim.",
+            "email": "E-posta",
+            "submit": "Bağlantı gönder",
+            "sending": "Gönderiliyor…",
+            "sent": "Bu adrese ait bir hesap varsa birkaç dakika içinde bağlantı içeren bir e-posta alacaksınız. Bağlantı bir saat geçerlidir.",
+            "back": "Girişe dön"
+        },
+        "reset": {
+            "title": "Yeni bir şifre belirleyin",
+            "description": "En az 8 karakter.",
+            "password": "Yeni şifre",
+            "submit": "Şifreyi kaydet",
+            "saving": "Kaydediliyor…",
+            "invalid": "Bu bağlantı geçersiz veya süresi dolmuş.",
+            "newLink": "Yeni bağlantı iste"
         }
     },
     "home": {
@@ -1666,6 +1685,13 @@
             "heading": "Talebiniz için teşekkürler",
             "text": "{item} hakkındaki sorunuzu aldık ve kısa süre içinde yanıt vereceğiz.",
             "reservationText": "{item} için rezervasyon talebinizi aldık. Sizin için ayırıp ayıramayacağımızı kısa süre içinde onaylayacağız."
+        },
+        "passwordReset": {
+            "subject": "Şifrenizi sıfırlayın",
+            "heading": "Şifrenizi sıfırlayın",
+            "text": "Hesabınızın şifresini sıfırlama talebi aldık. Aşağıdaki bağlantı bir saat geçerlidir.",
+            "button": "Yeni şifre belirle",
+            "ignore": "Bu talebi siz yapmadıysanız bu e-postayı yok sayabilirsiniz — şifreniz değişmez."
         }
     },
     "consultation": {

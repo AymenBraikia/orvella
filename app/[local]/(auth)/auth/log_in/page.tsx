@@ -64,6 +64,10 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
                 </button>
             </form>
 
+            <Link href="/auth/forgot" className="text-sm underline text-secondary">
+                {t("forgot")}
+            </Link>
+
             <p className="text-center text-sm text-secondary">
                 {t("dontHaveAccount")}{" "}
                 <Link href="/auth/sign_up" className="font-medium text-primary underline underline-offset-2">

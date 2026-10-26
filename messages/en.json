@@ -279,7 +279,8 @@
             "loggingIn": "Logging you in…",
             "dontHaveAccount": "Don't have an account?",
             "signUp": "Sign up",
-            "somethingWentWrong": "Something went wrong. Please try again."
+            "somethingWentWrong": "Something went wrong. Please try again.",
+            "forgot": "Forgot your password?"
         },
         "errors": {
             "missing": "Please fill in all required fields.",
@@ -288,6 +289,24 @@
             "wrong_credentials": "Wrong email or password.",
             "email_taken": "An account with this email already exists. Log in instead?",
             "rate": "Too many attempts. Please wait a few minutes and try again."
+        },
+        "forgot": {
+            "title": "Reset your password",
+            "description": "Enter the email address of your account and we will send you a link to choose a new password.",
+            "email": "Email",
+            "submit": "Send link",
+            "sending": "Sending…",
+            "sent": "If an account exists for this address, you will receive an email with a link in a few minutes. The link is valid for one hour.",
+            "back": "Back to log in"
+        },
+        "reset": {
+            "title": "Choose a new password",
+            "description": "At least 8 characters.",
+            "password": "New password",
+            "submit": "Save password",
+            "saving": "Saving…",
+            "invalid": "This link is invalid or has expired.",
+            "newLink": "Request a new link"
         }
     },
     "home": {
@@ -1666,6 +1685,13 @@
             "heading": "Thank you for your enquiry",
             "text": "We have received your question about the {item} and will reply shortly.",
             "reservationText": "We have received your reservation request for the {item}. We will confirm shortly whether we can hold it for you."
+        },
+        "passwordReset": {
+            "subject": "Reset your password",
+            "heading": "Reset your password",
+            "text": "We received a request to reset the password of your account. The link below is valid for one hour.",
+            "button": "Choose a new password",
+            "ignore": "If you did not ask for this, you can ignore this email — your password stays the same."
         }
     },
     "consultation": {

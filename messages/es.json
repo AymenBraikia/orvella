@@ -278,7 +278,8 @@
             "loggingIn": "Iniciando sesión…",
             "dontHaveAccount": "¿Todavía no tiene una cuenta?",
             "signUp": "Regístrese",
-            "somethingWentWrong": "Algo ha salido mal. Vuelva a intentarlo."
+            "somethingWentWrong": "Algo ha salido mal. Vuelva a intentarlo.",
+            "forgot": "¿Ha olvidado su contraseña?"
         },
         "errors": {
             "missing": "Rellene todos los campos obligatorios.",
@@ -287,6 +288,24 @@
             "wrong_credentials": "Correo electrónico o contraseña incorrectos.",
             "email_taken": "Ya existe una cuenta con este correo electrónico. ¿Desea iniciar sesión?",
             "rate": "Demasiados intentos. Espere unos minutos e inténtelo de nuevo."
+        },
+        "forgot": {
+            "title": "Restablecer la contraseña",
+            "description": "Introduzca el correo electrónico de su cuenta y le enviaremos un enlace para elegir una contraseña nueva.",
+            "email": "Correo electrónico",
+            "submit": "Enviar enlace",
+            "sending": "Enviando…",
+            "sent": "Si existe una cuenta con esta dirección, recibirá en unos minutos un correo con un enlace. El enlace es válido durante una hora.",
+            "back": "Volver a iniciar sesión"
+        },
+        "reset": {
+            "title": "Elija una contraseña nueva",
+            "description": "Al menos 8 caracteres.",
+            "password": "Contraseña nueva",
+            "submit": "Guardar contraseña",
+            "saving": "Guardando…",
+            "invalid": "Este enlace no es válido o ha caducado.",
+            "newLink": "Solicitar un enlace nuevo"
         }
     },
     "home": {
@@ -1670,6 +1689,13 @@
             "heading": "Gracias por su consulta",
             "text": "Hemos recibido su pregunta sobre {item} y le responderemos en breve.",
             "reservationText": "Hemos recibido su solicitud de reserva de {item}. Le confirmaremos en breve si podemos reservarla para usted."
+        },
+        "passwordReset": {
+            "subject": "Restablezca su contraseña",
+            "heading": "Restablezca su contraseña",
+            "text": "Hemos recibido una solicitud para restablecer la contraseña de su cuenta. El siguiente enlace es válido durante una hora.",
+            "button": "Elegir una contraseña nueva",
+            "ignore": "Si no lo ha solicitado, ignore este correo: su contraseña no cambiará."
         }
     },
     "consultation": {

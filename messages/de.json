@@ -278,7 +278,8 @@
             "loggingIn": "Anmeldung läuft…",
             "dontHaveAccount": "Sie haben noch kein Konto?",
             "signUp": "Registrieren",
-            "somethingWentWrong": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+            "somethingWentWrong": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+            "forgot": "Passwort vergessen?"
         },
         "errors": {
             "missing": "Bitte füllen Sie alle Pflichtfelder aus.",
@@ -287,6 +288,24 @@
             "wrong_credentials": "E-Mail-Adresse oder Passwort ist falsch.",
             "email_taken": "Mit dieser E-Mail-Adresse gibt es bereits ein Konto. Möchten Sie sich anmelden?",
             "rate": "Zu viele Versuche. Bitte warten Sie ein paar Minuten und versuchen Sie es erneut."
+        },
+        "forgot": {
+            "title": "Passwort zurücksetzen",
+            "description": "Geben Sie die E-Mail-Adresse Ihres Kontos ein. Wir senden Ihnen einen Link, mit dem Sie ein neues Passwort wählen können.",
+            "email": "E-Mail",
+            "submit": "Link senden",
+            "sending": "Wird gesendet …",
+            "sent": "Falls zu dieser Adresse ein Konto besteht, erhalten Sie in wenigen Minuten eine E-Mail mit einem Link. Der Link ist eine Stunde gültig.",
+            "back": "Zurück zur Anmeldung"
+        },
+        "reset": {
+            "title": "Neues Passwort wählen",
+            "description": "Mindestens 8 Zeichen.",
+            "password": "Neues Passwort",
+            "submit": "Passwort speichern",
+            "saving": "Wird gespeichert …",
+            "invalid": "Dieser Link ist ungültig oder abgelaufen.",
+            "newLink": "Neuen Link anfordern"
         }
     },
     "home": {
@@ -1665,6 +1684,13 @@
             "heading": "Vielen Dank für Ihre Anfrage",
             "text": "Wir haben Ihre Frage zu {item} erhalten und melden uns in Kürze.",
             "reservationText": "Wir haben Ihre Reservierungsanfrage für {item} erhalten und bestätigen Ihnen in Kürze, ob wir das Stück für Sie zurücklegen können."
+        },
+        "passwordReset": {
+            "subject": "Passwort zurücksetzen",
+            "heading": "Passwort zurücksetzen",
+            "text": "Wir haben eine Anfrage erhalten, das Passwort Ihres Kontos zurückzusetzen. Der folgende Link ist eine Stunde gültig.",
+            "button": "Neues Passwort wählen",
+            "ignore": "Falls Sie dies nicht angefordert haben, können Sie diese E-Mail ignorieren – Ihr Passwort bleibt unverändert."
         }
     },
     "consultation": {
