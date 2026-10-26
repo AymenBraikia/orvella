@@ -193,12 +193,25 @@
             "message": "Mensaje",
             "attachImages": "Adjuntar imágenes",
             "required": "Este campo es obligatorio",
-            "invalidEmail": "Introduzca una dirección de correo electrónico válida"
+            "invalidEmail": "Introduzca una dirección de correo electrónico válida",
+            "selectOption": "Elija una opción.",
+            "invalidPrice": "Introduzca un precio válido.",
+            "futureDate": "Elija una fecha futura."
         },
         "stock": {
             "available": "Disponible",
             "reserved": "Reservado",
             "sold": "Vendido"
+        },
+        "upload": {
+            "hint": "Hasta {max} fotos, máx. {size} MB cada una (JPG, PNG, WebP, HEIC).",
+            "tooMany": "Puede adjuntar hasta {max} fotos.",
+            "tooLarge": "{name} supera los {max} MB.",
+            "notImage": "{name} no es una imagen compatible.",
+            "failed": "No se pudo subir {name}.",
+            "remove": "Eliminar foto",
+            "add": "Añadir fotos",
+            "uploading": "{progress} %"
         }
     },
     "error": {
@@ -396,7 +409,15 @@
                 "conditionNew": "Nuevo",
                 "conditionMint": "Impecable",
                 "conditionPreOwned": "De segunda mano"
-            }
+            },
+            "success": {
+                "heading": "Gracias: hemos recibido su solicitud",
+                "text": "Nuestros especialistas revisarán sus datos y fotos y le responderán en un plazo de 48 horas.",
+                "again": "Enviar otra pieza"
+            },
+            "error": "No se pudo enviar su solicitud. Revise sus datos e inténtelo de nuevo.",
+            "sending": "Enviando…",
+            "waitForUploads": "Espere a que terminen de subirse todas las fotos."
         }
     },
     "polish": {
@@ -440,7 +461,14 @@
             "reason": "Motivo",
             "submit": "Enviar",
             "appointmentDate": "Fecha de la cita"
-        }
+        },
+        "success": {
+            "heading": "Su solicitud de cita se ha enviado",
+            "text": "Le confirmaremos la cita por correo electrónico o teléfono en breve.",
+            "again": "Solicitar otra cita"
+        },
+        "error": "No se pudo enviar su solicitud. Revise sus datos e inténtelo de nuevo.",
+        "sending": "Enviando…"
     },
     "about": {
         "heading": "Sobre nosotros",

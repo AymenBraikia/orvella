@@ -1,44 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import Input from "@/app/components/elements/input";
 import CheckBox from "@/app/components/elements/checkbox";
+import ImagePicker from "@/app/components/upload/image_picker";
 import Submit from "./submit";
+import { sell_schema, type SellInput, type SellOutput } from "./schema";
+import { MAX_SELL_IMAGES } from "../lib/upload_rules";
 import { useTranslations } from "next-intl";
 
-const formSchema = z.object({
-    firstName: z.string().min(1, "First name is required"),
-    lastName: z.string().min(1, "Last name is required"),
-    email: z.string().email("Enter a valid email"),
-    phone: z.string().min(1, "Phone number is required"),
-
-    intent: z.enum(["consign", "sell"], {
-        error: "Select consignment or sell",
-    }),
-
-    brand: z.string().min(1, "Brand is required"),
-    price: z.coerce.number({ error: "Enter a valid price" }).positive("Price must be greater than 0"),
-    model: z.string().optional(),
-    refNum: z.string().optional(),
-    box: z.boolean().optional(),
-    papers: z.boolean().optional(),
-    condition: z.enum(["new", "mint", "pre-owned"], {
-        error: "Select a condition",
-    }),
-    images: z.any().refine((files: FileList | undefined) => !files || files.length <= 2, "Max 2 images allowed"),
-    message: z.string().optional(),
-});
-
-type FormInput = z.input<typeof formSchema>;
-type FormOutput = z.output<typeof formSchema>;
+type FormInput = SellInput;
+type FormOutput = SellOutput;
 
 export default function Form() {
     const t = useTranslations("sell.form");
     const t_fields = useTranslations("common.formFields");
     const t_btns = useTranslations("common.buttons");
+    const t_upload = useTranslations("common.upload");
+
+    const formSchema = useMemo(
+        () =>
+            sell_schema({
+                required: t_fields("required"),
+                invalidEmail: t_fields("invalidEmail"),
+                selectOption: t_fields("selectOption"),
+                invalidPrice: t_fields("invalidPrice"),
+                tooManyImages: t_upload("tooMany", { max: MAX_SELL_IMAGES }),
+            }),
+        [t_fields, t_upload],
+    );
 
     const stepFields: Record<number, (keyof FormInput)[]> = {
         0: ["firstName", "lastName", "email", "phone"],
@@ -48,18 +40,31 @@ export default function Form() {
 
     const [step, set_step] = useState<number>(0);
 
-    const [results, set_results] = useState<boolean>(false);
+    const [state, set_state] = useState<"editing" | "sending" | "sent" | "failed">("editing");
+    const [uploading, set_uploading] = useState(false);
+    const [picker_key, set_picker_key] = useState(0);
 
     const {
         register,
         control,
         handleSubmit,
         trigger,
+        setValue,
+        reset,
         formState: { errors },
     } = useForm<FormInput, unknown, FormOutput>({
         resolver: zodResolver(formSchema),
         mode: "onSubmit",
+        defaultValues: { images: [] },
     });
+
+    const on_images = useCallback(
+        (urls: string[], busy: boolean) => {
+            setValue("images", urls);
+            set_uploading(busy);
+        },
+        [setValue],
+    );
 
     const nextStep = async () => {
         const valid = await trigger(stepFields[step]);
@@ -68,7 +73,32 @@ export default function Form() {
 
     const prevStep = () => set_step((p) => Math.max(p - 1, 0));
 
-    const onValid = async (data: FormOutput) => set_results(await Submit({ ...data, id: crypto.randomUUID() }));
+    const onValid = async (data: FormOutput) => {
+        if (uploading) return;
+        set_state("sending");
+        const result = await Submit(data);
+        set_state(result.ok ? "sent" : "failed");
+    };
+
+    function start_over() {
+        reset({ images: [] });
+        set_picker_key((k) => k + 1);
+        set_step(0);
+        set_state("editing");
+    }
+
+    if (state == "sent") {
+        return (
+            <div className="flex-center flex-col gap-4 text-center py-16" id="form" role="status">
+                <h3 className="font-medium font-secondary text-gold">{t("success.heading")}</h3>
+                <p className="text-shine max-w-150">{t("success.text")}</p>
+                <button type="button" className="button2 px-4 py-2 underline" onClick={start_over}>
+                    {t("success.again")}
+                </button>
+            </div>
+        );
+    }
+
     return (
         <div className="flex-center flex-col gap-4" id="form">
             <h3 className="font-medium font-secondary">{t("heading")}</h3>
@@ -139,7 +169,7 @@ export default function Form() {
 
                         <div className="max-w-full w-full sm:w-full flex flex-col gap-4">
                             <p>{t_fields("attachImages")}</p>
-                            <input {...register("images")} type="file" id="images" multiple accept="image/*" className="button w-full" />
+                            <ImagePicker key={picker_key} kind="sell" max={MAX_SELL_IMAGES} onChange={on_images} />
                             {errors.images && <p className="text-red-400 text-sm w-full">{errors.images.message as string}</p>}
                         </div>
 
@@ -155,8 +185,8 @@ export default function Form() {
                         {t_btns("previous")}
                     </button>
                     {step == 2 ? (
-                        <button type="submit" className="button px-4 py-2">
-                            {t_btns("submit")}
+                        <button type="submit" disabled={state == "sending" || uploading} className={`button px-4 py-2 ${state == "sending" || uploading ? "disabled" : ""}`}>
+                            {state == "sending" ? t("sending") : t_btns("submit")}
                         </button>
                     ) : (
                         <button type="button" className="button px-4 py-2" onClick={nextStep}>
@@ -164,6 +194,12 @@ export default function Form() {
                         </button>
                     )}
                 </div>
+                {uploading && step == 2 && <p className="text-sm text-secondary">{t("waitForUploads")}</p>}
+                {state == "failed" && (
+                    <p role="alert" className="text-red-400 text-sm">
+                        {t("error")}
+                    </p>
+                )}
             </form>
         </div>
     );

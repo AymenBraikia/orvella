@@ -194,12 +194,25 @@
             "message": "Mesaj",
             "attachImages": "Görsel Ekle",
             "required": "Bu alan zorunludur",
-            "invalidEmail": "Lütfen geçerli bir e-posta adresi girin"
+            "invalidEmail": "Lütfen geçerli bir e-posta adresi girin",
+            "selectOption": "Lütfen bir seçenek belirleyin.",
+            "invalidPrice": "Lütfen geçerli bir fiyat girin.",
+            "futureDate": "Lütfen ileri bir tarih seçin."
         },
         "stock": {
             "available": "Mevcut",
             "reserved": "Rezerve",
             "sold": "Satıldı"
+        },
+        "upload": {
+            "hint": "En fazla {max} fotoğraf, her biri en fazla {size} MB (JPG, PNG, WebP, HEIC).",
+            "tooMany": "En fazla {max} fotoğraf ekleyebilirsiniz.",
+            "tooLarge": "{name} dosyası {max} MB sınırını aşıyor.",
+            "notImage": "{name} desteklenen bir görsel değil.",
+            "failed": "{name} yüklenemedi.",
+            "remove": "Fotoğrafı kaldır",
+            "add": "Fotoğraf ekle",
+            "uploading": "%{progress}"
         }
     },
     "error": {
@@ -397,7 +410,15 @@
                 "conditionNew": "Sıfır",
                 "conditionMint": "Kusursuz",
                 "conditionPreOwned": "İkinci el"
-            }
+            },
+            "success": {
+                "heading": "Teşekkürler — talebinizi aldık",
+                "text": "Uzmanlarımız bilgilerinizi ve fotoğraflarınızı inceleyip 48 saat içinde size dönüş yapacak.",
+                "again": "Başka bir parça gönder"
+            },
+            "error": "Talebiniz gönderilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin.",
+            "sending": "Gönderiliyor…",
+            "waitForUploads": "Lütfen tüm fotoğrafların yüklenmesini bekleyin."
         }
     },
     "polish": {
@@ -441,7 +462,14 @@
             "reason": "Görüşme konusu",
             "submit": "Gönder",
             "appointmentDate": "Randevu Tarihi"
-        }
+        },
+        "success": {
+            "heading": "Randevu talebiniz gönderildi",
+            "text": "Randevunuzu kısa süre içinde e-posta veya telefonla onaylayacağız.",
+            "again": "Başka bir randevu talep et"
+        },
+        "error": "Talebiniz gönderilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin.",
+        "sending": "Gönderiliyor…"
     },
     "about": {
         "heading": "Hakkımızda",

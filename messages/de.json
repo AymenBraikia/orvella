@@ -193,12 +193,25 @@
             "message": "Nachricht",
             "attachImages": "Bilder anhängen",
             "required": "Dieses Feld ist erforderlich",
-            "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+            "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+            "selectOption": "Bitte wählen Sie eine Option.",
+            "invalidPrice": "Bitte geben Sie einen gültigen Preis ein.",
+            "futureDate": "Bitte wählen Sie ein Datum in der Zukunft."
         },
         "stock": {
             "available": "Verfügbar",
             "reserved": "Reserviert",
             "sold": "Verkauft"
+        },
+        "upload": {
+            "hint": "Bis zu {max} Fotos, je max. {size} MB (JPG, PNG, WebP, HEIC).",
+            "tooMany": "Sie können bis zu {max} Fotos anhängen.",
+            "tooLarge": "{name} ist größer als {max} MB.",
+            "notImage": "{name} ist kein unterstütztes Bildformat.",
+            "failed": "{name} konnte nicht hochgeladen werden.",
+            "remove": "Foto entfernen",
+            "add": "Fotos hinzufügen",
+            "uploading": "{progress} %"
         }
     },
     "error": {
@@ -396,7 +409,15 @@
                 "conditionNew": "Neu",
                 "conditionMint": "Neuwertig",
                 "conditionPreOwned": "Gebraucht"
-            }
+            },
+            "success": {
+                "heading": "Vielen Dank – wir haben Ihre Anfrage erhalten",
+                "text": "Unsere Experten prüfen Ihre Angaben und Fotos und melden sich innerhalb von 48 Stunden.",
+                "again": "Weiteres Stück einreichen"
+            },
+            "error": "Ihre Anfrage konnte nicht gesendet werden. Bitte prüfen Sie Ihre Angaben und versuchen Sie es erneut.",
+            "sending": "Wird gesendet …",
+            "waitForUploads": "Bitte warten Sie, bis alle Fotos hochgeladen sind."
         }
     },
     "polish": {
@@ -440,7 +461,14 @@
             "reason": "Grund",
             "submit": "Absenden",
             "appointmentDate": "Wunschtermin"
-        }
+        },
+        "success": {
+            "heading": "Ihre Terminanfrage wurde gesendet",
+            "text": "Wir bestätigen Ihren Termin in Kürze per E-Mail oder Telefon.",
+            "again": "Weiteren Termin anfragen"
+        },
+        "error": "Ihre Anfrage konnte nicht gesendet werden. Bitte prüfen Sie Ihre Angaben und versuchen Sie es erneut.",
+        "sending": "Wird gesendet …"
     },
     "about": {
         "heading": "Über uns",
@@ -1080,7 +1108,7 @@
         "dial": "Zifferblatt",
         "here": "hier",
         "findInStore": "Im Geschäft finden",
-        "bookApointment": "Buchen Sie einen Termin",
+        "bookAppointment": "Buchen Sie einen Termin",
         "consignmentBeforeLink": "Möchten Sie eine Ihrer Uhren in Zahlung geben? Kontaktieren Sie uns über die",
         "consignmentAfterLink": "Seite mit den Angaben zu Ihrer Uhr und wir unterbreiten Ihnen ein Angebot.",
         "clasp": "Verschluss"

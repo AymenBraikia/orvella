@@ -44,3 +44,5 @@ next-env.d.ts
 
 
 *.md
+# files uploaded in development without Vercel Blob
+/public/dev-uploads

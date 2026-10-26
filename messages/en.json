@@ -194,12 +194,25 @@
             "message": "Message",
             "attachImages": "Attach Images",
             "required": "This field is required",
-            "invalidEmail": "Please enter a valid email address"
+            "invalidEmail": "Please enter a valid email address",
+            "selectOption": "Please choose an option.",
+            "invalidPrice": "Please enter a valid price.",
+            "futureDate": "Please choose a date in the future."
         },
         "stock": {
             "available": "Available",
             "reserved": "Reserved",
             "sold": "Sold"
+        },
+        "upload": {
+            "hint": "Up to {max} photos, max. {size} MB each (JPG, PNG, WebP, HEIC).",
+            "tooMany": "You can attach up to {max} photos.",
+            "tooLarge": "{name} is larger than {max} MB.",
+            "notImage": "{name} is not a supported image.",
+            "failed": "{name} could not be uploaded.",
+            "remove": "Remove photo",
+            "add": "Add photos",
+            "uploading": "{progress}%"
         }
     },
     "error": {
@@ -397,7 +410,15 @@
                 "conditionNew": "New",
                 "conditionMint": "Mint",
                 "conditionPreOwned": "Pre-owned"
-            }
+            },
+            "success": {
+                "heading": "Thank you — we received your request",
+                "text": "Our specialists will review your details and photos and reply within 48 hours.",
+                "again": "Submit another piece"
+            },
+            "error": "Your request could not be sent. Please check your details and try again.",
+            "sending": "Sending…",
+            "waitForUploads": "Please wait until all photos have finished uploading."
         }
     },
     "polish": {
@@ -441,7 +462,14 @@
             "reason": "Reason",
             "submit": "Submit",
             "appointmentDate": "Appointment Date"
-        }
+        },
+        "success": {
+            "heading": "Your appointment request has been sent",
+            "text": "We will confirm your appointment by email or phone shortly.",
+            "again": "Request another appointment"
+        },
+        "error": "Your request could not be sent. Please check your details and try again.",
+        "sending": "Sending…"
     },
     "about": {
         "heading": "About Us",

@@ -194,12 +194,25 @@
             "message": "Messaggio",
             "attachImages": "Allega immagini",
             "required": "Questo campo è obbligatorio",
-            "invalidEmail": "Inserisci un indirizzo e-mail valido"
+            "invalidEmail": "Inserisci un indirizzo e-mail valido",
+            "selectOption": "Scegli un’opzione.",
+            "invalidPrice": "Inserisci un prezzo valido.",
+            "futureDate": "Scegli una data futura."
         },
         "stock": {
             "available": "Disponibile",
             "reserved": "Riservato",
             "sold": "Venduto"
+        },
+        "upload": {
+            "hint": "Fino a {max} foto, max. {size} MB ciascuna (JPG, PNG, WebP, HEIC).",
+            "tooMany": "Puoi allegare fino a {max} foto.",
+            "tooLarge": "{name} supera i {max} MB.",
+            "notImage": "{name} non è un’immagine supportata.",
+            "failed": "Impossibile caricare {name}.",
+            "remove": "Rimuovi foto",
+            "add": "Aggiungi foto",
+            "uploading": "{progress}%"
         }
     },
     "error": {
@@ -397,7 +410,15 @@
                 "conditionNew": "Nuovo",
                 "conditionMint": "Come nuovo",
                 "conditionPreOwned": "Usato"
-            }
+            },
+            "success": {
+                "heading": "Grazie: abbiamo ricevuto la tua richiesta",
+                "text": "I nostri esperti esamineranno i dati e le foto e ti risponderanno entro 48 ore.",
+                "again": "Invia un altro pezzo"
+            },
+            "error": "Non è stato possibile inviare la richiesta. Controlla i dati e riprova.",
+            "sending": "Invio in corso…",
+            "waitForUploads": "Attendi il termine del caricamento di tutte le foto."
         }
     },
     "polish": {
@@ -441,7 +462,14 @@
             "reason": "Motivo",
             "submit": "Invia",
             "appointmentDate": "Data dell'appuntamento"
-        }
+        },
+        "success": {
+            "heading": "La tua richiesta di appuntamento è stata inviata",
+            "text": "Ti confermeremo l’appuntamento a breve via e-mail o telefono.",
+            "again": "Richiedi un altro appuntamento"
+        },
+        "error": "Non è stato possibile inviare la richiesta. Controlla i dati e riprova.",
+        "sending": "Invio in corso…"
     },
     "about": {
         "heading": "Chi siamo",

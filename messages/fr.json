@@ -194,12 +194,25 @@
             "message": "Message",
             "attachImages": "Joindre des images",
             "required": "Ce champ est obligatoire",
-            "invalidEmail": "Veuillez saisir une adresse e-mail valide"
+            "invalidEmail": "Veuillez saisir une adresse e-mail valide",
+            "selectOption": "Veuillez choisir une option.",
+            "invalidPrice": "Veuillez saisir un prix valide.",
+            "futureDate": "Veuillez choisir une date future."
         },
         "stock": {
             "available": "Disponible",
             "reserved": "Réservé",
             "sold": "Vendu"
+        },
+        "upload": {
+            "hint": "Jusqu’à {max} photos, {size} Mo max. chacune (JPG, PNG, WebP, HEIC).",
+            "tooMany": "Vous pouvez joindre jusqu’à {max} photos.",
+            "tooLarge": "{name} dépasse {max} Mo.",
+            "notImage": "{name} n’est pas une image prise en charge.",
+            "failed": "Impossible d’envoyer {name}.",
+            "remove": "Supprimer la photo",
+            "add": "Ajouter des photos",
+            "uploading": "{progress} %"
         }
     },
     "error": {
@@ -397,7 +410,15 @@
                 "conditionNew": "Neuve",
                 "conditionMint": "Comme neuve",
                 "conditionPreOwned": "D'occasion"
-            }
+            },
+            "success": {
+                "heading": "Merci — nous avons bien reçu votre demande",
+                "text": "Nos spécialistes examineront vos informations et vos photos et vous répondront sous 48 heures.",
+                "again": "Proposer une autre pièce"
+            },
+            "error": "Votre demande n’a pas pu être envoyée. Veuillez vérifier vos informations et réessayer.",
+            "sending": "Envoi en cours…",
+            "waitForUploads": "Veuillez patienter jusqu’à la fin de l’envoi des photos."
         }
     },
     "polish": {
@@ -441,7 +462,14 @@
             "reason": "Motif",
             "submit": "Envoyer",
             "appointmentDate": "Date du rendez-vous"
-        }
+        },
+        "success": {
+            "heading": "Votre demande de rendez-vous a été envoyée",
+            "text": "Nous vous confirmerons le rendez-vous très prochainement par e-mail ou par téléphone.",
+            "again": "Demander un autre rendez-vous"
+        },
+        "error": "Votre demande n’a pas pu être envoyée. Veuillez vérifier vos informations et réessayer.",
+        "sending": "Envoi en cours…"
     },
     "about": {
         "heading": "À propos",

@@ -1,51 +1,59 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import Input from "@/app/components/elements/input";
 import Submit from "./submit";
+import { booking_schema, type BookingInput, type BookingOutput } from "./schema";
 import { useTranslations } from "next-intl";
 
 export default function Form() {
     const t = useTranslations("booking.fields");
+    const t_booking = useTranslations("booking");
     const t_validation = useTranslations("common.formFields");
 
-    const formSchema = z.object({
-        firstName: z.string().min(1, t_validation("required")).max(30),
-        lastName: z.string().min(1, t_validation("required")).max(30),
-        email: z.string().email(t_validation("required")),
-        phone: z.string().min(1, t_validation("required")),
-        reason: z.string().optional(),
-        date: z.coerce
-            .date({
-                error: t_validation("required"),
-            })
-            .refine(
-                (val) => {
-                    const today = new Date();
-                    today.setHours(0, 0, 0, 0);
-                    return val >= today;
-                },
-                {
-                    message: t_validation("required"),
-                },
-            ),
-    });
+    const formSchema = useMemo(
+        () => booking_schema({ required: t_validation("required"), invalidEmail: t_validation("invalidEmail"), futureDate: t_validation("futureDate") }),
+        [t_validation],
+    );
 
-    type FormInput = z.input<typeof formSchema>;
-    type FormOutput = z.output<typeof formSchema>;
+    const [state, set_state] = useState<"editing" | "sending" | "sent" | "failed">("editing");
 
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
-    } = useForm<FormInput, unknown, FormOutput>({
+    } = useForm<BookingInput, unknown, BookingOutput>({
         resolver: zodResolver(formSchema),
         mode: "onSubmit",
     });
 
-    const onValid = (data: FormOutput) => Submit(data);
+    const onValid = async (data: BookingOutput) => {
+        set_state("sending");
+        const result = await Submit(data);
+        set_state(result.ok ? "sent" : "failed");
+    };
+
+    if (state == "sent") {
+        return (
+            <div className="w-full flex-center flex-col gap-4 text-center py-16" role="status">
+                <h3 className="font-medium font-secondary text-gold">{t_booking("success.heading")}</h3>
+                <p className="text-shine max-w-150">{t_booking("success.text")}</p>
+                <button
+                    type="button"
+                    className="button2 px-4 py-2 underline"
+                    onClick={() => {
+                        reset();
+                        set_state("editing");
+                    }}
+                >
+                    {t_booking("success.again")}
+                </button>
+            </div>
+        );
+    }
 
     const today = new Date();
 
@@ -95,9 +103,14 @@ export default function Form() {
                 </div>
             </div>
 
-            <button type="submit" className="button px-4 py-2">
-                {t("submit")}
+            <button type="submit" disabled={state == "sending"} className={`button px-4 py-2 ${state == "sending" ? "disabled" : ""}`}>
+                {state == "sending" ? t_booking("sending") : t("submit")}
             </button>
+            {state == "failed" && (
+                <p role="alert" className="text-red-400 text-sm">
+                    {t_booking("error")}
+                </p>
+            )}
         </form>
     );
 }
