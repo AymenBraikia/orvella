@@ -1700,5 +1700,14 @@
         "testPayment": "Pagamento di prova: non viene addebitato denaro reale.",
         "testCard": "Usa la carta 4242 4242 4242 4242 con una data futura e un CVC qualsiasi.",
         "bankNote": "Negozio dimostrativo: non trasferire denaro."
+    },
+    "seo": {
+        "shop": "Orologi di lusso nuovi e usati e gioielleria fine: ogni pezzo controllato, descritto nel dettaglio e spedito con assicurazione completa.",
+        "watches": "Orologi di lusso usati e nuovi: controllati, descritti nel dettaglio e spediti con assicurazione completa.",
+        "rings": "Anelli pregiati in oro, oro bianco e platino, con diamanti e pietre preziose.",
+        "bracelets": "Bracciali pregiati in oro e platino: pezzi classici, moderni e vintage.",
+        "necklaces": "Collane e pendenti pregiati in oro e platino, con diamanti e pietre preziose.",
+        "spare": "Ricambi originali per orologi di lusso: quadranti, lancette, lunette, corone, bracciali e altro.",
+        "brand": "Orologi {brand} usati e nuovi: controllati, descritti nel dettaglio e spediti con assicurazione completa."
     }
 }

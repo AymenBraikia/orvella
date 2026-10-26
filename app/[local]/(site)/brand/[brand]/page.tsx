@@ -2,11 +2,22 @@ import Display_list from "@/app/components/display_list";
 import get_brand from "../get_brand";
 import { getTranslations } from "next-intl/server";
 import { brand_name } from "../../lib/brand_name";
+import type { Metadata } from "next";
+import { page_metadata } from "../../lib/site_metadata";
 
 interface PageProps {
     params: Promise<{
         brand: string;
+        local: string;
     }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { brand: raw, local } = await params;
+    const brand = safe_decode(raw).toLowerCase().trim();
+    const [first] = await get_brand(brand);
+    const t = await getTranslations({ locale: local, namespace: "seo" });
+    return page_metadata(local, `/brand/${encodeURIComponent(brand)}`, brand_name(brand), t("brand", { brand: brand_name(brand) }), first?.images[0]);
 }
 
 type BrandSection = { heading: string; text: string };

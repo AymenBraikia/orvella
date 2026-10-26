@@ -1695,5 +1695,14 @@
         "testPayment": "Test payment — no real money is charged.",
         "testCard": "Use card 4242 4242 4242 4242 with any future date and any CVC.",
         "bankNote": "Demo store: please do not transfer any money."
+    },
+    "seo": {
+        "shop": "New and pre-owned luxury watches and fine jewelry — every piece checked, described in detail and shipped fully insured.",
+        "watches": "Pre-owned and new luxury watches — checked, described in detail and shipped fully insured.",
+        "rings": "Fine rings in gold, white gold and platinum, with diamonds and gemstones.",
+        "bracelets": "Fine bracelets in gold and platinum — classic, modern and vintage pieces.",
+        "necklaces": "Fine necklaces and pendants in gold and platinum, with diamonds and gemstones.",
+        "spare": "Original spare parts for luxury watches: dials, hands, bezels, crowns, bracelets and more.",
+        "brand": "{brand} watches, pre-owned and new — checked, described in detail and shipped fully insured."
     }
 }

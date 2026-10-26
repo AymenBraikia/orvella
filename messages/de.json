@@ -1694,5 +1694,14 @@
         "testPayment": "Testzahlung – es wird kein echtes Geld abgebucht.",
         "testCard": "Verwenden Sie die Karte 4242 4242 4242 4242 mit einem beliebigen zukünftigen Datum und einer beliebigen Prüfnummer.",
         "bankNote": "Demo-Shop: Bitte überweisen Sie kein Geld."
+    },
+    "seo": {
+        "shop": "Neue und gebrauchte Luxusuhren und feiner Schmuck – jedes Stück geprüft, ausführlich beschrieben und voll versichert versandt.",
+        "watches": "Gebrauchte und neue Luxusuhren – geprüft, ausführlich beschrieben und voll versichert versandt.",
+        "rings": "Feine Ringe aus Gold, Weißgold und Platin, mit Diamanten und Edelsteinen.",
+        "bracelets": "Feine Armbänder aus Gold und Platin – klassische, moderne und Vintage-Stücke.",
+        "necklaces": "Feine Halsketten und Anhänger aus Gold und Platin, mit Diamanten und Edelsteinen.",
+        "spare": "Originale Ersatzteile für Luxusuhren: Zifferblätter, Zeiger, Lünetten, Kronen, Armbänder und mehr.",
+        "brand": "{brand} Uhren, gebraucht und neu – geprüft, ausführlich beschrieben und voll versichert versandt."
     }
 }

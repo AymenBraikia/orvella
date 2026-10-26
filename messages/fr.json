@@ -1700,5 +1700,14 @@
         "testPayment": "Paiement test — aucun argent réel n’est débité.",
         "testCard": "Utilisez la carte 4242 4242 4242 4242 avec une date future et un CVC quelconques.",
         "bankNote": "Boutique de démonstration : merci de ne virer aucun argent."
+    },
+    "seo": {
+        "shop": "Montres de luxe neuves et d’occasion et haute joaillerie — chaque pièce contrôlée, décrite en détail et expédiée entièrement assurée.",
+        "watches": "Montres de luxe d’occasion et neuves — contrôlées, décrites en détail et expédiées entièrement assurées.",
+        "rings": "Bagues raffinées en or, or blanc et platine, serties de diamants et de pierres précieuses.",
+        "bracelets": "Bracelets raffinés en or et platine — pièces classiques, modernes et vintage.",
+        "necklaces": "Colliers et pendentifs raffinés en or et platine, avec diamants et pierres précieuses.",
+        "spare": "Pièces détachées d’origine pour montres de luxe : cadrans, aiguilles, lunettes, couronnes, bracelets et plus.",
+        "brand": "Montres {brand} d’occasion et neuves — contrôlées, décrites en détail et expédiées entièrement assurées."
     }
 }

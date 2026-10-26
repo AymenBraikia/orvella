@@ -1,5 +1,8 @@
+import { category_metadata } from "@/app/(site)/lib/site_metadata";
 import Display_list from "@/app/components/display_list";
 import get_items from "@/app/server/get_items";
+
+export const generateMetadata = category_metadata("/rings", "common.rings", "seo.rings", "/rings.webp");
 
 export default async function RingsPage() {
     const items = (await get_items()).filter((i) => i.type == "ring");

@@ -9,10 +9,14 @@ import HeroLoader from "../components/loaders/hero";
 import Sections from "../components/sections";
 import Trade from "../components/trade";
 import { DEMO_MODE } from "./lib/demo";
+import { JsonLd, store_jsonld } from "./lib/structured_data";
+import { store_identity } from "@/app/server/store_identity";
+import { getLocale } from "next-intl/server";
 
-export default function Home() {
+export default async function Home() {
     return (
         <div className="flex-col flex-center w-dvw">
+            <JsonLd data={store_jsonld(await store_identity(), await getLocale())} />
             <Suspense fallback={<HeroLoader />}>
                 <Hero />
             </Suspense>

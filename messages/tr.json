@@ -1695,5 +1695,14 @@
         "testPayment": "Test ödemesi — gerçek para çekilmez.",
         "testCard": "4242 4242 4242 4242 kartını gelecekteki herhangi bir tarih ve herhangi bir CVC ile kullanın.",
         "bankNote": "Demo mağaza: lütfen para göndermeyin."
+    },
+    "seo": {
+        "shop": "Yeni ve ikinci el lüks saatler ve değerli mücevherler — her parça kontrol edilir, ayrıntılı tanıtılır ve tam sigortalı gönderilir.",
+        "watches": "İkinci el ve yeni lüks saatler — kontrol edilmiş, ayrıntılı tanıtılmış ve tam sigortalı gönderilir.",
+        "rings": "Altın, beyaz altın ve platinden, pırlanta ve değerli taşlı zarif yüzükler.",
+        "bracelets": "Altın ve platinden zarif bileklikler — klasik, modern ve vintage parçalar.",
+        "necklaces": "Altın ve platinden, pırlanta ve değerli taşlı zarif kolyeler ve kolye uçları.",
+        "spare": "Lüks saatler için orijinal yedek parçalar: kadranlar, akrepler, bezeller, kurma kolları, kordonlar ve daha fazlası.",
+        "brand": "İkinci el ve yeni {brand} saatleri — kontrol edilmiş, ayrıntılı tanıtılmış ve tam sigortalı gönderilir."
     }
 }

@@ -1699,5 +1699,14 @@
         "testPayment": "Pago de prueba: no se cobra dinero real.",
         "testCard": "Use la tarjeta 4242 4242 4242 4242 con cualquier fecha futura y cualquier CVC.",
         "bankNote": "Tienda de demostración: no transfiera dinero."
+    },
+    "seo": {
+        "shop": "Relojes de lujo nuevos y de segunda mano y alta joyería: cada pieza revisada, descrita en detalle y enviada con seguro completo.",
+        "watches": "Relojes de lujo de segunda mano y nuevos: revisados, descritos en detalle y enviados con seguro completo.",
+        "rings": "Anillos finos de oro, oro blanco y platino, con diamantes y piedras preciosas.",
+        "bracelets": "Pulseras finas de oro y platino: piezas clásicas, modernas y vintage.",
+        "necklaces": "Collares y colgantes finos de oro y platino, con diamantes y piedras preciosas.",
+        "spare": "Recambios originales para relojes de lujo: esferas, agujas, biseles, coronas, brazaletes y más.",
+        "brand": "Relojes {brand} de segunda mano y nuevos: revisados, descritos en detalle y enviados con seguro completo."
     }
 }

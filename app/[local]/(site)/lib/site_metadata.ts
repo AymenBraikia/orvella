@@ -54,3 +54,26 @@ export async function site_metadata(locale: string): Promise<Metadata> {
         category: "ecommerce",
     };
 }
+
+/** Title, description, social image and language alternates for a listing page (category, brand…). */
+export function page_metadata(locale: string, path: string, title: string, description: string, image?: string): Metadata {
+    const url = absolute_url(`/${locale}${path}`);
+    const images = image ? [{ url: image.startsWith("http") ? image : `${BASE_URL}${encodeURI(image)}`, alt: title }] : undefined;
+
+    return {
+        title,
+        description,
+        alternates: language_alternates(path, locale),
+        openGraph: { title, description, url, type: "website", ...(images ? { images } : {}) },
+        twitter: { card: "summary_large_image", title, description, ...(images ? { images: images.map((i) => i.url) } : {}) },
+    };
+}
+
+/** generateMetadata for the category pages (shop, watches, rings…). */
+export function category_metadata(path: string, title_key: string, seo_key: string, image: string) {
+    return async ({ params }: { params: Promise<{ local: string }> }): Promise<Metadata> => {
+        const { local } = await params;
+        const t = await getTranslations({ locale: local });
+        return page_metadata(local, path, t(title_key), t(seo_key), image);
+    };
+}

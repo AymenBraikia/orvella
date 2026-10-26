@@ -1,7 +1,10 @@
+import { category_metadata } from "@/app/(site)/lib/site_metadata";
 import Banner from "@/app/components/banner";
 import Display_list from "@/app/components/display_list";
 import get_items from "@/app/server/get_items";
 import { getTranslations } from "next-intl/server";
+
+export const generateMetadata = category_metadata("/spare", "spare.title", "seo.spare", "/spare.webp");
 
 export default async function SparePage() {
     const parts = (await get_items()).filter((e) => e.type == "spare");

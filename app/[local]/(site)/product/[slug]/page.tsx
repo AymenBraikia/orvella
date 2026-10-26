@@ -15,11 +15,33 @@ import EnquiryForm from "./enquiry/enquiry_form";
 import WhatsApp from "@/app/components/svg/whatsapp";
 import { get_Currency } from "../../lib/get_currency";
 import { item_name } from "../../lib/item_name";
+import type { Metadata } from "next";
+import { language_alternates } from "../../lib/site_metadata";
+import { absolute_media, JsonLd, product_jsonld } from "../../lib/structured_data";
 
 interface PageProps {
     params: Promise<{
         slug: string;
+        local: string;
     }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug, local } = await params;
+    const data = await get_product(slug);
+    if (!data) return {};
+
+    const title = item_name(data);
+    const description = data.description?.slice(0, 160);
+    const image = data.images[0] ? absolute_media(data.images[0]) : undefined;
+
+    return {
+        title,
+        description,
+        alternates: language_alternates(`/product/${encodeURIComponent(data.slug)}`, local),
+        openGraph: { title, description, type: "website", url: absolute_url(`/${local}/product/${encodeURIComponent(data.slug)}`), ...(image ? { images: [{ url: image, alt: title }] } : {}) },
+        twitter: { card: "summary_large_image", title, description, ...(image ? { images: [image] } : {}) },
+    };
 }
 
 export default async function DynamicPage({ params }: PageProps) {
@@ -37,12 +59,13 @@ export default async function DynamicPage({ params }: PageProps) {
 
     // Most buyers of pre-owned luxury pieces ask first: WhatsApp with the piece prefilled, or the form below.
     const t_enquiry = await getTranslations("product.enquiry");
-    const { whatsapp } = await store_identity();
+    const { whatsapp, store_name } = await store_identity();
     const reference = (data.type == "watch" || data.type == "spare") && data.reference ? ` (Ref. ${data.reference})` : "";
     const whatsapp_href = whatsapp ? `https://wa.me/${whatsapp}?text=${encodeURIComponent(t_enquiry("whatsappText", { name: item_name(data), ref: reference, url: absolute_url(`/${await getLocale()}/product/${data.slug}`) }))}` : null;
 
     return (
         <div className="h-fit w-dvw py-4 xl:px-16 px-4 flex items-start justify-start flex-col lg:flex-row mt-10 gap-8 tracking-wider">
+            <JsonLd data={product_jsonld(data, store_name, await getLocale())} />
             <div className="flex-center w-full lg:w-2/5">
                 <Images_list data={data} />
             </div>
