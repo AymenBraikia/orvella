@@ -4,9 +4,13 @@ import Image from "next/image";
 interface ZoomableImageProps {
     src: string;
     alt: string;
+    /** Rendered width, for the browser to pick the right image size. */
+    sizes: string;
+    /** Only the first image of a gallery should load eagerly. */
+    priority?: boolean;
 }
 
-export function ZoomableImage({ src, alt }: ZoomableImageProps) {
+export function ZoomableImage({ src, alt, sizes, priority = false }: ZoomableImageProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [transform, setTransform] = useState("scale(1)");
     const [transformOrigin, setTransformOrigin] = useState("center center");
@@ -35,7 +39,7 @@ export function ZoomableImage({ src, alt }: ZoomableImageProps) {
     return (
         <div ref={containerRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className="relative w-full h-full overflow-hidden cursor-crosshair">
             <div className="w-full h-full transition-transform duration-100 ease-out" style={{ transform, transformOrigin }}>
-                <Image src={src} sizes={undefined} fill alt={alt} className="object-cover select-none" priority />
+                <Image src={src} sizes={sizes} fill alt={alt} className="object-cover select-none" priority={priority} />
             </div>
         </div>
     );

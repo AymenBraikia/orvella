@@ -56,7 +56,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                         <List display={{ base: 1, sm: 1, md: 1, lg: 1 }}>
                             {view.images.map((url, index) => (
                                 <div key={`${url}-${index}`} className="relative w-full h-full aspect-square sm:aspect-video md:aspect-square">
-                                    <ZoomableImage src={url} alt={view.slug} />
+                                    <ZoomableImage src={url} alt={`${item_name(view)} — ${index + 1}`} sizes="(max-width: 768px) 100vw, 50vw" />
                                 </div>
                             ))}
                         </List>
@@ -129,7 +129,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                         <List display={{ base: 1, sm: 1, md: 1, lg: 1 }}>
                             {view.images.map((url, index) => (
                                 <div key={`${url}-${index}`} className="relative w-full h-full aspect-square sm:aspect-video md:aspect-square">
-                                    <ZoomableImage src={url} alt={view.slug} />
+                                    <ZoomableImage src={url} alt={`${item_name(view)} — ${index + 1}`} sizes="(max-width: 768px) 100vw, 50vw" />
                                 </div>
                             ))}
                         </List>

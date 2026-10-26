@@ -1,14 +1,13 @@
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import HeroVideo from "./hero_video";
 
 export default async function Hero() {
     const t = await getTranslations("home");
 
     return (
         <section className="flex-col flex-center w-dvw h-dvh fixed top-0 inset-s-0 text-white">
-            <video aria-hidden="true" autoPlay muted loop playsInline preload="metadata" poster="/hero_placeholder.webp" className="absolute inset-0 -z-10 size-full object-cover dark:brightness-50">
-                <source src="/hero_vid.mp4" type="video/mp4" />
-            </video>
+            <HeroVideo src="/hero_vid.mp4" poster="/hero_placeholder.webp" />
 
             <div className="flex-center flex-col font-primary gap-2 text-center">
                 <h1 className="tracking-widest font-light! text-gold text-6xl">{t("heroTitle")}</h1>

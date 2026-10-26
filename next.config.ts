@@ -8,15 +8,12 @@ const nextConfig: NextConfig = {
         // Public demo deployment (see app/[local]/(site)/lib/demo.ts).
         NEXT_PUBLIC_DEMO_MODE: process.env.DEMO_MODE === "true" ? "true" : "false",
     },
+    // Images use Next's built-in optimisation (resized AVIF/WebP per device via `sizes`).
     images: {
+        formats: ["image/avif", "image/webp"],
         // Product photos uploaded from the admin are served from Vercel Blob.
         remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
     },
-    // images: {
-    //     qualities: [60, 65, 70, 75],
-    //     loader: "custom",
-    //     loaderFile: "./image_loader.ts",
-    // },
     async redirects() {
         // One polishing page: /polish. The old /info/polishing duplicate redirects there.
         return [
