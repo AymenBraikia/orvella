@@ -76,12 +76,11 @@ export const supported_currencies: Supported_Currencies[] = [
     "CNY",
 ];
 
+/** 1 EUR in each currency. Filled on the server (app/server/update_currency_rates.ts) and handed to the browser by CurrencyProvider. */
 export const eur_value_in_currency: Map<Supported_Currencies, number> = new Map([]);
 
-async function update_values(): Promise<Map<Supported_Currencies, number>> {
-    const rates = ((await (await fetch(`https://open.er-api.com/v6/latest/EUR`)).json()) as { rates: Record<Supported_Currencies, number> }).rates;
+export type ExchangeRates = Partial<Record<Supported_Currencies, number>>;
 
-    for (const cur of supported_currencies) eur_value_in_currency.set(cur, rates[cur]);
-    return eur_value_in_currency;
+export function set_rates(rates: ExchangeRates) {
+    for (const [currency, rate] of Object.entries(rates)) if (rate) eur_value_in_currency.set(currency as Supported_Currencies, rate);
 }
-await update_values();

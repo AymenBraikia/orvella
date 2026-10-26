@@ -7,14 +7,16 @@ import type { User_Cart, UserData } from "@/types/user";
 import { Supported_Currencies } from "@/currency";
 import { cookies } from "next/headers";
 import { public_details, store_identity } from "@/app/server/store_identity";
+import load_rates from "@/app/server/update_currency_rates";
 
 export default async function AuthShell({ session, cart = [], children }: { session: UserData | undefined; cart?: User_Cart; children: React.ReactNode }) {
 
         const cookieStore = await cookies();
         const savedCurrency = (cookieStore.get("Currency")?.value as Supported_Currencies) || "USD";
         const store = public_details(await store_identity());
+        const rates = await load_rates();
     return (
-        <CurrencyProvider currency={savedCurrency}>
+        <CurrencyProvider currency={savedCurrency} rates={rates}>
         <AuthProvider initialSession={session}>
             <CartProvider cart={cart}>
                 <Header savedCurrency={savedCurrency} />

@@ -1,3 +1,4 @@
+import { client_messages } from "@/i18n/client_messages";
 import { site_metadata } from "@/app/(site)/lib/site_metadata";
 import type { Metadata, Viewport } from "next";
 import { Open_Sans, Cormorant_Garamond, Gelasio, Tajawal, Lateef } from "next/font/google";
@@ -16,12 +17,15 @@ const tajawal = Tajawal({
     weight: ["200", "300", "400", "500", "700", "800", "900"],
     variable: "--font-sans",
     display: "swap",
+    // Arabic fonts are only used on /ar; don't make every other page download them.
+    preload: false,
 });
 const lateef = Lateef({
     subsets: ["arabic"],
     weight: ["200", "300", "400", "500", "600", "700", "800"],
     variable: "--font-primary",
     display: "swap",
+    preload: false,
 });
 
 const openSans = Open_Sans({
@@ -73,7 +77,7 @@ export default async function NoFooterLayout({
                 <Analytics />
                 <SpeedInsights />
 
-                <NextIntlClientProvider>
+                <NextIntlClientProvider messages={await client_messages(["why", "home"])}>
                     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
                         <Header />
                         <div className="h-fit w-dvw flex flex-col justify-center items-center xl:px-25 2xl:px-50 p-4">{children}</div>

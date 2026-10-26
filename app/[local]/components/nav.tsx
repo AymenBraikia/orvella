@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ActionDispatch, Dispatch, RefObject, SetStateAction, useEffect, useState } from "react";
+import { ActionDispatch, Dispatch, RefObject, SetStateAction, useState } from "react";
 import Cross from "./svg/cross";
 import { useLocale, useTranslations } from "next-intl";
 import { NavThemeToggle } from "./navTheme";
@@ -84,22 +84,25 @@ export default function Nav({ savedCurrency, dispatch, ui, ref }: { savedCurrenc
 
     const locale = useLocale() as Locales;
 
-    const [lang, set_lang] = useState<Locales>(locale);
-
-    const selected_locale = locales_map.get(lang)!.toUpperCase();
+    const selected_locale = locale.toUpperCase();
 
     const pathname = usePathname();
     const router = useRouter();
 
-    useEffect(() => {
-        router.replace(pathname, { locale: selected_locale });
-    }, [lang]);
+    // Only when the visitor picks another language / currency — these used to run on every page
+    // load (a client navigation plus a server action that re-rendered the whole layout).
+    const set_lang = (label: string) => {
+        const next = locales_map.get(label);
+        if (next && next != locale) router.replace(pathname, { locale: next });
+    };
 
-    const [currency, set_currency] = useState<Supported_Currencies>(savedCurrency);
-
-    useEffect(() => {
-        setCurrency(currencies_map.get(currency)!);
-    }, [currency]);
+    const [currency, set_currency_state] = useState<Supported_Currencies>(savedCurrency);
+    const set_currency = (label: string) => {
+        const next = currencies_map.get(label);
+        if (!next || next == currency) return;
+        set_currency_state(next);
+        setCurrency(next);
+    };
     return (
         <nav
             ref={ref}

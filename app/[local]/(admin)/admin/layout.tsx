@@ -1,3 +1,4 @@
+import { client_messages } from "@/i18n/client_messages";
 import type { Metadata, Viewport } from "next";
 import { Open_Sans, Gelasio, Cormorant_Garamond } from "next/font/google";
 import { cookies } from "next/headers";
@@ -41,7 +42,7 @@ export default async function AdminLayout({ children }: Readonly<{ children: Rea
     return (
         <html lang="en" dir="ltr" className={`${openSans.variable} ${gelasio.variable} ${cormorantGaramond.variable} h-full antialiased`} suppressHydrationWarning>
             <body className="font-sans">
-                <NextIntlClientProvider>
+                <NextIntlClientProvider messages={await client_messages(["common"])}>
                     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
                         <div className="min-h-dvh w-full flex flex-col lg:flex-row">
                             <Sidebar store_name={settings.store_name} admin_name={admin.name || admin.email} />

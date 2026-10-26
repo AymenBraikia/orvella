@@ -6,7 +6,7 @@ import { compute_totals, from_minor, TaxConfig, Totals } from "@/app/(site)/lib/
 import { max_cart_quantity } from "@/app/(site)/lib/stock";
 import { item_name } from "@/app/(site)/lib/item_name";
 import { read_items_fresh } from "./inventory";
-import update_currency_rates from "./update_currency_rates";
+import load_rates from "./update_currency_rates";
 import { get_settings } from "./settings";
 import type { Order, OrderAddress, OrderLine, OrderTotals, ShippingInfo } from "@/types/order";
 import type { Cart_Line, User } from "@/types/user";
@@ -24,11 +24,8 @@ export function shipping_for_country(country: string | undefined): ShippingInfo 
 export async function get_exchange_rate(currency: Supported_Currencies): Promise<number> {
     if (currency === "EUR") return 1;
 
-    let rate = eur_value_in_currency.get(currency);
-    if (!rate) {
-        await update_currency_rates();
-        rate = eur_value_in_currency.get(currency);
-    }
+    await load_rates();
+    const rate = eur_value_in_currency.get(currency);
     if (!rate) throw new Error(`No exchange rate available for ${currency}`);
 
     return rate;

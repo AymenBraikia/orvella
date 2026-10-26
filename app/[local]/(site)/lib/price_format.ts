@@ -1,9 +1,11 @@
-import { Supported_Countries, Supported_Currencies } from "@/currency";
+import { eur_value_in_currency, Supported_Countries, Supported_Currencies } from "@/currency";
 import { calc_price } from "./calc_price";
 import { currency_decimals } from "./order_totals";
 
 /** Format a EUR catalogue price in the visitor's currency. */
 export function format_price(n: number, currency: Supported_Currencies = "USD"): string {
+    // No exchange rate (rate service down): show the real EUR price rather than a mislabelled number.
+    if (currency !== "EUR" && !eur_value_in_currency.get(currency)) return format_money(n, "EUR");
     return format_money(calc_price(n, currency), currency);
 }
 

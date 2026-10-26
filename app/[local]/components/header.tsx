@@ -176,22 +176,25 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
     const t = useTranslations("common");
     const t2 = useTranslations("home");
 
-    const [lang, set_lang] = useState<Locales>(locale);
-
-    const selected_locale = locales_map.get(lang)!.toUpperCase();
+    const selected_locale = locale.toUpperCase();
 
     const pathname = usePathname();
     const router = useRouter();
 
-    useEffect(() => {
-        router.replace(pathname, { locale: selected_locale });
-    }, [lang]);
+    // Only when the visitor picks another language / currency — these used to run on every page
+    // load (a client navigation plus a server action that re-rendered the whole layout).
+    const set_lang = (label: string) => {
+        const next = locales_map.get(label);
+        if (next && next != locale) router.replace(pathname, { locale: next });
+    };
 
-    const [currency, set_currency] = useState<Supported_Currencies>(savedCurrency);
-
-    useEffect(() => {
-        setCurrency(currencies_map.get(currency)!);
-    }, [currency]);
+    const [currency, set_currency_state] = useState<Supported_Currencies>(savedCurrency);
+    const set_currency = (label: string) => {
+        const next = currencies_map.get(label);
+        if (!next || next == currency) return;
+        set_currency_state(next);
+        setCurrency(next);
+    };
 
     const [ui, dispatch] = useReducer(headerReducer, initialUIState);
     const cartRef = useRef<HTMLDivElement>(null);

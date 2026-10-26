@@ -3,11 +3,11 @@ import List from "./scrollList";
 import FadeInObserver from "./fade_wrapper";
 import { getTranslations } from "next-intl/server";
 import get_new from "@/app/server/get_new";
-import update_currency_rates from "@/app/server/update_currency_rates";
+import load_rates from "@/app/server/update_currency_rates";
 import NewCardWrapper from "./wrappers/newCard";
 
 export default async function New() {
-    await update_currency_rates();
+    await load_rates();
     const t = await getTranslations("home");
     const t_btn = await getTranslations("common.buttons");
     const watches = await get_new();

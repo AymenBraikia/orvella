@@ -261,7 +261,13 @@ ul {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: text-shine 5s linear infinite;
+    /* Two sweeps, then rest: an endless background-position animation on dozens of texts
+       repainted the page every frame (main-thread time on mobile). */
+    animation: text-shine 5s linear 2;
+
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
 }
 
 @utility button {
@@ -323,33 +329,20 @@ ul {
     overflow: hidden;
     animation: dim 2s ease 1s infinite alternate;
 
+    /* Shimmer sweep, transform-only so it runs on the compositor (no layout per frame). */
     &::before {
         content: "";
-        background-color: var(--bg-secondary);
-
-        z-index: 10;
-
         position: absolute;
-        top: 0;
-        left: -60px;
-
-        height: 100%;
-        width: 60px;
-        max-width: 20%;
-
-        transform: skew(15deg, 0) translateX(-100%);
-        animation: load 1s ease 2s infinite;
-        filter: blur(30px);
+        inset: 0;
+        z-index: 10;
+        background: linear-gradient(90deg, transparent, var(--bg-secondary), transparent);
+        transform: translateX(-100%);
+        animation: load 1.5s ease 1s infinite;
     }
 }
 @keyframes load {
-    from {
-        left: -60px;
-        transform: skew(15deg, 0) translateX(-100%);
-    }
     to {
-        left: calc(100% + 60px);
-        transform: skew(15deg, 0) translateX(100%);
+        transform: translateX(100%);
     }
 }
 @keyframes dim {
