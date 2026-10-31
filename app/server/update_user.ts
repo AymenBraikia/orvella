@@ -7,7 +7,13 @@ import shipping_data from "@/app/shipping.json";
 
 const shipping_values = Object.values(shipping_data);
 
-const text = z.string().trim().max(200).optional();
+// Fields nobody filled in come back from the database as null, and the form sends them along.
+const text = z
+    .string()
+    .trim()
+    .max(200)
+    .nullish()
+    .transform((value) => value ?? undefined);
 
 const address_schema = z.object({
     country: z.string().trim().max(100),
