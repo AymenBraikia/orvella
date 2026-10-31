@@ -1,7 +1,7 @@
 import { NextResponse, after } from "next/server";
 import { revalidatePath } from "next/cache";
 import { orders_collection } from "@/app/db/collections";
-import { cancel_order, mark_order_paid } from "@/app/server/orders";
+import { add_admin_note, cancel_order, mark_order_paid } from "@/app/server/orders";
 import { notify_order_paid } from "@/app/server/email/notifications";
 import { stripe_amount, verify_webhook } from "@/app/server/stripe";
 import { minor_to_string, to_minor } from "@/app/(site)/lib/order_totals";
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
             const received = stripe_amount(session.amount_total, session.currency);
             if (session.currency.toUpperCase() != order.currency || received != expected) {
                 console.error(`Stripe paid ${received} ${session.currency} for ${order_id}, expected ${expected} ${order.currency}`);
-                await orders.updateOne({ id: order_id }, { $set: { admin_notes: `Amount mismatch: Stripe paid ${received} ${session.currency.toUpperCase()}` } });
+                await add_admin_note(order, `Amount mismatch: Stripe paid ${received} ${session.currency.toUpperCase()}`);
                 break;
             }
 

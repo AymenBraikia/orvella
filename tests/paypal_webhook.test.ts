@@ -171,7 +171,7 @@ describe("PayPal webhook", () => {
         expect(capture_calls).toBe(0);
     });
 
-    it("a denied capture leaves a history entry and an admin note, once", async () => {
+    it("a denied capture leaves a history entry and an admin note, once, and frees the piece", async () => {
         const denied = { id: "evt-denied", event_type: "PAYMENT.CAPTURE.DENIED", resource: { id: "CAP-1", custom_id: ORDER_ID, amount: { currency_code: "EUR", value: "24900.00" } } };
         await webhook(denied);
         await webhook(denied);
@@ -179,6 +179,20 @@ describe("PayPal webhook", () => {
         const open = await order();
         expect(open.status_history.filter((e) => e.note?.includes("denied"))).toHaveLength(1);
         expect(open.admin_notes).toBe("PayPal capture denied (24900.00 EUR)");
+        expect(open.status).toBe("cancelled");
+        expect((await item()).status).toBe("available");
+    });
+
+    it("a denied event cannot cancel an order that was already paid", async () => {
+        await webhook(completed());
+        await webhook({ id: "evt-denied", event_type: "PAYMENT.CAPTURE.DENIED", resource: { id: "CAP-1", custom_id: ORDER_ID } });
+        expect((await order()).status).toBe("paid");
+    });
+
+    it("a replayed wrong amount does not repeat the note", async () => {
+        await webhook(completed("1.00"));
+        await webhook(completed("1.00"));
+        expect((await order()).admin_notes).toBe("Amount mismatch: captured 1.00 EUR");
     });
 
     it("keeps the dealer's own notes when adding one", async () => {

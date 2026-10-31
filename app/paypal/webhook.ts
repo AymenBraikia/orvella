@@ -4,7 +4,7 @@ import { setTimeout as sleep } from "node:timers/promises";
 import { orders_collection } from "../db/collections";
 import { getAccessToken, PAYPAL_API } from "./paypal";
 import { amount_matches, capture_paypal_order, settle_paid_capture, type PayPalAmount } from "./capture";
-import { record_payment_event, transition_order } from "../server/orders";
+import { cancel_order, record_payment_event, transition_order } from "../server/orders";
 import { minor_to_string, to_minor } from "@/app/(site)/lib/order_totals";
 import type { Order } from "@/types/order";
 
@@ -88,6 +88,7 @@ export async function handle_paypal_event(event: PayPalEvent): Promise<void> {
             break;
         case "PAYMENT.CAPTURE.DENIED":
             await record_payment_event(order, event.id, `PayPal capture denied (${amount})`);
+            await cancel_order(order.id, "No payment received");
             break;
         case "PAYMENT.CAPTURE.REVERSED":
             await record_payment_event(order, event.id, `PayPal payment reversed (${amount})`);

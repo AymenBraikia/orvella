@@ -131,6 +131,7 @@ function joined_notes(order: Pick<Order, "admin_notes">, note: string): string {
 }
 
 export async function add_admin_note(order: Pick<Order, "id" | "admin_notes">, note: string) {
+    if (order.admin_notes?.includes(note)) return;
     await (await orders_collection()).updateOne({ id: order.id }, { $set: { admin_notes: joined_notes(order, note) } });
 }
 
