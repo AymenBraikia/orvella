@@ -1,4 +1,4 @@
-export default function Cross({ classnames = "w-6", clr = "currentColor", style }: { classnames?: string; clr?: string; style?: React.CSSProperties }) {
+export default function Cross({ classnames = "w-6", clr = "currentColor" }: { classnames?: string; clr?: string }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={classnames} style={{  backgroundColor: "transparent" }}>
             <path

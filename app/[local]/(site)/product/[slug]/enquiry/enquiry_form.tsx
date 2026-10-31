@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Honeypot, { honeypot_value } from "@/app/components/elements/honeypot";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import Input from "@/app/components/elements/input";
@@ -23,12 +23,12 @@ export default function EnquiryForm({ slug, can_reserve }: { slug: string; can_r
         register,
         handleSubmit,
         setValue,
-        watch,
+        control,
         reset,
         formState: { errors },
     } = useForm<EnquiryInput>({ resolver: zodResolver(schema), defaultValues: { slug, type: "question" } });
 
-    const type = watch("type");
+    const type = useWatch({ control, name: "type" });
 
     const send = async (data: EnquiryInput, event?: React.BaseSyntheticEvent) => {
         set_state("sending");

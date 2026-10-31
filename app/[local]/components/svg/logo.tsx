@@ -1,4 +1,4 @@
-export default function Logo({ classnames = "w-6", clr = "currentColor", style }: { classnames?: string; clr?: string; style?: React.CSSProperties }) {
+export default function Logo({ classnames = "w-6", clr = "currentColor" }: { classnames?: string; clr?: string }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" className={classnames} id="Layer_1" x="0px" y="0px" viewBox="0 0 409.2 230">
             <path

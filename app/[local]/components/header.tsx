@@ -1,7 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
 
-import { Watch } from "@/types/watch";
 import { Locales } from "@/types/locales";
 
 import { Dispatch, SetStateAction, useEffect, useReducer, useRef, useState } from "react";
@@ -151,16 +150,16 @@ const currencies_map = new Map<string, Supported_Currencies>([
 function headerReducer(state: UIState, action: UIAction): UIState {
     switch (action.type) {
         case "OPEN_NAV":
-            window.innerWidth < 640 && (document.body.style.overflowY = "clip");
+            if (window.innerWidth < 640) document.body.style.overflowY = "clip";
             return { ...state, isNavOpen: true, isCartOpen: false };
         case "CLOSE_NAV":
-            window.innerWidth < 640 && (document.body.style.overflowY = "auto");
+            if (window.innerWidth < 640) document.body.style.overflowY = "auto";
             return { ...state, isNavOpen: false };
         case "OPEN_CART":
-            window.innerWidth < 640 && (document.body.style.overflowY = "clip");
+            if (window.innerWidth < 640) document.body.style.overflowY = "clip";
             return { ...state, isCartOpen: true, isNavOpen: false };
         case "CLOSE_CART":
-            window.innerWidth < 640 && (document.body.style.overflowY = "auto");
+            if (window.innerWidth < 640) document.body.style.overflowY = "auto";
             return { ...state, isCartOpen: false };
         case "SET_GLASSY":
             if (state.isGlassy === action.payload) return state;

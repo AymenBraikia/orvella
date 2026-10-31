@@ -9,8 +9,7 @@ export function Floating_Cta() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > window.innerHeight * 0.1) !active && set_active(true);
-            else if (active) set_active(false);
+            set_active(window.scrollY > window.innerHeight * 0.1);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -18,7 +17,7 @@ export function Floating_Cta() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [active]);
+    }, []);
 
     return (
         <div className={`min-w-fit whitespace-nowrap bg-primary transition-default fixed bottom-5 inset-s-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2 hover:bg-background active:scale-95 shine ${active ? "fade-in" : "invisible fade-out"}`}>
