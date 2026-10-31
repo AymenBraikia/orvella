@@ -1,10 +1,10 @@
 import { unstable_cache } from "next/cache";
 import { items_collection } from "@/app/db/collections";
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
+import { active_ref } from "@/app/server/ref";
 import { Item } from "@/app/(site)/lib/filters";
 
-const SEARCH_PROJECTION = { _id: 0, slug: 1, brand: 1, model: 1, reference: 1, price: 1, images: { $slice: 1 }, display_name: 1 } as const;
+const SEARCH_PROJECTION = { _id: 0, slug: 1, brand: 1, model: 1, reference: 1, price: 1, images: { $slice: 1 }, display_name: 1, preview: 1 } as const;
 
 async function query_search(query: string) {
     const data = await (
@@ -32,8 +32,7 @@ export async function GET(req: NextRequest) {
 
     const items = await search_items(query);
 
-    const cookieStore = await cookies();
-    const ref = cookieStore.get("ref")?.value;
+    const ref = await active_ref();
 
     if (!ref || !items.find((e: Item) => e.preview == ref))
         return NextResponse.json(

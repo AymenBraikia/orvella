@@ -3,6 +3,7 @@ import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 import { verifyJwt } from "./app/[local]/(auth)/auth/jwt";
 import { sanitizeRef } from "./i18n/brand";
+import { DEMO_MODE } from "@/app/(site)/lib/demo";
 import { save_visit } from "./app/server/save_visit";
 import { country_to_currency } from "@/app/(site)/lib/price_format";
 import { Supported_Countries, Supported_Currencies } from "./currency";
@@ -60,12 +61,15 @@ export default function proxy(request: NextRequest) {
         response.cookies.set("Currency", currency, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
     }
 
-    const ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
-    if (ref) {
-        response.cookies.set("ref", ref, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
-        if (process.env.NODE_ENV == "production") save_visit(request);
-    } else if (request.nextUrl.searchParams.has("ref")) {
-        response.cookies.delete("ref");
+    // Pitch links exist on the demo only: a dealer's shop ignores ?ref= and stores no visitor data.
+    if (DEMO_MODE) {
+        const ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
+        if (ref) {
+            response.cookies.set("ref", ref, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
+            if (process.env.NODE_ENV == "production") save_visit(request);
+        } else if (request.nextUrl.searchParams.has("ref")) {
+            response.cookies.delete("ref");
+        }
     }
 
     return response;

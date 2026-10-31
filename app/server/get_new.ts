@@ -1,7 +1,7 @@
 import { unstable_cache } from "next/cache";
-import { cookies } from "next/headers";
 
 import { items_collection } from "../db/collections";
+import { active_ref } from "./ref";
 import { Item } from "@/app/(site)/lib/filters";
 import { to_public_item } from "@/app/(site)/lib/stock";
 
@@ -43,8 +43,7 @@ const get_cached_new = unstable_cache(
 );
 
 async function get_new(): Promise<Item[]> {
-    const cookieStore = await cookies();
-    const ref = cookieStore.get("ref")?.value;
+    const ref = await active_ref();
 
     const now = Date.now();
     const data = (await get_cached_new(ref)).map((item) => to_public_item(item, now));

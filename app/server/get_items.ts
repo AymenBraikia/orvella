@@ -1,7 +1,7 @@
 import { unstable_cache } from "next/cache";
-import { cookies } from "next/headers";
 
 import { items_collection } from "../db/collections";
+import { active_ref } from "./ref";
 import { Item } from "@/types/item";
 import { to_public_item } from "@/app/(site)/lib/stock";
 
@@ -74,11 +74,10 @@ const get_cached_items = unstable_cache(
 /**
  * Request-specific layer.
  *
- * cookies() lives OUTSIDE the cache scope.
+ * The ref cookie is read OUTSIDE the cache scope.
  */
 async function get_items(): Promise<Item[]> {
-    const cookieStore = await cookies();
-    const ref = cookieStore.get("ref")?.value;
+    const ref = await active_ref();
 
     const now = Date.now();
     const data = (await get_cached_items()).map((item) => to_public_item(item, now));
