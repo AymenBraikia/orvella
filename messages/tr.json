@@ -231,10 +231,11 @@
             "sold": "Satıldı"
         },
         "upload": {
-            "hint": "En fazla {max} fotoğraf, her biri en fazla {size} MB (JPG, PNG, WebP, HEIC).",
+            "hint": "En fazla {max} fotoğraf, her biri en fazla {size} MB (JPG, PNG, WebP).",
             "tooMany": "En fazla {max} fotoğraf ekleyebilirsiniz.",
             "tooLarge": "{name} dosyası {max} MB sınırını aşıyor.",
             "notImage": "{name} desteklenen bir görsel değil.",
+            "heic": "{name} bir HEIC fotoğrafı. Lütfen JPEG olarak dışa aktarıp tekrar deneyin.",
             "failed": "{name} yüklenemedi.",
             "remove": "Fotoğrafı kaldır",
             "add": "Fotoğraf ekle",

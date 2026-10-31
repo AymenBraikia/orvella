@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { upload_file } from "@/app/components/upload/upload_file";
-import { UPLOAD_RULES } from "@/app/(site)/lib/upload_rules";
+import { is_heic, UPLOAD_RULES } from "@/app/(site)/lib/upload_rules";
 
 type Pending = { id: string; name: string; progress: number; error?: string };
 
@@ -48,6 +48,10 @@ export default function MediaManager({
         set_notice(null);
 
         const list = Array.from(files).filter((file) => {
+            if (is_heic(file)) {
+                set_notice(`${file.name}: HEIC photos don't display in most browsers. Please export as JPEG.`);
+                return false;
+            }
             if (!image_rule.content_types.includes(file.type)) {
                 set_notice(`${file.name}: not a supported image type`);
                 return false;
@@ -172,7 +176,7 @@ export default function MediaManager({
                         e.target.value = "";
                     }} />
             </label>
-            <p className="text-xs text-secondary">Drag photos to reorder. The first photo is the main image. JPG, PNG, WebP, AVIF or HEIC up to {image_rule.max_bytes / 1024 / 1024} MB.</p>
+            <p className="text-xs text-secondary">Drag photos to reorder. The first photo is the main image. JPG, PNG, WebP or AVIF up to {image_rule.max_bytes / 1024 / 1024} MB.</p>
 
             <div className="flex flex-col gap-2 border-t border-secondary/20 pt-4">
                 <p className="text-sm">Video (optional, plays on hover in the shop)</p>

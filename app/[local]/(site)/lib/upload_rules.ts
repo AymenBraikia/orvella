@@ -10,7 +10,7 @@ export type UploadRule = {
 };
 
 const MB = 1024 * 1024;
-const IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp", "image/avif", "image/heic", "image/heif"];
+const IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp", "image/avif"];
 
 export const UPLOAD_RULES: Record<UploadKind, UploadRule> = {
     sell: { prefix: "sell", content_types: IMAGE_TYPES, max_bytes: 8 * MB, admin_only: false },
@@ -19,6 +19,11 @@ export const UPLOAD_RULES: Record<UploadKind, UploadRule> = {
 };
 
 export const MAX_SELL_IMAGES = 8;
+
+/** Most browsers can't display HEIC, and some report no type for it, so the extension counts too. */
+export function is_heic(file: Pick<File, "name" | "type">): boolean {
+    return /^image\/hei[cf]/i.test(file.type) || /\.hei[cf]$/i.test(file.name);
+}
 
 export function is_upload_kind(value: unknown): value is UploadKind {
     return typeof value === "string" && value in UPLOAD_RULES;

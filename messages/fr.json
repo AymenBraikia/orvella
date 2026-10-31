@@ -231,10 +231,11 @@
             "sold": "Vendu"
         },
         "upload": {
-            "hint": "Jusqu’à {max} photos, {size} Mo max. chacune (JPG, PNG, WebP, HEIC).",
+            "hint": "Jusqu’à {max} photos, {size} Mo max. chacune (JPG, PNG, WebP).",
             "tooMany": "Vous pouvez joindre jusqu’à {max} photos.",
             "tooLarge": "{name} dépasse {max} Mo.",
             "notImage": "{name} n’est pas une image prise en charge.",
+            "heic": "{name} est une photo HEIC. Veuillez l’exporter en JPEG et réessayer.",
             "failed": "Impossible d’envoyer {name}.",
             "remove": "Supprimer la photo",
             "add": "Ajouter des photos",

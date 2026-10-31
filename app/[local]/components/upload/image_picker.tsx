@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { UPLOAD_RULES, type UploadKind } from "@/app/(site)/lib/upload_rules";
+import { is_heic, UPLOAD_RULES, type UploadKind } from "@/app/(site)/lib/upload_rules";
 import { upload_file } from "./upload_file";
 import Cross from "../svg/cross";
 
@@ -63,6 +63,10 @@ export default function ImagePicker({ kind, max, onChange }: { kind: UploadKind;
         const added: Entry[] = [];
 
         for (const file of picked) {
+            if (is_heic(file)) {
+                set_notice(t("heic", { name: file.name }));
+                continue;
+            }
             if (!rule.content_types.includes(file.type)) {
                 set_notice(t("notImage", { name: file.name }));
                 continue;

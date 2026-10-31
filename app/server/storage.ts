@@ -45,8 +45,6 @@ const EXTENSIONS: Record<string, string> = {
     "image/png": "png",
     "image/webp": "webp",
     "image/avif": "avif",
-    "image/heic": "heic",
-    "image/heif": "heif",
     "video/mp4": "mp4",
     "video/webm": "webm",
 };
