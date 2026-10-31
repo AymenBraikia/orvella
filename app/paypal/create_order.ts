@@ -13,7 +13,8 @@ export type CreateOrderResult = { id: string } | { error: PlaceError; items?: st
 
 /** Signed-in customers and guests: reserve for 15 minutes, then open the PayPal order. */
 export async function create_order(): Promise<CreateOrderResult> {
-    if (!(await get_settings()).payments.paypal) return { error: "payment" };
+    const { payments, store_name } = await get_settings();
+    if (!payments.paypal) return { error: "payment" };
 
     const placed = await place_pending_order("PayPal", new Date(Date.now() + ONLINE_RESERVATION_MINUTES * 60_000));
     if (!placed.ok) return { error: placed.error, items: placed.items };
@@ -58,7 +59,7 @@ export async function create_order(): Promise<CreateOrderResult> {
                     },
                 ],
                 application_context: {
-                    brand_name: "orvella",
+                    brand_name: store_name.slice(0, 127),
                     landing_page: "LOGIN",
                     shipping_preference: "NO_SHIPPING",
                     user_action: "PAY_NOW",

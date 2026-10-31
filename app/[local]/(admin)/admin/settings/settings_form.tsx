@@ -31,6 +31,7 @@ export default function SettingsForm({ initial, stripe_configured }: { initial: 
         error: errors[path],
         onChange: (v: string) => set_values((s) => set_path(s, path, v)),
     });
+    const text_bind = (path: string) => ({ value: String(get_path(values, path) ?? ""), onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => set_values((s) => set_path(s, path, e.target.value)) });
     const toggle = (path: string) => ({ checked: Boolean(get_path(values, path)), onChange: (v: boolean) => set_values((s) => set_path(s, path, v)) });
 
     function submit(e: React.FormEvent) {
@@ -83,6 +84,14 @@ export default function SettingsForm({ initial, stripe_configured }: { initial: 
             <Section title="Consumer arbitration (§ 36 VSBG)" hint="Shown on the imprint and in the terms. Off means you state that you do not take part.">
                 <Check label="We take part in consumer arbitration" {...toggle("arbitration_participates")} />
                 <Field label="Arbitration board" {...bind("arbitration_board")} hint="Name, address and website of the board" />
+            </Section>
+
+            <Section title="About page" hint="Your own text, in one language. Leave empty for the default text, which is translated.">
+                <label className="flex flex-col gap-1 text-xs text-secondary sm:col-span-2 xl:col-span-3">
+                    About text (leave a blank line between paragraphs)
+                    <textarea rows={8} {...text_bind("about_text")} className="border border-secondary bg-transparent p-2 text-sm text-foreground outline-none focus:border-gold" />
+                    {errors["about_text"] && <span className="text-red-400">{errors["about_text"]}</span>}
+                </label>
             </Section>
 
             <Section title="Contact & social">

@@ -10,7 +10,6 @@ import { DEMO_MODE } from "@/app/(site)/lib/demo";
 export default function StripeButton({ ready }: { ready: boolean }) {
     const t = useTranslations("checkout");
     const t_errors = useTranslations("checkout.errors");
-    const t_demo = useTranslations("demo");
     const router = useRouter();
     const [busy, set_busy] = useState(false);
     const [error, set_error] = useState<string | null>(null);
@@ -34,7 +33,7 @@ export default function StripeButton({ ready }: { ready: boolean }) {
                 {busy ? t("redirectingToPayment") : t("payByCard")}
             </button>
             <p className="text-xs text-secondary">{t("cardNote")}</p>
-            {DEMO_MODE && <p className="text-xs text-gold font-semibold">{t_demo("testPayment")} {t_demo("testCard")}</p>}
+            {DEMO_MODE && <TestCardNote />}
             {error && (
                 <p role="alert" className="text-red-400 text-sm">
                     {error}
@@ -42,4 +41,10 @@ export default function StripeButton({ ready }: { ready: boolean }) {
             )}
         </div>
     );
+}
+
+/** Separate so the "demo" messages, which only reach the browser on the demo, are read there alone. */
+function TestCardNote() {
+    const t = useTranslations("demo");
+    return <p className="text-xs text-gold font-semibold">{t("testPayment")} {t("testCard")}</p>;
 }

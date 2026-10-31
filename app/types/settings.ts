@@ -23,6 +23,8 @@ export interface StoreSettings {
     chrono24_url: string;
     ebay_url: string;
     vat_id: string;
+    /** About page text, paragraphs separated by a blank line. Empty shows the translated default. */
+    about_text: string;
     /** Required for a GmbH (§ 5 DDG); shown on the imprint when filled. */
     register_court: string;
     register_number: string;

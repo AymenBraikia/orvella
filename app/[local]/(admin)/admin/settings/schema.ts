@@ -21,6 +21,7 @@ export const settings_schema = z.object({
     chrono24_url: url,
     ebay_url: url,
     vat_id: text(40),
+    about_text: text(5000),
     register_court: text(120),
     register_number: text(40),
 

@@ -25,6 +25,7 @@ export const DEFAULT_SETTINGS: StoreSettings = {
     chrono24_url: "",
     ebay_url: "",
     vat_id: "DE000000000",
+    about_text: "",
     register_court: "",
     register_number: "",
 

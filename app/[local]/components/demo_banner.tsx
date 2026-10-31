@@ -18,6 +18,11 @@ function read(): boolean {
 
 /** Thin "this is a demo" strip above the header, only in DEMO_MODE; dismissible per browser. */
 export default function DemoBanner() {
+    // The "demo" messages only reach the browser on the demo.
+    return DEMO_MODE ? <Banner /> : null;
+}
+
+function Banner() {
     const t = useTranslations("demo");
     const dismissed = useSyncExternalStore(
         (cb) => {
@@ -28,7 +33,7 @@ export default function DemoBanner() {
         () => false,
     );
 
-    if (!DEMO_MODE || dismissed) return null;
+    if (dismissed) return null;
 
     function dismiss() {
         try {
