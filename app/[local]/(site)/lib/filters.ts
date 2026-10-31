@@ -92,7 +92,7 @@ function range_value(item: Item, facet: RangeFacet): number | undefined {
         case "caseDiameterMm":
             return isWatchOrSpare(item) ? item.caseDiameterMm : undefined;
         case "year":
-            return isWatchOrSpare(item) ? item.year : undefined;
+            return isWatchOrSpare(item) ? item.year || undefined : undefined;
         case "waterResistanceM":
             return isWatchOrSpare(item) ? item.waterResistanceM : undefined;
         case "weightG":

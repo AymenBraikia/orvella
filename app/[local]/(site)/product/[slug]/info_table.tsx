@@ -103,7 +103,7 @@ function Displayed_Data({ item, tab, common, payments, product }: { item: Item; 
 
                     <Row label={product("reference")} value={watch.reference} />
 
-                    <Row label={common("filters.year")} value={String(watch.year)} />
+                    <Row label={common("filters.year")} value={watch.year ? String(watch.year) : ""} />
 
                     <Row label={common("productCard.caseSize")} value={`${watch.caseDiameterMm} mm`} />
 
@@ -186,6 +186,8 @@ function Displayed_Data({ item, tab, common, payments, product }: { item: Item; 
 }
 
 function Row({ label, value }: { label: string; value: string }) {
+    if (!value) return null;
+
     return (
         <div className="border-b border-b-secondary flex justify-between md:justify-start items-center py-2">
             <p className="w-fit md:w-100">{label}</p>

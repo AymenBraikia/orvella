@@ -9,6 +9,7 @@
         "start": "next start",
         "lint": "eslint",
         "create-admin": "node scripts/create-admin.ts",
+        "add-watches": "node scripts/add-watches.ts",
         "ensure-indexes": "node scripts/ensure-indexes.ts",
         "check-links": "node scripts/check-links.ts",
         "test": "vitest run"

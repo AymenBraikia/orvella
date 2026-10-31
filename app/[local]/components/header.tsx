@@ -390,7 +390,7 @@ function SearchChildComponent({ item }: { item: Item }) {
                 <Image src={item.images[0]} alt={item.display_name} fill sizes="(max-width: 768px) 150px, 100px" />
             </div>
             <div className="w-full h-full flex flex-col justify-start items-start gap-2">
-                {item.type == "watch" ? <p className="w-full">{`${item_name(item)} ${item.year || ""} Ref. ${item.reference}`}</p> : <p className="w-full">{item_name(item)}</p>}
+                {item.type == "watch" ? <p className="w-full">{[item_name(item), item.year || "", item.reference && `Ref. ${item.reference}`].filter(Boolean).join(" ")}</p> : <p className="w-full">{item_name(item)}</p>}
                 <p>{format_price(item.price, currency)}</p>
             </div>
         </Link>

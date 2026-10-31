@@ -90,9 +90,11 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                                 <p>
                                     {t("filters.caseDiameterMm")}: {view.caseDiameterMm} mm
                                 </p>
-                                <p>
-                                    {t("filters.year")}: {view.year}
-                                </p>
+                                {view.year > 0 && (
+                                    <p>
+                                        {t("filters.year")}: {view.year}
+                                    </p>
+                                )}
                                 <p>
                                     {t("filters.waterResistance")}: {view.waterResistanceM}m
                                 </p>
