@@ -5,6 +5,10 @@
         "cta": "Scopri di più"
     },
     "orders": {
+        "reservedTitle": "Grazie, {name}. Il tuo ordine è riservato",
+        "reservedText": "Effettua un bonifico di {amount} entro il {date} indicando {id} come causale. Spediamo non appena riceviamo il pagamento.",
+        "processingTitle": "Grazie, {name}. Il tuo pagamento è in elaborazione",
+        "plainTitle": "Grazie, {name}",
         "thankYou": "Con i nostri ringraziamenti",
         "thankYouSuffix": "il tuo acquisto è confermato",
         "ongoingOrders": "in attesa di consegna",

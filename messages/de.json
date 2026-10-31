@@ -5,6 +5,10 @@
         "cta": "Mehr erfahren"
     },
     "orders": {
+        "reservedTitle": "Vielen Dank, {name}. Ihre Bestellung ist reserviert",
+        "reservedText": "Überweisen Sie {amount} bis zum {date} mit {id} als Verwendungszweck. Wir versenden, sobald die Zahlung eingegangen ist.",
+        "processingTitle": "Vielen Dank, {name}. Ihre Zahlung wird bearbeitet",
+        "plainTitle": "Vielen Dank, {name}",
         "thankYou": "Herzlichen Dank",
         "thankYouSuffix": "Ihr Erwerb ist bestätigt",
         "ongoingOrders": "unterwegs",

@@ -1,11 +1,27 @@
 import Banner from "@/app/components/banner";
 import getUser from "@/app/server/get_user";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Order_display from "./order_display";
 import Link from "next/link";
 import { order_by_token, orders_for_email } from "@/app/server/orders";
-import BankDetails from "./bank_details";
+import BankDetails, { transfer_deadline } from "./bank_details";
 import SingleOrder from "./single_order";
+import { format_money } from "../lib/price_format";
+import type { Order } from "@/types/order";
+
+/** The hero only says "confirmed" once the money is in. */
+async function hero_copy(order: Order | null, name: string) {
+    const t = await getTranslations("orders");
+
+    if (order?.status == "pending_payment" && order.payment_method == "Bank Transfer") {
+        const text = t("reservedText", { amount: format_money(order.totals.total, order.currency), date: transfer_deadline(order, await getLocale()), id: order.id });
+        return { title: t("reservedTitle", { name }), text };
+    }
+    if (order?.status == "pending_payment") return { title: t("processingTitle", { name }), text: t("nextSteps.processing") };
+    if (order?.status == "paid" || order?.status == "shipped" || order?.status == "delivered") return { title: `${t("thankYou")} ${name} ${t("thankYouSuffix")}`, text: t("subtitle"), confirmed: true };
+
+    return { title: t("plainTitle", { name }) };
+}
 
 export default async function thank_you_page({ searchParams }: { searchParams: Promise<{ order?: string; token?: string }> }) {
     const { order: order_id, token } = await searchParams;
@@ -30,16 +46,15 @@ export default async function thank_you_page({ searchParams }: { searchParams: P
     const ongoing_orders = orders.filter((o) => o.status == "pending_payment" || o.status == "paid" || o.status == "shipped");
     const fulfilled_orders = orders.filter((o) => o.status == "delivered");
     const awaiting_transfer = orders.filter((o) => o.status == "pending_payment" && o.payment_method == "Bank Transfer");
+    const hero = await hero_copy(single, single?.first_name ?? user?.first_name ?? "");
 
     return (
-        <div className="font-secondary py-8 w-full flex-center flex-col gap-12 capitalize">
+        <div className="font-secondary py-8 w-full flex-center flex-col gap-12">
             <Banner>
                 <div className="flex w-full flex-col items-start gap-5 font-secondary">
-                    <h1 className="leading-tight max-w-150">
-                        {t("thankYou")} {single?.first_name ?? user?.first_name} {t("thankYouSuffix")}
-                    </h1>
+                    <h1 className={`leading-tight max-w-150 ${hero.confirmed ? "capitalize" : ""}`}>{hero.title}</h1>
 
-                    <p className="max-w-[46ch] font-sans text-sm leading-relaxed text-secondary sm:text-base">{t("subtitle")}</p>
+                    {hero.text && <p className="max-w-[46ch] font-sans text-sm leading-relaxed text-secondary sm:text-base">{hero.text}</p>}
                 </div>
             </Banner>
 
@@ -53,7 +68,7 @@ export default async function thank_you_page({ searchParams }: { searchParams: P
                 {user && (
                     <>
                     <div className="w-full">
-                        <h2 className="text-shine">{t("ongoingOrders")}</h2>
+                        <h2 className="text-shine capitalize">{t("ongoingOrders")}</h2>
 
                         <div className={`flex justify-start items-start flex-col w-full mt-12 overflow-x-auto ${ongoing_orders.length ? "bg-primary" : ""}`}>
                             <div className={`min-w-250 w-full gap-2 bg-primary ps-2 pe-5 py-6 font-semibold border-b ${ongoing_orders.length ? "flex justify-between items-center" : "hidden"}`}>
@@ -78,7 +93,7 @@ export default async function thank_you_page({ searchParams }: { searchParams: P
                     </div>
 
                     <div className="w-full">
-                        <h2 className="text-shine">{t("deliveredOrders")}</h2>
+                        <h2 className="text-shine capitalize">{t("deliveredOrders")}</h2>
 
                         <div className={`flex-center flex-col w-full mt-12 overflow-x-auto ${fulfilled_orders.length ? "bg-primary" : ""}`}>
                             <div className={`min-w-250 w-full gap-2 bg-primary ps-2 pe-5 py-6 font-semibold border-b ${fulfilled_orders.length ? "flex justify-between items-center" : "hidden"}`}>

@@ -5,6 +5,10 @@
         "cta": "En savoir plus"
     },
     "orders": {
+        "reservedTitle": "Merci, {name}. Votre commande est réservée",
+        "reservedText": "Virez {amount} avant le {date} en indiquant {id} comme référence. Nous expédions dès réception du paiement.",
+        "processingTitle": "Merci, {name}. Votre paiement est en cours de traitement",
+        "plainTitle": "Merci, {name}",
         "thankYou": "Avec nos remerciements",
         "thankYouSuffix": "votre acquisition est confirmée",
         "ongoingOrders": "en attente de livraison",

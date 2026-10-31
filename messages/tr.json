@@ -5,6 +5,10 @@
         "cta": "Daha Fazla Bilgi"
     },
     "orders": {
+        "reservedTitle": "Teşekkürler, {name}. Siparişiniz ayrıldı",
+        "reservedText": "{amount} tutarını {date} tarihine kadar, açıklama olarak {id} yazarak havale edin. Ödeme ulaştığında kargoya veriyoruz.",
+        "processingTitle": "Teşekkürler, {name}. Ödemeniz işleniyor",
+        "plainTitle": "Teşekkürler, {name}",
         "thankYou": "Teşekkürlerimizle",
         "thankYouSuffix": "satın alımınız onaylandı",
         "ongoingOrders": "teslimat bekleniyor",

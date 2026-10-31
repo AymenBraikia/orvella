@@ -5,6 +5,10 @@
         "cta": "Más información"
     },
     "orders": {
+        "reservedTitle": "Gracias, {name}. Su pedido está reservado",
+        "reservedText": "Transfiera {amount} antes del {date} e indique {id} como concepto. Enviamos en cuanto recibamos el pago.",
+        "processingTitle": "Gracias, {name}. Su pago se está procesando",
+        "plainTitle": "Gracias, {name}",
         "thankYou": "Muchas gracias",
         "thankYouSuffix": "su adquisición está confirmada",
         "ongoingOrders": "en camino",

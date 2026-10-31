@@ -5,6 +5,10 @@
         "cta": "Learn More"
     },
     "orders": {
+        "reservedTitle": "Thank you, {name}. Your order is reserved",
+        "reservedText": "Transfer {amount} by {date} using {id} as reference. We ship once the payment has arrived.",
+        "processingTitle": "Thank you, {name}. Your payment is being processed",
+        "plainTitle": "Thank you, {name}",
         "thankYou": "With thanks",
         "thankYouSuffix": "your acquisition is confirmed",
         "ongoingOrders": "awaiting delivery",

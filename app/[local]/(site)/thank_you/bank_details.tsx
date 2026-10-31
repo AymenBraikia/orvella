@@ -3,13 +3,17 @@ import { store_identity } from "@/app/server/store_identity";
 import { format_money } from "../lib/price_format";
 import type { Order } from "@/types/order";
 
+export function transfer_deadline(order: Order, locale: string): string {
+    return order.reserved_until ? new Intl.DateTimeFormat(locale, { dateStyle: "long" }).format(new Date(order.reserved_until)) : "";
+}
+
 /** Where and how to pay a bank transfer order. The order number is the payment reference. */
 export default async function BankDetails({ order }: { order: Order }) {
     const t = await getTranslations("orders.bank");
     const locale = await getLocale();
     const { bank } = await store_identity();
 
-    const deadline = order.reserved_until ? new Intl.DateTimeFormat(locale, { dateStyle: "long" }).format(new Date(order.reserved_until)) : "";
+    const deadline = transfer_deadline(order, locale);
 
     const rows: [string, string][] = [
         [t("accountHolder"), bank.account_holder],

@@ -5,6 +5,10 @@
         "cta": "معرفة المزيد"
     },
     "orders": {
+        "reservedTitle": "شكرًا لك يا {name}. تم حجز طلبك",
+        "reservedText": "يرجى تحويل {amount} قبل {date} مع ذكر {id} كمرجع. نشحن الطلب فور وصول الدفعة.",
+        "processingTitle": "شكرًا لك يا {name}. جارٍ معالجة دفعتك",
+        "plainTitle": "شكرًا لك يا {name}",
         "thankYou": "مع خالص الشكر",
         "thankYouSuffix": "تم تأكيد عملية الاقتناء",
         "ongoingOrders": "في انتظار التسليم",
