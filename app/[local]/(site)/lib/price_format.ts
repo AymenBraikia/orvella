@@ -2,17 +2,25 @@ import { eur_value_in_currency, Supported_Countries, Supported_Currencies } from
 import { calc_price } from "./calc_price";
 import { currency_decimals } from "./order_totals";
 
+function money(amount: number, currency: string, decimals: number): string {
+    return new Intl.NumberFormat("en-US", { style: "currency", currency, minimumFractionDigits: decimals, maximumFractionDigits: decimals }).format(amount);
+}
+
+/** Catalogue display: "€24,900" rather than "€24,900.00", with the cents only when there are some. */
+function catalogue_money(amount: number, currency: string): string {
+    return money(amount, currency, Number.isInteger(amount) ? 0 : currency_decimals(currency));
+}
+
 /** Format a EUR catalogue price in the visitor's currency. */
 export function format_price(n: number, currency: Supported_Currencies = "USD"): string {
     // No exchange rate (rate service down): show the real EUR price rather than a mislabelled number.
-    if (currency !== "EUR" && !eur_value_in_currency.get(currency)) return format_money(n, "EUR");
-    return format_money(calc_price(n, currency), currency);
+    if (currency !== "EUR" && !eur_value_in_currency.get(currency)) return catalogue_money(n, "EUR");
+    return catalogue_money(calc_price(n, currency), currency);
 }
 
-/** Format an amount that is already in `currency` (order totals) — no conversion. */
+/** Format an amount that is already in `currency` (order totals) — no conversion, always exact. */
 export function format_money(amount: number, currency: string): string {
-    const decimals = currency_decimals(currency);
-    return new Intl.NumberFormat("en-US", { style: "currency", currency, minimumFractionDigits: decimals, maximumFractionDigits: decimals }).format(amount);
+    return money(amount, currency, currency_decimals(currency));
 }
 
 export const country_to_currency: Map<Supported_Countries, Supported_Currencies> = new Map([
