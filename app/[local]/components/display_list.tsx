@@ -13,6 +13,7 @@ import Input from "./elements/input";
 import { apply_filters, build_facets, count_active, empty_selection, facet_counts, selection_from_params, selection_to_params, type Selection } from "../(site)/lib/filters";
 import Item_card from "./Item_card";
 import { Item } from "@/types/item";
+import { stock_rank } from "../(site)/lib/stock";
 import { brand_name } from "../(site)/lib/brand_name";
 import { item_name } from "../(site)/lib/item_name";
 
@@ -52,6 +53,8 @@ export default function Display_list({ items }: { items: Item[] }) {
     const [query, setQuery] = useState("");
     const [sortKey, setSortKey] = useState<SortKey>("newest");
     const [limit, setLimit] = useState(PAGE_SIZE);
+    // Someone arriving from the consultation quiz wants what they can buy, whatever the sort order.
+    const [stock_first] = useState(() => searchParams.get("from") == "quiz");
 
     const facets = useMemo(() => build_facets(items), [items]);
 
@@ -72,10 +75,11 @@ export default function Display_list({ items }: { items: Item[] }) {
             setLimit(PAGE_SIZE);
 
             const params = selection_to_params(next);
+            if (stock_first) params.set("from", "quiz");
             const qs = params.toString();
             router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
         },
-        [pathname, router],
+        [pathname, router, stock_first],
     );
 
     const filtered = useMemo(() => apply_filters(items, selection, query), [items, selection, query]);
@@ -83,7 +87,7 @@ export default function Display_list({ items }: { items: Item[] }) {
 
     /* Sort the whole result set, then slice. The old code truncated inside the
        filter predicate, so "price low to high" only sorted the first 30 matches. */
-    const sorted = useMemo(() => [...filtered].sort(COMPARATORS[sortKey]), [filtered, sortKey]);
+    const sorted = useMemo(() => [...filtered].sort((a, b) => (stock_first ? stock_rank(a) - stock_rank(b) : 0) || COMPARATORS[sortKey](a, b)), [filtered, sortKey, stock_first]);
     const visible = useMemo(() => sorted.slice(0, limit), [sorted, limit]);
 
     const sentinel = useRef<HTMLDivElement | null>(null);

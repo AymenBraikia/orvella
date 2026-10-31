@@ -73,8 +73,8 @@ export default function Quiz() {
         const range = BUDGETS[final.budget ?? "any"];
         if (range) params.set("price", `${range[0]}-${range[1]}`);
 
-        const qs = params.toString();
-        router.push(`/${final.category ?? "shop"}${qs ? `?${qs}` : ""}`);
+        params.set("from", "quiz");
+        router.push(`/${final.category ?? "shop"}?${params}`);
     }
 
     function choose(value: string) {

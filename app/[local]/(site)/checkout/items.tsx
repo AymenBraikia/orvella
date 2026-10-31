@@ -7,9 +7,6 @@ export default async function Items({ currency, lines }: { lines: OrderLine[]; c
     const t = await getTranslations("checkout");
     return (
         <div className="flex flex-col justify-start items-start w-full max-h-[50dvh] border-b">
-            <div className="sm:flex hidden justify-between items-center font-medium w-full text-xl gap-4 p-2 capitalize border-b">
-                <p className="min-w-30 w-full">{t("watchSpare")}</p>
-            </div>
             <div className="w-full max-h-full overflow-y-auto overflow-x-hidden gap-2 flex flex-col justify-start items-start py-2">
                 {lines.map((i, c) => (
                     <div key={i.slug} className={`flex justify-between items-center gap-4 h-25 shrink-0 sm:h-fit w-full pe-4 pb-2 ${lines.length - 1 != c ? "border-b" : ""}`}>

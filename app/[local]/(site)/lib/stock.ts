@@ -33,6 +33,13 @@ export function stock_status(item: Pick<BaseItem, "quantity" | "inStock" | "rese
     return active_reservations(item, now).length ? "reserved" : "sold";
 }
 
+const STOCK_ORDER: Record<ItemStatus, number> = { available: 0, reserved: 1, sold: 2 };
+
+/** For lists that put what can be bought first: available, then reserved, then sold. */
+export function stock_rank(item: Pick<BaseItem, "stock_status">): number {
+    return STOCK_ORDER[item.stock_status ?? "available"];
+}
+
 /** The most a customer may put in their cart. */
 export function max_cart_quantity(item: Pick<BaseItem, "quantity" | "inStock" | "reservations" | "type">, now = Date.now()): number {
     const available = available_quantity(item, now);

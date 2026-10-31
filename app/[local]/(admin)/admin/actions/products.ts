@@ -1,7 +1,8 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { items_collection, users_collection } from "@/app/db/collections";
+import { items_collection } from "@/app/db/collections";
+import { rename_in_carts } from "@/app/server/cart";
 import { require_admin } from "@/app/server/admin_auth";
 import { admin_set_status, invalidate_items, write_item_fields } from "@/app/server/inventory";
 import { delete_files, is_stored_url } from "@/app/server/storage";
@@ -109,7 +110,7 @@ export async function save_product(input: unknown, original_slug?: string): Prom
 
     if (slug !== original_slug) {
         // Keep customers' carts pointing at the piece.
-        await (await users_collection()).updateMany({ "cart.slug": original_slug }, { $set: { "cart.$[c].slug": slug } }, { arrayFilters: [{ "c.slug": original_slug }] });
+        await rename_in_carts(original_slug!, slug);
     }
 
     const old_media = [...(existing.images ?? []), ...(existing.video ? [existing.video] : [])];

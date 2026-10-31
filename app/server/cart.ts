@@ -119,6 +119,16 @@ export async function remove_from_cart(target: { guest: boolean; id: string }, s
     else await (await users_collection()).updateOne({ email: target.id }, update);
 }
 
+/** A piece got a new slug: keep it in every cart, accounts and guests alike. */
+export async function rename_in_carts(from: string, to: string) {
+    const filter = { "cart.slug": from };
+    const update = { $set: { "cart.$[c].slug": to } };
+    const options = { arrayFilters: [{ "c.slug": from }] };
+
+    await (await users_collection()).updateMany(filter, update, options);
+    await (await carts_collection()).updateMany(filter, update, options);
+}
+
 /** After login / sign-up: move the guest cart into the account and forget the guest cart. */
 export async function merge_guest_cart(email: string) {
     const id = await guest_cart_id();
