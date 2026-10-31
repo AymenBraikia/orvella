@@ -1588,6 +1588,17 @@
                 }
             ]
         },
+        "dashboard": {
+            "title": "Your whole business,<br></br><span>in one dashboard.</span>",
+            "description": "Orders, payments, stock and sell requests in one place. This is what you work with every day.",
+            "video": "Dashboard walkthrough",
+            "shots": {
+                "overview": "Overview: what needs your attention today",
+                "order": "Order detail: mark a bank transfer as received",
+                "product": "Product editor: photos, price and stock",
+                "lead": "Sell and consign requests, with the customer's photos"
+            }
+        },
         "role": {
             "eyebrow": "04 / The role",
             "title": "Keep Instagram.<br></br><span>Give it a destination.</span>",

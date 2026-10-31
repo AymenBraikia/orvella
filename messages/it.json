@@ -1593,6 +1593,17 @@
                 }
             ]
         },
+        "dashboard": {
+            "title": "Tutta la tua attività,<br></br><span>in un’unica dashboard.</span>",
+            "description": "Ordini, pagamenti, stock e richieste di vendita in un unico posto. È lo strumento che usi ogni giorno.",
+            "video": "Tour della dashboard",
+            "shots": {
+                "overview": "Panoramica: ciò che richiede la tua attenzione oggi",
+                "order": "Dettaglio ordine: segna un bonifico come ricevuto",
+                "product": "Editor prodotto: foto, prezzo e stock",
+                "lead": "Richieste di vendita e conto vendita, con le foto del cliente"
+            }
+        },
         "role": {
             "eyebrow": "04 / Il ruolo",
             "title": "Tieni Instagram.<br></br><span>Dagli una destinazione.</span>",

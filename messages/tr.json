@@ -1588,6 +1588,17 @@
                 }
             ]
         },
+        "dashboard": {
+            "title": "Tüm işiniz,<br></br><span>tek bir panelde.</span>",
+            "description": "Siparişler, ödemeler, stok ve satış talepleri tek yerde. Her gün kullanacağınız araç budur.",
+            "video": "Panel turu",
+            "shots": {
+                "overview": "Genel bakış: bugün ilgilenmeniz gerekenler",
+                "order": "Sipariş detayı: havaleyi alındı olarak işaretleyin",
+                "product": "Ürün düzenleyici: fotoğraflar, fiyat ve stok",
+                "lead": "Müşteri fotoğraflarıyla satış ve konsinye talepleri"
+            }
+        },
         "role": {
             "eyebrow": "04 / Rolü",
             "title": "Instagram'ı kullanmaya devam edin.<br></br><span>Sadece ona bir hedef verin.</span>",

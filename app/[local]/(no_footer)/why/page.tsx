@@ -1,4 +1,5 @@
 import Buyer from "./buyer";
+import Dashboard from "./dashboard";
 import Dealer from "./dealer";
 import Gap from "./gap";
 import GettingStarted from "./getting_started";
@@ -22,6 +23,7 @@ export default function Home() {
             <Buyer /> */}
             <hr className="w-dvw text-(--bg-secondary)" />
             <Dealer />
+            <Dashboard />
             {/* <hr className="w-dvw text-(--bg-secondary)" />
             <Role /> */}
             <hr className="w-dvw text-(--bg-secondary)" />

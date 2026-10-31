@@ -1,5 +1,9 @@
+import { existsSync } from "node:fs";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+
+// Optional media for the /why page. Checked here because /public is not there at runtime on Vercel.
+const WHY_MEDIA = ["dashboard.mp4", "dashboard-poster.webp", "shot-overview.webp", "shot-order.webp", "shot-product.webp", "shot-lead.webp"];
 
 const nextConfig: NextConfig = {
     env: {
@@ -7,6 +11,7 @@ const nextConfig: NextConfig = {
         NEXT_PUBLIC_UPLOAD_DRIVER: process.env.BLOB_READ_WRITE_TOKEN ? "vercel-blob" : "local",
         // Public demo deployment (see app/[local]/(site)/lib/demo.ts).
         NEXT_PUBLIC_DEMO_MODE: process.env.DEMO_MODE === "true" ? "true" : "false",
+        NEXT_PUBLIC_WHY_MEDIA: WHY_MEDIA.filter((file) => existsSync(`public/why/${file}`)).join(","),
     },
     // Images use Next's built-in optimisation (resized AVIF/WebP per device via `sizes`).
     images: {

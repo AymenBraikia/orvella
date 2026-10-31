@@ -1592,6 +1592,17 @@
                 }
             ]
         },
+        "dashboard": {
+            "title": "Todo tu negocio,<br></br><span>en un solo panel.</span>",
+            "description": "Pedidos, pagos, stock y solicitudes de venta en un solo lugar. Es con lo que trabajas cada día.",
+            "video": "Recorrido por el panel",
+            "shots": {
+                "overview": "Resumen: lo que necesita tu atención hoy",
+                "order": "Detalle del pedido: marcar una transferencia como recibida",
+                "product": "Editor de productos: fotos, precio y stock",
+                "lead": "Solicitudes de venta y consignación, con las fotos del cliente"
+            }
+        },
         "role": {
             "eyebrow": "04 / El papel",
             "title": "Mantén Instagram.<br></br><span>Dale un destino.</span>",

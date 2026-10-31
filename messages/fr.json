@@ -1593,6 +1593,17 @@
                 }
             ]
         },
+        "dashboard": {
+            "title": "Toute votre activité,<br></br><span>dans un seul tableau de bord.</span>",
+            "description": "Commandes, paiements, stock et demandes de vente au même endroit. C’est votre outil de travail au quotidien.",
+            "video": "Visite du tableau de bord",
+            "shots": {
+                "overview": "Vue d’ensemble : ce qui demande votre attention aujourd’hui",
+                "order": "Détail de commande : marquer un virement comme reçu",
+                "product": "Éditeur de produit : photos, prix et stock",
+                "lead": "Demandes de vente et de dépôt-vente, avec les photos du client"
+            }
+        },
         "role": {
             "eyebrow": "04 / Le rôle",
             "title": "Gardez Instagram.<br></br><span>Donnez-lui une destination.</span>",

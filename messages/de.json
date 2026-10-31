@@ -1587,6 +1587,17 @@
                 }
             ]
         },
+        "dashboard": {
+            "title": "Ihr gesamtes Geschäft,<br></br><span>in einem Dashboard.</span>",
+            "description": "Bestellungen, Zahlungen, Bestand und Ankaufsanfragen an einem Ort. Damit arbeiten Sie jeden Tag.",
+            "video": "Rundgang durch das Dashboard",
+            "shots": {
+                "overview": "Übersicht: was heute Ihre Aufmerksamkeit braucht",
+                "order": "Bestelldetails: Überweisung als eingegangen markieren",
+                "product": "Produkteditor: Fotos, Preis und Bestand",
+                "lead": "Ankauf- und Kommissionsanfragen mit den Fotos der Kunden"
+            }
+        },
         "role": {
             "eyebrow": "04 / Die Rolle",
             "title": "Behalten Sie Instagram.<br></br><span>Geben Sie ihm ein Ziel.</span>",
