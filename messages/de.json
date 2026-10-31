@@ -1108,6 +1108,7 @@
         "addToFavorites": "Zu Favoriten hinzufügen"
     },
     "checkout": {
+        "chargedInEur": "Die Abbuchung erfolgt in EUR.",
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your checkout/payment components before shipping.",
         "heading": "Kasse",
         "shippingHeading": "Versanddetails",

@@ -1108,6 +1108,7 @@
         "addToFavorites": "Añadir a favoritos"
     },
     "checkout": {
+        "chargedInEur": "Se le cobrará en EUR.",
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your checkout/payment components before shipping.",
         "heading": "Finalizar compra",
         "shippingHeading": "Datos de envío",

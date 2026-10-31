@@ -46,6 +46,8 @@ export const DEFAULT_SETTINGS: StoreSettings = {
     reservation_days: 3,
     order_prefix: "ORV",
 
+    charge_currency: "EUR",
+
     payments: { paypal: true, bank_transfer: true, stripe: false, local_pickup: true },
 
     notification_emails: [],

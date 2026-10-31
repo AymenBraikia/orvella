@@ -41,6 +41,8 @@ export const settings_schema = z.object({
         .toUpperCase()
         .regex(/^[A-Z0-9]{2,8}$/, "2–8 letters or digits"),
 
+    charge_currency: z.enum(["EUR", "visitor"]),
+
     payments: z.object({ paypal: z.boolean(), bank_transfer: z.boolean(), stripe: z.boolean(), local_pickup: z.boolean() }),
 
     notification_emails: z.array(z.string().trim().email("One of the notification emails is not valid")).max(10),

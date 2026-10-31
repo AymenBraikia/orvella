@@ -2,7 +2,7 @@ import Item_Display from "./item_display";
 
 import Link from "next/link";
 
-import { format_money } from "../lib/price_format";
+import { format_cart_money } from "../lib/price_format";
 import { build_quote, get_exchange_rate, shipping_for_country } from "@/app/server/checkout";
 import { convert_eur } from "../lib/order_totals";
 import { get_settings } from "@/app/server/settings";
@@ -44,7 +44,7 @@ export default async function Items() {
 
                         <div className="flex justify-between items-center w-full border-b py-1">
                             <h4 className="text-gold">{t("subtotal")}</h4>
-                            <h4>{format_money(totals.items, currency)}</h4>
+                            <h4>{format_cart_money(totals.items, currency)}</h4>
                         </div>
 
                         <div className="flex flex-col justify-center items-start w-full border-b gap-4 py-1">
@@ -54,10 +54,10 @@ export default async function Items() {
                                     <p>{t("shipping_to", { country })}</p>
                                     <Select_country address={customer.address} />
                                 </div>
-                                <p className={`xl:flex hidden ${pickup ? "line-through" : ""}`}>{format_money(shipping_costs, currency)}</p>
+                                <p className={`xl:flex hidden ${pickup ? "line-through" : ""}`}>{format_cart_money(shipping_costs, currency)}</p>
                             </div>
 
-                            <p className={`xl:hidden flex ${pickup ? "line-through" : ""}`}>{t("shipping_costs", { cost: format_money(shipping_costs, currency) })}</p>
+                            <p className={`xl:hidden flex ${pickup ? "line-through" : ""}`}>{t("shipping_costs", { cost: format_cart_money(shipping_costs, currency) })}</p>
 
                             {payments.local_pickup && <LocalPickup_checkbox initial={customer.local_pickup} />}
 
@@ -72,17 +72,17 @@ export default async function Items() {
                         {tax.mode == "added" && (
                             <div className="flex justify-between items-center w-full border-b py-1">
                                 <h4 className="text-gold">{t_checkout("vatAdded", { rate: tax.rate })}</h4>
-                                <h4>{format_money(totals.tax, currency)}</h4>
+                                <h4>{format_cart_money(totals.tax, currency)}</h4>
                             </div>
                         )}
 
                         <div className="flex justify-between items-center w-full border-b py-1 text-gold">
                             <h2>{t("total")}</h2>
-                            <h2>{format_money(totals.total, currency)}</h2>
+                            <h2>{format_cart_money(totals.total, currency)}</h2>
                         </div>
                         {tax.mode == "included" && (
                             <p className="w-full text-end text-sm text-secondary -mt-6">
-                                {t_checkout("vatIncluded", { rate: tax.rate })}: {format_money(totals.tax_included, currency)}
+                                {t_checkout("vatIncluded", { rate: tax.rate })}: {format_cart_money(totals.tax_included, currency)}
                             </p>
                         )}
                         {tax.mode == "margin_scheme" && <p className="w-full text-end text-sm text-secondary -mt-6">{t_checkout("marginScheme")}</p>}

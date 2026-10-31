@@ -1,7 +1,8 @@
 import "server-only";
 
 import { unstable_cache } from "next/cache";
-import { ExchangeRates, set_rates, Supported_Currencies, supported_currencies } from "@/currency";
+import { ExchangeRates, set_charge_mode, set_rates, Supported_Currencies, supported_currencies } from "@/currency";
+import { get_settings } from "./settings";
 
 /** Fetched at most once an hour per deployment, never from the browser. */
 const fetch_rates = unstable_cache(
@@ -20,6 +21,8 @@ const fetch_rates = unstable_cache(
  * browser). If the rate service is down, prices are shown in EUR and non-EUR checkouts are refused.
  */
 export default async function load_rates(): Promise<ExchangeRates> {
+    set_charge_mode((await get_settings()).charge_currency);
+
     try {
         const rates = await fetch_rates();
         set_rates(rates);

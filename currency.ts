@@ -81,6 +81,16 @@ export const eur_value_in_currency: Map<Supported_Currencies, number> = new Map(
 
 export type ExchangeRates = Partial<Record<Supported_Currencies, number>>;
 
+/** Admin → Settings: charge everyone in EUR and only show their currency, or charge in their currency. */
+export type ChargeCurrency = "EUR" | "visitor";
+
+/** Filled the same way as the rates, so that format_price knows when a price is only an estimate. */
+export const charge_mode: { current: ChargeCurrency } = { current: "visitor" };
+
+export function set_charge_mode(mode: ChargeCurrency) {
+    charge_mode.current = mode;
+}
+
 export function set_rates(rates: ExchangeRates) {
     for (const [currency, rate] of Object.entries(rates)) if (rate) eur_value_in_currency.set(currency as Supported_Currencies, rate);
 }

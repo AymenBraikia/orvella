@@ -1,4 +1,5 @@
 import type { TaxMode } from "./order";
+import type { ChargeCurrency } from "@/currency";
 
 export const WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"] as const;
 export type Weekday = (typeof WEEKDAYS)[number];
@@ -55,6 +56,9 @@ export interface StoreSettings {
 
     /** How long a bank transfer order holds the pieces before they go back on sale. */
     reservation_days: number;
+
+    /** PayPal converts foreign currency at a spread the dealer pays for, so EUR is the default. */
+    charge_currency: ChargeCurrency;
 
     payments: {
         paypal: boolean;

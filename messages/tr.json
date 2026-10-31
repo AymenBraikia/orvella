@@ -1109,6 +1109,7 @@
         "addToFavorites": "Favorilere ekle"
     },
     "checkout": {
+        "chargedInEur": "Ödemeniz EUR olarak tahsil edilecek.",
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your checkout/payment components before shipping.",
         "heading": "Ödeme",
         "shippingHeading": "Teslimat bilgileri",

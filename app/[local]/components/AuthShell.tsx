@@ -13,10 +13,11 @@ export default async function AuthShell({ session, cart = [], children }: { sess
 
         const cookieStore = await cookies();
         const savedCurrency = (cookieStore.get("Currency")?.value as Supported_Currencies) || "USD";
-        const store = public_details(await store_identity());
+        const identity = await store_identity();
+        const store = public_details(identity);
         const rates = await load_rates();
     return (
-        <CurrencyProvider currency={savedCurrency} rates={rates}>
+        <CurrencyProvider currency={savedCurrency} rates={rates} charge_currency={identity.charge_currency}>
         <AuthProvider initialSession={session}>
             <CartProvider cart={cart}>
                 <Header savedCurrency={savedCurrency} />

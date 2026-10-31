@@ -134,6 +134,14 @@ export default function SettingsForm({ initial, stripe_configured }: { initial: 
             </Section>
 
             <Section title="Checkout options">
+                <Choice
+                    label="Charge customers in"
+                    {...bind("charge_currency")}
+                    options={[
+                        { value: "EUR", label: "EUR (other currencies are shown as an estimate)" },
+                        { value: "visitor", label: "The visitor's currency (PayPal converts at a spread)" },
+                    ]}
+                />
                 <Check label="PayPal" {...toggle("payments.paypal")} />
                 <Check label="Bank transfer" {...toggle("payments.bank_transfer")} />
                 <Check label={`Card payments (Stripe)${stripe_configured ? "" : " — needs STRIPE_SECRET_KEY"}`} {...toggle("payments.stripe")} disabled={!stripe_configured} />

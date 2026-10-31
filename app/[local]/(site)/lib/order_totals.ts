@@ -14,6 +14,11 @@ export const BASE_CURRENCY = "EUR";
 
 export type TaxConfig = { mode: TaxMode; rate: number };
 
+/** What the customer actually pays in. Display currency only counts when the shop charges in it. */
+export function charge_currency_for<C extends string>(display: C, mode: "EUR" | "visitor"): C | typeof BASE_CURRENCY {
+    return mode == "EUR" ? BASE_CURRENCY : display;
+}
+
 export function currency_decimals(currency: string): number {
     return ZERO_DECIMAL_CURRENCIES.has(currency) ? 0 : 2;
 }

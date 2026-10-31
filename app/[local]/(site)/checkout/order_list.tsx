@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { get_Currency } from "../lib/get_currency";
 
 import { getTranslations } from "next-intl/server";
-import { build_quote } from "@/app/server/checkout";
+import { build_quote, checkout_currency } from "@/app/server/checkout";
 import { get_settings } from "@/app/server/settings";
 
 import Items from "./items";
@@ -25,7 +25,8 @@ export default async function Order_list({ customer }: { customer: CheckoutCusto
     const t_cart = await getTranslations("cart");
     const t_errors = await getTranslations("checkout.errors");
 
-    const currency = await get_Currency();
+    const display_currency = await get_Currency();
+    const currency = await checkout_currency(display_currency);
     const quote = await build_quote(customer.cart, customer, currency);
 
     const { payments } = await get_settings();
@@ -53,6 +54,7 @@ export default async function Order_list({ customer }: { customer: CheckoutCusto
             <div className="w-full text-gold">
                 <h2>{t("payment")}</h2>
             </div>
+            {currency != display_currency && <p className="text-sm text-secondary">{t("chargedInEur")}</p>}
             {payment_method && <Payment_Options default_option={payment_method} methods={methods} />}
 
             {payment_method == "Bank Transfer" && <BankTransfer customer={customer} />}

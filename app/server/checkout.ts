@@ -2,7 +2,7 @@ import "server-only";
 
 import shipping_data from "@/app/shipping.json";
 import { eur_value_in_currency, Supported_Currencies, supported_currencies } from "@/currency";
-import { compute_totals, from_minor, TaxConfig, Totals } from "@/app/(site)/lib/order_totals";
+import { charge_currency_for, compute_totals, from_minor, TaxConfig, Totals } from "@/app/(site)/lib/order_totals";
 import { max_cart_quantity } from "@/app/(site)/lib/stock";
 import { item_name } from "@/app/(site)/lib/item_name";
 import { read_items_fresh } from "./inventory";
@@ -33,6 +33,11 @@ export async function get_exchange_rate(currency: Supported_Currencies): Promise
 
 export function normalise_currency(value: string | undefined): Supported_Currencies {
     return supported_currencies.includes(value as Supported_Currencies) ? (value as Supported_Currencies) : "EUR";
+}
+
+/** The currency of the order for a visitor browsing in `display`. Checkout and the charge both use this. */
+export async function checkout_currency(display: Supported_Currencies): Promise<Supported_Currencies> {
+    return charge_currency_for(display, (await get_settings()).charge_currency);
 }
 
 type CustomerDetails = Pick<User, "local_pickup" | "address" | "diff_address">;

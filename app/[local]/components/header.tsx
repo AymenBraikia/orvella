@@ -24,6 +24,7 @@ import Select from "./elements/select";
 import Search_input from "./elements/search_input";
 import { ThemeToggle } from "./theme";
 import { format_price } from "../(site)/lib/price_format";
+import { useCurrency } from "../(site)/context/currencyContext";
 import { Supported_Currencies } from "@/currency";
 import setCurrency from "@/app/server/set_currency";
 import { Item } from "../(site)/lib/filters";
@@ -378,6 +379,8 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
 }
 
 function SearchChildComponent({ item }: { item: Item }) {
+    const currency = useCurrency();
+
     return (
         <Link
             href={"/product/" + item.slug}
@@ -389,7 +392,7 @@ function SearchChildComponent({ item }: { item: Item }) {
             </div>
             <div className="w-full h-full flex flex-col justify-start items-start gap-2">
                 {item.type == "watch" ? <p className="w-full">{`${item_name(item)} ${item.year || ""} Ref. ${item.reference}`}</p> : <p className="w-full">{item_name(item)}</p>}
-                <p>{format_price(item.price)}</p>
+                <p>{format_price(item.price, currency)}</p>
             </div>
         </Link>
     );

@@ -4,7 +4,7 @@ import { randomBytes } from "node:crypto";
 import { cookies } from "next/headers";
 import { getLocale } from "next-intl/server";
 import { orders_collection } from "../db/collections";
-import { build_quote, is_address_complete, normalise_currency, order_from_quote, type Quote } from "./checkout";
+import { build_quote, checkout_currency, is_address_complete, normalise_currency, order_from_quote, type Quote } from "./checkout";
 import { get_checkout_customer, guest_cart_id } from "./cart";
 import { reserve_items } from "./inventory";
 import { next_order_number } from "./order_number";
@@ -25,7 +25,7 @@ export async function place_pending_order(payment_method: PaymentMethod, reserve
     const customer = await get_checkout_customer();
     if (!customer) return { ok: false, error: "empty" };
 
-    const quote = await build_quote(customer.cart, customer, normalise_currency((await cookies()).get("Currency")?.value));
+    const quote = await build_quote(customer.cart, customer, await checkout_currency(normalise_currency((await cookies()).get("Currency")?.value)));
 
     if (quote.unavailable.length) return { ok: false, error: "unavailable", items: quote.unavailable };
     if (!quote.lines.length) return { ok: false, error: "empty" };
