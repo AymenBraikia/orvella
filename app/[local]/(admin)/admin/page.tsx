@@ -1,5 +1,7 @@
 import { Link } from "@/i18n/routing";
 import { overview_stats } from "./_lib/overview";
+import { setup_issues } from "./_lib/setup";
+import { get_settings } from "@/app/server/settings";
 import { normalize_order } from "@/app/server/orders";
 import { format_money } from "@/app/(site)/lib/price_format";
 import { Badge, Card, format_date, PageHeader, StatCard, Table } from "./_components/ui";
@@ -9,10 +11,24 @@ export const metadata = { title: "Overview" };
 
 export default async function AdminOverview() {
     const stats = await overview_stats();
+    const setup = setup_issues(await get_settings());
 
     return (
         <>
             <PageHeader title="Overview" subtitle="What needs your attention today." />
+
+            {setup.length > 0 && (
+                <Card title="Setup">
+                    <ul className="flex flex-col gap-3">
+                        {setup.map((issue) => (
+                            <li key={issue.title} className="text-sm">
+                                <p className="font-semibold">{issue.title}</p>
+                                <p className="text-secondary">{issue.fix}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </Card>
+            )}
 
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-3">
                 <StatCard label="New enquiries" value={stats.new_enquiries} href="/admin/enquiries?status=new" />
