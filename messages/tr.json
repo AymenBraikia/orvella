@@ -700,8 +700,10 @@
         "emailLabel": "E-posta:",
         "vatIdLabel": "Katma değer vergisi kimlik numarası:",
         "representativesLabel": "Yetkili temsilciler:",
-        "odrHeading": "Çevrimiçi Uyuşmazlık Çözümü Bildirimi",
-        "odrText": "Avrupa Komisyonu, buradan ulaşabileceğiniz bir çevrimiçi uyuşmazlık çözümü (ODR) platformu sunmaktadır. Bir tüketici hakem heyeti önünde uyuşmazlık çözümü sürecine katılma yükümlülüğümüz bulunmamakta olup buna istekli de değiliz.",
+        "registerLabel": "Ticaret sicili:",
+        "arbitrationHeading": "Tüketici uyuşmazlıklarının çözümü",
+        "arbitrationDeclined": "Bir tüketici hakem heyeti önünde uyuşmazlık çözümü sürecine katılma yükümlülüğümüz bulunmamakta olup buna istekli de değiliz.",
+        "arbitrationWilling": "Tüketici hakem heyeti önünde uyuşmazlık çözümü süreçlerine katılıyoruz. Yetkili kurum: {board}",
         "note": "Personal/company identity fields (name, address, phone, VAT ID) are intentionally NOT stored as translation strings — pull those from your business config/CMS, not from i18n files."
     },
     "legal": {
@@ -928,10 +930,7 @@
                 {
                     "number": "11",
                     "heading": "Alternatif uyuşmazlık çözümü",
-                    "items": [
-                        "AB Komisyonu, uyuşmazlıkların çözümü için çevrimiçi bir platform sunmaktadır. Bu platform, çevrimiçi satış veya hizmet sözleşmelerinden doğan uyuşmazlıkların mahkeme dışı çözümü için bir başvuru noktası işlevi görür.",
-                        "Satıcı, uyuşmazlık çözümü sürecine katılmakla yükümlü değildir."
-                    ]
+                    "arbitration": true
                 },
                 {
                     "number": "12",

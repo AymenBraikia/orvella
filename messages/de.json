@@ -699,8 +699,10 @@
         "emailLabel": "E-Mail:",
         "vatIdLabel": "Umsatzsteuer-Identifikationsnummer:",
         "representativesLabel": "Vertretungsberechtigte:",
-        "odrHeading": "Hinweis zur Online-Streitbeilegung",
-        "odrText": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die hier zu finden ist. Wir sind weder verpflichtet noch bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+        "registerLabel": "Handelsregister:",
+        "arbitrationHeading": "Verbraucherstreitbeilegung",
+        "arbitrationDeclined": "Wir sind weder verpflichtet noch bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+        "arbitrationWilling": "Wir nehmen an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil. Zuständig ist: {board}",
         "note": "Persönliche/unternehmensbezogene Identitätsdaten (Name, Adresse, Telefon, USt-IdNr.) werden absichtlich NICHT als Übersetzungsstrings gespeichert – diese sollten aus Ihrer Geschäftskonfiguration/Ihrem CMS bezogen werden, nicht aus den i18n-Dateien."
     },
     "legal": {
@@ -927,10 +929,7 @@
                 {
                     "number": "11",
                     "heading": "Alternative Streitbeilegung",
-                    "items": [
-                        "Die EU-Kommission stellt eine Online-Plattform zur Beilegung von Streitigkeiten bereit. Diese Plattform dient als Anlaufstelle für die außergerichtliche Beilegung von Streitigkeiten aus Online-Kauf- oder Dienstleistungsverträgen.",
-                        "Der Verkäufer ist nicht verpflichtet, an einem Streitbeilegungsverfahren teilzunehmen."
-                    ]
+                    "arbitration": true
                 },
                 {
                     "number": "12",

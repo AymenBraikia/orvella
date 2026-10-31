@@ -21,6 +21,12 @@ export const settings_schema = z.object({
     chrono24_url: url,
     ebay_url: url,
     vat_id: text(40),
+    register_court: text(120),
+    register_number: text(40),
+
+    arbitration_participates: z.boolean(),
+    arbitration_board: text(300),
+
     opening_hours: z.object(Object.fromEntries(WEEKDAYS.map((d) => [d, text(60)])) as Record<(typeof WEEKDAYS)[number], ReturnType<typeof text>>),
     parking_url: url,
 
@@ -37,6 +43,8 @@ export const settings_schema = z.object({
     payments: z.object({ paypal: z.boolean(), bank_transfer: z.boolean(), stripe: z.boolean(), local_pickup: z.boolean() }),
 
     notification_emails: z.array(z.string().trim().email("One of the notification emails is not valid")).max(10),
-});
+})
+    // § 36 VSBG: a shop that takes part has to name the board.
+    .refine((s) => !s.arbitration_participates || s.arbitration_board, { path: ["arbitration_board"], message: "Name the arbitration board" });
 
 export type SettingsInput = z.input<typeof settings_schema>;

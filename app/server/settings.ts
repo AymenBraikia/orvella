@@ -25,6 +25,11 @@ export const DEFAULT_SETTINGS: StoreSettings = {
     chrono24_url: "",
     ebay_url: "",
     vat_id: "DE000000000",
+    register_court: "",
+    register_number: "",
+
+    arbitration_participates: false,
+    arbitration_board: "",
 
     opening_hours: { monday: "11:00 – 17:00", tuesday: "11:00 – 17:00", wednesday: "11:00 – 17:00", thursday: "11:00 – 17:00", friday: "11:00 – 17:00", saturday: "11:00 – 17:00", sunday: "" },
     parking_url: "",

@@ -699,8 +699,10 @@
         "emailLabel": "Correo electrónico:",
         "vatIdLabel": "Número de identificación a efectos del IVA:",
         "representativesLabel": "Representantes autorizados:",
-        "odrHeading": "Aviso sobre resolución de litigios en línea",
-        "odrText": "La Comisión Europea pone a disposición una plataforma de resolución de litigios en línea (RLL) que puede consultarse aquí. No estamos obligados ni dispuestos a participar en un procedimiento de resolución de litigios ante una junta arbitral de consumo.",
+        "registerLabel": "Registro mercantil:",
+        "arbitrationHeading": "Resolución de litigios de consumo",
+        "arbitrationDeclined": "No estamos obligados ni dispuestos a participar en un procedimiento de resolución de litigios ante una junta arbitral de consumo.",
+        "arbitrationWilling": "Participamos en procedimientos de resolución de litigios ante una junta arbitral de consumo. La entidad competente es: {board}",
         "note": "Los datos de identidad personales o de la empresa (nombre, dirección, teléfono, NIF-IVA) no se guardan intencionadamente como cadenas de traducción: deben obtenerse de la configuración del negocio o del CMS, no de los archivos i18n."
     },
     "legal": {
@@ -927,10 +929,7 @@
                 {
                     "number": "11",
                     "heading": "Resolución alternativa de litigios",
-                    "items": [
-                        "La Comisión Europea pone a disposición una plataforma en línea para la resolución de litigios. Esta plataforma sirve como punto de contacto para la resolución extrajudicial de litigios derivados de contratos de compraventa o de servicios celebrados en línea.",
-                        "El vendedor no está obligado a participar en el procedimiento de resolución de litigios."
-                    ]
+                    "arbitration": true
                 },
                 {
                     "number": "12",

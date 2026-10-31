@@ -700,8 +700,10 @@
         "emailLabel": "E-mail:",
         "vatIdLabel": "Sales tax identification number:",
         "representativesLabel": "Authorized representatives:",
-        "odrHeading": "Online Dispute Resolution Notice",
-        "odrText": "The European Commission provides a platform for online dispute resolution (OS) which can be found here. We are neither obliged nor willing to participate in a dispute settlement procedure before a consumer arbitration board.",
+        "registerLabel": "Commercial register:",
+        "arbitrationHeading": "Consumer dispute resolution",
+        "arbitrationDeclined": "We are neither obliged nor willing to participate in a dispute settlement procedure before a consumer arbitration board.",
+        "arbitrationWilling": "We take part in dispute settlement procedures before a consumer arbitration board. The competent board is: {board}",
         "note": "Personal/company identity fields (name, address, phone, VAT ID) are intentionally NOT stored as translation strings — pull those from your business config/CMS, not from i18n files."
     },
     "legal": {
@@ -928,10 +930,7 @@
                 {
                     "number": "11",
                     "heading": "Alternative dispute resolution",
-                    "items": [
-                        "The EU Commission provides an online platform to solve disputes. This platform serves as a contact point for out-of-court settlement of disputes arising from online purchase or service contracts.",
-                        "The seller is not obliged to participate in the dispute resolution procedure."
-                    ]
+                    "arbitration": true
                 },
                 {
                     "number": "12",

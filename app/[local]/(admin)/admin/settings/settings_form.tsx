@@ -72,10 +72,17 @@ export default function SettingsForm({ initial, stripe_configured }: { initial: 
                 <Field label="Legal company name" {...bind("legal_name")} hint="As registered, e.g. Muster Uhren GmbH" />
                 <Field label="Authorised representative" {...bind("representative")} />
                 <Field label="VAT ID" {...bind("vat_id")} />
+                <Field label="Register court" {...bind("register_court")} hint="Required for a GmbH, e.g. Amtsgericht München" />
+                <Field label="Register number" {...bind("register_number")} hint="e.g. HRB 123456" />
                 <Field label="Street and number" {...bind("address.street")} />
                 <Field label="Postcode" {...bind("address.postcode")} />
                 <Field label="City" {...bind("address.city")} />
                 <Field label="Country" {...bind("address.country")} />
+            </Section>
+
+            <Section title="Consumer arbitration (§ 36 VSBG)" hint="Shown on the imprint and in the terms. Off means you state that you do not take part.">
+                <Check label="We take part in consumer arbitration" {...toggle("arbitration_participates")} />
+                <Field label="Arbitration board" {...bind("arbitration_board")} hint="Name, address and website of the board" />
             </Section>
 
             <Section title="Contact & social">

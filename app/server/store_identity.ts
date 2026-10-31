@@ -34,6 +34,8 @@ export function demo_safe(settings: StoreSettings): StoreSettings {
         phone: DEFAULT_SETTINGS.phone,
         email: DEFAULT_SETTINGS.email,
         vat_id: DEFAULT_SETTINGS.vat_id,
+        register_court: "Amtsgericht Your City",
+        register_number: "HRB 00000",
         bank: DEFAULT_SETTINGS.bank,
     };
 }

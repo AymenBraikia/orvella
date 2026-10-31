@@ -700,8 +700,10 @@
         "emailLabel": "E-mail:",
         "vatIdLabel": "Partita IVA:",
         "representativesLabel": "Rappresentanti autorizzati:",
-        "odrHeading": "Informativa sulla risoluzione delle controversie online",
-        "odrText": "La Commissione europea mette a disposizione una piattaforma per la risoluzione delle controversie online (ODR), consultabile qui. Non siamo né obbligati né disposti a partecipare a una procedura di risoluzione delle controversie dinanzi a un organismo di conciliazione per i consumatori.",
+        "registerLabel": "Registro delle imprese:",
+        "arbitrationHeading": "Risoluzione delle controversie dei consumatori",
+        "arbitrationDeclined": "Non siamo né obbligati né disposti a partecipare a una procedura di risoluzione delle controversie dinanzi a un organismo di conciliazione per i consumatori.",
+        "arbitrationWilling": "Partecipiamo a procedure di risoluzione delle controversie dinanzi a un organismo di conciliazione per i consumatori. L’organismo competente è: {board}",
         "note": "Personal/company identity fields (name, address, phone, VAT ID) are intentionally NOT stored as translation strings — pull those from your business config/CMS, not from i18n files."
     },
     "legal": {
@@ -928,10 +930,7 @@
                 {
                     "number": "11",
                     "heading": "Risoluzione alternativa delle controversie",
-                    "items": [
-                        "La Commissione europea mette a disposizione una piattaforma online per la risoluzione delle controversie. Tale piattaforma funge da punto di contatto per la composizione extragiudiziale delle controversie derivanti da contratti di acquisto o di servizi conclusi online.",
-                        "Il venditore non è tenuto a partecipare alla procedura di risoluzione delle controversie."
-                    ]
+                    "arbitration": true
                 },
                 {
                     "number": "12",

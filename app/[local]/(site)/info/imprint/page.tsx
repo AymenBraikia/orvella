@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { store_identity } from "@/app/server/store_identity";
+import ArbitrationStatement from "../arbitration_statement";
 
 export default async function ImprintPage() {
     const t = await getTranslations("imprint");
@@ -35,6 +36,13 @@ export default async function ImprintPage() {
                     </div>
                 )}
 
+                {(store.register_court || store.register_number) && (
+                    <div className="flex-center gap-2">
+                        <p className="font-bold">{t("registerLabel")}</p>
+                        {[store.register_court, store.register_number].filter(Boolean).join(", ")}
+                    </div>
+                )}
+
                 <div className="flex-center gap-2">
                     <p className="font-bold">{t("representativesLabel")}</p>
                     {store.representative}
@@ -42,9 +50,9 @@ export default async function ImprintPage() {
 
                 <br />
 
-                <h6>{t("odrHeading")}</h6>
+                <h6>{t("arbitrationHeading")}</h6>
 
-                <p>{t("odrText")}</p>
+                <ArbitrationStatement />
             </div>
         </div>
     );

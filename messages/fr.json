@@ -700,8 +700,10 @@
         "emailLabel": "E-mail :",
         "vatIdLabel": "Numéro d'identification à la TVA :",
         "representativesLabel": "Représentants autorisés :",
-        "odrHeading": "Information sur le règlement en ligne des litiges",
-        "odrText": "La Commission européenne met à disposition une plateforme de règlement en ligne des litiges (RLL) accessible ici. Nous ne sommes ni tenus ni disposés à participer à une procédure de règlement des litiges devant un organe de médiation de la consommation.",
+        "registerLabel": "Registre du commerce :",
+        "arbitrationHeading": "Règlement des litiges de consommation",
+        "arbitrationDeclined": "Nous ne sommes ni tenus ni disposés à participer à une procédure de règlement des litiges devant un organe de médiation de la consommation.",
+        "arbitrationWilling": "Nous participons aux procédures de règlement des litiges devant un organe de médiation de la consommation. L’organe compétent est : {board}",
         "note": "Personal/company identity fields (name, address, phone, VAT ID) are intentionally NOT stored as translation strings — pull those from your business config/CMS, not from i18n files."
     },
     "legal": {
@@ -928,10 +930,7 @@
                 {
                     "number": "11",
                     "heading": "Règlement extrajudiciaire des litiges",
-                    "items": [
-                        "La Commission européenne met à disposition une plateforme en ligne de règlement des litiges. Cette plateforme sert de point de contact pour le règlement extrajudiciaire des litiges découlant de contrats d'achat ou de service conclus en ligne.",
-                        "Le vendeur n'est pas tenu de participer à la procédure de règlement des litiges."
-                    ]
+                    "arbitration": true
                 },
                 {
                     "number": "12",

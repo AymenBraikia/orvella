@@ -23,6 +23,13 @@ export interface StoreSettings {
     chrono24_url: string;
     ebay_url: string;
     vat_id: string;
+    /** Required for a GmbH (§ 5 DDG); shown on the imprint when filled. */
+    register_court: string;
+    register_number: string;
+
+    /** § 36 VSBG: whether the shop takes part in consumer arbitration, and if so before which board. */
+    arbitration_participates: boolean;
+    arbitration_board: string;
 
     /** Free text per day, e.g. "11:00 – 17:00"; empty means closed. */
     opening_hours: Record<Weekday, string>;
