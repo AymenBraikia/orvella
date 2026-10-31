@@ -10,10 +10,12 @@ export type Supported_Currencies =
     | "JPY"
     | "SGD"
     | "CNY";
+/** European countries without the euro, shown EUR rather than falling back to USD. */
+type Europe_Non_Euro = "SE" | "DK" | "NO" | "PL" | "CZ" | "HU" | "RO" | "IS" | "LI";
 type EU = "AD" | "AT" | "BE" | "BG" | "CY" | "DE" | "EE" | "ES" | "FI" | "FR" | "GR" | "HR" | "IE" | "IT" | "LT" | "LU" | "LV" | "MC" | "ME" | "MT" | "NL" | "PT" | "SI" | "SK" | "SM" | "VA" | "XK";
 // type ME = "SA" | "AE" | "QA" | "KW" | "BH";
 
-export type Supported_Countries = "US" | "GB" | "CA" | "AU" | "CN" | "SG" | "JP" | "HK" | EU; //| ME;
+export type Supported_Countries = "US" | "GB" | "CA" | "AU" | "CN" | "SG" | "JP" | "HK" | "CH" | EU | Europe_Non_Euro; //| ME;
 
 export const currencyByCountry: Record<Supported_Countries, Supported_Currencies> = {
     US: "USD",
@@ -23,6 +25,7 @@ export const currencyByCountry: Record<Supported_Countries, Supported_Currencies
     HK: "HKD",
 
     GB: "GBP",
+    CH: "CHF",
 
     CN: "CNY",
     JP: "JPY",
@@ -60,6 +63,16 @@ export const currencyByCountry: Record<Supported_Countries, Supported_Currencies
     SM: "EUR",
     VA: "EUR",
     XK: "EUR",
+
+    SE: "EUR",
+    DK: "EUR",
+    NO: "EUR",
+    PL: "EUR",
+    CZ: "EUR",
+    HU: "EUR",
+    RO: "EUR",
+    IS: "EUR",
+    LI: "EUR",
 };
 
 export const supported_currencies: Supported_Currencies[] = [

@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import { eur_value_in_currency, set_rates } from "@/currency";
-import { format_money, format_price } from "@/app/(site)/lib/price_format";
+import { country_to_currency, format_money, format_price } from "@/app/(site)/lib/price_format";
 
 beforeEach(() => {
     eur_value_in_currency.clear();
@@ -21,6 +21,16 @@ describe("catalogue prices", () => {
     it("without an exchange rate the real EUR price is shown", () => {
         eur_value_in_currency.clear();
         expect(format_price(24900, "USD")).toBe("€24,900");
+    });
+});
+
+describe("currency by country", () => {
+    it("Switzerland gets CHF", () => {
+        expect(country_to_currency.get("CH")).toBe("CHF");
+    });
+
+    it("European countries without the euro get EUR, not the USD fallback", () => {
+        for (const country of ["SE", "DK", "NO", "PL", "CZ", "HU", "RO", "IS", "LI"] as const) expect(country_to_currency.get(country)).toBe("EUR");
     });
 });
 
