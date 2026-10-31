@@ -5,6 +5,7 @@ import { useRouter } from "@/i18n/routing";
 import { save_settings } from "../actions/settings";
 import { settings_schema } from "./schema";
 import { WEEKDAYS, type StoreSettings } from "@/types/settings";
+import { DEMO_MODE } from "@/app/(site)/lib/demo";
 
 type Values = Omit<StoreSettings, "updated_at">;
 
@@ -148,6 +149,12 @@ export default function SettingsForm({ initial, stripe_configured }: { initial: 
                     ) : null}
                 </label>
             </Section>
+
+            {DEMO_MODE && (
+                <Section title="Demo" hint="Every night: all pieces back on sale, open orders cancelled, orders and requests older than 24 hours deleted.">
+                    <Check label="Reset the demo every night" {...toggle("demo_reset")} />
+                </Section>
+            )}
 
             <div className="sticky bottom-0 z-10 flex flex-wrap items-center gap-4 bg-background border-t border-secondary/30 py-4" style={{ paddingBottom: "calc(1rem + env(safe-area-inset-bottom, 0px))" }}>
                 <button type="submit" disabled={saving} className={`button3 bg-gold text-primary px-6! py-3! ${saving ? "disabled" : ""}`}>

@@ -66,6 +66,9 @@ export interface StoreSettings {
     /** Who gets new order / lead / appointment emails. */
     notification_emails: string[];
 
+    /** Public demo only: restock and clear old data every night. Ignored unless DEMO_MODE is on. */
+    demo_reset: boolean;
+
     updated_at?: Date | string;
 }
 

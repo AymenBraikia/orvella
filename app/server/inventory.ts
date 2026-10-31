@@ -186,6 +186,22 @@ export async function mark_items_sold(order_id: string, lines: StockLine[]): Pro
     return conflicts;
 }
 
+/** Demo reset: every piece back on sale and every hold gone. Unique pieces go back to exactly one. */
+export async function restock_everything() {
+    const items = await items_collection();
+    const live = { deleted: { $ne: true } };
+    const slugs = (await items.find(live, { projection: { _id: 0, slug: 1 } }).toArray()).map((i) => i.slug);
+
+    await items.updateMany(live, [
+        NORMALISE_STAGE,
+        { $set: { quantity: { $cond: [{ $eq: ["$type", "spare"] }, { $max: [1, { $add: ["$quantity", { $sum: "$reservations.quantity" }] }] }, 1] }, reservations: [] } },
+        { $unset: "sold_at" },
+        STATUS_STAGE,
+    ]);
+
+    invalidate_items(slugs);
+}
+
 /** Fresh, uncached item documents for money and stock decisions. */
 export async function read_items_fresh(slugs: string[]): Promise<Item[]> {
     return (await items_collection()).find({ slug: { $in: slugs } }, { projection: { _id: 0 } }).toArray();

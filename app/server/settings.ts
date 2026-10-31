@@ -49,6 +49,8 @@ export const DEFAULT_SETTINGS: StoreSettings = {
     payments: { paypal: true, bank_transfer: true, stripe: false, local_pickup: true },
 
     notification_emails: [],
+
+    demo_reset: false,
 };
 
 export const SETTINGS_ID = "store";

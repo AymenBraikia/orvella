@@ -44,6 +44,8 @@ export const settings_schema = z.object({
     payments: z.object({ paypal: z.boolean(), bank_transfer: z.boolean(), stripe: z.boolean(), local_pickup: z.boolean() }),
 
     notification_emails: z.array(z.string().trim().email("One of the notification emails is not valid")).max(10),
+
+    demo_reset: z.boolean(),
 })
     // § 36 VSBG: a shop that takes part has to name the board.
     .refine((s) => !s.arbitration_participates || s.arbitration_board, { path: ["arbitration_board"], message: "Name the arbitration board" });
