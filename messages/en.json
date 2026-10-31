@@ -1632,6 +1632,8 @@
             ]
         },
         "cta": {
+            "whatsapp": "Message me on WhatsApp",
+            "email": "Email me",
             "eyebrow": "Next step",
             "title": "See what your actual watches<br></br><span>look like here.</span>",
             "description": "No 60-minute sales call. Send the current stock link or three pieces you're actively selling. I'll take it from there.",

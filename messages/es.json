@@ -1636,6 +1636,8 @@
             ]
         },
         "cta": {
+            "whatsapp": "Escríbeme por WhatsApp",
+            "email": "Escríbeme por correo",
             "eyebrow": "Siguiente paso",
             "title": "Mira cómo quedan tus relojes reales<br></br><span>aquí.</span>",
             "description": "No hay llamada de ventas de 60 minutos. Envía el enlace de tu stock actual o tres piezas que estés vendiendo. Yo me encargo del resto.",

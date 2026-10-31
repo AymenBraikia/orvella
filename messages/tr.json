@@ -1632,6 +1632,8 @@
             ]
         },
         "cta": {
+            "whatsapp": "WhatsApp üzerinden yazın",
+            "email": "Bana e-posta gönderin",
             "eyebrow": "Sonraki adım",
             "title": "Gerçek saatlerinizin<br></br><span>burada nasıl göründüğünü görün.</span>",
             "description": "60 dakikalık satış görüşmesi yok. Mevcut stok bağlantınızı veya aktif olarak sattığınız üç parçayı gönderin. Gerisini ben hallederim.",

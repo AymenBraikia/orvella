@@ -1637,6 +1637,8 @@
             ]
         },
         "cta": {
+            "whatsapp": "Écrivez-moi sur WhatsApp",
+            "email": "Écrivez-moi par e-mail",
             "eyebrow": "Prochaine étape",
             "title": "Voyez à quoi ressemblent vos vraies montres<br></br><span>ici.</span>",
             "description": "Pas d'appel commercial de 60 minutes. Envoyez le lien de votre stock actuel ou trois pièces que vous vendez activement. Je m'occupe du reste.",
