@@ -125,6 +125,27 @@ export async function orders_for_email(email: string, include_guest_orders = fal
     return JSON.parse(JSON.stringify(docs.map(normalize_order)));
 }
 
+/** Add to the dealer's notes without overwriting what is already there. */
+function joined_notes(order: Pick<Order, "admin_notes">, note: string): string {
+    return order.admin_notes ? `${order.admin_notes}\n${note}` : note;
+}
+
+export async function add_admin_note(order: Pick<Order, "id" | "admin_notes">, note: string) {
+    await (await orders_collection()).updateOne({ id: order.id }, { $set: { admin_notes: joined_notes(order, note) } });
+}
+
+/**
+ * Something happened to the payment that the dealer must see: a status-history entry and an admin
+ * note. PayPal resends events, so each id counts once; returns false for a repeat.
+ */
+export async function record_payment_event(order: Order, event_id: string, note: string): Promise<boolean> {
+    const result = await (await orders_collection()).updateOne(
+        { id: order.id, paypal_events: { $ne: event_id } },
+        { $set: { admin_notes: joined_notes(order, note), updated_at: new Date() }, $push: { status_history: event(order.status, note, "PayPal"), paypal_events: event_id } },
+    );
+    return result.modifiedCount === 1;
+}
+
 /** Status changes the dealer can make from the admin, and from which states. */
 export const ORDER_TRANSITIONS: Record<OrderStatus, OrderStatus[]> = {
     pending_payment: ["paid", "cancelled"],

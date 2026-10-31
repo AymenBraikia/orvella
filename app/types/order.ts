@@ -66,6 +66,8 @@ export interface Order {
     id: string;
     paypal_order_id?: string;
     paypal_capture_id?: string;
+    /** PayPal webhook events already handled, so a resend changes nothing. */
+    paypal_events?: string[];
     stripe_session_id?: string;
     stripe_payment_intent?: string;
 
