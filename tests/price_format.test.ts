@@ -25,12 +25,13 @@ describe("catalogue prices", () => {
 });
 
 describe("currency by country", () => {
-    it("Switzerland gets CHF", () => {
+    it("Switzerland and Liechtenstein get CHF", () => {
         expect(country_to_currency.get("CH")).toBe("CHF");
+        expect(country_to_currency.get("LI")).toBe("CHF");
     });
 
     it("European countries without the euro get EUR, not the USD fallback", () => {
-        for (const country of ["SE", "DK", "NO", "PL", "CZ", "HU", "RO", "IS", "LI"] as const) expect(country_to_currency.get(country)).toBe("EUR");
+        for (const country of ["SE", "DK", "NO", "PL", "CZ", "HU", "RO", "IS"] as const) expect(country_to_currency.get(country)).toBe("EUR");
     });
 });
 

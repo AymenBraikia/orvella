@@ -41,6 +41,7 @@ export const country_to_currency: Map<Supported_Countries, Supported_Currencies>
     ["HK", "HKD"],
     ["GB", "GBP"],
     ["CH", "CHF"],
+    ["LI", "CHF"],
     ["CN", "CNY"],
     ["JP", "JPY"],
     // ["AE", "AED"],
@@ -83,5 +84,4 @@ export const country_to_currency: Map<Supported_Countries, Supported_Currencies>
     ["HU", "EUR"],
     ["RO", "EUR"],
     ["IS", "EUR"],
-    ["LI", "EUR"],
 ]);
