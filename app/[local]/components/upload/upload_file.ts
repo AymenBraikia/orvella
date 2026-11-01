@@ -7,14 +7,17 @@ function safe_name(file: File): string {
 
 /** Upload one file straight from the browser to storage; resolves with its public URL. */
 export async function upload_file(file: File, kind: UploadKind, on_progress?: (percent: number) => void): Promise<string> {
-    if (process.env.NEXT_PUBLIC_UPLOAD_DRIVER === "vercel-blob") {
-        const { upload } = await import("@vercel/blob/client");
-        const result = await upload(`${UPLOAD_RULES[kind].prefix}/${safe_name(file)}`, file, {
+    const driver = process.env.NEXT_PUBLIC_UPLOAD_DRIVER;
+    if (driver === "vercel-blob" || driver === "vercel-blob-presigned") {
+        const { upload, uploadPresigned } = await import("@vercel/blob/client");
+        const presigned = driver === "vercel-blob-presigned";
+        const result = await (presigned ? uploadPresigned : upload)(`${UPLOAD_RULES[kind].prefix}/${safe_name(file)}`, file, {
             access: "public",
             handleUploadUrl: "/api/upload",
             clientPayload: kind,
             contentType: file.type,
-            multipart: file.size > 20 * 1024 * 1024,
+            // The presigned route signs single uploads only; files stay well under the single-upload limit.
+            multipart: !presigned && file.size > 20 * 1024 * 1024,
             onUploadProgress: ({ percentage }) => on_progress?.(percentage),
         });
         return result.url;

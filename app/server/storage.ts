@@ -11,13 +11,14 @@ import { UPLOAD_RULES, type UploadKind } from "@/app/(site)/lib/upload_rules";
  * a new driver needs (1) a way for the browser to upload directly (see /api/upload),
  * (2) is_stored_url and (3) delete_files.
  *
- * - "vercel-blob": used whenever BLOB_READ_WRITE_TOKEN is set.
+ * - "vercel-blob": used whenever a Blob store is connected. Older stores set BLOB_READ_WRITE_TOKEN;
+ *   newer ones set only BLOB_STORE_ID and authenticate through Vercel's OIDC token.
  * - "local": development fallback without any account; files go to public/dev-uploads (gitignored).
  */
 
 export type StorageDriver = "vercel-blob" | "local";
 
-export const STORAGE_DRIVER: StorageDriver = process.env.BLOB_READ_WRITE_TOKEN ? "vercel-blob" : "local";
+export const STORAGE_DRIVER: StorageDriver = process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID ? "vercel-blob" : "local";
 
 const LOCAL_ROOT = path.join(process.cwd(), "public", "dev-uploads");
 const LOCAL_URL_PREFIX = "/dev-uploads/";

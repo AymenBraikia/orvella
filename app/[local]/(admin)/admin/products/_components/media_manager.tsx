@@ -7,6 +7,12 @@ import { is_heic, UPLOAD_RULES } from "@/app/(site)/lib/upload_rules";
 
 type Pending = { id: string; name: string; progress: number; error?: string };
 
+/** The server's reason (storage not set up, signed out, file too large…) instead of a bare "failed". */
+function upload_error(error: unknown): string {
+    const message = error instanceof Error ? error.message.replace(/^Vercel Blob: /, "") : "";
+    return message ? `Upload failed: ${message}` : "Upload failed";
+}
+
 /**
  * Product photos and video. The first image is the main one (cards, search, social previews).
  * Reorder by dragging, or with the arrow buttons on touch screens.
@@ -76,8 +82,8 @@ export default function MediaManager({
                 latest.current = { ...latest.current, images: next };
                 onChange(next, latest.current.video);
                 set_pending((p) => p.filter((x) => x.id !== job.id));
-            } catch {
-                set_pending((p) => p.map((x) => (x.id === job.id ? { ...x, error: "Upload failed" } : x)));
+            } catch (error) {
+                set_pending((p) => p.map((x) => (x.id === job.id ? { ...x, error: upload_error(error) } : x)));
             }
         }
         onBusy(false);
@@ -94,8 +100,8 @@ export default function MediaManager({
         try {
             const url = await upload_file(file, "product_video", set_video_progress);
             onChange(latest.current.images, url);
-        } catch {
-            set_notice("Video upload failed");
+        } catch (error) {
+            set_notice(`Video: ${upload_error(error)}`);
         }
         set_video_progress(null);
         onBusy(false);

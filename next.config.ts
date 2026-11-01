@@ -7,8 +7,9 @@ const WHY_MEDIA = ["dashboard.mp4", "dashboard-poster.webp", "shot-overview.webp
 
 const nextConfig: NextConfig = {
     env: {
-        // Lets the browser pick the upload path (Vercel Blob when a token exists, the dev-only local driver otherwise).
-        NEXT_PUBLIC_UPLOAD_DRIVER: process.env.BLOB_READ_WRITE_TOKEN ? "vercel-blob" : "local",
+        // Lets the browser pick the upload path: Vercel Blob with a read-write token, Vercel Blob through presigned
+        // URLs (newer stores, BLOB_STORE_ID only), or the dev-only local driver.
+        NEXT_PUBLIC_UPLOAD_DRIVER: process.env.BLOB_READ_WRITE_TOKEN ? "vercel-blob" : process.env.BLOB_STORE_ID ? "vercel-blob-presigned" : "local",
         // Public demo deployment (see app/[local]/(site)/lib/demo.ts).
         NEXT_PUBLIC_DEMO_MODE: process.env.DEMO_MODE === "true" ? "true" : "false",
         NEXT_PUBLIC_WHY_MEDIA: WHY_MEDIA.filter((file) => existsSync(`public/why/${file}`)).join(","),
