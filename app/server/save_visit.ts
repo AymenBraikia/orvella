@@ -2,29 +2,34 @@ import { Visitor } from "@/types/visitor";
 import { visitors_collection } from "../db/collections";
 import { NextRequest } from "next/server";
 import { sanitizeRef } from "@/i18n/brand";
+import { createHmac } from "node:crypto";
+
+/**
+ * Repeat visits are recognised by a keyed hash of the IP address; the address itself is never stored
+ * (GDPR). Keyed with the server secret, so the hash cannot be reversed by trying every address.
+ */
+function hash_ip(ip: string): string | undefined {
+    const secret = process.env.JWT_SECRET;
+    if (!ip || !secret) return undefined;
+    return createHmac("sha256", secret).update(`visit:${ip}`).digest("hex").slice(0, 32);
+}
 
 export async function save_visit(request: NextRequest) {
     const collection = await visitors_collection();
 
     const agent = request.headers.get("user-agent") ?? "";
 
-    const forwardedFor = request.headers.get("x-forwarded-for");
-    const realIp = request.headers.get("x-real-ip");
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || request.headers.get("x-real-ip") || "";
+    const ip_hash = hash_ip(ip);
 
-    const ipv4 =
-        forwardedFor
-            ?.split(",")
-            .map((ip) => ip.trim())
-            .find((ip) => /^(?:\d{1,3}\.){3}\d{1,3}$/.test(ip)) ?? (realIp && /^(?:\d{1,3}\.){3}\d{1,3}$/.test(realIp) ? realIp : undefined);
-
-    if (await collection.findOneAndUpdate({ ip: ipv4 }, { $inc: { visits: 1 } })) return;
+    if (ip_hash && (await collection.findOneAndUpdate({ ip_hash }, { $inc: { visits: 1 } }))) return;
 
     const visitor: Visitor = {
         userAgent: agent,
 
         referer: sanitizeRef(request.nextUrl.searchParams.get("ref"))!,
 
-        ip: ipv4,
+        ip_hash,
 
         id: Math.floor(Math.random() * 1e6).toString(),
 

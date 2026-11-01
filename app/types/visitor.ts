@@ -2,7 +2,8 @@ export type Visitor = {
     id: string;
     timestamp: Date;
 
-    ip?: string;
+    /** Keyed hash of the IP address (see save_visit); the address itself is not stored. */
+    ip_hash?: string;
     userAgent: string;
     referer?: string;
 
