@@ -105,7 +105,8 @@
             "disclaimer": "Haftungsausschluss",
             "cookiePolicy": "Cookie-Richtlinie",
             "disclaimerText": "Orvella ist ein unabhängiger Händler und weder mit einer anderen Marke verbunden noch ein autorisierter Wiederverkäufer.",
-            "copyright": "©{year} Orvella. Alle Rechte vorbehalten."
+            "copyright": "©{year} Orvella. Alle Rechte vorbehalten.",
+            "byAppointment": "Showroom-Besuche nach Terminvereinbarung"
         },
         "contactLabels": {
             "phonePrimary": "Telefon",
@@ -407,7 +408,8 @@
                 },
                 {
                     "title": "Kommissionsvertrag und Versandetikett",
-                    "text": "Auf Wunsch senden wir Ihnen einen Kommissionsvertrag und ein vollständig versichertes Versandetikett. Alternativ können Sie einen Termin in unserem Geschäft in {city} vereinbaren."
+                    "text": "Auf Wunsch senden wir Ihnen einen Kommissionsvertrag und ein vollständig versichertes Versandetikett. Alternativ können Sie einen Termin in unserem Geschäft in {city} vereinbaren.",
+                    "textNoCity": "Auf Wunsch senden wir Ihnen einen Kommissionsvertrag und ein vollständig versichertes Versandetikett. Alternativ können Sie einen Termin in unserem Geschäft vereinbaren."
                 },
                 {
                     "title": "Prüfung",

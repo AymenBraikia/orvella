@@ -105,7 +105,8 @@
             "disclaimer": "Avis de non-responsabilité",
             "cookiePolicy": "Politique relative aux cookies",
             "disclaimerText": "Orvella est un revendeur indépendant, non affilié à une quelconque marque et n'est pas un revendeur agréé.",
-            "copyright": "©{year} Orvella. Tous droits réservés."
+            "copyright": "©{year} Orvella. Tous droits réservés.",
+            "byAppointment": "Visites du showroom sur rendez-vous"
         },
         "contactLabels": {
             "phonePrimary": "Téléphone",
@@ -408,7 +409,9 @@
                 },
                 {
                     "title": "Contrat de dépôt-vente et étiquette d'expédition",
-                    "text": "Si vous le souhaitez, nous vous enverrons un contrat de dépôt-vente et une étiquette d'expédition entièrement assurée. Vous pouvez également prendre rendez-vous dans notre boutique à {city}."
+                    "text": "Si vous le souhaitez, nous vous enverrons un contrat de dépôt-vente et une étiquette d'expédition entièrement assurée. Vous pouvez également prendre rendez-vous dans notre boutique à {city}.",
+
+                    "textNoCity": "Si vous le souhaitez, nous vous enverrons un contrat de dépôt-vente et une étiquette d'expédition entièrement assurée. Vous pouvez également prendre rendez-vous dans notre boutique."
                 },
                 {
                     "title": "Contrôle",

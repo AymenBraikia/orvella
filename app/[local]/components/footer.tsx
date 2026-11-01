@@ -29,17 +29,31 @@ export default function Footer({ store }: { store: PublicStoreDetails }) {
                         </Link>{" "}
                     </div>
                     <ul className="flex flex-col justify-start items-start gap-2 tracking-wider">
-                        <li>{store.address.street}</li>
-                        <li>
-                            {store.address.postcode} {store.address.city}
-                        </li>
-                        <li>{store.address.country}</li>
-                        <li>
-                            <a href={`tel:${store.phone.replace(/[^\d+]/g, "")}`}>{store.phone}</a>
-                        </li>
-                        <li>
-                            <a href={`mailto:${store.email}`}>{store.email}</a>
-                        </li>
+                        {store.address.street ? (
+                            <>
+                                <li>{store.address.street}</li>
+                                <li>
+                                    {store.address.postcode} {store.address.city}
+                                </li>
+                                <li>{store.address.country}</li>
+                            </>
+                        ) : (
+                            <li>
+                                <Link href="/booking" className="underline text-secondary hover:text-primary transition-default">
+                                    {t("byAppointment")}
+                                </Link>
+                            </li>
+                        )}
+                        {store.phone && (
+                            <li>
+                                <a href={`tel:${store.phone.replace(/[^\d+]/g, "")}`}>{store.phone}</a>
+                            </li>
+                        )}
+                        {store.email && (
+                            <li>
+                                <a href={`mailto:${store.email}`}>{store.email}</a>
+                            </li>
+                        )}
                     </ul>
                 </div>
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">

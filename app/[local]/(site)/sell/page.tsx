@@ -2,15 +2,17 @@ import Link from "next/link";
 import Banner from "@/app/components/banner";
 import Form from "./form";
 import { getTranslations } from "next-intl/server";
-import { store_identity } from "@/app/server/store_identity";
+import { shown_contact, store_identity } from "@/app/server/store_identity";
 
 export default async function SellPage() {
     const t = await getTranslations("sell");
-    const { address } = await store_identity();
+    const { address } = shown_contact(await store_identity());
 
     const steps = t.raw("consign.steps") as {
         title: string;
         text: string;
+        /** The same sentence without "in {city}", for a store with no address to show. */
+        textNoCity?: string;
     }[];
     const sell_steps = t.raw("sellDirect.steps") as {
         title: string;
@@ -45,7 +47,7 @@ export default async function SellPage() {
                             {steps.map((e) => (
                                 <li key={e.title} className="text-xl my-2">
                                     {e.title}
-                                    <p className="text-sm tracking-wider mt-2 ms-4 text-secondary">{e.text.replace("{city}", address.city)}</p>
+                                    <p className="text-sm tracking-wider mt-2 ms-4 text-secondary">{address.city ? e.text.replace("{city}", address.city) : (e.textNoCity ?? e.text)}</p>
                                 </li>
                             ))}
                         </ul>

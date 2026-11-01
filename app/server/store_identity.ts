@@ -41,12 +41,20 @@ export function demo_safe(settings: StoreSettings): StoreSettings {
     };
 }
 
+/**
+ * Address, phone and email as shown on public pages. On the demo they are placeholders (see demo_safe),
+ * which look like an unfilled template, so they come back empty and the pages leave them out.
+ * A ?ref= preview keeps its generated email.
+ */
+export function shown_contact(s: Pick<StoreSettings, "address" | "phone" | "email">): Pick<StoreSettings, "address" | "phone" | "email"> {
+    if (!DEMO_MODE) return { address: s.address, phone: s.phone, email: s.email };
+    return { address: { street: "", postcode: "", city: "", country: "" }, phone: "", email: s.email == DEFAULT_SETTINGS.email ? "" : s.email };
+}
+
 export function public_details(s: StoreSettings): PublicStoreDetails {
     return {
         store_name: s.store_name,
-        address: s.address,
-        phone: s.phone,
-        email: s.email,
+        ...shown_contact(s),
         whatsapp: s.whatsapp,
         instagram_url: s.instagram_url,
         chrono24_url: s.chrono24_url,

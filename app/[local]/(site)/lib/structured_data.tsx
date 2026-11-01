@@ -3,6 +3,7 @@ import type { StoreSettings } from "@/types/settings";
 import { absolute_url, BASE_URL } from "./site_url";
 import { brand_name } from "./brand_name";
 import { item_name } from "./item_name";
+import { DEMO_MODE } from "./demo";
 
 /** Site paths may contain spaces (/uploads/Rolex/…); make them valid absolute URLs. */
 export function absolute_media(src: string): string {
@@ -62,14 +63,15 @@ export function store_jsonld(s: StoreSettings, locale: string) {
         "@context": "https://schema.org",
         "@type": "JewelryStore",
         name: s.store_name,
-        legalName: s.legal_name,
+        // The demo's legal details are placeholders (see demo_safe), so they are left out.
+        ...(DEMO_MODE ? {} : { legalName: s.legal_name }),
         url: absolute_url(`/${locale}`),
         image: absolute_media("/api/og"),
         logo: absolute_media("/logo_vertical.png"),
-        telephone: s.phone,
-        email: s.email,
-        ...(s.vat_id ? { vatID: s.vat_id } : {}),
-        address: { "@type": "PostalAddress", streetAddress: s.address.street, postalCode: s.address.postcode, addressLocality: s.address.city, addressCountry: s.address.country },
+        ...(s.phone ? { telephone: s.phone } : {}),
+        ...(s.email ? { email: s.email } : {}),
+        ...(s.vat_id && !DEMO_MODE ? { vatID: s.vat_id } : {}),
+        ...(s.address.street ? { address: { "@type": "PostalAddress", streetAddress: s.address.street, postalCode: s.address.postcode, addressLocality: s.address.city, addressCountry: s.address.country } } : {}),
         ...(hours.length ? { openingHours: hours } : {}),
         sameAs: [s.instagram_url, s.chrono24_url, s.ebay_url].filter(Boolean),
     };

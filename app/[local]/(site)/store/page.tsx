@@ -2,17 +2,19 @@ import Link from "next/link";
 import Map from "./map";
 import Gallery from "./gallery";
 import { getTranslations } from "next-intl/server";
-import { store_identity } from "@/app/server/store_identity";
+import { shown_contact, store_identity } from "@/app/server/store_identity";
 import { WEEKDAYS } from "@/types/settings";
 
 export default async function StorePage() {
     const t = await getTranslations("store");
+    const t_footer = await getTranslations("common.footer");
     const store = await store_identity();
-    const address = [store.address.street, `${store.address.postcode} ${store.address.city}`, store.address.country].filter((s) => s.trim()).join(", ");
+    const contact = shown_contact(store);
+    const address = [contact.address.street, `${contact.address.postcode} ${contact.address.city}`, contact.address.country].filter((s) => s.trim()).join(", ");
 
     return (
         <div className="flex justify-start items-start flex-wrap w-full gap-10 py-20 px-5 md:px-10 xl:px-20">
-            <h1>{t("heading", { city: store.address.city })}</h1>
+            <h1>{t("heading", { city: contact.address.city }).trim()}</h1>
 
             <div className="w-full flex justify-between items-start flex-col-reverse lg:flex-col xl:flex-row gap-10 xl:gap-0">
                 <div className="w-full xl:w-[calc(50%-20px)]">
@@ -28,7 +30,7 @@ export default async function StorePage() {
                         <div className="flex flex-col w-full lg:w-[calc(33%-25px)] xl:w-[calc(50%-30px)] gap-10 text-sm">
                             <h5>{t("addressHeading")}</h5>
                             <div className="flex flex-col gap-5">
-                                <p>{address}</p>
+                                <p>{address || t_footer("byAppointment")}</p>
                                 {store.parking_url && (
                                     <p>
                                         {t("parkingText")}{" "}
@@ -52,18 +54,20 @@ export default async function StorePage() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col w-full lg:w-[calc(33%-25px)] xl:w-[calc(50%-30px)] gap-10">
-                            <h5>{t("contactHeading")}</h5>
-                            <div className="flex justify-between items-start flex-col text-sm">
-                                <a href={`tel:${store.phone.replace(/[^\d+]/g, "")}`}>{store.phone}</a>
-                                <a href={`mailto:${store.email}`}>{store.email}</a>
+                        {(contact.phone || contact.email) && (
+                            <div className="flex flex-col w-full lg:w-[calc(33%-25px)] xl:w-[calc(50%-30px)] gap-10">
+                                <h5>{t("contactHeading")}</h5>
+                                <div className="flex justify-between items-start flex-col text-sm">
+                                    {contact.phone && <a href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}>{contact.phone}</a>}
+                                    {contact.email && <a href={`mailto:${contact.email}`}>{contact.email}</a>}
+                                </div>
                             </div>
-                        </div>
+                        )}
                     </div>
                 </div>
                 <Gallery />
             </div>
-            <Map store_name={store.store_name} address={address} />
+            {address && <Map store_name={store.store_name} address={address} />}
         </div>
     );
 }

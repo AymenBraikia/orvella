@@ -105,7 +105,8 @@
             "disclaimer": "Disclaimer",
             "cookiePolicy": "Cookie Policy",
             "disclaimerText": "Orvella is an independent dealer and is not affiliated with any other brand, nor is it an authorized reseller.",
-            "copyright": "©{year} Orvella. All Rights Reserved."
+            "copyright": "©{year} Orvella. All Rights Reserved.",
+            "byAppointment": "Showroom visits by appointment"
         },
         "contactLabels": {
             "phonePrimary": "Phone",
@@ -408,7 +409,8 @@
                 },
                 {
                     "title": "Consignment Contract and Shipping Label",
-                    "text": "If you would like, we’ll send you a consignment contract and a fully insured shipping label. Alternatively, you can book an appointment in our store in {city}."
+                    "text": "If you would like, we’ll send you a consignment contract and a fully insured shipping label. Alternatively, you can book an appointment in our store in {city}.",
+                    "textNoCity": "If you would like, we’ll send you a consignment contract and a fully insured shipping label. Alternatively, you can book an appointment in our store."
                 },
                 {
                     "title": "Inspection",

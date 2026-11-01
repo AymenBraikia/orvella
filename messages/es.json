@@ -105,7 +105,8 @@
             "disclaimer": "Aviso de responsabilidad",
             "cookiePolicy": "Política de cookies",
             "disclaimerText": "Orvella es un distribuidor independiente, no está afiliado a ninguna otra marca ni es un distribuidor autorizado.",
-            "copyright": "©{year} Orvella. Todos los derechos reservados."
+            "copyright": "©{year} Orvella. Todos los derechos reservados.",
+            "byAppointment": "Visitas al showroom con cita previa"
         },
         "contactLabels": {
             "phonePrimary": "Teléfono",
@@ -407,7 +408,9 @@
                 },
                 {
                     "title": "Contrato de consignación y etiqueta de envío",
-                    "text": "Si lo desea, le enviaremos un contrato de consignación y una etiqueta de envío totalmente asegurada. También puede reservar una cita en nuestra tienda de {city}."
+                    "text": "Si lo desea, le enviaremos un contrato de consignación y una etiqueta de envío totalmente asegurada. También puede reservar una cita en nuestra tienda de {city}.",
+
+                    "textNoCity": "Si lo desea, le enviaremos un contrato de consignación y una etiqueta de envío totalmente asegurada. También puede reservar una cita en nuestra tienda."
                 },
                 {
                     "title": "Inspección",

@@ -10,7 +10,7 @@ import Sections from "../components/sections";
 import Trade from "../components/trade";
 import { DEMO_MODE } from "./lib/demo";
 import { JsonLd, store_jsonld } from "./lib/structured_data";
-import { store_identity } from "@/app/server/store_identity";
+import { shown_contact, store_identity } from "@/app/server/store_identity";
 import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { site_metadata } from "./lib/site_metadata";
@@ -20,10 +20,15 @@ export async function generateMetadata({ params, searchParams }: PageProps<"/[lo
     return site_metadata((await params).local, (await searchParams).ref);
 }
 
+async function jsonld_identity() {
+    const identity = await store_identity();
+    return { ...identity, ...shown_contact(identity) };
+}
+
 export default async function Home() {
     return (
         <div className="flex-col flex-center w-dvw">
-            <JsonLd data={store_jsonld(await store_identity(), await getLocale())} />
+            <JsonLd data={store_jsonld(await jsonld_identity(), await getLocale())} />
             <Suspense fallback={<HeroLoader />}>
                 <Hero />
             </Suspense>

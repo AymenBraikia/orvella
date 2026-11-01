@@ -105,7 +105,8 @@
             "disclaimer": "Esclusione di responsabilità",
             "cookiePolicy": "Cookie policy",
             "disclaimerText": "Orvella è un rivenditore indipendente, non affiliato ad alcun altro marchio e non è un rivenditore autorizzato.",
-            "copyright": "©{year} Orvella. Tutti i diritti riservati."
+            "copyright": "©{year} Orvella. Tutti i diritti riservati.",
+            "byAppointment": "Visite allo showroom su appuntamento"
         },
         "contactLabels": {
             "phonePrimary": "Telefono",
@@ -408,7 +409,9 @@
                 },
                 {
                     "title": "Contratto di conto vendita ed etichetta di spedizione",
-                    "text": "Se lo desideri, ti invieremo un contratto di conto vendita e un'etichetta di spedizione completamente assicurata. In alternativa, puoi prenotare un appuntamento nel nostro negozio di {city}."
+                    "text": "Se lo desideri, ti invieremo un contratto di conto vendita e un'etichetta di spedizione completamente assicurata. In alternativa, puoi prenotare un appuntamento nel nostro negozio di {city}.",
+
+                    "textNoCity": "Se lo desideri, ti invieremo un contratto di conto vendita e un'etichetta di spedizione completamente assicurata. In alternativa, puoi prenotare un appuntamento nel nostro negozio."
                 },
                 {
                     "title": "Verifica",

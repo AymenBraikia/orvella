@@ -105,7 +105,8 @@
             "disclaimer": "Sorumluluk Reddi",
             "cookiePolicy": "Çerez Politikası",
             "disclaimerText": "Orvella bağımsız bir satıcıdır; herhangi bir markayla bağlantısı yoktur ve yetkili satıcı değildir.",
-            "copyright": "©{year} Orvella. Tüm hakları saklıdır."
+            "copyright": "©{year} Orvella. Tüm hakları saklıdır.",
+            "byAppointment": "Showroom ziyaretleri randevu ile"
         },
         "contactLabels": {
             "phonePrimary": "Telefon",
@@ -408,7 +409,9 @@
                 },
                 {
                     "title": "Konsinye Sözleşmesi ve Kargo Etiketi",
-                    "text": "Dilerseniz size bir konsinye sözleşmesi ve tamamen sigortalı bir kargo etiketi göndeririz. Alternatif olarak {city} mağazamızdan randevu alabilirsiniz."
+                    "text": "Dilerseniz size bir konsinye sözleşmesi ve tamamen sigortalı bir kargo etiketi göndeririz. Alternatif olarak {city} mağazamızdan randevu alabilirsiniz.",
+
+                    "textNoCity": "Dilerseniz size bir konsinye sözleşmesi ve tamamen sigortalı bir kargo etiketi göndeririz. Alternatif olarak mağazamızdan randevu alabilirsiniz."
                 },
                 {
                     "title": "İnceleme",
