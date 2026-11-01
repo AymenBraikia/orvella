@@ -12,6 +12,13 @@ import { DEMO_MODE } from "./lib/demo";
 import { JsonLd, store_jsonld } from "./lib/structured_data";
 import { store_identity } from "@/app/server/store_identity";
 import { getLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { site_metadata } from "./lib/site_metadata";
+
+// Pitch links (?ref=) are shared here, so the preview shows the dealer's name.
+export async function generateMetadata({ params, searchParams }: PageProps<"/[local]">): Promise<Metadata> {
+    return site_metadata((await params).local, (await searchParams).ref);
+}
 
 export default async function Home() {
     return (

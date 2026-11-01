@@ -6,6 +6,7 @@ import { store_identity } from "@/app/server/store_identity";
 import { routing } from "@/i18n/routing";
 import { absolute_url, BASE_URL } from "./site_url";
 import { DEMO_MODE } from "./demo";
+import { sanitizeRef } from "@/i18n/brand";
 
 /** hreflang alternates for a path that exists in every locale (path without the locale prefix). */
 export function language_alternates(path: string, locale: string): NonNullable<Metadata["alternates"]> {
@@ -16,12 +17,22 @@ export function language_alternates(path: string, locale: string): NonNullable<M
     };
 }
 
+/** The generated share image (see app/api/og), with the demo's ?ref= dealer name when there is one. */
+export function share_image(ref?: string | null): string {
+    return ref ? `/api/og?ref=${encodeURIComponent(ref)}` : "/api/og";
+}
+
 /**
  * Site-wide defaults shared by the storefront layouts. A real shop is described with its own name
  * and the translated meta texts; the public demo is marked as a concept and kept out of search.
+ *
+ * `url_ref` is ?ref= from the page URL. Link-preview bots never get the ref cookie, so pages that are
+ * shared as pitch links (home, /why) pass it in to show the dealer's name in the preview.
  */
-export async function site_metadata(locale: string): Promise<Metadata> {
-    const { store_name } = await store_identity();
+export async function site_metadata(locale: string, url_ref?: string | string[]): Promise<Metadata> {
+    const identity = await store_identity();
+    const ref = DEMO_MODE ? (sanitizeRef(typeof url_ref == "string" ? url_ref : undefined) ?? identity.ref) : undefined;
+    const store_name = ref ?? identity.store_name;
     const t = await getTranslations({ locale, namespace: "meta" });
 
     const title = DEMO_MODE ? "Luxury Watch Platform | Concept by Aymen Braikia" : t("titleDefault");
@@ -44,11 +55,11 @@ export async function site_metadata(locale: string): Promise<Metadata> {
             description: DEMO_MODE ? description : t("ogDescription"),
             url: absolute_url(`/${locale}`),
             siteName: store_name,
-            images: [{ url: "/banner.png", width: 1200, height: 630, alt: DEMO_MODE ? `${store_name} preview` : t("ogImageAlt") }],
+            images: [{ url: share_image(ref), width: 1200, height: 630, alt: DEMO_MODE ? `${store_name} preview` : t("ogImageAlt") }],
             locale,
             type: "website",
         },
-        twitter: { card: "summary_large_image", title, description: DEMO_MODE ? description : t("twitterDescription"), images: ["/banner.png"] },
+        twitter: { card: "summary_large_image", title, description: DEMO_MODE ? description : t("twitterDescription"), images: [share_image(ref)] },
         icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
         formatDetection: { telephone: false, email: false, address: false },
         category: "ecommerce",

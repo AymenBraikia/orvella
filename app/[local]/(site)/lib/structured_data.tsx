@@ -64,7 +64,7 @@ export function store_jsonld(s: StoreSettings, locale: string) {
         name: s.store_name,
         legalName: s.legal_name,
         url: absolute_url(`/${locale}`),
-        image: absolute_media("/banner.png"),
+        image: absolute_media("/api/og"),
         logo: absolute_media("/logo_vertical.png"),
         telephone: s.phone,
         email: s.email,
