@@ -13,9 +13,11 @@ const nextConfig: NextConfig = {
         NEXT_PUBLIC_DEMO_MODE: process.env.DEMO_MODE === "true" ? "true" : "false",
         NEXT_PUBLIC_WHY_MEDIA: WHY_MEDIA.filter((file) => existsSync(`public/why/${file}`)).join(","),
     },
-    // Images use Next's built-in optimisation (resized AVIF/WebP per device via `sizes`).
+    // Images are resized by wsrv.nl (see image_loader.ts), not by Vercel's optimizer.
     images: {
-        formats: ["image/avif", "image/webp"],
+        loader: "custom",
+        loaderFile: "./image_loader.ts",
+        qualities: [60, 65, 70, 75],
         // Product photos uploaded from the admin are served from Vercel Blob.
         remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
     },
