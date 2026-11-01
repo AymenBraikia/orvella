@@ -1644,6 +1644,23 @@
             "title": "See what your actual watches<br></br><span>look like here.</span>",
             "description": "No 60-minute sales call. Send the current stock link or three pieces you're actively selling. I'll take it from there.",
             "sendStock": "Book Your Custom Demo",
+            "instagram": "Instagram",
+            "bookCall": "Book a call",
+            "form": {
+                "name": "Your name",
+                "business": "Business name",
+                "contact": "Email or WhatsApp",
+                "stock": "Link to your current stock",
+                "stockPlaceholder": "Instagram, Chrono24 or website",
+                "message": "Anything else? (optional)",
+                "sending": "Sending…",
+                "successHeading": "Thank you, request received.",
+                "successText": "I'll look at your stock and get back to you with your custom demo.",
+                "invalidContact": "Enter an email address or a WhatsApp number.",
+                "invalidLink": "Enter a link or an @handle.",
+                "error": "That didn't go through. Please try again, or reach me directly below.",
+                "orReach": "Prefer to message directly?"
+            },
             "floatingCta": "Book Orvella's Custom Demo",
             "openStorefront": "Open the storefront",
             "credit": "Aymen · Orvella"

@@ -1645,6 +1645,23 @@
             "title": "Gerçek saatlerinizin<br></br><span>burada nasıl göründüğünü görün.</span>",
             "description": "60 dakikalık satış görüşmesi yok. Mevcut stok bağlantınızı veya aktif olarak sattığınız üç parçayı gönderin. Gerisini ben hallederim.",
             "sendStock": "Size Özel Demonuzu Ayırtın",
+            "instagram": "Instagram",
+            "bookCall": "Görüşme planla",
+            "form": {
+                "name": "Adınız",
+                "business": "İşletme adı",
+                "contact": "E-posta veya WhatsApp",
+                "stock": "Mevcut stokunuzun bağlantısı",
+                "stockPlaceholder": "Instagram, Chrono24 veya web sitesi",
+                "message": "Eklemek istediğiniz bir şey var mı? (isteğe bağlı)",
+                "sending": "Gönderiliyor…",
+                "successHeading": "Teşekkürler, talebiniz alındı.",
+                "successText": "Stokunuza göz atıp size özel demonuzla dönüş yapacağım.",
+                "invalidContact": "Bir e-posta adresi veya WhatsApp numarası girin.",
+                "invalidLink": "Bir bağlantı veya @kullanıcı adı girin.",
+                "error": "Gönderilemedi. Lütfen tekrar deneyin ya da aşağıdan bana doğrudan yazın.",
+                "orReach": "Doğrudan yazmayı mı tercih edersiniz?"
+            },
             "floatingCta": "Orvella'in Özel Demosu İçin Randevu Alın",
             "openStorefront": "Mağazayı aç",
             "credit": "Aymen · Orvella"

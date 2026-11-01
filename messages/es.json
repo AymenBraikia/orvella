@@ -1649,6 +1649,23 @@
             "title": "Mira cómo quedan tus relojes reales<br></br><span>aquí.</span>",
             "description": "No hay llamada de ventas de 60 minutos. Envía el enlace de tu stock actual o tres piezas que estés vendiendo. Yo me encargo del resto.",
             "sendStock": "Reserva tu demostración personalizada",
+            "instagram": "Instagram",
+            "bookCall": "Reservar una llamada",
+            "form": {
+                "name": "Tu nombre",
+                "business": "Nombre del negocio",
+                "contact": "Email o WhatsApp",
+                "stock": "Enlace a tu stock actual",
+                "stockPlaceholder": "Instagram, Chrono24 o web",
+                "message": "¿Algo más? (opcional)",
+                "sending": "Enviando…",
+                "successHeading": "Gracias, solicitud recibida.",
+                "successText": "Revisaré tu stock y te responderé con tu demo personalizada.",
+                "invalidContact": "Introduce un email o un número de WhatsApp.",
+                "invalidLink": "Introduce un enlace o un @usuario.",
+                "error": "No se ha podido enviar. Inténtalo de nuevo o escríbeme directamente abajo.",
+                "orReach": "¿Prefieres escribirme directamente?"
+            },
             "floatingCta": "Reserva la demo personalizada de Orvella",
             "openStorefront": "Abrir la tienda",
             "credit": "Aymen · Orvella"

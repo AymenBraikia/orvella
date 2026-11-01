@@ -16,6 +16,8 @@ import type { Sell } from "@/types/sell";
 import type { Consignment } from "@/types/consignment";
 import type { Appointment } from "@/types/appointment";
 import type { Enquiry } from "@/types/enquiry";
+import type { PitchLead } from "@/types/pitch_lead";
+import { is_email } from "@/app/(no_footer)/why/lead/schema";
 
 /** Settings as customers may see them (placeholder legal / bank details on a demo). */
 async function get_settings() {
@@ -323,6 +325,37 @@ export async function notify_enquiry(e: Enquiry) {
             ),
         ),
     ]);
+}
+
+/* ───────────────────────── demo pitch ───────────────────────── */
+
+/** A dealer asked for a custom demo on /why. Goes to the developer (PITCH_NOTIFY_EMAIL), not to the shop. */
+export async function notify_pitch_lead(lead: PitchLead) {
+    const to = process.env.PITCH_NOTIFY_EMAIL || process.env.NEXT_PUBLIC_PITCH_EMAIL;
+    if (!to) return console.warn(`Demo request from ${lead.business} not emailed: PITCH_NOTIFY_EMAIL is not set`);
+
+    await safely("pitch lead", async () => {
+        const { html, text } = render_email({
+            store: DEFAULT_BRAND,
+            heading: `Demo request from ${lead.business}`,
+            blocks: [
+                {
+                    kind: "rows",
+                    rows: [
+                        ["Name", lead.name],
+                        ["Business", lead.business],
+                        ["Email / WhatsApp", lead.contact],
+                        ["Stock", lead.stock_url],
+                        ["Pitch link", lead.ref || "—"],
+                        ["Language", lead.locale],
+                    ],
+                },
+                ...(lead.message ? [{ kind: "p" as const, text: lead.message }] : []),
+            ],
+            footer: "Sent from the demo request form on /why",
+        });
+        await send_email({ to, subject: `Demo request: ${lead.business}`, html, text, reply_to: is_email(lead.contact) ? lead.contact : undefined });
+    });
 }
 
 /* ───────────────────────── account ───────────────────────── */

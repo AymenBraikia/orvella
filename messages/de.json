@@ -1643,6 +1643,23 @@
             "title": "Sehen Sie, wie Ihre echten Uhren<br></br><span>hier aussehen.</span>",
             "description": "Kein 60-minütiges Verkaufsgespräch. Senden Sie den Link zu Ihrem aktuellen Bestand oder drei Stücke, die Sie aktiv verkaufen. Ich kümmere mich um den Rest.",
             "sendStock": "Vereinbaren Sie Ihre individuelle Demo",
+            "instagram": "Instagram",
+            "bookCall": "Gespräch buchen",
+            "form": {
+                "name": "Ihr Name",
+                "business": "Name des Geschäfts",
+                "contact": "E-Mail oder WhatsApp",
+                "stock": "Link zu Ihrem aktuellen Bestand",
+                "stockPlaceholder": "Instagram, Chrono24 oder Website",
+                "message": "Noch etwas? (optional)",
+                "sending": "Wird gesendet…",
+                "successHeading": "Danke, Ihre Anfrage ist angekommen.",
+                "successText": "Ich sehe mir Ihren Bestand an und melde mich mit Ihrer persönlichen Demo.",
+                "invalidContact": "Bitte geben Sie eine E-Mail-Adresse oder WhatsApp-Nummer ein.",
+                "invalidLink": "Bitte geben Sie einen Link oder ein @Handle ein.",
+                "error": "Das hat leider nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt unten.",
+                "orReach": "Lieber direkt schreiben?"
+            },
             "floatingCta": "Buche Orvella's Custom Demo",
             "openStorefront": "Store öffnen",
             "credit": "Aymen · Orvella"

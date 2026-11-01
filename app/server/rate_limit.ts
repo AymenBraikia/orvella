@@ -18,6 +18,7 @@ export const LIMITS = {
     sell: { limit: 5, window_seconds: 60 * 60 },
     booking: { limit: 5, window_seconds: 60 * 60 },
     enquiry: { limit: 10, window_seconds: 60 * 60 },
+    pitch_lead: { limit: 5, window_seconds: 60 * 60 },
     upload: { limit: 60, window_seconds: 60 * 60 },
 } as const;
 
