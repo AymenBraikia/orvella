@@ -6,8 +6,8 @@ type NetworkInfo = { saveData?: boolean; effectiveType?: string };
 
 /**
  * Should the 2 MB background video play? Not on phones (likely mobile data), not with
- * "reduce motion" or Data Saver, not on slow connections. Everyone else gets it after hydration;
- * the poster image is shown until then (and instead of it).
+ * "reduce motion" or Data Saver, not on slow connections. Everyone else gets it after hydration,
+ * on top of the poster image the hero renders underneath.
  */
 function wants_video(): boolean {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return false;
@@ -22,15 +22,10 @@ const subscribe = () => () => {};
 export default function HeroVideo({ src, poster }: { src: string; poster: string }) {
     const play = useSyncExternalStore(subscribe, wants_video, () => false);
 
-    if (!play) {
-        return (
-            // eslint-disable-next-line @next/next/no-img-element -- full-bleed poster behind the hero, already a small optimised webp
-            <img src={poster} alt="" aria-hidden="true" fetchPriority="high" className="absolute inset-0 -z-10 size-full object-cover dark:brightness-50" />
-        );
-    }
+    if (!play) return null;
 
     return (
-        <video aria-hidden="true" autoPlay muted loop playsInline preload="auto" poster={poster} className="absolute inset-0 -z-10 size-full object-cover dark:brightness-50">
+        <video aria-hidden="true" autoPlay muted loop playsInline preload="auto" poster={poster} className="absolute inset-0 -z-20 size-full object-cover">
             <source src={src} type="video/mp4" />
         </video>
     );
