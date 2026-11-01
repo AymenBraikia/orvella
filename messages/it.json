@@ -1531,6 +1531,18 @@
             "seeDifference": "Scopri la differenza",
             "openStorefront": "Apri lo store"
         },
+        "visuals": {
+            "storeDesktop": "La collezione di orologi sul negozio, su un portatile",
+            "productPhone": "La pagina di un orologio sul telefono, con foto, referenza e pulsante di richiesta",
+            "storePhone": "La collezione sul telefono",
+            "dm": [
+                { "from": "buyer", "text": "Ciao, il Day-Date verde è ancora disponibile?" },
+                { "from": "dealer", "text": "Ciao! Sì, ancora disponibile." },
+                { "from": "buyer", "text": "Prezzo? Scatola e garanzia?" },
+                { "from": "buyer", "text": "Puoi mandare altre foto?" },
+                { "from": "dealer", "text": "Te le mando subito…" }
+            ]
+        },
         "gap": {
             "eyebrow": "01 / Il divario",
             "title": "Instagram è ottimo per farsi scoprire.<br></br><span>Non è un catalogo.</span>",

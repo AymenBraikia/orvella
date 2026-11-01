@@ -1531,6 +1531,18 @@
             "seeDifference": "Farkı görün",
             "openStorefront": "Mağazayı aç"
         },
+        "visuals": {
+            "storeDesktop": "Mağazadaki saat koleksiyonu, dizüstü bilgisayarda",
+            "productPhone": "Bir saatin kendi sayfası telefonda: fotoğraflar, referans ve bilgi isteme düğmesi",
+            "storePhone": "Koleksiyon telefonda",
+            "dm": [
+                { "from": "buyer", "text": "Merhaba, yeşil Day-Date hâlâ mevcut mu?" },
+                { "from": "dealer", "text": "Merhaba! Evet, hâlâ mevcut." },
+                { "from": "buyer", "text": "Fiyatı? Kutu ve belgeleri var mı?" },
+                { "from": "buyer", "text": "Daha fazla fotoğraf atabilir misiniz?" },
+                { "from": "dealer", "text": "Hemen gönderiyorum…" }
+            ]
+        },
         "gap": {
             "eyebrow": "01 / Boşluk",
             "title": "Instagram keşif için mükemmel.<br></br><span>Ama bir katalog değil.</span>",

@@ -1529,6 +1529,18 @@
             "seeDifference": "Den Unterschied sehen",
             "openStorefront": "Store öffnen"
         },
+        "visuals": {
+            "storeDesktop": "Die Uhrenkollektion im Shop, auf einem Laptop",
+            "productPhone": "Die eigene Seite einer Uhr auf dem Handy, mit Fotos, Referenz und Anfrage-Button",
+            "storePhone": "Die Kollektion auf dem Handy",
+            "dm": [
+                { "from": "buyer", "text": "Hallo, ist die grüne Day-Date noch da?" },
+                { "from": "dealer", "text": "Hallo! Ja, noch verfügbar." },
+                { "from": "buyer", "text": "Preis? Box und Papiere?" },
+                { "from": "buyer", "text": "Können Sie mehr Fotos schicken?" },
+                { "from": "dealer", "text": "Schicke ich gleich…" }
+            ]
+        },
         "gap": {
             "eyebrow": "01 / Die Lücke",
             "title": "Instagram ist hervorragend für die Entdeckung.<br></br><span>Aber kein Katalog.</span>",

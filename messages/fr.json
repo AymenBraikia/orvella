@@ -1531,6 +1531,18 @@
             "seeDifference": "Voir la différence",
             "openStorefront": "Ouvrir la vitrine"
         },
+        "visuals": {
+            "storeDesktop": "La collection de montres sur la boutique, sur un ordinateur portable",
+            "productPhone": "La page d'une montre sur un téléphone, avec photos, référence et bouton de demande",
+            "storePhone": "La collection sur un téléphone",
+            "dm": [
+                { "from": "buyer", "text": "Bonjour, la Day-Date verte est-elle toujours disponible ?" },
+                { "from": "dealer", "text": "Bonjour ! Oui, toujours disponible." },
+                { "from": "buyer", "text": "Prix ? Boîte et papiers ?" },
+                { "from": "buyer", "text": "Vous pouvez envoyer plus de photos ?" },
+                { "from": "dealer", "text": "Je vous les envoie…" }
+            ]
+        },
         "gap": {
             "eyebrow": "01 / L'écart",
             "title": "Instagram est excellent pour la découverte.<br></br><span>Ce n'est pas un catalogue.</span>",

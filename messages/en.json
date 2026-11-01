@@ -1530,6 +1530,18 @@
             "seeDifference": "See the difference",
             "openStorefront": "Open the storefront"
         },
+        "visuals": {
+            "storeDesktop": "The watch collection on the storefront, on a laptop",
+            "productPhone": "A watch's own page on a phone, with photos, reference and an enquiry button",
+            "storePhone": "The collection on a phone",
+            "dm": [
+                { "from": "buyer", "text": "Hi, is the green Day-Date still available?" },
+                { "from": "dealer", "text": "Hi! Yes, still available." },
+                { "from": "buyer", "text": "Price? Box and papers?" },
+                { "from": "buyer", "text": "Can you send more photos?" },
+                { "from": "dealer", "text": "Sending them now…" }
+            ]
+        },
         "gap": {
             "eyebrow": "01 / The gap",
             "title": "Instagram is excellent at discovery.<br></br><span>It isn't a catalogue.</span>",
