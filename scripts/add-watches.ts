@@ -4,9 +4,12 @@
  *   npm run add-watches            (check the data, show what would change)
  *   npm run add-watches -- --apply (write it)
  *
- * Safe to run again: a slug that already exists is skipped, so edits made in the admin stay.
- * Reference, year and box & papers are left empty on purpose. These photos are illustrations, not
- * photographed stock, so there is nothing true to put there. Demo use only, never a dealer's shop.
+ * Safe to run again: a slug that already exists is skipped, so edits made in the admin stay. The one
+ * exception is a reference or year that is still empty: --apply fills it in.
+ * These photos are illustrations, not photographed stock. Reference is the real reference of the model
+ * shown and year falls inside its production run; neither describes an actual piece. The turquoise
+ * Daytona matches no real reference, so it has none. Box & papers stay empty. Demo use only, never a
+ * dealer's shop.
  * The media in /public/uploads/watches must be deployed before --apply, or the images show broken.
  */
 import "dotenv/config";
@@ -22,6 +25,9 @@ type Spec = {
     slug: string;
     brand: string;
     model: string;
+    /** Empty (with year 0) when no real reference matches the photos. */
+    reference: string;
+    year: number;
     price: number;
     case_material: string;
     bracelet: string;
@@ -37,6 +43,8 @@ const WATCHES: Spec[] = [
         slug: "audemars-piguet-royal-oak-chronograph-full-pave-rose-gold",
         brand: "audemars piguet",
         model: "Royal Oak Chronograph Full Pavé",
+        reference: "26322OR.ZZ.1222OR.01",
+        year: 2017,
         price: 185000,
         case_material: "Rose Gold",
         bracelet: "Rose Gold",
@@ -50,6 +58,8 @@ const WATCHES: Spec[] = [
         slug: "audemars-piguet-royal-oak-selfwinding-rose-gold-blue",
         brand: "audemars piguet",
         model: "Royal Oak Selfwinding",
+        reference: "15500OR.OO.1220OR.01",
+        year: 2021,
         price: 62000,
         case_material: "Rose Gold",
         bracelet: "Rose Gold",
@@ -63,6 +73,8 @@ const WATCHES: Spec[] = [
         slug: "audemars-piguet-royal-oak-chronograph-frosted-white-gold",
         brand: "audemars piguet",
         model: "Royal Oak Chronograph Frosted Gold",
+        reference: "26240BC.GG.1324BC.01",
+        year: 2022,
         price: 78000,
         case_material: "White Gold",
         bracelet: "White Gold",
@@ -76,6 +88,8 @@ const WATCHES: Spec[] = [
         slug: "rolex-daytona-turquoise-baguette-yellow-gold",
         brand: "rolex",
         model: "Daytona Turquoise Baguette",
+        reference: "",
+        year: 0,
         price: 145000,
         case_material: "Yellow Gold",
         bracelet: "Leather",
@@ -89,6 +103,8 @@ const WATCHES: Spec[] = [
         slug: "rolex-daytona-diamond-bezel-yellow-gold-champagne",
         brand: "rolex",
         model: "Daytona Diamond Bezel",
+        reference: "126598TBR",
+        year: 2024,
         price: 120000,
         case_material: "Yellow Gold",
         bracelet: "Yellow Gold",
@@ -102,6 +118,8 @@ const WATCHES: Spec[] = [
         slug: "rolex-day-date-40-diamond-bezel-rose-gold",
         brand: "rolex",
         model: "Day-Date 40 Diamond Bezel",
+        reference: "228345RBR",
+        year: 2022,
         price: 72000,
         case_material: "Rose Gold",
         bracelet: "Rose Gold",
@@ -115,6 +133,8 @@ const WATCHES: Spec[] = [
         slug: "rolex-day-date-40-green-yellow-gold",
         brand: "rolex",
         model: "Day-Date 40 Green",
+        reference: "228238",
+        year: 2023,
         price: 48000,
         case_material: "Yellow Gold",
         bracelet: "Yellow Gold",
@@ -128,6 +148,8 @@ const WATCHES: Spec[] = [
         slug: "grand-seiko-heritage-spring-drive-blue",
         brand: "grand seiko",
         model: "Heritage Spring Drive Blue",
+        reference: "SBGA375",
+        year: 2019,
         price: 6900,
         case_material: "Stainless Steel",
         bracelet: "Stainless Steel",
@@ -141,6 +163,8 @@ const WATCHES: Spec[] = [
         slug: "grand-seiko-hi-beat-36000-gmt-red",
         brand: "grand seiko",
         model: "Hi-Beat 36000 GMT Red",
+        reference: "SBGJ273",
+        year: 2023,
         price: 8900,
         case_material: "Stainless Steel",
         bracelet: "Stainless Steel",
@@ -154,6 +178,8 @@ const WATCHES: Spec[] = [
         slug: "patek-philippe-nautilus-blue-steel",
         brand: "patek philippe",
         model: "Nautilus Blue",
+        reference: "5711/1A-010",
+        year: 2021,
         price: 115000,
         case_material: "Stainless Steel",
         bracelet: "Stainless Steel",
@@ -167,6 +193,8 @@ const WATCHES: Spec[] = [
         slug: "patek-philippe-nautilus-chronograph-baguette-rose-gold",
         brand: "patek philippe",
         model: "Nautilus Chronograph Baguette",
+        reference: "5980/1400R-011",
+        year: 2020,
         price: 290000,
         case_material: "Rose Gold",
         bracelet: "Rose Gold",
@@ -189,8 +217,8 @@ function to_document(w: Spec) {
         brandSlug: w.brand.replace(/\s+/g, "-"),
         model: w.model,
         display_name: `${w.brand} ${w.model}`,
-        reference: "",
-        year: 0,
+        reference: w.reference,
+        year: w.year,
         price: w.price,
         condition: "New" as const,
         gender: "Men" as const,
@@ -249,7 +277,21 @@ try {
         await items.insertMany(fresh.map((doc) => ({ ...doc, currency: "EUR", date_added: now, updated_at: now, relevance_score: 0, reservations: [], inStock: true, status: "available" })));
     }
 
-    console.log(apply ? `Added ${fresh.length}, skipped ${existing.size}.` : `Preview only: ${fresh.length} would be added. Run with --apply to write them.`);
+    // Earlier runs stored no reference or year. Fill in only what is still empty, so admin edits stay.
+    let filled = 0;
+    for (const doc of documents.filter((d) => existing.has(d.slug))) {
+        for (const [field, value] of [["reference", doc.reference], ["year", doc.year]] as const) {
+            if (!value) continue;
+            const filter = { slug: doc.slug, [field]: { $in: ["", 0, null] } };
+
+            if (!(await items.countDocuments(filter))) continue;
+            console.log(`${apply ? "fill" : "would fill"}  ${field} ${value}  ${doc.slug}`);
+            if (apply) await items.updateOne(filter, { $set: { [field]: value, updated_at: new Date() } });
+            filled++;
+        }
+    }
+
+    console.log(apply ? `Added ${fresh.length}, skipped ${existing.size}, filled ${filled} empty reference/year field(s).` : `Preview only: ${fresh.length} would be added, ${filled} empty reference/year field(s) filled. Run with --apply to write them.`);
 } finally {
     await client.close();
 }
