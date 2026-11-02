@@ -26,9 +26,10 @@ export default async function Hero() {
                 </Link>
             </div>
 
-            <div className="relative w-full max-w-180 mt-4 pe-12 sm:pe-24 pb-6">
-                <Laptop src="/why/store-desktop.webp" alt={t("visuals.storeDesktop")} />
-                <Phone src="/why/product-phone.webp" alt={t("visuals.productPhone")} className="absolute bottom-0 inset-e-0 w-24 sm:w-40" />
+            {/* One row on desktop; stacked and centred on phones, where side by side both would be too small to read. */}
+            <div className="w-full max-w-240 mt-4 px-4 flex flex-col md:flex-row items-center md:items-end justify-center gap-10 md:gap-14">
+                <Laptop src="/why/store-desktop.webp" alt={t("visuals.storeDesktop")} className="w-[88%] md:w-auto md:flex-1 md:max-w-170" />
+                <Phone src="/why/product-phone.webp" alt={t("visuals.productPhone")} className="w-40 md:w-44 lg:w-48 shrink-0" />
             </div>
         </section>
     );

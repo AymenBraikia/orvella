@@ -11,7 +11,7 @@ export function Laptop({ src, alt, className = "" }: { src: string; alt: string;
             <div className="relative w-full aspect-16/10 rounded-t-xl border-8 sm:border-10 border-neutral-800 bg-black overflow-hidden shadow-2xl">
                 <Image src={src} alt={alt} fill sizes="(max-width: 768px) 90vw, 720px" className="object-cover object-top" />
             </div>
-            <div className="w-[112%] h-2.5 sm:h-3.5 rounded-b-xl bg-linear-to-b from-neutral-600 to-neutral-800" />
+            <div className="w-[110%] h-2.5 sm:h-3.5 rounded-b-xl bg-linear-to-b from-neutral-600 to-neutral-800" />
         </div>
     );
 }
