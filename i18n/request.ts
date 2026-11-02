@@ -15,7 +15,7 @@ export default getRequestConfig(async ({ requestLocale, locale: explicit }) => {
 
     const messages = (await import(`@/messages/${locale}.json`)).default;
 
-    // Store name from the settings, or the ?ref= pitch name, replaces "Orvella" in every message.
+    // Store name from the settings, or the ?ref= pitch name, replaces "Corlane" in every message.
     const brand = await brand_for_messages();
     return { locale, messages: brand ? applyBrand(messages, brand) : messages };
 });

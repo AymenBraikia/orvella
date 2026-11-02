@@ -9,7 +9,7 @@ import type { StoreSettings } from "@/types/settings";
  * nothing here should look like a real business.
  */
 export const DEFAULT_SETTINGS: StoreSettings = {
-    store_name: "ORVELLA",
+    store_name: "CORLANE",
     legal_name: "Your Company GmbH",
     representative: "Your Name",
     address: {

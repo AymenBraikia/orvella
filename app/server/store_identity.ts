@@ -62,7 +62,7 @@ export function public_details(s: StoreSettings): PublicStoreDetails {
     };
 }
 
-/** Brand to write into the translations instead of "Orvella" (undefined = keep the default). */
+/** Brand to write into the translations instead of "Corlane" (undefined = keep the default). */
 export async function brand_for_messages(): Promise<string | undefined> {
     const { store_name, ref } = await store_identity();
     if (ref) return ref;

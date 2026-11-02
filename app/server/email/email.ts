@@ -4,7 +4,7 @@ import "server-only";
  * Sending email, behind one function so the provider can be swapped (Resend today).
  *
  *   RESEND_API_KEY  — API key from resend.com (domain verified there)
- *   EMAIL_FROM      — e.g. "Orvella <orders@your-domain.com>"
+ *   EMAIL_FROM      — e.g. "Corlane <orders@your-domain.com>"
  *
  * Without RESEND_API_KEY nothing is sent; in development (or with EMAIL_LOG=1) the email is logged instead.
  * Never throws: a failed email must not break an order or a form submission.

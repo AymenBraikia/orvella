@@ -58,16 +58,16 @@
         }
     },
     "meta": {
-        "siteName": "ORVELLA",
-        "titleDefault": "ORVELLA | Üst Segment Lüks Saatler ve Uzman Danışmanlığı",
+        "siteName": "CORLANE",
+        "titleDefault": "CORLANE | Üst Segment Lüks Saatler ve Uzman Danışmanlığı",
         "description": "Rolex, Patek Philippe ve Cartier dahil olmak üzere kusursuz durumdaki ikinci el ve sıfır lüks saatlerden oluşan özenle seçilmiş koleksiyonumuzu keşfedin. Saatçilik uzmanlarımızla bugün profesyonel bir danışmanlık randevusu alın.",
-        "keywords": ["lüks saatler", "ikinci el Rolex", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "lüks saat satın al", "saat danışmanlığı", "ORVELLA"],
+        "keywords": ["lüks saatler", "ikinci el Rolex", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "lüks saat satın al", "saat danışmanlığı", "CORLANE"],
         "ogDescription": "İkinci el ve sıfır lüks saatlerden oluşan özenle seçilmiş koleksiyonumuz sizi bekliyor. Üst segment saatçilik ihtiyaçlarınız için uzmanlarımızla çalışın.",
-        "ogImageAlt": "ORVELLA Lüks Saat Koleksiyonu",
+        "ogImageAlt": "CORLANE Lüks Saat Koleksiyonu",
         "twitterDescription": "Üst segment saatler için ortağınız. Rolex, Patek Philippe ve Cartier'yi keşfedin, uzman randevunuzu alın."
     },
     "common": {
-        "brand": "ORVELLA",
+        "brand": "CORLANE",
         "watches": "saatler",
         "rings": "yüzükler",
         "necklaces": "kolyeler",
@@ -104,8 +104,8 @@
             "withdrawal": "Cayma Hakkı",
             "disclaimer": "Sorumluluk Reddi",
             "cookiePolicy": "Çerez Politikası",
-            "disclaimerText": "Orvella bağımsız bir satıcıdır; herhangi bir markayla bağlantısı yoktur ve yetkili satıcı değildir.",
-            "copyright": "©{year} Orvella. Tüm hakları saklıdır.",
+            "disclaimerText": "Corlane bağımsız bir satıcıdır; herhangi bir markayla bağlantısı yoktur ve yetkili satıcı değildir.",
+            "copyright": "©{year} Corlane. Tüm hakları saklıdır.",
             "byAppointment": "Showroom ziyaretleri randevu ile"
         },
         "contactLabels": {
@@ -275,7 +275,7 @@
             "password": "Şifre",
             "firstNamePlaceholder": "Jordan",
             "lastNamePlaceholder": "Blake",
-            "emailPlaceholder": "Jordan@orvella.com",
+            "emailPlaceholder": "Jordan@corlane.store",
             "passwordPlaceholder": "En az 8 karakter",
             "agree": "Hizmet Şartları'nı ve Gizlilik Politikası'nı kabul ediyorum",
             "createAccount": "Hesap oluştur",
@@ -291,7 +291,7 @@
             "description": "İlgilendiğiniz parçaları kaydedin, teklifleri takip edin ve bir dahaki sefere daha hızlı alışveriş yapın.",
             "email": "E-posta",
             "password": "Şifre",
-            "emailPlaceholder": "Jordan@orvella.com",
+            "emailPlaceholder": "Jordan@corlane.store",
             "passwordPlaceholder": "En az 8 karakter",
             "logIn": "Giriş yap",
             "loggingIn": "Giriş yapılıyor…",
@@ -328,7 +328,7 @@
         }
     },
     "home": {
-        "heroTitle": "ORVELLA",
+        "heroTitle": "CORLANE",
         "heroSubtitle": "Zarif Mücevherler ve Lüks Saatler İçin Adresiniz",
         "discover": "Keşfedin",
         "newArrivalsHeading": "Yeni Gelenler",
@@ -365,7 +365,7 @@
         "title": "Yedek Parçalar"
     },
     "store": {
-        "heading": "Orvella Mağazası {city}",
+        "heading": "Corlane Mağazası {city}",
         "cta": "Randevu alın",
         "welcomeText": "Sizi yakında mağazamızda ağırlamayı dört gözle bekliyoruz.",
         "appointmentNote": "Aradığınız saatin ziyaretiniz sırasında hazır olduğundan emin olmak için lütfen randevu alın.",
@@ -396,7 +396,7 @@
     "sell": {
         "heading": "Sat / Konsinye",
         "formCtaHeading": "Formu doldurun",
-        "formCtaText": "Orvella'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+        "formCtaText": "Corlane'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
         "beginCta": "Başlayın",
         "howItWorksHeading": "Nasıl çalışır",
         "consign": {
@@ -429,7 +429,7 @@
         },
         "sellDirect": {
             "heading": "Sat",
-            "intro": "Orvella'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+            "intro": "Corlane'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
             "steps": [
                 {
                     "title": "Saatinizle İlgili Bilgileri Paylaşın",
@@ -451,7 +451,7 @@
         },
         "form": {
             "heading": "Konsinye / Saatinizi Satın",
-            "intro": "Orvella'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+            "intro": "Corlane'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
             "sections": {
                 "personalInformation": "Kişisel Bilgiler",
                 "salePreference": "Satış tercihi",
@@ -487,7 +487,7 @@
     },
     "polish": {
         "heading": "Parlatma ve Servis",
-        "intro": "Orvella olarak Rolex, IWC, Tudor, Omega ve Cartier gibi üst segment markalar için birinci sınıf parlatma ve onarım hizmeti sunuyoruz. Deneyimli saat ustamız, hassas parlatmadan profesyonel bakıma kadar saatinizi en iyi haline getirir.",
+        "intro": "Corlane olarak Rolex, IWC, Tudor, Omega ve Cartier gibi üst segment markalar için birinci sınıf parlatma ve onarım hizmeti sunuyoruz. Deneyimli saat ustamız, hassas parlatmadan profesyonel bakıma kadar saatinizi en iyi haline getirir.",
         "servicesHeading": "Hizmetlerimize genel bakış:",
         "polishing": {
             "heading": "Parlatma ve yenileme:",
@@ -538,8 +538,8 @@
     "about": {
         "heading": "Hakkımızda",
         "paragraphs": [
-            "Orvella, saatçiliğe ve ikonik kol saatlerine duyulan köklü bir tutkuyla hareket eden, üst segment saatler satıcısıdır.",
-            "Orvella'de, hem sıfır hem de ikinci el seçkin saatler için güvenilir uzmanınızız. Uzmanlığımızın arkasında tutku var: yalnızca en iyi saatleri sunuyoruz; her biri kendi kolumuzda gururla taşıyacağımız parçalar. Kendi bünyemizdeki saat ustamız, orijinalliğinden ve en iyi performansından emin olmak için her saati titizlikle inceler; böylece alışverişinizden içiniz rahat eder.",
+            "Corlane, saatçiliğe ve ikonik kol saatlerine duyulan köklü bir tutkuyla hareket eden, üst segment saatler satıcısıdır.",
+            "Corlane'de, hem sıfır hem de ikinci el seçkin saatler için güvenilir uzmanınızız. Uzmanlığımızın arkasında tutku var: yalnızca en iyi saatleri sunuyoruz; her biri kendi kolumuzda gururla taşıyacağımız parçalar. Kendi bünyemizdeki saat ustamız, orijinalliğinden ve en iyi performansından emin olmak için her saati titizlikle inceler; böylece alışverişinizden içiniz rahat eder.",
             "Ekibimiz ve bünyemizdeki saat ustamız, orijinalliğini ve performansını garanti altına almak için her saati satıştan önce titizlikle inceler.",
             "Koleksiyonunuza yeni bir parça mı eklemek istiyorsunuz? Prestijli markalardan oluşan etkileyici bir seçki sunuyoruz.",
             "Markalarımız: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling ve daha fazlası",
@@ -702,7 +702,7 @@
     },
     "imprint": {
         "heading": "Künye",
-        "companyLabel": "Orvella",
+        "companyLabel": "Corlane",
         "phoneLabel": "Telefon numarası:",
         "emailLabel": "E-posta:",
         "vatIdLabel": "Katma değer vergisi kimlik numarası:",
@@ -726,7 +726,7 @@
             "sections": {
                 "controller": {
                     "heading": "Verilerinizin veri sorumlusu olarak bizimle ilgili bilgiler",
-                    "text": "Veri koruma mevzuatı bakımından bu web sitesinden sorumlu taraf (“veri sorumlusu”), sahibi tarafından temsil edilen Orvella'dir. İletişim bilgileri Künye bölümünde yer almaktadır."
+                    "text": "Veri koruma mevzuatı bakımından bu web sitesinden sorumlu taraf (“veri sorumlusu”), sahibi tarafından temsil edilen Corlane'dir. İletişim bilgileri Künye bölümünde yer almaktadır."
                 },
                 "rights": {
                     "heading": "Kullanıcıların ve ilgili kişilerin hakları",
@@ -1674,9 +1674,9 @@
                 "error": "Gönderilemedi. Lütfen tekrar deneyin ya da aşağıdan bana doğrudan yazın.",
                 "orReach": "Doğrudan yazmayı mı tercih edersiniz?"
             },
-            "floatingCta": "Orvella'in Özel Demosu İçin Randevu Alın",
+            "floatingCta": "Corlane'in Özel Demosu İçin Randevu Alın",
             "openStorefront": "Mağazayı aç",
-            "credit": "Aymen · Orvella"
+            "credit": "Aymen · Corlane"
         },
         "nav": {
             "back": "Vitrine dön",

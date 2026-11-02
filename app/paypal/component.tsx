@@ -15,7 +15,7 @@ export default async function Paypal_component({ currency, ready }: { currency: 
             {DEMO_MODE && (
                 <p className="w-full text-sm">
                     <span className="text-gold font-semibold">{t_demo("testPayment")}</span> {t("paypalNote")}
-                    <br /> <span className="text-gold">{t("email")}: </span> <span className="font-semibold font-sans">test@orvella.com</span>
+                    <br /> <span className="text-gold">{t("email")}: </span> <span className="font-semibold font-sans">test@corlane.store</span>
                     <br /> <span className="text-gold">{t("password")}: </span> <span className="font-semibold font-sans">Arvell_123</span>
                 </p>
             )}

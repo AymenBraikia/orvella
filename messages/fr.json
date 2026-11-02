@@ -58,16 +58,16 @@
         }
     },
     "meta": {
-        "siteName": "ORVELLA",
-        "titleDefault": "ORVELLA | Montres de luxe haut de gamme & conseil d'experts",
+        "siteName": "CORLANE",
+        "titleDefault": "CORLANE | Montres de luxe haut de gamme & conseil d'experts",
         "description": "Découvrez notre collection sélectionnée de montres de luxe neuves et d'occasion en parfait état, dont Rolex, Patek Philippe et Cartier. Réservez dès aujourd'hui une consultation professionnelle avec nos experts en horlogerie.",
-        "keywords": ["montres de luxe", "Rolex d'occasion", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "acheter des montres de luxe", "conseil en horlogerie", "ORVELLA"],
+        "keywords": ["montres de luxe", "Rolex d'occasion", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "acheter des montres de luxe", "conseil en horlogerie", "CORLANE"],
         "ogDescription": "Notre collection sélectionnée de montres de luxe neuves et d'occasion vous attend. Faites appel à nos experts pour tous vos besoins en haute horlogerie.",
-        "ogImageAlt": "Collection de montres de luxe ORVELLA",
+        "ogImageAlt": "Collection de montres de luxe CORLANE",
         "twitterDescription": "Votre partenaire pour les montres haut de gamme. Découvrez Rolex, Patek Philippe et Cartier, et prenez rendez-vous avec nos experts."
     },
     "common": {
-        "brand": "ORVELLA",
+        "brand": "CORLANE",
         "watches": "montres",
         "rings": "bagues",
         "necklaces": "colliers",
@@ -104,8 +104,8 @@
             "withdrawal": "Rétractation",
             "disclaimer": "Avis de non-responsabilité",
             "cookiePolicy": "Politique relative aux cookies",
-            "disclaimerText": "Orvella est un revendeur indépendant, non affilié à une quelconque marque et n'est pas un revendeur agréé.",
-            "copyright": "©{year} Orvella. Tous droits réservés.",
+            "disclaimerText": "Corlane est un revendeur indépendant, non affilié à une quelconque marque et n'est pas un revendeur agréé.",
+            "copyright": "©{year} Corlane. Tous droits réservés.",
             "byAppointment": "Visites du showroom sur rendez-vous"
         },
         "contactLabels": {
@@ -275,7 +275,7 @@
             "password": "Mot de passe",
             "firstNamePlaceholder": "Jordan",
             "lastNamePlaceholder": "Blake",
-            "emailPlaceholder": "Jordan@orvella.com",
+            "emailPlaceholder": "Jordan@corlane.store",
             "passwordPlaceholder": "Au moins 8 caractères",
             "agree": "accepte les conditions générales et la politique de confidentialité",
             "createAccount": "Créer un compte",
@@ -291,7 +291,7 @@
             "description": "Enregistrez les pièces qui vous intéressent, suivez les offres et commandez plus rapidement la prochaine fois.",
             "email": "E-mail",
             "password": "Mot de passe",
-            "emailPlaceholder": "Jordan@orvella.com",
+            "emailPlaceholder": "Jordan@corlane.store",
             "passwordPlaceholder": "Au moins 8 caractères",
             "logIn": "Se connecter",
             "loggingIn": "Connexion en cours…",
@@ -328,7 +328,7 @@
         }
     },
     "home": {
-        "heroTitle": "ORVELLA",
+        "heroTitle": "CORLANE",
         "heroSubtitle": "Votre destination pour la haute joaillerie et les montres de prestige",
         "discover": "Découvrir",
         "newArrivalsHeading": "Nouveautés",
@@ -365,7 +365,7 @@
         "title": "Pièces détachées"
     },
     "store": {
-        "heading": "Boutique Orvella {city}",
+        "heading": "Boutique Corlane {city}",
         "cta": "Prendre rendez-vous",
         "welcomeText": "Nous nous réjouissons de vous accueillir prochainement dans notre boutique.",
         "appointmentNote": "Merci de prendre rendez-vous afin de vous assurer que la montre que vous recherchez sera disponible lors de votre visite.",
@@ -396,7 +396,7 @@
     "sell": {
         "heading": "Vendre / Déposer",
         "formCtaHeading": "Remplissez le formulaire",
-        "formCtaText": "Les experts estimateurs d'Orvella établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
+        "formCtaText": "Les experts estimateurs de Corlane établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
         "beginCta": "Commencer",
         "howItWorksHeading": "Comment ça marche",
         "consign": {
@@ -429,7 +429,7 @@
         },
         "sellDirect": {
             "heading": "Vendre",
-            "intro": "Les experts estimateurs d'Orvella établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
+            "intro": "Les experts estimateurs de Corlane établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
             "steps": [
                 {
                     "title": "Communiquez les détails de votre montre",
@@ -451,7 +451,7 @@
         },
         "form": {
             "heading": "Dépôt-vente / Vendre votre montre",
-            "intro": "Les experts estimateurs d'Orvella établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
+            "intro": "Les experts estimateurs de Corlane établissent des estimations rapides et détaillées afin que vous tiriez le meilleur parti de votre vente.",
             "sections": {
                 "personalInformation": "Informations personnelles",
                 "salePreference": "Préférence de vente",
@@ -487,7 +487,7 @@
     },
     "polish": {
         "heading": "Polissage et service",
-        "intro": "Chez Orvella, nous proposons un service de polissage et de réparation de premier ordre pour les grandes marques telles que Rolex, IWC, Tudor, Omega et Cartier. Notre horloger expérimenté remettra votre montre en parfait état – du polissage de précision à l'entretien professionnel.",
+        "intro": "Chez Corlane, nous proposons un service de polissage et de réparation de premier ordre pour les grandes marques telles que Rolex, IWC, Tudor, Omega et Cartier. Notre horloger expérimenté remettra votre montre en parfait état – du polissage de précision à l'entretien professionnel.",
         "servicesHeading": "Nos services en un coup d'œil :",
         "polishing": {
             "heading": "Polissage & remise en état :",
@@ -538,8 +538,8 @@
     "about": {
         "heading": "À propos",
         "paragraphs": [
-            "Orvella est un revendeur de montres haut de gamme, porté par une passion durable pour l’horlogerie et les montres-bracelets iconiques.",
-            "Chez Orvella, nous sommes vos experts de confiance pour des montres d'exception, neuves comme d'occasion. Notre expertise est portée par la passion : nous ne proposons que les plus belles pièces, chacune étant une montre que nous porterions nous-mêmes avec fierté. Notre horloger interne inspecte méticuleusement chaque montre afin d'en garantir l'authenticité et le fonctionnement optimal, pour que vous achetiez en toute confiance.",
+            "Corlane est un revendeur de montres haut de gamme, porté par une passion durable pour l’horlogerie et les montres-bracelets iconiques.",
+            "Chez Corlane, nous sommes vos experts de confiance pour des montres d'exception, neuves comme d'occasion. Notre expertise est portée par la passion : nous ne proposons que les plus belles pièces, chacune étant une montre que nous porterions nous-mêmes avec fierté. Notre horloger interne inspecte méticuleusement chaque montre afin d'en garantir l'authenticité et le fonctionnement optimal, pour que vous achetiez en toute confiance.",
             "Notre équipe et notre horloger interne inspectent minutieusement chaque montre avant sa vente afin d'en garantir l'authenticité et la performance.",
             "Vous souhaitez enrichir votre collection ? Nous proposons une sélection impressionnante de marques prestigieuses.",
             "Nos marques : Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling et bien d'autres",
@@ -702,7 +702,7 @@
     },
     "imprint": {
         "heading": "Mentions légales",
-        "companyLabel": "Orvella",
+        "companyLabel": "Corlane",
         "phoneLabel": "Numéro de téléphone :",
         "emailLabel": "E-mail :",
         "vatIdLabel": "Numéro d'identification à la TVA :",
@@ -726,7 +726,7 @@
             "sections": {
                 "controller": {
                     "heading": "Informations nous concernant en tant que responsables du traitement de vos données",
-                    "text": "La partie responsable de ce site web (le « responsable du traitement ») au sens de la législation sur la protection des données est Orvella, représentée par son propriétaire. Les coordonnées figurent dans les mentions légales."
+                    "text": "La partie responsable de ce site web (le « responsable du traitement ») au sens de la législation sur la protection des données est Corlane, représentée par son propriétaire. Les coordonnées figurent dans les mentions légales."
                 },
                 "rights": {
                     "heading": "Les droits des utilisateurs et des personnes concernées",
@@ -1679,9 +1679,9 @@
                 "error": "L'envoi n'a pas abouti. Réessayez ou contactez-moi directement ci-dessous.",
                 "orReach": "Vous préférez écrire directement ?"
             },
-            "floatingCta": "Réservez la démo personnalisée d'Orvella",
+            "floatingCta": "Réservez la démo personnalisée de Corlane",
             "openStorefront": "Ouvrir la vitrine",
-            "credit": "Aymen · Orvella"
+            "credit": "Aymen · Corlane"
         },
         "nav": {
             "back": "Retour à la vitrine",
