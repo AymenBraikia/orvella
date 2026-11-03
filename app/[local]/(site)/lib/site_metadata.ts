@@ -24,7 +24,7 @@ export function share_image(ref?: string | null): string {
 
 /**
  * Site-wide defaults shared by the storefront layouts. A real shop is described with its own name
- * and the translated meta texts; the public demo is marked as a concept and kept out of search.
+ * and the translated meta texts; the public demo is marked as a concept.
  *
  * `url_ref` is ?ref= from the page URL. Link-preview bots never get the ref cookie, so pages that are
  * shared as pitch links (home, /why) pass it in to show the dealer's name in the preview.
@@ -47,9 +47,7 @@ export async function site_metadata(locale: string, url_ref?: string | string[])
         ...(DEMO_MODE ? { authors: [{ name: "Aymen Braikia" }], creator: "Aymen Braikia", publisher: "Aymen Braikia" } : { keywords: t.raw("keywords") as string[] }),
         metadataBase: new URL(BASE_URL),
         alternates: language_alternates("/", locale),
-        robots: DEMO_MODE
-            ? { index: false, follow: false, googleBot: { index: false, follow: false } }
-            : { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+        robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
         openGraph: {
             title,
             description: DEMO_MODE ? description : t("ogDescription"),
