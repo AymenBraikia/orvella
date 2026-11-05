@@ -3,6 +3,7 @@ import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 import { verifyJwt } from "./app/[local]/(auth)/auth/jwt";
 import { sanitizeRef } from "./i18n/brand";
+import { demo_slug_of } from "@/app/(site)/lib/private_demo_slugs";
 import { DEMO_MODE } from "@/app/(site)/lib/demo";
 import { save_visit } from "./app/server/save_visit";
 import { country_to_currency } from "@/app/(site)/lib/price_format";
@@ -25,6 +26,11 @@ export default function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
     if (pathname.startsWith("/api") || pathname.startsWith("/_next") || pathname.includes(".")) return NextResponse.next();
+
+    // Private demos: corlane.store/<slug> opens the store as that seller (app/api/demo-open), for
+    // everyone including link-preview bots.
+    const demo_slug = demo_slug_of(pathname);
+    if (demo_slug) return NextResponse.rewrite(new URL(`/api/demo-open/${demo_slug}`, request.url));
 
     const BOT = /facebookexternalhit|facebookcatalog|Instagram|WhatsApp|Twitterbot|Slackbot|Discordbot|TelegramBot|LinkedInBot|Googlebot|bingbot|Applebot|SkypeUriPreview|redditbot|Iframely|embedly/i;
 

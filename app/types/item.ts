@@ -28,6 +28,8 @@ export interface BaseItem {
     date_added: Date | string;
     relevance_score: number;
     preview?: string;
+    /** Set on the products of a private demo (app/server/private_demos.ts), which they follow. */
+    private_demo?: string;
 
     /** Units free to sell (not counting reserved ones). 1 for unique pieces. Missing on legacy documents. */
     quantity?: number;

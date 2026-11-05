@@ -11,6 +11,7 @@ import { Item } from "@/types/item";
 import type { StoreSettings } from "@/types/settings";
 import type { Enquiry } from "@/types/enquiry";
 import type { PitchLead } from "@/types/pitch_lead";
+import type { PrivateDemo, PrivateDemoPhoto } from "@/types/private_demo";
 
 let client: MongoClient | null = null;
 
@@ -36,5 +37,8 @@ export const pitch_leads_collection = async () => (await db()).collection<PitchL
 export const carts_collection = async () => (await db()).collection<GuestCart>("carts");
 export const counters_collection = async () => (await db()).collection<{ _id: string; seq: number }>("counters");
 export const settings_collection = async () => (await db()).collection<StoreSettings & { _id: string }>("settings");
+/** Private per-lead demo stores (corlane.store/<slug>) and their photos. */
+export const private_demos_collection = async () => (await db()).collection<PrivateDemo>("private_demos");
+export const private_demo_photos_collection = async () => (await db()).collection<PrivateDemoPhoto>("private_demo_photos");
 
 export {};

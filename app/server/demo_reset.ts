@@ -30,7 +30,8 @@ export async function reset_demo(): Promise<{ cancelled: number; deleted: number
     await restock_everything();
 
     const old = { created_at: { $lt: new Date(Date.now() - KEEP_MS) } };
-    const deleted = await Promise.all([orders.deleteMany(old), (await enquiries_collection()).deleteMany(old), (await sell_collection()).deleteMany(old), (await consignments_collection()).deleteMany(old), (await appointments_collection()).deleteMany(old)]);
+    // Enquiries from private demos (corlane.store/<slug>) are real leads, not storefront test data: keep them.
+    const deleted = await Promise.all([orders.deleteMany(old), (await enquiries_collection()).deleteMany({ ...old, demo: { $exists: false } }), (await sell_collection()).deleteMany(old), (await consignments_collection()).deleteMany(old), (await appointments_collection()).deleteMany(old)]);
 
     revalidatePath("/", "layout");
     return { cancelled: open.length, deleted: deleted.reduce((sum, r) => sum + r.deletedCount, 0) };

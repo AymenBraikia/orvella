@@ -25,6 +25,8 @@ vi.mock("../app/server/settings", () => {
     return { DEFAULT_SETTINGS, get_settings: async () => DEFAULT_SETTINGS };
 });
 vi.mock("../app/db/collections", () => ({
+    // No private demos here: every ref is a plain pitch link.
+    private_demos_collection: async () => ({ findOne: async () => null }),
     items_collection: async () => ({
         find: (query: { preview?: unknown }) => ({
             toArray: async () => ITEMS.filter((i) => (!("preview" in query) ? true : typeof query.preview == "string" ? i.preview === query.preview : i.preview === undefined)),

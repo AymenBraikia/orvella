@@ -20,6 +20,7 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
 
     const e: Enquiry = JSON.parse(JSON.stringify(doc));
     const { store_name } = await get_settings();
+    const piece_href = e.demo ? `/admin/demos/${e.demo.id}` : `/admin/products/${e.item.slug}`;
     const greeting = `Hello ${e.name}, thank you for your ${e.type == "reservation" ? "reservation request" : "enquiry"} about the ${e.item.name}.`;
     const whatsapp = e.phone ? whatsapp_link(e.phone, `${greeting} — ${store_name}`) : null;
 
@@ -31,15 +32,17 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
             </PageHeader>
 
             <div className="flex flex-wrap gap-2">
-                <a href={`mailto:${e.email}?subject=${encodeURIComponent(`Your enquiry: ${e.item.name}`)}&body=${encodeURIComponent(`${greeting}\n\n`)}`} className="button3 bg-gold text-primary px-4! py-2! text-sm">
-                    Reply by email
-                </a>
+                {e.email && (
+                    <a href={`mailto:${e.email}?subject=${encodeURIComponent(`Your enquiry: ${e.item.name}`)}&body=${encodeURIComponent(`${greeting}\n\n`)}`} className="button3 bg-gold text-primary px-4! py-2! text-sm">
+                        Reply by email
+                    </a>
+                )}
                 {whatsapp && (
                     <a href={whatsapp} target="_blank" rel="noreferrer" className="button px-4! py-2! text-sm">
                         WhatsApp
                     </a>
                 )}
-                {e.type == "reservation" && (
+                {e.type == "reservation" && !e.demo && (
                     <Link href={`/admin/products/${e.item.slug}`} className="button2 px-4! py-2! text-sm">
                         Reserve the piece →
                     </Link>
@@ -48,13 +51,20 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
 
             <div className="grid xl:grid-cols-3 gap-4 items-start">
                 <Card title="Enquiry" className="xl:col-span-2">
+                    {e.demo && (
+                        <DetailRow label="Private demo">
+                            <Link href={piece_href} className="underline">
+                                {e.demo.name} (corlane.store/{e.demo.slug})
+                            </Link>
+                        </DetailRow>
+                    )}
                     <DetailRow label="Piece">
-                        <Link href={`/admin/products/${e.item.slug}`} className="underline capitalize">
+                        <Link href={piece_href} className="underline capitalize">
                             {e.item.name}
                         </Link>
                     </DetailRow>
                     <DetailRow label="Reference">{e.item.reference || "—"}</DetailRow>
-                    <DetailRow label="Price when asked">{format_money(e.item.price, "EUR")}</DetailRow>
+                    <DetailRow label="Price when asked">{e.item.price === undefined ? "Price on request" : format_money(e.item.price, e.demo?.currency ?? "EUR")}</DetailRow>
                     <DetailRow label="Message">
                         <p className="whitespace-pre-wrap">{e.message || "—"}</p>
                     </DetailRow>
@@ -62,7 +72,7 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
                 <div className="flex flex-col gap-4">
                     <Card title="Customer">
                         <DetailRow label="Name">{e.name}</DetailRow>
-                        <DetailRow label="Email">{e.email}</DetailRow>
+                        <DetailRow label="Email">{e.email || "—"}</DetailRow>
                         <DetailRow label="Phone">{e.phone || "—"}</DetailRow>
                         {e.locale && <DetailRow label="Language">{e.locale}</DetailRow>}
                     </Card>

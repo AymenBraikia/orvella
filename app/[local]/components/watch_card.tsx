@@ -66,9 +66,11 @@ export default memo(function Watch_card({
                             {t("movement")}: {movement}
                         </p>
                     )}
-                    <p>
-                        {t("caseSize")}: {size} mm
-                    </p>
+                    {size > 0 && (
+                        <p>
+                            {t("caseSize")}: {size} mm
+                        </p>
+                    )}
                     {braceletMaterial == "UNVERIFIED" ? (
                         <></>
                     ) : (

@@ -14,9 +14,10 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Pr
     const filter: Filter<Enquiry> = {};
     if (params.status) filter.status = params.status as Enquiry["status"];
     if (params.type == "question" || params.type == "reservation") filter.type = params.type;
+    if (params.type == "demo") filter.demo = { $exists: true };
     if (params.q?.trim()) {
         const rx = { $regex: escape_regex(params.q.trim()), $options: "i" };
-        filter.$or = [{ name: rx }, { email: rx }, { phone: rx }, { "item.name": rx }, { "item.reference": rx }] as Filter<Enquiry>[];
+        filter.$or = [{ name: rx }, { email: rx }, { phone: rx }, { "item.name": rx }, { "item.reference": rx }, { "demo.name": rx }, { "demo.slug": rx }] as Filter<Enquiry>[];
     }
 
     const collection = await enquiries_collection();
@@ -36,7 +37,7 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Pr
 
     return (
         <>
-            <PageHeader title="Enquiries" subtitle="Questions and reservation requests from product pages." />
+            <PageHeader title="Enquiries" subtitle="Questions and reservation requests from product pages and private demos." />
 
             <FilterBar>
                 <SearchField value={params.q} placeholder="Name, email, piece, reference…" />
@@ -48,6 +49,7 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Pr
                     options={[
                         { value: "question", label: "Question" },
                         { value: "reservation", label: "Reservation request" },
+                        { value: "demo", label: "From a private demo" },
                     ]}
                 />
             </FilterBar>
@@ -73,9 +75,14 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Pr
                         </td>
                         <td>
                             <p>{e.name}</p>
-                            <p className="text-xs text-secondary">{e.email}</p>
+                            <p className="text-xs text-secondary">{e.email || e.phone}</p>
                         </td>
                         <td className="capitalize">
+                            {e.demo && (
+                                <p className="normal-case">
+                                    <Badge tone="blue">Demo · {e.demo.name}</Badge>
+                                </p>
+                            )}
                             {e.item.name}
                             {e.item.reference && <p className="text-xs text-secondary normal-case">Ref. {e.item.reference}</p>}
                         </td>

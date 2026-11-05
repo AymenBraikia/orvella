@@ -20,7 +20,7 @@ export default async function AuthShell({ session, cart = [], children }: { sess
         <CurrencyProvider currency={savedCurrency} rates={rates} charge_currency={identity.charge_currency}>
         <AuthProvider initialSession={session}>
             <CartProvider cart={cart}>
-                <Header savedCurrency={savedCurrency} />
+                <Header savedCurrency={savedCurrency} store_name={store.store_name} />
                 <div className="min-h-full flex-center flex-col max-w-dvw overflow-x-hidden pt-20">
                     {children}
                     <Footer store={store} />

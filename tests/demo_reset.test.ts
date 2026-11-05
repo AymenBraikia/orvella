@@ -138,6 +138,12 @@ describe("nightly demo reset", () => {
         for (const collection of [enquiries, sell, consignments, appointments]) expect(await collection.countDocuments()).toBe(1);
     });
 
+    it("keeps old enquiries that came from a private demo", async () => {
+        await enquiries.insertOne({ created_at: hours_ago(72), demo: { id: "d1", slug: "dn", name: "DN", currency: "EUR" } });
+        await call();
+        expect(await enquiries.countDocuments({ demo: { $exists: true } })).toBe(1);
+    });
+
     it("running it twice changes nothing more", async () => {
         await call();
         expect(await (await call()).json()).toEqual({ cancelled: 0, deleted: 0 });

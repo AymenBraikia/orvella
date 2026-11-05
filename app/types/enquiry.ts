@@ -4,7 +4,10 @@ import type { LeadTracking } from "./lead";
 export interface Enquiry extends LeadTracking {
     id: string;
     type: "question" | "reservation";
-    item: { slug: string; name: string; reference?: string; price: number };
+    /** For a private demo, `slug` is the piece id and `price` (in the demo's currency) may be missing. */
+    item: { slug: string; name: string; reference?: string; price?: number };
+    /** Set when the enquiry came from a private demo (corlane.store/<slug>), not the storefront. */
+    demo?: { id: string; slug: string; name: string; currency: string };
     name: string;
     email: string;
     phone?: string;

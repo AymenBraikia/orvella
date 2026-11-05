@@ -72,32 +72,40 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                             <p className="font-medium tracking-wide text-base sm:text-2xl">{format_price(view.price, currency)}</p>
 
                             <div className="hidden md:flex flex-col gap-2 leading-relaxed tracking-wide text-sm text-secondary">
-                                <p>
-                                    {t("filters.movement")}: {view.movement}
-                                </p>
+                                {(view.movement as string) != "UNVERIFIED" && (
+                                    <p>
+                                        {t("filters.movement")}: {view.movement}
+                                    </p>
+                                )}
                                 <p className={`${view.caseMaterial == "UNVERIFIED" ? "hidden" : "block"}`}>
                                     {t("filters.caseMaterial")}: {view.caseMaterial}
                                 </p>
                                 <p className={`${view.braceletMaterial == "UNVERIFIED" ? "hidden" : "block"}`}>
                                     {t("filters.braceletMaterial")}: {view.braceletMaterial}
                                 </p>
-                                <p>
-                                    {t("filters.condition")}: {view.condition}
-                                </p>
+                                {(view.condition as string) != "UNVERIFIED" && (
+                                    <p>
+                                        {t("filters.condition")}: {view.condition}
+                                    </p>
+                                )}
                                 <p className={`${view.dialColor == "UNVERIFIED" ? "hidden" : "block"}`}>
                                     {t("filters.dialColor")}: {view.dialColor}
                                 </p>
-                                <p>
-                                    {t("filters.caseDiameterMm")}: {view.caseDiameterMm} mm
-                                </p>
+                                {view.caseDiameterMm > 0 && (
+                                    <p>
+                                        {t("filters.caseDiameterMm")}: {view.caseDiameterMm} mm
+                                    </p>
+                                )}
                                 {view.year > 0 && (
                                     <p>
                                         {t("filters.year")}: {view.year}
                                     </p>
                                 )}
-                                <p>
-                                    {t("filters.waterResistance")}: {view.waterResistanceM}m
-                                </p>
+                                {view.waterResistanceM > 0 && (
+                                    <p>
+                                        {t("filters.waterResistance")}: {view.waterResistanceM}m
+                                    </p>
+                                )}
                             </div>
 
                             <p className="leading-relaxed tracking-wide text-xs sm:text-sm md:text-base text-shine hidden sm:block">{view.description}</p>

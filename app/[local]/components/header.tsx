@@ -7,7 +7,7 @@ import { Dispatch, SetStateAction, useEffect, useReducer, useRef, useState } fro
 import Link from "next/link";
 
 import Image from "next/image";
-import MenuBurger from "./svg/menu_burger";
+import HeaderBar from "./header_bar";
 import Cart from "./svg/cart";
 
 import increase_relevance_score from "@/app/server/increase_relevance_score";
@@ -169,12 +169,11 @@ function headerReducer(state: UIState, action: UIAction): UIState {
     }
 }
 
-export default function Header({ savedCurrency = "USD" }: { savedCurrency: Supported_Currencies }) {
+export default function Header({ savedCurrency = "USD", store_name }: { savedCurrency: Supported_Currencies; store_name: string }) {
     const { session } = useAuth();
     const { cart } = useCart();
     const locale = useLocale() as Locales;
     const t = useTranslations("common");
-    const t2 = useTranslations("home");
 
     const selected_locale = locale.toUpperCase();
 
@@ -323,25 +322,14 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
 
     return (
         <>
-            <header className={`flex flex-col w-dvw fixed top-0 inset-s-0 z-4000 h-fit min-h-20 text-primary bg-background`}>
-                <DemoBanner />
-                <div className="w-full flex justify-between items-center sm:px-8 py-4 sm:py-2 px-[5dvw]">
-                    <div className={`w-1/3 flex justify-between items-center transition-default ${ui.isNavOpen ? "opacity-0" : "opacity-100"} gap-2`}>
-                        <button aria-label={"menu"} type="button" className="button2 p-1 md:p-auto" onClick={() => dispatch({ type: "OPEN_NAV" })}>
-                            <MenuBurger classnames="w-5 sm:w-8" clr={"currentColor"} />
-                        </button>
-                        <div className="">
-                            <Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />
-                        </div>
-                    </div>
-
-                    <div className="w-1/3 flex-center">
-                        <Link aria-label={"home"} href={"/"} className="w-fit font-primary flex-center text-base sm:text-xl md:text-2xl xl:text-4xl tracking-widest">
-                            {t2("heroTitle")}
-                        </Link>
-                    </div>
-
-                    <div className="flex justify-end items-center gap-2 w-1/3">
+            <HeaderBar
+                banner={<DemoBanner />}
+                nav_open={ui.isNavOpen}
+                onMenu={() => dispatch({ type: "OPEN_NAV" })}
+                search={<Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />}
+                name={store_name}
+                end={
+                    <>
                         {/* <div className="xl:block hidden">
                             <Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search_watches" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />
                         </div> */}
@@ -368,11 +356,12 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
                         <div className="sm:block hidden">
                             <ThemeToggle />
                         </div>
-                    </div>
-                </div>
+                    </>
+                }
+            >
                 <Nav savedCurrency={savedCurrency} ref={navRef} ui={ui} dispatch={dispatch} />
                 <CartDrawer ref={cartRef} ui={ui} dispatch={dispatch} />
-            </header>
+            </HeaderBar>
         </>
     );
 }

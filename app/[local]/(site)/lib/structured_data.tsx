@@ -67,7 +67,6 @@ export function store_jsonld(s: StoreSettings, locale: string) {
         ...(DEMO_MODE ? {} : { legalName: s.legal_name }),
         url: absolute_url(`/${locale}`),
         image: absolute_media("/api/og"),
-        logo: absolute_media("/logo_vertical.png"),
         ...(s.phone ? { telephone: s.phone } : {}),
         ...(s.email ? { email: s.email } : {}),
         ...(s.vat_id && !DEMO_MODE ? { vatID: s.vat_id } : {}),

@@ -2,6 +2,7 @@ import "server-only";
 
 import { DEFAULT_SETTINGS, get_settings } from "./settings";
 import { active_ref } from "./ref";
+import { demo_by_ref } from "./private_demos";
 import { DEMO_MODE } from "@/app/(site)/lib/demo";
 import { DEFAULT_BRAND } from "@/i18n/brand";
 import type { PublicStoreDetails, StoreSettings } from "@/types/settings";
@@ -16,6 +17,12 @@ export async function store_identity(): Promise<StoreSettings & { ref?: string }
     const settings = demo_safe(await get_settings());
     const ref = await active_ref();
     if (!ref) return settings;
+
+    // A private demo is a real seller: only their own Instagram, never the demo site's profiles or a made-up email.
+    const demo = await demo_by_ref(ref);
+    if (demo) {
+        return { ...settings, ref, store_name: ref, email: "", whatsapp: "", chrono24_url: "", ebay_url: "", instagram_url: demo.instagram ? `https://www.instagram.com/${demo.instagram}/` : "" };
+    }
 
     return { ...settings, ref, store_name: ref, email: `info@${ref.toLowerCase().replace(/[^a-z0-9]/g, "")}.com` };
 }

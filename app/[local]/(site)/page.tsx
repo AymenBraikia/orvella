@@ -8,6 +8,7 @@ import NewLoader from "../components/loaders/new";
 import HeroLoader from "../components/loaders/hero";
 import Sections from "../components/sections";
 import Trade from "../components/trade";
+import HomeLayout from "../components/home_layout";
 import { DEMO_MODE } from "./lib/demo";
 import { JsonLd, store_jsonld } from "./lib/structured_data";
 import { shown_contact, store_identity } from "@/app/server/store_identity";
@@ -27,28 +28,28 @@ async function jsonld_identity() {
 
 export default async function Home() {
     return (
-        <div className="flex-col flex-center w-dvw">
-            <JsonLd data={store_jsonld(await jsonld_identity(), await getLocale())} />
-            <Suspense fallback={<HeroLoader />}>
-                <Hero />
+        <HomeLayout
+            before={<JsonLd data={store_jsonld(await jsonld_identity(), await getLocale())} />}
+            hero={
+                <Suspense fallback={<HeroLoader />}>
+                    <Hero />
+                </Suspense>
+            }
+        >
+            <Suspense fallback={<></>}>
+                <Sections />
             </Suspense>
-
-            <div className="mt-[100dvh] flex-col flex-center w-dvw bg-background z-10">
-                <Suspense fallback={<></>}>
-                    <Sections />
-                </Suspense>
-                <Suspense fallback={<NewLoader />}>
-                    <New />
-                </Suspense>
-                <Suspense fallback={<></>}>
-                    <Inspired />
-                    <Iconic />
-                    <Trade />
-                    {/* <Services /> */}
-                    {/* The "Interested?" pitch to dealers belongs to the demo only */}
-                    {DEMO_MODE && <Booking />}
-                </Suspense>
-            </div>
-        </div>
+            <Suspense fallback={<NewLoader />}>
+                <New />
+            </Suspense>
+            <Suspense fallback={<></>}>
+                <Inspired />
+                <Iconic />
+                <Trade />
+                {/* <Services /> */}
+                {/* The "Interested?" pitch to dealers belongs to the demo only */}
+                {DEMO_MODE && <Booking />}
+            </Suspense>
+        </HomeLayout>
     );
 }

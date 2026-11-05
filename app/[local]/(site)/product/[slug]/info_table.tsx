@@ -105,7 +105,7 @@ function Displayed_Data({ item, tab, common, payments, product }: { item: Item; 
 
                     <Row label={common("filters.year")} value={watch.year ? String(watch.year) : ""} />
 
-                    <Row label={common("productCard.caseSize")} value={`${watch.caseDiameterMm} mm`} />
+                    <Row label={common("productCard.caseSize")} value={watch.caseDiameterMm ? `${watch.caseDiameterMm} mm` : ""} />
 
                     <Row label={common("productCard.movement")} value={watch.movement} />
 
@@ -117,7 +117,7 @@ function Displayed_Data({ item, tab, common, payments, product }: { item: Item; 
 
                     <Row label={common("productCard.condition")} value={watch.condition} />
 
-                    <Row label={common("filters.waterResistance")} value={`${watch.waterResistanceM} m`} />
+                    <Row label={common("filters.waterResistance")} value={watch.waterResistanceM ? `${watch.waterResistanceM} m` : ""} />
 
                     <Row label={product("scopeOfDelivery")} value={included ? `${included}.` : ""} />
                 </div>
@@ -185,8 +185,9 @@ function Displayed_Data({ item, tab, common, payments, product }: { item: Item; 
     }
 }
 
+/** Nothing for a detail that is not known (empty, or "UNVERIFIED" like in the shop filters). */
 function Row({ label, value }: { label: string; value: string }) {
-    if (!value) return null;
+    if (!value || value == "UNVERIFIED") return null;
 
     return (
         <div className="border-b border-b-secondary flex justify-between md:justify-start items-center py-2">

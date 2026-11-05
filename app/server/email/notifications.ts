@@ -312,7 +312,7 @@ export async function notify_enquiry(e: Enquiry) {
                         rows: [
                             ["Piece", e.item.name],
                             ["Reference", e.item.reference || "—"],
-                            ["Price", format_money(e.item.price, "EUR")],
+                            ["Price", e.item.price === undefined ? "—" : format_money(e.item.price, e.demo?.currency ?? "EUR")],
                             ["Customer", e.name],
                             ["Email", e.email],
                             ["Phone", e.phone || "—"],

@@ -90,11 +90,11 @@ function range_value(item: Item, facet: RangeFacet): number | undefined {
         case "price":
             return item.price;
         case "caseDiameterMm":
-            return isWatchOrSpare(item) ? item.caseDiameterMm : undefined;
+            return isWatchOrSpare(item) ? item.caseDiameterMm || undefined : undefined;
         case "year":
             return isWatchOrSpare(item) ? item.year || undefined : undefined;
         case "waterResistanceM":
-            return isWatchOrSpare(item) ? item.waterResistanceM : undefined;
+            return isWatchOrSpare(item) ? item.waterResistanceM || undefined : undefined;
         case "weightG":
             if (isWatchOrSpare(item) || !item.weight) return undefined;
             return one_decimal(item.measurement_unit === "ounces" ? item.weight * GRAMS_PER_TROY_OUNCE : item.weight);

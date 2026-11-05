@@ -12,7 +12,7 @@ import { MongoClient, type IndexDescription } from "mongodb";
 const DB_NAME = "orvella";
 
 const INDEXES: Record<string, IndexDescription[]> = {
-    items: [{ key: { slug: 1 }, unique: true }, { key: { type: 1, date_added: -1 } }, { key: { "reservations.until": 1 } }],
+    items: [{ key: { slug: 1 }, unique: true }, { key: { type: 1, date_added: -1 } }, { key: { "reservations.until": 1 } }, { key: { private_demo: 1 }, sparse: true }],
     orders: [{ key: { id: 1 }, unique: true }, { key: { paypal_order_id: 1 }, unique: true, sparse: true }, { key: { email: 1, created_at: -1 } }, { key: { status: 1, created_at: -1 } }],
     users: [{ key: { email: 1 }, unique: true }],
     // Guest carts disappear after 90 days without changes.
@@ -20,7 +20,10 @@ const INDEXES: Record<string, IndexDescription[]> = {
     sell: [{ key: { id: 1 } }, { key: { created_at: -1 } }],
     consignment: [{ key: { id: 1 } }, { key: { created_at: -1 } }],
     appointment: [{ key: { id: 1 } }, { key: { date: 1 } }],
-    enquiries: [{ key: { id: 1 } }, { key: { status: 1, created_at: -1 } }],
+    enquiries: [{ key: { id: 1 } }, { key: { status: 1, created_at: -1 } }, { key: { "demo.id": 1 }, sparse: true }],
+    // Private demos: one demo per address; photos are looked up and deleted by demo.
+    private_demos: [{ key: { slug: 1 }, unique: true }, { key: { id: 1 }, unique: true }],
+    private_demo_photos: [{ key: { demo_id: 1 } }],
     // Rate-limit counters (app/server/rate_limit.ts) and password reset tokens expire on their own.
     rate_limits: [{ key: { expires_at: 1 }, expireAfterSeconds: 0 }],
     password_resets: [{ key: { expires_at: 1 }, expireAfterSeconds: 0 }, { key: { token_hash: 1 }, unique: true }],

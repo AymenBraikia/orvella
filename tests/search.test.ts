@@ -18,7 +18,7 @@ vi.mock("@/app/(site)/lib/demo", () => ({
 }));
 vi.mock("next/headers", () => ({ cookies: async () => ({ get: (name: string) => (state.cookies.has(name) ? { value: state.cookies.get(name) } : undefined) }) }));
 vi.mock("next/cache", () => ({ unstable_cache: <T,>(fn: T) => fn, revalidateTag: () => {} }));
-vi.mock("../app/db/collections", () => ({ items_collection: async () => items }));
+vi.mock("../app/db/collections", () => ({ items_collection: async () => items, private_demos_collection: async () => client.db("orvella_test").collection("private_demos") }));
 
 const { GET } = await import("@/app/api/search/route");
 const { default: get_brand } = await import("@/app/(site)/brand/get_brand");
@@ -43,6 +43,7 @@ beforeEach(async () => {
     state.demo = false;
     state.cookies.clear();
     await items.deleteMany({});
+    await client.db("orvella_test").collection("private_demos").deleteMany({});
     await items.insertMany([watch("public-1"), watch("removed", { deleted: true }), watch("preview-1", { preview: "Fake Watches" })]);
 });
 
@@ -93,5 +94,13 @@ describe("brand pages", () => {
         state.demo = true;
         state.cookies.set("ref", "Fake Watches");
         expect(await brand_slugs()).toEqual(["preview-1", "public-1"]);
+    });
+
+    it("show a private demo's visitor only the seller's pieces, in search too", async () => {
+        await client.db("orvella_test").collection("private_demos").insertOne({ id: "d1", name: "Fake Watches", enabled: true });
+        state.demo = true;
+        state.cookies.set("ref", "Fake Watches");
+        expect(await brand_slugs()).toEqual(["preview-1"]);
+        expect(await found("daytona")).toEqual(["preview-1"]);
     });
 });
