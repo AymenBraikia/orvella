@@ -15,6 +15,7 @@ import { shown_contact, store_identity } from "@/app/server/store_identity";
 import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { site_metadata } from "./lib/site_metadata";
+import { current_demo, demo_brands } from "@/app/server/storefront";
 
 // Pitch links (?ref=) are shared here, so the preview shows the dealer's name.
 export async function generateMetadata({ params, searchParams }: PageProps<"/[local]">): Promise<Metadata> {
@@ -27,28 +28,36 @@ async function jsonld_identity() {
 }
 
 export default async function Home() {
+    // A lead demo (/<locale>/<demo>) has every section, with its own identity and stock: its
+    // collections as the categories, its watches and its brands. The store's structured data
+    // describes the store.
+    const demo = current_demo();
+
     return (
         <HomeLayout
-            before={<JsonLd data={store_jsonld(await jsonld_identity(), await getLocale())} />}
+            before={demo ? undefined : <JsonLd data={store_jsonld(await jsonld_identity(), await getLocale())} />}
             hero={
                 <Suspense fallback={<HeroLoader />}>
                     <Hero />
                 </Suspense>
             }
         >
-            <Suspense fallback={<></>}>
-                <Sections />
-            </Suspense>
+            {(!demo || demo.collections) && (
+                <Suspense fallback={<></>}>
+                    <Sections />
+                </Suspense>
+            )}
             <Suspense fallback={<NewLoader />}>
                 <New />
             </Suspense>
             <Suspense fallback={<></>}>
                 <Inspired />
-                <Iconic />
+                {/* A lead demo: only the seller's brands, with their photos. */}
+                {demo ? <Iconic brands={demo_brands(demo)} subtext={demo.brands_subtext} /> : <Iconic />}
                 <Trade />
                 {/* <Services /> */}
-                {/* The "Interested?" pitch to dealers belongs to the demo only */}
-                {DEMO_MODE && <Booking />}
+                {/* The "Interested?" pitch to dealers belongs to the demo site only (not a lead's store) */}
+                {DEMO_MODE && !demo && <Booking />}
             </Suspense>
         </HomeLayout>
     );

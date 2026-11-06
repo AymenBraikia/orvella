@@ -3,6 +3,7 @@ import { items_collection } from "@/app/db/collections";
 import { Item } from "@/types/item";
 import { to_public_item } from "../../lib/stock";
 import { escape_regex } from "../../lib/escape_regex";
+import { current_demo, localize_item } from "@/app/server/storefront";
 
 async function query_product(slug: string): Promise<Item | null> {
     const items = await items_collection();
@@ -22,5 +23,8 @@ const get_cached_product = (slug: string) =>
 /** The product as the storefront may see it (stock resolved, reservations removed). */
 export default async function get_product(slug: string): Promise<Item | null> {
     const data = await get_cached_product(slug);
+    // A lead demo (/<locale>/<demo>) only has its own products.
+    const demo = current_demo();
+    if (demo) return data?.preview === demo.name ? localize_item(demo, to_public_item(data)) : null;
     return data ? to_public_item(data) : null;
 }

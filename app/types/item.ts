@@ -30,6 +30,8 @@ export interface BaseItem {
     preview?: string;
     /** Set on the products of a private demo (app/server/private_demos.ts), which they follow. */
     private_demo?: string;
+    /** A lead demo's collection (demos/<slug>.json): a shop filter. */
+    collection?: string;
 
     /** Units free to sell (not counting reserved ones). 1 for unique pieces. Missing on legacy documents. */
     quantity?: number;

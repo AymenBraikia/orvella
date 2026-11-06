@@ -1,6 +1,7 @@
 import Item_Display from "./item_display";
 
 import Link from "next/link";
+import { server_href } from "@/app/server/storefront";
 
 import { format_cart_money } from "../lib/price_format";
 import { build_quote, get_exchange_rate, shipping_for_country } from "@/app/server/checkout";
@@ -63,7 +64,7 @@ export default async function Items() {
 
                             <p className="text-sm text-secondary">
                                 {t("moreAbout")}{" "}
-                                <Link href="/info/payments" className="underline text-foreground">
+                                <Link href={server_href("/info/payments")} className="underline text-foreground">
                                     {t("shipping")}
                                 </Link>
                             </p>
@@ -88,7 +89,7 @@ export default async function Items() {
                         {tax.mode == "margin_scheme" && <p className="w-full text-end text-sm text-secondary -mt-6">{t_checkout("marginScheme")}</p>}
 
                         <div className="flex justify-between items-center w-full py-1">
-                            <Link href={"/checkout"} className="button3 text-primary bg-gold hover:bg-background hover:text-gold w-full flex-center text-xl">
+                            <Link href={server_href("/checkout")} className="button3 text-primary bg-gold hover:bg-background hover:text-gold w-full flex-center text-xl">
                                 {t("checkoutCta")}
                             </Link>
                         </div>

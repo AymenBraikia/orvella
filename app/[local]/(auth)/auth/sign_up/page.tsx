@@ -1,4 +1,5 @@
 "use client";
+import { useStorefront } from "@/app/(site)/context/storefrontContext";
 
 import { use, useState } from "react";
 import Link from "next/link";
@@ -10,6 +11,8 @@ import { useTranslations } from "next-intl";
 import Honeypot from "@/app/components/elements/honeypot";
 
 export default function SignUpPage({ searchParams }: { searchParams: Promise<{ redirect?: string; ref?: string; email?: string; order?: string; token?: string }> }) {
+    // Inside a lead demo, its own pages (the store's otherwise).
+    const { href } = useStorefront();
     const params = use(searchParams);
     const t = useTranslations("auth.signUp");
     const t2 = useTranslations("home");
@@ -36,7 +39,7 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
             const result = await Sign_up(formData);
 
             if (result.success) {
-                return router.push(result.redirect || "/");
+                return router.push(href(result.redirect || "/"));
             }
 
             setIsSubmitting(false);
@@ -50,7 +53,7 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
     return (
         <div className="relative w-full max-w-md flex-center flex-col gap-4 rounded-2xl border border-(--bg-primary) p-6 sm:p-10">
             <div className="flex-center">
-                <Link aria-label={"home"} href={"/"} className="w-fit text-gold font-primary text-2xl">
+                <Link aria-label={"home"} href={href("/")} className="w-fit text-gold font-primary text-2xl">
                     {t2("heroTitle")}
                 </Link>
             </div>
@@ -85,7 +88,7 @@ export default function SignUpPage({ searchParams }: { searchParams: Promise<{ r
 
             <p className="text-center text-sm text-secondary">
                 {t("alreadyHaveAccount")}{" "}
-                <Link href="/auth/log_in" className="font-medium text-primary underline underline-offset-2">
+                <Link href={href("/auth/log_in")} className="font-medium text-primary underline underline-offset-2">
                     {t("logIn")}
                 </Link>
             </p>

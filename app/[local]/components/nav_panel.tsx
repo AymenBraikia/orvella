@@ -31,7 +31,7 @@ export default function NavPanel({ ref, open, onClose, settings, sections, extra
                 open ? "translate-x-0" : "ltr:-translate-x-full rtl:translate-x-full"
             }`}
         >
-            <div className="flex flex-col h-7/10 md:h-6/10 gap-6">
+            <div className="flex flex-col h-7/10 md:h-6/10 gap-6 overflow-y-auto">
                 {settings}
 
                 {sections.map((section) => (

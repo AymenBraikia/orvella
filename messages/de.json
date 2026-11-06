@@ -67,6 +67,7 @@
         "twitterDescription": "Ihr Partner für hochwertige Luxusuhren. Entdecken Sie Rolex, Patek Philippe und Cartier und buchen Sie einen Termin mit unseren Experten."
     },
     "common": {
+        "priceOnRequest": "Preis auf Anfrage",
         "brand": "CORLANE",
         "watches": "Uhren",
         "rings": "Ringe",
@@ -135,6 +136,7 @@
             "consignment": "Kommission"
         },
         "filters": {
+            "collection": "Kollektion",
             "brands": "Marken",
             "movement": "Uhrwerk",
             "caseMaterial": "Gehäusematerial",

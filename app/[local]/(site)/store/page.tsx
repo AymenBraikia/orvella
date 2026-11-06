@@ -4,6 +4,7 @@ import Gallery from "./gallery";
 import { getTranslations } from "next-intl/server";
 import { shown_contact, store_identity } from "@/app/server/store_identity";
 import { WEEKDAYS } from "@/types/settings";
+import { current_demo, server_href } from "@/app/server/storefront";
 
 export default async function StorePage() {
     const t = await getTranslations("store");
@@ -19,7 +20,7 @@ export default async function StorePage() {
             <div className="w-full flex justify-between items-start flex-col-reverse lg:flex-col xl:flex-row gap-10 xl:gap-0">
                 <div className="w-full xl:w-[calc(50%-20px)]">
                     <div className="flex justify-center items-start flex-col gap-6 text-sm">
-                        <Link className="title6 underline" href={"/booking"}>
+                        <Link className="title6 underline" href={server_href("/booking")}>
                             {t("cta")}
                         </Link>
                         <p>{t("welcomeText")}</p>
@@ -42,6 +43,7 @@ export default async function StorePage() {
                                 )}
                             </div>
                         </div>
+                        {WEEKDAYS.some((day) => store.opening_hours[day]) && (
                         <div className="flex flex-col w-full lg:w-[calc(33%-25px)] xl:w-[calc(50%-30px)] gap-10">
                             <h5>{t("openingHoursHeading")}</h5>
                             <div className="flex justify-between items-center flex-col text-sm">
@@ -53,6 +55,7 @@ export default async function StorePage() {
                                 ))}
                             </div>
                         </div>
+                        )}
 
                         {(contact.phone || contact.email) && (
                             <div className="flex flex-col w-full lg:w-[calc(33%-25px)] xl:w-[calc(50%-30px)] gap-10">
@@ -65,7 +68,8 @@ export default async function StorePage() {
                         )}
                     </div>
                 </div>
-                <Gallery />
+                {/* The showroom photos are the store's own: not shown as a lead demo's. */}
+                {!current_demo() && <Gallery />}
             </div>
             {address && <Map store_name={store.store_name} address={address} />}
         </div>

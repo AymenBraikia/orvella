@@ -3,6 +3,7 @@ import getUser from "@/app/server/get_user";
 import { getLocale, getTranslations } from "next-intl/server";
 import Order_display from "./order_display";
 import Link from "next/link";
+import { server_href } from "@/app/server/storefront";
 import { order_by_token, orders_for_email } from "@/app/server/orders";
 import BankDetails, { transfer_deadline } from "./bank_details";
 import SingleOrder from "./single_order";
@@ -35,7 +36,7 @@ export default async function thank_you_page({ searchParams }: { searchParams: P
         return (
             <div className="font-secondary py-20 w-full flex-center flex-col gap-6 text-center px-4">
                 <h2>{t("notFound")}</h2>
-                <Link href="/shop" className="underline">
+                <Link href={server_href("/shop")} className="underline">
                     {t("browse")}
                 </Link>
             </div>

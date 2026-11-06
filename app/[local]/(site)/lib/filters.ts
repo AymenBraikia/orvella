@@ -5,7 +5,7 @@ import type { Bracelet, Jewelry, Necklace, Ring } from "@/types/jewelry";
 export type Item = Watch | Spare | Necklace | Ring | Bracelet;
 export type Bounds = { min: number; max: number };
 
-export const LIST_FACETS = ["brand", "gender", "condition", "movement", "caseMaterial", "braceletMaterial", "dialColor", "metal", "purity", "stones", "ringSize", "clasp"] as const;
+export const LIST_FACETS = ["collection", "brand", "gender", "condition", "movement", "caseMaterial", "braceletMaterial", "dialColor", "metal", "purity", "stones", "ringSize", "clasp"] as const;
 export type ListFacet = (typeof LIST_FACETS)[number];
 
 export const RANGE_FACETS = ["price", "caseDiameterMm", "year", "waterResistanceM", "weightG", "lengthCm", "bandWidthMm"] as const;
@@ -51,6 +51,9 @@ function purity(item: Jewelry): string | undefined {
 
 function raw_list_value(item: Item, facet: ListFacet): string | string[] | undefined {
     switch (facet) {
+        // Only a lead demo's pieces have one (demos/<slug>.json): the filter never shows in the main store.
+        case "collection":
+            return item.collection;
         case "brand":
             return isWatchOrSpare(item) ? item.brand : undefined;
         case "gender":
@@ -88,7 +91,8 @@ function list_values(item: Item, facet: ListFacet): string[] {
 function range_value(item: Item, facet: RangeFacet): number | undefined {
     switch (facet) {
         case "price":
-            return item.price;
+            // 0 is "price on request" (lead demos): no price to filter by.
+            return item.price || undefined;
         case "caseDiameterMm":
             return isWatchOrSpare(item) ? item.caseDiameterMm || undefined : undefined;
         case "year":

@@ -5,15 +5,15 @@ import type { Supported_Currencies } from "@/currency";
 export type DemoCategory = "watches" | "jewelry" | "mixed";
 /** What a piece is: one of the storefront's product types, so it appears on that category page. */
 export type DemoPieceKind = "watch" | "ring" | "bracelet" | "necklace";
-export type DemoLanguage = "en" | "fr";
+export type DemoLanguage = "en" | "fr" | "tr";
 
 export const DEMO_CATEGORIES: DemoCategory[] = ["watches", "jewelry", "mixed"];
 export const DEMO_PIECE_KINDS: DemoPieceKind[] = ["watch", "ring", "bracelet", "necklace"];
-export const DEMO_LANGUAGES: DemoLanguage[] = ["en", "fr"];
+export const DEMO_LANGUAGES: DemoLanguage[] = ["en", "fr", "tr"];
 export const DEMO_CURRENCIES = ["EUR", "USD", "GBP", "CHF", "CAD", "AUD", "HKD", "SGD", "JPY", "CNY"] as const satisfies readonly Supported_Currencies[];
 export type DemoCurrency = (typeof DEMO_CURRENCIES)[number];
 
-export const MAX_DEMO_PIECES = 6;
+export const MAX_DEMO_PIECES = 12;
 export const MAX_PIECE_PHOTOS = 8;
 
 /** One of the seller's pieces. It is shown as a storefront product (see demo_item in app/server/private_demos.ts). */
@@ -31,6 +31,8 @@ export interface DemoPiece {
     brand?: string;
     /** The storefront's product details, as far as they are known. Anything missing is not shown. */
     details?: DemoPieceDetails;
+    /** A collection of the seller's (a shop filter), e.g. from a lead demo config (demos/<slug>.json). */
+    collection?: string;
 }
 
 /** The same details a storefront product has (types/watch.ts, types/jewelry.ts), all optional. */
@@ -46,6 +48,9 @@ export interface DemoPieceDetails {
     braceletMaterial?: string;
     dialColor?: string;
     waterResistanceM?: number;
+    /** Scope of delivery. */
+    box?: boolean;
+    papers?: boolean;
     // Jewelry
     metal_type?: "Gold" | "White Gold" | "Silver" | "Platinum";
     karats?: number;

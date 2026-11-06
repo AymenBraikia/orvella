@@ -1,11 +1,8 @@
-import { client_messages } from "@/i18n/client_messages";
 import { site_metadata } from "@/app/(site)/lib/site_metadata";
 import type { Metadata } from "next";
 import { Open_Sans, Cormorant_Garamond, Lateef, Tajawal } from "next/font/google";
-import "../../globals.css";
-import { ThemeProvider } from "@/app/(site)/context/ThemeProvider";
-import { NextIntlClientProvider } from "next-intl";
 import { getDirection } from "@/i18n/direction";
+import AuthDocument from "@/app/components/auth_document";
 
 const tajawal = Tajawal({
     subsets: ["arabic"],
@@ -49,19 +46,11 @@ export default async function AuthLayout({
 }>) {
     const { local } = await params;
 
-    const direction = getDirection(local);
-
-    const fonts_classes = direction == "ltr" ? `${openSans.variable} ${cormorantGaramond.variable}` : `${lateef.variable} ${tajawal.variable}`;
+    const fonts = getDirection(local) == "ltr" ? `${openSans.variable} ${cormorantGaramond.variable}` : `${lateef.variable} ${tajawal.variable}`;
 
     return (
-        <html lang={local} dir={direction} className={`${fonts_classes} h-full antialiased`} suppressHydrationWarning>
-            <body className="font-sans">
-                <NextIntlClientProvider messages={await client_messages(["auth", "home", "common"])}>
-                    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-                        <div className="min-h-full flex-center flex-col max-w-dvw overflow-x-hidden p-4">{children}</div>
-                    </ThemeProvider>
-                </NextIntlClientProvider>
-            </body>
-        </html>
+        <AuthDocument local={local} fonts={fonts}>
+            {children}
+        </AuthDocument>
     );
 }

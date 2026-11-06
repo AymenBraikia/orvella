@@ -1,9 +1,13 @@
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 // Optional media for the /why page. Checked here because /public is not there at runtime on Vercel.
 const WHY_MEDIA = ["dashboard.mp4", "dashboard-poster.webp", "shot-overview.webp", "shot-order.webp", "shot-product.webp", "shot-lead.webp"];
+
+// Private lead demos (demos/<slug>.json, shown at /<locale>/<slug>): never indexed, pages and files alike.
+const LEAD_DEMOS = existsSync("demos") ? readdirSync("demos").filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -".json".length)) : [];
+const NO_INDEX = [{ key: "X-Robots-Tag", value: "noindex, nofollow" }];
 
 const nextConfig: NextConfig = {
     env: {
@@ -28,6 +32,12 @@ const nextConfig: NextConfig = {
             { source: "/:locale(en|de|es|ar|fr|tr|it)/info/polishing", destination: "/:locale/polish", permanent: true },
             { source: "/info/polishing", destination: "/polish", permanent: true },
         ];
+    },
+    async headers() {
+        return LEAD_DEMOS.flatMap((slug) => [
+            { source: `/:locale/${slug}/:path*`, headers: NO_INDEX },
+            { source: `/demos/${slug}/:path*`, headers: NO_INDEX },
+        ]);
     },
     experimental: {
         optimizeCss: true,

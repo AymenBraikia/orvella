@@ -8,6 +8,8 @@ import { Supported_Currencies } from "@/currency";
 import { cookies } from "next/headers";
 import { public_details, store_identity } from "@/app/server/store_identity";
 import load_rates from "@/app/server/update_currency_rates";
+import { current_storefront } from "@/app/server/storefront";
+import { StorefrontProvider } from "@/app/(site)/context/storefrontContext";
 
 export default async function AuthShell({ session, cart = [], children }: { session: UserData | undefined; cart?: User_Cart; children: React.ReactNode }) {
 
@@ -17,6 +19,8 @@ export default async function AuthShell({ session, cart = [], children }: { sess
         const store = public_details(identity);
         const rates = await load_rates();
     return (
+        // The store being shown (main store or a lead demo) for the client components: links, logo, cart.
+        <StorefrontProvider store={current_storefront()}>
         <CurrencyProvider currency={savedCurrency} rates={rates} charge_currency={identity.charge_currency}>
         <AuthProvider initialSession={session}>
             <CartProvider cart={cart}>
@@ -28,5 +32,6 @@ export default async function AuthShell({ session, cart = [], children }: { sess
             </CartProvider>
         </AuthProvider>
         </CurrencyProvider>
+        </StorefrontProvider>
     );
 }

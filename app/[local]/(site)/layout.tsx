@@ -1,17 +1,8 @@
-import { client_messages, SITE_CLIENT_NAMESPACES } from "@/i18n/client_messages";
-import AuthGate from "@/app/components/AuthGate";
-
 import { site_metadata } from "@/app/(site)/lib/site_metadata";
 import type { Metadata, Viewport } from "next";
 import { Open_Sans, Gelasio, Cormorant_Garamond, Tajawal, Lateef } from "next/font/google";
-import "../globals.css";
-
-import { ThemeProvider } from "@/app/(site)/context/ThemeProvider";
-import { NextIntlClientProvider } from "next-intl";
-
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getDirection } from "@/i18n/direction";
+import StoreDocument from "@/app/components/store_document";
 
 const tajawal = Tajawal({
     subsets: ["arabic"],
@@ -69,23 +60,11 @@ export default async function RootLayout({
 }>) {
     const { local } = await params;
 
-    const direction = getDirection(local);
-
-    const fonts_classes = direction == "ltr" ? `${openSans.variable} ${gelasio.variable} ${cormorantGaramond.variable}` : `${lateef.variable} ${tajawal.variable}`;
+    const fonts = getDirection(local) == "ltr" ? `${openSans.variable} ${gelasio.variable} ${cormorantGaramond.variable}` : `${lateef.variable} ${tajawal.variable}`;
 
     return (
-        <html lang={local} dir={direction} className={`${fonts_classes} h-full antialiased`} suppressHydrationWarning>
-            <body className="font-sans">
-                <Analytics />
-                <SpeedInsights />
-
-                <NextIntlClientProvider messages={await client_messages(SITE_CLIENT_NAMESPACES)}>
-                    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-                        {/* Rendered once: a Suspense fallback here used to render the whole page twice and swap it (layout shift). */}
-                        <AuthGate>{children}</AuthGate>
-                    </ThemeProvider>
-                </NextIntlClientProvider>
-            </body>
-        </html>
+        <StoreDocument local={local} fonts={fonts}>
+            {children}
+        </StoreDocument>
     );
 }

@@ -19,15 +19,19 @@ export default async function ImprintPage() {
                 </p>
                 <p>{store.address.country}</p>
 
-                <div className="flex-center gap-2">
-                    <p className="font-bold">{t("phoneLabel")}</p>
-                    {store.phone}
-                </div>
+                {store.phone && (
+                    <div className="flex-center gap-2">
+                        <p className="font-bold">{t("phoneLabel")}</p>
+                        {store.phone}
+                    </div>
+                )}
 
-                <div className="flex-center gap-2">
-                    <p className="font-bold">{t("emailLabel")}</p>
-                    {store.email}
-                </div>
+                {store.email && (
+                    <div className="flex-center gap-2">
+                        <p className="font-bold">{t("emailLabel")}</p>
+                        {store.email}
+                    </div>
+                )}
 
                 {store.vat_id && (
                     <div className="flex-center gap-2">
@@ -43,10 +47,12 @@ export default async function ImprintPage() {
                     </div>
                 )}
 
-                <div className="flex-center gap-2">
-                    <p className="font-bold">{t("representativesLabel")}</p>
-                    {store.representative}
-                </div>
+                {store.representative && (
+                    <div className="flex-center gap-2">
+                        <p className="font-bold">{t("representativesLabel")}</p>
+                        {store.representative}
+                    </div>
+                )}
 
                 <br />
 

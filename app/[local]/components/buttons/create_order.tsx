@@ -1,4 +1,5 @@
 "use client";
+import { useStorefront } from "@/app/(site)/context/storefrontContext";
 
 import create_order from "@/app/server/create_order";
 import { useTranslations } from "next-intl";
@@ -9,6 +10,7 @@ export default function CreateOrderBtn({ ready }: { ready: boolean }) {
     const t = useTranslations("checkout");
     const t_errors = useTranslations("checkout.errors");
     const router = useRouter();
+    const { href } = useStorefront();
 
     const [placing, set_placing] = useState(false);
     const [error, set_error] = useState<string | null>(null);
@@ -23,7 +25,7 @@ export default function CreateOrderBtn({ ready }: { ready: boolean }) {
 
         const result = await create_order();
 
-        if ("redirect" in result) return router.push(result.redirect);
+        if ("redirect" in result) return router.push(href(result.redirect));
 
         set_placing(false);
         set_error(t_errors(result.error, { items: result.items?.join(", ") ?? "" }));

@@ -5,6 +5,7 @@ import { brand_name } from "../../lib/brand_name";
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { useStorefront } from "../../context/storefrontContext";
 
 export default function InfoTable({ item }: { item: Item }) {
     const [tab, set_tab] = useState<0 | 1 | 2 | 3>(0);
@@ -12,6 +13,9 @@ export default function InfoTable({ item }: { item: Item }) {
     const common = useTranslations("common");
     const payments = useTranslations("payments");
     const product = useTranslations("product");
+    // Shipping, payment and consignment describe the store's own terms: a lead demo has only the details.
+    const { has } = useStorefront();
+    const terms = has("/info/payments");
 
     return (
         <div className="w-full flex-col flex mt-2 font-sans">
@@ -24,6 +28,7 @@ export default function InfoTable({ item }: { item: Item }) {
                     {common("productCard.details")}
                 </button>
 
+                {terms && (
                 <button
                     type="button"
                     className={`sm:w-full w-1/2 border-b text-xs sm:text-base px-2 py-4 sm:px-4 sm:py-4 ${tab == 1 ? "button brightness-100 border-b-foreground" : "button2 brightness-80 border-b-transparent"} transition-default`}
@@ -31,7 +36,9 @@ export default function InfoTable({ item }: { item: Item }) {
                 >
                     {payments("shippingHeading")}
                 </button>
+                )}
 
+                {terms && (
                 <button
                     type="button"
                     className={`sm:w-full w-1/2 border-b text-xs sm:text-base px-2 py-4 sm:px-4 sm:py-4 ${tab == 2 ? "button brightness-100 border-b-foreground" : "button2 brightness-80 border-b-transparent"} transition-default`}
@@ -39,8 +46,9 @@ export default function InfoTable({ item }: { item: Item }) {
                 >
                     {payments("paymentsHeading")}
                 </button>
+                )}
 
-                {item.type == "watch" || item.type == "spare" ? (
+                {(item.type == "watch" || item.type == "spare") && has("/sell") ? (
                     <button
                         type="button"
                         className={`sm:w-full w-1/2 border-b text-xs sm:text-base px-2 py-4 sm:px-4 sm:py-4 ${tab == 3 ? "button brightness-100 border-b-foreground" : "button2 brightness-80 border-b-transparent"} transition-default`}
@@ -59,6 +67,7 @@ export default function InfoTable({ item }: { item: Item }) {
 }
 
 function Displayed_Data({ item, tab, common, payments, product }: { item: Item; tab: 0 | 1 | 2 | 3; common: ReturnType<typeof useTranslations>; payments: ReturnType<typeof useTranslations>; product: ReturnType<typeof useTranslations> }) {
+    const { href } = useStorefront();
     switch (tab) {
         case 0: {
             if (item.type != "watch" && item.type != "spare") {
@@ -128,7 +137,7 @@ function Displayed_Data({ item, tab, common, payments, product }: { item: Item; 
             return (
                 <div className="w-full py-4">
                     {product("shippingText")} <br /> <br />
-                    <Link href="/info/payments" className="underline">
+                    <Link href={href("/info/payments")} className="underline">
                         {product("learnMoreShipping")} {product("here")}
                     </Link>
                     .
@@ -173,7 +182,7 @@ function Displayed_Data({ item, tab, common, payments, product }: { item: Item; 
             return (
                 <div className="w-full py-4">
                     {product("consignmentBeforeLink")}{" "}
-                    <Link href="/sell" className="underline">
+                    <Link href={href("/sell")} className="underline">
                         {common("buttons.sellYourWatch")}
                     </Link>{" "}
                     {product("consignmentAfterLink")}

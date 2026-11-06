@@ -1,4 +1,5 @@
 "use client";
+import { useStorefront } from "@/app/(site)/context/storefrontContext";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -7,6 +8,8 @@ import Input from "@/app/components/elements/input";
 import { request_password_reset } from "../actions/password_reset";
 
 export default function ForgotPasswordPage() {
+    // Inside a lead demo, its own pages (the store's otherwise).
+    const { href } = useStorefront();
     const t = useTranslations("auth.forgot");
     const t_errors = useTranslations("auth.errors");
     const t_home = useTranslations("home");
@@ -28,7 +31,7 @@ export default function ForgotPasswordPage() {
 
     return (
         <div className="relative w-full max-w-md flex-center flex-col gap-4 rounded-2xl border border-(--bg-primary) p-6 sm:p-10">
-            <Link aria-label="home" href="/" className="w-fit text-gold font-primary text-2xl">
+            <Link aria-label="home" href={href("/")} className="w-fit text-gold font-primary text-2xl">
                 {t_home("heroTitle")}
             </Link>
 
@@ -55,7 +58,7 @@ export default function ForgotPasswordPage() {
                 </>
             )}
 
-            <Link href="/auth/log_in" className="text-sm underline text-secondary">
+            <Link href={href("/auth/log_in")} className="text-sm underline text-secondary">
                 {t("back")}
             </Link>
         </div>

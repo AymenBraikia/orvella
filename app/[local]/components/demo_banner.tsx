@@ -4,6 +4,7 @@ import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { DEMO_MODE } from "../(site)/lib/demo";
+import { useStorefront } from "../(site)/context/storefrontContext";
 
 const KEY = "demo-banner-dismissed";
 const listeners = new Set<() => void>();
@@ -16,8 +17,16 @@ function read(): boolean {
     }
 }
 
-/** Thin "this is a demo" strip above the header, only in DEMO_MODE; dismissible per browser. */
+const STRIP = "w-full h-fit text-xs font-secondary bg-primary text-secondary sm:p-2 p-1 flex-center gap-3 tracking-wider";
+
+/**
+ * Thin "this is a demo" strip above the header, only in DEMO_MODE; dismissible per browser. A lead
+ * demo shows its private-demo label instead, always.
+ */
 export default function DemoBanner() {
+    const { demo } = useStorefront();
+    if (demo) return <p className={`${STRIP} text-center`}>{demo.label}</p>;
+
     // The "demo" messages only reach the browser on the demo.
     return DEMO_MODE ? <Banner /> : null;
 }
@@ -45,7 +54,7 @@ function Banner() {
     }
 
     return (
-        <div className="w-full h-fit text-xs font-secondary bg-primary text-secondary sm:p-2 p-1 flex-center gap-3 tracking-wider">
+        <div className={STRIP}>
             <p>{t("banner")}</p>
             <Link href="/why" className="underline text-gold">
                 {t("learnMore")}

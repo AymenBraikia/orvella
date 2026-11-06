@@ -48,3 +48,4 @@ next-env.d.ts
 # files uploaded in development without Vercel Blob
 /public/dev-uploads
 .env*
+*.bat

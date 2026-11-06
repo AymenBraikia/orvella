@@ -67,6 +67,7 @@
         "twitterDescription": "Votre partenaire pour les montres haut de gamme. Découvrez Rolex, Patek Philippe et Cartier, et prenez rendez-vous avec nos experts."
     },
     "common": {
+        "priceOnRequest": "Prix sur demande",
         "brand": "CORLANE",
         "watches": "montres",
         "rings": "bagues",
@@ -135,6 +136,7 @@
             "consignment": "Dépôt-vente"
         },
         "filters": {
+            "collection": "Collection",
             "brands": "Marques",
             "movement": "Mouvement",
             "caseMaterial": "Matériau du boîtier",

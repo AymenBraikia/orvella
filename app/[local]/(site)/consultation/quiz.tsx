@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { useStorefront } from "../context/storefrontContext";
 import { useCurrency } from "../context/currencyContext";
 import { format_price } from "../lib/price_format";
 
@@ -24,6 +25,7 @@ const BUDGETS: Record<string, [number, number] | null> = {
 export default function Quiz() {
     const t = useTranslations("consultation");
     const router = useRouter();
+    const { href, has } = useStorefront();
     const currency = useCurrency();
     const [step, set_step] = useState(0);
     const [answers, set_answers] = useState<Answers>({});
@@ -74,7 +76,9 @@ export default function Quiz() {
         if (range) params.set("price", `${range[0]}-${range[1]}`);
 
         params.set("from", "quiz");
-        router.push(`/${final.category ?? "shop"}?${params}`);
+        // A lead demo only has its own stock (no jewelry pages): its shop, under its address.
+        const page = `/${final.category ?? "shop"}`;
+        router.push(href(`${has(page) ? page : "/shop"}?${params}`));
     }
 
     function choose(value: string) {

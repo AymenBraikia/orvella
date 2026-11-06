@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { server_href } from "@/app/server/storefront";
 import { getTranslations } from "next-intl/server";
 import { format_money } from "../lib/price_format";
 import TotalsBreakdown from "../checkout/totals";
@@ -51,7 +52,7 @@ export default async function SingleOrder({ order, offer_account }: { order: Ord
                         <div key={item.slug} className="flex items-center gap-4 border-b border-secondary/30 pb-4">
                             <div className="relative w-20 h-20 shrink-0 bg-primary">{item.image && <Image src={item.image} alt={item.name} fill sizes="80px" className="object-cover" />}</div>
                             <div className="flex-1 min-w-0">
-                                <Link href={`/product/${item.slug}`} className="font-secondary text-lg capitalize hover:underline">
+                                <Link href={server_href(`/product/${item.slug}`)} className="font-secondary text-lg capitalize hover:underline">
                                     {item.name}
                                 </Link>
                                 {item.reference && <p className="text-xs text-secondary">Ref. {item.reference}</p>}
@@ -78,7 +79,7 @@ export default async function SingleOrder({ order, offer_account }: { order: Ord
                     <h4 className="font-secondary">{t("createAccount.heading")}</h4>
                     <p className="text-sm text-secondary">{t("createAccount.text")}</p>
                     <Link
-                        href={`/auth/sign_up?email=${encodeURIComponent(order.email)}&order=${encodeURIComponent(order.id)}&token=${order.access_token}&redirect=${encodeURIComponent("/thank_you")}`}
+                        href={server_href(`/auth/sign_up?email=${encodeURIComponent(order.email)}&order=${encodeURIComponent(order.id)}&token=${order.access_token}&redirect=${encodeURIComponent(server_href("/thank_you"))}`)}
                         className="button3 bg-gold text-primary w-fit px-6! py-3!"
                     >
                         {t("createAccount.cta")}

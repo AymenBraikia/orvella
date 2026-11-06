@@ -67,6 +67,7 @@
         "twitterDescription": "Your partner for high-end watches. Explore Rolex, Patek Philippe, Cartier, and book expert appointments."
     },
     "common": {
+        "priceOnRequest": "Price on request",
         "brand": "CORLANE",
         "watches": "Watches",
         "rings": "Rings",
@@ -135,6 +136,7 @@
             "consignment": "Consignment"
         },
         "filters": {
+            "collection": "Collection",
             "brands": "Brands",
             "movement": "Movement",
             "caseMaterial": "Case Material",

@@ -1,4 +1,5 @@
 "use client";
+import { useStorefront } from "@/app/(site)/context/storefrontContext";
 
 import { capture_order } from "@/app/paypal/capture_order";
 import { cancel_paypal_order, create_order } from "@/app/paypal/create_order";
@@ -24,6 +25,7 @@ export default function PayPal_Btn({ disabled, currency }: { disabled: boolean; 
 
 function PayPal_Btn_Inner({ disabled, currency }: { disabled: boolean; currency: Supported_Currencies }) {
     const router = useRouter();
+    const { href } = useStorefront();
     const t = useTranslations("checkout.errors");
     const [error, set_error] = useState<string | null>(null);
 
@@ -75,7 +77,7 @@ function PayPal_Btn_Inner({ disabled, currency }: { disabled: boolean; currency:
                 onApprove={async (data: { orderID: string }) => {
                     const result = await capture_order(data);
 
-                    if ("redirect" in result) return router.push(result.redirect);
+                    if ("redirect" in result) return router.push(href(result.redirect));
 
                     set_error(t(result.error, { items: "" }));
                     router.refresh();

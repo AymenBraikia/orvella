@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import { useStorefront } from "@/app/(site)/context/storefrontContext";
 
 import Cross from "./svg/cross";
 import Info from "./svg/info";
@@ -27,6 +28,7 @@ export default function Cart_drawer({ dispatch, ui, ref }: { ref: RefObject<HTML
     const [view, set_view] = useState<null | Watch>(null);
 
     const currency = useCurrency();
+    const { href } = useStorefront();
 
     return (
         <div
@@ -67,10 +69,10 @@ export default function Cart_drawer({ dispatch, ui, ref }: { ref: RefObject<HTML
                             <p className="sm:title5 title6 text-gold font-secondary">{t("subtotal")}</p>
                             <p className="sm:title5 title6">{format_price(subtotal, currency)}</p>
                         </div>
-                        <Link aria-label={t("viewCart")} onClick={() => dispatch({ type: "CLOSE_CART" })} className="w-full button px-2 py-4 md:p-auto flex-center title6" href="/cart">
+                        <Link aria-label={t("viewCart")} onClick={() => dispatch({ type: "CLOSE_CART" })} className="w-full button px-2 py-4 md:p-auto flex-center title6" href={href("/cart")}>
                             {t("viewCart")}
                         </Link>
-                        <Link aria-label={t("checkoutCta")} onClick={() => dispatch({ type: "CLOSE_CART" })} className="w-full button3 bg-gold hover:bg-background hover:text-gold px-2 py-4 md:p-auto flex-center title6" href="/checkout">
+                        <Link aria-label={t("checkoutCta")} onClick={() => dispatch({ type: "CLOSE_CART" })} className="w-full button3 bg-gold hover:bg-background hover:text-gold px-2 py-4 md:p-auto flex-center title6" href={href("/checkout")}>
                             {t("checkoutCta")}
                         </Link>
                     </div>

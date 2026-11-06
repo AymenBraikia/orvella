@@ -4,6 +4,7 @@ import { verifyJwt } from "@/app/(auth)/auth/jwt";
 import { DEMO_MODE } from "@/app/(site)/lib/demo";
 import { invalidate_items } from "@/app/server/inventory";
 import { demo_item_slugs, find_demo, is_counted_visit, is_person, mark_demo_fresh, record_demo_view } from "@/app/server/private_demos";
+import { load_demo } from "@/app/server/storefront";
 
 const MONTH = 60 * 60 * 24 * 30;
 const NO_INDEX = { "X-Robots-Tag": "noindex, nofollow", "Cache-Control": "private, no-store" };
@@ -15,8 +16,14 @@ const NO_INDEX = { "X-Robots-Tag": "noindex, nofollow", "Cache-Control": "privat
  * keep no cookies, so they get ?ref= in the URL instead, which the home page's metadata reads.
  */
 export async function GET(request: NextRequest, ctx: RouteContext<"/api/demo-open/[slug]">): Promise<Response> {
+    const slug = (await ctx.params).slug;
+
+    // A demo kept as a config file (demos/<slug>.json) lives at its own address: just go there, no cookies.
+    const lead = await load_demo(slug);
+    if (lead) return NextResponse.redirect(new URL(`/${lead.locale}/${lead.slug}`, request.url), { status: 307, headers: NO_INDEX });
+
     // Demos belong to the Corlane demo site; a dealer's own shop ignores ?ref= altogether.
-    const demo = DEMO_MODE ? await find_demo((await ctx.params).slug) : null;
+    const demo = DEMO_MODE ? await find_demo(slug) : null;
     if (!demo) return new Response("Page not found", { status: 404, headers: { ...NO_INDEX, "Content-Type": "text/plain; charset=utf-8" } });
 
     // Pieces saved by the CLI script are not in the store's caches yet.

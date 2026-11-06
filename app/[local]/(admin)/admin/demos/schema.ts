@@ -25,6 +25,8 @@ const details_schema = z.object({
     braceletMaterial: text(80),
     dialColor: text(80),
     waterResistanceM: number(1, 12000),
+    box: z.boolean().optional(),
+    papers: z.boolean().optional(),
     metal_type: z.enum(["Gold", "White Gold", "Silver", "Platinum"]).optional(),
     karats: number(8, 24),
     stones: z.array(z.string().trim().min(1).max(80)).max(10).optional(),
@@ -47,6 +49,7 @@ const piece_schema = z.object({
         .transform((brand) => brand || undefined)
         .optional(),
     details: details_schema.optional(),
+    collection: text(40),
 });
 
 /** "@dn.watches", "instagram.com/dn.watches/" or "dn.watches" → "dn.watches". */

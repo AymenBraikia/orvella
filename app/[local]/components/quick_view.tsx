@@ -7,7 +7,8 @@ import { ZoomableImage } from "./elements/zoomableImage";
 import AtcBtn from "./buttons/addToCart";
 
 import Cross from "./svg/cross";
-import { format_price } from "../(site)/lib/price_format";
+import { item_price } from "../(site)/lib/price_format";
+import { useStorefront } from "../(site)/context/storefrontContext";
 import increase_relevance_score from "@/app/server/increase_relevance_score";
 import score_rewards from "../(site)/lib/relevance_score";
 import Link from "next/link";
@@ -25,16 +26,18 @@ interface QuickViewProps {
 export default function QuickViewModal({ view, onClose }: QuickViewProps) {
     const t = useTranslations("common");
     const currency = useCurrency();
+    const { demo, href } = useStorefront();
 
     const mounted = useMounted();
     const scored = useRef<string | null>(null);
 
     useEffect(() => {
-        if (view && scored.current !== view.slug) {
+        // A lead demo's pieces are not in the catalogue: nothing to score.
+        if (view && !demo && scored.current !== view.slug) {
             scored.current = view.slug;
             increase_relevance_score(view.slug, score_rewards.quick_view);
         }
-    }, [view]);
+    }, [view, demo]);
 
     if (!view || !mounted) return null;
 
@@ -69,7 +72,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                             <p className="hidden sm:block font-semibold tracking-tight capitalize text-2xl sm:text-3xl lg:text-4xl">{brand_name(view.brand)}</p>
                             <p className="hidden sm:block tracking-wide capitalize text-secondary text-lg sm:text-xl lg:text-2xl">{view.model}</p>
 
-                            <p className="font-medium tracking-wide text-base sm:text-2xl">{format_price(view.price, currency)}</p>
+                            <p className="font-medium tracking-wide text-base sm:text-2xl">{item_price(view.price, currency, t("priceOnRequest"))}</p>
 
                             <div className="hidden md:flex flex-col gap-2 leading-relaxed tracking-wide text-sm text-secondary">
                                 {(view.movement as string) != "UNVERIFIED" && (
@@ -115,7 +118,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                             <div className="w-full">
                                 <AtcBtn slug={view.slug} status={view.stock_status} />
                             </div>
-                            <Link href={"/product/" + view.slug} className="w-full button2 flex-center">
+                            <Link href={href("/product/" + view.slug)} className="w-full button2 flex-center">
                                 {t("productCard.details")}
                             </Link>
                         </div>
@@ -151,7 +154,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
 
                             <p className="hidden sm:block font-semibold tracking-tight capitalize text-2xl sm:text-3xl lg:text-4xl">{view.display_name}</p>
 
-                            <p className="font-medium tracking-wide text-base sm:text-2xl text-gold">{format_price(view.price, currency)}</p>
+                            <p className="font-medium tracking-wide text-base sm:text-2xl text-gold">{item_price(view.price, currency, t("priceOnRequest"))}</p>
 
                             <div className="hidden md:flex flex-col gap-2 leading-relaxed tracking-wide text-sm text-primary capitalize">
                                 <p className={`${view.metal_type ? "block" : "hidden"}`}>
@@ -190,7 +193,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                             <div className="w-full">
                                 <AtcBtn slug={view.slug} status={view.stock_status} />
                             </div>
-                            <Link href={"/product/" + view.slug} className="w-full button2 flex-center">
+                            <Link href={href("/product/" + view.slug)} className="w-full button2 flex-center">
                                 {t("productCard.details")}
                             </Link>
                         </div>

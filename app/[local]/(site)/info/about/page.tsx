@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { store_identity } from "@/app/server/store_identity";
+import { server_href } from "@/app/server/storefront";
 
 export default async function AboutPage() {
     const t = await getTranslations("about");
@@ -37,11 +38,11 @@ export default async function AboutPage() {
                 )}
 
                 <div className="flex flex-col gap-4">
-                    <Link href="/sell" className="underline">
+                    <Link href={server_href("/sell")} className="underline">
                         {t("sellCta")}
                     </Link>
 
-                    <Link href="/sell" className="underline">
+                    <Link href={server_href("/sell")} className="underline">
                         {t("consignmentCta")}
                     </Link>
                 </div>

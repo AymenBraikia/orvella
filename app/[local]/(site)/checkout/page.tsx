@@ -4,6 +4,7 @@ import Order_list from "./order_list";
 import StripeCancelled from "./stripe_cancelled";
 import { get_checkout_customer } from "@/app/server/cart";
 import Link from "next/link";
+import { server_href } from "@/app/server/storefront";
 import { getTranslations } from "next-intl/server";
 
 export default async function checkoutPage({ searchParams }: { searchParams: Promise<{ stripe_cancelled?: string }> }) {
@@ -26,7 +27,7 @@ export default async function checkoutPage({ searchParams }: { searchParams: Pro
             {!customer?.cart.length ? (
                 <div className="flex-center w-full h-100 flex-col gap-4 font-secondary text-center px-4">
                     <h1>{t("heading")}</h1>
-                    <Link className="text-2xl underline" href={"/shop"}>
+                    <Link className="text-2xl underline" href={server_href("/shop")}>
                         {cart("emptyCta")}
                     </Link>
                 </div>

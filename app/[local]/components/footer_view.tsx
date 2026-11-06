@@ -1,18 +1,42 @@
+import Image from "next/image";
 import Link from "next/link";
 
 /**
- * The footer layout: the store name with its details on the start side, link columns (`children`)
- * next to it and a bottom row.
+ * The footer layout: the store name (or a lead demo's wide logo) with its details on the start
+ * side, link columns (`children`) next to it and a bottom row.
  */
-export default function FooterView({ name, home_href = "/", details, children, bottom }: { name: string; home_href?: string; details?: React.ReactNode; children?: React.ReactNode; bottom?: React.ReactNode }) {
+export default function FooterView({
+    name,
+    logo,
+    home_href = "/",
+    compact = false,
+    details,
+    children,
+    bottom,
+}: {
+    name: string;
+    logo?: { src: string; width: number; height: number };
+    home_href?: string;
+    /** Sized to its content instead of the store's fixed height (a lead demo has fewer details and links). */
+    compact?: boolean;
+    details?: React.ReactNode;
+    children?: React.ReactNode;
+    bottom?: React.ReactNode;
+}) {
     return (
         <footer className="w-full py-8 md:px-15 lg:px-20 px-4 flex-center flex-col bg-background font-bold z-30">
-            <section className="w-full lg:h-75 lg:flex-row flex-col flex justify-between lg:items-center items-start">
+            <section className={`w-full ${compact ? "lg:items-start lg:pb-8" : "lg:h-75 lg:items-center"} lg:flex-row flex-col flex justify-between items-start`}>
                 <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
                     <div className="max-w-full lg:max-w-xs">
-                        <Link aria-label={"home"} href={home_href} className="block wrap-break-word text-gold font-primary uppercase text-3xl tracking-widest font-normal">
-                            {name}
-                        </Link>
+                        {logo ? (
+                            <Link aria-label={"home"} href={home_href} className="block">
+                                <Image src={logo.src} width={logo.width} height={logo.height} alt={name} unoptimized className="h-12 w-auto" />
+                            </Link>
+                        ) : (
+                            <Link aria-label={"home"} href={home_href} className="block wrap-break-word text-gold font-primary uppercase text-3xl tracking-widest font-normal">
+                                {name}
+                            </Link>
+                        )}
                     </div>
                     {details}
                 </div>

@@ -170,7 +170,7 @@ export default function DemoForm({ id, initial, is_new }: { id: string; initial:
                 <Field label="Address (corlane.store/…)" value={values.slug} onChange={(v) => set("slug")(v.toLowerCase().replace(/\s+/g, "-"))} error={errors.slug} hint="e.g. dn or maison-dubois" />
                 <Field label="Instagram handle (optional)" value={values.instagram} onChange={set("instagram")} error={errors.instagram} hint="@handle or profile link" />
                 <Choice label="Category" value={values.category} onChange={set("category")} options={[{ value: "watches", label: "Watches" }, { value: "jewelry", label: "Jewelry" }, { value: "mixed", label: "Watches & jewelry" }]} />
-                <Choice label="Language" value={values.language} onChange={set("language")} options={[{ value: "en", label: "English" }, { value: "fr", label: "French" }]} />
+                <Choice label="Language" value={values.language} onChange={set("language")} options={[{ value: "en", label: "English" }, { value: "fr", label: "French" }, { value: "tr", label: "Turkish" }]} />
                 <Choice label="Opens in currency" value={values.currency} onChange={set("currency")} options={DEMO_CURRENCIES.map((c) => ({ value: c, label: c }))} />
                 <p className="text-xs text-secondary sm:col-span-2 xl:col-span-3">
                     The link opens the real store under this name, showing only these pieces. Prices are in EUR like every store price; the store converts them for the visitor.

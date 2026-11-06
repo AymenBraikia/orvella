@@ -28,6 +28,7 @@ import { brand_name } from "../(site)/lib/brand_name";
 import { Supported_Currencies } from "@/currency";
 
 const T_KEY: Record<string, string> = {
+    collection: "collection",
     brand: "brands",
     gender: "gender",
     condition: "condition",
@@ -62,6 +63,7 @@ const RANGE_UNIT: Partial<Record<RangeFacet, string>> = {
 type Section = { kind: "list"; facet: ListFacet; searchable?: boolean } | { kind: "range"; facet: RangeFacet; money?: boolean } | { kind: "includes" } | { kind: "availability" };
 
 const SECTIONS: Section[] = [
+    { kind: "list", facet: "collection" },
     { kind: "list", facet: "brand", searchable: true },
     { kind: "range", facet: "price", money: true },
     { kind: "list", facet: "metal" },
@@ -85,7 +87,7 @@ const SECTIONS: Section[] = [
     { kind: "availability" },
 ];
 
-const DEFAULT_OPEN = new Set(["brand", "price", "metal"]);
+const DEFAULT_OPEN = new Set(["collection", "brand", "price", "metal"]);
 const COLLAPSED_OPTIONS = 8;
 
 interface WatchFiltersProps {

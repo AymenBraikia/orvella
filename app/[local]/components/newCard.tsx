@@ -1,6 +1,6 @@
 "use client";
 import AtcBtn from "./buttons/addToCart";
-import { format_price } from "../(site)/lib/price_format";
+import { item_price } from "../(site)/lib/price_format";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import dynamic from "next/dynamic";
@@ -16,6 +16,7 @@ const QuickViewModal = dynamic(() => import("./quick_view"), {
 
 export default function Card({ data }: { data: Item }) {
     const t_btn = useTranslations("common.buttons");
+    const t = useTranslations("common");
     const currency = useCurrency();
     const [view, set_view] = useState<null | Item>(null);
 
@@ -23,7 +24,7 @@ export default function Card({ data }: { data: Item }) {
         <>
             <ProductCardView
                 name={item_name(data)}
-                price={format_price(data.price, currency)}
+                price={item_price(data.price, currency, t("priceOnRequest"))}
                 image={data.images[0]}
                 onClick={() => innerWidth < 1536 && set_view(data)}
                 badge={<StockBadge status={data.stock_status} />}

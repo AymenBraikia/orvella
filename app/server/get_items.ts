@@ -4,6 +4,7 @@ import { items_collection } from "../db/collections";
 import { active_ref } from "./ref";
 import { Item } from "@/types/item";
 import { to_public_item } from "@/app/(site)/lib/stock";
+import { current_demo, localize_item } from "./storefront";
 
 // The card grid never reads these, but you're currently shipping them for
 // every watch on every request.
@@ -50,6 +51,8 @@ const CARD_PROJECTION = {
     type: 1,
     // Needed because the result is filtered by preview
     preview: 1,
+    // A lead demo's shop filter
+    collection: 1,
 } as const;
 
 /**
@@ -77,10 +80,14 @@ const get_cached_items = unstable_cache(
  * The ref cookie is read OUTSIDE the cache scope.
  */
 async function get_items(): Promise<Item[]> {
-    const ref = await active_ref();
-
     const now = Date.now();
     const data = (await get_cached_items()).map((item) => to_public_item(item, now));
+
+    // A lead demo (/<locale>/<demo>): only its own products (imported with its name as their preview tag).
+    const demo = current_demo();
+    if (demo) return JSON.parse(JSON.stringify(data.filter((e) => e.preview === demo.name).map((e) => localize_item(demo, e))));
+
+    const ref = await active_ref();
 
     // No ref cookie => return all watches.
     if (!ref) {

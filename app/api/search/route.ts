@@ -7,6 +7,10 @@ import { Item } from "@/app/(site)/lib/filters";
 import { escape_regex } from "@/app/(site)/lib/escape_regex";
 import { DEMO_MODE } from "@/app/(site)/lib/demo";
 import type { Document } from "mongodb";
+import { load_demo, localize_item } from "@/app/server/storefront";
+import { localize_config } from "@/app/(site)/lib/storefront";
+import { LOCALES } from "@/i18n/locales";
+import type { Locales } from "@/types/locales";
 
 const SEARCH_PROJECTION = { _id: 0, slug: 1, brand: 1, model: 1, reference: 1, price: 1, images: { $slice: 1 }, display_name: 1, preview: 1 } as const;
 
@@ -30,6 +34,16 @@ export async function GET(req: NextRequest) {
     const query = req.nextUrl.searchParams.get("query")?.trim().toLowerCase().slice(0, 100);
 
     if (!query) return NextResponse.json([]);
+
+    // A lead demo's header searches that demo's pieces only (?store=<demo>, from its URL).
+    const store = req.nextUrl.searchParams.get("store");
+    if (store) {
+        const source = await load_demo(store);
+        const asked = req.nextUrl.searchParams.get("locale") ?? "";
+        const demo = source && localize_config(source, (LOCALES as readonly string[]).includes(asked) ? (asked as Locales) : source.locale);
+        const found: Item[] = demo ? (await search_items(query, demo.name, true)).map((item: Item) => localize_item(demo, item)) : [];
+        return NextResponse.json(found, { headers: { "Cache-Control": "public, s-maxage=300, stale-while-revalidate=3600" } });
+    }
 
     const ref = await active_ref();
     const own_only = await is_demo_ref(ref);

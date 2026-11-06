@@ -22,12 +22,13 @@ import DemoBanner from "./demo_banner";
 import Select from "./elements/select";
 import Search_input from "./elements/search_input";
 import { ThemeToggle } from "./theme";
-import { format_price } from "../(site)/lib/price_format";
 import { useCurrency } from "../(site)/context/currencyContext";
 import { Supported_Currencies } from "@/currency";
 import setCurrency from "@/app/server/set_currency";
 import { Item } from "../(site)/lib/filters";
 import { item_name } from "../(site)/lib/item_name";
+import { item_price } from "../(site)/lib/price_format";
+import { useStorefront } from "../(site)/context/storefrontContext";
 
 const CartDrawer = dynamic(() => import("./cart_drawer"), {
     ssr: false,
@@ -174,6 +175,8 @@ export default function Header({ savedCurrency = "USD", store_name }: { savedCur
     const { cart } = useCart();
     const locale = useLocale() as Locales;
     const t = useTranslations("common");
+    // A lead demo: its logo and links (in every language).
+    const { demo, href, has } = useStorefront();
 
     const selected_locale = locale.toUpperCase();
 
@@ -207,7 +210,8 @@ export default function Header({ savedCurrency = "USD", store_name }: { savedCur
 
             const cartEl = cartRef.current;
             const navEl = navRef.current;
-            if (!cartEl || !navEl) return;
+            if (!navEl) return;
+            const cartStyle = cartEl?.style ?? ({} as CSSStyleDeclaration);
 
             const { blocked, scroller } = swipe_guard(e.target);
             if (blocked) return;
@@ -217,7 +221,7 @@ export default function Header({ savedCurrency = "USD", store_name }: { savedCur
 
             let gesture: "horizontal" | "vertical" | "native" | null = null;
 
-            cartEl.style.transition = "50ms ease";
+            cartStyle.transition = "50ms ease";
             navEl.style.transition = "50ms ease";
 
             const handleMove = (moveEvent: TouchEvent) => {
@@ -255,7 +259,7 @@ export default function Header({ savedCurrency = "USD", store_name }: { savedCur
 
                 if (ui.isCartOpen) {
                     if (deltaX > 0) {
-                        cartEl.style.transform = `translateX(${deltaX}px)`;
+                        cartStyle.transform = `translateX(${deltaX}px)`;
                     }
                 } else {
                     if (ui.isNavOpen) {
@@ -264,7 +268,7 @@ export default function Header({ savedCurrency = "USD", store_name }: { savedCur
                         }
                     } else {
                         if (deltaX < 0) {
-                            cartEl.style.transform = `translateX(${deltaX}px)`;
+                            cartStyle.transform = `translateX(${deltaX}px)`;
                         } else {
                             navEl.style.transform = `translateX(${deltaX}px)`;
                         }
@@ -278,8 +282,8 @@ export default function Header({ savedCurrency = "USD", store_name }: { savedCur
                 window.removeEventListener("touchcancel", handleCancel);
                 release = null;
 
-                cartEl.style.transition = "";
-                cartEl.style.transform = "";
+                cartStyle.transition = "";
+                cartStyle.transform = "";
 
                 navEl.style.transition = "";
                 navEl.style.transform = "";
@@ -300,7 +304,7 @@ export default function Header({ savedCurrency = "USD", store_name }: { savedCur
                 } else if (ui.isNavOpen) {
                     if (finalDeltaX < -SWIPE_THRESHOLD) dispatch({ type: "CLOSE_NAV" });
                 } else {
-                    if (finalDeltaX < -SWIPE_THRESHOLD) dispatch({ type: "OPEN_CART" });
+                    if (finalDeltaX < -SWIPE_THRESHOLD && cartEl) dispatch({ type: "OPEN_CART" });
                     else if (finalDeltaX > SWIPE_THRESHOLD) dispatch({ type: "OPEN_NAV" });
                 }
             };
@@ -326,28 +330,30 @@ export default function Header({ savedCurrency = "USD", store_name }: { savedCur
                 banner={<DemoBanner />}
                 nav_open={ui.isNavOpen}
                 onMenu={() => dispatch({ type: "OPEN_NAV" })}
-                search={<Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />}
+                search={<Search_input placeholder={t("filters.searchPlaceholder")} route={demo ? `/api/search?store=${demo.slug}&locale=${demo.locale}` : "/api/search"} SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />}
                 name={store_name}
+                logo={demo && { full: demo.logo, icon: demo.logo_icon }}
+                home_href={href("/")}
                 end={
                     <>
                         {/* <div className="xl:block hidden">
                             <Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search_watches" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />
                         </div> */}
 
-                        {!session?.email && (
-                            <Link aria-label={t("buttons.register")} className={`button2 hidden lg:block hover:text-primary capitalize`} href={"/auth/sign_up"}>
+                        {!session?.email && has("/auth/sign_up") && (
+                            <Link aria-label={t("buttons.register")} className={`button2 hidden lg:block hover:text-primary capitalize`} href={href("/auth/sign_up")}>
                                 {t("buttons.register")}
                             </Link>
                         )}
 
-                        <Select
+                                                <Select
                             classnames="max-w-25 flex text-sm sm:text-base"
                             options={["English", "Arabic", "Spanish", "Deutsch", "French", "Italian", "Turkish"]}
                             value={selected_locale}
                             set_value={set_lang as Dispatch<SetStateAction<string>>}
                         />
 
-                        <Select classnames="max-w-25 hidden sm:flex text-sm sm:text-base" options={currencies_options.keys().toArray()} value={currencies_map.get(currency)!} set_value={set_currency as Dispatch<SetStateAction<string>>} />
+                                                <Select classnames="max-w-25 hidden sm:flex text-sm sm:text-base" options={currencies_options.keys().toArray()} value={currencies_map.get(currency)!} set_value={set_currency as Dispatch<SetStateAction<string>>} />
 
                         <button aria-label={"cart"} type="button" onClick={() => dispatch({ type: "OPEN_CART" })} className={`button2 p-1 sm:p-2 relative ${ui.isGlassy ? "" : "hover:text-primary"}`}>
                             <Cart clr={"currentColor"} classnames="w-5 sm:w-6" />
@@ -368,11 +374,13 @@ export default function Header({ savedCurrency = "USD", store_name }: { savedCur
 
 function SearchChildComponent({ item }: { item: Item }) {
     const currency = useCurrency();
+    const t = useTranslations("common");
+    const { demo, href } = useStorefront();
 
     return (
         <Link
-            href={"/product/" + item.slug}
-            onClick={async () => await increase_relevance_score(item.slug, score_rewards.search)}
+            href={href("/product/" + item.slug)}
+            onClick={async () => !demo && (await increase_relevance_score(item.slug, score_rewards.search))}
             className="flex justify-between items-center w-full h-full text-sm capitalize gap-2 bg-transparent hover:bg-primary border-b sm:border-0 cursor-pointer transition-default p-2"
         >
             <div className="relative min-w-15 aspect-square">
@@ -380,7 +388,7 @@ function SearchChildComponent({ item }: { item: Item }) {
             </div>
             <div className="w-full h-full flex flex-col justify-start items-start gap-2">
                 {item.type == "watch" ? <p className="w-full">{[item_name(item), item.year || "", item.reference && `Ref. ${item.reference}`].filter(Boolean).join(" ")}</p> : <p className="w-full">{item_name(item)}</p>}
-                <p>{format_price(item.price, currency)}</p>
+                <p>{item_price(item.price, currency, t("priceOnRequest"))}</p>
             </div>
         </Link>
     );

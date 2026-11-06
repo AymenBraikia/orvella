@@ -67,6 +67,7 @@
         "twitterDescription": "شريكك في عالم الساعات الراقية. اكتشف رولكس وباتيك فيليب وكارتييه، واحجز موعدًا مع خبرائنا."
     },
     "common": {
+        "priceOnRequest": "السعر عند الطلب",
         "brand": "CORLANE",
         "watches": "ساعات",
         "rings": "خواتم",
@@ -135,6 +136,7 @@
             "consignment": "البيع بالأمانة"
         },
         "filters": {
+            "collection": "المجموعة",
             "brands": "العلامات التجارية",
             "movement": "الحركة",
             "caseMaterial": "خامة العلبة",

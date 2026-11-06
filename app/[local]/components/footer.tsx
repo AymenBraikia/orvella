@@ -7,10 +7,19 @@ import Ebay from "./svg/ebay";
 import { useTranslations } from "next-intl";
 import WhatsApp from "./svg/whatsapp";
 import type { PublicStoreDetails } from "@/types/settings";
+import { useStorefront } from "../(site)/context/storefrontContext";
+
+const LINK = "underline text-secondary hover:text-primary transition-default";
+
+type FooterLink = { href: string; label: string; aria: string };
 
 export default function Footer({ store }: { store: PublicStoreDetails }) {
     const t = useTranslations("common.footer");
     const t_nav = useTranslations("common.nav");
+    const t_filters = useTranslations("common.filters");
+    // A lead demo: its logo, only its own pages (under its address) and its private-demo note.
+    const { demo, href, has } = useStorefront();
+    const only_ours = (links: FooterLink[]) => links.filter((l) => has(l.href)).map((l) => ({ ...l, href: href(l.href) }));
 
     const platforms = [
         { href: store.chrono24_url, label: "Chrono 24", icon: <Watch classnames={"w-6"} /> },
@@ -19,9 +28,36 @@ export default function Footer({ store }: { store: PublicStoreDetails }) {
         { href: store.instagram_url, label: "Instagram", icon: <Instagram classnames={"w-6"} /> },
     ].filter((p) => p.href);
 
+    const legal = only_ours([
+        { href: "/info/imprint", label: t("imprint"), aria: "imprint" },
+        { href: "/info/policy", label: t("privacyPolicy"), aria: "privacy policy" },
+        { href: "/info/terms", label: t("terms"), aria: "terms of use" },
+        { href: "/info/withdraw", label: t("withdrawal"), aria: "withdrawal" },
+        { href: "/info/disclaimer", label: t("disclaimer"), aria: "disclaimer" },
+        { href: "/info/cookies", label: t("cookiePolicy"), aria: "cookies policy" },
+    ]);
+    const shop = only_ours([
+        { href: "/shop", label: t_nav("watches"), aria: "watches" },
+        { href: "/spare", label: t_nav("spareParts"), aria: "spare parts" },
+        { href: "/info/about", label: t_nav("aboutUs"), aria: "about us" },
+    ]);
+    const service = only_ours([
+        { href: "/store", label: t_nav("store"), aria: "store" },
+        { href: "/sell", label: t_nav("sellConsign"), aria: "sell or consign" },
+        { href: "/polish", label: t_nav("polishingServices"), aria: "polishing and services" },
+        { href: "/info/payments", label: t_nav("shippingPayments"), aria: "shipping and payments" },
+        { href: "/info/faq", label: t_nav("faq"), aria: "Frequently Asked Questions" },
+        { href: "/info/vacancies", label: t_nav("vacancies"), aria: "Vacancies" },
+    ]);
+    // The legal column's privacy link has always had this aria-label.
+    const legal_column = legal.map((l) => (l.aria == "privacy policy" ? { ...l, aria: "privacy policiy" } : l));
+
     return (
         <FooterView
             name={store.store_name}
+            logo={demo?.logo_horizontal ?? demo?.logo_icon}
+            home_href={href("/")}
+            compact={Boolean(demo)}
             details={
                 <ul className="flex flex-col justify-start items-start gap-2 tracking-wider">
                     {store.address.street ? (
@@ -33,11 +69,13 @@ export default function Footer({ store }: { store: PublicStoreDetails }) {
                             <li>{store.address.country}</li>
                         </>
                     ) : (
-                        <li>
-                            <Link href="/booking" className="underline text-secondary hover:text-primary transition-default">
-                                {t("byAppointment")}
-                            </Link>
-                        </li>
+                        has("/booking") && (
+                            <li>
+                                <Link href={href("/booking")} className={LINK}>
+                                    {t("byAppointment")}
+                                </Link>
+                            </li>
+                        )
                     )}
                     {store.phone && (
                         <li>
@@ -53,82 +91,30 @@ export default function Footer({ store }: { store: PublicStoreDetails }) {
             }
             bottom={
                 <>
-                    <p className="">{t("disclaimerText")}</p>
+                    {/* A lead demo: its private-demo note instead of the store's dealer disclaimer (a claim about the seller). */}
+                    {demo ? <p>{demo.footer_note}</p> : <p className="">{t("disclaimerText")}</p>}
                     <p className="">{t("copyright", { year: new Date().getFullYear() })}</p>
                     <div className="flex-center flex-wrap gap-4 lg:gap-3">
-                        <Link aria-label="imprint" href={"/info/imprint"} className="underline text-secondary hover:text-primary transition-default">
-                            {t("imprint")}
-                        </Link>
-                        <Link aria-label="privacy policy" href={"/info/policy"} className="underline text-secondary hover:text-primary transition-default">
-                            {t("privacyPolicy")}
-                        </Link>
-                        <Link aria-label="terms of use" href={"/info/terms"} className="underline text-secondary hover:text-primary transition-default">
-                            {t("terms")}
-                        </Link>
-                        <Link aria-label="withdrawal" href={"/info/withdraw"} className="underline text-secondary hover:text-primary transition-default">
-                            {t("withdrawal")}
-                        </Link>
-                        <Link aria-label="disclaimer" href={"/info/disclaimer"} className="underline text-secondary hover:text-primary transition-default">
-                            {t("disclaimer")}
-                        </Link>
-                        <Link aria-label="cookies policy" href={"/info/cookies"} className="underline text-secondary hover:text-primary transition-default">
-                            {t("cookiePolicy")}
-                        </Link>
+                        {legal.map((l) => (
+                            <Link key={l.href} aria-label={l.aria} href={l.href} className={LINK}>
+                                {l.label}
+                            </Link>
+                        ))}
                     </div>
                 </>
             }
         >
-            <FooterColumn heading={t("shopHeading")}>
-                <li>
-                    <Link aria-label="watches" href={"/shop"} className="underline text-secondary hover:text-primary transition-default">
-                        {t_nav("watches")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="spare parts" href={"/spare"} className="underline text-secondary hover:text-primary transition-default">
-                        {t_nav("spareParts")}
-                    </Link>
-                </li>
-
-                <li>
-                    <Link aria-label="about us" href={"/info/about"} className="underline text-secondary hover:text-primary transition-default">
-                        {t_nav("aboutUs")}
-                    </Link>
-                </li>
-            </FooterColumn>
-            <FooterColumn heading={t("serviceHeading")}>
-                <li>
-                    <Link aria-label="store" href={"/store"} className="underline text-secondary hover:text-primary transition-default">
-                        {t_nav("store")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="sell or consign" href={"/sell"} className="underline text-secondary hover:text-primary transition-default">
-                        {t_nav("sellConsign")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="polishing and services" href={"/polish"} className="underline text-secondary hover:text-primary transition-default">
-                        {t_nav("polishingServices")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="shipping and payments" href={"/info/payments"} className="underline text-secondary hover:text-primary transition-default">
-                        {t_nav("shippingPayments")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="Frequently Asked Questions" href={"/info/faq"} className="underline text-secondary hover:text-primary transition-default">
-                        {t_nav("faq")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="Vacancies" href={"/info/vacancies"} className="underline text-secondary hover:text-primary transition-default">
-                        {t_nav("vacancies")}
-                    </Link>
-                </li>
-            </FooterColumn>
-            {/* Only the profiles the store has filled in under Admin → Settings */}
+            <Column heading={t("shopHeading")} links={shop} />
+            {/* A lead demo: its collections and brands (service pages are the store's own). */}
+            <Column heading={t("serviceHeading")} links={service} />
+            {/* A lead demo: its collections and brands too. */}
+            {demo && (
+                <>
+                    <Column heading={demo.collections_heading ?? ""} links={demo.collections.map((c) => ({ href: href(c.path), label: c.label, aria: c.label }))} />
+                    <Column heading={t_filters("brands")} links={demo.brands.map((b) => ({ href: href(b.path), label: b.label, aria: b.label }))} />
+                </>
+            )}
+            {/* Only the profiles the store has filled in under Admin → Settings (a demo: the seller's Instagram) */}
             {platforms.length > 0 && (
                 <FooterColumn heading={t("otherPlatformsHeading")}>
                     {platforms.map((p) => (
@@ -141,38 +127,22 @@ export default function Footer({ store }: { store: PublicStoreDetails }) {
                     ))}
                 </FooterColumn>
             )}
-            <FooterColumn heading={t("legalHeading")}>
-                <li>
-                    <Link aria-label="imprint" href={"/info/imprint"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("imprint")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="privacy policiy" href={"/info/policy"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("privacyPolicy")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="terms of use" href={"/info/terms"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("terms")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="withdrawal" href={"/info/withdraw"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("withdrawal")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="disclaimer" href={"/info/disclaimer"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("disclaimer")}
-                    </Link>
-                </li>
-                <li>
-                    <Link aria-label="cookies policy" href={"/info/cookies"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("cookiePolicy")}
-                    </Link>
-                </li>
-            </FooterColumn>
+            <Column heading={t("legalHeading")} links={legal_column} />
         </FooterView>
+    );
+}
+
+function Column({ heading, links }: { heading: string; links: FooterLink[] }) {
+    if (!links.length) return null;
+    return (
+        <FooterColumn heading={heading}>
+            {links.map((l) => (
+                <li key={l.href}>
+                    <Link aria-label={l.aria} href={l.href} className={LINK}>
+                        {l.label}
+                    </Link>
+                </li>
+            ))}
+        </FooterColumn>
     );
 }

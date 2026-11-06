@@ -1,4 +1,5 @@
 "use client";
+import { useStorefront } from "@/app/(site)/context/storefrontContext";
 
 import { use, useState } from "react";
 import Link from "next/link";
@@ -8,6 +9,8 @@ import Input from "@/app/components/elements/input";
 import { reset_password } from "../actions/password_reset";
 
 export default function ResetPasswordPage({ searchParams }: { searchParams: Promise<{ token?: string }> }) {
+    // Inside a lead demo, its own pages (the store's otherwise).
+    const { href } = useStorefront();
     const { token } = use(searchParams);
     const t = useTranslations("auth.reset");
     const t_errors = useTranslations("auth.errors");
@@ -24,7 +27,7 @@ export default function ResetPasswordPage({ searchParams }: { searchParams: Prom
 
         const result = await reset_password(new FormData(e.currentTarget));
         if (result.ok) {
-            router.push("/");
+            router.push(href("/"));
             router.refresh();
             return;
         }
@@ -35,7 +38,7 @@ export default function ResetPasswordPage({ searchParams }: { searchParams: Prom
 
     return (
         <div className="relative w-full max-w-md flex-center flex-col gap-4 rounded-2xl border border-(--bg-primary) p-6 sm:p-10">
-            <Link aria-label="home" href="/" className="w-fit text-gold font-primary text-2xl">
+            <Link aria-label="home" href={href("/")} className="w-fit text-gold font-primary text-2xl">
                 {t_home("heroTitle")}
             </Link>
 
@@ -62,7 +65,7 @@ export default function ResetPasswordPage({ searchParams }: { searchParams: Prom
                 </p>
             )}
 
-            <Link href="/auth/forgot" className="text-sm underline text-secondary">
+            <Link href={href("/auth/forgot")} className="text-sm underline text-secondary">
                 {t("newLink")}
             </Link>
         </div>

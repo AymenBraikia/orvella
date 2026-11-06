@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { brand_name } from "../../lib/brand_name";
 import type { Metadata } from "next";
 import { page_metadata } from "../../lib/site_metadata";
+import { current_demo } from "@/app/server/storefront";
 
 interface PageProps {
     params: Promise<{
@@ -51,6 +52,8 @@ export default async function DynamicPage({ params }: PageProps) {
 }
 
 async function Description({ brand }: { brand: string }) {
+    // The store's own editorial text; a lead demo shows only the seller's watches.
+    if (current_demo()) return <div></div>;
     const t = await getTranslations("brands");
     const key = brand_key(brand);
 

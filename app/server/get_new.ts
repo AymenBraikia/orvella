@@ -4,6 +4,8 @@ import { items_collection } from "../db/collections";
 import { active_ref } from "./ref";
 import { Item } from "@/app/(site)/lib/filters";
 import { to_public_item } from "@/app/(site)/lib/stock";
+import { current_demo } from "./storefront";
+import get_items from "./get_items";
 
 const limit = 8;
 
@@ -43,6 +45,9 @@ const get_cached_new = unstable_cache(
 );
 
 async function get_new(): Promise<Item[]> {
+    // A lead demo (/<locale>/<demo>): all its own products, newest first.
+    if (current_demo()) return (await get_items()).sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime());
+
     const ref = await active_ref();
 
     const now = Date.now();

@@ -23,6 +23,11 @@ export function format_price(n: number, currency: Supported_Currencies = "USD"):
     return mark_estimate(catalogue_money(calc_price(n, currency), currency), currency);
 }
 
+/** A product's price, or `on_request` when it has none (0: "price on request", e.g. in lead demos). */
+export function item_price(n: number, currency: Supported_Currencies | undefined, on_request: string): string {
+    return n > 0 ? format_price(n, currency) : on_request;
+}
+
 /** Format an amount that is already in `currency` (order totals) — no conversion, always exact. */
 export function format_money(amount: number, currency: string): string {
     return money(amount, currency, currency_decimals(currency));

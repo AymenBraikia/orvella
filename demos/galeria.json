@@ -1,0 +1,440 @@
+{
+    "slug": "galeria",
+    "locale": "tr",
+    "name": "Galeria",
+    "instagram": "galeriasaat",
+    "accent": "#DAB16F",
+    "label": {
+        "tr": "Özel demo · Galeria için hazırlandı · Ödemeler test modunda",
+        "en": "Private demo · Prepared for Galeria · Payments in test mode"
+    },
+    "footer_note": {
+        "tr": "Bu sayfa Galeria için hazırlanmış özel bir demodur. Ödemeler test modundadır; gerçek ödeme alınmaz.",
+        "en": "This page is a private demo prepared for Galeria. Payments are in test mode; no real payment is taken."
+    },
+    "description": {
+        "tr": "Galeria: İstanbul'da seçkin lüks saatler. Rolex, Cartier, Tudor ve IWC.",
+        "en": "Galeria: curated luxury watches in Istanbul. Rolex, Cartier, Tudor and IWC."
+    },
+    "logo": {
+        "src": "/demos/galeria/logo.png",
+        "width": 440,
+        "height": 285
+    },
+    "logo_icon": {
+        "src": "/demos/galeria/logo-icon.png",
+        "width": 192,
+        "height": 178
+    },
+    "logo_horizontal": {
+        "src": "/demos/galeria/logo-horizontal.png",
+        "width": 480,
+        "height": 115
+    },
+    "favicon": "/demos/galeria/favicon.ico",
+    "hero": {
+        "title": "GALERIA",
+        "subtitle": {
+            "tr": "Lüks saatlerde seçkin koleksiyon",
+            "en": "A curated collection of luxury watches"
+        },
+        "video": "/demos/galeria/hero.mp4",
+        "poster": "/demos/galeria/hero-poster.jpg",
+        "desktop_image": "/demos/galeria/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": {
+            "tr": "Yeni Gelenler",
+            "en": "New Arrivals"
+        },
+        "subtext": {
+            "tr": "Koleksiyonumuza en son katılan saatler.",
+            "en": "The latest watches to join our collection."
+        }
+    },
+    "brands_subtext": {
+        "tr": "Dünyanın önde gelen saat markalarından seçtiklerimiz.",
+        "en": "Our selection from the world's leading watchmakers."
+    },
+    "pieces": [
+        {
+            "slug": "rolex-gmt-master-ii",
+            "brand": "rolex",
+            "model": "GMT-Master II",
+            "price": 17900,
+            "description": {
+                "tr": "Sol taraftan kurmalı \"Sprite\": siyah-yeşil Cerachrom bezel ve yeşil GMT ibresi. Kutu ve garanti kartıyla birlikte, çok iyi durumda.",
+                "en": "The left-handed \"Sprite\": black-and-green Cerachrom bezel and green GMT hand. Comes with box and warranty card, in excellent condition."
+            },
+            "images": [
+                "/demos/galeria/watch-1.jpg"
+            ],
+            "collection": "gmt",
+            "dial": {
+                "tr": "Siyah",
+                "en": "Black"
+            },
+            "details": {
+                "reference": "126720VTNR",
+                "year": 2023,
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster, Oystersteel",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "rolex-cosmograph-daytona",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "price": 28900,
+            "description": {
+                "tr": "Siyah kadranlı güncel Daytona: siyah Cerachrom takimetre bezel ve 4131 kalibre. Tam set, neredeyse yeni.",
+                "en": "The current black-dial Daytona with black Cerachrom tachymeter bezel and calibre 4131. Full set, near-new."
+            },
+            "images": [
+                "/demos/galeria/watch-8.jpg"
+            ],
+            "collection": "kronograf",
+            "dial": {
+                "tr": "Siyah",
+                "en": "Black"
+            },
+            "details": {
+                "reference": "126500LN",
+                "year": 2023,
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster, Oystersteel",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "cartier-santos-dumont",
+            "brand": "cartier",
+            "model": "Santos-Dumont",
+            "price": 16500,
+            "description": {
+                "tr": "18 ayar sarı altın kasa, güneş desenli kadran ve Roma rakamları. Kahverengi timsah derisi kayışla ince, kurmalı bir klasik.",
+                "en": "18k yellow gold case, sunburst dial and Roman numerals. A slim hand-wound classic on a brown alligator strap."
+            },
+            "images": [
+                "/demos/galeria/watch-2.jpg"
+            ],
+            "collection": "klasik",
+            "dial": {
+                "tr": "Şampanya",
+                "en": "Champagne"
+            },
+            "details": {
+                "year": 2022,
+                "movement": "Manual",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 46,
+                "braceletMaterial": "Alligator leather",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "rolex-submariner",
+            "brand": "rolex",
+            "model": "Submariner Date",
+            "price": 11500,
+            "description": {
+                "tr": "Çelik ve sarı altın Rolesor Submariner: siyah kadran ve bezel. 1990'ların aranan referansı, orijinal kutusuyla.",
+                "en": "Steel and yellow gold Rolesor Submariner with black dial and bezel. A sought-after 1990s reference, with its original box."
+            },
+            "images": [
+                "/demos/galeria/watch-5.jpg"
+            ],
+            "collection": "dalgic",
+            "dial": {
+                "tr": "Siyah",
+                "en": "Black"
+            },
+            "details": {
+                "reference": "16613",
+                "year": 1998,
+                "movement": "Automatic",
+                "caseMaterial": "Steel & 18k Yellow Gold",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster, Rolesor",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "slug": "tudor-black-bay-chrono",
+            "brand": "tudor",
+            "model": "Black Bay Chrono",
+            "price": 4900,
+            "description": {
+                "tr": "Mavi kadran, krem alt kadranlar ve manufaktür MT5813 kronograf kalibresi. Kutu ve garanti kartıyla.",
+                "en": "Blue dial, cream sub-dials and the in-house MT5813 chronograph calibre. With box and warranty card."
+            },
+            "images": [
+                "/demos/galeria/watch-10.jpg"
+            ],
+            "collection": "kronograf",
+            "dial": {
+                "tr": "Mavi",
+                "en": "Blue"
+            },
+            "details": {
+                "reference": "79360B",
+                "year": 2022,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Five-link steel bracelet",
+                "waterResistanceM": 200,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "iwc-portugieser-chronograph",
+            "brand": "iwc",
+            "model": "Portugieser Chronograph",
+            "price": 11000,
+            "description": {
+                "tr": "18 ayar kırmızı altın kasa, arduvaz grisi kadran ve altın tonlu Arap rakamları. Portugieser serisinin en zarif kronograflarından biri.",
+                "en": "18k red gold case, slate dial and gold Arabic numerals. One of the most elegant chronographs in the Portugieser line."
+            },
+            "images": [
+                "/demos/galeria/watch-7.jpg"
+            ],
+            "collection": "kronograf",
+            "dial": {
+                "tr": "Gri",
+                "en": "Grey"
+            },
+            "details": {
+                "reference": "IW371482",
+                "year": 2016,
+                "movement": "Automatic",
+                "caseMaterial": "18k Red Gold",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Alligator leather",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "rolex-datejust-31-blue",
+            "brand": "rolex",
+            "model": "Datejust 31",
+            "price": 8200,
+            "description": {
+                "tr": "Mavi kadran, Roma rakamları ve beyaz altın tırtıklı bezel. Jubilee bilezikle her güne uygun, zarif bir Datejust.",
+                "en": "Blue dial, Roman numerals and white gold fluted bezel. An elegant everyday Datejust on a Jubilee bracelet."
+            },
+            "images": [
+                "/demos/galeria/watch-9.jpg"
+            ],
+            "collection": "klasik",
+            "dial": {
+                "tr": "Mavi",
+                "en": "Blue"
+            },
+            "details": {
+                "reference": "178274",
+                "year": 2016,
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel & White Gold",
+                "caseDiameterMm": 31,
+                "braceletMaterial": "Jubilee, Oystersteel",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "rolex-lady-datejust-champagne",
+            "brand": "rolex",
+            "model": "Lady-Datejust",
+            "price": 4700,
+            "description": {
+                "tr": "Şampanya kadran, sarı altın tırtıklı bezel ve çelik-altın Jubilee bilezik. Zamansız bir klasik.",
+                "en": "Champagne dial, yellow gold fluted bezel and steel-and-gold Jubilee bracelet. A timeless classic."
+            },
+            "images": [
+                "/demos/galeria/watch-4.jpg"
+            ],
+            "collection": "klasik",
+            "dial": {
+                "tr": "Şampanya",
+                "en": "Champagne"
+            },
+            "details": {
+                "reference": "69173",
+                "year": 1991,
+                "movement": "Automatic",
+                "caseMaterial": "Steel & 18k Yellow Gold",
+                "caseDiameterMm": 26,
+                "braceletMaterial": "Jubilee, Rolesor",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "slug": "rolex-explorer-ii",
+            "brand": "rolex",
+            "model": "Explorer II",
+            "price": 9400,
+            "description": {
+                "tr": "Beyaz \"Polar\" kadran, 24 saat bezel ve kırmızı GMT ibresi. Kaşifler için tasarlanmış, sağlam ve okunaklı bir GMT.",
+                "en": "White \"Polar\" dial, 24-hour bezel and red GMT hand. A robust, legible GMT built for explorers."
+            },
+            "images": [
+                "/demos/galeria/watch-3.jpg"
+            ],
+            "collection": "gmt",
+            "dial": {
+                "tr": "Beyaz",
+                "en": "White"
+            },
+            "details": {
+                "reference": "16570",
+                "year": 2005,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster, Stainless Steel",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "rolex-lady-datejust-diamond",
+            "brand": "rolex",
+            "model": "Lady-Datejust Diamond",
+            "price": 4900,
+            "description": {
+                "tr": "Beyaz kadran, pırlanta bezel ve pırlanta saat endeksleri (sonradan eklenmiş). Çelik-altın Jubilee bilezikle göz alıcı bir Lady-Datejust.",
+                "en": "White dial, diamond bezel and diamond hour markers (aftermarket). An eye-catching Lady-Datejust on a steel-and-gold Jubilee bracelet."
+            },
+            "images": [
+                "/demos/galeria/watch-6.jpg"
+            ],
+            "collection": "klasik",
+            "dial": {
+                "tr": "Beyaz",
+                "en": "White"
+            },
+            "details": {
+                "reference": "69173",
+                "year": 1990,
+                "movement": "Automatic",
+                "caseMaterial": "Steel & 18k Yellow Gold",
+                "caseDiameterMm": 26,
+                "braceletMaterial": "Jubilee, Rolesor",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        }
+    ],
+    "collections": {
+        "heading": {
+            "tr": "Koleksiyonlar",
+            "en": "Collections"
+        },
+        "subtext": {
+            "tr": "Kronograftan dalgıç saatlerine, koleksiyonumuzu keşfedin.",
+            "en": "From chronographs to divers, explore our collection."
+        },
+        "items": [
+            {
+                "key": "kronograf",
+                "name": {
+                    "tr": "Kronograf",
+                    "en": "Chronograph"
+                },
+                "image": "/demos/galeria/watch-10.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": {
+                    "tr": "GMT",
+                    "en": "GMT"
+                },
+                "image": "/demos/galeria/watch-1.jpg"
+            },
+            {
+                "key": "dalgic",
+                "name": {
+                    "tr": "Dalgıç",
+                    "en": "Diver"
+                },
+                "image": "/demos/galeria/watch-5.jpg"
+            },
+            {
+                "key": "klasik",
+                "name": {
+                    "tr": "Klasik",
+                    "en": "Classic"
+                },
+                "image": "/demos/galeria/watch-2.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/galeria/watch-9.jpg",
+    "banner": {
+        "light": "/demos/galeria/watch-8.jpg",
+        "dark": "/demos/galeria/hero-desktop.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "Nişantaşı",
+            "postcode": "34367",
+            "city": "İstanbul",
+            "country": "Türkiye"
+        },
+        "opening_hours": {
+            "monday": "10:30 – 19:30",
+            "tuesday": "10:30 – 19:30",
+            "wednesday": "10:30 – 19:30",
+            "thursday": "10:30 – 19:30",
+            "friday": "10:30 – 19:30",
+            "saturday": "11:00 – 18:00",
+            "sunday": ""
+        },
+        "about": {
+            "tr": "Galeria, İstanbul'da ikinci el ve sıfır lüks saatler sunar. Koleksiyonumuzdaki her saat satışa çıkmadan önce uzmanlarımız tarafından incelenir; orijinalliği, mekanizması ve kozmetik durumu tek tek kontrol edilir.\n\nRolex, Cartier, Tudor ve IWC başta olmak üzere, değerini koruyan modelleri seçiyoruz. Aradığınız bir model varsa sizin için bulmaya da yardımcı oluyoruz.",
+            "en": "Galeria offers pre-owned and new luxury watches in Istanbul. Every watch in our collection is inspected by our specialists before it is offered: authenticity, movement and cosmetic condition are checked one by one.\n\nWe focus on models that hold their value, led by Rolex, Cartier, Tudor and IWC. If you are looking for a specific model, we can help you find it."
+        }
+    }
+}

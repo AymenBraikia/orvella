@@ -1,7 +1,8 @@
 "use client";
 import { memo, useState } from "react";
 
-import { format_price } from "../(site)/lib/price_format";
+import { item_price } from "../(site)/lib/price_format";
+import { useStorefront } from "../(site)/context/storefrontContext";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useCurrency } from "../(site)/context/currencyContext";
@@ -39,13 +40,15 @@ export default memo(function Watch_card({
     status?: ItemStatus;
 }) {
     const t = useTranslations("common.productCard");
+    const t_common = useTranslations("common");
+    const { href } = useStorefront();
     const currency = useCurrency();
 
     const [play_video, set_play_video] = useState<boolean>(false);
 
     return (
         <Link
-            href={`/product/${slug}`}
+            href={href(`/product/${slug}`)}
             className="group overflow-hidden transition-default hover:-translate-y-1 cursor-pointer font-secondary sm:px-0 px-4 w-full"
             onMouseEnter={() => set_play_video(true)}
             onMouseLeave={() => set_play_video(false)}
@@ -93,7 +96,7 @@ export default memo(function Watch_card({
                         </p>
                     )}
                 </div>
-                <span className="text-xl font-semibold text-foreground font-sans">{format_price(price, currency)}</span>
+                <span className="text-xl font-semibold text-foreground font-sans">{item_price(price, currency, t_common("priceOnRequest"))}</span>
             </div>
         </Link>
     );

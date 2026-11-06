@@ -67,6 +67,7 @@
         "twitterDescription": "Il tuo partner per gli orologi di alta gamma. Scopri Rolex, Patek Philippe e Cartier e prenota un appuntamento con i nostri esperti."
     },
     "common": {
+        "priceOnRequest": "Prezzo su richiesta",
         "brand": "CORLANE",
         "watches": "orologi",
         "rings": "anelli",
@@ -135,6 +136,7 @@
             "consignment": "Conto vendita"
         },
         "filters": {
+            "collection": "Collezione",
             "brands": "Marchi",
             "movement": "Movimento",
             "caseMaterial": "Materiale della cassa",

@@ -4,6 +4,7 @@ import List from "./scrollList";
 import Image from "next/image";
 import FadeInObserver from "./fade_wrapper";
 import { useTranslations } from "next-intl";
+import { useStorefront } from "../(site)/context/storefrontContext";
 
 let id = 0;
 const data = [
@@ -17,9 +18,11 @@ const data = [
     { id: id++, src: "/brands/zenith.webp", name: "Zenith" },
 ];
 
-export default function Iconic() {
+/** The brand cards. A lead demo passes its own brands (with the seller's photos) and line of text. */
+export default function Iconic({ brands = data, subtext }: { brands?: { id: number; src: string; name: string }[]; subtext?: string }) {
     const t = useTranslations("home");
     const t_btn = useTranslations("common.buttons");
+    const { href } = useStorefront();
     return (
         <section className="flex-col justify-center items-start sm:p-16 p-4 w-full">
             <div className="w-fit">
@@ -30,14 +33,14 @@ export default function Iconic() {
             <br />
             <div className="w-fit">
                 <FadeInObserver delay={100}>
-                    <p className="font-secondary text-base sm:text-xl text-shine">{t("brandsSubtext")}</p>
+                    <p className="font-secondary text-base sm:text-xl text-shine">{subtext ?? t("brandsSubtext")}</p>
                 </FadeInObserver>
             </div>
             <div className={`my-5 font-secondary `}>
                 <FadeInObserver delay={200}>
                     <List display={{ base: 1, sm: 2, md: 2, lg: 3 }}>
-                        {data.map((d) => (
-                            <Link key={d.id} aria-label={`${d.name} watches`} href={"/brand/" + d.name} className={`h-100 sm:w-[calc(100%-16px)] w-full flex flex-col justify-start items-start relative`}>
+                        {brands.map((d) => (
+                            <Link key={d.id} aria-label={`${d.name} watches`} href={href("/brand/" + d.name)} className={`h-100 sm:w-[calc(100%-16px)] w-full flex flex-col justify-start items-start relative`}>
                                 <div className="relative w-full h-full transition-default brightness-80 hover:brightness-100 overflow-hidden group">
                                     <Image sizes="(max-width: 768px) 100vw, 60vw" src={d.src} fill alt={d.name} className="object-cover object-center select-none transition-default scale-100 hover:scale-105" />
                                     <div className="absolute bottom-0 inset-s-0 translate-y-1/2 w-full h-20 blur-[25px] bg-black group-hover:opacity-0 opacity-100 transition-default"></div>

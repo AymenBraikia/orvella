@@ -67,6 +67,7 @@
         "twitterDescription": "Üst segment saatler için ortağınız. Rolex, Patek Philippe ve Cartier'yi keşfedin, uzman randevunuzu alın."
     },
     "common": {
+        "priceOnRequest": "Fiyat sorunuz",
         "brand": "CORLANE",
         "watches": "saatler",
         "rings": "yüzükler",
@@ -135,6 +136,7 @@
             "consignment": "Konsinye"
         },
         "filters": {
+            "collection": "Koleksiyon",
             "brands": "Markalar",
             "movement": "Mekanizma",
             "caseMaterial": "Kasa Malzemesi",

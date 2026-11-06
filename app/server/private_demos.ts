@@ -86,6 +86,7 @@ function demo_item(demo: { id: string; slug: string; name: string; category: Pri
         type,
         preview: demo.name,
         private_demo: demo.id,
+        ...(piece.collection ? { collection: piece.collection } : {}),
         deleted: !demo.enabled,
         updated_at: new Date(),
     };
@@ -106,7 +107,7 @@ function demo_item(demo: { id: string; slug: string; name: string; category: Pri
             braceletMaterial: d.braceletMaterial ?? UNVERIFIED,
             dialColor: d.dialColor ?? UNVERIFIED,
             waterResistanceM: d.waterResistanceM ?? 0,
-            boxPapers: { box: false, papers: false, firstInvoice: false, serviceInvoice: false },
+            boxPapers: { box: d.box ?? false, papers: d.papers ?? false, firstInvoice: false, serviceInvoice: false },
         };
     }
     const jewelry = { ...common, weight: d.weight_g ?? 0, measurement_unit: "grams", metal_type: d.metal_type ?? "", karats: d.karats ?? 0, stones: d.stones ?? [] };

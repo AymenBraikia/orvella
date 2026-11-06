@@ -33,7 +33,7 @@ export default function Search_input<T>({ route, SearchChildComponent, placehold
         timeout_ref.current = setTimeout(async () => {
             const this_request = ++request_id_ref.current;
             try {
-                const res = await fetch(route + "/?query=" + encodeURIComponent(query));
+                const res = await fetch(route + (route.includes("?") ? "&" : "/?") + "query=" + encodeURIComponent(query));
                 const json = await res.json();
                 if (this_request === request_id_ref.current) {
                     set_data(json);

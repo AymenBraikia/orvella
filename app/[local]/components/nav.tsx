@@ -9,6 +9,8 @@ import { Supported_Currencies } from "@/currency";
 import setCurrency from "@/app/server/set_currency";
 import LearnMore from "./buttons/learnMore";
 import { DEMO_MODE } from "../(site)/lib/demo";
+import { useStorefront } from "../(site)/context/storefrontContext";
+import type { NavSection } from "./nav_panel";
 
 type UIAction = { type: "OPEN_NAV" } | { type: "CLOSE_NAV" } | { type: "OPEN_CART" } | { type: "CLOSE_CART" } | { type: "TOGGLE_LANG" } | { type: "SET_GLASSY"; payload: boolean };
 
@@ -103,21 +105,58 @@ export default function Nav({ savedCurrency, dispatch, ui, ref }: { savedCurrenc
     };
     const close = () => dispatch({ type: "CLOSE_NAV" });
 
+    // A lead demo links only to its own pages, under its address; it has one language and no prices.
+    const { demo, href, has } = useStorefront();
+    const t_filters = useTranslations("common.filters");
+    const main_sections: NavSection[] = [
+        {
+            heading: footer("shopHeading"),
+            links: [
+                { href: "/shop", label: nav("watches"), aria: "watches list" },
+                { href: "/spare", label: nav("spareParts"), aria: "spare parts" },
+                { href: "/info/about", label: nav("aboutUs"), aria: "about us" },
+            ],
+        },
+        {
+            heading: footer("serviceHeading"),
+            links: [
+                { href: "/store", label: nav("store"), aria: "Store" },
+                { href: "/sell", label: nav("sellConsign"), aria: "Sell / Consign" },
+                { href: "/polish", label: nav("polishingServices"), aria: "Polishing and Service" },
+                { href: "/info/payments", label: nav("shippingPayments"), aria: "Shipping & Payments" },
+                { href: "/info/faq", label: nav("faq"), aria: "Frequently Asked Questions" },
+                { href: "/info/vacancies", label: nav("vacancies"), aria: "Vacancies" },
+            ],
+        },
+    ]
+        .map((section) => ({ ...section, links: section.links.filter((link) => has(link.href)).map((link) => ({ ...link, href: href(link.href) })) }))
+        .filter((section) => section.links.length > 0);
+    // A lead demo: the store's menu (its pages, under its address), plus its collections and brands.
+    const sections: NavSection[] = demo
+        ? [
+              ...main_sections,
+              { heading: demo.collections_heading ?? "", links: demo.collections.map((c) => ({ href: href(c.path), label: c.label, aria: c.label })) },
+              { heading: t_filters("brands"), links: demo.brands.map((b) => ({ href: href(b.path), label: b.label, aria: b.label })) },
+          ].filter((section) => section.links.length > 0)
+        : main_sections;
+
     return (
         <NavPanel
             ref={ref}
             open={ui.isNavOpen}
             onClose={close}
             settings={
+                // A demo with a forced theme would have an empty settings block (no language or currency there).
+                !demo?.forced_theme && (
                 <NavSettings heading={footer("settingsHeading")} theme_label={footer("themeHeading")}>
-                    <Select
+                                        <Select
                         classnames="z-61 font-sans flex text-sm sm:text-base w-full"
                         label={footer("language")}
                         options={["English", "Spanish", "Deutsch", "French", "Italian", "Turkish"]}
                         value={selected_locale}
                         set_value={set_lang as Dispatch<SetStateAction<string>>}
                     />
-                    <Select
+                                        <Select
                         label={footer("currency")}
                         classnames="font-sans sm:hidden flex text-sm sm:text-base"
                         options={currencies_options.keys().toArray()}
@@ -125,29 +164,10 @@ export default function Nav({ savedCurrency, dispatch, ui, ref }: { savedCurrenc
                         set_value={set_currency as Dispatch<SetStateAction<string>>}
                     />
                 </NavSettings>
+                )
             }
-            sections={[
-                {
-                    heading: footer("shopHeading"),
-                    links: [
-                        { href: "/shop", label: nav("watches"), aria: "watches list" },
-                        { href: "/spare", label: nav("spareParts"), aria: "spare parts" },
-                        { href: "/info/about", label: nav("aboutUs"), aria: "about us" },
-                    ],
-                },
-                {
-                    heading: footer("serviceHeading"),
-                    links: [
-                        { href: "/store", label: nav("store"), aria: "Store" },
-                        { href: "/sell", label: nav("sellConsign"), aria: "Sell / Consign" },
-                        { href: "/polish", label: nav("polishingServices"), aria: "Polishing and Service" },
-                        { href: "/info/payments", label: nav("shippingPayments"), aria: "Shipping & Payments" },
-                        { href: "/info/faq", label: nav("faq"), aria: "Frequently Asked Questions" },
-                        { href: "/info/vacancies", label: nav("vacancies"), aria: "Vacancies" },
-                    ],
-                },
-            ]}
-            extra={DEMO_MODE && <LearnMore />}
+            sections={sections}
+            extra={DEMO_MODE && !demo && <LearnMore />}
         />
     );
 }

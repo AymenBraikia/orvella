@@ -7,10 +7,11 @@ import Moon from "./svg/moon";
 
 export function ThemeToggle() {
     const mounted = useMounted();
-    const { resolvedTheme, setTheme } = useTheme();
+    const { resolvedTheme, setTheme, forcedTheme } = useTheme();
 
 
-    if (!mounted) return null;
+    // Nothing to switch when the store forces one theme (a lead demo with a logo made for dark).
+    if (!mounted || forcedTheme) return null;
 
     return (
         <button aria-label={`switch theme to ${resolvedTheme == "dark" ? "light" : "dark"}`} type="button" onClick={() => setTheme((prev) => (prev == "dark" ? "light" : "dark"))} className="button2 p-2">
