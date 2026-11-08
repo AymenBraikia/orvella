@@ -1,99 +1,52 @@
-# ==========================================
-# Ignore everything in the project root
-# ==========================================
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/*
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
+# testing
+/coverage
 
-# ==========================================
-# Website folders - INCLUDE
-# ==========================================
+# next.js
+/.next/
+/out/
 
-!/app/
-!/app/**
-
-!/i18n/
-!/i18n/**
-
-!/demos/
-!/demos/**
-
-!/messages/
-!/messages/**
-
-!/public/
-!/public/**
-
-!/tests/
-!/tests/**
-
-
-# ==========================================
-# Root configuration files - INCLUDE
-# ==========================================
-
-!/.browserslistrc
-!/.env.example
-!/.gitignore
-!/.currency.ts
-!/currency.ts
-!/eslint.config.mjs
-!/image_loader.ts
-!/next.config.ts
-!/package.json
-!/package-lock.json
-!/postcss.config.mjs
-!/proxy.ts
-!/tsconfig.json
-!/vercel.json
-!/vitest.config.mts
-
-
-# ==========================================
-# Exclude unwanted files and folders
-# ==========================================
-
-# Scripts
-!/scripts/
-!/scripts/**
-
-# Local development files
+# production
+/build
 /local*
+# old local helper (wrote to the wrong database); replaced by scripts/create-admin.ts
+/scripts/make_admin.mjs
 
-# Development uploads
-/public/dev-uploads/
-
-# Environment variables
-.env*
-
-# Markdown files (EVERYWHERE)
-*.md
-
-# Batch files
-*.bat
-
-# Certificates
+# misc
+.DS_Store
 *.pem
 
-# Debug logs
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# TypeScript build cache
+# env files (can opt-in for committing if needed)
+.env
+
+# vercel
+.vercel
+
+# typescript
 *.tsbuildinfo
-/next-env.d.ts
+next-env.d.ts
 
-# Operating system files
-.DS_Store
 
-# Build outputs and dependencies
-/node_modules/
-/.next/
-/out/
-/build/
-/coverage/
-/.vercel/
-/.pnp
-.pnp.*
+*.md
+# files uploaded in development without Vercel Blob
+/public/dev-uploads
+.env*
+*.bat
+demo_assets
