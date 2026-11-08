@@ -54,7 +54,8 @@
 # ==========================================
 
 # Scripts
-/scripts/
+!/scripts/
+!/scripts/**
 
 # Local development files
 /local*
