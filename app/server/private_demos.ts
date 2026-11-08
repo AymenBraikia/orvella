@@ -22,7 +22,7 @@ import { piece_kind, type DemoPiece, type PrivateDemo, type PrivateDemoPhoto } f
 export const PHOTO_TYPES = ["image/jpeg", "image/webp", "image/png"];
 export const MAX_PHOTO_BYTES = 2.5 * 1024 * 1024;
 /** Upper bound per demo, including photos uploaded and then removed before saving. */
-const MAX_PHOTOS_PER_DEMO = 120;
+const MAX_PHOTOS_PER_DEMO = 400;
 /** Photos uploaded for a demo that was never saved are removed after this. */
 const ORPHAN_MS = 24 * 60 * 60_000;
 /** What the storefront shows nothing for: unknown watch details (see filters.ts, watch_card.tsx). */

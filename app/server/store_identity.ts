@@ -39,10 +39,10 @@ export async function store_identity(): Promise<StoreSettings & { ref?: string }
             address: lead.store?.address ?? { street: "", postcode: "", city: "", country: "" },
             phone: "",
             email: "",
-            whatsapp: "",
+            whatsapp: lead.whatsapp ?? "",
             chrono24_url: "",
             ebay_url: "",
-            instagram_url: instagram_url(lead.instagram),
+            instagram_url: lead.instagram ? instagram_url(lead.instagram) : "",
         };
     }
 

@@ -14,7 +14,8 @@ export default async function Sections() {
             <SectionsView
                 heading={collections.heading}
                 subtext={collections.subtext}
-                cards={collections.items.map((c) => ({ href: server_href(collection_path(c.name)), label: c.name, explore: tc("explore"), image: c.image }))}
+                // Four cards, like the store's categories (the menu and the shop filter list them all).
+                cards={collections.items.slice(0, 4).map((c) => ({ href: server_href(collection_path(c.name)), label: c.name, explore: tc("explore"), image: c.image }))}
             />
         );
     }

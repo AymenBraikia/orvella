@@ -50,7 +50,7 @@ describe("demo configs", () => {
         it(`${file} is complete and only uses files that exist`, () => {
             expect(`${config.slug}.json`).toBe(file);
             expect(LOCALES).toContain(config.locale);
-            expect(config.instagram).toMatch(/^[A-Za-z0-9._]{1,30}$/);
+            if (config.instagram) expect(config.instagram).toMatch(/^[A-Za-z0-9._]{1,30}$/);
             expect(config.label.length).toBeGreaterThan(0);
             expect(config.pieces.length).toBeGreaterThan(0);
 
@@ -66,7 +66,7 @@ describe("demo configs", () => {
                 expect(piece.slug).toMatch(/^[a-z0-9-]+$/);
                 expect(piece.images.length).toBeGreaterThan(0);
                 expect(Object.keys(piece).sort()).toEqual(expect.arrayContaining(["brand", "description", "images", "model", "slug"]));
-                for (const key of Object.keys(piece)) expect(["slug", "brand", "model", "price", "description", "images", "collection", "dial", "details", "note"]).toContain(key);
+                for (const key of Object.keys(piece)) expect(["slug", "brand", "model", "price", "description", "images", "collection", "dial", "details", "import_photos", "locked", "note"]).toContain(key);
             }
             for (const piece of source.pieces) {
                 if (piece.collection) expect(source.collections?.items.map((c) => c.key)).toContain(piece.collection);

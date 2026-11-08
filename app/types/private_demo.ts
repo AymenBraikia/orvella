@@ -13,7 +13,7 @@ export const DEMO_LANGUAGES: DemoLanguage[] = ["en", "fr", "tr"];
 export const DEMO_CURRENCIES = ["EUR", "USD", "GBP", "CHF", "CAD", "AUD", "HKD", "SGD", "JPY", "CNY"] as const satisfies readonly Supported_Currencies[];
 export type DemoCurrency = (typeof DEMO_CURRENCIES)[number];
 
-export const MAX_DEMO_PIECES = 12;
+export const MAX_DEMO_PIECES = 30;
 export const MAX_PIECE_PHOTOS = 8;
 
 /** One of the seller's pieces. It is shown as a storefront product (see demo_item in app/server/private_demos.ts). */

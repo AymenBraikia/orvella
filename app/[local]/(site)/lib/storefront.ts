@@ -19,8 +19,10 @@ interface DemoStore<Text> {
     /** Where corlane.store/<slug> opens. The demo works in every language. */
     locale: Locales;
     name: string;
-    /** Instagram handle without the @. */
-    instagram: string;
+    /** Instagram handle without the @ (footer). */
+    instagram?: string;
+    /** WhatsApp number, digits with country code (footer, product pages). */
+    whatsapp?: string;
     /** Replaces the store's gold (taken from the seller's logo). */
     accent?: string;
     /** "dark" keeps the site dark and hides the theme switch (for a logo made for a dark background). */
@@ -64,6 +66,10 @@ export interface DemoStorePiece<Text = string> {
     dial?: Text;
     /** The product details (reference, year, movement, case, size, bracelet, condition, box and papers…), as in the admin's demo form. */
     details?: Record<string, string | number | boolean>;
+    /** More photos for the product page, used by the import (scripts/create-demo.ts) only: paths from the project root. */
+    import_photos?: string[];
+    /** Corrected by hand: scripts/build-lead-demo.ts keeps it as it is. */
+    locked?: boolean;
     /** For whoever edits the config; never shown. */
     note?: string;
 }
@@ -134,7 +140,7 @@ export function public_storefront(config: DemoStoreConfig, locale: Locales = con
             name: config.name,
             label: config.label,
             footer_note: config.footer_note,
-            instagram_url: instagram_url(config.instagram),
+            instagram_url: config.instagram ? instagram_url(config.instagram) : "",
             logo: config.logo,
             logo_icon: config.logo_icon,
             logo_horizontal: config.logo_horizontal,

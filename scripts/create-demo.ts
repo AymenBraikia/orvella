@@ -50,7 +50,8 @@ const raw = JSON.parse(readFileSync(spec_path, "utf8"));
 // A lead demo config: its photos are site paths (/demos/<slug>/…), under public/.
 const is_lead = "locale" in raw;
 const spec: DemoSpec = is_lead ? from_lead(localize_config(raw as DemoStoreSource, (raw as DemoStoreSource).locale)) : raw;
-const folder = is_lead ? path.resolve("public") : path.dirname(path.resolve(spec_path));
+// A lead config's photos: site paths (under public/) and import-only paths from the project root.
+const folder = is_lead ? process.cwd() : path.dirname(path.resolve(spec_path));
 
 /** The products are written in the demo's own language; the store shows the config's other languages over them. */
 function from_lead(lead: DemoStoreConfig): DemoSpec {
@@ -72,7 +73,7 @@ function from_lead(lead: DemoStoreConfig): DemoSpec {
                 price: p.price,
                 ...(p.collection ? { collection: p.collection } : {}),
                 ...(p.details || p.dial ? { details: { ...p.details, ...(p.dial ? { dialColor: p.dial } : {}) } } : {}),
-                photos: p.images.map((src) => src.replace(/^\/+/, "")),
+                photos: [...p.images.map((src) => path.join("public", src)), ...(p.import_photos ?? [])].slice(0, 8),
             };
         }),
     };
