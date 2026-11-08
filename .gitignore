@@ -49,11 +49,16 @@ next-env.d.ts
 /public/dev-uploads
 .env*
 *.bat
-demos
 scripts
 
-!app
+
+
+*
+
+!app*
 !i18n
+!demos
+!demos/**
 !messages
 !public
 !tests
@@ -71,4 +76,5 @@ scripts
 !tsconfig.json
 !vercel.json
 !vitest.config.mts
-*
+
+*.md
