@@ -1,80 +1,98 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ==========================================
+# Ignore everything in the project root
+# ==========================================
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+/*
 
-# testing
-/coverage
 
-# next.js
-/.next/
-/out/
+# ==========================================
+# Website folders - INCLUDE
+# ==========================================
 
-# production
-/build
+!/app/
+!/app/**
+
+!/i18n/
+!/i18n/**
+
+!/demos/
+!/demos/**
+
+!/messages/
+!/messages/**
+
+!/public/
+!/public/**
+
+!/tests/
+!/tests/**
+
+
+# ==========================================
+# Root configuration files - INCLUDE
+# ==========================================
+
+!/.browserslistrc
+!/.env.example
+!/.gitignore
+!/.currency.ts
+!/currency.ts
+!/eslint.config.mjs
+!/image_loader.ts
+!/next.config.ts
+!/package.json
+!/package-lock.json
+!/postcss.config.mjs
+!/proxy.ts
+!/tsconfig.json
+!/vercel.json
+!/vitest.config.mts
+
+
+# ==========================================
+# Exclude unwanted files and folders
+# ==========================================
+
+# Scripts
+/scripts/
+
+# Local development files
 /local*
-# old local helper (wrote to the wrong database); replaced by scripts/create-admin.ts
-/scripts/make_admin.mjs
 
-# misc
-.DS_Store
+# Development uploads
+/public/dev-uploads/
+
+# Environment variables
+.env*
+
+# Markdown files (EVERYWHERE)
+*.md
+
+# Batch files
+*.bat
+
+# Certificates
 *.pem
 
-# debug
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env
-
-# vercel
-.vercel
-
-# typescript
+# TypeScript build cache
 *.tsbuildinfo
-next-env.d.ts
+/next-env.d.ts
 
+# Operating system files
+.DS_Store
 
-*.md
-# files uploaded in development without Vercel Blob
-/public/dev-uploads
-.env*
-*.bat
-scripts
-
-
-
-*
-
-!app*
-!i18n
-!demos
-!demos/**
-!messages
-!public
-!tests
-!.browserslistrc
-!.env.example
-!.gitignore
-!.currency.ts
-!eslint.config.mjs
-!image_loader.ts
-!next.config.js
-!package.json
-!package-lock.json
-!postcss.config.mjs
-!proxy.ts
-!tsconfig.json
-!vercel.json
-!vitest.config.mts
-
-*.md
+# Build outputs and dependencies
+/node_modules/
+/.next/
+/out/
+/build/
+/coverage/
+/.vercel/
+/.pnp
+.pnp.*
