@@ -6,17 +6,7 @@
     "label": "Private demo · Prepared for Clocks · Payments in test mode",
     "footer_note": "This page is a private demo prepared for Clocks. Payments are in test mode; no real payment is taken.",
     "description": "Clocks: pre-owned luxury watches. Rolex, Patek Philippe, Audemars Piguet, Omega and Richard Mille.",
-    "logo": {
-        "src": "/demos/clocks/logo.png",
-        "width": 440,
-        "height": 440
-    },
-    "logo_icon": {
-        "src": "/demos/clocks/logo-icon.png",
-        "width": 192,
-        "height": 192
-    },
-    "favicon": "/demos/clocks/favicon.png",
+
     "hero": {
         "title": "CLOCKS",
         "subtitle": "Pre-owned luxury watches",
