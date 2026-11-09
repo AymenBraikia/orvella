@@ -7,16 +7,16 @@
     "footer_note": "This page is a private demo prepared for Fayeq Watches. Payments are in test mode; no real payment is taken.",
     "description": "Fayeq Watches: pre-owned luxury watches in Discover Timeless Luxury At Fayeq Jewellery, Muscat, Oman.. Patek Philippe, Cartier, Vacheron Constantin, Rolex, Tudor, Franck Muller and Omega.",
     "logo": {
-        "src": "/demos/fayeq-watches/logo.png",
+        "src": "/logo.svg",
         "width": 440,
-        "height": 376
+        "height": 440
     },
     "logo_icon": {
-        "src": "/demos/fayeq-watches/logo-icon.png",
+        "src": "/logo-icon.svg",
         "width": 192,
-        "height": 164
+        "height": 192
     },
-    "favicon": "/demos/fayeq-watches/favicon.png",
+    "favicon": "/favicon.ico",
     "hero": {
         "title": "FAYEQ WATCHES",
         "subtitle": "Pre-owned luxury watches in Discover Timeless Luxury At Fayeq Jewellery, Muscat, Oman.",
@@ -84,18 +84,13 @@
     },
     "pieces": [
         {
-            "price":99999,
+            "price": 99999,
             "slug": "patek-philippe-nautilus-lects",
             "brand": "patek philippe",
             "model": "Nautilus",
             "description": "An icon of swiss haute horlogerie, the Patek Philippe nautilus 5168g-001 reflects exceptional craftsmanship, distinctive design, and enduring elegance. Full set with box and warranty card.",
-            "images": [
-                "/demos/fayeq-watches/watch-1.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/1-2.jpg",
-                "demo_assets/fayeq_watches/.web/1-3.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-1.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/1-2.jpg", "demo_assets/fayeq_watches/.web/1-3.jpg"],
             "collection": "sport",
             "details": {
                 "reference": "LECTS",
@@ -112,18 +107,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "cartier-santos-dumont-3",
             "brand": "cartier",
             "model": "Santos-Dumont",
             "description": "Cartier Santos-Dumont 31.4 mm in stainless steel, 2025. Full set with box and warranty card.",
-            "images": [
-                "/demos/fayeq-watches/watch-3.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/3-2.jpg",
-                "demo_assets/fayeq_watches/.web/3-3.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-3.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/3-2.jpg", "demo_assets/fayeq_watches/.web/3-3.jpg"],
             "collection": "classic",
             "details": {
                 "year": 2025,
@@ -139,14 +129,12 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "vacheron-constantin-chronograph-4",
             "brand": "vacheron constantin",
             "model": "Chronograph",
             "description": "Vacheron Constantin Chronograph 42.5 mm in stainless steel. Full set with box and warranty card. Unworn.",
-            "images": [
-                "/demos/fayeq-watches/watch-4.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-4.jpg"],
             "collection": "chronograph",
             "details": {
                 "movement": "Automatic",
@@ -161,20 +149,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-datejust-126200",
             "brand": "rolex",
             "model": "Datejust 31",
             "description": "Rolex Datejust 31 mm in stainless steel, 2025. Full set with box and warranty card.",
-            "images": [
-                "/demos/fayeq-watches/watch-5.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/5-2.jpg",
-                "demo_assets/fayeq_watches/.web/5-3.jpg",
-                "demo_assets/fayeq_watches/.web/5-4.jpg",
-                "demo_assets/fayeq_watches/.web/5-5.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-5.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/5-2.jpg", "demo_assets/fayeq_watches/.web/5-3.jpg", "demo_assets/fayeq_watches/.web/5-4.jpg", "demo_assets/fayeq_watches/.web/5-5.jpg"],
             "collection": "classic",
             "details": {
                 "reference": "126200",
@@ -191,21 +172,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-cosmograph-daytona-116520",
             "brand": "rolex",
             "model": "Cosmograph Daytona",
             "description": "Rolex Cosmograph Daytona in stainless steel with a white dial. Full set with box and warranty card.",
-            "images": [
-                "/demos/fayeq-watches/watch-6.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/6-2.jpg",
-                "demo_assets/fayeq_watches/.web/6-3.jpg",
-                "demo_assets/fayeq_watches/.web/6-4.jpg",
-                "demo_assets/fayeq_watches/.web/6-5.jpg",
-                "demo_assets/fayeq_watches/.web/6-6.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-6.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/6-2.jpg", "demo_assets/fayeq_watches/.web/6-3.jpg", "demo_assets/fayeq_watches/.web/6-4.jpg", "demo_assets/fayeq_watches/.web/6-5.jpg", "demo_assets/fayeq_watches/.web/6-6.jpg"],
             "collection": "chronograph",
             "dial": "White",
             "details": {
@@ -221,20 +194,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-oyster-perpetual-124200",
             "brand": "rolex",
             "model": "Oyster Perpetual 34",
             "description": "Rolex Oyster Perpetual 34 mm with a blue dial, 2026. Full set with box and warranty card. Unworn.",
-            "images": [
-                "/demos/fayeq-watches/watch-7.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/7-2.jpg",
-                "demo_assets/fayeq_watches/.web/7-3.jpg",
-                "demo_assets/fayeq_watches/.web/7-4.jpg",
-                "demo_assets/fayeq_watches/.web/7-5.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-7.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/7-2.jpg", "demo_assets/fayeq_watches/.web/7-3.jpg", "demo_assets/fayeq_watches/.web/7-4.jpg", "demo_assets/fayeq_watches/.web/7-5.jpg"],
             "collection": "classic",
             "dial": "Blue",
             "details": {
@@ -252,20 +218,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-oyster-perpetual-124300",
             "brand": "rolex",
             "model": "Oyster Perpetual 41",
             "description": "Rolex Oyster Perpetual 41 mm, 2023. Full set with box and warranty card. Unworn.",
-            "images": [
-                "/demos/fayeq-watches/watch-8.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/8-2.jpg",
-                "demo_assets/fayeq_watches/.web/8-3.jpg",
-                "demo_assets/fayeq_watches/.web/8-4.jpg",
-                "demo_assets/fayeq_watches/.web/8-5.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-8.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/8-2.jpg", "demo_assets/fayeq_watches/.web/8-3.jpg", "demo_assets/fayeq_watches/.web/8-4.jpg", "demo_assets/fayeq_watches/.web/8-5.jpg"],
             "collection": "classic",
             "details": {
                 "reference": "124300",
@@ -282,20 +241,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-datejust-279173",
             "brand": "rolex",
             "model": "Datejust 28",
             "description": "Rolex Datejust 28 mm in steel & gold, 2024. Full set with box and warranty card.",
-            "images": [
-                "/demos/fayeq-watches/watch-9.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/9-2.jpg",
-                "demo_assets/fayeq_watches/.web/9-3.jpg",
-                "demo_assets/fayeq_watches/.web/9-4.jpg",
-                "demo_assets/fayeq_watches/.web/9-5.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-9.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/9-2.jpg", "demo_assets/fayeq_watches/.web/9-3.jpg", "demo_assets/fayeq_watches/.web/9-4.jpg", "demo_assets/fayeq_watches/.web/9-5.jpg"],
             "collection": "classic",
             "details": {
                 "reference": "279173",
@@ -312,14 +264,12 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-sky-dweller-326934",
             "brand": "rolex",
             "model": "Sky-Dweller",
             "description": "Rolex Sky-Dweller 42 mm in 18k white gold with a black dial, 2023. Full set with box and warranty card.",
-            "images": [
-                "/demos/fayeq-watches/watch-10.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-10.jpg"],
             "import_photos": [
                 "demo_assets/fayeq_watches/.web/10-2.jpg",
                 "demo_assets/fayeq_watches/.web/10-3.jpg",
@@ -344,17 +294,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-datejust-178383",
             "brand": "rolex",
             "model": "Datejust 31",
             "description": "Rolex Datejust 31 mm in steel & gold, 2014. Watch only.",
-            "images": [
-                "/demos/fayeq-watches/watch-11.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/11-2.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-11.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/11-2.jpg"],
             "collection": "classic",
             "details": {
                 "reference": "178383",
@@ -371,18 +317,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-gmt-master-ii-116710",
             "brand": "rolex",
             "model": "GMT-Master II",
             "description": "Rolex GMT-Master II 40 mm with a black diamond dial. Watch only.",
-            "images": [
-                "/demos/fayeq-watches/watch-12.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/12-2.jpg",
-                "demo_assets/fayeq_watches/.web/12-3.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-12.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/12-2.jpg", "demo_assets/fayeq_watches/.web/12-3.jpg"],
             "collection": "gmt",
             "dial": "Black Diamond",
             "details": {
@@ -399,20 +340,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-watch-126300",
             "brand": "rolex",
             "model": "Watch",
             "description": "Rolex Watch 41 mm, 2025. Full set with box and warranty card. Unworn.",
-            "images": [
-                "/demos/fayeq-watches/watch-13.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/13-2.jpg",
-                "demo_assets/fayeq_watches/.web/13-3.jpg",
-                "demo_assets/fayeq_watches/.web/13-4.jpg",
-                "demo_assets/fayeq_watches/.web/13-5.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-13.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/13-2.jpg", "demo_assets/fayeq_watches/.web/13-3.jpg", "demo_assets/fayeq_watches/.web/13-4.jpg", "demo_assets/fayeq_watches/.web/13-5.jpg"],
             "collection": "classic",
             "details": {
                 "reference": "126300",
@@ -429,14 +363,12 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-gmt-master-ii-14",
             "brand": "rolex",
             "model": "GMT-Master II",
             "description": "Rolex GMT-Master II 40 mm, 2024. Full set with box and warranty card.",
-            "images": [
-                "/demos/fayeq-watches/watch-14.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-14.jpg"],
             "import_photos": [
                 "demo_assets/fayeq_watches/.web/14-2.jpg",
                 "demo_assets/fayeq_watches/.web/14-3.jpg",
@@ -459,14 +391,12 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-submariner-16613",
             "brand": "rolex",
             "model": "Submariner",
             "description": "Rolex Submariner 40 mm in steel & gold, 2001. Watch only.",
-            "images": [
-                "/demos/fayeq-watches/watch-15.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-15.jpg"],
             "import_photos": [
                 "demo_assets/fayeq_watches/.web/15-2.jpg",
                 "demo_assets/fayeq_watches/.web/15-3.jpg",
@@ -490,19 +420,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "tudor-black-bay-chrono-16",
             "brand": "tudor",
             "model": "Black Bay Chrono",
             "description": "Tudor Black Bay Chrono 41 mm in stainless steel with a pink dial, 2024. Full set with box and warranty card.",
-            "images": [
-                "/demos/fayeq-watches/watch-16.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/16-2.jpg",
-                "demo_assets/fayeq_watches/.web/16-3.jpg",
-                "demo_assets/fayeq_watches/.web/16-4.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-16.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/16-2.jpg", "demo_assets/fayeq_watches/.web/16-3.jpg", "demo_assets/fayeq_watches/.web/16-4.jpg"],
             "collection": "chronograph",
             "dial": "Pink",
             "details": {
@@ -519,14 +443,12 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "cartier-santos-17",
             "brand": "cartier",
             "model": "Santos",
             "description": "Cartier Santos 39.8 mm in stainless steel with a green dial, 2025. Full set with box and warranty card. Unworn.",
-            "images": [
-                "/demos/fayeq-watches/watch-17.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-17.jpg"],
             "import_photos": [
                 "demo_assets/fayeq_watches/.web/17-2.jpg",
                 "demo_assets/fayeq_watches/.web/17-3.jpg",
@@ -550,20 +472,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "rolex-sky-dweller-336934",
             "brand": "rolex",
             "model": "Sky-Dweller",
             "description": "Rolex Sky-Dweller 42 mm with a blue dial, 2025. Full set with box and warranty card. Unworn.",
-            "images": [
-                "/demos/fayeq-watches/watch-18.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/18-2.jpg",
-                "demo_assets/fayeq_watches/.web/18-3.jpg",
-                "demo_assets/fayeq_watches/.web/18-4.jpg",
-                "demo_assets/fayeq_watches/.web/18-5.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-18.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/18-2.jpg", "demo_assets/fayeq_watches/.web/18-3.jpg", "demo_assets/fayeq_watches/.web/18-4.jpg", "demo_assets/fayeq_watches/.web/18-5.jpg"],
             "collection": "gmt",
             "dial": "Blue",
             "details": {
@@ -581,19 +496,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "franck-muller-watch-19",
             "brand": "franck muller",
             "model": "Watch",
             "description": "A rare statement of exclusivity, crafted for true collectors. Full set with box and warranty card. Unworn.",
-            "images": [
-                "/demos/fayeq-watches/watch-19.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/19-2.jpg",
-                "demo_assets/fayeq_watches/.web/19-3.jpg",
-                "demo_assets/fayeq_watches/.web/19-4.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-19.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/19-2.jpg", "demo_assets/fayeq_watches/.web/19-3.jpg", "demo_assets/fayeq_watches/.web/19-4.jpg"],
             "collection": "classic",
             "dial": "Black",
             "details": {
@@ -610,20 +519,13 @@
             }
         },
         {
-            "price":99999,
+            "price": 99999,
             "slug": "omega-seamaster-20",
             "brand": "omega",
             "model": "Seamaster",
             "description": "Omega Seamaster 45.5 mm, 2024. Full set with box and warranty card. Unworn.",
-            "images": [
-                "/demos/fayeq-watches/watch-20.jpg"
-            ],
-            "import_photos": [
-                "demo_assets/fayeq_watches/.web/20-2.jpg",
-                "demo_assets/fayeq_watches/.web/20-3.jpg",
-                "demo_assets/fayeq_watches/.web/20-4.jpg",
-                "demo_assets/fayeq_watches/.web/20-5.jpg"
-            ],
+            "images": ["/demos/fayeq-watches/watch-20.jpg"],
+            "import_photos": ["demo_assets/fayeq_watches/.web/20-2.jpg", "demo_assets/fayeq_watches/.web/20-3.jpg", "demo_assets/fayeq_watches/.web/20-4.jpg", "demo_assets/fayeq_watches/.web/20-5.jpg"],
             "collection": "diver",
             "details": {
                 "year": 2024,
