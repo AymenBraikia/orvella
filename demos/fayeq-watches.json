@@ -8,13 +8,13 @@
     "description": "Fayeq Watches: pre-owned luxury watches in Discover Timeless Luxury At Fayeq Jewellery, Muscat, Oman.. Patek Philippe, Cartier, Vacheron Constantin, Rolex, Tudor, Franck Muller and Omega.",
     "logo": {
         "src": "/logo.svg",
-        "width": 440,
-        "height": 440
+        "width": 200,
+        "height": 150
     },
     "logo_icon": {
-        "src": "/logo-icon.svg",
-        "width": 192,
-        "height": 192
+        "src": "/logo_simple.svg",
+        "width": 100,
+        "height": 100
     },
     "favicon": "/favicon.ico",
     "hero": {
