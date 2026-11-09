@@ -1,0 +1,304 @@
+{
+    "slug": "965-seconds",
+    "locale": "en",
+    "name": "965 Seconds",
+    "accent": "#C39D60",
+    "label": "Private demo · Prepared for 965 Seconds · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for 965 Seconds. Payments are in test mode; no real payment is taken.",
+    "description": "965 Seconds: pre-owned luxury watches. Rolex, Patek Philippe and Audemars Piguet.",
+    "logo": {
+        "src": "/demos/965-seconds/logo.png",
+        "width": 440,
+        "height": 472
+    },
+    "logo_icon": {
+        "src": "/demos/965-seconds/logo-icon.png",
+        "width": 192,
+        "height": 206
+    },
+    "favicon": "/demos/965-seconds/favicon.png",
+    "hero": {
+        "title": "965 SECONDS",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/965-seconds/hero-poster.jpg",
+        "desktop_image": "/demos/965-seconds/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/965-seconds/watch-1.jpg"
+            },
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/965-seconds/watch-3.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/965-seconds/watch-11.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/965-seconds/trade.jpg",
+    "banner": {
+        "light": "/demos/965-seconds/banner-light.jpg",
+        "dark": "/demos/965-seconds/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "965 Seconds is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Rolex, Patek Philippe and Audemars Piguet, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "rolex-watch-127336",
+            "brand": "rolex",
+            "model": "Watch “Ice Blue”",
+            "description": "The ultra-rare Rolex land-dweller in platinum w/ Ice Blue dial…. Watch only.",
+            "images": ["/demos/965-seconds/watch-1.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "127336",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-day-date-2",
+            "brand": "patek philippe",
+            "model": "Day-Date 36",
+            "description": "Patek Philippe Day-Date 36 mm. Watch only.",
+            "images": ["/demos/965-seconds/watch-2.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-nautilus-3",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "description": "The beautiful Patek Philippe nautilus 32 mm in rose gold…. Watch only.",
+            "images": ["/demos/965-seconds/watch-3.jpg"],
+            "collection": "sport",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "caseDiameterMm": 32,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-watch-7300-1200r",
+            "brand": "patek philippe",
+            "model": "Watch",
+            "description": "Patek Philippe Watch in 18k rose gold. Watch only.",
+            "images": ["/demos/965-seconds/watch-6.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "7300/1200R",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-watch-5205g",
+            "brand": "patek philippe",
+            "model": "Watch",
+            "description": "Patek Philippe Watch 40 mm with a blue dial. Watch only.",
+            "images": ["/demos/965-seconds/watch-7.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "5205G",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-nautilus-7010r",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "description": "Patek Philippe Nautilus 32 mm. Watch only.",
+            "images": ["/demos/965-seconds/watch-8.jpg"],
+            "collection": "sport",
+            "details": {
+                "reference": "7010R",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 32,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-10",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "Audemars Piguet Royal Oak 41 mm with a blue dial. Watch only.",
+            "images": ["/demos/965-seconds/watch-10.jpg"],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-lection",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona in 18k yellow gold with a meteorite dial. Watch only.",
+            "images": ["/demos/965-seconds/watch-11.jpg"],
+            "collection": "chronograph",
+            "dial": "Meteorite",
+            "details": {
+                "reference": "LECTION",
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-12",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona with a meteorite dial. Watch only.",
+            "images": ["/demos/965-seconds/watch-12.jpg"],
+            "collection": "chronograph",
+            "dial": "Meteorite",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-day-date-14",
+            "brand": "rolex",
+            "model": "Day-Date 36",
+            "description": "Rolex Day-Date 36 mm with a blue dial. Watch only.",
+            "images": ["/demos/965-seconds/watch-14.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-16",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "Audemars Piguet Royal Oak 37 mm. Watch only.",
+            "images": ["/demos/965-seconds/watch-16.jpg"],
+            "collection": "sport",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 37,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}
