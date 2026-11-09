@@ -6,7 +6,17 @@
     "label": "Private demo · Prepared for Fayeq Watches · Payments in test mode",
     "footer_note": "This page is a private demo prepared for Fayeq Watches. Payments are in test mode; no real payment is taken.",
     "description": "Fayeq Watches: pre-owned luxury watches in Discover Timeless Luxury At Fayeq Jewellery, Muscat, Oman.. Patek Philippe, Cartier, Vacheron Constantin, Rolex, Tudor, Franck Muller and Omega.",
-   
+    "logo": {
+        "src": "/demos/fayeq-watches/logo.png",
+        "width": 440,
+        "height": 376
+    },
+    "logo_icon": {
+        "src": "/demos/fayeq-watches/logo-icon.png",
+        "width": 192,
+        "height": 164
+    },
+    "favicon": "/demos/fayeq-watches/favicon.png",
     "hero": {
         "title": "FAYEQ WATCHES",
         "subtitle": "Pre-owned luxury watches in Discover Timeless Luxury At Fayeq Jewellery, Muscat, Oman.",

@@ -7,7 +7,17 @@
     "label": "Private demo · Prepared for Star Watches · Payments in test mode",
     "footer_note": "This page is a private demo prepared for Star Watches. Payments are in test mode; no real payment is taken.",
     "description": "Star Watches: pre-owned luxury watches in Mumbai. Rolex, Omega, Panerai and Cartier.",
-
+    "logo": {
+        "src": "/demos/star-watches/logo.png",
+        "width": 440,
+        "height": 415
+    },
+    "logo_icon": {
+        "src": "/demos/star-watches/logo-icon.png",
+        "width": 192,
+        "height": 181
+    },
+    "favicon": "/demos/star-watches/favicon.png",
     "hero": {
         "title": "STAR WATCHES",
         "subtitle": "Pre-owned luxury watches in Mumbai",
