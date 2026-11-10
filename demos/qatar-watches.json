@@ -1,0 +1,627 @@
+{
+    "slug": "qatar-watches",
+    "locale": "en",
+    "name": "Qatar Watches",
+    "label": "Private demo · Prepared for Qatar Watches · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for Qatar Watches. Payments are in test mode; no real payment is taken.",
+    "description": "Qatar Watches: pre-owned luxury watches. Rolex, Vacheron Constantin, Breitling, Chopard, Hublot and Cartier.",
+    "logo": {
+        "src": "/demos/qatar-watches/logo.png",
+        "width": 440,
+        "height": 197
+    },
+    "logo_icon": {
+        "src": "/demos/qatar-watches/logo-icon.png",
+        "width": 192,
+        "height": 86
+    },
+    "favicon": "/demos/qatar-watches/favicon.png",
+    "hero": {
+        "title": "QATAR WATCHES",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/qatar-watches/hero-poster.jpg",
+        "desktop_image": "/demos/qatar-watches/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/qatar-watches/watch-2.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": "GMT",
+                "image": "/demos/qatar-watches/watch-1.jpg"
+            },
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/qatar-watches/watch-22.jpg"
+            },
+            {
+                "key": "diver",
+                "name": "Diver",
+                "image": "/demos/qatar-watches/watch-6.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/qatar-watches/watch-7.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/qatar-watches/trade.jpg",
+    "banner": {
+        "light": "/demos/qatar-watches/banner-light.jpg",
+        "dark": "/demos/qatar-watches/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "Qatar Watches is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Rolex, Vacheron Constantin, Breitling, Chopard, Hublot and Cartier, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-1",
+            "brand": "rolex",
+            "model": "GMT-Master II",
+            "description": "Rolex GMT-Master II - black dial with a two-colour 24-hour bezel and Jubilee-style bracelet. the watch has a round stainless-steel-looking case, a black dial, luminous circular and rectangular hour plots, and a larger inverted-triangle marker at 12. the hands include a broad luminous hour hand, a luminous minute hand, a seconds hand, and the distinctive additional 24-hour gmt hand. the rotating bezel is divided into a dark upper section and a blue lower section, with white 24-hour numerals and a triangle at the top. a date window sits at 3 o’clock under a magnifying cyclops lens. the five-row metal bracelet has brushed outer links and brighter centre links. the crown and crown guards are visible on the right side of the case. the watch is photographed alone in a deep-blue presentation box. Comes with the box.",
+            "images": ["/demos/qatar-watches/watch-1.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-erence",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust-style two-tone watch - a dress watch with a light ivory/pearl-toned dial, a yellow-gold-coloured fluted bezel, and a two-tone metal bracelet. the round dial has gold-coloured hands and applied hour markers; several of the hour positions appear to be set with bright stones, matching the sparkling stone-set bezel around the crystal. a framed date aperture is positioned at 3 o’clock and enlarged by a cyclops magnifier. the bracelet combines silvery outer links with warmer gold-coloured centre links and has the multi-row Jubilee design. the crown is on the right side of the case. the photograph is taken inside a blue watch box, with the bracelet laid vertically around the cushion. the precise dial material, stone type, metal grades, reference, and dimensions cannot be confirmed from the photograph alone. Comes with the box.",
+            "images": ["/demos/qatar-watches/watch-2.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-watch-erence",
+            "brand": "vacheron constantin",
+            "model": "Watch",
+            "description": "Vacheron constantin calendar watch - a traditional dress watch with a pale silver/ivory dial and a dark blue leather strap. the round case has a polished appearance and a narrow bezel. the dial uses a mixed arabic-numeral layout, with large numerals around the main hour track and a detailed calendar scale printed around the outer edge. two small apertures at 12 o’clock display the day and month; in the photograph they read saturday and october. a small seconds register is positioned at 6 o’clock, and a slender central hand with a red tip appears to indicate the date against the peripheral 1-31 scale. the hands are blued or dark-coloured, creating contrast against the light dial. the strap is stitched dark blue leather with a traditional buckle. the watch is presented in a blue-lined box. no exact reference or movement specification is legible. Comes with the box.",
+            "images": ["/demos/qatar-watches/watch-3.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-erence",
+            "brand": "rolex",
+            "model": "GMT-Master II “Pepsi”",
+            "description": "Rolex GMT-Master II Pepsi-style - a stainless-steel sports watch with a black dial, a red-and-blue 24-hour bezel, and a Jubilee-style bracelet. the bezel has white 24-hour numerals, with the red half marking daytime hours and the blue half marking nighttime hours. the dial has luminous round and rectangular hour markers, a triangle at 12, luminous central hour and minute hands, a seconds hand, and a separate 24-hour gmt hand. a date display at 3 o’clock is covered by a cyclops magnifier. the case has a fluted-edge rotating bezel, crown guards, and a screw-down crown on the right. the five-row bracelet alternates brushed and polished-looking links. the watch is pictured on a cream cushion with a green Rolex presentation box, international-guarantee booklet/card, and green hang tag in the background. the photograph does not establish the watch’s authenticity or exact reference. Full set with box and warranty card.",
+            "images": ["/demos/qatar-watches/watch-4.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-lective",
+            "brand": "rolex",
+            "model": "GMT-Master II",
+            "description": "Rolex GMT-Master II-style - a stainless-steel watch with a black dial and a dark black-and-blue 24-hour bezel. the bezel is marked with white numerals around the full 24-hour scale and has a triangular zero marker at 12. the dial features luminous circular, rectangular, and triangular hour markers, luminous central hands, a seconds hand, and an additional gmt hand for a second time zone. a date window with a magnifying cyclops lens appears at 3 o’clock. the case has a substantial sports-watch profile, crown guards, and a screw-down crown on the right. it is fitted with a five-row Jubilee-style metal bracelet with a mix of brushed and reflective surfaces. the watch is photographed diagonally on a cream-coloured display cushion, with the dial and bezel fully visible. exact case dimensions, metal grade, movement, and reference number are not readable in the image. Watch only.",
+            "images": ["/demos/qatar-watches/watch-5.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "LECTIVE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-erences",
+            "brand": "rolex",
+            "model": "Submariner",
+            "description": "Rolex Submariner-style diver’s watch - a stainless-steel sports watch with a black dial, black rotating dive bezel, and three-link Oyster-style bracelet. the bezel has a dark insert with a white minute scale, large numerals at the ten-minute intervals, and a luminous triangle at 12. the dial has large luminous circular and rectangular hour markers, an inverted triangle at 12, and broad luminous hour and minute hands for visibility. a central seconds hand is also visible. no date window is apparent in this front view. the round case has protective shoulders around the crown on the right, and the bracelet uses broad brushed-looking links with polished edges. the watch is displayed on a cream cushion with green Rolex-branded packaging and a green guarantee booklet/card behind it. the packaging text references the Submariner line, but the image alone cannot verify the exact reference, dimensions, movement, or authenticity. Watch only.",
+            "images": ["/demos/qatar-watches/watch-6.jpg"],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "reference": "ERENCES",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "breitling-navitimer-erence",
+            "brand": "breitling",
+            "model": "Navitimer",
+            "description": "Breitling navitimer-style chronograph - a stainless-steel aviation watch with a black dial, a highly detailed circular slide-rule bezel, and a multi-row metal bracelet. the outer bezel and inner scales are densely printed with white numerals, graduations, and calculations used by the navitimer’s aviation slide rule. the main dial has three recessed chronograph sub-dials, contrasting white markings, and a red central chronograph seconds hand. a date aperture is visible near the lower-right side of the dial. the hour markers and hands are light-coloured for contrast against the black background. two chronograph pushers and a winding crown project from the right side of the case. the metal bracelet has multiple narrow rows of links and a polished appearance. the image is a clean, isolated product-style photograph against a dark background. exact model, reference, movement, and case measurements are not legible. Watch only.",
+            "images": ["/demos/qatar-watches/watch-7.jpg"],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-lective",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust - a stainless-steel dress watch with a silver/grey dial, roman-numeral hour markers, a fluted bezel, and a Jubilee-style bracelet. the round dial has dark roman numerals around the perimeter, slender central hands, and a date aperture at 3 o’clock enlarged by a cyclops magnifier. the dial also shows the Rolex crown and the familiar Oyster perpetual/Datejust-style text. the bezel has pronounced fluting that catches the light around the crystal. the five-row bracelet alternates broad centre links with smaller side links and has a mixture of brushed and reflective surfaces. the watch is displayed upright on a cream cushion inside a presentation box; a green Rolex-branded card or guarantee document is visible behind it. the photograph does not confirm the exact dial finish, bracelet metal grade, case size, reference, or authenticity. Full set with box and warranty card.",
+            "images": ["/demos/qatar-watches/watch-8.jpg"],
+            "collection": "classic",
+            "dial": "Grey",
+            "details": {
+                "reference": "LECTIVE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-erence-9",
+            "brand": "rolex",
+            "model": "GMT-Master II",
+            "description": "Rolex GMT-Master II-style - a stainless-steel sports watch with a black dial and a bi-colour black-and-blue 24-hour rotating bezel. white 24-hour numerals and a triangular marker at 12 are printed around the bezel. the dial contains luminous circular and rectangular hour markers, an inverted triangle at 12, luminous central hour and minute hands, a seconds hand, and a separate gmt hand for tracking another time zone. the date appears in a window at 3 o’clock beneath a cyclops magnifier. the round case has crown guards and a screw-down crown on the right side. it is fitted with a three-link Oyster-style bracelet, whose wide outer links have a brushed look and whose centre surfaces catch the light. the watch is shown straight-on on a light display cushion. no exact reference, case size, movement, or material grade can be established from this photograph. Watch only.",
+            "images": ["/demos/qatar-watches/watch-9.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-oyster-perpetual-number",
+            "brand": "rolex",
+            "model": "Oyster Perpetual",
+            "description": "Rolex Oyster perpetual-style - a simple stainless-steel time-and-date-free wristwatch with a warm silver/champagne dial and a three-link Oyster-style bracelet. the round dial has slim applied baton hour markers, a small minute track around the perimeter, central hour and minute hands, and a slender seconds hand. the Rolex crown and Oyster perpetual wording are visible on the dial. there is no date aperture. the bezel is smooth and polished-looking, giving the watch a restrained, clean profile. the case has a winding crown at 3 o’clock and is attached to a broad metal bracelet made from three-piece links with brushed-looking outer surfaces and brighter centre facets. the watch is photographed front-on against a dark, textured display cushion. exact dial colour, dimensions, metal composition, movement, and reference number are not established by the image. Watch only.",
+            "images": ["/demos/qatar-watches/watch-10.jpg"],
+            "collection": "classic",
+            "dial": "Champagne",
+            "details": {
+                "reference": "NUMBER",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-oyster-perpetual-11",
+            "brand": "rolex",
+            "model": "Oyster Perpetual",
+            "description": "Rolex Oyster perpetual-style - a stainless-steel watch with a pale mint-green dial, a smooth rounded bezel, and an Oyster-style three-link bracelet. the dial is uncluttered and has applied rectangular baton hour markers with luminous-looking centres, a small minute scale around the outer edge, central hour and minute hands, and a slim seconds hand. the Rolex crown and Oyster perpetual text are positioned below 12 o’clock, with chronometer wording above 6. there is no visible date window. the polished-looking case has a screw-down crown on the right and flowing lugs that meet the bracelet. some transparent protective wrapping is still visible around parts of the bracelet and case, suggesting the watch is being presented as new or unworn; the image cannot establish its actual condition. it is photographed on a dark padded cushion. Watch only. Unworn.",
+            "images": ["/demos/qatar-watches/watch-11.jpg"],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-sea-dweller-and",
+            "brand": "rolex",
+            "model": "Sea-Dweller",
+            "description": "Rolex sea-dweller-style diver’s watch - a stainless-steel watch with a black dial, black rotating dive bezel, and three-link Oyster-style bracelet. the bezel carries a white 60-minute scale with large numerals, minute graduations, and a luminous triangle at 12. on the dial, large luminous circular and rectangular markers are arranged around the perimeter, with an inverted triangle at 12 and broad luminous hour and minute hands. the red sea-dweller line of text stands out above the lower dial text, and the depth rating is printed below it. a date window at 3 o’clock is magnified by a cyclops lens. the case has a screw-down crown and protective crown guards on the right; a helium-escape-valve-style protrusion is visible on the case flank. the watch is photographed upright on a cream cushion with green Rolex packaging and a green hang tag nearby. exact reference and specifications are not confirmed by the photo. Watch only.",
+            "images": ["/demos/qatar-watches/watch-12.jpg"],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "reference": "AND",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-erence",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex cosmograph Daytona-style chronograph - a stainless-steel sports chronograph with a white dial, three contrasting black sub-dials, a dark tachymeter bezel, and a metal Oyster-style bracelet. the black bezel is printed with a tachymeter scale and prominent numerals around the outer edge. the dial has three recessed chronograph counters at the 3, 6, and 9 o’clock positions, slim applied hour markers, central hour and minute hands, and a red-tipped central chronograph seconds hand. the Rolex crown and cosmograph Daytona wording are visible on the dial. the case has a winding crown and chronograph pushers on the right side. the bracelet consists of broad three-piece links, and protective film appears to remain on parts of the watch. the watch rests on a dark padded cushion. the exact reference, movement, case dimensions, and material composition cannot be verified from the image. Watch only.",
+            "images": ["/demos/qatar-watches/watch-13.jpg"],
+            "collection": "chronograph",
+            "dial": "White",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-and",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust with a blue dial. Watch only.",
+            "images": ["/demos/qatar-watches/watch-15.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "AND",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "chopard-watch-erence",
+            "brand": "chopard",
+            "model": "Watch",
+            "description": "Chopard alpine eagle-style watch - an integrated-bracelet sports watch with a dark charcoal/green textured dial and a distinctive round bezel secured by visible screws. the dial has a radiating, feather-like or sunburst texture, large roman numerals at 12 and 6, slim baton hour markers at the other positions, and central luminous-looking hands. a small date window is set near 4:30. the Chopard name and automatic wording are printed in the centre area of the dial. the case and bracelet appear to be in a matching silvery metal finish. the bezel has a broad, sculpted profile with regularly spaced exposed screw heads, while the integrated bracelet uses wide, stepped links that taper toward the clasp. the watch is photographed on a light background with the dial shown straight-on. exact case dimensions, metal grade, reference, and movement calibre are not visible. Watch only.",
+            "images": ["/demos/qatar-watches/watch-16.jpg"],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "hublot-chronograph-17",
+            "brand": "hublot",
+            "model": "Chronograph",
+            "description": "Hublot-style chronograph - a substantial sports watch with a black dial, dark grey metal-looking case, exposed bezel screws, and an olive-green rubber strap. the round dial contains two recessed chronograph sub-dials, one on each side of the centre, with fine white graduations and hands. applied hour markers and central hands contrast against the dark face. the case has a broad bezel with visible screw heads around its perimeter and chronograph pushers flanking the crown on the right. the strap has a ribbed inner surface and a matte green finish, attached to the case with broad lugs. a Hublot logo is visible beneath 12 o’clock. the watch is held in a person’s hand against a neutral indoor background, which gives a clear view of its thickness, side controls, and strap. the image does not confirm the exact Hublot model, case material, movement, or dimensions. Watch only.",
+            "images": ["/demos/qatar-watches/watch-17.jpg"],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Rubber strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-lective-18",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust-style watch - a stainless-steel watch with a muted green dial, a smooth polished-looking bezel, and a Jubilee-style metal bracelet. the dial has applied baton hour markers, central hour and minute hands, a seconds hand, and a date window at 3 o’clock under a cyclops magnifier. the Rolex crown and Datejust wording are visible on the dial. the round case has a crown on the right, and its lugs transition into a five-row bracelet with alternating brushed and reflective link surfaces. the green dial is the defining colour detail, contrasted by the bright silvery case and bracelet. the watch is displayed upright on a cream-coloured cushion, with green Rolex-branded packaging visible in the background. exact dial finish, case size, reference, movement, and metal grade are not confirmed by this photograph. Watch only.",
+            "images": ["/demos/qatar-watches/watch-18.jpg"],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "reference": "LECTIVE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-erence-19",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust - a stainless-steel dress watch with a silver/grey dial, dark roman-numeral hour markers, a fluted bezel, and a Jubilee-style bracelet. the dial has central hour, minute, and seconds hands, a fine outer minute track, and a date aperture at 3 o’clock magnified by a cyclops lens. the Rolex crown and Datejust/Oyster perpetual-style dial text are visible. the fluted bezel has repeated ridges around the crystal, and the five-row bracelet combines wide centre links with smaller outer links for a layered appearance. the case and bracelet have a bright silvery finish. the watch is positioned diagonally on a cream display cushion inside an open presentation box, with a green Rolex-branded interior visible around it. the image does not establish its exact reference, dimensions, movement, or authenticity. Comes with the box.",
+            "images": ["/demos/qatar-watches/watch-19.jpg"],
+            "collection": "classic",
+            "dial": "Grey",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-oyster-perpetual-lective",
+            "brand": "rolex",
+            "model": "Oyster Perpetual",
+            "description": "Rolex Oyster perpetual-style watch - a stainless-steel watch with a bright turquoise/light-blue dial, smooth bezel, and three-link Oyster-style bracelet. the dial is simple and symmetrical, with applied rectangular baton hour markers, central hour and minute hands, a slim seconds hand, and a small minute track around the perimeter. the Rolex crown and Oyster perpetual wording are visible below 12 o’clock, with chronometer text above 6. there is no date window. the round case has a polished-looking bezel and a winding crown on the right. the bracelet uses broad, solid-looking links with brushed outer surfaces and reflective centre facets. the watch is photographed on a cream cushion, with a green Rolex international-guarantee booklet/card and a branded green hang tag in the background. the exact dial finish, case size, metal grade, reference, and authenticity cannot be confirmed from the photo. Watch only.",
+            "images": ["/demos/qatar-watches/watch-20.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "LECTIVE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-date-erence",
+            "brand": "rolex",
+            "model": "Submariner Date",
+            "description": "Rolex Submariner date-style diver’s watch - a stainless-steel sports watch with a black dial, black rotating dive bezel, and three-link Oyster-style bracelet. the bezel has a white 60-minute scale, large numerals at ten-minute intervals, and a luminous triangle at 12. the black dial uses luminous circular and rectangular hour markers, an inverted triangle at 12, and broad luminous hour and minute hands. a date aperture at 3 o’clock is magnified by a cyclops lens; the displayed date appears to be 25. the dial text identifies the Submariner line. the case has crown guards around the screw-down crown, and the bracelet has broad brushed-looking links. the watch is laid on a white cushion inside or beside a green presentation box, with white packaging fabric visible around it. exact reference, dimensions, water-resistance rating, movement, and authenticity are not verifiable from this image. Comes with the box.",
+            "images": ["/demos/qatar-watches/watch-21.jpg"],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-yacht-master-erence",
+            "brand": "rolex",
+            "model": "Yacht-Master",
+            "description": "Rolex Yacht-Master-style watch - a stainless-steel-looking luxury sports watch with a deep blue dial, a pale metallic bidirectional-style 60-minute bezel, and an Oyster-style bracelet. the bezel has large raised or engraved numerals at the ten-minute positions and fine minute graduations. the dial has luminous circular and rectangular hour markers, an inverted triangle at 12, central luminous hour and minute hands, a red seconds hand, and a date window at 3 o’clock under a cyclops magnifier. the Rolex crown and Yacht-Master line wording are visible on the dial. the case has crown guards and a screw-down crown on the right. the metal bracelet is made of three broad links across each row. the watch is shown at an angle on a cream display cushion. the photograph cannot establish the exact reference, metal composition, bezel material, dimensions, or movement. Watch only.",
+            "images": ["/demos/qatar-watches/watch-22.jpg"],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-lective-23",
+            "brand": "rolex",
+            "model": "GMT-Master II",
+            "description": "Rolex GMT-Master II-style - a stainless-steel watch with a black dial, black-and-blue 24-hour bezel, and three-link Oyster-style bracelet. the rotating bezel has white 24-hour numerals and a triangular marker at 12; its two contrasting colour sections distinguish the two halves of the day. the black dial features luminous circular and rectangular hour plots, a triangle at 12, broad luminous hour and minute hands, a central seconds hand, and an additional gmt hand for a second time zone. a date window at 3 o’clock is covered by a cyclops magnifier. the round case has crown guards and a screw-down crown at the right. the broad three-link bracelet has brushed-looking outer links and reflective centre surfaces. the watch is presented straight-on on a cream cushion. the exact reference, dimensions, movement calibre, and metal grade are not legible. Watch only.",
+            "images": ["/demos/qatar-watches/watch-23.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "LECTIVE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-explorer-erence",
+            "brand": "rolex",
+            "model": "Explorer",
+            "description": "Rolex explorer-style watch - a stainless-steel sports watch with a black dial, smooth bezel, and three-link Oyster-style bracelet. the dial is highly legible and uses the explorer’s familiar arabic numerals at 3, 6, and 9, with a triangle marker at 12 and slim baton markers at the remaining hour positions. the hour and minute hands are broad and luminous-looking, accompanied by a central seconds hand. there is no visible date aperture. the Rolex crown and explorer wording appear on the dial. the round case has a clean polished-looking bezel and a screw-down crown on the right, while the bracelet consists of broad brushed-looking links. the watch is photographed front-on on a cream cushion, with a green Rolex-branded box, guarantee card, and green hang tag behind it. the image does not verify the exact reference, case size, movement, or authenticity. Full set with box and warranty card.",
+            "images": ["/demos/qatar-watches/watch-24.jpg"],
+            "collection": "sport",
+            "dial": "Black",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-lective-looking",
+            "brand": "rolex",
+            "model": "GMT-Master II “Pepsi”",
+            "description": "Rolex GMT-Master II Pepsi-style - a stainless-steel sports watch with a black dial, red-and-blue 24-hour bezel, and Jubilee-style bracelet. the bi-colour bezel has white 24-hour numerals, a triangular marker at 12, and a red half paired with a blue half. the black dial contains luminous circular and rectangular hour markers, a triangle at 12, central luminous hour and minute hands, a seconds hand, and a separate gmt hand. a date aperture at 3 o’clock is magnified by a cyclops lens. the case has crown guards and a screw-down crown on the right. the five-row Jubilee-style bracelet alternates brushed and reflective-looking links. the watch is displayed upright on a cream cushion with green Rolex-branded packaging and a hang tag nearby. a social-media handle is visible in the background of the photograph but is not part of the watch. exact reference, dimensions, movement, and authenticity cannot be confirmed. Watch only.",
+            "images": ["/demos/qatar-watches/watch-25.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "LECTIVE-LOOKING",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-santos-erence",
+            "brand": "cartier",
+            "model": "Santos",
+            "description": "Cartier Santos in stainless steel with a white dial. Watch only.",
+            "images": ["/demos/qatar-watches/watch-26.jpg"],
+            "collection": "sport",
+            "dial": "White",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-santos-erence-27",
+            "brand": "cartier",
+            "model": "Santos",
+            "description": "Cartier Santos with a black dial. Watch only.",
+            "images": ["/demos/qatar-watches/watch-27.jpg"],
+            "collection": "sport",
+            "dial": "Black",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}
