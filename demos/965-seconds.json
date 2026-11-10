@@ -514,29 +514,7 @@
                 "papers": false
             }
         },
-        {
-            "price": 99999,
-            "slug": "audemars-piguet-royal-oak-offshore-26231or",
-            "brand": "audemars piguet",
-            "model": "Royal Oak Offshore “Panda”",
-            "description": "Three photographs show the watch from frontal and angled views. the reference and 37 mm size come from the supplied caption. exact gold purity, stone grading, movement, condition and authenticity cannot be confirmed visually. Watch only.",
-            "images": ["/demos/965-seconds/watch-25.jpg"],
-            "import_photos": ["demo_assets/965_seconds/.web/25-2.jpg", "demo_assets/965_seconds/.web/25-3.jpg"],
-            "collection": "chronograph",
-            "dial": "Grey",
-            "details": {
-                "reference": "26231OR",
-                "movement": "Automatic",
-                "caseMaterial": "Stainless Steel",
-                "caseDiameterMm": 37,
-                "braceletMaterial": "Rubber strap",
-                "waterResistanceM": 50,
-                "condition": "Pre-Owned",
-                "gender": "Men",
-                "box": false,
-                "papers": false
-            }
-        },
+
         {
             "price": 99999,
             "slug": "patek-philippe-nautilus-number-26",
@@ -638,28 +616,6 @@
                 "reference": "5968G",
                 "movement": "Automatic",
                 "caseMaterial": "Stainless Steel",
-                "braceletMaterial": "Rubber strap",
-                "waterResistanceM": 50,
-                "condition": "Pre-Owned",
-                "gender": "Men",
-                "box": false,
-                "papers": false
-            }
-        },
-        {
-            "price": 99999,
-            "slug": "audemars-piguet-royal-oak-offshore-26238st",
-            "brand": "audemars piguet",
-            "model": "Royal Oak Offshore",
-            "description": "Three photographs show the watch from frontal and angled views. the 42 mm size and reference 26238st are supplied by the listing. the images do not verify movement performance, service history, condition or authenticity. Watch only.",
-            "images": ["/demos/965-seconds/watch-31.jpg"],
-            "import_photos": ["demo_assets/965_seconds/.web/31-2.jpg", "demo_assets/965_seconds/.web/31-3.jpg"],
-            "collection": "chronograph",
-            "details": {
-                "reference": "26238ST",
-                "movement": "Automatic",
-                "caseMaterial": "Stainless Steel",
-                "caseDiameterMm": 42,
                 "braceletMaterial": "Rubber strap",
                 "waterResistanceM": 50,
                 "condition": "Pre-Owned",
