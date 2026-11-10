@@ -7,16 +7,16 @@
     "footer_note": "This page is a private demo prepared for Vintage Watch Paris. Payments are in test mode; no real payment is taken.",
     "description": "Vintage Watch Paris: pre-owned luxury watches. Rolex.",
     "logo": {
-        "src": "/demos/vintage-watch-paris/logo.png",
+        "src": "/logo.svg",
         "width": 440,
         "height": 440
     },
     "logo_icon": {
-        "src": "/demos/vintage-watch-paris/logo-icon.png",
+        "src": "/logo_simple.svg",
         "width": 192,
         "height": 192
     },
-    "favicon": "/demos/vintage-watch-paris/favicon.png",
+    "favicon": "/favicon.ico",
     "hero": {
         "title": "VINTAGE WATCH PARIS",
         "subtitle": "Pre-owned luxury watches",

@@ -6,16 +6,16 @@
     "footer_note": "This page is a private demo prepared for Chasing Cartier. Payments are in test mode; no real payment is taken.",
     "description": "Chasing Cartier: pre-owned luxury watches. A. Lange & Söhne, Cartier, Audemars Piguet, Patek Philippe, Rolex, IWC, Chopard and Breguet.",
     "logo": {
-        "src": "/demos/chasing-cartier/logo.png",
-        "width": 171,
-        "height": 262
+        "src": "/logo.svg",
+        "width": 440,
+        "height": 440
     },
     "logo_icon": {
-        "src": "/demos/chasing-cartier/logo-icon.png",
-        "width": 171,
-        "height": 262
+        "src": "/logo_simple.svg",
+        "width": 192,
+        "height": 192
     },
-    "favicon": "/demos/chasing-cartier/favicon.png",
+    "favicon": "/favicon.ico",
     "hero": {
         "title": "CHASING CARTIER",
         "subtitle": "Pre-owned luxury watches",
