@@ -1,32 +1,47 @@
 "use client";
+import { useStorefront } from "@/app/(site)/context/storefrontContext";
 
-import { useAuth } from "@/app/(site)/context/authContext";
 import create_order from "@/app/server/create_order";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
-export default function CreateOrderBtn({ enabled = true }: { enabled?: boolean }) {
+export default function CreateOrderBtn({ ready }: { ready: boolean }) {
     const t = useTranslations("checkout");
-    const { session } = useAuth();
+    const t_errors = useTranslations("checkout.errors");
+    const router = useRouter();
+    const { href } = useStorefront();
 
-    function check_address(): boolean {
-        if (!enabled) return false;
-        if (!session) return false;
-        const { address1, postCode, city, country, phone } = session.address;
+    const [placing, set_placing] = useState(false);
+    const [error, set_error] = useState<string | null>(null);
 
-        const is_address_provided =
-            (session.diff_address.active && session.diff_address.address1 && session.diff_address.postCode && session.diff_address.city && session.diff_address.country && session.diff_address.phone) ||
-            (!session.diff_address.active && address1 && postCode && city && country && phone)
-                ? true
-                : false;
+    const enabled = ready && !placing;
 
-        return session.local_pickup || is_address_provided;
+    async function place() {
+        if (!enabled) return set_error(ready ? null : t_errors("details"));
+
+        set_placing(true);
+        set_error(null);
+
+        const result = await create_order();
+
+        if ("redirect" in result) return router.push(href(result.redirect));
+
+        set_placing(false);
+        set_error(t_errors(result.error, { items: result.items?.join(", ") ?? "" }));
+        router.refresh();
     }
 
-    const validated = check_address();
-
     return (
-        <button type="button" onClick={async () => validated && (await create_order())} className={`button3 text-primary bg-gold hover:text-gold hover:bg-background w-full mt-4 sm:text-base text-sm ${validated ? "" : "disabled"} `}>
-            {t("placeOrder")}
-        </button>
+        <>
+            <button type="button" onClick={place} className={`button3 text-primary bg-gold hover:text-gold hover:bg-background w-full mt-4 sm:text-base text-sm ${enabled ? "" : "disabled"} `}>
+                {placing ? t("placingOrder") : t("placeOrder")}
+            </button>
+            {error && (
+                <p role="alert" className="text-red-400 text-sm">
+                    {error}
+                </p>
+            )}
+        </>
     );
 }

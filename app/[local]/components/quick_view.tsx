@@ -1,19 +1,22 @@
 "use client";
 import { createPortal } from "react-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
+import { useMounted } from "./hooks/use_mounted";
 import List from "./scrollList";
 import { ZoomableImage } from "./elements/zoomableImage";
 import AtcBtn from "./buttons/addToCart";
 
 import Cross from "./svg/cross";
-import { format_price } from "../(site)/lib/price_format";
+import { item_price } from "../(site)/lib/price_format";
+import { useStorefront } from "../(site)/context/storefrontContext";
 import increase_relevance_score from "@/app/server/increase_relevance_score";
 import score_rewards from "../(site)/lib/relevance_score";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { read_cookie } from "../(site)/lib/read_cookie";
-import { Supported_Currencies } from "@/currency";
+import { useCurrency } from "../(site)/context/currencyContext";
 import { Item } from "../(site)/lib/filters";
+import { brand_name } from "../(site)/lib/brand_name";
+import { item_name } from "../(site)/lib/item_name";
 
 interface QuickViewProps {
     view: Item | null;
@@ -22,17 +25,19 @@ interface QuickViewProps {
 
 export default function QuickViewModal({ view, onClose }: QuickViewProps) {
     const t = useTranslations("common");
+    const currency = useCurrency();
+    const { demo, href } = useStorefront();
 
-    const [increased, set_increased] = useState(false);
-    const [mounted, set_mounted] = useState(false);
+    const mounted = useMounted();
+    const scored = useRef<string | null>(null);
 
     useEffect(() => {
-        set_mounted(true);
-        if (!increased && view) {
+        // A lead demo's pieces are not in the catalogue: nothing to score.
+        if (view && !demo && scored.current !== view.slug) {
+            scored.current = view.slug;
             increase_relevance_score(view.slug, score_rewards.quick_view);
-            set_increased(true);
         }
-    }, [view, increased]);
+    }, [view, demo]);
 
     if (!view || !mounted) return null;
 
@@ -43,7 +48,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                     tabIndex={-1}
                     role="dialog"
                     aria-modal="true"
-                    aria-label={`${view.brand} ${view.model} quick view`}
+                    aria-label={`${item_name(view)} quick view`}
                     className="relative p-4 sm:pt-30 pt-25 flex w-full h-full flex-col md:flex-row bg-background font-secondary outline-none flex-center"
                 >
                     <button aria-label={"close"} type="button" className="button absolute top-34 inset-e-4 z-20 p-0" onClick={onClose}>
@@ -54,7 +59,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                         <List display={{ base: 1, sm: 1, md: 1, lg: 1 }}>
                             {view.images.map((url, index) => (
                                 <div key={`${url}-${index}`} className="relative w-full h-full aspect-square sm:aspect-video md:aspect-square">
-                                    <ZoomableImage src={url} alt={view.slug} />
+                                    <ZoomableImage src={url} alt={`${item_name(view)} — ${index + 1}`} sizes="(max-width: 768px) 100vw, 50vw" />
                                 </div>
                             ))}
                         </List>
@@ -62,38 +67,48 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
 
                     <div className="flex w-full flex-col justify-center px-4 md:px-8 gap-2 md:h-full md:gap-6">
                         <div className="flex flex-col gap-1 md:gap-2">
-                            <p className="sm:hidden font-semibold tracking-tight capitalize text-xl sm:text-3xl lg:text-4xl text-gold">{view.brand + " " + view.model}</p>
+                            <p className="sm:hidden font-semibold tracking-tight capitalize text-xl sm:text-3xl lg:text-4xl text-gold">{item_name(view)}</p>
 
-                            <p className="hidden sm:block font-semibold tracking-tight capitalize text-2xl sm:text-3xl lg:text-4xl">{view.brand}</p>
+                            <p className="hidden sm:block font-semibold tracking-tight capitalize text-2xl sm:text-3xl lg:text-4xl">{brand_name(view.brand)}</p>
                             <p className="hidden sm:block tracking-wide capitalize text-secondary text-lg sm:text-xl lg:text-2xl">{view.model}</p>
 
-                            <p className="font-medium tracking-wide text-base sm:text-2xl">{format_price(view.price, read_cookie("Currency") as Supported_Currencies)}</p>
+                            <p className="font-medium tracking-wide text-base sm:text-2xl">{item_price(view.price, currency, t("priceOnRequest"))}</p>
 
                             <div className="hidden md:flex flex-col gap-2 leading-relaxed tracking-wide text-sm text-secondary">
-                                <p>
-                                    {t("filters.movement")}: {view.movement}
-                                </p>
+                                {(view.movement as string) != "UNVERIFIED" && (
+                                    <p>
+                                        {t("filters.movement")}: {view.movement}
+                                    </p>
+                                )}
                                 <p className={`${view.caseMaterial == "UNVERIFIED" ? "hidden" : "block"}`}>
                                     {t("filters.caseMaterial")}: {view.caseMaterial}
                                 </p>
                                 <p className={`${view.braceletMaterial == "UNVERIFIED" ? "hidden" : "block"}`}>
                                     {t("filters.braceletMaterial")}: {view.braceletMaterial}
                                 </p>
-                                <p>
-                                    {t("filters.condition")}: {view.condition}
-                                </p>
+                                {(view.condition as string) != "UNVERIFIED" && (
+                                    <p>
+                                        {t("filters.condition")}: {view.condition}
+                                    </p>
+                                )}
                                 <p className={`${view.dialColor == "UNVERIFIED" ? "hidden" : "block"}`}>
                                     {t("filters.dialColor")}: {view.dialColor}
                                 </p>
-                                <p>
-                                    {t("filters.caseDiameterMm")}: {view.caseDiameterMm} mm
-                                </p>
-                                <p>
-                                    {t("filters.year")}: {view.year}
-                                </p>
-                                <p>
-                                    {t("filters.waterResistance")}: {view.waterResistanceM}m
-                                </p>
+                                {view.caseDiameterMm > 0 && (
+                                    <p>
+                                        {t("filters.caseDiameterMm")}: {view.caseDiameterMm} mm
+                                    </p>
+                                )}
+                                {view.year > 0 && (
+                                    <p>
+                                        {t("filters.year")}: {view.year}
+                                    </p>
+                                )}
+                                {view.waterResistanceM > 0 && (
+                                    <p>
+                                        {t("filters.waterResistance")}: {view.waterResistanceM}m
+                                    </p>
+                                )}
                             </div>
 
                             <p className="leading-relaxed tracking-wide text-xs sm:text-sm md:text-base text-shine hidden sm:block">{view.description}</p>
@@ -101,9 +116,9 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
 
                         <div className="w-full flex-center gap-4 flex-col sm:flex-row">
                             <div className="w-full">
-                                <AtcBtn slug={view.slug} />
+                                <AtcBtn slug={view.slug} status={view.stock_status} />
                             </div>
-                            <Link href={"/product/" + view.slug} className="w-full button2 flex-center">
+                            <Link href={href("/product/" + view.slug)} className="w-full button2 flex-center">
                                 {t("productCard.details")}
                             </Link>
                         </div>
@@ -127,7 +142,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
                         <List display={{ base: 1, sm: 1, md: 1, lg: 1 }}>
                             {view.images.map((url, index) => (
                                 <div key={`${url}-${index}`} className="relative w-full h-full aspect-square sm:aspect-video md:aspect-square">
-                                    <ZoomableImage src={url} alt={view.slug} />
+                                    <ZoomableImage src={url} alt={`${item_name(view)} — ${index + 1}`} sizes="(max-width: 768px) 100vw, 50vw" />
                                 </div>
                             ))}
                         </List>
@@ -139,7 +154,7 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
 
                             <p className="hidden sm:block font-semibold tracking-tight capitalize text-2xl sm:text-3xl lg:text-4xl">{view.display_name}</p>
 
-                            <p className="font-medium tracking-wide text-base sm:text-2xl text-gold">{format_price(view.price, read_cookie("Currency") as Supported_Currencies)}</p>
+                            <p className="font-medium tracking-wide text-base sm:text-2xl text-gold">{item_price(view.price, currency, t("priceOnRequest"))}</p>
 
                             <div className="hidden md:flex flex-col gap-2 leading-relaxed tracking-wide text-sm text-primary capitalize">
                                 <p className={`${view.metal_type ? "block" : "hidden"}`}>
@@ -176,9 +191,9 @@ export default function QuickViewModal({ view, onClose }: QuickViewProps) {
 
                         <div className="w-full flex-center gap-4 flex-col sm:flex-row">
                             <div className="w-full">
-                                <AtcBtn slug={view.slug} />
+                                <AtcBtn slug={view.slug} status={view.stock_status} />
                             </div>
-                            <Link href={"/product/" + view.slug} className="w-full button2 flex-center">
+                            <Link href={href("/product/" + view.slug)} className="w-full button2 flex-center">
                                 {t("productCard.details")}
                             </Link>
                         </div>

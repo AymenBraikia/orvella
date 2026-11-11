@@ -1,15 +1,16 @@
 "use client";
-import Link from "next/link";
-import { ActionDispatch, Dispatch, RefObject, SetStateAction, useEffect, useState } from "react";
-import Cross from "./svg/cross";
+import { ActionDispatch, Dispatch, RefObject, SetStateAction, useState } from "react";
+import NavPanel, { NavSettings } from "./nav_panel";
 import { useLocale, useTranslations } from "next-intl";
-import { NavThemeToggle } from "./navTheme";
 import Select from "./elements/select";
 import { Locales } from "@/types/locales";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { Supported_Currencies } from "@/currency";
 import setCurrency from "@/app/server/set_currency";
 import LearnMore from "./buttons/learnMore";
+import { DEMO_MODE } from "../(site)/lib/demo";
+import { useStorefront } from "../(site)/context/storefrontContext";
+import type { NavSection } from "./nav_panel";
 
 type UIAction = { type: "OPEN_NAV" } | { type: "CLOSE_NAV" } | { type: "OPEN_CART" } | { type: "CLOSE_CART" } | { type: "TOGGLE_LANG" } | { type: "SET_GLASSY"; payload: boolean };
 
@@ -83,114 +84,90 @@ export default function Nav({ savedCurrency, dispatch, ui, ref }: { savedCurrenc
 
     const locale = useLocale() as Locales;
 
-    const [lang, set_lang] = useState<Locales>(locale);
-
-    const selected_locale = locales_map.get(lang)!.toUpperCase();
+    const selected_locale = locale.toUpperCase();
 
     const pathname = usePathname();
     const router = useRouter();
 
-    useEffect(() => {
-        router.replace(pathname, { locale: selected_locale });
-    }, [lang]);
+    // Only when the visitor picks another language / currency — these used to run on every page
+    // load (a client navigation plus a server action that re-rendered the whole layout).
+    const set_lang = (label: string) => {
+        const next = locales_map.get(label);
+        if (next && next != locale) router.replace(pathname, { locale: next });
+    };
 
-    const [currency, set_currency] = useState<Supported_Currencies>(savedCurrency);
+    const [currency, set_currency_state] = useState<Supported_Currencies>(savedCurrency);
+    const set_currency = (label: string) => {
+        const next = currencies_map.get(label);
+        if (!next || next == currency) return;
+        set_currency_state(next);
+        setCurrency(next);
+    };
+    const close = () => dispatch({ type: "CLOSE_NAV" });
 
-    useEffect(() => {
-        setCurrency(currencies_map.get(currency)!);
-    }, [currency]);
+    // A lead demo links only to its own pages, under its address; it has one language and no prices.
+    const { demo, href, has } = useStorefront();
+    const t_filters = useTranslations("common.filters");
+    const main_sections: NavSection[] = [
+        {
+            heading: footer("shopHeading"),
+            links: [
+                { href: "/shop", label: nav("watches"), aria: "watches list" },
+                { href: "/spare", label: nav("spareParts"), aria: "spare parts" },
+                { href: "/info/about", label: nav("aboutUs"), aria: "about us" },
+            ],
+        },
+        {
+            heading: footer("serviceHeading"),
+            links: [
+                { href: "/store", label: nav("store"), aria: "Store" },
+                { href: "/sell", label: nav("sellConsign"), aria: "Sell / Consign" },
+                { href: "/polish", label: nav("polishingServices"), aria: "Polishing and Service" },
+                { href: "/info/payments", label: nav("shippingPayments"), aria: "Shipping & Payments" },
+                { href: "/info/faq", label: nav("faq"), aria: "Frequently Asked Questions" },
+                { href: "/info/vacancies", label: nav("vacancies"), aria: "Vacancies" },
+            ],
+        },
+    ]
+        .map((section) => ({ ...section, links: section.links.filter((link) => has(link.href)).map((link) => ({ ...link, href: href(link.href) })) }))
+        .filter((section) => section.links.length > 0);
+    // A lead demo: the store's menu (its pages, under its address), plus its collections and brands.
+    const sections: NavSection[] = demo
+        ? [
+              ...main_sections,
+              { heading: demo.collections_heading ?? "", links: demo.collections.map((c) => ({ href: href(c.path), label: c.label, aria: c.label })) },
+              { heading: t_filters("brands"), links: demo.brands.map((b) => ({ href: href(b.path), label: b.label, aria: b.label })) },
+          ].filter((section) => section.links.length > 0)
+        : main_sections;
+
     return (
-        <nav
+        <NavPanel
             ref={ref}
-            className={`bg-background z-70 w-dvw sm:min-w-100 lg:w-[20dvw] transition-default max-h-dvh h-dvh fixed top-0 inset-s-0 flex flex-col justify-between items-start gap-5 p-5 md:gap-8 md:px-16 md:py-8 ${
-                ui.isNavOpen ? "translate-x-0" : "ltr:-translate-x-full rtl:translate-x-full"
-            }`}
-        >
-            <div className="flex flex-col h-7/10 md:h-6/10 gap-6">
-                <div className="flex flex-col gap-3 md:gap-6 w-full font-secondary h-full sm:hidden">
-                    <h5 className="title3 font-primary">{footer("settingsHeading")}</h5>
-                    <div className="w-full flex justify-between items-center">
-                        <p>{footer("themeHeading")}</p>
-                        <NavThemeToggle />
-                    </div>
-
-                    <Select
+            open={ui.isNavOpen}
+            onClose={close}
+            settings={
+                // A demo with a forced theme would have an empty settings block (no language or currency there).
+                !demo?.forced_theme && (
+                <NavSettings heading={footer("settingsHeading")} theme_label={footer("themeHeading")}>
+                                        <Select
                         classnames="z-61 font-sans flex text-sm sm:text-base w-full"
                         label={footer("language")}
                         options={["English", "Spanish", "Deutsch", "French", "Italian", "Turkish"]}
                         value={selected_locale}
                         set_value={set_lang as Dispatch<SetStateAction<string>>}
                     />
-                    <Select
+                                        <Select
                         label={footer("currency")}
                         classnames="font-sans sm:hidden flex text-sm sm:text-base"
                         options={currencies_options.keys().toArray()}
                         value={currencies_map.get(currency)!}
                         set_value={set_currency as Dispatch<SetStateAction<string>>}
                     />
-                </div>
-
-                <div className="flex flex-col gap-3 md:gap-6">
-                    <h5 className="title3 font-primary text-gold">{footer("shopHeading")}</h5>
-                    <ul className="gap-2!">
-                        <li>
-                            <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="watches list" href="/shop">
-                                {nav("watches")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="spare parts" href="/spare">
-                                {nav("spareParts")}
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="about us" href="/info/about">
-                                {nav("aboutUs")}
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="flex flex-col gap-3 md:gap-6">
-                    <h5 className="title3 font-primary text-gold">{footer("serviceHeading")}</h5>
-                    <ul className="gap-2!">
-                        <li>
-                            <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="Store" href="/store">
-                                {nav("store")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="Sell / Consign" href="/sell">
-                                {nav("sellConsign")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="Polishing and Service" href="/polish">
-                                {nav("polishingServices")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="Shipping & Payments" href="/info/payments">
-                                {nav("shippingPayments")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="Frequently Asked Questions" href="/info/faq">
-                                {nav("faq")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link onClick={() => dispatch({ type: "CLOSE_NAV" })} className="text-base font-secondary text-secondary hover:text-primary transition-default" aria-label="Vacancies" href="/info/vacancies">
-                                {nav("vacancies")}
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <LearnMore />
-            <button aria-label={"close"} type="button" className="absolute top-4 inset-e-4 p-0 cursor-pointer" onClick={() => dispatch({ type: "CLOSE_NAV" })}>
-                <Cross classnames={"w-10"} />
-            </button>
-        </nav>
+                </NavSettings>
+                )
+            }
+            sections={sections}
+            extra={DEMO_MODE && !demo && <LearnMore />}
+        />
     );
 }

@@ -23,11 +23,14 @@ import {
     type RangeFacet,
     type Selection,
 } from "../(site)/lib/filters";
-import { read_cookie } from "../(site)/lib/read_cookie";
+import { useCurrency } from "../(site)/context/currencyContext";
+import { brand_name } from "../(site)/lib/brand_name";
 import { Supported_Currencies } from "@/currency";
 
 const T_KEY: Record<string, string> = {
+    collection: "collection",
     brand: "brands",
+    gender: "gender",
     condition: "condition",
     movement: "movement",
     caseMaterial: "caseMaterial",
@@ -37,28 +40,54 @@ const T_KEY: Record<string, string> = {
     caseDiameterMm: "caseDiameterMm",
     year: "year",
     waterResistanceM: "waterResistance",
+    metal: "metal",
+    purity: "purity",
+    stones: "stones",
+    ringSize: "ringSize",
+    clasp: "clasp",
+    weightG: "weight",
+    lengthCm: "length",
+    bandWidthMm: "bandWidth",
     includes: "includes",
     availability: "availability",
 };
 
-type Section = { kind: "list"; facet: ListFacet; searchable?: boolean } | { kind: "range"; facet: RangeFacet; unit?: string; money?: boolean } | { kind: "includes" } | { kind: "availability" };
+const RANGE_UNIT: Partial<Record<RangeFacet, string>> = {
+    caseDiameterMm: "mm",
+    waterResistanceM: "m",
+    weightG: "g",
+    lengthCm: "cm",
+    bandWidthMm: "mm",
+};
+
+type Section = { kind: "list"; facet: ListFacet; searchable?: boolean } | { kind: "range"; facet: RangeFacet; money?: boolean } | { kind: "includes" } | { kind: "availability" };
 
 const SECTIONS: Section[] = [
+    { kind: "list", facet: "collection" },
     { kind: "list", facet: "brand", searchable: true },
     { kind: "range", facet: "price", money: true },
+    { kind: "list", facet: "metal" },
+    { kind: "list", facet: "purity" },
+    { kind: "list", facet: "stones", searchable: true },
+    { kind: "list", facet: "gender" },
     { kind: "list", facet: "condition" },
     { kind: "list", facet: "movement" },
     { kind: "list", facet: "caseMaterial" },
     { kind: "list", facet: "braceletMaterial" },
     { kind: "list", facet: "dialColor" },
-    { kind: "range", facet: "caseDiameterMm", unit: "mm" },
+    { kind: "list", facet: "ringSize" },
+    { kind: "range", facet: "bandWidthMm" },
+    { kind: "range", facet: "lengthCm" },
+    { kind: "list", facet: "clasp" },
+    { kind: "range", facet: "weightG" },
+    { kind: "range", facet: "caseDiameterMm" },
     { kind: "range", facet: "year" },
-    { kind: "range", facet: "waterResistanceM", unit: "m" },
+    { kind: "range", facet: "waterResistanceM" },
     { kind: "includes" },
     { kind: "availability" },
 ];
 
-const DEFAULT_OPEN = new Set(["brand", "price"]);
+const DEFAULT_OPEN = new Set(["collection", "brand", "price", "metal"]);
 const COLLAPSED_OPTIONS = 8;
 
 interface WatchFiltersProps {
@@ -73,6 +102,7 @@ interface WatchFiltersProps {
 
 export default function ItemsFilter({ facets, counts, selection, onChange, resultCount, open, setOpen }: WatchFiltersProps) {
     const t = useTranslations("common.filters");
+    const currency = useCurrency();
     const panel = useRef<HTMLDivElement>(null);
     const closeButton = useRef<HTMLButtonElement>(null);
     const restoreFocus = useRef<HTMLElement | null>(null);
@@ -111,7 +141,7 @@ export default function ItemsFilter({ facets, counts, selection, onChange, resul
         <>
             <div aria-hidden="true" onClick={() => setOpen(false)} className={`fixed inset-0 z-90 bg-black/50 transition-default lg:hidden ${open ? "opacity-100" : "pointer-events-none opacity-0"}`} />
 
-            <aside
+            <div
                 ref={panel}
                 role="dialog"
                 aria-modal={open || undefined}
@@ -164,7 +194,7 @@ export default function ItemsFilter({ facets, counts, selection, onChange, resul
                                         onChange={(value) => onChange(set_range(selection, section.facet, value, facets))}
                                         fromLabel={t("from")}
                                         toLabel={t("to")}
-                                        format={section.money ? format_price.bind(window, 1, read_cookie("Currency") as Supported_Currencies) : (n) => `${n}${section.unit ? ` ${section.unit}` : ""}`}
+                                        format={section.money ? (n: number) => format_price(n, currency) : (n) => with_unit(n, section.facet)}
                                     />
                                 )}
 
@@ -191,9 +221,14 @@ export default function ItemsFilter({ facets, counts, selection, onChange, resul
                         {t("showResults", { count: resultCount })}
                     </button>
                 </footer>
-            </aside>
+            </div>
         </>
     );
+}
+
+function with_unit(n: number, facet: RangeFacet): string {
+    const unit = RANGE_UNIT[facet];
+    return unit ? `${n} ${unit}` : String(n);
 }
 
 function section_badge(section: Section, selection: Selection): number {
@@ -308,18 +343,26 @@ function Option({ label, count, checked, onToggle }: { label: string; count: num
 
 function translate_option(t: ReturnType<typeof useTranslations>, facet: ListFacet, option: string): string {
     const map: Record<string, string> = {
+        "gender:Men": "genderMen",
+        "gender:Women": "genderWomen",
         "condition:New": "conditionNew",
         "condition:Pre-Owned": "conditionPreOwned",
         "movement:Manual": "movementManual",
         "movement:Automatic": "movementAutomatic",
         "movement:Quartz": "movementQuartz",
+        "metal:Gold": "metalGold",
+        "metal:White Gold": "metalWhiteGold",
+        "metal:Silver": "metalSilver",
+        "metal:Platinum": "metalPlatinum",
     };
     const key = map[`${facet}:${option}`];
-    return key ? t(key as never) : option;
+    if (key) return t(key as never);
+    return facet == "brand" ? brand_name(option) : option;
 }
 
 export function ActiveFilters({ selection, onChange }: { selection: Selection; onChange: (selection: Selection) => void }) {
     const t = useTranslations("common.filters");
+    const currency = useCurrency();
     const chips = active_chips(selection);
     if (chips.length === 0) return null;
 
@@ -328,7 +371,7 @@ export function ActiveFilters({ selection, onChange }: { selection: Selection; o
             {chips.map((chip) => (
                 <li key={chip_key(chip)}>
                     <button type="button" onClick={() => onChange(remove_chip(selection, chip))} className="flex cursor-pointer items-center gap-2 border border-secondary/50 px-3 py-1 text-xs transition-default hover:border-foreground">
-                        <span>{chip_label(t, chip)}</span>
+                        <span>{chip_label(t, chip, currency)}</span>
                         <span aria-hidden="true" className="text-secondary">
                             ×
                         </span>
@@ -359,14 +402,13 @@ function chip_key(chip: ActiveChip): string {
     }
 }
 
-function chip_label(t: ReturnType<typeof useTranslations>, chip: ActiveChip): string {
+function chip_label(t: ReturnType<typeof useTranslations>, chip: ActiveChip, currency: Supported_Currencies): string {
     switch (chip.kind) {
         case "list":
             return translate_option(t, chip.facet, chip.value);
         case "range": {
             const money = chip.facet === "price";
-            const unit = chip.facet === "caseDiameterMm" ? " mm" : chip.facet === "waterResistanceM" ? " m" : "";
-            const fmt = (n: number) => (money ? format_price(n, read_cookie("Currency") as Supported_Currencies) : `${n}${unit}`);
+            const fmt = (n: number) => (money ? format_price(n, currency) : with_unit(n, chip.facet));
             return `${t(T_KEY[chip.facet])}: ${fmt(chip.value[0])} – ${fmt(chip.value[1])}`;
         }
         case "include":

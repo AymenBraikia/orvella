@@ -12,7 +12,7 @@ export default function Gallery() {
         }, 5e3);
 
         return () => clearInterval(interval);
-    }, [index]);
+    }, [index, sources.length]);
 
     return (
         <div className="w-full xl:w-[calc(50%-20px)] h-fit relative aspect-16/12">

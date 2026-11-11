@@ -2,7 +2,6 @@
 
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Next from "./svg/next";
-import FadeInObserver from "./fade_wrapper";
 
 interface Breakpoints {
     base?: number;

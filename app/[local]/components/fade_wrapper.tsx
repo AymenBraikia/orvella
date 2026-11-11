@@ -41,7 +41,7 @@ export default function FadeInObserver({ children, delay = 0 }: { children: Reac
                 clearTimeout(timeout);
             }
         };
-    },);
+    }, [delay]);
 
     return (
         <div ref={elementRef} className={isVisible ? "fade-in w-full h-full flex-center flex-col" : "opacity-0 overflow-hidden"}>

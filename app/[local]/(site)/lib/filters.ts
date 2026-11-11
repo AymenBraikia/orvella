@@ -1,14 +1,14 @@
 import type { Watch } from "@/types/watch";
 import type { Spare } from "@/types/spare";
-import type { Bracelet, Necklace, Ring } from "@/types/jewelry";
+import type { Bracelet, Jewelry, Necklace, Ring } from "@/types/jewelry";
 
 export type Item = Watch | Spare | Necklace | Ring | Bracelet;
 export type Bounds = { min: number; max: number };
 
-export const LIST_FACETS = ["brand", "condition", "movement", "caseMaterial", "braceletMaterial", "dialColor"] as const;
+export const LIST_FACETS = ["collection", "brand", "gender", "condition", "movement", "caseMaterial", "braceletMaterial", "dialColor", "metal", "purity", "stones", "ringSize", "clasp"] as const;
 export type ListFacet = (typeof LIST_FACETS)[number];
 
-export const RANGE_FACETS = ["price", "caseDiameterMm", "year", "waterResistanceM"] as const;
+export const RANGE_FACETS = ["price", "caseDiameterMm", "year", "waterResistanceM", "weightG", "lengthCm", "bandWidthMm"] as const;
 export type RangeFacet = (typeof RANGE_FACETS)[number];
 
 export const INCLUDES_KEYS = ["box", "papers", "firstInvoice", "serviceInvoice"] as const;
@@ -37,10 +37,27 @@ function isWatchOrSpare(item: Item): item is Watch | Spare {
     return item.type === "watch" || item.type === "spare";
 }
 
-function list_value(item: Item, facet: ListFacet): string | undefined {
+const GRAMS_PER_TROY_OUNCE = 31.1035;
+const CM_PER_INCH = 2.54;
+
+const one_decimal = (n: number) => Math.round(n * 10) / 10;
+
+/** "18K" for gold sold by karat, otherwise the hallmark fineness ("925"). */
+function purity(item: Jewelry): string | undefined {
+    if (item.karats) return `${item.karats}K`;
+    if (item.fineness) return String(item.fineness);
+    return undefined;
+}
+
+function raw_list_value(item: Item, facet: ListFacet): string | string[] | undefined {
     switch (facet) {
+        // Only a lead demo's pieces have one (demos/<slug>.json): the filter never shows in the main store.
+        case "collection":
+            return item.collection;
         case "brand":
             return isWatchOrSpare(item) ? item.brand : undefined;
+        case "gender":
+            return item.gender;
         case "condition":
             return item.condition;
         case "movement":
@@ -51,19 +68,45 @@ function list_value(item: Item, facet: ListFacet): string | undefined {
             return isWatchOrSpare(item) ? item.braceletMaterial : undefined;
         case "dialColor":
             return isWatchOrSpare(item) ? item.dialColor : undefined;
+        case "metal":
+            return isWatchOrSpare(item) ? undefined : item.metal_type;
+        case "purity":
+            return isWatchOrSpare(item) ? undefined : purity(item);
+        case "stones":
+            return isWatchOrSpare(item) ? undefined : item.stones?.map((stone) => stone.trim());
+        case "ringSize":
+            return item.type === "ring" ? String(item.ring_size ?? "").trim() : undefined;
+        case "clasp":
+            return item.type === "bracelet" || item.type === "necklace" ? item.clasp_type?.trim() : undefined;
     }
+}
+
+/** Most facets hold one value per item; gemstones can hold several. */
+function list_values(item: Item, facet: ListFacet): string[] {
+    const value = raw_list_value(item, facet);
+    const values = Array.isArray(value) ? value : [value];
+    return values.filter((entry): entry is string => Boolean(entry) && entry !== UNVERIFIED);
 }
 
 function range_value(item: Item, facet: RangeFacet): number | undefined {
     switch (facet) {
         case "price":
-            return item.price;
+            // 0 is "price on request" (lead demos): no price to filter by.
+            return item.price || undefined;
         case "caseDiameterMm":
-            return isWatchOrSpare(item) ? item.caseDiameterMm : undefined;
+            return isWatchOrSpare(item) ? item.caseDiameterMm || undefined : undefined;
         case "year":
-            return isWatchOrSpare(item) ? item.year : undefined;
+            return isWatchOrSpare(item) ? item.year || undefined : undefined;
         case "waterResistanceM":
-            return isWatchOrSpare(item) ? item.waterResistanceM : undefined;
+            return isWatchOrSpare(item) ? item.waterResistanceM || undefined : undefined;
+        case "weightG":
+            if (isWatchOrSpare(item) || !item.weight) return undefined;
+            return one_decimal(item.measurement_unit === "ounces" ? item.weight * GRAMS_PER_TROY_OUNCE : item.weight);
+        case "lengthCm":
+            if ((item.type !== "bracelet" && item.type !== "necklace") || !item.length) return undefined;
+            return one_decimal(item.length_unit === "inches" ? item.length * CM_PER_INCH : item.length);
+        case "bandWidthMm":
+            return item.type === "ring" ? item.band_width : undefined;
     }
 }
 
@@ -81,8 +124,7 @@ export function build_facets(items: Item[]): Facets {
 
     for (const item of items) {
         for (const facet of LIST_FACETS) {
-            const value = list_value(item, facet);
-            if (value && value !== UNVERIFIED) sets[facet].add(value);
+            for (const value of list_values(item, facet)) sets[facet].add(value);
         }
 
         for (const facet of RANGE_FACETS) {
@@ -123,10 +165,12 @@ export function build_facets(items: Item[]): Facets {
 function compare_option(facet: ListFacet) {
     const fixed: Partial<Record<ListFacet, string[]>> = {
         condition: ["New", "Pre-Owned"],
+        gender: ["Women", "Men"],
         movement: ["Automatic", "Manual", "Quartz"],
     };
     const order = fixed[facet];
-    if (!order) return (a: string, b: string) => a.localeCompare(b);
+    // numeric, so ring sizes and purities sort 9 < 18 < 750
+    if (!order) return (a: string, b: string) => a.localeCompare(b, undefined, { numeric: true });
 
     return (a: string, b: string) => {
         const ai = order.indexOf(a);
@@ -219,8 +263,7 @@ function matches(item: Item, dimension: Dimension, selection: Selection, query: 
     const chosen = selection.lists[facet];
     if (!chosen?.length) return true;
 
-    const value = list_value(item, facet);
-    return value !== undefined && chosen.includes(value);
+    return list_values(item, facet).some((value) => chosen.includes(value));
 }
 
 export function apply_filters(items: Item[], selection: Selection, query: string, except?: Dimension): Item[] {
@@ -242,8 +285,9 @@ export function facet_counts(items: Item[], facets: Facets, selection: Selection
 
         const counts: Record<string, number> = Object.fromEntries(values.map((value) => [value, 0]));
         for (const item of apply_filters(items, selection, query, facet)) {
-            const value = list_value(item, facet);
-            if (value !== undefined && value in counts) counts[value]++;
+            for (const value of list_values(item, facet)) {
+                if (value in counts) counts[value]++;
+            }
         }
         lists[facet] = counts;
     }

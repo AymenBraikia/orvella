@@ -1,39 +1,42 @@
 import Item_Display from "./item_display";
 
-import shipping_data from "@/app/shipping.json";
-
 import Link from "next/link";
+import { server_href } from "@/app/server/storefront";
 
-import { format_price } from "../lib/price_format";
-import { Supported_Currencies } from "@/currency";
+import { format_cart_money } from "../lib/price_format";
+import { build_quote, get_exchange_rate, shipping_for_country } from "@/app/server/checkout";
+import { convert_eur } from "../lib/order_totals";
+import { get_settings } from "@/app/server/settings";
 
-import getUser from "@/app/server/get_user";
+import { get_checkout_customer, hydrate_cart } from "@/app/server/cart";
 import { getTranslations } from "next-intl/server";
 import { get_Currency } from "../lib/get_currency";
 import Select_country from "@/app/components/shipping_related/select_country";
 import LocalPickup_checkbox from "@/app/components/shipping_related/localPickup";
 
 export default async function Items() {
-    const session = await getUser();
+    const customer = await get_checkout_customer();
     const t = await getTranslations("cart");
+    const t_checkout = await getTranslations("checkout");
 
-    if (!session) return;
+    const lines = await hydrate_cart(customer?.cart);
+    if (!customer || !lines.length) return <h1>{t("empty")}</h1>;
 
-    const total = session.cart.reduce((prev, current) => prev + current.price * current.quantity, 0);
+    const { payments } = await get_settings();
+    const pickup = customer.local_pickup && payments.local_pickup;
+    const country = customer.address.country || "Germany";
 
-    const pickup = session.local_pickup;
-
-    const country = session.address.country || "Germany";
-    const shipping_costs = session.address.shipping_costs || shipping_data.DE.shipping_cost;
-
-    const currency = (await get_Currency()) as Supported_Currencies;
+    const currency = await get_Currency();
+    // Same pricing as the order that will be charged (current catalogue prices, converted shipping, tax).
+    const { totals, tax } = await build_quote(customer.cart, { ...customer, diff_address: { ...customer.diff_address, active: false } }, currency);
+    const shipping_costs = convert_eur(shipping_for_country(country)?.shipping_cost ?? 0, currency, await get_exchange_rate(currency));
 
     return (
         <div className="w-full h-fit flex xl:flex-row flex-col justify-between items-start gap-12 xl:gap-4">
-            {session!.cart.length ? (
+            {
                 <>
                     <div className=" xl:min-w-190 w-full h-full max-h-[75dvh] overflow-y-auto overflow-x-hidden flex justify-start items-start flex-col gap-4 pe-2">
-                        {session!.cart.map((i) => (
+                        {lines.map((i) => (
                             <Item_Display key={i.slug} {...i} />
                         ))}
                     </div>
@@ -42,7 +45,7 @@ export default async function Items() {
 
                         <div className="flex justify-between items-center w-full border-b py-1">
                             <h4 className="text-gold">{t("subtotal")}</h4>
-                            <h4>{format_price(total, currency)}</h4>
+                            <h4>{format_cart_money(totals.items, currency)}</h4>
                         </div>
 
                         <div className="flex flex-col justify-center items-start w-full border-b gap-4 py-1">
@@ -50,38 +53,49 @@ export default async function Items() {
                             <div className="flex justify-between items-center w-full gap-4">
                                 <div className="flex flex-col justify-start items-start gap-2 text-sm xl:text-base">
                                     <p>{t("shipping_to", { country })}</p>
-                                    <Select_country />
+                                    <Select_country address={customer.address} />
                                 </div>
-                                <p className={`xl:flex hidden ${pickup ? "line-through" : ""}`}>{format_price(shipping_costs, currency)}</p>
+                                <p className={`xl:flex hidden ${pickup ? "line-through" : ""}`}>{format_cart_money(shipping_costs, currency)}</p>
                             </div>
 
-                            <p className={`xl:hidden flex ${pickup ? "line-through" : ""}`}>{t("shipping_costs", { cost: format_price(shipping_costs, currency) })}</p>
+                            <p className={`xl:hidden flex ${pickup ? "line-through" : ""}`}>{t("shipping_costs", { cost: format_cart_money(shipping_costs, currency) })}</p>
 
-                            <LocalPickup_checkbox />
+                            {payments.local_pickup && <LocalPickup_checkbox initial={customer.local_pickup} />}
 
                             <p className="text-sm text-secondary">
                                 {t("moreAbout")}{" "}
-                                <Link href="/info/payments" className="underline text-foreground">
+                                <Link href={server_href("/info/payments")} className="underline text-foreground">
                                     {t("shipping")}
                                 </Link>
                             </p>
                         </div>
 
+                        {tax.mode == "added" && (
+                            <div className="flex justify-between items-center w-full border-b py-1">
+                                <h4 className="text-gold">{t_checkout("vatAdded", { rate: tax.rate })}</h4>
+                                <h4>{format_cart_money(totals.tax, currency)}</h4>
+                            </div>
+                        )}
+
                         <div className="flex justify-between items-center w-full border-b py-1 text-gold">
                             <h2>{t("total")}</h2>
-                            <h2>{format_price(total + (pickup ? 0 : shipping_costs), currency)}</h2>
+                            <h2>{format_cart_money(totals.total, currency)}</h2>
                         </div>
+                        {tax.mode == "included" && (
+                            <p className="w-full text-end text-sm text-secondary -mt-6">
+                                {t_checkout("vatIncluded", { rate: tax.rate })}: {format_cart_money(totals.tax_included, currency)}
+                            </p>
+                        )}
+                        {tax.mode == "margin_scheme" && <p className="w-full text-end text-sm text-secondary -mt-6">{t_checkout("marginScheme")}</p>}
 
                         <div className="flex justify-between items-center w-full py-1">
-                            <Link href={"/checkout"} className="button3 text-primary bg-gold hover:bg-background hover:text-gold w-full flex-center text-xl">
+                            <Link href={server_href("/checkout")} className="button3 text-primary bg-gold hover:bg-background hover:text-gold w-full flex-center text-xl">
                                 {t("checkoutCta")}
                             </Link>
                         </div>
                     </div>
                 </>
-            ) : (
-                <h1>{t("empty")}</h1>
-            )}
+            }
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FadeInObserver from "./fade_wrapper";
 import { getTranslations } from "next-intl/server";
+import { server_href } from "@/app/server/storefront";
 
 export default async function Inspired() {
     const t = await getTranslations("home");
@@ -13,7 +14,7 @@ export default async function Inspired() {
                 <div className="text-xl flex flex-col gap-8 h-1/2 font-secondary w-full sm:w-1/2">
                     <p className="sm:max-w-150 w-full wrap-break-word tracking-wide leading-8 text-primary">{t("getInspiredSubtext")}</p>
 
-                    <Link aria-label={t("getInspiredCTA")} className="underline w-full sm:max-w-150 text-gold" href={"/shop"} prefetch={true}>
+                    <Link aria-label={t("getInspiredCTA")} className="underline w-full sm:max-w-150 text-gold" href={server_href("/consultation")} prefetch={true}>
                         {t("getInspiredCTA")}
                     </Link>
                 </div>

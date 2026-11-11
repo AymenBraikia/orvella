@@ -2,13 +2,17 @@ import Link from "next/link";
 import Banner from "@/app/components/banner";
 import Form from "./form";
 import { getTranslations } from "next-intl/server";
+import { shown_contact, store_identity } from "@/app/server/store_identity";
 
 export default async function SellPage() {
     const t = await getTranslations("sell");
+    const { address } = shown_contact(await store_identity());
 
     const steps = t.raw("consign.steps") as {
         title: string;
         text: string;
+        /** The same sentence without "in {city}", for a store with no address to show. */
+        textNoCity?: string;
     }[];
     const sell_steps = t.raw("sellDirect.steps") as {
         title: string;
@@ -34,7 +38,7 @@ export default async function SellPage() {
             </div>
 
             <div className="w-full py-4 flex flex-col gap-8">
-                <h3 className="font-medium">{t("howItWorksHeading")}</h3>
+                <h3 id="how-it-works" className="font-medium scroll-mt-28">{t("howItWorksHeading")}</h3>
                 <div className="flex justify-start items-start flex-col gap-4">
                     <h4 className="underline">{t("consign.heading")}</h4>
                     <p className="text-sm tracking-widest text-shine">{t("consign.intro")}</p>
@@ -43,7 +47,7 @@ export default async function SellPage() {
                             {steps.map((e) => (
                                 <li key={e.title} className="text-xl my-2">
                                     {e.title}
-                                    <p className="text-sm tracking-wider mt-2 ms-4 text-secondary">{e.text}</p>
+                                    <p className="text-sm tracking-wider mt-2 ms-4 text-secondary">{address.city ? e.text.replace("{city}", address.city) : (e.textNoCity ?? e.text)}</p>
                                 </li>
                             ))}
                         </ul>

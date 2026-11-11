@@ -1,8 +1,10 @@
 import { unstable_cache } from "next/cache";
-import { cookies } from "next/headers";
 
 import { items_collection } from "../db/collections";
+import { active_ref } from "./ref";
 import { Item } from "@/types/item";
+import { to_public_item } from "@/app/(site)/lib/stock";
+import { current_demo, localize_item } from "./storefront";
 
 // The card grid never reads these, but you're currently shipping them for
 // every watch on every request.
@@ -24,6 +26,10 @@ const CARD_PROJECTION = {
     waterResistanceM: 1,
     boxPapers: 1,
     inStock: 1,
+    quantity: 1,
+    status: 1,
+    reservations: 1,
+    featured: 1,
     date_added: 1,
     relevance_score: 1,
     images: { $slice: 1 },
@@ -45,6 +51,8 @@ const CARD_PROJECTION = {
     type: 1,
     // Needed because the result is filtered by preview
     preview: 1,
+    // A lead demo's shop filter
+    collection: 1,
 } as const;
 
 /**
@@ -57,7 +65,7 @@ const get_cached_items = unstable_cache(
     async (): Promise<Item[]> => {
         const collection = await items_collection();
 
-        return collection.find({}, { projection: CARD_PROJECTION }).toArray();
+        return collection.find({ deleted: { $ne: true } }, { projection: CARD_PROJECTION }).toArray();
     },
     ["watches:all"],
     {
@@ -69,13 +77,17 @@ const get_cached_items = unstable_cache(
 /**
  * Request-specific layer.
  *
- * cookies() lives OUTSIDE the cache scope.
+ * The ref cookie is read OUTSIDE the cache scope.
  */
 async function get_items(): Promise<Item[]> {
-    const cookieStore = await cookies();
-    const ref = cookieStore.get("ref")?.value;
+    const now = Date.now();
+    const data = (await get_cached_items()).map((item) => to_public_item(item, now));
 
-    const data = await get_cached_items();
+    // A lead demo (/<locale>/<demo>): only its own products (imported with its name as their preview tag).
+    const demo = current_demo();
+    if (demo) return JSON.parse(JSON.stringify(data.filter((e) => e.preview === demo.name).map((e) => localize_item(demo, e))));
+
+    const ref = await active_ref();
 
     // No ref cookie => return all watches.
     if (!ref) {

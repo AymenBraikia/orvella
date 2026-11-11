@@ -1,181 +1,148 @@
 "use client";
 import Link from "next/link";
+import FooterView, { FooterColumn } from "./footer_view";
 import Instagram from "./svg/instagram";
 import Watch from "./svg/watch";
 import Ebay from "./svg/ebay";
 import { useTranslations } from "next-intl";
 import WhatsApp from "./svg/whatsapp";
-import { useSearchParams } from "next/navigation";
+import type { PublicStoreDetails } from "@/types/settings";
+import { useStorefront } from "../(site)/context/storefrontContext";
 
-export default function Footer() {
+const LINK = "underline text-secondary hover:text-primary transition-default";
+
+type FooterLink = { href: string; label: string; aria: string };
+
+export default function Footer({ store }: { store: PublicStoreDetails }) {
     const t = useTranslations("common.footer");
-    const t2 = useTranslations("home");
     const t_nav = useTranslations("common.nav");
+    const t_filters = useTranslations("common.filters");
+    // A lead demo: its logo, only its own pages (under its address) and its private-demo note.
+    const { demo, href, has } = useStorefront();
+    const only_ours = (links: FooterLink[]) => links.filter((l) => has(l.href)).map((l) => ({ ...l, href: href(l.href) }));
 
-    const params = useSearchParams();
+    const platforms = [
+        { href: store.chrono24_url, label: "Chrono 24", icon: <Watch classnames={"w-6"} /> },
+        { href: store.ebay_url, label: "Ebay", icon: <Ebay classnames={"w-6"} /> },
+        { href: store.whatsapp ? `https://wa.me/${store.whatsapp.replace(/\D/g, "")}` : "", label: "WhatsApp", icon: <WhatsApp classnames={"w-6"} /> },
+        { href: store.instagram_url, label: "Instagram", icon: <Instagram classnames={"w-6"} /> },
+    ].filter((p) => p.href);
+
+    const legal = only_ours([
+        { href: "/info/imprint", label: t("imprint"), aria: "imprint" },
+        { href: "/info/policy", label: t("privacyPolicy"), aria: "privacy policy" },
+        { href: "/info/terms", label: t("terms"), aria: "terms of use" },
+        { href: "/info/withdraw", label: t("withdrawal"), aria: "withdrawal" },
+        { href: "/info/disclaimer", label: t("disclaimer"), aria: "disclaimer" },
+        { href: "/info/cookies", label: t("cookiePolicy"), aria: "cookies policy" },
+    ]);
+    const shop = only_ours([
+        { href: "/shop", label: t_nav("watches"), aria: "watches" },
+        { href: "/spare", label: t_nav("spareParts"), aria: "spare parts" },
+        { href: "/info/about", label: t_nav("aboutUs"), aria: "about us" },
+    ]);
+    const service = only_ours([
+        { href: "/store", label: t_nav("store"), aria: "store" },
+        { href: "/sell", label: t_nav("sellConsign"), aria: "sell or consign" },
+        { href: "/polish", label: t_nav("polishingServices"), aria: "polishing and services" },
+        { href: "/info/payments", label: t_nav("shippingPayments"), aria: "shipping and payments" },
+        { href: "/info/faq", label: t_nav("faq"), aria: "Frequently Asked Questions" },
+        { href: "/info/vacancies", label: t_nav("vacancies"), aria: "Vacancies" },
+    ]);
+    // The legal column's privacy link has always had this aria-label.
+    const legal_column = legal.map((l) => (l.aria == "privacy policy" ? { ...l, aria: "privacy policiy" } : l));
 
     return (
-        <footer className="w-full py-8 md:px-15 lg:px-20 px-4 flex-center flex-col bg-background font-bold z-30">
-            <section className="w-full lg:h-75 lg:flex-row flex-col flex justify-between lg:items-center items-start">
-                <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <div className="relative w-40 aspect-19/4">
-                        <Link aria-label={"home"} href={"/"} className="w-fit text-gold font-primary text-3xl tracking-widest font-normal">
-                            {t2("heroTitle")}
-                        </Link>{" "}
+        <FooterView
+            name={store.store_name}
+            logo={demo?.logo_horizontal ?? demo?.logo_icon}
+            home_href={href("/")}
+            compact={Boolean(demo)}
+            details={
+                <ul className="flex flex-col justify-start items-start gap-2 tracking-wider">
+                    {store.address.street ? (
+                        <>
+                            <li>{store.address.street}</li>
+                            <li>
+                                {store.address.postcode} {store.address.city}
+                            </li>
+                            <li>{store.address.country}</li>
+                        </>
+                    ) : (
+                        has("/booking") && (
+                            <li>
+                                <Link href={href("/booking")} className={LINK}>
+                                    {t("byAppointment")}
+                                </Link>
+                            </li>
+                        )
+                    )}
+                    {store.phone && (
+                        <li>
+                            <a href={`tel:${store.phone.replace(/[^\d+]/g, "")}`}>{store.phone}</a>
+                        </li>
+                    )}
+                    {store.email && (
+                        <li>
+                            <a href={`mailto:${store.email}`}>{store.email}</a>
+                        </li>
+                    )}
+                </ul>
+            }
+            bottom={
+                <>
+                    {/* A lead demo: its private-demo note instead of the store's dealer disclaimer (a claim about the seller). */}
+                    {demo ? <p>{demo.footer_note}</p> : <p className="">{t("disclaimerText")}</p>}
+                    <p className="">{t("copyright", { year: new Date().getFullYear() })}</p>
+                    <div className="flex-center flex-wrap gap-4 lg:gap-3">
+                        {legal.map((l) => (
+                            <Link key={l.href} aria-label={l.aria} href={l.href} className={LINK}>
+                                {l.label}
+                            </Link>
+                        ))}
                     </div>
-                    <ul className="flex flex-col justify-start items-start gap-2 tracking-wider">
-                        <li>Marie-Curie-Straße 14</li>
-                        <li>60439 Frankfurt am Main</li>
-                        <li>Germany</li>
-                        <li>+49 30 2312 5100</li>
-                        <li>info@{params.get("ref") || "orvella"}.com</li>
-                    </ul>
-                </div>
-                <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <h5 className="lg:title5 title4 font-secondary text-gold">{t("shopHeading")}</h5>
-                    <ul className="flex flex-col justify-start items-start gap-2">
-                        <li>
-                            <Link aria-label="watches" href={"/shop"} className="underline text-secondary hover:text-primary transition-default">
-                                {t_nav("watches")}
+                </>
+            }
+        >
+            <Column heading={t("shopHeading")} links={shop} />
+            {/* A lead demo: its collections and brands (service pages are the store's own). */}
+            <Column heading={t("serviceHeading")} links={service} />
+            {/* A lead demo: its collections and brands too. */}
+            {demo && (
+                <>
+                    <Column heading={demo.collections_heading ?? ""} links={demo.collections.map((c) => ({ href: href(c.path), label: c.label, aria: c.label }))} />
+                    <Column heading={t_filters("brands")} links={demo.brands.map((b) => ({ href: href(b.path), label: b.label, aria: b.label }))} />
+                </>
+            )}
+            {/* Only the profiles the store has filled in under Admin → Settings (a demo: the seller's Instagram) */}
+            {platforms.length > 0 && (
+                <FooterColumn heading={t("otherPlatformsHeading")}>
+                    {platforms.map((p) => (
+                        <li key={p.label}>
+                            <Link target={"_blank"} rel="noreferrer" aria-label={p.label} href={p.href} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
+                                {p.icon}
+                                <p>{p.label}</p>
                             </Link>
                         </li>
-                        <li>
-                            <Link aria-label="spare parts" href={"/spare"} className="underline text-secondary hover:text-primary transition-default">
-                                {t_nav("spareParts")}
-                            </Link>
-                        </li>
+                    ))}
+                </FooterColumn>
+            )}
+            <Column heading={t("legalHeading")} links={legal_column} />
+        </FooterView>
+    );
+}
 
-                        <li>
-                            <Link aria-label="about us" href={"/info/about"} className="underline text-secondary hover:text-primary transition-default">
-                                {t_nav("aboutUs")}
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <h5 className="lg:title5 title4 font-secondary text-gold">{t("serviceHeading")}</h5>
-                    <ul className="flex flex-col justify-start items-start gap-2">
-                        <li>
-                            <Link aria-label="store" href={"/store"} className="underline text-secondary hover:text-primary transition-default">
-                                {t_nav("store")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="sell or consign" href={"/sell"} className="underline text-secondary hover:text-primary transition-default">
-                                {t_nav("sellConsign")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="polishing and services" href={"/polish"} className="underline text-secondary hover:text-primary transition-default">
-                                {t_nav("polishingServices")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="shipping and payments" href={"/info/payments"} className="underline text-secondary hover:text-primary transition-default">
-                                {t_nav("shippingPayments")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="Frequently Asked Questions" href={"/info/faq"} className="underline text-secondary hover:text-primary transition-default">
-                                {t_nav("faq")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="Vacancies" href={"/info/vacancies"} className="underline text-secondary hover:text-primary transition-default">
-                                {t_nav("vacancies")}
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <h5 className="lg:title5 title4 font-secondary text-gold">{t("otherPlatformsHeading")}</h5>
-                    <ul className="flex flex-col justify-start items-start gap-2">
-                        <li>
-                            <Link target={"_blank"} aria-label="visit chrono 24" href={"https://www.chrono24.com"} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
-                                {<Watch classnames={"w-6"} />}
-                                <p>Chrono 24</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link target={"_blank"} aria-label="ebay store" href={"https://www.ebay.com"} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
-                                {<Ebay classnames={"w-6"} />}
-                                <p>Ebay</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link target={"_blank"} aria-label="WhatsApp" href={"https://wa.me/213559078448"} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
-                                {<WhatsApp classnames={"w-6"} />}
-                                <p>WhatsApp</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link target={"_blank"} aria-label="instagram page" href={"https://www.instagram.com/ayme.n0412/"} className="underline flex justify-start items-center gap-4 text-secondary hover:text-primary transition-default">
-                                {<Instagram classnames={"w-6"} />}
-                                <p>Instagram</p>
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="flex flex-col justify-start items-start gap-4 my-5 lg:my-0 lg:h-full">
-                    <h5 className="lg:title5 title4 font-secondary text-gold">{t("legalHeading")}</h5>
-                    <ul className="flex flex-col justify-start items-start gap-2">
-                        <li>
-                            <Link aria-label="imprint" href={"/info/imprint"} className="underline text-secondary hover:text-primary transition-default">
-                                {t("imprint")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="privacy policiy" href={"/info/policy"} className="underline text-secondary hover:text-primary transition-default">
-                                {t("privacyPolicy")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="terms of use" href={"/info/terms"} className="underline text-secondary hover:text-primary transition-default">
-                                {t("terms")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="withdrawal" href={"/info/withdraw"} className="underline text-secondary hover:text-primary transition-default">
-                                {t("withdrawal")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="disclaimer" href={"/info/disclaimer"} className="underline text-secondary hover:text-primary transition-default">
-                                {t("disclaimer")}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link aria-label="cookies policy" href={"/info/cookies"} className="underline text-secondary hover:text-primary transition-default">
-                                {t("cookiePolicy")}
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section className="w-full lg:gap-0 gap-4 flex-col lg:flex-row flex justify-between items-center font-normal text-xs lg:tracking-normal tracking-wider">
-                <p className="">{t("disclaimerText")}</p>
-                <p className="">{t("copyright", { year: 2026 })}</p>
-                <div className="flex-center flex-wrap gap-4 lg:gap-3">
-                    <Link aria-label="imprint" href={"/info/imprint"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("imprint")}
+function Column({ heading, links }: { heading: string; links: FooterLink[] }) {
+    if (!links.length) return null;
+    return (
+        <FooterColumn heading={heading}>
+            {links.map((l) => (
+                <li key={l.href}>
+                    <Link aria-label={l.aria} href={l.href} className={LINK}>
+                        {l.label}
                     </Link>
-                    <Link aria-label="privacy policy" href={"/info/policy"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("privacyPolicy")}
-                    </Link>
-                    <Link aria-label="terms of use" href={"/info/terms"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("terms")}
-                    </Link>
-                    <Link aria-label="withdrawal" href={"/info/withdraw"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("withdrawal")}
-                    </Link>
-                    <Link aria-label="disclaimer" href={"/info/disclaimer"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("disclaimer")}
-                    </Link>
-                    <Link aria-label="cookies policy" href={"/info/cookies"} className="underline text-secondary hover:text-primary transition-default">
-                        {t("cookiePolicy")}
-                    </Link>
-                </div>
-            </section>
-        </footer>
+                </li>
+            ))}
+        </FooterColumn>
     );
 }

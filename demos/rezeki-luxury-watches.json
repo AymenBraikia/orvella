@@ -1,0 +1,615 @@
+{
+    "slug": "rezeki-luxury-watches",
+    "locale": "en",
+    "name": "Rezeki Luxury Watches",
+    "accent": "#D4B887",
+    "label": "Private demo · Prepared for Rezeki Luxury Watches · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for Rezeki Luxury Watches. Payments are in test mode; no real payment is taken.",
+    "description": "Rezeki Luxury Watches: pre-owned luxury watches. Patek Philippe, Rolex, Audemars Piguet, Cartier and Tudor.",
+    "logo": {
+        "src": "/demos/rezeki-luxury-watches/logo.png",
+        "width": 440,
+        "height": 410
+    },
+    "logo_icon": {
+        "src": "/demos/rezeki-luxury-watches/logo-icon.png",
+        "width": 192,
+        "height": 179
+    },
+    "favicon": "/demos/rezeki-luxury-watches/favicon.png",
+    "hero": {
+        "title": "REZEKI LUXURY WATCHES",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/rezeki-luxury-watches/hero-poster.jpg",
+        "desktop_image": "/demos/rezeki-luxury-watches/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/rezeki-luxury-watches/watch-2.jpg"
+            },
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/rezeki-luxury-watches/watch-1.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": "GMT",
+                "image": "/demos/rezeki-luxury-watches/watch-16.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/rezeki-luxury-watches/watch-6.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/rezeki-luxury-watches/trade.jpg",
+    "banner": {
+        "light": "/demos/rezeki-luxury-watches/banner-light.jpg",
+        "dark": "/demos/rezeki-luxury-watches/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "Rezeki Luxury Watches is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Patek Philippe, Rolex, Audemars Piguet, Cartier and Tudor, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "patek-philippe-nautilus-5711-1r",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "description": "Patek philippe nautilus reference 5711/1r in rose gold. the watch has the nautilus’ rounded octagonal bezel, integrated rose-gold bracelet and a blue dial with horizontal embossed ridges. applied baton hour markers and slender hands keep the face clean, while the date window is positioned at 3 o’clock. the case and bracelet share the same warm precious-metal tone, with brushed surfaces across the links and polished highlights around the bezel. the photographs show the watch from the front and on a gloved hand, making the distinctive case outline, integrated bracelet and textured dial easy to recognize. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-1.jpg"],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "reference": "5711/1R",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-day-date-128235",
+            "brand": "rolex",
+            "model": "Day-Date 36",
+            "description": "Rolex day-date 36 reference 128235 in 18-carat Everose gold. the watch has a fluted gold bezel, matching president bracelet and a blue-green dial with diamond hour markers. the day display sits in the arched window at 12 o’clock, while the date appears at 3 o’clock beneath a magnifying crystal. the warm rose-gold case and bracelet create a unified precious-metal finish, contrasting with the cool blue-green dial. the photos show the watch in hand and display the dial, fluted bezel and rounded three-piece president links. the reference and 36 mm size come from the supplied listing. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-2.jpg"],
+            "collection": "classic",
+            "dial": "Green Diamond",
+            "details": {
+                "reference": "128235",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "President bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-3",
+            "brand": "rolex",
+            "model": "Datejust 31",
+            "description": "Rolex lady-Datejust 31 with a bright silver dial. the round face uses applied hour markers and slim central hands, with the date displayed at 3 o’clock beneath a magnifying lens. a fluted bezel frames the dial, and the bracelet combines polished yellow-gold-coloured centre links with steel outer links in the familiar Jubilee pattern. the silver dial provides a clean, bright contrast to the two-tone case and bracelet. the photos show the watch from the front and on its cushion, emphasizing the smaller case size and the repeated bracelet links. the supplied caption identifies it as a 31 mm ladies’ Datejust. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-3.jpg"],
+            "collection": "classic",
+            "dial": "Silver",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 31,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-4",
+            "brand": "rolex",
+            "model": "Datejust 31",
+            "description": "Rolex Datejust 31 in two-tone steel and Everose-style rose gold, with a pink dial and diamond hour markers. the face has central hands and the classic date aperture at 3 o’clock. a fluted rose-gold bezel surrounds the dial, while the Jubilee bracelet combines steel outer links with rose-gold centre links. the pink dial is the defining colour feature and gives the watch a softer, jewellery-like appearance. the product photos show the front of the watch, bracelet and case from several angles. the supplied listing describes the dial as factory diamond-set and identifies the watch as a 31 mm two-tone Datejust. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-4.jpg"],
+            "collection": "classic",
+            "dial": "Pink Diamond",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "caseDiameterMm": 31,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-5",
+            "brand": "rolex",
+            "model": "Datejust 36 “Chocolate”",
+            "description": "Rolex Datejust 36 in two-tone yellow gold and oystersteel, with a Chocolate-brown mother-of-pearl dial. the dial has a shimmering, layered surface that changes tone under the light, with applied diamond hour markers and central hands. the date aperture sits at 3 o’clock beneath the cyclops magnifier. a fluted yellow-gold bezel frames the face, while the Jubilee bracelet alternates gold-coloured centre links with steel outer links. the photographs show multiple front and bracelet angles, including the case profile and clasp. the supplied caption identifies the model as a 36 mm two-tone Datejust. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-5.jpg"],
+            "import_photos": ["demo_assets/rezeki_luxury_watches/.web/5-2.jpg", "demo_assets/rezeki_luxury_watches/.web/5-3.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-26331or",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "Audemars piguet royal oak chronograph reference 26331or with a blue dial and rose-gold case. the dial has the collection’s textured tapisserie pattern, three subsidiary chronograph registers and applied hour markers. the octagonal bezel is secured by exposed screws, and the case has a crown and chronograph pushers on the right side. the bracelet or strap is shown in a darker contrasting tone against the warm rose-gold case. the blue dial is the main visual feature, with the chronograph layout adding depth and function. the supplied listing identifies the reference and rose-gold ‘or’ configuration. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-7.jpg"],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "reference": "26331OR",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-15500st",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "Audemars piguet royal oak reference 15500st with a light pearl-white dial and stainless-steel integrated bracelet. the dial has the characteristic grande tapisserie-style textured pattern, applied baton markers and a date window at 3 o’clock. the octagonal steel bezel is held by exposed hexagonal screws, and the integrated bracelet continues the case’s angular design with broad, carefully finished links. the photos show the front of the watch, the case side and the bracelet, including the visible finishing contrast between brushed surfaces and polished edges. the supplied caption identifies it as a full-set example in near-new condition. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-8.jpg"],
+            "collection": "sport",
+            "dial": "White",
+            "details": {
+                "reference": "15500ST",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-lect",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust 36 with a black dial and diamond hour markers. the dial uses bright stone-set indices against the dark surface, with central hands and a date aperture at 3 o’clock beneath the magnifying cyclops crystal. a fluted bezel surrounds the round case, and the linked bracelet gives the watch its classic Datejust profile. the black-and-diamond contrast is the defining feature, while the polished case and bezel reflect light around the dial. the supplied caption notes a ‘new lock’ appearance, but no exact reference or bracelet type is stated; the description therefore focuses on the visible configuration. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-9.jpg"],
+            "collection": "classic",
+            "dial": "Black Diamond",
+            "details": {
+                "reference": "LECT",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-10",
+            "brand": "rolex",
+            "model": "Datejust 36",
+            "description": "Rolex Datejust 36 in two-tone yellow gold and oystersteel. this example has a grey dial with diamond hour markers, central hands and a date window at 3 o’clock beneath the cyclops magnifier. the fluted bezel is yellow-gold coloured, matching the centre links of the Jubilee bracelet, while the outer links and case are steel. several photographs show the watch in a cushion display, from the front and at an angle, including the bracelet and clasp. the dial’s muted grey tone contrasts with the warm gold accents. the supplied listing identifies it as a 36 mm model with a complete presentation set. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-10.jpg"],
+            "import_photos": ["demo_assets/rezeki_luxury_watches/.web/10-2.jpg", "demo_assets/rezeki_luxury_watches/.web/10-3.jpg", "demo_assets/rezeki_luxury_watches/.web/10-4.jpg", "demo_assets/rezeki_luxury_watches/.web/10-5.jpg"],
+            "collection": "classic",
+            "dial": "Grey Diamond",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-11",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust 36 in two-tone yellow gold and oystersteel, distinguished by its black dial with diamond hour markers. the dark dial provides contrast for the bright stones and central hands, and the date display at 3 o’clock is enlarged by the cyclops lens. a fluted gold-coloured bezel frames the dial, while the Jubilee bracelet alternates steel outer links with polished yellow-gold centre links. the photos show several angles of the watch, including the face, bracelet and clasp. the listing identifies the configuration as a black diamond-set dial; exact diamond grades and metal purity should be taken from its paperwork. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-11.jpg"],
+            "import_photos": ["demo_assets/rezeki_luxury_watches/.web/11-2.jpg", "demo_assets/rezeki_luxury_watches/.web/11-3.jpg", "demo_assets/rezeki_luxury_watches/.web/11-4.jpg", "demo_assets/rezeki_luxury_watches/.web/11-5.jpg"],
+            "collection": "classic",
+            "dial": "Black Diamond",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-12",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Two-tone Rolex lady-Datejust in yellow gold and oystersteel, shown with a warm champagne-coloured dial. the dial carries diamond hour markers, central hands and a date window beneath the magnifying crystal at 3 o’clock. the fluted gold-coloured bezel and Jubilee bracelet give the watch a bright, classic jewellery-watch appearance. several photos show the watch on its cushion from the front, at an angle and from the bracelet side. the bracelet’s five-piece links alternate polished gold-coloured centre sections with steel outer sections. the supplied listing identifies it as a pre-owned ladies’ Datejust; exact case size is not established here. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-12.jpg"],
+            "import_photos": ["demo_assets/rezeki_luxury_watches/.web/12-2.jpg", "demo_assets/rezeki_luxury_watches/.web/12-3.jpg", "demo_assets/rezeki_luxury_watches/.web/12-4.jpg", "demo_assets/rezeki_luxury_watches/.web/12-5.jpg"],
+            "collection": "classic",
+            "dial": "Red Diamond",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-oyster-perpetual-134300",
+            "brand": "rolex",
+            "model": "Oyster Perpetual 41",
+            "description": "Rolex Oyster perpetual 41 reference 134300 with a matte blue dial. the face has applied baton hour markers and simple central hour, minute and seconds hands, with no date aperture or chronograph registers. a smooth polished bezel frames the round Oyster case, and the stainless-steel Oyster bracelet uses broad three-piece links. the blue dial’s matte finish gives the watch a restrained appearance, while the clean layout keeps the time easy to read. the photos show the front, case and bracelet. the supplied listing identifies the 41 mm size and reference 134300. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-13.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "134300",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-santos-14",
+            "brand": "cartier",
+            "model": "Santos",
+            "description": "Cartier santos de Cartier large model with a black dial and a dark, modernised case finish. the square case has the santos’ familiar exposed bezel screws and rounded corners, while the bezel and case are described in the supplied listing as steel with adlc treatment. the black dial has roman numeral hour markers, a minute track, central black sword-shaped hands with luminous material and a date display. the crown is set with a dark faceted synthetic spinel. the photos also show a dark strap and a transparent caseback view. the listing identifies the automatic calibre 1847 mc. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-14.jpg"],
+            "import_photos": [
+                "demo_assets/rezeki_luxury_watches/.web/14-2.jpg",
+                "demo_assets/rezeki_luxury_watches/.web/14-3.jpg",
+                "demo_assets/rezeki_luxury_watches/.web/14-4.jpg",
+                "demo_assets/rezeki_luxury_watches/.web/14-5.jpg",
+                "demo_assets/rezeki_luxury_watches/.web/14-6.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-sky-dweller-336934",
+            "brand": "rolex",
+            "model": "Sky-Dweller",
+            "description": "Rolex Sky-Dweller 42 reference 336934 with a black dial, white-gold fluted bezel and Jubilee bracelet. the dial combines central time hands with an off-centre 24-hour display for a second time zone and a month indication integrated around the hour markers. the annual-calendar date window appears at 3 o’clock beneath the cyclops lens. the steel case is paired with a bright fluted white-gold bezel, while the Jubilee bracelet adds a dressier five-link finish. the photos show the watch on display and from the dial side. the supplied listing identifies the 42 mm reference and complete-set presentation. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-16.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "336934",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 42,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-day-date-17",
+            "brand": "rolex",
+            "model": "Day-Date 40",
+            "description": "Rolex day-date 40 in 18-carat Everose gold with a slate ombré dial. the darker outer edge of the dial fades toward a lighter centre, creating a gradient effect behind the applied hour markers and central hands. the arched day display at 12 o’clock and date window at 3 o’clock define the day-date layout. a fluted Everose-gold bezel frames the face, and the matching president bracelet uses rounded three-piece links with a concealed clasp. the photographs show the watch from the front and on the wrist, emphasizing the warm gold finish, gradient dial and substantial 40 mm case. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-17.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "President bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-278271",
+            "brand": "rolex",
+            "model": "Datejust 31",
+            "description": "Rolex Datejust 31 reference 278271 in Everose Rolesor, combining oystersteel with 18-carat Everose gold. the mother-of-pearl dial has a naturally varied iridescent surface, with applied markers and central hands. the date appears at 3 o’clock under the cyclops magnifier, and a fluted Everose-gold bezel surrounds the dial. the Jubilee bracelet alternates steel and rose-gold-coloured links, matching the two-tone case. the product photos show the watch from several angles and on its cushion, allowing the dial texture, bezel facets and bracelet construction to be seen. the supplied listing identifies the reference and 31 mm size. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-18.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "278271",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "caseDiameterMm": 31,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-erence",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex cosmograph Daytona in 18-carat Everose gold with a meteorite dial and Oysterflex bracelet. the dial has three chronograph registers, central timing hands and applied markers, with the natural-looking meteorite pattern making the face visually distinctive. a tachymeter bezel surrounds the dial, and the case has screw-down chronograph pushers and a crown. the flexible black Oysterflex strap contrasts with the warm rose-gold case and clasp. the photographs show the dial texture, bezel markings and case from different angles. the supplied listing identifies the meteorite and Everose-gold configuration; the exact reference is not stated in the caption. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-19.jpg"],
+            "collection": "chronograph",
+            "dial": "Gold",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Oysterflex bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-ined",
+            "brand": "rolex",
+            "model": "GMT-Master II “Batgirl”",
+            "description": "Rolex GMT-Master II ‘Batgirl’ in stainless steel with a blue-and-black ceramic 24-hour bezel and Jubilee bracelet. the black dial carries luminous hour markers, central hands and a red-tipped or contrasting gmt hand for tracking a second time zone. a date window at 3 o’clock is magnified by the cyclops lens. the five-piece Jubilee links give the watch a refined bracelet profile, while crown guards and a screw-down crown preserve the familiar gmt sports-watch case shape. the photos show the dial, bezel, bracelet and presentation setting. the supplied listing identifies the Batgirl configuration. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-20.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "INED",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-126711chnr",
+            "brand": "rolex",
+            "model": "GMT-Master II “Root Beer”",
+            "description": "Rolex GMT-Master II ‘Root Beer’ reference 126711chnr in Everose Rolesor. the watch combines oystersteel with Everose-gold-coloured centre links and case accents, set against a black dial and a two-colour brown-and-black 24-hour bezel. the central gmt hand allows a second time zone to be read, and the date aperture at 3 o’clock is enlarged by the cyclops crystal. the rotating bezel has 24-hour numerals, and the Oyster bracelet uses three-piece links. the photographs show the dial, bezel colours, bracelet and wrist presence. the supplied listing identifies the reference and two-tone metal configuration. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-21.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "126711CHNR",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-day-date-22",
+            "brand": "rolex",
+            "model": "Day-Date",
+            "description": "Two Rolex day-date 40 watches are shown in this folder. one has a yellow-gold case and president bracelet with a green ombré dial; the other is presented as a rose-gold version with a dark, black-toned ombré dial. both use the day-date layout, with the day aperture at 12 o’clock and a date display at 3 o’clock, and both are framed by fluted precious-metal bezels. the matching president bracelets have rounded three-piece links and concealed clasps. the photographs present the two colour variations, so this folder represents a pair of related watches rather than one single configuration. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-22.jpg"],
+            "import_photos": ["demo_assets/rezeki_luxury_watches/.web/22-2.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "President bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "tudor-chronograph-and",
+            "brand": "tudor",
+            "model": "Chronograph",
+            "description": "Tudor watch with a vivid miami-pink dial, presented as a bold colour-led model. the round face is set in a stainless-steel case and has contrasting chronograph-style subdials, central hands and applied hour markers. the polished steel bracelet gives the watch a substantial wrist presence and balances the bright dial colour. the photographs show the dial head-on and the metal bracelet, with the pink surface providing the strongest visual detail. the supplied listing calls it the Tudor miami pink dial and mentions a full set; the exact model reference and movement are not stated in the photos. Full set with box and warranty card.",
+            "images": ["/demos/rezeki-luxury-watches/watch-23.jpg"],
+            "collection": "chronograph",
+            "dial": "Pink",
+            "details": {
+                "reference": "AND",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-126334",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust 41 reference 126334 with a mint-green dial, fluted bezel and Jubilee bracelet. the dial has applied baton markers, central hands and a date aperture at 3 o’clock beneath the cyclops magnifier. the fluted bezel adds a repeating faceted edge, while the five-piece Jubilee links give the steel bracelet a detailed, reflective surface. the mint-green dial shifts from pale to deeper green depending on the lighting and contrasts with the polished steel case. the photos show the watch on its cushion and from front angles. the supplied listing identifies the 126334 reference and green dial. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-24.jpg"],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "reference": "126334",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "tudor-watch-erence",
+            "brand": "tudor",
+            "model": "Watch",
+            "description": "Tudor flamingo-style watch with a bright turquoise-blue dial and a contemporary metal bracelet. the round case has a polished bezel and a dial with applied hour markers and central hands; the blue surface is the defining colour feature. the bracelet has closely integrated links that give the watch a smooth, modern silhouette. warm metal accents around the case and dial add contrast to the cool blue face. the photos show the watch in front view and on display, emphasizing its dial colour and integrated bracelet design. the supplied listing identifies it as a Tudor flamingo, but does not provide a precise reference or technical specification. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-25.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-126334-26",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust 41 reference 126334 with a mint-green dial and a stainless-steel Oyster bracelet. the dial features applied baton markers, central hands and a date display with a magnifying lens at 3 o’clock. a fluted bezel frames the face, while the three-link Oyster bracelet creates a sportier appearance than the Jubilee version. the green dial provides a fresh colour accent against the polished steel case and bracelet. the photos show the dial, bezel and bracelet from several angles. the supplied listing specifically distinguishes this example by its Oyster bracelet and mint-green dial. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-26.jpg"],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "reference": "126334",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-126710grnr",
+            "brand": "rolex",
+            "model": "GMT-Master II “Zombie”",
+            "description": "Rolex GMT-Master II reference 126710grnr, nicknamed ‘Zombie’ in the supplied listing. the watch has a black dial with luminous hour markers, central hands and a gmt hand for a second time zone. a two-tone black-and-grey 24-hour bezel frames the dial, with the date aperture at 3 o’clock beneath a magnifying crystal. the bracelet combines oystersteel outer links with yellow-gold-coloured centre links, creating a Rolesor-style two-tone finish. the photos show the bezel, dial and bracelet. the exact reference and nickname are taken from the supplied product caption. Watch only.",
+            "images": ["/demos/rezeki-luxury-watches/watch-27.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "126710GRNR",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}

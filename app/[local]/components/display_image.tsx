@@ -10,14 +10,14 @@ export default function Display_Image({ play, image_src, vid_src }: { play: bool
         if (!play) {
             vidRef.current.currentTime = 0;
             vidRef.current.pause();
-        } else vidRef.current.play();
+        } else if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) vidRef.current.play().catch(() => {});
     }, [play]);
 
     const [fallback, set_fallback] = useState<boolean>(false);
 
     return vid_src && !fallback ? (
         <>
-            <video ref={vidRef} className={`${play ? "flex" : "hidden"} w-full h-full object-cover`} controls={false} preload="metadata" loop poster={image_src} muted autoPlay={false} playsInline onError={() => set_fallback(true)}>
+            <video ref={vidRef} className={`${play ? "flex" : "hidden"} w-full h-full object-cover`} controls={false} preload="none" loop poster={image_src} muted autoPlay={false} playsInline onError={() => set_fallback(true)}>
                 <source src={vid_src} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

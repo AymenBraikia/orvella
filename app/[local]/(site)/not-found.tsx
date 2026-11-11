@@ -3,9 +3,12 @@ import Link from "next/link";
 import "@/app/globals.css";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useStorefront } from "./context/storefrontContext";
 
 export default function NotFound() {
     const t = useTranslations("notFound");
+    // Inside a lead demo, its own shop and home.
+    const { href, demo } = useStorefront();
     return (
         <div className="flex-center py-10">
             <div className="relative aspect-video w-dvw">
@@ -14,15 +17,15 @@ export default function NotFound() {
                     <h5 className="font-secondary">{t("subHeading")}</h5>
                     <p className="mt-2 text-secondary">{t("subText")}</p>
                     <div className="flex gap-4">
-                        <Link href="/shop" className="mt-4 px-4 py-2 button capitalize">
+                        <Link href={href("/shop")} className="mt-4 px-4 py-2 button capitalize">
                             {t("explore")}
                         </Link>
-                        <Link href="/" className="mt-4 px-4 py-2 button2 capitalize">
+                        <Link href={href("/")} className="mt-4 px-4 py-2 button2 capitalize">
                             {t("return")}
                         </Link>
                     </div>
                 </div>
-                <Image fill alt="not Found" src={"/notFound.jpg"} sizes="100dvw" className="object-cover object-center -z-10 brightness-80" />
+                <Image fill alt="not Found" src={demo?.image ?? "/notFound.jpg"} sizes="100dvw" className="object-cover object-center -z-10 brightness-80" />
             </div>
         </div>
     );

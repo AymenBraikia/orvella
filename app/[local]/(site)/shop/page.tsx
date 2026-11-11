@@ -1,5 +1,8 @@
+import { category_metadata } from "@/app/(site)/lib/site_metadata";
 import Display_list from "@/app/components/display_list";
 import get_items from "@/app/server/get_items";
+
+export const generateMetadata = category_metadata("/shop", "shop.title", "seo.shop", "/watches.avif");
 
 export default async function ShopPage() {
     const items = await get_items();

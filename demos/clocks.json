@@ -1,0 +1,500 @@
+{
+    "slug": "clocks",
+    "locale": "en",
+    "name": "Clocks",
+    "accent": "#E0B39A",
+    "label": "Private demo · Prepared for Clocks · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for Clocks. Payments are in test mode; no real payment is taken.",
+    "description": "Clocks: pre-owned luxury watches. Rolex, Patek Philippe, Audemars Piguet, Omega and Richard Mille.",
+    "logo": {
+        "src": "/logo.svg",
+        "width": 200,
+        "height": 150
+    },
+    "logo_icon": {
+        "src": "/logo_simple.svg",
+        "width": 100,
+        "height": 100
+    },
+    "favicon": "/favicon.ico",
+    "hero": {
+        "title": "CLOCKS",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/clocks/hero-poster.jpg",
+        "desktop_image": "/demos/clocks/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/clocks/watch-2.jpg"
+            },
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/clocks/watch-1.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/clocks/watch-4.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": "GMT",
+                "image": "/demos/clocks/watch-14.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/clocks/trade.jpg",
+    "banner": {
+        "light": "/demos/clocks/banner-light.jpg",
+        "dark": "/demos/clocks/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "Clocks is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Rolex, Patek Philippe, Audemars Piguet, Omega and Richard Mille, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-279171",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust in 18k rose gold. Watch only.",
+            "images": ["/demos/clocks/watch-1.jpg"],
+            "import_photos": ["clocks/.web/1-2.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "279171",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-nautilus-5980",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "description": "Patek Philippe Nautilus. Watch only.",
+            "images": ["/demos/clocks/watch-2.jpg"],
+            "collection": "sport",
+            "details": {
+                "reference": "5980",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-aquanaut-5268r",
+            "brand": "patek philippe",
+            "model": "Aquanaut",
+            "description": "Patek Philippe Aquanaut in 18k rose gold. Watch only.",
+            "images": ["/demos/clocks/watch-3.jpg"],
+            "collection": "sport",
+            "details": {
+                "reference": "5268R",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-126503",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona in 18k yellow gold. Watch only.",
+            "images": ["/demos/clocks/watch-4.jpg"],
+            "import_photos": ["clocks/.web/4-2.jpg"],
+            "collection": "chronograph",
+            "details": {
+                "reference": "126503",
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-calatrava-6196p",
+            "brand": "patek philippe",
+            "model": "Calatrava",
+            "description": "Patek Philippe Calatrava with a salmon dial. Watch only.",
+            "images": ["/demos/clocks/watch-5.jpg"],
+            "import_photos": ["clocks/.web/5-2.jpg"],
+            "collection": "classic",
+            "dial": "Salmon",
+            "details": {
+                "reference": "6196P",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-erence",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona in 18k rose gold. Watch only.",
+            "images": ["/demos/clocks/watch-6.jpg"],
+            "import_photos": ["clocks/.web/6-2.jpg"],
+            "collection": "chronograph",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Oysterflex bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-day-date-128239",
+            "brand": "rolex",
+            "model": "Day-Date",
+            "description": "Rolex Day-Date in 18k white gold. Watch only.",
+            "images": ["/demos/clocks/watch-7.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "128239",
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-nautilus-5726-1a",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "description": "Patek Philippe Nautilus. Watch only.",
+            "images": ["/demos/clocks/watch-8.jpg"],
+            "collection": "sport",
+            "details": {
+                "reference": "5726/1A",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-126506",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona. Watch only.",
+            "images": ["/demos/clocks/watch-9.jpg"],
+            "import_photos": ["clocks/.web/9-2.jpg"],
+            "collection": "chronograph",
+            "details": {
+                "reference": "126506",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-15510st",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "Audemars Piguet Royal Oak with a green dial. Watch only.",
+            "images": ["/demos/clocks/watch-10.jpg"],
+            "collection": "sport",
+            "dial": "Green",
+            "details": {
+                "reference": "15510ST",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-15500st",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "Audemars Piguet Royal Oak with a blue dial. Watch only.",
+            "images": ["/demos/clocks/watch-11.jpg"],
+            "import_photos": ["clocks/.web/11-2.jpg"],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "reference": "15500ST",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-126334",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust. Watch only.",
+            "images": ["/demos/clocks/watch-12.jpg"],
+            "import_photos": ["clocks/.web/12-2.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "126334",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-yacht-master-126622",
+            "brand": "rolex",
+            "model": "Yacht-Master",
+            "description": "Rolex Yacht-Master. Watch only.",
+            "images": ["/demos/clocks/watch-13.jpg"],
+            "import_photos": ["clocks/.web/13-2.jpg"],
+            "collection": "sport",
+            "details": {
+                "reference": "126622",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-explorer-ii-16570",
+            "brand": "rolex",
+            "model": "Explorer II “Polar”",
+            "description": "Rolex Explorer II. Watch only.",
+            "images": ["/demos/clocks/watch-14.jpg"],
+            "collection": "gmt",
+            "details": {
+                "reference": "16570",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-aquanaut-5968r",
+            "brand": "patek philippe",
+            "model": "Aquanaut “Chocolate”",
+            "description": "Patek Philippe Aquanaut in 18k rose gold with a chocolate dial. Watch only.",
+            "images": ["/demos/clocks/watch-15.jpg"],
+            "import_photos": ["clocks/.web/15-2.jpg"],
+            "collection": "sport",
+            "dial": "Chocolate",
+            "details": {
+                "reference": "5968R",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-offshore-16",
+            "brand": "audemars piguet",
+            "model": "Royal Oak Offshore",
+            "description": "Audemars Piguet Royal Oak Offshore in titanium with a grey dial. Watch only.",
+            "images": ["/demos/clocks/watch-16.jpg"],
+            "collection": "chronograph",
+            "dial": "Grey",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Titanium",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-aquanaut-5067a",
+            "brand": "patek philippe",
+            "model": "Aquanaut",
+            "description": "Patek Philippe Aquanaut with a black dial. Watch only.",
+            "images": ["/demos/clocks/watch-17.jpg"],
+            "import_photos": ["clocks/.web/17-2.jpg"],
+            "collection": "sport",
+            "dial": "Black",
+            "details": {
+                "reference": "5067A",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "omega-speedmaster-310-32-42-50-02-001",
+            "brand": "omega",
+            "model": "Speedmaster",
+            "description": "Omega Speedmaster. Watch only.",
+            "images": ["/demos/clocks/watch-18.jpg"],
+            "import_photos": ["clocks/.web/18-2.jpg", "clocks/.web/18-3.jpg"],
+            "collection": "chronograph",
+            "details": {
+                "reference": "310.32.42.50.02.001",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-watch-5738r",
+            "brand": "patek philippe",
+            "model": "Watch",
+            "description": "Patek Philippe Watch in 18k rose gold. Watch only.",
+            "images": ["/demos/clocks/watch-19.jpg"],
+            "import_photos": ["clocks/.web/19-2.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "5738R",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "richard-mille-watch-20",
+            "brand": "richard mille",
+            "model": "Watch",
+            "description": "Richard Mille Watch with a black dial. Watch only.",
+            "images": ["/demos/clocks/watch-20.jpg"],
+            "import_photos": ["clocks/.web/20-2.jpg"],
+            "collection": "classic",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}

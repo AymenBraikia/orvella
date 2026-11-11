@@ -1,5 +1,5 @@
 "use client";
-import { Activity, Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import Arrow from "../svg/arrow";
 
 interface SelectProps {

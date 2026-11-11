@@ -5,6 +5,10 @@
         "cta": "Daha Fazla Bilgi"
     },
     "orders": {
+        "reservedTitle": "Teşekkürler, {name}. Siparişiniz ayrıldı",
+        "reservedText": "{amount} tutarını {date} tarihine kadar, açıklama olarak {id} yazarak havale edin. Ödeme ulaştığında kargoya veriyoruz.",
+        "processingTitle": "Teşekkürler, {name}. Ödemeniz işleniyor",
+        "plainTitle": "Teşekkürler, {name}",
         "thankYou": "Teşekkürlerimizle",
         "thankYouSuffix": "satın alımınız onaylandı",
         "ongoingOrders": "teslimat bekleniyor",
@@ -22,19 +26,49 @@
         "quantity": "Adet",
         "localPickup": "Butikten teslim alma",
         "discount": "İndirim",
-        "browse": "Koleksiyonu keşfedin"
+        "browse": "Koleksiyonu keşfedin",
+        "statuses": {
+            "pending_payment": "Ödeme bekleniyor",
+            "paid": "Ödendi",
+            "shipped": "Kargoya verildi",
+            "delivered": "Teslim edildi",
+            "cancelled": "İptal edildi",
+            "refunded": "İade edildi"
+        },
+        "bank": {
+            "heading": "Ödeme bilgileri",
+            "instructions": "Lütfen {amount} tutarını {date} tarihine kadar havale edin ve açıklama olarak sipariş numaranızı ({id}) yazın. Parçalarınız o tarihe kadar sizin için ayrılmıştır.",
+            "accountHolder": "Hesap sahibi",
+            "bank": "Banka",
+            "iban": "IBAN",
+            "bic": "BIC",
+            "reference": "Ödeme açıklaması",
+            "amount": "Tutar"
+        },
+        "notFound": "Bu sipariş bulunamadı. Lütfen onay e-postanızdaki bağlantıyı kullanın.",
+        "nextSteps": {
+            "processing": "Ödemeniz işleniyor. Onaylanır onaylanmaz size e-posta göndereceğiz.",
+            "paid": "Ödemeniz onaylandı. Siparişinizi hazırlıyoruz ve kargoya verildiğinde takip bilgilerini e-postayla göndereceğiz.",
+            "shipped": "Siparişiniz yolda."
+        },
+        "createAccount": {
+            "heading": "Siparişlerinizi takip edin",
+            "text": "Bu siparişi takip etmek ve bir dahaki sefere daha hızlı alışveriş yapmak için hesap oluşturun.",
+            "cta": "Hesap oluştur"
+        }
     },
     "meta": {
-        "siteName": "ORVELLA",
-        "titleDefault": "ORVELLA | Üst Segment Lüks Saatler ve Uzman Danışmanlığı",
+        "siteName": "CORLANE",
+        "titleDefault": "CORLANE | Üst Segment Lüks Saatler ve Uzman Danışmanlığı",
         "description": "Rolex, Patek Philippe ve Cartier dahil olmak üzere kusursuz durumdaki ikinci el ve sıfır lüks saatlerden oluşan özenle seçilmiş koleksiyonumuzu keşfedin. Saatçilik uzmanlarımızla bugün profesyonel bir danışmanlık randevusu alın.",
-        "keywords": ["lüks saatler", "ikinci el Rolex", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "lüks saat satın al", "saat danışmanlığı", "ORVELLA"],
+        "keywords": ["lüks saatler", "ikinci el Rolex", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "lüks saat satın al", "saat danışmanlığı", "CORLANE"],
         "ogDescription": "İkinci el ve sıfır lüks saatlerden oluşan özenle seçilmiş koleksiyonumuz sizi bekliyor. Üst segment saatçilik ihtiyaçlarınız için uzmanlarımızla çalışın.",
-        "ogImageAlt": "ORVELLA Lüks Saat Koleksiyonu",
+        "ogImageAlt": "CORLANE Lüks Saat Koleksiyonu",
         "twitterDescription": "Üst segment saatler için ortağınız. Rolex, Patek Philippe ve Cartier'yi keşfedin, uzman randevunuzu alın."
     },
     "common": {
-        "brand": "ORVELLA",
+        "priceOnRequest": "Fiyat sorunuz",
+        "brand": "CORLANE",
         "watches": "saatler",
         "rings": "yüzükler",
         "necklaces": "kolyeler",
@@ -71,8 +105,9 @@
             "withdrawal": "Cayma Hakkı",
             "disclaimer": "Sorumluluk Reddi",
             "cookiePolicy": "Çerez Politikası",
-            "disclaimerText": "Orvella bağımsız bir satıcıdır; herhangi bir markayla bağlantısı yoktur ve yetkili satıcı değildir.",
-            "copyright": "©{year} Orvella. Tüm hakları saklıdır."
+            "disclaimerText": "Corlane bağımsız bir satıcıdır; herhangi bir markayla bağlantısı yoktur ve yetkili satıcı değildir.",
+            "copyright": "©{year} Corlane. Tüm hakları saklıdır.",
+            "byAppointment": "Showroom ziyaretleri randevu ile"
         },
         "contactLabels": {
             "phonePrimary": "Telefon",
@@ -101,6 +136,7 @@
             "consignment": "Konsinye"
         },
         "filters": {
+            "collection": "Koleksiyon",
             "brands": "Markalar",
             "movement": "Mekanizma",
             "caseMaterial": "Kasa Malzemesi",
@@ -141,11 +177,26 @@
             "activeFilters": "Aktif filtreler",
             "showAll": "{count} tane daha göster",
             "showLess": "Daha az göster",
-            "showResults": "{count, plural, =0 {Saat yok} other {# saat}} göster",
-            "resultCount": "{count, plural, =0 {Saat yok} other {# saat}}",
+            "showResults": "{count, plural, =0 {Ürün yok} other {# ürün}} göster",
+            "resultCount": "{count, plural, =0 {Ürün yok} other {# ürün}}",
             "_fix": "Also swap these two values — they are currently inverted in en.json",
             "priceLowToHight": "Fiyat: artan",
-            "priceHightToLow": "Fiyat: azalan"
+            "priceHightToLow": "Fiyat: azalan",
+            "gender": "Kimin için",
+            "genderMen": "Erkek",
+            "genderWomen": "Kadın",
+            "metal": "Metal",
+            "purity": "Ayar",
+            "stones": "Değerli Taşlar",
+            "ringSize": "Yüzük Ölçüsü",
+            "clasp": "Kilit",
+            "weight": "Ağırlık",
+            "length": "Uzunluk",
+            "bandWidth": "Bant Genişliği",
+            "metalGold": "Altın",
+            "metalWhiteGold": "Beyaz Altın",
+            "metalSilver": "Gümüş",
+            "metalPlatinum": "Platin"
         },
         "productCard": {
             "movement": "Mekanizma",
@@ -176,7 +227,29 @@
             "message": "Mesaj",
             "attachImages": "Görsel Ekle",
             "required": "Bu alan zorunludur",
-            "invalidEmail": "Lütfen geçerli bir e-posta adresi girin"
+            "invalidEmail": "Lütfen geçerli bir e-posta adresi girin",
+            "selectOption": "Lütfen bir seçenek belirleyin.",
+            "invalidPrice": "Lütfen geçerli bir fiyat girin.",
+            "futureDate": "Lütfen ileri bir tarih seçin."
+        },
+        "stock": {
+            "available": "Mevcut",
+            "reserved": "Rezerve",
+            "sold": "Satıldı"
+        },
+        "upload": {
+            "hint": "En fazla {max} fotoğraf, her biri en fazla {size} MB (JPG, PNG, WebP).",
+            "tooMany": "En fazla {max} fotoğraf ekleyebilirsiniz.",
+            "tooLarge": "{name} dosyası {max} MB sınırını aşıyor.",
+            "notImage": "{name} desteklenen bir görsel değil.",
+            "heic": "{name} bir HEIC fotoğrafı. Lütfen JPEG olarak dışa aktarıp tekrar deneyin.",
+            "failed": "{name} yüklenemedi.",
+            "remove": "Fotoğrafı kaldır",
+            "add": "Fotoğraf ekle",
+            "uploading": "%{progress}"
+        },
+        "errors": {
+            "rateLimited": "Çok fazla deneme. Lütfen biraz bekleyip tekrar deneyin."
         }
     },
     "error": {
@@ -204,7 +277,7 @@
             "password": "Şifre",
             "firstNamePlaceholder": "Jordan",
             "lastNamePlaceholder": "Blake",
-            "emailPlaceholder": "Jordan@orvella.com",
+            "emailPlaceholder": "Jordan@corlane.store",
             "passwordPlaceholder": "En az 8 karakter",
             "agree": "Hizmet Şartları'nı ve Gizlilik Politikası'nı kabul ediyorum",
             "createAccount": "Hesap oluştur",
@@ -220,17 +293,44 @@
             "description": "İlgilendiğiniz parçaları kaydedin, teklifleri takip edin ve bir dahaki sefere daha hızlı alışveriş yapın.",
             "email": "E-posta",
             "password": "Şifre",
-            "emailPlaceholder": "Jordan@orvella.com",
+            "emailPlaceholder": "Jordan@corlane.store",
             "passwordPlaceholder": "En az 8 karakter",
             "logIn": "Giriş yap",
             "loggingIn": "Giriş yapılıyor…",
             "dontHaveAccount": "Hesabınız yok mu?",
             "signUp": "Kayıt ol",
-            "somethingWentWrong": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+            "somethingWentWrong": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+            "forgot": "Şifrenizi mi unuttunuz?"
+        },
+        "errors": {
+            "missing": "Lütfen tüm zorunlu alanları doldurun.",
+            "invalid_email": "Lütfen geçerli bir e-posta adresi girin.",
+            "weak_password": "Şifreniz en az 8 karakter olmalıdır.",
+            "wrong_credentials": "E-posta veya şifre hatalı.",
+            "email_taken": "Bu e-posta ile zaten bir hesap var. Giriş yapmak ister misiniz?",
+            "rate": "Çok fazla deneme. Lütfen birkaç dakika bekleyip tekrar deneyin."
+        },
+        "forgot": {
+            "title": "Şifrenizi sıfırlayın",
+            "description": "Hesabınızın e-posta adresini girin; yeni bir şifre belirlemeniz için size bir bağlantı gönderelim.",
+            "email": "E-posta",
+            "submit": "Bağlantı gönder",
+            "sending": "Gönderiliyor…",
+            "sent": "Bu adrese ait bir hesap varsa birkaç dakika içinde bağlantı içeren bir e-posta alacaksınız. Bağlantı bir saat geçerlidir.",
+            "back": "Girişe dön"
+        },
+        "reset": {
+            "title": "Yeni bir şifre belirleyin",
+            "description": "En az 8 karakter.",
+            "password": "Yeni şifre",
+            "submit": "Şifreyi kaydet",
+            "saving": "Kaydediliyor…",
+            "invalid": "Bu bağlantı geçersiz veya süresi dolmuş.",
+            "newLink": "Yeni bağlantı iste"
         }
     },
     "home": {
-        "heroTitle": "ORVELLA",
+        "heroTitle": "CORLANE",
         "heroSubtitle": "Zarif Mücevherler ve Lüks Saatler İçin Adresiniz",
         "discover": "Keşfedin",
         "newArrivalsHeading": "Yeni Gelenler",
@@ -267,7 +367,7 @@
         "title": "Yedek Parçalar"
     },
     "store": {
-        "heading": "Orvella Mağazası Frankfurt",
+        "heading": "Corlane Mağazası {city}",
         "cta": "Randevu alın",
         "welcomeText": "Sizi yakında mağazamızda ağırlamayı dört gözle bekliyoruz.",
         "appointmentNote": "Aradığınız saatin ziyaretiniz sırasında hazır olduğundan emin olmak için lütfen randevu alın.",
@@ -288,10 +388,9 @@
         "closed": "Kapalı",
         "contactHeading": "İletişim"
     },
-
     "trade": {
         "heading": "Consignment ve Takas",
-        "subHeading": "Saatinizi Satmak veya Takas Etmek İster misiniz?",
+        "subHeading": "Saatinizi Satın veya Takas Edin",
         "subText": "Lüks saatinizi veya zarif mücevherlerinizi anında nakde çevirin ya da hayalinizdeki yeni parçayla değiştirin. Uzman saat ustalarımızdan bugün hızlı, gizli ve profesyonel bir değerleme alın.",
         "cta1": "anında teklif alın",
         "cta2": "nasıl çalıştığını öğrenin"
@@ -299,7 +398,7 @@
     "sell": {
         "heading": "Sat / Konsinye",
         "formCtaHeading": "Formu doldurun",
-        "formCtaText": "Orvella'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+        "formCtaText": "Corlane'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
         "beginCta": "Başlayın",
         "howItWorksHeading": "Nasıl çalışır",
         "consign": {
@@ -312,7 +411,9 @@
                 },
                 {
                     "title": "Konsinye Sözleşmesi ve Kargo Etiketi",
-                    "text": "Dilerseniz size bir konsinye sözleşmesi ve tamamen sigortalı bir kargo etiketi göndeririz. Alternatif olarak Frankfurt'taki mağazamızdan randevu alabilirsiniz."
+                    "text": "Dilerseniz size bir konsinye sözleşmesi ve tamamen sigortalı bir kargo etiketi göndeririz. Alternatif olarak {city} mağazamızdan randevu alabilirsiniz.",
+
+                    "textNoCity": "Dilerseniz size bir konsinye sözleşmesi ve tamamen sigortalı bir kargo etiketi göndeririz. Alternatif olarak mağazamızdan randevu alabilirsiniz."
                 },
                 {
                     "title": "İnceleme",
@@ -330,7 +431,7 @@
         },
         "sellDirect": {
             "heading": "Sat",
-            "intro": "Orvella'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+            "intro": "Corlane'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
             "steps": [
                 {
                     "title": "Saatinizle İlgili Bilgileri Paylaşın",
@@ -352,7 +453,7 @@
         },
         "form": {
             "heading": "Konsinye / Saatinizi Satın",
-            "intro": "Orvella'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
+            "intro": "Corlane'in uzman eksperleri, satışınızdan en yüksek verimi alabilmeniz için hızlı ve ayrıntılı değerlendirmeler sunar.",
             "sections": {
                 "personalInformation": "Kişisel Bilgiler",
                 "salePreference": "Satış tercihi",
@@ -375,12 +476,20 @@
                 "conditionNew": "Sıfır",
                 "conditionMint": "Kusursuz",
                 "conditionPreOwned": "İkinci el"
-            }
+            },
+            "success": {
+                "heading": "Teşekkürler — talebinizi aldık",
+                "text": "Uzmanlarımız bilgilerinizi ve fotoğraflarınızı inceleyip 48 saat içinde size dönüş yapacak.",
+                "again": "Başka bir parça gönder"
+            },
+            "error": "Talebiniz gönderilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin.",
+            "sending": "Gönderiliyor…",
+            "waitForUploads": "Lütfen tüm fotoğrafların yüklenmesini bekleyin."
         }
     },
     "polish": {
         "heading": "Parlatma ve Servis",
-        "intro": "Orvella olarak Rolex, IWC, Tudor, Omega ve Cartier gibi üst segment markalar için birinci sınıf parlatma ve onarım hizmeti sunuyoruz. Deneyimli saat ustamız, hassas parlatmadan profesyonel bakıma kadar saatinizi en iyi haline getirir.",
+        "intro": "Corlane olarak Rolex, IWC, Tudor, Omega ve Cartier gibi üst segment markalar için birinci sınıf parlatma ve onarım hizmeti sunuyoruz. Deneyimli saat ustamız, hassas parlatmadan profesyonel bakıma kadar saatinizi en iyi haline getirir.",
         "servicesHeading": "Hizmetlerimize genel bakış:",
         "polishing": {
             "heading": "Parlatma ve yenileme:",
@@ -419,13 +528,20 @@
             "reason": "Görüşme konusu",
             "submit": "Gönder",
             "appointmentDate": "Randevu Tarihi"
-        }
+        },
+        "success": {
+            "heading": "Randevu talebiniz gönderildi",
+            "text": "Randevunuzu kısa süre içinde e-posta veya telefonla onaylayacağız.",
+            "again": "Başka bir randevu talep et"
+        },
+        "error": "Talebiniz gönderilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin.",
+        "sending": "Gönderiliyor…"
     },
     "about": {
         "heading": "Hakkımızda",
         "paragraphs": [
-            "Hikâyemiz bir kıvılcımla başladı: efsanevi bir İngiliz ajanının taktığı zarif bir saat, kurucumuz Aymen Braikia'da ömür boyu sürecek bir tutku uyandırdı. Saatçiliğe duyduğu bu hayranlık, Aymen'i genç bir meraklıdan üst segment saatlerin saygın bir satıcısına dönüştürdü. 2019'da, makine mühendisliği eğitimini sürdürürken Orvella'i kurdu ve tutkusunu ikonik kol saatlerine adanmış, hızla büyüyen bir işletmeye dönüştürdü.",
-            "Orvella'de, hem sıfır hem de ikinci el seçkin saatler için güvenilir uzmanınızız. Uzmanlığımızın arkasında tutku var: yalnızca en iyi saatleri sunuyoruz; her biri kendi kolumuzda gururla taşıyacağımız parçalar. Kendi bünyemizdeki saat ustamız, orijinalliğinden ve en iyi performansından emin olmak için her saati titizlikle inceler; böylece alışverişinizden içiniz rahat eder.",
+            "Corlane, saatçiliğe ve ikonik kol saatlerine duyulan köklü bir tutkuyla hareket eden, üst segment saatler satıcısıdır.",
+            "Corlane'de, hem sıfır hem de ikinci el seçkin saatler için güvenilir uzmanınızız. Uzmanlığımızın arkasında tutku var: yalnızca en iyi saatleri sunuyoruz; her biri kendi kolumuzda gururla taşıyacağımız parçalar. Kendi bünyemizdeki saat ustamız, orijinalliğinden ve en iyi performansından emin olmak için her saati titizlikle inceler; böylece alışverişinizden içiniz rahat eder.",
             "Ekibimiz ve bünyemizdeki saat ustamız, orijinalliğini ve performansını garanti altına almak için her saati satıştan önce titizlikle inceler.",
             "Koleksiyonunuza yeni bir parça mı eklemek istiyorsunuz? Prestijli markalardan oluşan etkileyici bir seçki sunuyoruz.",
             "Markalarımız: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling ve daha fazlası",
@@ -588,13 +704,15 @@
     },
     "imprint": {
         "heading": "Künye",
-        "companyLabel": "Orvella",
+        "companyLabel": "Corlane",
         "phoneLabel": "Telefon numarası:",
         "emailLabel": "E-posta:",
         "vatIdLabel": "Katma değer vergisi kimlik numarası:",
         "representativesLabel": "Yetkili temsilciler:",
-        "odrHeading": "Çevrimiçi Uyuşmazlık Çözümü Bildirimi",
-        "odrText": "Avrupa Komisyonu, buradan ulaşabileceğiniz bir çevrimiçi uyuşmazlık çözümü (ODR) platformu sunmaktadır. Bir tüketici hakem heyeti önünde uyuşmazlık çözümü sürecine katılma yükümlülüğümüz bulunmamakta olup buna istekli de değiliz.",
+        "registerLabel": "Ticaret sicili:",
+        "arbitrationHeading": "Tüketici uyuşmazlıklarının çözümü",
+        "arbitrationDeclined": "Bir tüketici hakem heyeti önünde uyuşmazlık çözümü sürecine katılma yükümlülüğümüz bulunmamakta olup buna istekli de değiliz.",
+        "arbitrationWilling": "Tüketici hakem heyeti önünde uyuşmazlık çözümü süreçlerine katılıyoruz. Yetkili kurum: {board}",
         "note": "Personal/company identity fields (name, address, phone, VAT ID) are intentionally NOT stored as translation strings — pull those from your business config/CMS, not from i18n files."
     },
     "legal": {
@@ -610,7 +728,7 @@
             "sections": {
                 "controller": {
                     "heading": "Verilerinizin veri sorumlusu olarak bizimle ilgili bilgiler",
-                    "text": "Veri koruma mevzuatı bakımından bu web sitesinden sorumlu taraf (“veri sorumlusu”), sahibi tarafından temsil edilen Orvella'dir. İletişim bilgileri Künye bölümünde yer almaktadır."
+                    "text": "Veri koruma mevzuatı bakımından bu web sitesinden sorumlu taraf (“veri sorumlusu”), sahibi tarafından temsil edilen Corlane'dir. İletişim bilgileri Künye bölümünde yer almaktadır."
                 },
                 "rights": {
                     "heading": "Kullanıcıların ve ilgili kişilerin hakları",
@@ -821,10 +939,7 @@
                 {
                     "number": "11",
                     "heading": "Alternatif uyuşmazlık çözümü",
-                    "items": [
-                        "AB Komisyonu, uyuşmazlıkların çözümü için çevrimiçi bir platform sunmaktadır. Bu platform, çevrimiçi satış veya hizmet sözleşmelerinden doğan uyuşmazlıkların mahkeme dışı çözümü için bir başvuru noktası işlevi görür.",
-                        "Satıcı, uyuşmazlık çözümü sürecine katılmakla yükümlü değildir."
-                    ]
+                    "arbitration": true
                 },
                 {
                     "number": "12",
@@ -983,11 +1098,12 @@
         "checkoutCta": "Ödemeye geç",
         "choose_shipping_country": "Teslimat ülkesini seçin",
         "shipping_to": "{country} ülkesine teslimat",
-        "shipping_costs": "Kargo ücreti",
+        "shipping_costs": "Kargo ücreti: {cost}",
         "shipping": "Kargo",
         "localPickup": "Yerinden teslim alma",
         "moreAbout": "Hakkında daha fazla bilgi:",
-        "continueShopping": "Alışverişe devam et"
+        "continueShopping": "Alışverişe devam et",
+        "unavailable": "Bu parça artık mevcut değil. Devam etmek için lütfen kaldırın."
     },
     "favorites": {
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
@@ -998,6 +1114,7 @@
         "addToFavorites": "Favorilere ekle"
     },
     "checkout": {
+        "chargedInEur": "Ödemeniz EUR olarak tahsil edilecek.",
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your checkout/payment components before shipping.",
         "heading": "Ödeme",
         "shippingHeading": "Teslimat bilgileri",
@@ -1007,7 +1124,6 @@
         "subtotal": "Ara toplam",
         "billing": "fatura adresi",
         "shippingCost": "Kargo",
-        "watchSpare": "Saat / Yedek parça",
         "qty": "Adet",
         "price": "Fiyat",
         "taxes": "Vergiler",
@@ -1017,7 +1133,7 @@
         "missingBilling": "Fatura bilgileri eksik",
         "total": "Toplam",
         "bankNote": "Ödemenizi doğrudan banka hesabımıza yapın. Lütfen ödeme açıklaması kısmında sipariş numarasını, marka adını ve ürün modelini belirtin. Ayrıca, ödeme hesabımıza geçmeden herhangi bir ürünün gönderilmeyeceğini lütfen unutmayın.",
-        "paypalNote": "Not: bu bir demo olduğundan kullanım",
+        "paypalNote": "PayPal’a bu sandbox test hesabıyla giriş yapın:",
         "email": "E-posta",
         "password": "Şifre",
         "orderDate": "Sipariş Tarihi",
@@ -1029,7 +1145,29 @@
         "cardNumber": "Kart Numarası",
         "expirationDate": "Son Kullanma Tarihi",
         "securityCode": "Güvenlik Kodu",
-        "orderNumber": "Sipariş Numarası"
+        "orderNumber": "Sipariş Numarası",
+        "errors": {
+            "auth": "Siparişinizi tamamlamak için lütfen tekrar giriş yapın.",
+            "empty": "Sepetiniz boş.",
+            "address": "Siparişi vermeden önce lütfen teslimat adresinizi tamamlayın.",
+            "unavailable": "Bazı parçalar artık mevcut değil: {items}. Lütfen bunları sepetinizden kaldırın.",
+            "payment": "Ödeme başlatılamadı. Lütfen tekrar deneyin.",
+            "declined": "Ödeme tamamlanmadı. Parçalarınız serbest bırakıldı; lütfen tekrar deneyin.",
+            "pending": "Ödemeniz işleniyor. Siparişinizi e-posta ile onaylayacağız.",
+            "method": "Lütfen bir ödeme yöntemi seçin.",
+            "not_found": "Bu sipariş bulunamadı. Lütfen tekrar deneyin.",
+            "details": "Siparişi vermeden önce lütfen adınızı, e-postanızı ve tam adresinizi girin."
+        },
+        "vatIncluded": "%{rate} KDV dahil",
+        "vatAdded": "KDV (%{rate})",
+        "marginScheme": "Alman KDV Kanunu §25a uyarınca marj vergilendirmesi — KDV ayrıca gösterilmez.",
+        "discount": "İndirim",
+        "guestNote": "Hesap gerekmez — bilgilerinizi girmeniz yeterli. Satın alma sonrasında hesap oluşturabilirsiniz.",
+        "placingOrder": "Sipariş veriliyor…",
+        "payByCard": "Kartla öde",
+        "redirectingToPayment": "Güvenli ödeme açılıyor…",
+        "cardNote": "Stripe’ın güvenli ödeme sayfasına yönlendirileceksiniz. Ödeme sırasında parçalarınız sizin için ayrılır.",
+        "cardCancelled": "Kartla ödeme iptal edildi. Parçalar sepetinizde — tekrar deneyebilir veya başka bir ödeme yöntemi seçebilirsiniz."
     },
     "product": {
         "reference": "Referans",
@@ -1045,7 +1183,27 @@
         "findInStore": "Mağazada bul",
         "bookAppointment": "Randevu al",
         "consignmentBeforeLink": "Saatlerinizden birini takas etmek ister misiniz? Saatinizle ilgili bilgileri paylaşarak bizimle",
-        "consignmentAfterLink": "sayfası üzerinden iletişime geçin, size bir teklif sunalım."
+        "consignmentAfterLink": "sayfası üzerinden iletişime geçin, size bir teklif sunalım.",
+        "clasp": "Kilit",
+        "enquiry": {
+            "enquire": "Bu parça hakkında bilgi alın",
+            "reserve": "Rezervasyon talep edin",
+            "whatsapp": "WhatsApp ile sorun",
+            "whatsappText": "Merhaba, {name}{ref} ile ilgileniyorum: {url}",
+            "heading": "Bu parça hakkında bilgi alın",
+            "typeQuestion": "Soru",
+            "typeReservation": "Rezervasyon talebi",
+            "reservationNote": "Parçayı sizin için ayırıp ayıramayacağımızı onaylayacağız; şimdilik ücret alınmaz.",
+            "name": "Adınız",
+            "messagePlaceholder": "Durum, servis geçmişi, mağazada inceleme hakkında sorular…",
+            "submit": "Talebi gönder",
+            "submitReservation": "Rezervasyon talep et",
+            "sending": "Gönderiliyor…",
+            "successHeading": "Teşekkürler — mesajınız iletildi",
+            "successText": "Genellikle bir iş günü içinde yanıt veririz.",
+            "again": "Başka bir mesaj gönder",
+            "error": "Mesajınız gönderilemedi. Lütfen bilgilerinizi kontrol edip tekrar deneyin."
+        }
     },
     "brands": {
         "rolex": {
@@ -1375,6 +1533,18 @@
             "seeDifference": "Farkı görün",
             "openStorefront": "Mağazayı aç"
         },
+        "visuals": {
+            "storeDesktop": "Mağazadaki saat koleksiyonu, dizüstü bilgisayarda",
+            "productPhone": "Bir saatin kendi sayfası telefonda: fotoğraflar, referans ve bilgi isteme düğmesi",
+            "storePhone": "Koleksiyon telefonda",
+            "dm": [
+                { "from": "buyer", "text": "Merhaba, yeşil Day-Date hâlâ mevcut mu?" },
+                { "from": "dealer", "text": "Merhaba! Evet, hâlâ mevcut." },
+                { "from": "buyer", "text": "Fiyatı? Kutu ve belgeleri var mı?" },
+                { "from": "buyer", "text": "Daha fazla fotoğraf atabilir misiniz?" },
+                { "from": "dealer", "text": "Hemen gönderiyorum…" }
+            ]
+        },
         "gap": {
             "eyebrow": "01 / Boşluk",
             "title": "Instagram keşif için mükemmel.<br></br><span>Ama bir katalog değil.</span>",
@@ -1387,12 +1557,7 @@
             "storefront": {
                 "title": "Özel vitrin",
                 "label": "Size ait",
-                "items": [
-                    "Alıcı mevcut koleksiyona kendi başına göz atabilir.",
-                    "Her saatin kendi sayfası ve detayları olabilir.",
-                    "Bir dizi fotoğraf yerine tek bir bağlantı gönderebilirsiniz.",
-                    "Talepler ve randevular için net bir hedef vardır."
-                ]
+                "items": ["Alıcı mevcut koleksiyona kendi başına göz atabilir.", "Her saatin kendi sayfası ve detayları olabilir.", "Bir dizi fotoğraf yerine tek bir bağlantı gönderebilirsiniz.", "Talepler ve randevular için net bir hedef vardır."]
             },
             "footnote": "Mesele sadece \"bir web sitesine sahip olmak\" değil. İlgi ile aksiyon arasındaki boşluğu ortadan kaldırmak."
         },
@@ -1444,6 +1609,17 @@
                 }
             ]
         },
+        "dashboard": {
+            "title": "Tüm işiniz,<br></br><span>tek bir panelde.</span>",
+            "description": "Siparişler, ödemeler, stok ve satış talepleri tek yerde. Her gün kullanacağınız araç budur.",
+            "video": "Panel turu",
+            "shots": {
+                "overview": "Genel bakış: bugün ilgilenmeniz gerekenler",
+                "order": "Sipariş detayı: havaleyi alındı olarak işaretleyin",
+                "product": "Ürün düzenleyici: fotoğraflar, fiyat ve stok",
+                "lead": "Müşteri fotoğraflarıyla satış ve konsinye talepleri"
+            }
+        },
         "role": {
             "eyebrow": "04 / Rolü",
             "title": "Instagram'ı kullanmaya devam edin.<br></br><span>Sadece ona bir hedef verin.</span>",
@@ -1477,13 +1653,32 @@
             ]
         },
         "cta": {
+            "whatsapp": "WhatsApp üzerinden yazın",
+            "email": "Bana e-posta gönderin",
             "eyebrow": "Sonraki adım",
             "title": "Gerçek saatlerinizin<br></br><span>burada nasıl göründüğünü görün.</span>",
             "description": "60 dakikalık satış görüşmesi yok. Mevcut stok bağlantınızı veya aktif olarak sattığınız üç parçayı gönderin. Gerisini ben hallederim.",
             "sendStock": "Size Özel Demonuzu Ayırtın",
-            "floatingCta": "Orvella'in Özel Demosu İçin Randevu Alın",
+            "instagram": "Instagram",
+            "bookCall": "Görüşme planla",
+            "form": {
+                "name": "Adınız",
+                "business": "İşletme adı",
+                "contact": "E-posta veya WhatsApp",
+                "stock": "Mevcut stokunuzun bağlantısı",
+                "stockPlaceholder": "Instagram, Chrono24 veya web sitesi",
+                "message": "Eklemek istediğiniz bir şey var mı? (isteğe bağlı)",
+                "sending": "Gönderiliyor…",
+                "successHeading": "Teşekkürler, talebiniz alındı.",
+                "successText": "Stokunuza göz atıp size özel demonuzla dönüş yapacağım.",
+                "invalidContact": "Bir e-posta adresi veya WhatsApp numarası girin.",
+                "invalidLink": "Bir bağlantı veya @kullanıcı adı girin.",
+                "error": "Gönderilemedi. Lütfen tekrar deneyin ya da aşağıdan bana doğrudan yazın.",
+                "orReach": "Doğrudan yazmayı mı tercih edersiniz?"
+            },
+            "floatingCta": "Corlane'in Özel Demosu İçin Randevu Alın",
             "openStorefront": "Mağazayı aç",
-            "credit": "Aymen · Orvella"
+            "credit": "Aymen · Corlane"
         },
         "nav": {
             "back": "Vitrine dön",
@@ -1492,5 +1687,122 @@
         "footer": {
             "tagline": "Bağımsız saat satıcıları için özel vitrin konseptleri"
         }
+    },
+    "emails": {
+        "greeting": "Merhaba {name},",
+        "signoff": "Saygılarımızla,\n{store}",
+        "orderNumber": "Sipariş",
+        "subtotal": "Ara toplam",
+        "shipping": "Kargo",
+        "pickup": "Mağazadan teslim",
+        "discount": "İndirim",
+        "total": "Toplam",
+        "vatAdded": "KDV (%{rate})",
+        "vatIncluded": "%{rate} KDV dahil",
+        "viewOrders": "Siparişlerinizi görüntüleyin",
+        "orderConfirmed": {
+            "subject": "{id} numaralı siparişiniz onaylandı",
+            "heading": "Siparişiniz için teşekkürler",
+            "text": "Ödemenizi aldık. Siparişinizi şimdi hazırlıyoruz ve kargoya verildiğinde size haber vereceğiz."
+        },
+        "orderReceivedBank": {
+            "subject": "{id} numaralı siparişiniz — ödeme bilgileri",
+            "heading": "Siparişiniz için teşekkürler",
+            "text": "Lütfen {amount} tutarını {date} tarihine kadar havale edin ve açıklama olarak sipariş numaranızı ({id}) yazın. Parçalarınız o tarihe kadar sizin için ayrılmıştır; ödeme ulaştığında kargoya veririz."
+        },
+        "paymentReceived": {
+            "subject": "{id} numaralı sipariş için ödeme alındı",
+            "heading": "Ödeme alındı",
+            "text": "Teşekkürler — ödemeniz ulaştı. Siparişinizi hazırlıyoruz ve kargoya verildiğinde takip bilgilerini göndereceğiz."
+        },
+        "shipped": {
+            "subject": "{id} numaralı siparişiniz yolda",
+            "heading": "Siparişiniz kargoya verildi",
+            "text": "Güzel haber: {id} numaralı siparişiniz {carrier} firmasına teslim edildi. Aşağıdaki takip numarasıyla izleyebilirsiniz.",
+            "carrier": "Kargo firması",
+            "tracking": "Takip numarası"
+        },
+        "cancelled": {
+            "subject": "{id} numaralı siparişiniz iptal edildi",
+            "heading": "Sipariş iptal edildi",
+            "text": "{id} numaralı siparişiniz iptal edildi. Ödeme yaptıysanız tutar iade edilecektir. Sorularınız mı var? Bu e-postayı yanıtlamanız yeterli.",
+            "expiredText": "{id} numaralı siparişin ödemesi zamanında ulaşmadığı için rezervasyon sona erdi ve sipariş iptal edildi. Parayı zaten gönderdiyseniz lütfen bu e-postayı yanıtlayın, konuyu çözelim."
+        },
+        "leadReceived": {
+            "subject": "Talebinizi aldık",
+            "heading": "Talebiniz için teşekkürler",
+            "text": "{watch} saatinizin bilgilerini ve fotoğraflarını aldık. Uzmanlarımız inceleyip 48 saat içinde size dönüş yapacak."
+        },
+        "appointmentRequested": {
+            "subject": "{date} tarihli randevu talebiniz",
+            "heading": "Randevu talebi alındı",
+            "text": "{date} tarihinde bizi ziyaret etme talebiniz için teşekkürler. Randevuyu kısa süre içinde onaylayacağız."
+        },
+        "appointmentConfirmed": {
+            "subject": "{date} tarihli randevunuz onaylandı",
+            "heading": "Randevu onaylandı",
+            "text": "Sizi {date} tarihinde {address} adresinde ağırlamaktan memnuniyet duyacağız."
+        },
+        "enquiryReceived": {
+            "subject": "{item} hakkındaki talebiniz",
+            "heading": "Talebiniz için teşekkürler",
+            "text": "{item} hakkındaki sorunuzu aldık ve kısa süre içinde yanıt vereceğiz.",
+            "reservationText": "{item} için rezervasyon talebinizi aldık. Sizin için ayırıp ayıramayacağımızı kısa süre içinde onaylayacağız."
+        },
+        "passwordReset": {
+            "subject": "Şifrenizi sıfırlayın",
+            "heading": "Şifrenizi sıfırlayın",
+            "text": "Hesabınızın şifresini sıfırlama talebi aldık. Aşağıdaki bağlantı bir saat geçerlidir.",
+            "button": "Yeni şifre belirle",
+            "ignore": "Bu talebi siz yapmadıysanız bu e-postayı yok sayabilirsiniz — şifreniz değişmez."
+        }
+    },
+    "consultation": {
+        "heading": "Kişisel danışmanlık",
+        "intro": "Dört kısa soru — size uygun parçaları gösterelim.",
+        "step": "Soru {current} / {total}",
+        "back": "Geri",
+        "q1": {
+            "question": "Ne arıyorsunuz?",
+            "watch": "Bir saat",
+            "ring": "Bir yüzük",
+            "bracelet": "Bir bileklik",
+            "necklace": "Bir kolye"
+        },
+        "q2": {
+            "question": "Kimin için?",
+            "women": "Kadın için",
+            "men": "Erkek için",
+            "any": "Fark etmez"
+        },
+        "q3": {
+            "question": "Bütçeniz nedir?",
+            "upTo": "{amount} tutarına kadar",
+            "over": "{amount} üzeri",
+            "any": "Bütçe sınırı yok"
+        },
+        "q4": {
+            "question": "Yeni mi, geçmişi olan mı?",
+            "new": "Yeni",
+            "preowned": "İkinci el",
+            "any": "Fark etmez"
+        }
+    },
+    "demo": {
+        "banner": "Demo mağaza — Aymen Braikia tarafından geliştirildi",
+        "learnMore": "Daha fazla bilgi",
+        "dismiss": "Kapat",
+        "testPayment": "Test ödemesi — gerçek para çekilmez.",
+        "testCard": "4242 4242 4242 4242 kartını gelecekteki herhangi bir tarih ve herhangi bir CVC ile kullanın.",
+        "bankNote": "Demo mağaza: lütfen para göndermeyin."
+    },
+    "seo": {
+        "shop": "Yeni ve ikinci el lüks saatler ve değerli mücevherler — her parça kontrol edilir, ayrıntılı tanıtılır ve tam sigortalı gönderilir.",
+        "watches": "İkinci el ve yeni lüks saatler — kontrol edilmiş, ayrıntılı tanıtılmış ve tam sigortalı gönderilir.",
+        "rings": "Altın, beyaz altın ve platinden, pırlanta ve değerli taşlı zarif yüzükler.",
+        "bracelets": "Altın ve platinden zarif bileklikler — klasik, modern ve vintage parçalar.",
+        "necklaces": "Altın ve platinden, pırlanta ve değerli taşlı zarif kolyeler ve kolye uçları.",
+        "spare": "Lüks saatler için orijinal yedek parçalar: kadranlar, akrepler, bezeller, kurma kolları, kordonlar ve daha fazlası.",
+        "brand": "İkinci el ve yeni {brand} saatleri — kontrol edilmiş, ayrıntılı tanıtılmış ve tam sigortalı gönderilir."
     }
 }

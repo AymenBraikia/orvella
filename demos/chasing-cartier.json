@@ -1,0 +1,643 @@
+{
+    "slug": "chasing-cartier",
+    "locale": "en",
+    "name": "Chasing Cartier",
+    "label": "Private demo · Prepared for Chasing Cartier · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for Chasing Cartier. Payments are in test mode; no real payment is taken.",
+    "description": "Chasing Cartier: pre-owned luxury watches. A. Lange & Söhne, Cartier, Audemars Piguet, Patek Philippe, Rolex, IWC, Chopard and Breguet.",
+    "logo": {
+        "src": "/logo.svg",
+        "width": 440,
+        "height": 440
+    },
+    "logo_icon": {
+        "src": "/logo_simple.svg",
+        "width": 192,
+        "height": 192
+    },
+    "favicon": "/favicon.ico",
+    "hero": {
+        "title": "CHASING CARTIER",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/chasing-cartier/hero-poster.jpg",
+        "desktop_image": "/demos/chasing-cartier/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/chasing-cartier/watch-1.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/chasing-cartier/watch-4.jpg"
+            },
+            {
+                "key": "diver",
+                "name": "Diver",
+                "image": "/demos/chasing-cartier/watch-10.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/chasing-cartier/trade.jpg",
+    "banner": {
+        "light": "/demos/chasing-cartier/banner-light.jpg",
+        "dark": "/demos/chasing-cartier/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "Chasing Cartier is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in A. Lange & Söhne, Cartier, Audemars Piguet, Patek Philippe, Rolex, IWC, Chopard and Breguet, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "a-lange-s-hne-watch-310-021",
+            "brand": "a. lange & söhne",
+            "model": "Watch",
+            "description": "One of lange’s most elegant interpretations of the perpetual calendar, housed in a 38.5 mm 18k yellow gold case. Powered by the automatic calibre l922.1 sax-o-mat, featuring lange’s signature zero-reset mechanism, an outsize date, perpetual calendar with leap-year indication, moonphase display and a 21k gold micro-rotor. The beautifully balanced roman numeral dial and traditional proportions make the langematik perpetual a particularly compelling piece from lange’s early modern era. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-1.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/1-2.jpg",
+                "demo_assets/chasing_cartier/.web/1-3.jpg",
+                "demo_assets/chasing_cartier/.web/1-4.jpg",
+                "demo_assets/chasing_cartier/.web/1-5.jpg",
+                "demo_assets/chasing_cartier/.web/1-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "310.021",
+                "year": 2010,
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 38.5,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-santos-dumont-wgsa0054",
+            "brand": "cartier",
+            "model": "Santos-Dumont",
+            "description": "18k rose gold case with beige lacquer detailing on the bezel, matching beige dial with roman numerals, and rose gold-colored sword hands. Measuring 43.5 × 31.4 mm with a slim 7.3 mm profile, powered by the manual-winding calibre 430 mc. The solid gold caseback features alberto santos-dumont’s engraved signature. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-2.jpg"],
+            "import_photos": ["demo_assets/chasing_cartier/.web/2-2.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "WGSA0054",
+                "year": 2022,
+                "movement": "Manual",
+                "caseMaterial": "18k Rose Gold",
+                "caseDiameterMm": 31.4,
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-tank-wgta0279",
+            "brand": "cartier",
+            "model": "Tank",
+            "description": "The Cartier Tank louis de Cartier ref. wgta0279, a middle east exclusive introduced in 2025 and limited to just 200 pieces. Crafted in platinum, it features a warm brown sunburst dial with eastern arabic numerals, paired with the classic Tank louis proportions and Cartier’s signature ruby-set crown. powered by a manual-winding movement, it is a subtle but very distinctive take on one of Cartier’s most iconic designs. A rare modern Tank that looks even better on the wrist. Full set with box and warranty card.",
+            "images": ["/demos/chasing-cartier/watch-3.jpg"],
+            "import_photos": ["demo_assets/chasing_cartier/.web/3-2.jpg", "demo_assets/chasing_cartier/.web/3-3.jpg", "demo_assets/chasing_cartier/.web/3-4.jpg", "demo_assets/chasing_cartier/.web/3-5.jpg"],
+            "collection": "classic",
+            "dial": "Brown",
+            "details": {
+                "reference": "WGTA0279",
+                "year": 2025,
+                "movement": "Manual",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "a-lange-s-hne-chronograph-405-835",
+            "brand": "a. lange & söhne",
+            "model": "Chronograph",
+            "description": "Introduced in 2017, this unusual variation of the legendary datograph features a 41 mm platinum case, black dial with contrasting silver subdials, and a factory-set baguette diamond bezel. The datograph is rarely seen with diamonds, making this one of its most unusual configurations. distributed through a small number of selected retailers and boutiques, production is believed to have been around just 20 pieces, although it was never officially numbered or limited. Powered by the hand-wound calibre l951.6, featuring a flyback chronograph, oversized date and 60-hour power reserve. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-4.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/4-2.jpg",
+                "demo_assets/chasing_cartier/.web/4-3.jpg",
+                "demo_assets/chasing_cartier/.web/4-4.jpg",
+                "demo_assets/chasing_cartier/.web/4-5.jpg",
+                "demo_assets/chasing_cartier/.web/4-6.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "reference": "405.835",
+                "year": 2017,
+                "movement": "Manual",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-watch-5",
+            "brand": "audemars piguet",
+            "model": "Watch",
+            "description": "Limited edition of just 50 pieces. an incredibly rare Audemars Piguet perpetual calendar, featuring its distinctive clous de paris bezel and breguet numerals. A very special ap from the 1990s, with its original deployant clasp. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-5.jpg"],
+            "import_photos": ["demo_assets/chasing_cartier/.web/5-2.jpg", "demo_assets/chasing_cartier/.web/5-3.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-chronograph-5970p-001",
+            "brand": "patek philippe",
+            "model": "Chronograph",
+            "description": "One of the most important modern Patek Philippe perpetual calendar chronographs, presented here in its most desirable platinum configuration. The 40 mm platinum case is paired with the unmistakable black dial, combining a perpetual calendar with a chronograph powered by the legendary manually wound calibre ch 27-70 q, based on the lemania architecture and extensively finished by Patek Philippe. This particular example remains brand new and unworn, with sharp, untouched surfaces and is accompanied by its complete full set, including the certificate of origin, original box and accessories, as well as the additional solid platinum caseback. With an estimated production of only around 500-700 examples according to collectability, the 5970p represents one of the most collectible configurations of the reference and the final generation of Patek Philippe perpetual calendar chronographs powered by the celebrated ch 27-70 q. Full set with box and warranty card. Unworn.",
+            "images": ["/demos/chasing-cartier/watch-6.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/6-2.jpg",
+                "demo_assets/chasing_cartier/.web/6-3.jpg",
+                "demo_assets/chasing_cartier/.web/6-4.jpg",
+                "demo_assets/chasing_cartier/.web/6-5.jpg",
+                "demo_assets/chasing_cartier/.web/6-6.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "reference": "5970P-001",
+                "movement": "Manual",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "New",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-watch-7",
+            "brand": "cartier",
+            "model": "Watch",
+            "description": "One of the more unusual Cartier creations, with a beautifully engine-turned gold case that slides open to reveal the watch inside. the clever part is that the watch winds itself through this very action - opening and closing the case operates the winding mechanism, so simply using the watch helps keep it running. The case also carries the french “hibou” (owl) hallmark, introduced in 1893 and used by the french assay system on imported gold objects. a particularly nice detail here, together with the Cartier-signed dial marked “fab. suisse.”. Finished entirely in 18k yellow gold, with a folding stand on the back allowing it to be used as a small desk or bedside clock. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-7.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/7-2.jpg",
+                "demo_assets/chasing_cartier/.web/7-3.jpg",
+                "demo_assets/chasing_cartier/.web/7-4.jpg",
+                "demo_assets/chasing_cartier/.web/7-5.jpg",
+                "demo_assets/chasing_cartier/.web/7-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-watch-0900-1",
+            "brand": "cartier",
+            "model": "Watch",
+            "description": "A beautiful example from the mid-1990s, featuring a 33 mm 18k yellow gold case, finely guilloché dial, black roman numerals, blued steel hands and Cartier’s signature sapphire-set crown. Powered by the ultra-thin, manually wound piaget cal. 9p2, giving the watch its elegant and slim profile. a less commonly seen Cartier with all the classic design elements of the maison. Currently fitted with a custom-made leather strap and its original Cartier 18k yellow gold buckle. the watch also comes with its original Cartier black crocodile strap. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-8.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/8-2.jpg",
+                "demo_assets/chasing_cartier/.web/8-3.jpg",
+                "demo_assets/chasing_cartier/.web/8-4.jpg",
+                "demo_assets/chasing_cartier/.web/8-5.jpg",
+                "demo_assets/chasing_cartier/.web/8-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "0900.1",
+                "movement": "Manual",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 33,
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-watch-25850",
+            "brand": "audemars piguet",
+            "model": "Watch",
+            "description": "This might be the most special Audemars Piguet ref. 25850 we have come across. Visible through the sapphire back is Audemars Piguet’s ultra-thin automatic calibre 2120/4, part of the legendary 2120 movement family. the same movement lineage would form the foundation for some of the most important watches of its era and remains one of the cornerstones of Audemars Piguet’s history. But what truly sets this particular example apart is the rotor. Instead of the familiar “ap” initials found on the openworked gold rotor, this watch was commissioned for its original owner with the initials “e h” incorporated into the design. a subtle detail at first glance, yet one that transforms an already rare watch into something altogether different. On a production of only 50 pieces, finding an example with a specially commissioned rotor is extraordinary. it is the kind of detail that rarely appears in catalogues, and even more rarely survives untouched decades later. The clous de paris bezel, breguet numerals, sapphire display back and ultra-thin calibre already place the 25850 among the most desirable classical perpetual calendars of its generation. add the unique rotor and the watch enters a category of its own. There are rare watches, and then there are watches where every detail seems to line up perfectly. It is difficult to imagine a more compelling example of the ref. 25850. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-9.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/9-2.jpg",
+                "demo_assets/chasing_cartier/.web/9-3.jpg",
+                "demo_assets/chasing_cartier/.web/9-4.jpg",
+                "demo_assets/chasing_cartier/.web/9-5.jpg",
+                "demo_assets/chasing_cartier/.web/9-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "25850",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-5508",
+            "brand": "rolex",
+            "model": "Submariner",
+            "description": "One of the early small crown submariners, produced before Rolex introduced crown guards. the 5508 was also the last Submariner generation to carry the 100m / 330ft depth rating, powered by the automatic cal. 1530. This one has exactly the kind of ageing you want to see on an early sub - gilt dial, warm lume and a heavily faded ghost bezel that has taken on an almost blue-grey tone over the years. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-10.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/10-2.jpg",
+                "demo_assets/chasing_cartier/.web/10-3.jpg",
+                "demo_assets/chasing_cartier/.web/10-4.jpg",
+                "demo_assets/chasing_cartier/.web/10-5.jpg",
+                "demo_assets/chasing_cartier/.web/10-6.jpg"
+            ],
+            "collection": "diver",
+            "dial": "Blue",
+            "details": {
+                "reference": "5508",
+                "year": 1958,
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-tank-17002",
+            "brand": "cartier",
+            "model": "Tank",
+            "description": "Introduced in the mid-1970s, the 17002 is one of the most interesting vintage Tank louis references. at approximately 28 × 35 mm, it was considerably larger than the regular Tank louis of the period, earning it the “jumbo” name. More importantly, the 17002 is the automatic Tank louis. Cartier used a self-winding movement and gave the caseback its distinctive raised “bubble-back” profile to make room for the rotor - a very unusual construction for the traditionally slim Tank louis. This example comes in 18k yellow gold with the classic white paris-signed dial, roman numerals, chemin de fer minute track, blued steel hands and sapphire cabochon crown. A proper 1970s Cartier and one of the coolest tanks from the period. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-11.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/11-2.jpg",
+                "demo_assets/chasing_cartier/.web/11-3.jpg",
+                "demo_assets/chasing_cartier/.web/11-4.jpg",
+                "demo_assets/chasing_cartier/.web/11-5.jpg",
+                "demo_assets/chasing_cartier/.web/11-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "17002",
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 35,
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-watch-12",
+            "brand": "patek philippe",
+            "model": "Watch",
+            "description": "The Patek Philippe 5101p 10-day tourbillon represents one of the most technically impressive hand-wound calibres ever created by the brand. Introduced in 2003, it houses the caliber 28-20/222 - a rectangular, manually wound movement with two mainspring barrels working in series to deliver an extraordinary 10-day power reserve, indicated on the dial at 12 o’clock. the tourbillon regulator, visible only through the sapphire caseback, operates at 2.5 hz (18,000 vph), emphasizing accuracy through stability rather than speed. Every bridge is anglage-finished by hand, with côtes de genève decoration, and bears the geneva seal, ensuring traditional quality standards before the adoption of the Patek Philippe seal. The movement alone consists of over 250 components, all fitted within the elongated art deco-inspired platinum case (51 mm x 29.6 mm) - a shape that perfectly balances architectural design and mechanical complexity. A small diamond discreetly set between the lugs at 6 o’clock signals the case’s platinum composition, an understated hallmark known only to seasoned collectors. Produced in extremely limited numbers, the 5101p remains one of Patek Philippe’s purest expressions of tourbillon craftsmanship - a model where innovation, design, and tradition meet without compromise. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-12.jpg"],
+            "import_photos": ["demo_assets/chasing_cartier/.web/12-2.jpg", "demo_assets/chasing_cartier/.web/12-3.jpg", "demo_assets/chasing_cartier/.web/12-4.jpg", "demo_assets/chasing_cartier/.web/12-5.jpg"],
+            "collection": "classic",
+            "details": {
+                "year": 2003,
+                "movement": "Manual",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 51,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "iwc-chronograph-3754",
+            "brand": "iwc",
+            "model": "Chronograph",
+            "description": "Limited to just 500 platinum pieces, the da vinci perpetual calendar split-seconds chronograph ref. 3754 is a reminder of what IWC was capable of at the turn of the century. Introduced as the successor to the legendary ref. 3751, the 3754 retained everything that made its predecessor special while moving into a larger 41.5 mm case with a more contemporary design. Beneath the dial is IWC’s cal. 79251, combining kurt klaus’ revolutionary perpetual calendar with richard habring’s split-seconds chronograph on the proven valjoux 7750 architecture. the result is a watch that displays the day, date, month, leap year, four-digit year, moon phase and a rattrapante chronograph-while allowing every calendar function to be adjusted through the crown, an innovation that completely changed the way perpetual calendars were designed. Despite its technical complexity, the ref. 3754 has never received the same recognition as many of its swiss counterparts. that is precisely what makes it so appealing today. it represents an era when IWC was producing some of the most ambitious complicated watches in the industry, with engineering taking priority over marketing. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-13.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/13-2.jpg",
+                "demo_assets/chasing_cartier/.web/13-3.jpg",
+                "demo_assets/chasing_cartier/.web/13-4.jpg",
+                "demo_assets/chasing_cartier/.web/13-5.jpg",
+                "demo_assets/chasing_cartier/.web/13-6.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "reference": "3754",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41.5,
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-watch-14",
+            "brand": "cartier",
+            "model": "Watch",
+            "description": "Cartier Watch. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-14.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-tank-2582",
+            "brand": "cartier",
+            "model": "Tank",
+            "description": "One of the rarest interpretations of the Tank ever made. This is the Cartier reversible ref. 2582 in the large size, crafted in yellow gold. produced in very small numbers during the 1970s, it features a manually wound movement housed inside Cartier’s ingenious reversible case, allowing the dial to be protected by simply flipping it over. With its clean roman numeral dial, blued hands, sapphire cabochon crown and beautifully preserved case, the 2582 remains one of the most elusive vintage Cartier references for serious collectors. A true collector’s piece that rarely comes to market. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-15.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/15-2.jpg",
+                "demo_assets/chasing_cartier/.web/15-3.jpg",
+                "demo_assets/chasing_cartier/.web/15-4.jpg",
+                "demo_assets/chasing_cartier/.web/15-5.jpg",
+                "demo_assets/chasing_cartier/.web/15-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "2582",
+                "movement": "Manual",
+                "caseMaterial": "18k Yellow Gold",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-calatrava-5022j",
+            "brand": "patek philippe",
+            "model": "Calatrava",
+            "description": "The Patek Philippe calatrava ref. 5022j pairs a 33 mm yellow gold case with a white lacquer dial, painted breguet numerals, breguet hands, and a small seconds display at 6 o’clock. inside is the ultra-thin manually wound caliber 215, a movement that perfectly matches the watch’s understated character. the reference was produced from the late 1990s into the early 2000s and remains one of the brand’s most elegant dress watches. This example is fitted with its original Patek Philippe strap and yellow gold pin buckle, preserving the clean and timeless look that made the 5022j a favorite among collectors. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-16.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/16-2.jpg",
+                "demo_assets/chasing_cartier/.web/16-3.jpg",
+                "demo_assets/chasing_cartier/.web/16-4.jpg",
+                "demo_assets/chasing_cartier/.web/16-5.jpg",
+                "demo_assets/chasing_cartier/.web/16-6.jpg"
+            ],
+            "collection": "classic",
+            "dial": "White",
+            "details": {
+                "reference": "5022J",
+                "movement": "Manual",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 33,
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-calatrava-5177g-013",
+            "brand": "patek philippe",
+            "model": "Calatrava",
+            "description": "The rare handcrafts collection represents the artistic side of Patek Philippe, bringing together centuries-old decorative techniques with traditional swiss watchmaking. produced in extremely limited numbers each year, these pieces are created by the brand’s master artisans and are among the most sought-after watches in the Patek Philippe catalogue. The dial of the ref. 5177g-013 is crafted using the grand feu cloisonné enamel technique. fine 24k gold wires, measuring just 0.07 mm in thickness, are individually shaped by hand to create the design. the compartments are then filled with 19 different enamel colors and fired repeatedly at temperatures between 800°c and 860°c. the result is a miniature work of art that requires exceptional skill and countless hours of craftsmanship. Housed in a 38 mm 18k white gold calatrava case with Patek Philippe’s signature clous de paris bezel, the watch is powered by the ultra-thin self-winding caliber 240, visible through the sapphire crystal caseback. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-17.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/17-2.jpg",
+                "demo_assets/chasing_cartier/.web/17-3.jpg",
+                "demo_assets/chasing_cartier/.web/17-4.jpg",
+                "demo_assets/chasing_cartier/.web/17-5.jpg",
+                "demo_assets/chasing_cartier/.web/17-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "5177G-013",
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "caseDiameterMm": 32,
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "a-lange-s-hne-watch-erences",
+            "brand": "a. lange & söhne",
+            "model": "Watch",
+            "description": "A. lange & söhne lange 1 tourbillon in platinum, limited to just 150 pieces worldwide. one of the earliest and purest expressions of lange’s signature design, combining the iconic off-centre dial, oversized date and a beautifully integrated tourbillon in a way only lange could. Offered as a full set, complete with its original box and papers. a serious opportunity to acquire one of the rarest modern lange references in its most desirable metal. Full set with box and warranty card.",
+            "images": ["/demos/chasing-cartier/watch-18.jpg"],
+            "import_photos": ["demo_assets/chasing_cartier/.web/18-2.jpg", "demo_assets/chasing_cartier/.web/18-3.jpg", "demo_assets/chasing_cartier/.web/18-4.jpg", "demo_assets/chasing_cartier/.web/18-5.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "ERENCES",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-16030",
+            "brand": "rolex",
+            "model": "Datejust 36",
+            "description": "A rare 1980s Datejust featuring an original factory wood dial. each dial has its own natural grain, making no two watches exactly alike. This example comes in the classic 36 mm stainless steel case with the engine-turned bezel, Jubilee bracelet, and Rolex cal. 3035 automatic movement with quickset date. An uncommon configuration for anyone looking for a vintage Datejust that’s a little different from the usual silver or champagne dial. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-19.jpg"],
+            "import_photos": ["demo_assets/chasing_cartier/.web/19-2.jpg", "demo_assets/chasing_cartier/.web/19-3.jpg", "demo_assets/chasing_cartier/.web/19-4.jpg", "demo_assets/chasing_cartier/.web/19-5.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "16030",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-chronograph-3610",
+            "brand": "patek philippe",
+            "model": "Chronograph",
+            "description": "Powered by a manual-wind lemania-based movement, built on the same legendary architecture used for the Patek Philippe 3970 and 5970. a movement that has earned its place among the great chronograph calibres. The 38 mm yellow gold case wears beautifully on the wrist, while the hand-guilloché dial, blued breguet hands, moonphase and perpetual calendar display showcase everything that makes breguet unique. elegant, balanced and easy to appreciate every time you look at it. A great opportunity to own one of breguet’s finest modern grand complications, combining timeless design with one of the most respected movement architectures ever produced. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-20.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/20-2.jpg",
+                "demo_assets/chasing_cartier/.web/20-3.jpg",
+                "demo_assets/chasing_cartier/.web/20-4.jpg",
+                "demo_assets/chasing_cartier/.web/20-5.jpg",
+                "demo_assets/chasing_cartier/.web/20-6.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "reference": "3610",
+                "movement": "Manual",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 38,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "chopard-watch-161902-5049",
+            "brand": "chopard",
+            "model": "Watch",
+            "description": "A beautiful example of Chopard’s collaboration with japanese urushi master kiichiro masumura and yamada heiando. the dial is handcrafted using traditional urushi lacquer and maki-e techniques, with layers of natural lacquer, gold powder and mother-of-pearl creating remarkable depth and detail. The 39.5 mm rose gold case houses the in-house l.u.c calibre 96.17-l, an ultra-thin automatic movement featuring a 22k gold micro-rotor, twin barrels and a 65-hour power reserve. finely finished and cosc-certified, it’s every bit as impressive as the artwork on the dial. One of the most collectible pieces from the l.u.c urushi series. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-21.jpg"],
+            "import_photos": [
+                "demo_assets/chasing_cartier/.web/21-2.jpg",
+                "demo_assets/chasing_cartier/.web/21-3.jpg",
+                "demo_assets/chasing_cartier/.web/21-4.jpg",
+                "demo_assets/chasing_cartier/.web/21-5.jpg",
+                "demo_assets/chasing_cartier/.web/21-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "161902-5049",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "caseDiameterMm": 39.5,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "breguet-watch-3137",
+            "brand": "breguet",
+            "model": "Watch",
+            "description": "Breguet classique power reserve moonphase ref. 3137 in white gold, featuring a perfectly balanced 36 mm case and one of the most historically inspired designs in modern Breguet production. the layout takes direct inspiration from Breguet’s early pocket watches, with the off-centred indications, hand-turned guilloché dial and signature blued steel hands staying true to abraham-louis Breguet’s original design language from over two centuries ago. The engraved open caseback is just as impressive as the dial side, showcasing the beautifully finished movement in full view. moonphase, power reserve and date complications are all integrated in a way that feels elegant and effortless. a timeless neo-vintage Breguet with real heritage behind the design, not just the name. Watch only.",
+            "images": ["/demos/chasing-cartier/watch-22.jpg"],
+            "import_photos": ["demo_assets/chasing_cartier/.web/22-2.jpg", "demo_assets/chasing_cartier/.web/22-3.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "3137",
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}

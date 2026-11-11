@@ -1,0 +1,357 @@
+{
+    "slug": "a-x-ice",
+    "locale": "en",
+    "name": "A&X Ice",
+    "accent": "#E4CD7C",
+    "label": "Private demo · Prepared for A&X Ice · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for A&X Ice. Payments are in test mode; no real payment is taken.",
+    "description": "A&X Ice: pre-owned luxury watches. Vacheron Constantin and Rolex.",
+    "logo": {
+        "src": "/demos/a-x-ice/logo.png",
+        "width": 440,
+        "height": 477
+    },
+    "logo_icon": {
+        "src": "/demos/a-x-ice/logo-icon.png",
+        "width": 192,
+        "height": 208
+    },
+    "favicon": "/demos/a-x-ice/favicon.png",
+    "hero": {
+        "title": "A&X ICE",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/a-x-ice/hero-poster.jpg",
+        "desktop_image": "/demos/a-x-ice/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/a-x-ice/watch-2.jpg"
+            },
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/a-x-ice/watch-1.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/a-x-ice/trade.jpg",
+    "banner": {
+        "light": "/demos/a-x-ice/banner-light.jpg",
+        "dark": "/demos/a-x-ice/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "A&X Ice is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Vacheron Constantin and Rolex, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-watch-1",
+            "brand": "vacheron constantin",
+            "model": "Watch",
+            "description": "Vacheron Constantin Watch in stainless steel with a grey dial. Watch only.",
+            "images": ["/demos/a-x-ice/watch-1.jpg"],
+            "collection": "classic",
+            "dial": "Grey",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-chronograph-2",
+            "brand": "vacheron constantin",
+            "model": "Chronograph",
+            "description": "Vacheron Constantin Chronograph in stainless steel. Watch only.",
+            "images": ["/demos/a-x-ice/watch-2.jpg"],
+            "collection": "chronograph",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-116520",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex cosmograph Daytona in stainless steel, identified in the supplied listing as reference 116520. it has a black dial with three contrasting chronograph counters, luminous hour plots, central timing hands and a fixed tachymeter scale around the outer bezel. the polished steel bezel gives the dark face a bright frame, while the screw-down chronograph pushers and winding crown are visible on the case side. the Oyster bracelet is made of three-piece links with a brushed centre and polished outer surfaces. the dial layout is balanced and highly legible, with the small seconds and elapsed-time registers arranged symmetrically around the centre. Watch only.",
+            "images": ["/demos/a-x-ice/watch-3.jpg"],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "reference": "116520",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-watch-lect",
+            "brand": "vacheron constantin",
+            "model": "Watch",
+            "description": "Vacheron constantin wristwatch with a pale silver dial and warm-toned metal accents. the face has applied hour markers, slender central hands and several subsidiary indications arranged across the lower half of the dial, adding a more technical appearance than a simple three-hand watch. the round case has a substantial polished bezel and a visible crown, while the bracelet and case surfaces reflect a mix of brushed and polished finishing. the dial carries the Vacheron Constantin name and emblem. the photographs show the dial and case proportions clearly; the precise reference, alloy and exact function of each small register should not be inferred beyond what is visibly marked. Watch only.",
+            "images": ["/demos/a-x-ice/watch-4.jpg"],
+            "collection": "classic",
+            "dial": "Silver",
+            "details": {
+                "reference": "LECT",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-5",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex cosmograph Daytona with a bright white dial in a stainless-steel case. three recessed chronograph registers are arranged across the dial, with dark hands and markings providing contrast against the light background. the hour markers are applied and luminous, and the central hands include the long chronograph seconds hand. around the dial is a fixed tachymeter bezel, with the scale engraved into the polished steel. the case has the familiar pair of chronograph pushers flanking the screw-down crown, and it is finished with a three-link Oyster bracelet. the photographs highlight the clean white-and-steel palette and the precise, sporty chronograph layout. Watch only.",
+            "images": ["/demos/a-x-ice/watch-5.jpg"],
+            "collection": "chronograph",
+            "dial": "White",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-116508",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex cosmograph Daytona reference 116508, widely associated with the john mayer configuration. this example pairs a yellow-gold case and matching Oyster bracelet with a rich green dial. three contrasting chronograph subdials sit within the dial, surrounded by gold-coloured applied markers and hands. the fixed yellow-gold bezel carries the engraved tachymeter scale, while the case side has the chronograph pushers and screw-down crown. the bracelet uses solid-looking three-piece links with a polished precious-metal finish. the green-and-gold colour combination is the defining visual feature, and the photos show the dial, bezel, crown side and overall bracelet presentation. Watch only.",
+            "images": ["/demos/a-x-ice/watch-6.jpg"],
+            "collection": "chronograph",
+            "dial": "Green",
+            "details": {
+                "reference": "116508",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-chronograph-7",
+            "brand": "vacheron constantin",
+            "model": "Chronograph",
+            "description": "Vacheron Constantin Chronograph in stainless steel with a red dial. Watch only.",
+            "images": ["/demos/a-x-ice/watch-7.jpg"],
+            "collection": "chronograph",
+            "dial": "Red",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-chronograph-ined",
+            "brand": "vacheron constantin",
+            "model": "Chronograph",
+            "description": "Vacheron constantin watch with a light-coloured chronograph dial and a vivid red strap. the circular metal case has a broad, angular bezel, while the dial contains multiple subsidiary registers, applied hour markers and central hands. the red strap is the strongest colour contrast in the photographs and gives the otherwise refined watch a sportier appearance. the crown and chronograph pushers project from the right side of the case. the light dial and dark register markings keep the information readable, and the metal bezel creates a defined frame around the face. exact strap material and model reference are not confirmed by the photographs. Watch only.",
+            "images": ["/demos/a-x-ice/watch-8.jpg"],
+            "collection": "chronograph",
+            "dial": "Red",
+            "details": {
+                "reference": "INED",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-chronograph-9",
+            "brand": "vacheron constantin",
+            "model": "Chronograph",
+            "description": "Vacheron constantin overseas with a saturated blue dial and stainless-steel integrated bracelet. the dial has a sunburst effect, applied luminous hour markers, central hands and subsidiary chronograph displays. the steel bezel has the collection’s recognizable angular, screw-accented outline, and the case transitions directly into a multi-link bracelet with alternating brushed and polished surfaces. the watch is photographed on the wrist, making the case thickness, bracelet articulation and blue dial colour easy to see. the combination of the blue face and silver-coloured metal gives the watch a sporty but polished appearance. Watch only.",
+            "images": ["/demos/a-x-ice/watch-9.jpg"],
+            "collection": "chronograph",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-watch-lective",
+            "brand": "vacheron constantin",
+            "model": "Watch",
+            "description": "Vacheron constantin overseas-family watch with a dark charcoal dial and a textured horizontal pattern. the face uses applied baton markers and warm gold-coloured hands and accents, with a small date display near the lower part of the dial. a broad angular bezel frames the round dial, and the watch is shown with a substantial metal bracelet whose links have both brushed and reflective surfaces. the dark dial provides strong contrast against the metal markers. the photographs show the dial texture, bezel form and bracelet construction; the exact case alloy and reference are not legible enough to state confidently. Watch only.",
+            "images": ["/demos/a-x-ice/watch-10.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "LECTIVE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-chronograph-11",
+            "brand": "vacheron constantin",
+            "model": "Chronograph",
+            "description": "Vacheron Constantin Chronograph in stainless steel with a blue dial. Watch only.",
+            "images": ["/demos/a-x-ice/watch-11.jpg"],
+            "collection": "chronograph",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-lective",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust with a green dial and a two-tone metal appearance. the round dial has applied baton hour markers, central hour, minute and seconds hands, and a date window at 3 o’clock beneath the cyclops-style magnifier. a fluted bezel frames the face, while the bracelet combines steel-coloured links with warm gold-toned centre links. the green dial is the focal point and shifts in tone under the light. the photographs also show the bracelet and case from the side, revealing the polished bezel and the contrast between the brushed and reflective link surfaces. Watch only.",
+            "images": ["/demos/a-x-ice/watch-15.jpg"],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "reference": "LECTIVE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-16",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona in stainless steel with a white dial. Watch only.",
+            "images": ["/demos/a-x-ice/watch-16.jpg"],
+            "collection": "chronograph",
+            "dial": "White",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-lections",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust with a light silver-white dial and a stainless-steel bracelet. the face has slim applied hour markers, central hands and a date aperture at 3 o’clock with a magnifying crystal. a bright diamond-set bezel surrounds the dial, adding sparkle to the otherwise restrained steel design. the Jubilee-style bracelet is formed from five-piece links, with alternating polished and brushed reflections visible in the product photograph. the watch is shown from the front and full length, so the relationship between the bezel, dial and bracelet can be seen clearly. exact case size is not established by the photo alone. Watch only.",
+            "images": ["/demos/a-x-ice/watch-18.jpg"],
+            "collection": "classic",
+            "dial": "White",
+            "details": {
+                "reference": "LECTIONS",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}

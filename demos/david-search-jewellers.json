@@ -1,0 +1,324 @@
+{
+    "slug": "david-search-jewellers",
+    "locale": "en",
+    "name": "David Search Jewellers",
+    "label": "Private demo · Prepared for David Search Jewellers · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for David Search Jewellers. Payments are in test mode; no real payment is taken.",
+    "description": "David Search Jewellers: pre-owned luxury watches. Omega, Rolex, Breitling and IWC.",
+    "logo": {
+        "src": "/logo.svg",
+        "width": 440,
+        "height": 440
+    },
+    "logo_icon": {
+        "src": "/logo_simple.svg",
+        "width": 192,
+        "height": 192
+    },
+    "favicon": "/favicon.ico",
+    "hero": {
+        "title": "DAVID SEARCH JEWELLERS",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/david-search-jewellers/hero-poster.jpg",
+        "desktop_image": "/demos/david-search-jewellers/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/david-search-jewellers/watch-12.jpg"
+            },
+            {
+                "key": "diver",
+                "name": "Diver",
+                "image": "/demos/david-search-jewellers/watch-3.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/david-search-jewellers/watch-2.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": "GMT",
+                "image": "/demos/david-search-jewellers/watch-8.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/david-search-jewellers/trade.jpg",
+    "banner": {
+        "light": "/demos/david-search-jewellers/banner-light.jpg",
+        "dark": "/demos/david-search-jewellers/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "David Search Jewellers is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Omega, Rolex, Breitling and IWC, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "slug": "omega-speedmaster-2",
+            "brand": "omega",
+            "model": "Speedmaster",
+            "price": 99999,
+            "description": "Omega Speedmaster in ceramic with a grey dial. Comes with the box.",
+            "images": ["/demos/david-search-jewellers/watch-2.jpg"],
+            "collection": "chronograph",
+            "dial": "Grey",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Ceramic",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "slug": "rolex-submariner-3",
+            "brand": "rolex",
+            "model": "Submariner",
+            "price": 99999,
+            "description": "Two stainless-steel Rolex Submariner dive watches are displayed together to compare different generations of the same recognizable design. both have black dials with luminous round and rectangular hour plots, mercedes-style hour hands and rotating black dive bezels with minute markings. each watch uses a three-link Oyster bracelet and a robust round case with a screw-down crown. one example shows a date display with a magnifying lens, while the other presents a cleaner dial layout. the photographs focus on the shared Submariner silhouette, bezel proportions, dial legibility and the differences between the two examples. Watch only.",
+            "images": ["/demos/david-search-jewellers/watch-3.jpg"],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "breitling-chronograph-erences",
+            "brand": "breitling",
+            "model": "Chronograph",
+            "price": 99999,
+            "description": "Breitling Chronograph 42 mm in stainless steel. Watch only.",
+            "images": ["/demos/david-search-jewellers/watch-5.jpg"],
+            "import_photos": ["demo_assets/david_search_jewellers/.web/5-2.jpg"],
+            "collection": "chronograph",
+            "details": {
+                "reference": "ERENCES",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 42,
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "rolex-gmt-master-ii-8",
+            "brand": "rolex",
+            "model": "GMT-Master II “Bruce Wayne”",
+            "price": 99999,
+            "description": "Rolex GMT-Master II in stainless steel, described in the supplied listing by the nickname ‘Bruce Wayne’. the watch has a black dial with luminous round and rectangular hour markers, mercedes-style hands, a central 24-hour hand and a date window with a magnifying lens at 3 o’clock. its two-colour black-and-grey ceramic bezel is marked for a second time zone, with numerals around the 24-hour scale. the steel Oyster bracelet has broad three-piece links, and the case includes a screw-down crown with crown guards. the photographs show the bezel colours, dial layout, bracelet and presentation box. Comes with the box.",
+            "images": ["/demos/david-search-jewellers/watch-8.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "slug": "rolex-gmt-master-ii-9",
+            "brand": "rolex",
+            "model": "GMT-Master II “Pepsi”",
+            "price": 99999,
+            "description": "Rolex GMT-Master II ‘Pepsi’ in stainless steel, photographed with its green presentation box and accessories. the defining feature is the two-colour red-and-blue 24-hour bezel, surrounding a black dial with luminous hour markers and a central gmt hand. a date aperture and magnifying lens sit at 3 o’clock, and the steel Jubilee bracelet uses five-piece links that catch light along their polished surfaces. the case has crown guards and a screw-down crown, while the bezel allows day/night distinction for a second time zone. the supplied listing dates the set to 2021 and notes box and papers. Full set with box and warranty card.",
+            "images": ["/demos/david-search-jewellers/watch-9.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "year": 2021,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "rolex-datejust-12",
+            "brand": "rolex",
+            "model": "Datejust “Chocolate”",
+            "price": 99999,
+            "description": "Rolex Datejust 41 in oystersteel and 18-carat Everose gold, described in the listing as a two-tone model with a Chocolate-brown dial. the dial has applied hour markers, central hands and a date display at 3 o’clock beneath the cyclops magnifier. a fluted bezel frames the face, while the Jubilee bracelet combines steel outer links with Everose-coloured centre links. the brown dial gives the watch a warm tone that complements the rose-gold accents. the photographs show the watch on display and in hand, including the dial, bezel and bracelet construction. the supplied listing also mentions box and papers. Full set with box and warranty card.",
+            "images": ["/demos/david-search-jewellers/watch-12.jpg"],
+            "collection": "classic",
+            "dial": "Brown",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "iwc-watch-14",
+            "brand": "iwc",
+            "model": "Watch",
+            "price": 99999,
+            "description": "Iwc pilot’s automatic with a rich blue dial and stainless-steel bracelet. the dial has a clear aviation-inspired layout, with bold arabic numerals, luminous hands, a minute track around the perimeter and a date display. the blue surface has a sunburst effect that changes with the light, while the polished steel case and bracelet give the watch a versatile everyday appearance. the case has a prominent crown and clean, straightforward lines. the supplied listing identifies it as the IWC pilot’s automatic blue-dial model. the photographs emphasize the dial colour, legibility, steel bracelet and overall case proportions. Watch only.",
+            "images": ["/demos/david-search-jewellers/watch-14.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "rolex-datejust-16",
+            "brand": "rolex",
+            "model": "Datejust “Wimbledon”",
+            "price": 99999,
+            "description": "Rolex Datejust in stainless steel with a fluted bezel and a Wimbledon-style dial. the dial is dark slate in tone and uses a mix of baton markers and distinctive green-accented roman numeral markers, giving the face its recognizable tennis-inspired appearance. the date window sits at 3 o’clock under a magnifying crystal. a steel bracelet completes the watch, with the links and clasp shown in the product photographs. the case and bezel have alternating brushed and polished surfaces, while the luminous hands provide contrast against the dial. the supplied listing notes box and papers; the exact bracelet variant should be checked against the watch itself. Full set with box and warranty card.",
+            "images": ["/demos/david-search-jewellers/watch-16.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "rolex-datejust-lect",
+            "brand": "rolex",
+            "model": "Datejust",
+            "price": 99999,
+            "description": "Rolex Datejust 31 in stainless steel, featuring a mother-of-pearl dial with diamond hour markers. the dial’s natural iridescence gives it a subtle shifting effect, while the diamond markers add small points of sparkle around the face. a date display sits at 3 o’clock beneath the cyclops magnifier, and the bezel appears fully set with diamonds. the Jubilee bracelet has closely spaced five-piece links that reflect light along the wrist. the overall look is bright and jewellery-like while retaining the familiar Datejust case shape and layout. the supplied listing identifies it as a 2025 example with box and papers. Full set with box and warranty card.",
+            "images": ["/demos/david-search-jewellers/watch-17.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "LECT",
+                "year": 2025,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "slug": "rolex-submariner-19",
+            "brand": "rolex",
+            "model": "Submariner",
+            "price": 99999,
+            "description": "Rolex Submariner in stainless steel with a dark dial and a coloured rotating dive bezel. the dial has luminous round, rectangular and triangular hour markers, mercedes-style hands and a date display beneath the magnifying lens at 3 o’clock. the bezel carries minute graduations for timing, and the steel Oyster bracelet uses three-piece links with brushed surfaces. the round case has crown guards and a screw-down crown, giving the watch its familiar professional-diver profile. the supplied listing identifies this as a 2023 Submariner and mentions the complete box-and-paper set; exact bezel colour should be checked against the original full-size image under neutral lighting. Comes with the box.",
+            "images": ["/demos/david-search-jewellers/watch-19.jpg"],
+            "collection": "diver",
+            "details": {
+                "year": 2023,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "slug": "rolex-submariner-20",
+            "brand": "rolex",
+            "model": "Submariner “Bluesy”",
+            "price": 99999,
+            "description": "Rolex Submariner ‘Bluesy’ in two-tone oystersteel and 18-carat yellow gold. the watch has a vivid blue dial and matching blue rotating dive bezel, with luminous hour markers, mercedes-style hands and a date window with a magnifier at 3 o’clock. the yellow-gold bezel edge, crown and centre bracelet links contrast with the steel outer links and case. its three-link Oyster bracelet gives the watch a robust sports-watch profile, while the two-tone finish adds a dressier look. the photographs show the blue dial and bezel clearly, along with the gold-and-steel bracelet construction. Watch only.",
+            "images": ["/demos/david-search-jewellers/watch-20.jpg"],
+            "collection": "diver",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "rolex-day-date-21",
+            "brand": "rolex",
+            "model": "Day-Date",
+            "price": 99999,
+            "description": "Rolex day-date 40 in 18-carat yellow gold, paired with the signature president bracelet. the dial is a warm champagne tone with applied hour markers and central hands. the day aperture is positioned at 12 o’clock, while the date window sits at 3 o’clock beneath a magnifying crystal. a fluted yellow-gold bezel surrounds the dial, and the bracelet’s semi-circular three-piece links create a smooth, rounded profile around the wrist. the supplied listing identifies a 2022 example and notes box and papers. the photographs show the full-gold finish, the day-and-date layout and the substantial case proportions. Full set with box and warranty card.",
+            "images": ["/demos/david-search-jewellers/watch-21.jpg"],
+            "collection": "classic",
+            "details": {
+                "year": 2022,
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "braceletMaterial": "President bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        }
+    ]
+}

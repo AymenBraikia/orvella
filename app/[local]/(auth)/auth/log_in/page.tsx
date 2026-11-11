@@ -1,4 +1,5 @@
 "use client";
+import { useStorefront } from "@/app/(site)/context/storefrontContext";
 
 import { use, useState } from "react";
 import Link from "next/link";
@@ -8,10 +9,13 @@ import Log_in from "../actions/log_in";
 import { useTranslations } from "next-intl";
 
 export default function LoginPage({ searchParams }: { searchParams: Promise<{ redirect?: string; ref?: string }> }) {
+    // Inside a lead demo, its own pages (the store's otherwise).
+    const { href } = useStorefront();
     const params = use(searchParams);
     const t = useTranslations("auth.login");
         const t2 = useTranslations("home");
 
+    const t_errors = useTranslations("auth.errors");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -28,11 +32,11 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
             const result = await Log_in(formData);
 
             if (result.success) {
-                return router.push(result.redirect || "/");
+                return router.push(href(result.redirect || "/"));
             }
 
             setIsSubmitting(false);
-            return setError(result.error || t("somethingWentWrong"));
+            return setError(result.error == "server" ? t("somethingWentWrong") : t_errors(result.error));
         } catch {
             setIsSubmitting(false);
             setError(t("somethingWentWrong"));
@@ -42,7 +46,7 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
     return (
         <div className="relative w-full max-w-md flex-center flex-col gap-4 rounded-2xl border border-(--bg-primary) p-6 sm:p-10">
             <div className="flex-center">
-                <Link aria-label={"home"} href={"/"} className="w-fit text-gold font-primary text-2xl">
+                <Link aria-label={"home"} href={href("/")} className="w-fit text-gold font-primary text-2xl">
                     {t2("heroTitle")}
                 </Link>
             </div>
@@ -52,7 +56,7 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
             <p className="text-sm leading-relaxed text-secondary">{t("description")}</p>
 
             <form onSubmit={handleSubmit} className="flex-center flex-col gap-6 w-full" noValidate>
-                <input type="hidden" name="recordId" value={params.redirect} />
+                <input type="hidden" name="redirect" value={params.redirect ?? ""} />
 
                 <Input placeholder={t("emailPlaceholder")} name="email" type="email" required label={t("email")} />
 
@@ -63,9 +67,13 @@ export default function LoginPage({ searchParams }: { searchParams: Promise<{ re
                 </button>
             </form>
 
+            <Link href={href("/auth/forgot")} className="text-sm underline text-secondary">
+                {t("forgot")}
+            </Link>
+
             <p className="text-center text-sm text-secondary">
                 {t("dontHaveAccount")}{" "}
-                <Link href="/auth/sign_up" className="font-medium text-primary underline underline-offset-2">
+                <Link href={href("/auth/sign_up")} className="font-medium text-primary underline underline-offset-2">
                     {t("signUp")}
                 </Link>
             </p>

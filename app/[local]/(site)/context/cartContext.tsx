@@ -1,7 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode, useMemo, useEffect } from "react";
-import { useAuth } from "./authContext";
+import { createContext, useContext, ReactNode, useMemo } from "react";
 import { User_Cart } from "@/types/user";
 
 type CartContextType = {
@@ -10,21 +9,10 @@ type CartContextType = {
     totalItems: number;
 };
 
-const EMPTY_CART: User_Cart = [];
-
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export function CartProvider({ children }: { children: ReactNode }) {
-    const [cart, setCart] = useState<User_Cart>(EMPTY_CART);
-    const { session } = useAuth();
-
-    useEffect(() => {
-        if (session) {
-            setCart(session.cart ?? EMPTY_CART);
-            return;
-        }
-    }, [session]);
-
+/** The visitor's cart (signed in or guest), rendered on the server and refreshed with the page. */
+export function CartProvider({ cart, children }: { cart: User_Cart; children: ReactNode }) {
     const subtotal = useMemo(() => {
         return cart.reduce((total, item) => total + item.price * item.quantity, 0);
     }, [cart]);

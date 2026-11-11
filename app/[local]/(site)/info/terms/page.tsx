@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import ArbitrationStatement from "../arbitration_statement";
 
 type TermSection = {
     number: string;
@@ -6,6 +7,8 @@ type TermSection = {
     intro?: string;
     text?: string;
     items?: string[];
+    /** Filled in from the store's arbitration setting. */
+    arbitration?: boolean;
     subsections?: {
         heading: string;
         items?: string[];
@@ -43,6 +46,8 @@ export default async function TermsPage() {
                         {section.intro && <p className="ms-4">{section.intro}</p>}
 
                         {section.text && <p className="ms-4">{section.text}</p>}
+
+                        {section.arbitration && <ArbitrationStatement className="ms-4" />}
 
                         {section.items && (
                             <ul className="list-disc list-inside ms-4">

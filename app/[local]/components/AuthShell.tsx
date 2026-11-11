@@ -1,24 +1,37 @@
 import { AuthProvider } from "@/app/(site)/context/authContext";
 import { CartProvider } from "@/app/(site)/context/cartContext";
+import { CurrencyProvider } from "@/app/(site)/context/currencyContext";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
-import type { UserData } from "@/types/user";
+import type { User_Cart, UserData } from "@/types/user";
 import { Supported_Currencies } from "@/currency";
 import { cookies } from "next/headers";
+import { public_details, store_identity } from "@/app/server/store_identity";
+import load_rates from "@/app/server/update_currency_rates";
+import { current_storefront } from "@/app/server/storefront";
+import { StorefrontProvider } from "@/app/(site)/context/storefrontContext";
 
-export default async function AuthShell({ session, children }: { session: UserData | undefined; children: React.ReactNode }) {
+export default async function AuthShell({ session, cart = [], children }: { session: UserData | undefined; cart?: User_Cart; children: React.ReactNode }) {
 
         const cookieStore = await cookies();
         const savedCurrency = (cookieStore.get("Currency")?.value as Supported_Currencies) || "USD";
+        const identity = await store_identity();
+        const store = public_details(identity);
+        const rates = await load_rates();
     return (
+        // The store being shown (main store or a lead demo) for the client components: links, logo, cart.
+        <StorefrontProvider store={current_storefront()}>
+        <CurrencyProvider currency={savedCurrency} rates={rates} charge_currency={identity.charge_currency}>
         <AuthProvider initialSession={session}>
-            <CartProvider>
-                <Header savedCurrency={savedCurrency} />
+            <CartProvider cart={cart}>
+                <Header savedCurrency={savedCurrency} store_name={store.store_name} />
                 <div className="min-h-full flex-center flex-col max-w-dvw overflow-x-hidden pt-20">
                     {children}
-                    <Footer />
+                    <Footer store={store} />
                 </div>
             </CartProvider>
         </AuthProvider>
+        </CurrencyProvider>
+        </StorefrontProvider>
     );
 }

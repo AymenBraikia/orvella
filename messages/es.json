@@ -5,6 +5,10 @@
         "cta": "Más información"
     },
     "orders": {
+        "reservedTitle": "Gracias, {name}. Su pedido está reservado",
+        "reservedText": "Transfiera {amount} antes del {date} e indique {id} como concepto. Enviamos en cuanto recibamos el pago.",
+        "processingTitle": "Gracias, {name}. Su pago se está procesando",
+        "plainTitle": "Gracias, {name}",
         "thankYou": "Muchas gracias",
         "thankYouSuffix": "su adquisición está confirmada",
         "ongoingOrders": "en camino",
@@ -22,19 +26,49 @@
         "quantity": "Cantidad",
         "localPickup": "Recogida en boutique",
         "discount": "Descuento",
-        "browse": "Explorar la colección"
+        "browse": "Explorar la colección",
+        "statuses": {
+            "pending_payment": "Pendiente de pago",
+            "paid": "Pagado",
+            "shipped": "Enviado",
+            "delivered": "Entregado",
+            "cancelled": "Cancelado",
+            "refunded": "Reembolsado"
+        },
+        "bank": {
+            "heading": "Datos de pago",
+            "instructions": "Transfiera {amount} antes del {date} e indique su número de pedido {id} como concepto. Hasta entonces, sus piezas quedan reservadas.",
+            "accountHolder": "Titular de la cuenta",
+            "bank": "Banco",
+            "iban": "IBAN",
+            "bic": "BIC",
+            "reference": "Concepto",
+            "amount": "Importe"
+        },
+        "notFound": "No hemos encontrado este pedido. Utilice el enlace de su correo de confirmación.",
+        "nextSteps": {
+            "processing": "Su pago se está procesando. Le enviaremos un correo en cuanto se confirme.",
+            "paid": "Su pago está confirmado. Estamos preparando su pedido y le enviaremos el número de seguimiento cuando salga.",
+            "shipped": "Su pedido está en camino."
+        },
+        "createAccount": {
+            "heading": "Siga sus pedidos",
+            "text": "Cree una cuenta para seguir este pedido y comprar más rápido la próxima vez.",
+            "cta": "Crear cuenta"
+        }
     },
     "meta": {
-        "siteName": "ORVELLA",
-        "titleDefault": "ORVELLA | Relojes de lujo de alta gama y asesoramiento experto",
+        "siteName": "CORLANE",
+        "titleDefault": "CORLANE | Relojes de lujo de alta gama y asesoramiento experto",
         "description": "Descubra nuestra colección seleccionada de relojes de lujo nuevos y de segunda mano en perfecto estado, entre ellos Rolex, Patek Philippe y Cartier. Reserve hoy mismo una asesoría profesional con nuestros expertos en relojería.",
-        "keywords": ["relojes de lujo", "Rolex de segunda mano", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "comprar relojes de lujo", "asesoría relojera", "ORVELLA"],
+        "keywords": ["relojes de lujo", "Rolex de segunda mano", "Patek Philippe Calatrava", "Cartier Panthère", "Rolex Daytona", "comprar relojes de lujo", "asesoría relojera", "CORLANE"],
         "ogDescription": "Nuestra colección seleccionada de relojes de lujo nuevos y de segunda mano le está esperando. Cuente con verdaderos expertos para sus relojes de alta gama.",
-        "ogImageAlt": "Colección de relojes de lujo ORVELLA",
+        "ogImageAlt": "Colección de relojes de lujo CORLANE",
         "twitterDescription": "Su socio en relojes de alta gama. Descubra Rolex, Patek Philippe y Cartier, y reserve una cita con nuestros expertos."
     },
     "common": {
-        "brand": "ORVELLA",
+        "priceOnRequest": "Precio a consultar",
+        "brand": "CORLANE",
         "watches": "relojes",
         "rings": "anillos",
         "necklaces": "collares",
@@ -71,8 +105,9 @@
             "withdrawal": "Desistimiento",
             "disclaimer": "Aviso de responsabilidad",
             "cookiePolicy": "Política de cookies",
-            "disclaimerText": "Orvella es un distribuidor independiente, no está afiliado a ninguna otra marca ni es un distribuidor autorizado.",
-            "copyright": "©{year} Orvella. Todos los derechos reservados."
+            "disclaimerText": "Corlane es un distribuidor independiente, no está afiliado a ninguna otra marca ni es un distribuidor autorizado.",
+            "copyright": "©{year} Corlane. Todos los derechos reservados.",
+            "byAppointment": "Visitas al showroom con cita previa"
         },
         "contactLabels": {
             "phonePrimary": "Teléfono",
@@ -101,6 +136,7 @@
             "consignment": "Consignación"
         },
         "filters": {
+            "collection": "Colección",
             "brands": "Marcas",
             "movement": "Movimiento",
             "caseMaterial": "Material de la caja",
@@ -141,10 +177,25 @@
             "activeFilters": "Filtros activos",
             "showAll": "Ver {count} más",
             "showLess": "Ver menos",
-            "showResults": "{count, plural, =0 {No hay relojes} one {Ver # reloj} other {Ver # relojes}}",
-            "resultCount": "{count, plural, =0 {Ningún reloj} one {# reloj} other {# relojes}}",
+            "showResults": "{count, plural, =0 {No hay artículos} one {Ver # artículo} other {Ver # artículos}}",
+            "resultCount": "{count, plural, =0 {Ningún artículo} one {# artículo} other {# artículos}}",
             "priceLowToHight": "Precio: de menor a mayor",
-            "priceHightToLow": "Precio: de mayor a menor"
+            "priceHightToLow": "Precio: de mayor a menor",
+            "gender": "Para",
+            "genderMen": "Hombre",
+            "genderWomen": "Mujer",
+            "metal": "Metal",
+            "purity": "Pureza",
+            "stones": "Piedras preciosas",
+            "ringSize": "Talla de anillo",
+            "clasp": "Cierre",
+            "weight": "Peso",
+            "length": "Longitud",
+            "bandWidth": "Ancho del aro",
+            "metalGold": "Oro",
+            "metalWhiteGold": "Oro blanco",
+            "metalSilver": "Plata",
+            "metalPlatinum": "Platino"
         },
         "productCard": {
             "movement": "Movimiento",
@@ -175,7 +226,29 @@
             "message": "Mensaje",
             "attachImages": "Adjuntar imágenes",
             "required": "Este campo es obligatorio",
-            "invalidEmail": "Introduzca una dirección de correo electrónico válida"
+            "invalidEmail": "Introduzca una dirección de correo electrónico válida",
+            "selectOption": "Elija una opción.",
+            "invalidPrice": "Introduzca un precio válido.",
+            "futureDate": "Elija una fecha futura."
+        },
+        "stock": {
+            "available": "Disponible",
+            "reserved": "Reservado",
+            "sold": "Vendido"
+        },
+        "upload": {
+            "hint": "Hasta {max} fotos, máx. {size} MB cada una (JPG, PNG, WebP).",
+            "tooMany": "Puede adjuntar hasta {max} fotos.",
+            "tooLarge": "{name} supera los {max} MB.",
+            "notImage": "{name} no es una imagen compatible.",
+            "heic": "{name} es una foto HEIC. Expórtala como JPEG e inténtalo de nuevo.",
+            "failed": "No se pudo subir {name}.",
+            "remove": "Eliminar foto",
+            "add": "Añadir fotos",
+            "uploading": "{progress} %"
+        },
+        "errors": {
+            "rateLimited": "Demasiados intentos. Espere un momento e inténtelo de nuevo."
         }
     },
     "error": {
@@ -203,7 +276,7 @@
             "password": "Contraseña",
             "firstNamePlaceholder": "Jordan",
             "lastNamePlaceholder": "Blake",
-            "emailPlaceholder": "Jordan@orvella.com",
+            "emailPlaceholder": "Jordan@corlane.store",
             "passwordPlaceholder": "Al menos 8 caracteres",
             "agree": "acepto los Términos del servicio y la Política de privacidad",
             "createAccount": "Crear cuenta",
@@ -219,17 +292,44 @@
             "description": "Guarde las piezas que le interesan, siga las ofertas y finalice su compra más rápido la próxima vez.",
             "email": "Correo electrónico",
             "password": "Contraseña",
-            "emailPlaceholder": "Jordan@orvella.com",
+            "emailPlaceholder": "Jordan@corlane.store",
             "passwordPlaceholder": "Al menos 8 caracteres",
             "logIn": "Iniciar sesión",
             "loggingIn": "Iniciando sesión…",
             "dontHaveAccount": "¿Todavía no tiene una cuenta?",
             "signUp": "Regístrese",
-            "somethingWentWrong": "Algo ha salido mal. Vuelva a intentarlo."
+            "somethingWentWrong": "Algo ha salido mal. Vuelva a intentarlo.",
+            "forgot": "¿Ha olvidado su contraseña?"
+        },
+        "errors": {
+            "missing": "Rellene todos los campos obligatorios.",
+            "invalid_email": "Introduzca una dirección de correo electrónico válida.",
+            "weak_password": "Su contraseña debe tener al menos 8 caracteres.",
+            "wrong_credentials": "Correo electrónico o contraseña incorrectos.",
+            "email_taken": "Ya existe una cuenta con este correo electrónico. ¿Desea iniciar sesión?",
+            "rate": "Demasiados intentos. Espere unos minutos e inténtelo de nuevo."
+        },
+        "forgot": {
+            "title": "Restablecer la contraseña",
+            "description": "Introduzca el correo electrónico de su cuenta y le enviaremos un enlace para elegir una contraseña nueva.",
+            "email": "Correo electrónico",
+            "submit": "Enviar enlace",
+            "sending": "Enviando…",
+            "sent": "Si existe una cuenta con esta dirección, recibirá en unos minutos un correo con un enlace. El enlace es válido durante una hora.",
+            "back": "Volver a iniciar sesión"
+        },
+        "reset": {
+            "title": "Elija una contraseña nueva",
+            "description": "Al menos 8 caracteres.",
+            "password": "Contraseña nueva",
+            "submit": "Guardar contraseña",
+            "saving": "Guardando…",
+            "invalid": "Este enlace no es válido o ha caducado.",
+            "newLink": "Solicitar un enlace nuevo"
         }
     },
     "home": {
-        "heroTitle": "ORVELLA",
+        "heroTitle": "CORLANE",
         "heroSubtitle": "Tu destino de alta joyería y relojes de lujo",
         "discover": "Descubrir",
         "newArrivalsHeading": "Novedades",
@@ -266,7 +366,7 @@
         "title": "Recambios"
     },
     "store": {
-        "heading": "Tienda Orvella Frankfurt",
+        "heading": "Tienda Corlane {city}",
         "cta": "Reservar una cita",
         "welcomeText": "Estaremos encantados de recibirle pronto en nuestra tienda.",
         "appointmentNote": "Le rogamos que concierte una cita para asegurarse de que el reloj que busca esté disponible en el momento de su visita.",
@@ -289,7 +389,7 @@
     },
     "trade": {
         "heading": "Consignación y Intercambio",
-        "subHeading": "¿Quieres vender o cambiar tu reloj?",
+        "subHeading": "Venda o cambie su reloj",
         "subText": "Convierte tu reloj de lujo o alta joyería en capital instantáneo o cambia a tu próxima pieza de ensueño. Obtén hoy mismo una valoración rápida, confidencial y profesional de nuestros expertos relojeros.",
         "cta1": "obtén una oferta instantánea",
         "cta2": "descubre cómo funciona"
@@ -297,7 +397,7 @@
     "sell": {
         "heading": "Vender/Consignar",
         "formCtaHeading": "Rellene el formulario",
-        "formCtaText": "Los tasadores expertos de Orvella elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
+        "formCtaText": "Los tasadores expertos de Corlane elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
         "beginCta": "Comenzar",
         "howItWorksHeading": "Cómo funciona",
         "consign": {
@@ -310,7 +410,9 @@
                 },
                 {
                     "title": "Contrato de consignación y etiqueta de envío",
-                    "text": "Si lo desea, le enviaremos un contrato de consignación y una etiqueta de envío totalmente asegurada. También puede reservar una cita en nuestra tienda de Frankfurt."
+                    "text": "Si lo desea, le enviaremos un contrato de consignación y una etiqueta de envío totalmente asegurada. También puede reservar una cita en nuestra tienda de {city}.",
+
+                    "textNoCity": "Si lo desea, le enviaremos un contrato de consignación y una etiqueta de envío totalmente asegurada. También puede reservar una cita en nuestra tienda."
                 },
                 {
                     "title": "Inspección",
@@ -328,7 +430,7 @@
         },
         "sellDirect": {
             "heading": "Vender",
-            "intro": "Los tasadores expertos de Orvella elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
+            "intro": "Los tasadores expertos de Corlane elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
             "steps": [
                 {
                     "title": "Facilítenos los datos de su reloj",
@@ -350,7 +452,7 @@
         },
         "form": {
             "heading": "Consignación / Venda su reloj",
-            "intro": "Los tasadores expertos de Orvella elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
+            "intro": "Los tasadores expertos de Corlane elaboran valoraciones rápidas y detalladas para que saque el máximo partido a su venta.",
             "sections": {
                 "personalInformation": "Datos personales",
                 "salePreference": "Preferencia de venta",
@@ -373,12 +475,20 @@
                 "conditionNew": "Nuevo",
                 "conditionMint": "Impecable",
                 "conditionPreOwned": "De segunda mano"
-            }
+            },
+            "success": {
+                "heading": "Gracias: hemos recibido su solicitud",
+                "text": "Nuestros especialistas revisarán sus datos y fotos y le responderán en un plazo de 48 horas.",
+                "again": "Enviar otra pieza"
+            },
+            "error": "No se pudo enviar su solicitud. Revise sus datos e inténtelo de nuevo.",
+            "sending": "Enviando…",
+            "waitForUploads": "Espere a que terminen de subirse todas las fotos."
         }
     },
     "polish": {
         "heading": "Pulido y servicio",
-        "intro": "En Orvella ofrecemos un servicio de pulido y reparación de primer nivel para marcas de primera categoría como Rolex, IWC, Tudor, Omega y Cartier. Nuestro relojero, con amplia experiencia, dejará su reloj en perfecto estado: desde el pulido de precisión hasta el mantenimiento profesional.",
+        "intro": "En Corlane ofrecemos un servicio de pulido y reparación de primer nivel para marcas de primera categoría como Rolex, IWC, Tudor, Omega y Cartier. Nuestro relojero, con amplia experiencia, dejará su reloj en perfecto estado: desde el pulido de precisión hasta el mantenimiento profesional.",
         "servicesHeading": "Nuestros servicios de un vistazo:",
         "polishing": {
             "heading": "Pulido y restauración:",
@@ -417,13 +527,20 @@
             "reason": "Motivo",
             "submit": "Enviar",
             "appointmentDate": "Fecha de la cita"
-        }
+        },
+        "success": {
+            "heading": "Su solicitud de cita se ha enviado",
+            "text": "Le confirmaremos la cita por correo electrónico o teléfono en breve.",
+            "again": "Solicitar otra cita"
+        },
+        "error": "No se pudo enviar su solicitud. Revise sus datos e inténtelo de nuevo.",
+        "sending": "Enviando…"
     },
     "about": {
         "heading": "Sobre nosotros",
         "paragraphs": [
-            "Nuestra historia empezó con una chispa: el elegante reloj que lucía un legendario agente británico encendió una pasión para toda la vida en nuestro fundador, Aymen Braikia. Esa fascinación por la relojería convirtió a Aymen, de joven aficionado, en un distinguido comerciante de relojes de alta gama. En 2019, mientras cursaba sus estudios de ingeniería mecánica, fundó Orvella y transformó su obsesión en un negocio próspero dedicado a los relojes de pulsera más icónicos.",
-            "En Orvella somos sus expertos de confianza en relojes excepcionales, tanto nuevos como de segunda mano. Nuestro conocimiento nace de la pasión: solo ofrecemos las mejores piezas, cada una de ellas un reloj que nosotros mismos llevaríamos con orgullo. Nuestro relojero interno inspecciona minuciosamente cada reloj para garantizar su autenticidad y su óptimo funcionamiento, de modo que usted compre con total confianza.",
+            "Corlane es un distribuidor de relojes de alta gama, impulsado por una pasión duradera por la relojería y los relojes de pulsera icónicos.",
+            "En Corlane somos sus expertos de confianza en relojes excepcionales, tanto nuevos como de segunda mano. Nuestro conocimiento nace de la pasión: solo ofrecemos las mejores piezas, cada una de ellas un reloj que nosotros mismos llevaríamos con orgullo. Nuestro relojero interno inspecciona minuciosamente cada reloj para garantizar su autenticidad y su óptimo funcionamiento, de modo que usted compre con total confianza.",
             "Nuestro equipo y nuestro relojero interno revisan con detalle cada reloj antes de venderlo para garantizar su autenticidad y su correcto funcionamiento.",
             "¿Quiere ampliar su colección? Le ofrecemos una impresionante selección de marcas prestigiosas.",
             "Nuestras marcas: Rolex, Cartier, Audemars Piguet, Patek Philippe, Omega, Tudor, IWC, Glashütte, Breitling y muchas más.",
@@ -533,7 +650,7 @@
                     },
                     {
                         "q": "¿Pueden verificar la autenticidad de un reloj?",
-                        "a": "No ofrecemos la autentificación de relojes que no se hayan comprado en Orvella."
+                        "a": "No ofrecemos la autentificación de relojes que no se hayan comprado en Corlane."
                     },
                     {
                         "q": "¿Puedo traerles mi reloj para su servicio y mantenimiento?",
@@ -586,13 +703,15 @@
     },
     "imprint": {
         "heading": "Aviso legal",
-        "companyLabel": "Orvella",
+        "companyLabel": "Corlane",
         "phoneLabel": "Teléfono:",
         "emailLabel": "Correo electrónico:",
         "vatIdLabel": "Número de identificación a efectos del IVA:",
         "representativesLabel": "Representantes autorizados:",
-        "odrHeading": "Aviso sobre resolución de litigios en línea",
-        "odrText": "La Comisión Europea pone a disposición una plataforma de resolución de litigios en línea (RLL) que puede consultarse aquí. No estamos obligados ni dispuestos a participar en un procedimiento de resolución de litigios ante una junta arbitral de consumo.",
+        "registerLabel": "Registro mercantil:",
+        "arbitrationHeading": "Resolución de litigios de consumo",
+        "arbitrationDeclined": "No estamos obligados ni dispuestos a participar en un procedimiento de resolución de litigios ante una junta arbitral de consumo.",
+        "arbitrationWilling": "Participamos en procedimientos de resolución de litigios ante una junta arbitral de consumo. La entidad competente es: {board}",
         "note": "Los datos de identidad personales o de la empresa (nombre, dirección, teléfono, NIF-IVA) no se guardan intencionadamente como cadenas de traducción: deben obtenerse de la configuración del negocio o del CMS, no de los archivos i18n."
     },
     "legal": {
@@ -608,7 +727,7 @@
             "sections": {
                 "controller": {
                     "heading": "Información sobre nosotros como responsables del tratamiento de sus datos",
-                    "text": "La parte responsable de este sitio web (el “responsable del tratamiento”) a efectos de la normativa de protección de datos es Orvella, representada por su propietario. Los datos de contacto figuran en el Aviso legal."
+                    "text": "La parte responsable de este sitio web (el “responsable del tratamiento”) a efectos de la normativa de protección de datos es Corlane, representada por su propietario. Los datos de contacto figuran en el Aviso legal."
                 },
                 "rights": {
                     "heading": "Los derechos de los usuarios y los interesados",
@@ -792,10 +911,7 @@
                         },
                         {
                             "heading": "7.2 Para empresarios",
-                            "items": [
-                                "Si el artículo adquirido presenta defectos, el vendedor decide sobre el procedimiento posterior.",
-                                "En principio, no se admite ninguna reclamación relativa al funcionamiento de un artículo de segunda mano."
-                            ]
+                            "items": ["Si el artículo adquirido presenta defectos, el vendedor decide sobre el procedimiento posterior.", "En principio, no se admite ninguna reclamación relativa al funcionamiento de un artículo de segunda mano."]
                         }
                     ]
                 },
@@ -822,10 +938,7 @@
                 {
                     "number": "11",
                     "heading": "Resolución alternativa de litigios",
-                    "items": [
-                        "La Comisión Europea pone a disposición una plataforma en línea para la resolución de litigios. Esta plataforma sirve como punto de contacto para la resolución extrajudicial de litigios derivados de contratos de compraventa o de servicios celebrados en línea.",
-                        "El vendedor no está obligado a participar en el procedimiento de resolución de litigios."
-                    ]
+                    "arbitration": true
                 },
                 {
                     "number": "12",
@@ -984,11 +1097,12 @@
         "checkoutCta": "Finalizar compra",
         "choose_shipping_country": "Elija el país de envío",
         "shipping_to": "Envío a {country}",
-        "shipping_costs": "Gastos de envío",
+        "shipping_costs": "Gastos de envío: {cost}",
         "shipping": "Envío",
         "localPickup": "Recogida en tienda",
         "moreAbout": "Más información sobre",
-        "continueShopping": "Seguir comprando"
+        "continueShopping": "Seguir comprando",
+        "unavailable": "Esta pieza ya no está disponible. Elimínela para continuar."
     },
     "favorites": {
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your favorites components before shipping.",
@@ -999,6 +1113,7 @@
         "addToFavorites": "Añadir a favoritos"
     },
     "checkout": {
+        "chargedInEur": "Se le cobrará en EUR.",
         "_note": "Not directly crawlable (client-only route, blocked from automated fetch) — verify these against your checkout/payment components before shipping.",
         "heading": "Finalizar compra",
         "shippingHeading": "Datos de envío",
@@ -1008,7 +1123,6 @@
         "subtotal": "Subtotal",
         "billing": "dirección de facturación",
         "shippingCost": "Envío",
-        "watchSpare": "Reloj / Recambio",
         "qty": "Cant.",
         "price": "Precio",
         "taxes": "Impuestos",
@@ -1018,7 +1132,7 @@
         "missingBilling": "Faltan los datos de facturación",
         "total": "Total",
         "bankNote": "Realice el pago directamente en nuestra cuenta bancaria. Por favor, incluya el número de pedido, la marca y el modelo del artículo como referencia del pago. Asimismo, tenga en cuenta que no se enviará ningún artículo hasta que los fondos se hayan acreditado en nuestra cuenta.",
-        "paypalNote": "Nota: al tratarse de una demostración, el uso",
+        "paypalNote": "Inicie sesión en PayPal con esta cuenta de prueba sandbox:",
         "email": "Correo electrónico",
         "password": "Contraseña",
         "orderDate": "Fecha del pedido",
@@ -1030,7 +1144,29 @@
         "cardNumber": "Número de tarjeta",
         "expirationDate": "Fecha de caducidad",
         "securityCode": "Código de seguridad",
-        "orderNumber": "Número de pedido"
+        "orderNumber": "Número de pedido",
+        "errors": {
+            "auth": "Inicie sesión de nuevo para completar su pedido.",
+            "empty": "Su carrito está vacío.",
+            "address": "Complete su dirección de envío antes de realizar el pedido.",
+            "unavailable": "Algunas piezas ya no están disponibles: {items}. Elimínelas de su carrito.",
+            "payment": "No se pudo iniciar el pago. Inténtelo de nuevo.",
+            "declined": "El pago no se completó. Sus piezas se han liberado; inténtelo de nuevo.",
+            "pending": "Su pago se está procesando. Le confirmaremos el pedido por correo electrónico.",
+            "method": "Elija un método de pago.",
+            "not_found": "No se encontró este pedido. Inténtelo de nuevo.",
+            "details": "Introduzca su nombre, correo electrónico y dirección completa antes de realizar el pedido."
+        },
+        "vatIncluded": "IVA del {rate} % incluido",
+        "vatAdded": "IVA ({rate} %)",
+        "marginScheme": "Régimen especial de bienes usados según el §25a UStG: el IVA no se indica por separado.",
+        "discount": "Descuento",
+        "guestNote": "No necesita cuenta: introduzca sus datos. Podrá crear una cuenta después de la compra.",
+        "placingOrder": "Realizando el pedido…",
+        "payByCard": "Pagar con tarjeta",
+        "redirectingToPayment": "Abriendo el pago seguro…",
+        "cardNote": "Se le redirigirá a la página de pago seguro de Stripe. Sus piezas quedan reservadas mientras paga.",
+        "cardCancelled": "Se canceló el pago con tarjeta. Las piezas siguen en su carrito: puede intentarlo de nuevo o elegir otro método de pago."
     },
     "product": {
         "reference": "Referencia",
@@ -1046,7 +1182,27 @@
         "findInStore": "Buscar en tienda",
         "bookAppointment": "Reserva una cita",
         "consignmentBeforeLink": "¿Desea entregar uno de sus relojes como parte del pago? Póngase en contacto con nosotros a través de la página",
-        "consignmentAfterLink": "con los datos de su reloj y le haremos una oferta."
+        "consignmentAfterLink": "con los datos de su reloj y le haremos una oferta.",
+        "clasp": "Cierre",
+        "enquiry": {
+            "enquire": "Consultar sobre esta pieza",
+            "reserve": "Solicitar una reserva",
+            "whatsapp": "Preguntar por WhatsApp",
+            "whatsappText": "Hola, me interesa {name}{ref}: {url}",
+            "heading": "Consultar sobre esta pieza",
+            "typeQuestion": "Pregunta",
+            "typeReservation": "Solicitud de reserva",
+            "reservationNote": "Le confirmaremos si podemos reservarle la pieza; todavía no se cobra nada.",
+            "name": "Su nombre",
+            "messagePlaceholder": "Preguntas sobre el estado, el historial de servicio, verla en la tienda…",
+            "submit": "Enviar consulta",
+            "submitReservation": "Solicitar reserva",
+            "sending": "Enviando…",
+            "successHeading": "Gracias: su mensaje está en camino",
+            "successText": "Normalmente respondemos en un día laborable.",
+            "again": "Enviar otro mensaje",
+            "error": "No se pudo enviar su mensaje. Revise sus datos e inténtelo de nuevo."
+        }
     },
     "brands": {
         "rolex": {
@@ -1376,6 +1532,18 @@
             "seeDifference": "Ver la diferencia",
             "openStorefront": "Abrir la tienda"
         },
+        "visuals": {
+            "storeDesktop": "La colección de relojes en la tienda, en un portátil",
+            "productPhone": "La página propia de un reloj en el móvil, con fotos, referencia y botón de consulta",
+            "storePhone": "La colección en el móvil",
+            "dm": [
+                { "from": "buyer", "text": "Hola, ¿sigue disponible el Day-Date verde?" },
+                { "from": "dealer", "text": "¡Hola! Sí, sigue disponible." },
+                { "from": "buyer", "text": "¿Precio? ¿Caja y papeles?" },
+                { "from": "buyer", "text": "¿Puedes mandar más fotos?" },
+                { "from": "dealer", "text": "Te las envío ahora…" }
+            ]
+        },
         "gap": {
             "eyebrow": "01 / La brecha",
             "title": "Instagram es excelente para descubrir.<br></br><span>No es un catálogo.</span>",
@@ -1445,6 +1613,17 @@
                 }
             ]
         },
+        "dashboard": {
+            "title": "Todo tu negocio,<br></br><span>en un solo panel.</span>",
+            "description": "Pedidos, pagos, stock y solicitudes de venta en un solo lugar. Es con lo que trabajas cada día.",
+            "video": "Recorrido por el panel",
+            "shots": {
+                "overview": "Resumen: lo que necesita tu atención hoy",
+                "order": "Detalle del pedido: marcar una transferencia como recibida",
+                "product": "Editor de productos: fotos, precio y stock",
+                "lead": "Solicitudes de venta y consignación, con las fotos del cliente"
+            }
+        },
         "role": {
             "eyebrow": "04 / El papel",
             "title": "Mantén Instagram.<br></br><span>Dale un destino.</span>",
@@ -1478,13 +1657,32 @@
             ]
         },
         "cta": {
+            "whatsapp": "Escríbeme por WhatsApp",
+            "email": "Escríbeme por correo",
             "eyebrow": "Siguiente paso",
             "title": "Mira cómo quedan tus relojes reales<br></br><span>aquí.</span>",
             "description": "No hay llamada de ventas de 60 minutos. Envía el enlace de tu stock actual o tres piezas que estés vendiendo. Yo me encargo del resto.",
             "sendStock": "Reserva tu demostración personalizada",
-            "floatingCta": "Reserva la demo personalizada de Orvella",
+            "instagram": "Instagram",
+            "bookCall": "Reservar una llamada",
+            "form": {
+                "name": "Tu nombre",
+                "business": "Nombre del negocio",
+                "contact": "Email o WhatsApp",
+                "stock": "Enlace a tu stock actual",
+                "stockPlaceholder": "Instagram, Chrono24 o web",
+                "message": "¿Algo más? (opcional)",
+                "sending": "Enviando…",
+                "successHeading": "Gracias, solicitud recibida.",
+                "successText": "Revisaré tu stock y te responderé con tu demo personalizada.",
+                "invalidContact": "Introduce un email o un número de WhatsApp.",
+                "invalidLink": "Introduce un enlace o un @usuario.",
+                "error": "No se ha podido enviar. Inténtalo de nuevo o escríbeme directamente abajo.",
+                "orReach": "¿Prefieres escribirme directamente?"
+            },
+            "floatingCta": "Reserva la demo personalizada de Corlane",
             "openStorefront": "Abrir la tienda",
-            "credit": "Aymen · Orvella"
+            "credit": "Aymen · Corlane"
         },
         "nav": {
             "back": "Volver a la tienda",
@@ -1493,5 +1691,122 @@
         "footer": {
             "tagline": "Conceptos de tiendas privadas para vendedores independientes de relojes"
         }
+    },
+    "emails": {
+        "greeting": "Hola, {name}:",
+        "signoff": "Un cordial saludo,\n{store}",
+        "orderNumber": "Pedido",
+        "subtotal": "Subtotal",
+        "shipping": "Envío",
+        "pickup": "Recogida en tienda",
+        "discount": "Descuento",
+        "total": "Total",
+        "vatAdded": "IVA ({rate} %)",
+        "vatIncluded": "IVA del {rate} % incluido",
+        "viewOrders": "Ver sus pedidos",
+        "orderConfirmed": {
+            "subject": "Su pedido {id} está confirmado",
+            "heading": "Gracias por su pedido",
+            "text": "Hemos recibido su pago. Ya estamos preparando su pedido y le avisaremos en cuanto se envíe."
+        },
+        "orderReceivedBank": {
+            "subject": "Su pedido {id}: datos de pago",
+            "heading": "Gracias por su pedido",
+            "text": "Transfiera {amount} antes del {date} e indique su número de pedido {id} como concepto. Hasta entonces, sus piezas quedan reservadas; las enviaremos en cuanto recibamos el pago."
+        },
+        "paymentReceived": {
+            "subject": "Pago recibido para el pedido {id}",
+            "heading": "Pago recibido",
+            "text": "Gracias: hemos recibido su pago. Estamos preparando su pedido y le enviaremos el número de seguimiento cuando salga."
+        },
+        "shipped": {
+            "subject": "Su pedido {id} está en camino",
+            "heading": "Su pedido ha sido enviado",
+            "text": "Buenas noticias: su pedido {id} se ha entregado a {carrier}. Puede seguirlo con el número de seguimiento que aparece abajo.",
+            "carrier": "Transportista",
+            "tracking": "Número de seguimiento"
+        },
+        "cancelled": {
+            "subject": "Su pedido {id} ha sido cancelado",
+            "heading": "Pedido cancelado",
+            "text": "Su pedido {id} ha sido cancelado. Si ya ha pagado, le reembolsaremos el importe. ¿Tiene preguntas? Responda a este correo.",
+            "expiredText": "No recibimos a tiempo el pago del pedido {id}, por lo que la reserva ha finalizado y el pedido se ha cancelado. Si ya ha enviado el dinero, responda a este correo y lo solucionaremos."
+        },
+        "leadReceived": {
+            "subject": "Hemos recibido su solicitud",
+            "heading": "Gracias por su solicitud",
+            "text": "Hemos recibido los datos y las fotos de su {watch}. Nuestros especialistas los revisarán y le responderán en un plazo de 48 horas."
+        },
+        "appointmentRequested": {
+            "subject": "Su solicitud de cita para el {date}",
+            "heading": "Solicitud de cita recibida",
+            "text": "Gracias por solicitar una visita el {date}. Le confirmaremos la cita en breve."
+        },
+        "appointmentConfirmed": {
+            "subject": "Su cita del {date} está confirmada",
+            "heading": "Cita confirmada",
+            "text": "Será un placer recibirle el {date} en {address}."
+        },
+        "enquiryReceived": {
+            "subject": "Su consulta sobre {item}",
+            "heading": "Gracias por su consulta",
+            "text": "Hemos recibido su pregunta sobre {item} y le responderemos en breve.",
+            "reservationText": "Hemos recibido su solicitud de reserva de {item}. Le confirmaremos en breve si podemos reservarla para usted."
+        },
+        "passwordReset": {
+            "subject": "Restablezca su contraseña",
+            "heading": "Restablezca su contraseña",
+            "text": "Hemos recibido una solicitud para restablecer la contraseña de su cuenta. El siguiente enlace es válido durante una hora.",
+            "button": "Elegir una contraseña nueva",
+            "ignore": "Si no lo ha solicitado, ignore este correo: su contraseña no cambiará."
+        }
+    },
+    "consultation": {
+        "heading": "Asesoramiento personal",
+        "intro": "Cuatro preguntas rápidas y le mostraremos las piezas que le van.",
+        "step": "Pregunta {current} de {total}",
+        "back": "Atrás",
+        "q1": {
+            "question": "¿Qué está buscando?",
+            "watch": "Un reloj",
+            "ring": "Un anillo",
+            "bracelet": "Una pulsera",
+            "necklace": "Un collar"
+        },
+        "q2": {
+            "question": "¿Para quién es?",
+            "women": "Para ella",
+            "men": "Para él",
+            "any": "Sin preferencia"
+        },
+        "q3": {
+            "question": "¿Cuál es su presupuesto?",
+            "upTo": "Hasta {amount}",
+            "over": "Más de {amount}",
+            "any": "Presupuesto abierto"
+        },
+        "q4": {
+            "question": "¿Nuevo o con historia?",
+            "new": "Nuevo",
+            "preowned": "De segunda mano",
+            "any": "Cualquiera"
+        }
+    },
+    "demo": {
+        "banner": "Tienda de demostración — creada por Aymen Braikia",
+        "learnMore": "Más información",
+        "dismiss": "Cerrar",
+        "testPayment": "Pago de prueba: no se cobra dinero real.",
+        "testCard": "Use la tarjeta 4242 4242 4242 4242 con cualquier fecha futura y cualquier CVC.",
+        "bankNote": "Tienda de demostración: no transfiera dinero."
+    },
+    "seo": {
+        "shop": "Relojes de lujo nuevos y de segunda mano y alta joyería: cada pieza revisada, descrita en detalle y enviada con seguro completo.",
+        "watches": "Relojes de lujo de segunda mano y nuevos: revisados, descritos en detalle y enviados con seguro completo.",
+        "rings": "Anillos finos de oro, oro blanco y platino, con diamantes y piedras preciosas.",
+        "bracelets": "Pulseras finas de oro y platino: piezas clásicas, modernas y vintage.",
+        "necklaces": "Collares y colgantes finos de oro y platino, con diamantes y piedras preciosas.",
+        "spare": "Recambios originales para relojes de lujo: esferas, agujas, biseles, coronas, brazaletes y más.",
+        "brand": "Relojes {brand} de segunda mano y nuevos: revisados, descritos en detalle y enviados con seguro completo."
     }
 }

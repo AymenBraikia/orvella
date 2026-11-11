@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import FadeInObserver from "./fade_wrapper";
 import { getTranslations } from "next-intl/server";

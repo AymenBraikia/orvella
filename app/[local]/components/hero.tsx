@@ -1,24 +1,18 @@
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
+import HeroView from "./hero_view";
+import { current_demo } from "@/app/server/storefront";
+
+const POSTER = "/hero_poster.webp"; // the video's first frame, so the switch to the video is seamless
 
 export default async function Hero() {
     const t = await getTranslations("home");
 
-    return (
-        <section className="flex-col flex-center w-dvw h-dvh fixed top-0 inset-s-0 text-white">
-            <video aria-hidden="true" autoPlay muted loop playsInline preload="metadata" poster="/hero_placeholder.webp" className="absolute inset-0 -z-10 size-full object-cover dark:brightness-50">
-                <source src="/hero_vid.mp4" type="video/mp4" />
-            </video>
+    // A lead demo: the seller's video on phones (it is portrait) and a photo of theirs on wider screens.
+    const demo = current_demo();
+    if (demo) {
+        const { title, subtitle, poster, video, desktop_image } = demo.hero;
+        return <HeroView title={title} subtitle={subtitle} discover={t("discover")} href="#new" poster={poster} desktop_image={desktop_image} video={video} video_screens={desktop_image ? "mobile" : "desktop"} />;
+    }
 
-            <div className="flex-center flex-col font-primary gap-2 text-center">
-                <h1 className="tracking-widest font-light! text-gold text-6xl">{t("heroTitle")}</h1>
-
-                <h2 className="sm:title5 title4 tracking-wider dark:text-shine text-(--bg-secondary) italic font-secondary">{t("heroSubtitle")}</h2>
-
-                <Link href="#sections" aria-label={t("discover")} className="underline text-gold tracking-wider title4">
-                    {t("discover")}
-                </Link>
-            </div>
-        </section>
-    );
+    return <HeroView title={t("heroTitle")} subtitle={t("heroSubtitle")} discover={t("discover")} poster={POSTER} video="/hero_vid.mp4" />;
 }

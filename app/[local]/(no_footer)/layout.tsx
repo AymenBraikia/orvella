@@ -1,3 +1,6 @@
+import { client_messages } from "@/i18n/client_messages";
+import { DEMO_MODE } from "@/app/(site)/lib/demo";
+import { site_metadata } from "@/app/(site)/lib/site_metadata";
 import type { Metadata, Viewport } from "next";
 import { Open_Sans, Cormorant_Garamond, Gelasio, Tajawal, Lateef } from "next/font/google";
 import "../globals.css";
@@ -15,12 +18,15 @@ const tajawal = Tajawal({
     weight: ["200", "300", "400", "500", "700", "800", "900"],
     variable: "--font-sans",
     display: "swap",
+    // Arabic fonts are only used on /ar; don't make every other page download them.
+    preload: false,
 });
 const lateef = Lateef({
     subsets: ["arabic"],
     weight: ["200", "300", "400", "500", "600", "700", "800"],
     variable: "--font-primary",
     display: "swap",
+    preload: false,
 });
 
 const openSans = Open_Sans({
@@ -41,76 +47,9 @@ const gelasio = Gelasio({
     variable: "--font-secondary",
     display: "swap",
 });
-export const metadata: Metadata = {
-    title: {
-        default: "Luxury Watch Platform | Concept by Aymen Braikia",
-        template: "%s | ORVELLA",
-    },
-    description: "A full-stack luxury watch marketplace concept — consignment, spare parts, appointment booking, and multilingual storefront. Built by Aymen Braikia as a demonstration of production-grade e-commerce architecture.",
-    applicationName: "ORVELLA",
-    authors: [{ name: "Aymen Braikia" }],
-    creator: "Aymen Braikia",
-    publisher: "Aymen Braikia",
-
-    metadataBase: new URL("https://orvella.vercel.app/"),
-    alternates: {
-        canonical: "/en",
-        languages: {
-            en: "/en",
-            de: "/de",
-            tr: "/tr",
-            fr: "/fr",
-            it: "/it",
-            es: "/es",
-            ar: "/ar",
-        },
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            "max-image-preview": "large",
-            "max-snippet": -1,
-            "max-video-preview": -1,
-        },
-    },
-
-    openGraph: {
-        title: "Luxury Watch Platform Concept",
-        description: "A full-stack e-commerce concept for the luxury watch trade — consignment, appointments, multilingual UX.",
-        url: "https://orvella.vercel.app/en",
-        siteName: "ORVELLA",
-        images: [
-            {
-                url: "/banner.png",
-                width: 1200,
-                height: 630,
-                alt: "ORVELLA Platform Preview",
-            },
-        ],
-        locale: "en",
-        alternateLocale: ["de"],
-        type: "website",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Luxury Watch Platform Concept",
-        description: "A full-stack e-commerce concept for the luxury watch trade.",
-        images: ["/banner.png"],
-    },
-    icons: {
-        icon: "/favicon.ico",
-        apple: "/apple-touch-icon.png",
-    },
-    formatDetection: {
-        telephone: false,
-        email: false,
-        address: false,
-    },
-    category: "ecommerce",
-};
+export async function generateMetadata({ params }: { params: Promise<{ local: string }> }): Promise<Metadata> {
+    return site_metadata((await params).local);
+}
 
 export const viewport: Viewport = {
     width: "device-width",
@@ -139,7 +78,7 @@ export default async function NoFooterLayout({
                 <Analytics />
                 <SpeedInsights />
 
-                <NextIntlClientProvider>
+                <NextIntlClientProvider messages={await client_messages(DEMO_MODE ? ["why", "home"] : ["home"])}>
                     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
                         <Header />
                         <div className="h-fit w-dvw flex flex-col justify-center items-center xl:px-25 2xl:px-50 p-4">{children}</div>

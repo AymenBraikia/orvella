@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function GlobalError() {
     return (
         <html lang="en">
@@ -22,7 +24,7 @@ export default function GlobalError() {
 
                     <button onClick={() => window.location.reload()}>Try again</button>
 
-                    <a href="/">Return home</a>
+                    <Link href="/">Return home</Link>
                 </main>
             </body>
         </html>

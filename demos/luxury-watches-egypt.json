@@ -1,0 +1,507 @@
+{
+    "slug": "luxury-watches-egypt",
+    "locale": "en",
+    "name": "Luxury Watches Egypt",
+    "accent": "#DDC696",
+    "label": "Private demo · Prepared for Luxury Watches Egypt · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for Luxury Watches Egypt. Payments are in test mode; no real payment is taken.",
+    "description": "Luxury Watches Egypt: pre-owned luxury watches. Rolex and Hublot.",
+    "logo": {
+        "src": "/demos/luxury-watches-egypt/logo.png",
+        "width": 440,
+        "height": 440
+    },
+    "logo_icon": {
+        "src": "/demos/luxury-watches-egypt/logo-icon.png",
+        "width": 192,
+        "height": 192
+    },
+    "favicon": "/demos/luxury-watches-egypt/favicon.png",
+    "hero": {
+        "title": "LUXURY WATCHES EGYPT",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/luxury-watches-egypt/hero-poster.jpg",
+        "desktop_image": "/demos/luxury-watches-egypt/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/luxury-watches-egypt/watch-3.jpg"
+            },
+            {
+                "key": "diver",
+                "name": "Diver",
+                "image": "/demos/luxury-watches-egypt/watch-13.jpg"
+            },
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/luxury-watches-egypt/watch-2.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/luxury-watches-egypt/watch-1.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": "GMT",
+                "image": "/demos/luxury-watches-egypt/watch-4.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/luxury-watches-egypt/trade.jpg",
+    "banner": {
+        "light": "/demos/luxury-watches-egypt/banner-light.jpg",
+        "dark": "/demos/luxury-watches-egypt/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "Luxury Watches Egypt is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Rolex and Hublot, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-1",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona “Panda”",
+            "description": "Rolex cosmograph Daytona ‘Panda’ in stainless steel. the watch has a white dial contrasted by three black chronograph subdials, with luminous hour markers and central timing hands. a black tachymeter bezel frames the dial and provides the model’s familiar motorsport styling. the steel case has screw-down chronograph pushers and a crown on the right side, and the Oyster bracelet uses broad three-piece links with a brushed finish and polished edges. the photographs show the watch in its presentation box and from a straight-on angle, making the high-contrast dial and black bezel the key visual features. Comes with the box.",
+            "images": ["/demos/luxury-watches-egypt/watch-1.jpg"],
+            "collection": "chronograph",
+            "dial": "White",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-yacht-master-2",
+            "brand": "rolex",
+            "model": "Yacht-Master",
+            "description": "Rolex Yacht-Master in a blue-dial and blue-bezel configuration. the dial uses luminous hour markers and broad hands, with a date window and magnifying lens at 3 o’clock. around it is a bidirectional-style timing bezel with raised silver-coloured numerals and minute markings on the blue insert. the stainless-steel Oyster case and three-link Oyster bracelet give the watch a robust sports profile, while the polished case surfaces catch light around the lugs and crown guards. the photos show the wrist presence, bezel markings and blue-on-steel colour combination. the exact diameter is not assumed beyond the supplied model description. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-2.jpg"],
+            "collection": "sport",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-3",
+            "brand": "rolex",
+            "model": "Datejust 36",
+            "description": "Rolex Datejust 36 with a grey dial and two-tone yellow-gold-and-steel construction. the face has applied hour markers, central hands and a date aperture at 3 o’clock with a cyclops magnifier. a fluted bezel adds a repeating faceted edge around the dial, while the Jubilee bracelet combines yellow-gold centre links with steel outer links. the grey dial creates a restrained contrast against the warm gold accents. the photographs show the bracelet from end to end and the watch on display, highlighting its classic five-link construction and balanced 36 mm-style proportions as identified in the supplied caption. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-3.jpg"],
+            "collection": "classic",
+            "dial": "Grey",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-ined",
+            "brand": "rolex",
+            "model": "GMT-Master II “Batgirl”",
+            "description": "Rolex GMT-Master II ‘Batgirl’ in stainless steel, shown with a Jubilee bracelet. the black dial has luminous round and rectangular hour markers, mercedes-style hands and a date window with a magnifying lens. a two-tone blue-and-black ceramic 24-hour bezel surrounds the dial, with the blue portion contrasting against the dark half. the central gmt hand provides a second-time-zone indication, while the case has crown guards and a screw-down crown. the five-piece Jubilee links give the watch a more refined look than the Oyster bracelet. the photos include the box presentation and close views of the bezel and dial. Comes with the box.",
+            "images": ["/demos/luxury-watches-egypt/watch-4.jpg"],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "INED",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "hublot-watch-are",
+            "brand": "hublot",
+            "model": "Watch",
+            "description": "Hublot wristwatch described in the supplied caption as a 33 mm model with a diamond-set bezel. the watch has a dark dial and a black strap, with the sparkling stones around the bezel providing the main decorative feature. its round case has the bold, exposed-screw styling associated with Hublot designs, and the strap gives the watch a compact, contemporary profile. the dial markers and hands are visible against the dark face, while the bezel stones catch light around the perimeter. the photographs show the watch from the front and on its display cushion. exact material, movement and reference are not established by the image alone. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-5.jpg"],
+            "collection": "classic",
+            "dial": "Black",
+            "details": {
+                "reference": "ARE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 33,
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-6",
+            "brand": "rolex",
+            "model": "Datejust 36",
+            "description": "Rolex Datejust 36 in a fully diamond-set presentation. diamonds are visible across the dial and bezel, creating a continuous bright surface around the hands and hour indications. the case and bracelet are also heavily embellished, with stones covering much of the visible metal and giving the watch a jewellery-piece appearance. the bracelet follows the familiar linked Rolex form, while the round case and crown retain the Datejust silhouette beneath the setting. the supplied caption calls it an ‘in & out’ full-diamond 36 mm model. the photos emphasize the extensive stone coverage; exact stone grades and metal purity are not verifiable visually. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-6.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-7",
+            "brand": "rolex",
+            "model": "Datejust 41",
+            "description": "Rolex Datejust 41 with a rhodium-grey dial and stainless-steel case and bracelet. the dial has applied hour markers, central hands and the classic date aperture at 3 o’clock beneath a cyclops magnifier. a fluted bezel surrounds the face, adding bright facets around the perimeter, and the bracelet is shown in a three-link Oyster-style configuration. the grey dial keeps the watch understated while the polished bezel and case edges provide contrast. the product photographs show the front and wrist-facing profile, highlighting the dial colour, fluted bezel and steel construction. the 41 mm size is taken from the supplied listing. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-7.jpg"],
+            "collection": "classic",
+            "dial": "Grey",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-8",
+            "brand": "rolex",
+            "model": "Datejust 26",
+            "description": "Rolex lady-Datejust 26 with a mother-of-pearl dial and a two-tone steel-and-yellow-gold bracelet. the dial has a pearly, softly iridescent surface with small diamond hour markers and central hands. a date display sits at 3 o’clock under the magnifying lens, and the bezel has a fluted gold-coloured finish. the Jubilee-style bracelet alternates steel and yellow-gold links, giving the smaller watch a bright jewellery-like appearance. the photographs show the dial and full bracelet, including the repeating link pattern. the 26 mm size and mother-of-pearl dial are identified in the supplied caption. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-8.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 26,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-9",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust 41 with a rich blue dial, fluted bezel and stainless-steel Jubilee bracelet. the dial uses applied baton markers and central hands, with the date window positioned at 3 o’clock beneath the magnifying cyclops crystal. the fluted bezel creates a bright radial pattern around the face, while the five-piece Jubilee links add texture and flexibility along the wrist. the blue dial is the dominant colour and contrasts with the polished steel case. the photographs show the watch upright on display and from a slightly angled view, making the dial tone, bezel and bracelet profile easy to identify. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-9.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-watch-10",
+            "brand": "rolex",
+            "model": "Watch",
+            "description": "Rolex land-dweller shown in an all-steel configuration. the dial is light silver-white and has a fine geometric, honeycomb-like texture across its surface, with applied hour markers and central hands. the case has an integrated appearance where the bracelet flows directly into the lugs, and the bracelet links are broad and closely fitted with a distinctive flat profile. the bezel is bright and faceted, framing the textured dial without overwhelming it. the supplied caption identifies this as the new land-dweller. the photographs show the front and bracelet design; technical specifications and exact size are not inferred beyond the product label. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-10.jpg"],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-yacht-master-11",
+            "brand": "rolex",
+            "model": "Yacht-Master 35",
+            "description": "Rolex Yacht-Master in a compact 35 mm configuration, as described in the supplied caption. the watch has a light champagne-silver dial with applied markers and central hands, surrounded by a raised-numbered rotating bezel. the case and bracelet appear in a mix of steel and warm gold-toned metal, producing a two-tone presentation. the linked bracelet is flexible and closely fitted, and the case has the familiar screw-down crown. the photos show the watch in a display setting and highlight the bezel numerals, smaller case proportions and pale dial. the exact metal combination should be confirmed from the original specification if needed. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-11.jpg"],
+            "collection": "sport",
+            "dial": "Silver",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 35,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-12",
+            "brand": "rolex",
+            "model": "Datejust 41 “Wimbledon”",
+            "description": "Rolex Datejust 41 ‘Wimbledon’ in a two-tone steel-and-Everose-gold configuration. the slate-grey dial has distinctive roman numeral hour markers, including green-accented numerals, plus central hands and a date window with magnifying crystal at 3 o’clock. a fluted bezel surrounds the face, and the Jubilee bracelet combines steel links with warm rose-gold centre links. the contrasting dial and bracelet give the watch a sporty yet dressy appearance. the supplied caption identifies the 41 mm Wimbledon configuration. the photos show the full watch, dial and bracelet in the presentation box. Comes with the box.",
+            "images": ["/demos/luxury-watches-egypt/watch-12.jpg"],
+            "collection": "classic",
+            "dial": "Grey",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-13",
+            "brand": "rolex",
+            "model": "Submariner",
+            "description": "Rolex Submariner in stainless steel with an all-black dial and black rotating dive bezel. the dial carries luminous round and rectangular hour plots, mercedes-style hands and a central seconds hand, while the bezel has clear minute graduations for elapsed-time reading. the robust Oyster case includes crown guards and a screw-down crown, and the three-link bracelet is brushed through the centre with polished edges. the ‘all black’ design keeps the watch monochromatic and functional. the photographs show the front of the watch and the relationship between the bezel, dial and steel bracelet. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-13.jpg"],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-14",
+            "brand": "rolex",
+            "model": "Submariner “Wimbledon”",
+            "description": "A curated group of Rolex watches photographed as a multi-piece selection rather than one single model. the set includes several Datejust configurations with fluted bezels, different dial colours and Jubilee or Oyster-style bracelets, including grey Wimbledon-style, champagne, light silver and dark dials. there is also a black-dial Submariner-style sports watch with a rotating dive bezel. some examples show diamond-set markers or bezels, while others use clean applied indices. across the photos, the collection displays both two-tone gold-and-steel and all-steel finishes. each watch has its own dial and bracelet combination, so this folder should be treated as a product assortment. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-14.jpg"],
+            "import_photos": [
+                "demo_assets/luxury_watches_egypt/.web/14-2.jpg",
+                "demo_assets/luxury_watches_egypt/.web/14-3.jpg",
+                "demo_assets/luxury_watches_egypt/.web/14-4.jpg",
+                "demo_assets/luxury_watches_egypt/.web/14-5.jpg",
+                "demo_assets/luxury_watches_egypt/.web/14-6.jpg"
+            ],
+            "collection": "diver",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-15",
+            "brand": "rolex",
+            "model": "Datejust 41",
+            "description": "Rolex Datejust 41 with a vivid blue dial and applied index hour markers. the face has central hands and a date aperture at 3 o’clock with the familiar magnifying crystal. the stainless-steel case is finished with a bright bezel, and a matching steel bracelet completes the watch. the dial’s saturated blue surface is the main visual feature, with the polished hour markers and hands providing contrast. the photos show the front of the watch, its bracelet and its overall case profile. the supplied caption identifies the model as a 41 mm Datejust with blue indices; the exact bracelet variant should be confirmed from the full-resolution product images. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-15.jpg"],
+            "import_photos": ["demo_assets/luxury_watches_egypt/.web/15-2.jpg", "demo_assets/luxury_watches_egypt/.web/15-3.jpg"],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-16",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex lady-Datejust 26 with diamond detailing. the light-coloured dial is set with sparkling diamond hour markers, and the bezel is also decorated with diamonds for a brighter jewellery-style appearance. the bracelet combines steel and yellow-gold-coloured links in a Jubilee pattern, while the round case retains the familiar Datejust proportions. a date display with magnifier sits at 3 o’clock. the photos show the watch upright and on display, highlighting the small case, diamond accents and two-tone bracelet. the model size and diamond configuration are identified in the supplied caption. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-16.jpg"],
+            "import_photos": ["demo_assets/luxury_watches_egypt/.web/16-2.jpg"],
+            "collection": "classic",
+            "dial": "Red Diamond",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-lect",
+            "brand": "rolex",
+            "model": "Datejust “Wimbledon”",
+            "description": "Rolex Datejust 41 with the Wimbledon-style slate dial. the dial is grey with contrasting roman numeral markers, including the characteristic green-accented numerals, and has central hands plus a date window at 3 o’clock beneath the cyclops magnifier. a fluted bezel frames the round steel case, and the Jubilee bracelet uses closely spaced five-piece links that reflect light along the wrist. the photographs show the watch in a box and from an angled front view. the blend of slate, green and polished steel gives the familiar Datejust layout a distinctive appearance. Comes with the box.",
+            "images": ["/demos/luxury-watches-egypt/watch-17.jpg"],
+            "import_photos": ["demo_assets/luxury_watches_egypt/.web/17-2.jpg", "demo_assets/luxury_watches_egypt/.web/17-3.jpg"],
+            "collection": "classic",
+            "dial": "Slate",
+            "details": {
+                "reference": "LECT",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-18",
+            "brand": "rolex",
+            "model": "Submariner",
+            "description": "Rolex Submariner with a green rotating bezel and black dial. the green bezel insert has minute graduations and a luminous pip at the zero marker, framing a dial with round, rectangular and triangular luminous hour markers. broad mercedes-style hands and a central seconds hand provide the familiar diver-watch layout, while the steel Oyster bracelet uses three-piece links. the case includes crown guards and a screw-down crown. the photos show the watch in a wrist and display setting, emphasizing the contrast between the green bezel and dark dial. the supplied caption identifies it as the green-bezel Submariner. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-18.jpg"],
+            "import_photos": ["demo_assets/luxury_watches_egypt/.web/18-2.jpg", "demo_assets/luxury_watches_egypt/.web/18-3.jpg"],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-watch-19",
+            "brand": "rolex",
+            "model": "Watch",
+            "description": "Rolex Watch 31 mm in stainless steel with a black diamond dial. Watch only.",
+            "images": ["/demos/luxury-watches-egypt/watch-19.jpg"],
+            "import_photos": ["demo_assets/luxury_watches_egypt/.web/19-2.jpg", "demo_assets/luxury_watches_egypt/.web/19-3.jpg"],
+            "collection": "classic",
+            "dial": "Black Diamond",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 31,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-20",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust 36 with diamond detailing and a two-tone yellow-gold-and-steel bracelet. the light silver-white dial has diamond hour markers and central hands, with the date aperture at 3 o’clock under the cyclops magnifier. the bezel is decorated with diamonds, creating a bright halo around the dial. the Jubilee-style bracelet combines polished gold-coloured centre links with steel outer links, and the round case has the classic Datejust profile. the photographs show the watch in its box and from several front angles, emphasizing the diamond-set dial, bezel and two-tone bracelet. Comes with the box.",
+            "images": ["/demos/luxury-watches-egypt/watch-20.jpg"],
+            "import_photos": ["demo_assets/luxury_watches_egypt/.web/20-2.jpg", "demo_assets/luxury_watches_egypt/.web/20-3.jpg"],
+            "collection": "classic",
+            "dial": "White Diamond",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        }
+    ]
+}

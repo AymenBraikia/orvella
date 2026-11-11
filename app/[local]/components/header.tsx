@@ -1,31 +1,34 @@
 "use client";
 import dynamic from "next/dynamic";
 
-import { Watch } from "@/types/watch";
 import { Locales } from "@/types/locales";
 
 import { Dispatch, SetStateAction, useEffect, useReducer, useRef, useState } from "react";
 import Link from "next/link";
 
 import Image from "next/image";
-import MenuBurger from "./svg/menu_burger";
+import HeaderBar from "./header_bar";
 import Cart from "./svg/cart";
 
 import increase_relevance_score from "@/app/server/increase_relevance_score";
 import score_rewards from "../(site)/lib/relevance_score";
 
 import { useAuth } from "../(site)/context/authContext";
+import { useCart } from "../(site)/context/cartContext";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/routing";
 
-import Credits from "./credits";
+import DemoBanner from "./demo_banner";
 import Select from "./elements/select";
 import Search_input from "./elements/search_input";
 import { ThemeToggle } from "./theme";
-import { format_price } from "../(site)/lib/price_format";
+import { useCurrency } from "../(site)/context/currencyContext";
 import { Supported_Currencies } from "@/currency";
 import setCurrency from "@/app/server/set_currency";
 import { Item } from "../(site)/lib/filters";
+import { item_name } from "../(site)/lib/item_name";
+import { item_price } from "../(site)/lib/price_format";
+import { useStorefront } from "../(site)/context/storefrontContext";
 
 const CartDrawer = dynamic(() => import("./cart_drawer"), {
     ssr: false,
@@ -148,16 +151,16 @@ const currencies_map = new Map<string, Supported_Currencies>([
 function headerReducer(state: UIState, action: UIAction): UIState {
     switch (action.type) {
         case "OPEN_NAV":
-            window.innerWidth < 640 && (document.body.style.overflowY = "clip");
+            if (window.innerWidth < 640) document.body.style.overflowY = "clip";
             return { ...state, isNavOpen: true, isCartOpen: false };
         case "CLOSE_NAV":
-            window.innerWidth < 640 && (document.body.style.overflowY = "auto");
+            if (window.innerWidth < 640) document.body.style.overflowY = "auto";
             return { ...state, isNavOpen: false };
         case "OPEN_CART":
-            window.innerWidth < 640 && (document.body.style.overflowY = "clip");
+            if (window.innerWidth < 640) document.body.style.overflowY = "clip";
             return { ...state, isCartOpen: true, isNavOpen: false };
         case "CLOSE_CART":
-            window.innerWidth < 640 && (document.body.style.overflowY = "auto");
+            if (window.innerWidth < 640) document.body.style.overflowY = "auto";
             return { ...state, isCartOpen: false };
         case "SET_GLASSY":
             if (state.isGlassy === action.payload) return state;
@@ -167,28 +170,33 @@ function headerReducer(state: UIState, action: UIAction): UIState {
     }
 }
 
-export default function Header({ savedCurrency = "USD" }: { savedCurrency: Supported_Currencies }) {
+export default function Header({ savedCurrency = "USD", store_name }: { savedCurrency: Supported_Currencies; store_name: string }) {
     const { session } = useAuth();
+    const { cart } = useCart();
     const locale = useLocale() as Locales;
     const t = useTranslations("common");
-    const t2 = useTranslations("home");
+    // A lead demo: its logo and links (in every language).
+    const { demo, href, has } = useStorefront();
 
-    const [lang, set_lang] = useState<Locales>(locale);
-
-    const selected_locale = locales_map.get(lang)!.toUpperCase();
+    const selected_locale = locale.toUpperCase();
 
     const pathname = usePathname();
     const router = useRouter();
 
-    useEffect(() => {
-        router.replace(pathname, { locale: selected_locale });
-    }, [lang]);
+    // Only when the visitor picks another language / currency — these used to run on every page
+    // load (a client navigation plus a server action that re-rendered the whole layout).
+    const set_lang = (label: string) => {
+        const next = locales_map.get(label);
+        if (next && next != locale) router.replace(pathname, { locale: next });
+    };
 
-    const [currency, set_currency] = useState<Supported_Currencies>(savedCurrency);
-
-    useEffect(() => {
-        setCurrency(currencies_map.get(currency)!);
-    }, [currency]);
+    const [currency, set_currency_state] = useState<Supported_Currencies>(savedCurrency);
+    const set_currency = (label: string) => {
+        const next = currencies_map.get(label);
+        if (!next || next == currency) return;
+        set_currency_state(next);
+        setCurrency(next);
+    };
 
     const [ui, dispatch] = useReducer(headerReducer, initialUIState);
     const cartRef = useRef<HTMLDivElement>(null);
@@ -202,7 +210,8 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
 
             const cartEl = cartRef.current;
             const navEl = navRef.current;
-            if (!cartEl || !navEl) return;
+            if (!navEl) return;
+            const cartStyle = cartEl?.style ?? ({} as CSSStyleDeclaration);
 
             const { blocked, scroller } = swipe_guard(e.target);
             if (blocked) return;
@@ -212,7 +221,7 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
 
             let gesture: "horizontal" | "vertical" | "native" | null = null;
 
-            cartEl.style.transition = "50ms ease";
+            cartStyle.transition = "50ms ease";
             navEl.style.transition = "50ms ease";
 
             const handleMove = (moveEvent: TouchEvent) => {
@@ -250,7 +259,7 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
 
                 if (ui.isCartOpen) {
                     if (deltaX > 0) {
-                        cartEl.style.transform = `translateX(${deltaX}px)`;
+                        cartStyle.transform = `translateX(${deltaX}px)`;
                     }
                 } else {
                     if (ui.isNavOpen) {
@@ -259,7 +268,7 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
                         }
                     } else {
                         if (deltaX < 0) {
-                            cartEl.style.transform = `translateX(${deltaX}px)`;
+                            cartStyle.transform = `translateX(${deltaX}px)`;
                         } else {
                             navEl.style.transform = `translateX(${deltaX}px)`;
                         }
@@ -273,8 +282,8 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
                 window.removeEventListener("touchcancel", handleCancel);
                 release = null;
 
-                cartEl.style.transition = "";
-                cartEl.style.transform = "";
+                cartStyle.transition = "";
+                cartStyle.transform = "";
 
                 navEl.style.transition = "";
                 navEl.style.transform = "";
@@ -295,7 +304,7 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
                 } else if (ui.isNavOpen) {
                     if (finalDeltaX < -SWIPE_THRESHOLD) dispatch({ type: "CLOSE_NAV" });
                 } else {
-                    if (finalDeltaX < -SWIPE_THRESHOLD) dispatch({ type: "OPEN_CART" });
+                    if (finalDeltaX < -SWIPE_THRESHOLD && cartEl) dispatch({ type: "OPEN_CART" });
                     else if (finalDeltaX > SWIPE_THRESHOLD) dispatch({ type: "OPEN_NAV" });
                 }
             };
@@ -317,73 +326,69 @@ export default function Header({ savedCurrency = "USD" }: { savedCurrency: Suppo
 
     return (
         <>
-            <header className={`flex flex-col w-dvw fixed top-0 inset-s-0 z-4000 h-fit min-h-20 text-primary bg-background`}>
-                <Credits />
-                <div className="w-full flex justify-between items-center sm:px-8 py-4 sm:py-2 px-[5dvw]">
-                    <div className={`w-1/3 flex justify-between items-center transition-default ${ui.isNavOpen ? "opacity-0" : "opacity-100"} gap-2`}>
-                        <button aria-label={"menu"} type="button" className="button2 p-1 md:p-auto" onClick={() => dispatch({ type: "OPEN_NAV" })}>
-                            <MenuBurger classnames="w-5 sm:w-8" clr={"currentColor"} />
-                        </button>
-                        <div className="">
-                            <Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />
-                        </div>
-                    </div>
-
-                    <div className="w-1/3 flex-center">
-                        <Link aria-label={"home"} href={"/"} className="w-fit font-primary flex-center text-base sm:text-xl md:text-2xl xl:text-4xl tracking-widest">
-                            {t2("heroTitle")}
-                        </Link>
-                    </div>
-
-                    <div className="flex justify-end items-center gap-2 w-1/3">
+            <HeaderBar
+                banner={<DemoBanner />}
+                nav_open={ui.isNavOpen}
+                onMenu={() => dispatch({ type: "OPEN_NAV" })}
+                search={<Search_input placeholder={t("filters.searchPlaceholder")} route={demo ? `/api/search?store=${demo.slug}&locale=${demo.locale}` : "/api/search"} SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />}
+                name={store_name}
+                logo={demo && { full: demo.logo, icon: demo.logo_icon }}
+                home_href={href("/")}
+                end={
+                    <>
                         {/* <div className="xl:block hidden">
                             <Search_input placeholder={t("filters.searchPlaceholder")} route="/api/search_watches" SearchChildComponent={SearchChildComponent} SearchChildLoader={SearchChildLoader} />
                         </div> */}
 
-                        {!session?.email && (
-                            <Link aria-label={t("buttons.register")} className={`button2 hidden lg:block hover:text-primary capitalize`} href={"/auth/sign_up"}>
+                        {!session?.email && has("/auth/sign_up") && (
+                            <Link aria-label={t("buttons.register")} className={`button2 hidden lg:block hover:text-primary capitalize`} href={href("/auth/sign_up")}>
                                 {t("buttons.register")}
                             </Link>
                         )}
 
-                        <Select
+                                                <Select
                             classnames="max-w-25 flex text-sm sm:text-base"
                             options={["English", "Arabic", "Spanish", "Deutsch", "French", "Italian", "Turkish"]}
                             value={selected_locale}
                             set_value={set_lang as Dispatch<SetStateAction<string>>}
                         />
 
-                        <Select classnames="max-w-25 hidden sm:flex text-sm sm:text-base" options={currencies_options.keys().toArray()} value={currencies_map.get(currency)!} set_value={set_currency as Dispatch<SetStateAction<string>>} />
+                                                <Select classnames="max-w-25 hidden sm:flex text-sm sm:text-base" options={currencies_options.keys().toArray()} value={currencies_map.get(currency)!} set_value={set_currency as Dispatch<SetStateAction<string>>} />
 
                         <button aria-label={"cart"} type="button" onClick={() => dispatch({ type: "OPEN_CART" })} className={`button2 p-1 sm:p-2 relative ${ui.isGlassy ? "" : "hover:text-primary"}`}>
                             <Cart clr={"currentColor"} classnames="w-5 sm:w-6" />
-                            {session && session.cart.length ? <p className="absolute inset-s-1/2 top-1/2 text-[10px] flex-center p-1 bg-foreground text-background aspect-square rounded-full w-4 h-4">{session.cart.length}</p> : <></>}
+                            {cart.length ? <p className="absolute inset-s-1/2 top-1/2 text-[10px] flex-center p-1 bg-foreground text-background aspect-square rounded-full w-4 h-4">{cart.length}</p> : <></>}
                         </button>
                         <div className="sm:block hidden">
                             <ThemeToggle />
                         </div>
-                    </div>
-                </div>
+                    </>
+                }
+            >
                 <Nav savedCurrency={savedCurrency} ref={navRef} ui={ui} dispatch={dispatch} />
                 <CartDrawer ref={cartRef} ui={ui} dispatch={dispatch} />
-            </header>
+            </HeaderBar>
         </>
     );
 }
 
 function SearchChildComponent({ item }: { item: Item }) {
+    const currency = useCurrency();
+    const t = useTranslations("common");
+    const { demo, href } = useStorefront();
+
     return (
         <Link
-            href={"/product/" + item.slug}
-            onClick={async () => await increase_relevance_score(item.slug, score_rewards.search)}
+            href={href("/product/" + item.slug)}
+            onClick={async () => !demo && (await increase_relevance_score(item.slug, score_rewards.search))}
             className="flex justify-between items-center w-full h-full text-sm capitalize gap-2 bg-transparent hover:bg-primary border-b sm:border-0 cursor-pointer transition-default p-2"
         >
             <div className="relative min-w-15 aspect-square">
                 <Image src={item.images[0]} alt={item.display_name} fill sizes="(max-width: 768px) 150px, 100px" />
             </div>
             <div className="w-full h-full flex flex-col justify-start items-start gap-2">
-                {item.type == "watch" ? <p className="w-full">{item.brand + " " + item.model + " " + (item.year || "") + " Ref. " + item.reference}</p> : <p className="w-full">{item.display_name}</p>}
-                <p>{format_price(item.price)}</p>
+                {item.type == "watch" ? <p className="w-full">{[item_name(item), item.year || "", item.reference && `Ref. ${item.reference}`].filter(Boolean).join(" ")}</p> : <p className="w-full">{item_name(item)}</p>}
+                <p>{item_price(item.price, currency, t("priceOnRequest"))}</p>
             </div>
         </Link>
     );

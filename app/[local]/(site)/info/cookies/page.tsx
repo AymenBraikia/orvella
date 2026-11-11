@@ -1,10 +1,9 @@
 import { getLocale, getTranslations } from "next-intl/server";
-type Props = {
-    params: Promise<{ ref: string }>;
-};
+import { store_identity } from "@/app/server/store_identity";
+import { BASE_URL } from "../../lib/site_url";
 
-export default async function CookiesPage({ params }: Props) {
-    const { ref } = await params;
+export default async function CookiesPage() {
+    const store = await store_identity();
 
     const t = await getTranslations("legal.cookiePolicy");
     const common = await getTranslations("common");
@@ -144,14 +143,18 @@ export default async function CookiesPage({ params }: Props) {
                     <div className="text-[14px] mt-2 flex flex-col justify-start items-start gap-2">
                         <p>{t("contact.intro")}</p>
 
-                        <p>Aymen Braikia</p>
-                        <p>{ref || "Orvella"}</p>
-                        <p>Walther-von-Cronberg-Platz 18</p>
-                        <p>60594 Frankfurt am Main</p>
-                        <p>Germany</p>
-                        <p>Website: https://{ref || "orvella"}.com</p>
-                        <p>Email: info@{ref || "orvella"}.com</p>
-                        <p>{common("contactLabels.phonePrimary")}: +4915255443810</p>
+                        <p>{store.legal_name}</p>
+                        {store.store_name != store.legal_name && <p>{store.store_name}</p>}
+                        <p>{store.address.street}</p>
+                        <p>
+                            {store.address.postcode} {store.address.city}
+                        </p>
+                        <p>{store.address.country}</p>
+                        <p>Website: {BASE_URL}</p>
+                        <p>Email: {store.email}</p>
+                        <p>
+                            {common("contactLabels.phonePrimary")}: {store.phone}
+                        </p>
 
                         <p className="mt-2">
                             {t("syncNote", {

@@ -1,22 +1,20 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useMounted } from "./hooks/use_mounted";
 import Sun from "./svg/sun";
 import Moon from "./svg/moon";
 
 export function NavThemeToggle() {
-    const [mounted, setMounted] = useState(false);
-    const { resolvedTheme, setTheme } = useTheme();
+    const mounted = useMounted();
+    const { resolvedTheme, setTheme, forcedTheme } = useTheme();
 
     const set_light = () => setTheme("light");
     const set_dark = () => setTheme("dark");
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
-    if (!mounted) return null;
+    // Nothing to switch when the store forces one theme (a lead demo with a logo made for dark).
+    if (!mounted || forcedTheme) return null;
 
     return (
         <div className="flex-center gap-1 border border-(--bg-secondary) h-8 sm:h-10 overflow-hidden">

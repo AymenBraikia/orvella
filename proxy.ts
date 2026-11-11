@@ -3,13 +3,16 @@ import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 import { verifyJwt } from "./app/[local]/(auth)/auth/jwt";
 import { sanitizeRef } from "./i18n/brand";
+import { demo_slug_of } from "@/app/(site)/lib/private_demo_slugs";
+import { DEMO_MODE } from "@/app/(site)/lib/demo";
 import { save_visit } from "./app/server/save_visit";
 import { country_to_currency } from "@/app/(site)/lib/price_format";
 import { Supported_Countries, Supported_Currencies } from "./currency";
 
 const handleI18nRouting = createMiddleware(routing);
 
-const protectedRoutes = ["/cart", "/thank_you", "/checkout"];
+// Cart, checkout and the thank-you page work for guests too (guest cart cookie / order access link).
+const protectedRoutes: string[] = [];
 const adminRoutes = ["/admin"];
 
 function matches(pathname: string, routes: string[]): boolean {
@@ -23,6 +26,11 @@ export default function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
     if (pathname.startsWith("/api") || pathname.startsWith("/_next") || pathname.includes(".")) return NextResponse.next();
+
+    // Private demos: corlane.store/<slug> opens the store as that seller (app/api/demo-open), for
+    // everyone including link-preview bots.
+    const demo_slug = demo_slug_of(pathname);
+    if (demo_slug) return NextResponse.rewrite(new URL(`/api/demo-open/${demo_slug}`, request.url));
 
     const BOT = /facebookexternalhit|facebookcatalog|Instagram|WhatsApp|Twitterbot|Slackbot|Discordbot|TelegramBot|LinkedInBot|Googlebot|bingbot|Applebot|SkypeUriPreview|redditbot|Iframely|embedly/i;
 
@@ -59,12 +67,15 @@ export default function proxy(request: NextRequest) {
         response.cookies.set("Currency", currency, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
     }
 
-    const ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
-    if (ref) {
-        response.cookies.set("ref", ref, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
-        if (process.env.NODE_ENV == "production") save_visit(request);
-    } else if (request.nextUrl.searchParams.has("ref")) {
-        response.cookies.delete("ref");
+    // Pitch links exist on the demo only: a dealer's shop ignores ?ref= and stores no visitor data.
+    if (DEMO_MODE) {
+        const ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
+        if (ref) {
+            response.cookies.set("ref", ref, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
+            if (process.env.NODE_ENV == "production") save_visit(request);
+        } else if (request.nextUrl.searchParams.has("ref")) {
+            response.cookies.delete("ref");
+        }
     }
 
     return response;

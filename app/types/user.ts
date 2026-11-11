@@ -1,9 +1,5 @@
 import { Item } from "@/app/(site)/lib/filters";
-import { BaseItem } from "./item";
-import { Bracelet, Necklace, Ring } from "./jewelry";
 import { Order } from "./order";
-import { Spare } from "./spare";
-import { Watch } from "./watch";
 
 export interface User {
     email: string;
@@ -13,8 +9,9 @@ export interface User {
     admin?: boolean;
 
     payment_method?: "PayPal" | "Credit/Debit Card" | "Bank Transfer";
-    cart: User_Cart;
-    wish_list: User_Cart;
+    /** What is stored: slug + quantity (older documents may still hold full item snapshots). */
+    cart: Cart_Line[];
+    wish_list: Cart_Line[];
     ongoing_orders: Order[];
     fulfilled_orders: Order[];
     current_order?: Order;
@@ -53,8 +50,27 @@ export interface UserData {
 
 export type User_Cart = Cart_Item[];
 
+export type Cart_Line = { slug: string; quantity: number };
+
+/** A cart line joined with the current catalogue data (see hydrate_cart). */
 export type Cart_Item = Item & {
     quantity: number;
+    /** Highest quantity the customer may choose; 0 when the piece is no longer available. */
+    max_quantity: number;
 };
 
 export type UpdateUserProps = Partial<User>;
+
+/** A guest's cart and checkout details (carts collection, keyed by the cart_id cookie). Same field names as User. */
+export interface GuestCart {
+    _id: string;
+    cart: Cart_Line[];
+    email?: string;
+    firstName?: string;
+    lastName?: string;
+    address?: User["address"];
+    diff_address?: User["diff_address"];
+    local_pickup?: boolean;
+    payment_method?: User["payment_method"];
+    updated_at: Date;
+}

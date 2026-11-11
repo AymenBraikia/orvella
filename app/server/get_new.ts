@@ -1,8 +1,11 @@
 import { unstable_cache } from "next/cache";
-import { cookies } from "next/headers";
 
 import { items_collection } from "../db/collections";
+import { active_ref } from "./ref";
 import { Item } from "@/app/(site)/lib/filters";
+import { to_public_item } from "@/app/(site)/lib/stock";
+import { current_demo } from "./storefront";
+import get_items from "./get_items";
 
 const limit = 8;
 
@@ -12,7 +15,7 @@ const get_cached_new = unstable_cache(
 
         const refED = collection
             .find(
-                { preview: ref },
+                { preview: ref, deleted: { $ne: true } },
                 {
                     sort: { _id: -1 },
                     limit,
@@ -25,7 +28,7 @@ const get_cached_new = unstable_cache(
             ? refED
             : collection
                   .find(
-                      { preview: { $exists: false } },
+                      { preview: { $exists: false }, deleted: { $ne: true } },
                       {
                           sort: { _id: -1 },
                           limit,
@@ -42,10 +45,13 @@ const get_cached_new = unstable_cache(
 );
 
 async function get_new(): Promise<Item[]> {
-    const cookieStore = await cookies();
-    const ref = cookieStore.get("ref")?.value;
+    // A lead demo (/<locale>/<demo>): all its own products, newest first.
+    if (current_demo()) return (await get_items()).sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime());
 
-    const data = await get_cached_new(ref);
+    const ref = await active_ref();
+
+    const now = Date.now();
+    const data = (await get_cached_new(ref)).map((item) => to_public_item(item, now));
 
     // No ref -> normal new arrivals
     if (!ref) {
