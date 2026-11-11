@@ -6,16 +6,16 @@
     "footer_note": "This page is a private demo prepared for David Search Jewellers. Payments are in test mode; no real payment is taken.",
     "description": "David Search Jewellers: pre-owned luxury watches. Omega, Rolex, Breitling and IWC.",
     "logo": {
-        "src": "/demos/david-search-jewellers/logo.png",
+        "src": "/logo.svg",
         "width": 440,
         "height": 440
     },
     "logo_icon": {
-        "src": "/demos/david-search-jewellers/logo-icon.png",
+        "src": "/logo_simple.svg",
         "width": 192,
         "height": 192
     },
-    "favicon": "/demos/david-search-jewellers/favicon.png",
+    "favicon": "/favicon.ico",
     "hero": {
         "title": "DAVID SEARCH JEWELLERS",
         "subtitle": "Pre-owned luxury watches",
