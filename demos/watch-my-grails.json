@@ -1,0 +1,630 @@
+{
+    "slug": "watch-my-grails",
+    "locale": "en",
+    "name": "Watch My Grails",
+    "label": "Private demo · Prepared for Watch My Grails · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for Watch My Grails. Payments are in test mode; no real payment is taken.",
+    "description": "Watch My Grails: pre-owned luxury watches. Patek Philippe, Rolex, Audemars Piguet, Vacheron Constantin and Omega.",
+    "logo": {
+        "src": "/demos/watch-my-grails/logo.png",
+        "width": 440,
+        "height": 127
+    },
+    "logo_icon": {
+        "src": "/demos/watch-my-grails/logo-icon.png",
+        "width": 192,
+        "height": 55
+    },
+    "favicon": "/demos/watch-my-grails/favicon.png",
+    "hero": {
+        "title": "WATCH MY GRAILS",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/watch-my-grails/hero-poster.jpg",
+        "desktop_image": "/demos/watch-my-grails/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/watch-my-grails/watch-3.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": "GMT",
+                "image": "/demos/watch-my-grails/watch-5.jpg"
+            },
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/watch-my-grails/watch-1.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/watch-my-grails/watch-15.jpg"
+            },
+            {
+                "key": "diver",
+                "name": "Diver",
+                "image": "/demos/watch-my-grails/watch-2.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/watch-my-grails/trade.jpg",
+    "banner": {
+        "light": "/demos/watch-my-grails/banner-light.jpg",
+        "dark": "/demos/watch-my-grails/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "Watch My Grails is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Patek Philippe, Rolex, Audemars Piguet, Vacheron Constantin and Omega, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "patek-philippe-nautilus-erence",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "description": "Patek philippe nautilus in stainless steel with a blue-grey dial and integrated steel bracelet. the case has the model’s recognizable rounded-octagonal bezel, horizontal ridged dial texture and broad integrated lugs that flow into the bracelet. applied baton markers and slender hands keep the face clean, while a date aperture sits at 3 o’clock. the bracelet is made from closely fitted steel links with alternating brushed and polished surfaces. the photographs show the watch straight-on and emphasize its slim profile, distinctive case shape and textured dial. the product is presented as a nautilus; the exact reference is not visible in the image. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-1.jpg"],
+            "collection": "sport",
+            "dial": "Grey",
+            "details": {
+                "reference": "ERENCE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-16610lv",
+            "brand": "rolex",
+            "model": "Submariner “Kermit”",
+            "description": "Rolex Submariner ‘Kermit’ reference 16610lv. the watch pairs a black dial with a bright green rotating dive bezel, the defining feature of this version. luminous round, rectangular and triangular hour markers are matched with mercedes-style hands, and the date appears at 3 o’clock beneath a magnifying cyclops crystal. the stainless-steel Oyster bracelet and round case create the familiar professional-diver profile, with crown guards protecting the screw-down crown. the photographs include wrist shots, close-ups of the bezel and dial, the bracelet and a green Rolex presentation set. the supplied listing also references the wider ‘fat hands’ markers associated with this reference. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-2.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/2-2.jpg",
+                "demo_assets/watch_my_grails/.web/2-3.jpg",
+                "demo_assets/watch_my_grails/.web/2-4.jpg",
+                "demo_assets/watch_my_grails/.web/2-5.jpg",
+                "demo_assets/watch_my_grails/.web/2-6.jpg"
+            ],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "reference": "16610LV",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-oyster-perpetual-126000",
+            "brand": "rolex",
+            "model": "Oyster Perpetual",
+            "description": "Rolex Oyster perpetual 36 reference 126000 with a vivid green dial. the face is simple and symmetrical, using applied baton hour markers and three central hands without a date window or chronograph registers. the stainless-steel Oyster case has a smooth polished bezel, and the three-link Oyster bracelet continues the clean, understated styling. the green dial is the main point of colour and appears in several lighting conditions across the photographs. additional images show the caseback, bracelet clasp and box presentation. the supplied product text identifies the 126000 reference and mentions the automatic calibre 3230 with an approximately 70-hour power reserve. Comes with the box.",
+            "images": ["/demos/watch-my-grails/watch-3.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/3-2.jpg",
+                "demo_assets/watch_my_grails/.web/3-3.jpg",
+                "demo_assets/watch_my_grails/.web/3-4.jpg",
+                "demo_assets/watch_my_grails/.web/3-5.jpg",
+                "demo_assets/watch_my_grails/.web/3-6.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "reference": "126000",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-15202",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "Audemars piguet royal oak ‘jumbo’ in 18-carat rose gold, identified in the supplied caption with reference 15202. the watch has the royal oak’s octagonal bezel with exposed screws, integrated rose-gold bracelet and a dark blue dial with the signature tapisserie texture. applied baton markers and slim hands preserve the clean, refined layout. the bracelet is made of articulated angular links that continue the case shape and show contrasting brushed and polished finishing. the photographs show it on the wrist and from several angles, including the clasp and case side. the rose-gold case and blue dial create the defining contrast. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-4.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/4-2.jpg",
+                "demo_assets/watch_my_grails/.web/4-3.jpg",
+                "demo_assets/watch_my_grails/.web/4-4.jpg",
+                "demo_assets/watch_my_grails/.web/4-5.jpg",
+                "demo_assets/watch_my_grails/.web/4-6.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "reference": "15202",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-5",
+            "brand": "rolex",
+            "model": "GMT-Master II “Pepsi”",
+            "description": "Rolex GMT-Master II ‘Pepsi’ in stainless steel. the watch has a black dial with luminous hour plots, mercedes-style hands and a central gmt hand for reading a second time zone. its red-and-blue 24-hour bezel is the defining visual feature, with the contrasting colours separating day and night. a date display with cyclops magnification sits at 3 o’clock, and the Jubilee bracelet is built from five-piece links. the photos include close-ups of the bezel, bracelet, clasp and a presentation case; one image shows two matching Pepsi-style watches together. the overall design combines a travel-time function with a classic steel sports-watch case. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-5.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/5-2.jpg",
+                "demo_assets/watch_my_grails/.web/5-3.jpg",
+                "demo_assets/watch_my_grails/.web/5-4.jpg",
+                "demo_assets/watch_my_grails/.web/5-5.jpg",
+                "demo_assets/watch_my_grails/.web/5-6.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-day-date-228235",
+            "brand": "rolex",
+            "model": "Day-Date 40",
+            "description": "Rolex day-date 40 in 18-carat Everose gold, with a dark slate or brown ombré dial. the dial has applied hour markers and central hands, plus the arched day display at 12 o’clock and date window at 3 o’clock. a fluted Everose-gold bezel frames the face, while the president bracelet uses rounded three-piece links and a concealed crownclasp. the warm metal finish continues across the case and bracelet, creating a unified appearance. the photos show the watch from several angles, including the bracelet links, clasp and wrist fit. the supplied caption identifies the model as a 40 mm day-date reference 228235. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-6.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/6-2.jpg",
+                "demo_assets/watch_my_grails/.web/6-3.jpg",
+                "demo_assets/watch_my_grails/.web/6-4.jpg",
+                "demo_assets/watch_my_grails/.web/6-5.jpg",
+                "demo_assets/watch_my_grails/.web/6-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "228235",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "President bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-126710blnr",
+            "brand": "rolex",
+            "model": "GMT-Master II “Batman”",
+            "description": "Rolex GMT-Master II ‘Batman’ reference 126710blnr. the black dial has luminous hour markers, central hands and a contrasting gmt hand for a second time zone, with a date aperture at 3 o’clock under the magnifying crystal. the defining bezel is split between black and blue ceramic, with the 24-hour scale engraved around its edge. the stainless-steel case has crown guards and a screw-down crown, and the Jubilee bracelet uses five-piece links. the photographs show the watch on the wrist and from multiple close angles, including the bracelet clasp and bezel profile. the supplied caption identifies the Batman nickname and reference. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-7.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/7-2.jpg",
+                "demo_assets/watch_my_grails/.web/7-3.jpg",
+                "demo_assets/watch_my_grails/.web/7-4.jpg",
+                "demo_assets/watch_my_grails/.web/7-5.jpg",
+                "demo_assets/watch_my_grails/.web/7-6.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "126710BLNR",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-watch-7900v",
+            "brand": "vacheron constantin",
+            "model": "Watch",
+            "description": "Vacheron constantin overseas dual time reference 7900v with a dark sunburst dial. the dial combines central time hands with additional indications for a second time zone, day/night and power reserve, creating a more information-rich layout than a standard three-hand watch. applied markers and luminous hands keep the displays legible, while the steel case has the overseas collection’s angular bezel and integrated bracelet. the photos also show the alternative strap presentation and the watch from the rear, highlighting the movement through the display caseback. the supplied caption identifies the dual time family and reference 7900v. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-8.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/8-2.jpg",
+                "demo_assets/watch_my_grails/.web/8-3.jpg",
+                "demo_assets/watch_my_grails/.web/8-4.jpg",
+                "demo_assets/watch_my_grails/.web/8-5.jpg",
+                "demo_assets/watch_my_grails/.web/8-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "7900V",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-126334",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust in stainless steel with a silver dial. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-9.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/9-2.jpg",
+                "demo_assets/watch_my_grails/.web/9-3.jpg",
+                "demo_assets/watch_my_grails/.web/9-4.jpg",
+                "demo_assets/watch_my_grails/.web/9-5.jpg",
+                "demo_assets/watch_my_grails/.web/9-6.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Silver",
+            "details": {
+                "reference": "126334",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-watch-127234",
+            "brand": "rolex",
+            "model": "Watch",
+            "description": "Rolex land-dweller reference 127234 in a steel configuration with a bright fluted bezel. the light dial has applied markers and central hands, while a date window sits at 3 o’clock beneath a magnifying crystal. the integrated bracelet has a flat, close-fitting link design that merges visually with the case, giving the watch a modern silhouette. the bezel’s facets catch light around the dial, and the photos show the bracelet clasp, case profile and full face from several angles. the supplied product text identifies the land-dweller family and reference 127234. exact movement and case specifications are not inferred from the photographs. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-10.jpg"],
+            "import_photos": ["demo_assets/watch_my_grails/.web/10-2.jpg", "demo_assets/watch_my_grails/.web/10-3.jpg", "demo_assets/watch_my_grails/.web/10-4.jpg", "demo_assets/watch_my_grails/.web/10-5.jpg"],
+            "collection": "classic",
+            "details": {
+                "reference": "127234",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-77450st",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "Audemars piguet royal oak selfwinding 34 mm reference 77450st in stainless steel. the dial has a light silver tone with the signature grande tapisserie textured pattern, applied hour markers and central hands, plus a date window at 3 o’clock. the octagonal steel bezel is secured by eight exposed screws, and the integrated bracelet uses angular links that follow the royal oak case architecture. alternating brushed and polished surfaces emphasize the geometric form. the photos show the watch front-on, from the rear and along the bracelet, giving a clear view of the integrated construction and light dial. the supplied caption identifies the 34 mm case and reference. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-11.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/11-2.jpg",
+                "demo_assets/watch_my_grails/.web/11-3.jpg",
+                "demo_assets/watch_my_grails/.web/11-4.jpg",
+                "demo_assets/watch_my_grails/.web/11-5.jpg",
+                "demo_assets/watch_my_grails/.web/11-6.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "reference": "77450ST",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 34,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-126233",
+            "brand": "rolex",
+            "model": "Datejust 36",
+            "description": "Rolex Datejust 36 reference 126233 in two-tone yellow gold and oystersteel. the watch has a green dial with applied roman numeral hour markers, central hands and a date window with a magnifying cyclops crystal. a fluted yellow-gold bezel surrounds the face, while the Jubilee bracelet combines polished gold-coloured centre links with steel outer links. the photographs show the watch on a cushion, on the wrist and from the clasp side, including the repeating five-piece bracelet links. the green dial gives this classic two-tone Datejust a distinctive colour accent. the supplied caption identifies the reference and 36 mm configuration. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-12.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/12-2.jpg",
+                "demo_assets/watch_my_grails/.web/12-3.jpg",
+                "demo_assets/watch_my_grails/.web/12-4.jpg",
+                "demo_assets/watch_my_grails/.web/12-5.jpg",
+                "demo_assets/watch_my_grails/.web/12-6.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "reference": "126233",
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-126710grnr",
+            "brand": "rolex",
+            "model": "GMT-Master II “Bruce Wayne”",
+            "description": "Rolex GMT-Master II reference 126710grnr, known as the ‘Bruce Wayne’ or black-and-grey bezel configuration. the black dial has luminous hour markers, mercedes-style hands and a central gmt hand for a second time zone. the bezel carries a two-tone black-and-grey 24-hour scale, and the date aperture at 3 o’clock is magnified by the cyclops lens. the stainless-steel case and Oyster bracelet use a brushed sports finish with polished edges. the photos show several angles of the bezel, dial, crown guards and bracelet clasp. the supplied caption identifies the 126710grnr reference. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-13.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/13-2.jpg",
+                "demo_assets/watch_my_grails/.web/13-3.jpg",
+                "demo_assets/watch_my_grails/.web/13-4.jpg",
+                "demo_assets/watch_my_grails/.web/13-5.jpg",
+                "demo_assets/watch_my_grails/.web/13-6.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "126710GRNR",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-oyster-perpetual-134303",
+            "brand": "rolex",
+            "model": "Oyster Perpetual",
+            "description": "Rolex Oyster Perpetual with a slate dial. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-14.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/14-2.jpg",
+                "demo_assets/watch_my_grails/.web/14-3.jpg",
+                "demo_assets/watch_my_grails/.web/14-4.jpg",
+                "demo_assets/watch_my_grails/.web/14-5.jpg",
+                "demo_assets/watch_my_grails/.web/14-6.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Slate",
+            "details": {
+                "reference": "134303",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "omega-speedmaster-15",
+            "brand": "omega",
+            "model": "Speedmaster",
+            "description": "Omega speedmaster moonwatch chronograph in stainless steel. the black dial is arranged with three contrasting light-coloured subsidiary registers, central chronograph hands and luminous hour markers. a black tachymeter bezel surrounds the dial, and the case has two chronograph pushers and a crown on the right side. the steel bracelet uses closely fitted links with brushed surfaces and polished accents. the photos show the watch on the wrist, from the side and in its Omega presentation set, including the caseback and bracelet clasp. the supplied caption identifies the speedmaster moonwatch family and the chronograph layout. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-15.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/15-2.jpg",
+                "demo_assets/watch_my_grails/.web/15-3.jpg",
+                "demo_assets/watch_my_grails/.web/15-4.jpg",
+                "demo_assets/watch_my_grails/.web/15-5.jpg",
+                "demo_assets/watch_my_grails/.web/15-6.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-126334-16",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust 41 reference 126334 with a green ombré-style dial. the dial has a darker perimeter that transitions toward a lighter centre, with applied hour markers and central hands. the date aperture at 3 o’clock is enlarged by the cyclops magnifier. a fluted bezel surrounds the steel case, and the Jubilee bracelet gives the watch a dressier five-link profile. the photographs show the green dial under different lighting, along with the clasp, side of the case and full bracelet. the supplied listing identifies the 126334 reference and describes the dial as an ombré configuration. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-16.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/16-2.jpg",
+                "demo_assets/watch_my_grails/.web/16-3.jpg",
+                "demo_assets/watch_my_grails/.web/16-4.jpg",
+                "demo_assets/watch_my_grails/.web/16-5.jpg",
+                "demo_assets/watch_my_grails/.web/16-6.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "126334",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-1675",
+            "brand": "rolex",
+            "model": "GMT-Master “Pepsi”",
+            "description": "Vintage Rolex gmt-master reference 1675 with the classic red-and-blue ‘Pepsi’ 24-hour bezel. the black dial has luminous round and rectangular markers, mercedes-style hour and minute hands, and a central 24-hour hand for a second time zone. the bezel’s two colours distinguish day and night, and the steel case is paired with a matching metal bracelet. the photos show the watch on the wrist and close-ups of the bezel, dial, crown side and bracelet. its vintage character is visible in the softer overall finish and older-style case proportions. the supplied caption identifies the 1675 reference. Watch only.",
+            "images": ["/demos/watch-my-grails/watch-17.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/17-2.jpg",
+                "demo_assets/watch_my_grails/.web/17-3.jpg",
+                "demo_assets/watch_my_grails/.web/17-4.jpg",
+                "demo_assets/watch_my_grails/.web/17-5.jpg",
+                "demo_assets/watch_my_grails/.web/17-6.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "1675",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-sky-dweller-336934",
+            "brand": "rolex",
+            "model": "Sky-Dweller",
+            "description": "Rolex Sky-Dweller reference 336934 with a mint-green dial. the face combines central time hands with the off-centre 24-hour display used for a second time zone and the annual-calendar month indication around the dial perimeter. a date aperture at 3 o’clock is magnified by the cyclops crystal. the steel case is framed by a fluted white-gold bezel and paired with a metal bracelet, while the green dial changes tone under the light. the photographs show the watch in its box, on the wrist and from several angles, including the bracelet and case side. the supplied caption identifies the reference and dial colour. Comes with the box.",
+            "images": ["/demos/watch-my-grails/watch-18.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/18-2.jpg",
+                "demo_assets/watch_my_grails/.web/18-3.jpg",
+                "demo_assets/watch_my_grails/.web/18-4.jpg",
+                "demo_assets/watch_my_grails/.web/18-5.jpg",
+                "demo_assets/watch_my_grails/.web/18-6.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Green",
+            "details": {
+                "reference": "336934",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+
+        {
+            "price": 99999,
+            "slug": "rolex-milgauss-116400gv",
+            "brand": "rolex",
+            "model": "Milgauss",
+            "description": "Rolex Milgauss in stainless steel with a black dial. Comes with the box.",
+            "images": ["/demos/watch-my-grails/watch-20.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/20-2.jpg",
+                "demo_assets/watch_my_grails/.web/20-3.jpg",
+                "demo_assets/watch_my_grails/.web/20-4.jpg",
+                "demo_assets/watch_my_grails/.web/20-5.jpg",
+                "demo_assets/watch_my_grails/.web/20-6.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Black",
+            "details": {
+                "reference": "116400GV",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-126300",
+            "brand": "rolex",
+            "model": "Datejust “Wimbledon”",
+            "description": "Rolex Datejust 41 reference 126300 with a slate-grey Wimbledon dial. the face has green-accented roman numerals at selected positions, baton markers, central hands and a date aperture at 3 o’clock beneath the cyclops magnifier. the stainless-steel case has a smooth bezel, and the Jubilee bracelet uses five-piece links with a close, flexible fit. the photographs show the watch on the wrist, in a presentation box and from multiple angles, including the bracelet clasp and case profile. the grey dial with green roman accents is the defining visual feature. the supplied caption identifies the 126300 reference. Comes with the box.",
+            "images": ["/demos/watch-my-grails/watch-22.jpg"],
+            "import_photos": [
+                "demo_assets/watch_my_grails/.web/22-2.jpg",
+                "demo_assets/watch_my_grails/.web/22-3.jpg",
+                "demo_assets/watch_my_grails/.web/22-4.jpg",
+                "demo_assets/watch_my_grails/.web/22-5.jpg",
+                "demo_assets/watch_my_grails/.web/22-6.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Grey",
+            "details": {
+                "reference": "126300",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": false
+            }
+        }
+    ]
+}
