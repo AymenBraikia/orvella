@@ -68,7 +68,10 @@ export default function proxy(request: NextRequest) {
     }
 
     // Pitch links exist on the demo only: a dealer's shop ignores ?ref= and stores no visitor data.
-    if (DISABLE_DZ && (request.headers.get("x-vercel-ip-country") || request.headers.get("cf-ipcountry") || "").toUpperCase() == "DZ") return response;
+    if (DISABLE_DZ && (request.headers.get("x-vercel-ip-country") || request.headers.get("cf-ipcountry") || "").toUpperCase() == "DZ") {
+        console.log("skipped algerian ip");
+        return response;
+    }
 
     if (DEMO_MODE) {
         const ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
