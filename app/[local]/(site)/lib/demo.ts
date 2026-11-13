@@ -4,3 +4,4 @@
  * Mapped through next.config so client components can read it too (changing it needs a redeploy).
  */
 export const DEMO_MODE = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
+export const DISABLE_DZ = process.env.NEXT_PUBLIC_DISABLE_ALGERIA === "true";

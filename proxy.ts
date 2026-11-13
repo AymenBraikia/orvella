@@ -4,7 +4,7 @@ import { routing } from "./i18n/routing";
 import { verifyJwt } from "./app/[local]/(auth)/auth/jwt";
 import { sanitizeRef } from "./i18n/brand";
 import { demo_slug_of } from "@/app/(site)/lib/private_demo_slugs";
-import { DEMO_MODE } from "@/app/(site)/lib/demo";
+import { DEMO_MODE, DISABLE_DZ } from "@/app/(site)/lib/demo";
 import { save_visit } from "./app/server/save_visit";
 import { country_to_currency } from "@/app/(site)/lib/price_format";
 import { Supported_Countries, Supported_Currencies } from "./currency";
@@ -68,6 +68,8 @@ export default function proxy(request: NextRequest) {
     }
 
     // Pitch links exist on the demo only: a dealer's shop ignores ?ref= and stores no visitor data.
+    if (DISABLE_DZ && (request.headers.get("x-vercel-ip-country") || request.headers.get("cf-ipcountry") || "").toUpperCase() == "DZ") return response;
+
     if (DEMO_MODE) {
         const ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
         if (ref) {

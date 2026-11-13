@@ -21,8 +21,6 @@ export async function save_visit(request: NextRequest) {
     const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || request.headers.get("x-real-ip") || "";
     const ip_hash = hash_ip(ip);
 
-    if ((request.headers.get("x-vercel-ip-country") || request.headers.get("cf-ipcountry") || "").toUpperCase() == "DZ") return;
-
     const collection = await visitors_collection();
 
     track_visit(request);
