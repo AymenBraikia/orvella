@@ -24,12 +24,14 @@ import path from "node:path";
 import { randomUUID } from "node:crypto";
 import sharp from "sharp";
 import { localize_config, type DemoStoreConfig, type DemoStoreSource } from "../app/[local]/(site)/lib/storefront";
+import { collected_data_collection } from "@/app/db/collections";
+import { PrivateDemoData } from "@/types/private_demo";
 
 const [spec_path] = process.argv.slice(2).filter((a) => !a.startsWith("--"));
 const production = process.argv.includes("--production");
 
 if (!spec_path) {
-    console.error('Usage: npx tsx --conditions=react-server scripts/create-demo.ts <demo.json> [--production]');
+    console.error("Usage: npx tsx --conditions=react-server scripts/create-demo.ts <demo.json> [--production]");
     process.exit(1);
 }
 const host = (process.env.MONGO_URI ?? "").replace(/^mongodb(\+srv)?:\/\/([^@/]*@)?/, "").split(/[/?,]/)[0];
@@ -113,5 +115,25 @@ for (const piece of pieces) {
         if (!found || found.photo.size == 0) throw new Error(`Photo ${photo} of ${piece.id} is missing`);
     }
 }
-console.log(`Saved. ${pieces.length} pieces, ${pieces.reduce((n, p) => n + p.photos.length, 0)} photos, all readable. Live at /${spec.slug}${existing && !existing.enabled ? " once you enable it in the admin" : ""}; the store shows the changes from the next visit to that link.`);
+console.log(
+    `Saved. ${pieces.length} pieces, ${pieces.reduce((n, p) => n + p.photos.length, 0)} photos, all readable. Live at /${spec.slug}${existing && !existing.enabled ? " once you enable it in the admin" : ""}; the store shows the changes from the next visit to that link.`,
+);
+
+//creating visitor data
+const data: PrivateDemoData = {
+    name: spec_path.replace(".json", ""),
+    pieces: pieces.length,
+    link: `https://corlane.store/${spec_path.replace(".json", "")}`,
+    date: new Date(),
+    visited: false,
+    visits: [],
+};
+
+const col = await collected_data_collection();
+
+if (await col.findOne({ name: data.name })) {
+    await col.insertOne(data);
+    console.log("created visitor data");
+} else console.log("visitor data already exists skipped tracking part");
+
 process.exit(0);

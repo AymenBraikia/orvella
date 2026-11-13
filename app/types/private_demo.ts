@@ -108,3 +108,27 @@ export interface PrivateDemoPhoto {
     data: Binary;
     created_at: Date;
 }
+
+export interface PrivateDemoData {
+    pieces: number;
+    link: string;
+    date: Date;
+    name: string;
+    visited: boolean;
+    visits: visit[];
+}
+
+interface visit {
+    session_id: string;
+
+    device: {
+        type: "Desktop" | "Laptop" | "Tablet" | "Mobile";
+        width: number;
+        height: number;
+        os: string;
+    };
+    local_date: Date;
+    network: { ip: string; isp: string; country: string };
+
+    visited_paths: { path: string; time_spent_seconds: number; scroll_y: number }[];
+}

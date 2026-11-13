@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/app/(site)/context/ThemeProvider";
 import { getDirection } from "@/i18n/direction";
 import AuthGate from "@/app/components/AuthGate";
 import "../globals.css";
+import AnalyticsTracker from "./analytics/tracker";
 
 /**
  * The storefront's document: fonts, theme, translations, and the header, footer and cart around the
@@ -19,8 +20,8 @@ export default async function StoreDocument({ local, fonts, forced_theme, accent
         <html lang={local} dir={direction} className={`${fonts} h-full antialiased`} suppressHydrationWarning>
             <body className="font-sans" style={accent ? ({ "--clr-gold": accent } as React.CSSProperties) : undefined}>
                 <Analytics />
+                <AnalyticsTracker />
                 <SpeedInsights />
-
                 <NextIntlClientProvider messages={await client_messages(SITE_CLIENT_NAMESPACES)}>
                     <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme={forced_theme} enableSystem disableTransitionOnChange>
                         {/* Rendered once: a Suspense fallback here used to render the whole page twice and swap it (layout shift). */}

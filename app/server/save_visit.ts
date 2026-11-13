@@ -3,6 +3,7 @@ import { visitors_collection } from "../db/collections";
 import { NextRequest } from "next/server";
 import { sanitizeRef } from "@/i18n/brand";
 import { createHmac } from "node:crypto";
+import { track_visit } from "./track_visit";
 
 /**
  * Repeat visits are recognised by a keyed hash of the IP address; the address itself is never stored
@@ -15,13 +16,16 @@ function hash_ip(ip: string): string | undefined {
 }
 
 export async function save_visit(request: NextRequest) {
-    const collection = await visitors_collection();
-
     const agent = request.headers.get("user-agent") ?? "";
 
     const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || request.headers.get("x-real-ip") || "";
     const ip_hash = hash_ip(ip);
 
+    if ((request.headers.get("x-vercel-ip-country") || request.headers.get("cf-ipcountry") || "").toUpperCase() == "DZ") return;
+
+    const collection = await visitors_collection();
+
+    track_visit(request);
     if (ip_hash && (await collection.findOneAndUpdate({ ip_hash }, { $inc: { visits: 1 } }))) return;
 
     const visitor: Visitor = {
