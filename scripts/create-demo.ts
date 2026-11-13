@@ -131,7 +131,7 @@ const data: PrivateDemoData = {
 
 const col = await collected_data_collection();
 
-if (await col.findOne({ name: data.name })) {
+if (!(await col.findOne({ name: data.name }))) {
     await col.insertOne(data);
     console.log("created visitor data");
 } else console.log("visitor data already exists skipped tracking part");

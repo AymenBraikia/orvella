@@ -19,8 +19,8 @@ export async function save_visit(request: NextRequest) {
     let ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
     let demo_name = request.nextUrl.pathname.split("/")[2];
 
-    if (!ref && demo_name && (await (await private_demos_collection()).findOne({ name: demo_name }))) ref = demo_name;
-    else return console.log("NAW NOT FOUND LEAD");
+    if (!ref && demo_name && (await (await private_demos_collection()).findOne({ slug: demo_name }))) ref = demo_name;
+    else return console.log("NAW NOT FOUND LEAD: ", demo_name);
 
     console.log("bodies on bodies");
 

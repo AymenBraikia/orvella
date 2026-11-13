@@ -121,7 +121,7 @@ export interface PrivateDemoData {
 interface visit {
     session_id: string;
 
-    device: {
+    device?: {
         type: "Desktop" | "Laptop" | "Tablet" | "Mobile";
         width: number;
         height: number;

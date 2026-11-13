@@ -67,6 +67,7 @@ export default function proxy(request: NextRequest) {
         response.cookies.set("Currency", currency, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
     }
 
+    console.clear();
     // Pitch links exist on the demo only: a dealer's shop ignores ?ref= and stores no visitor data.
     if (DISABLE_DZ && (request.headers.get("x-vercel-ip-country") || request.headers.get("cf-ipcountry") || "").toUpperCase() == "DZ") {
         console.log("skipped algerian ip");
