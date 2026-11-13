@@ -1,5 +1,5 @@
 import { Visitor } from "@/types/visitor";
-import { visitors_collection } from "../db/collections";
+import { private_demos_collection, visitors_collection } from "../db/collections";
 import { NextRequest } from "next/server";
 import { sanitizeRef } from "@/i18n/brand";
 import { createHmac } from "node:crypto";
@@ -16,6 +16,12 @@ function hash_ip(ip: string): string | undefined {
 }
 
 export async function save_visit(request: NextRequest) {
+    let ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
+    let demo_name = request.nextUrl.pathname.split("/")[2];
+
+    if (!ref && demo_name && (await (await private_demos_collection()).findOne({ name: demo_name }))) ref = demo_name;
+    else return;
+
     const agent = request.headers.get("user-agent") ?? "";
 
     const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || request.headers.get("x-real-ip") || "";
@@ -29,7 +35,7 @@ export async function save_visit(request: NextRequest) {
     const visitor: Visitor = {
         userAgent: agent,
 
-        referer: sanitizeRef(request.nextUrl.searchParams.get("ref"))!,
+        referer: ref,
 
         ip_hash,
 

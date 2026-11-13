@@ -80,7 +80,7 @@ export default function proxy(request: NextRequest) {
             if (process.env.NODE_ENV == "production") save_visit(request);
         } else if (request.nextUrl.searchParams.has("ref")) {
             response.cookies.delete("ref");
-        }
+        } else if (request.nextUrl.pathname.split("/")[2]) save_visit(request);
     }
 
     return response;
