@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { collected_data_collection } from "../db/collections";
 
 export async function track_visit(request: NextRequest) {
+    console.log("trackin visit for: ", request.nextUrl.pathname.split("/")[2]);
     if (sessionStorage.getItem("analytics_session_id")) return;
 
     const session_id = crypto.randomUUID();

@@ -20,7 +20,9 @@ export async function save_visit(request: NextRequest) {
     let demo_name = request.nextUrl.pathname.split("/")[2];
 
     if (!ref && demo_name && (await (await private_demos_collection()).findOne({ name: demo_name }))) ref = demo_name;
-    else return;
+    else return console.log("NAW NOT FOUND LEAD");
+
+    console.log("bodies on bodies");
 
     const agent = request.headers.get("user-agent") ?? "";
 
