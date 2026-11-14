@@ -6,7 +6,6 @@ import { demo_slug_of } from "@/app/(site)/lib/private_demo_slugs";
 import { DISABLE_DZ } from "@/app/(site)/lib/demo";
 import { country_to_currency } from "@/app/(site)/lib/price_format";
 import { Supported_Countries, Supported_Currencies } from "./currency";
-import { createHmac } from "crypto";
 
 const handleI18nRouting = createMiddleware(routing);
 
@@ -84,15 +83,6 @@ export default function proxy(request: NextRequest) {
             });
     }
 
-    // if (DEMO_MODE) {
-    //     const ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
-    //     if (ref) {
-    //         response.cookies.set("ref", ref, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
-    //         if (process.env.NODE_ENV == "production") save_visit(request);
-    //     } else if (request.nextUrl.searchParams.has("ref")) {
-    //         response.cookies.delete("ref");
-    //     } else if (request.nextUrl.pathname.split("/")[2]) save_visit(request);
-    // }
 
     return response;
 }

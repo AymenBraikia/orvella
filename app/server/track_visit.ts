@@ -26,7 +26,7 @@ export async function track_visit(
         path: "/",
     });
 
-    const ip = cookiesStore.get("i")?.value || (await (await fetch("https://api.ipify.org?format=json")).json()).ip || "";
+    const ip = cookiesStore.get("ip")?.value || "";
 
     const network = await get_ip_info(ip);
 
