@@ -1,0 +1,423 @@
+{
+    "slug": "curated-luxury-watches",
+    "locale": "en",
+    "name": "Curated Luxury Watches",
+    "whatsapp": "6281335123102",
+    "accent": "#DE434E",
+    "label": "Private demo · Prepared for Curated Luxury Watches · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for Curated Luxury Watches. Payments are in test mode; no real payment is taken.",
+    "description": "Curated Luxury Watches: pre-owned luxury watches in Available Now At Timescorner.. Rolex, Audemars Piguet, Vacheron Constantin and Patek Philippe.",
+    "logo": {
+        "src": "/demos/curated-luxury-watches/logo.png",
+        "width": 440,
+        "height": 239
+    },
+    "logo_icon": {
+        "src": "/demos/curated-luxury-watches/logo-icon.png",
+        "width": 192,
+        "height": 104
+    },
+    "favicon": "/demos/curated-luxury-watches/favicon.png",
+    "hero": {
+        "title": "CURATED LUXURY WATCHES",
+        "subtitle": "Pre-owned luxury watches in Available Now At Timescorner.",
+        "poster": "/demos/curated-luxury-watches/hero-poster.jpg",
+        "desktop_image": "/demos/curated-luxury-watches/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/curated-luxury-watches/watch-5.jpg"
+            },
+            {
+                "key": "diver",
+                "name": "Diver",
+                "image": "/demos/curated-luxury-watches/watch-7.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/curated-luxury-watches/watch-2.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": "GMT",
+                "image": "/demos/curated-luxury-watches/watch-3.jpg"
+            },
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/curated-luxury-watches/watch-8.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/curated-luxury-watches/trade.jpg",
+    "banner": {
+        "light": "/demos/curated-luxury-watches/banner-light.jpg",
+        "dark": "/demos/curated-luxury-watches/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "Available Now At Timescorner.",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "Curated Luxury Watches is a Available Now At Timescorner.-based dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Rolex, Audemars Piguet, Vacheron Constantin and Patek Philippe, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-116515lna",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona in 18k rose gold. Watch only.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-2.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "reference": "116515LNA",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-gmt-master-ii-3",
+            "brand": "audemars piguet",
+            "model": "GMT-Master II “Sprite”",
+            "description": "Audemars Piguet GMT-Master II. Watch only.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-3.jpg"
+            ],
+            "collection": "gmt",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-126518ln",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona 40 mm in 18k yellow gold with a blue dial. Full set with box and warranty card.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-4.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Blue",
+            "details": {
+                "reference": "126518LN",
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "vacheron-constantin-watch-5",
+            "brand": "vacheron constantin",
+            "model": "Watch",
+            "description": "Vacheron Constantin Watch 41 mm in stainless steel with a blue dial. Full set with box and warranty card.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-5.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-date-116610ln",
+            "brand": "rolex",
+            "model": "Submariner Date",
+            "description": "Rolex Submariner Date 40 mm in stainless steel with a black dial, 2019. Full set with box and warranty card.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-7.jpg"
+            ],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "reference": "116610LN",
+                "year": 2019,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-nautilus-8",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "description": "The nautilus 7118/1200a-001 blue - elegance, rarity, and timeless value in one iconic piece. Full set with box and warranty card.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-8.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "year": 2020,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 35.2,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-126713grnr",
+            "brand": "rolex",
+            "model": "GMT-Master II",
+            "description": "Rolex GMT-Master II 40 mm in 18k yellow gold with a black dial, 2025. Full set with box and warranty card. Unworn.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-9.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "reference": "126713GRNR",
+                "year": 2025,
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-watch-10",
+            "brand": "patek philippe",
+            "model": "Watch",
+            "description": "Patek Philippe Watch 45 mm with a blue dial, 2024. Full set with box and warranty card.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-10.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "year": 2024,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 45,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-126610lv",
+            "brand": "rolex",
+            "model": "Submariner",
+            "description": "Bold steel. sharp black. iconic green. the Submariner 126610lv mk2 that stands out. Full set with box and warranty card.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-11.jpg"
+            ],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "reference": "126610LV",
+                "year": 2025,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-126331g",
+            "brand": "rolex",
+            "model": "Datejust 41 “Sundust”",
+            "description": "Rolex Datejust 41 mm in stainless steel with a sundust dial, 2025. Full set with box and warranty card.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-12.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Sundust",
+            "details": {
+                "reference": "126331G",
+                "year": 2025,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-oyster-perpetual-134300",
+            "brand": "rolex",
+            "model": "Oyster Perpetual 41",
+            "description": "Oyster perpetual 41 134300 pistachio - the green that defines subtle perfection. Full set with box and warranty card. Unworn.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-13.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "reference": "134300",
+                "year": 2025,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-submariner-126613lb",
+            "brand": "rolex",
+            "model": "Submariner “Bluesy”",
+            "description": "Blue that speaks luxury the iconic Bluesy. Submariner 126613lb. Full set with box and warranty card. Unworn.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-14.jpg"
+            ],
+            "collection": "diver",
+            "dial": "Blue",
+            "details": {
+                "reference": "126613LB",
+                "year": 2025,
+                "movement": "Automatic",
+                "caseMaterial": "18k Yellow Gold",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "New",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-ined",
+            "brand": "rolex",
+            "model": "Datejust 36",
+            "description": "A classic reborn - refined, radiant, and ready to impress. Full set with box and warranty card. Unworn.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-15.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "INED",
+                "year": 2024,
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-nautilus-use",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "description": "Sporty, bold, and undeniably luxurious. the striking green dial makes a statement, while the chronograph function keeps you ready for every moment. Watch only.",
+            "images": [
+                "/demos/curated-luxury-watches/watch-16.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Green",
+            "details": {
+                "reference": "USE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}

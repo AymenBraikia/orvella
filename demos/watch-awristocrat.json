@@ -1,0 +1,500 @@
+{
+    "slug": "watch-awristocrat",
+    "locale": "en",
+    "name": "Watch Awristocrat",
+    "accent": "#82CE62",
+    "label": "Private demo · Prepared for Watch Awristocrat · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for Watch Awristocrat. Payments are in test mode; no real payment is taken.",
+    "description": "Watch Awristocrat: pre-owned luxury watches. Grand Seiko, Cartier, Rolex, Audemars Piguet and Patek Philippe.",
+    "logo": {
+        "src": "/demos/watch-awristocrat/logo.png",
+        "width": 440,
+        "height": 440
+    },
+    "logo_icon": {
+        "src": "/demos/watch-awristocrat/logo-icon.png",
+        "width": 192,
+        "height": 192
+    },
+    "favicon": "/demos/watch-awristocrat/favicon.png",
+    "hero": {
+        "title": "WATCH AWRISTOCRAT",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/watch-awristocrat/hero-poster.jpg",
+        "desktop_image": "/demos/watch-awristocrat/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/watch-awristocrat/watch-2.jpg"
+            },
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/watch-awristocrat/watch-3.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": "GMT",
+                "image": "/demos/watch-awristocrat/watch-6.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/watch-awristocrat/watch-13.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/watch-awristocrat/trade.jpg",
+    "banner": {
+        "light": "/demos/watch-awristocrat/banner-light.jpg",
+        "dark": "/demos/watch-awristocrat/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "Watch Awristocrat is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Grand Seiko, Cartier, Rolex, Audemars Piguet and Patek Philippe, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "grand-seiko-watch-2",
+            "brand": "grand seiko",
+            "model": "Watch",
+            "description": "Grand Seiko Watch, 2026. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-2.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "year": 2026,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-santos-3",
+            "brand": "cartier",
+            "model": "Santos",
+            "description": "Cartier Santos. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-3.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-day-date-4",
+            "brand": "rolex",
+            "model": "Day-Date 40",
+            "description": "Rolex Day-Date 40 mm with a green dial, 2025. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-4.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Green",
+            "details": {
+                "year": 2025,
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "President bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-oyster-perpetual-5",
+            "brand": "audemars piguet",
+            "model": "Oyster Perpetual",
+            "description": "Audemars Piguet Oyster Perpetual with a red dial. Watch only.",
+            "images": [
+                "/demos/watch-awristocrat/watch-5.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Red",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-gmt-master-ii-6",
+            "brand": "audemars piguet",
+            "model": "GMT-Master II “Sprite”",
+            "description": "Audemars Piguet GMT-Master II, 2023. Watch only.",
+            "images": [
+                "/demos/watch-awristocrat/watch-6.jpg"
+            ],
+            "collection": "gmt",
+            "details": {
+                "year": 2023,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-gmt-master-ii-7",
+            "brand": "audemars piguet",
+            "model": "GMT-Master II",
+            "description": "Audemars Piguet GMT-Master II with a black dial, 2023. Watch only.",
+            "images": [
+                "/demos/watch-awristocrat/watch-7.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "year": 2023,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-santos-8",
+            "brand": "cartier",
+            "model": "Santos",
+            "description": "Cartier Santos. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-8.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "patek-philippe-calatrava-9",
+            "brand": "patek philippe",
+            "model": "Calatrava",
+            "description": "Patek Philippe Calatrava in 18k white gold, 2018. Watch only.",
+            "images": [
+                "/demos/watch-awristocrat/watch-9.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "year": 2018,
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "cartier-santos-10",
+            "brand": "cartier",
+            "model": "Santos",
+            "description": "It’s been a tough year for world economies and the watch market …. i’m sure everyone has a reason to smile that 2022 is behind us! thanks instagram friends for your support this year. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-10.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "year": 2022,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Leather strap",
+                "waterResistanceM": 30,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-11",
+            "brand": "rolex",
+            "model": "GMT-Master II",
+            "description": "Rolex GMT-Master II, 2022. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-11.jpg"
+            ],
+            "collection": "gmt",
+            "details": {
+                "year": 2022,
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-13",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona in 18k white gold, 2022. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-13.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "year": 2022,
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-offshore-14",
+            "brand": "audemars piguet",
+            "model": "Royal Oak Offshore",
+            "description": "… buy your wife some stones and metal, found in the dirt.. or.. buy yourself a marvel of the universe. Watch only.",
+            "images": [
+                "/demos/watch-awristocrat/watch-14.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Titanium",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-oyster-perpetual-15",
+            "brand": "rolex",
+            "model": "Oyster Perpetual 41",
+            "description": "Rolex Oyster Perpetual 41 mm. Watch only.",
+            "images": [
+                "/demos/watch-awristocrat/watch-15.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-16",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "Audemars Piguet Royal Oak, 2021. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-16.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "year": 2021,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-sky-dweller-17",
+            "brand": "rolex",
+            "model": "Sky-Dweller",
+            "description": "… probably the most complicated movement Rolex manufactures … never gets old. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-17.jpg"
+            ],
+            "collection": "gmt",
+            "details": {
+                "year": 2022,
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-sky-dweller-18",
+            "brand": "rolex",
+            "model": "Sky-Dweller",
+            "description": "Rolex Sky-Dweller in 18k rose gold. Watch only.",
+            "images": [
+                "/demos/watch-awristocrat/watch-18.jpg"
+            ],
+            "collection": "gmt",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-yacht-master-19",
+            "brand": "audemars piguet",
+            "model": "Yacht-Master 40",
+            "description": "… if you need a clock, you stumbled upon the right reel. Watch only. Unworn.",
+            "images": [
+                "/demos/watch-awristocrat/watch-19.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "year": 2022,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-oyster-perpetual-20",
+            "brand": "rolex",
+            "model": "Oyster Perpetual 41",
+            "description": "Rolex Oyster Perpetual 41 mm. Watch only.",
+            "images": [
+                "/demos/watch-awristocrat/watch-20.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-nautilus-21",
+            "brand": "audemars piguet",
+            "model": "Nautilus",
+            "description": "Audemars Piguet Nautilus, 2022. Watch only.",
+            "images": [
+                "/demos/watch-awristocrat/watch-21.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "year": 2022,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}

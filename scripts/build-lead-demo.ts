@@ -43,7 +43,14 @@ if (!folder || !existsSync(folder)) {
     process.exit(1);
 }
 const name = (flag("name") ?? path.basename(folder).replace(/[-_]+/g, " ")).trim().replace(/\b\p{L}/gu, (c) => c.toUpperCase());
-const slug = flag("slug") ?? name.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const slug =
+    flag("slug") ??
+    name
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
 const locale = (flag("locale") ?? "en") as DemoStoreSource["locale"];
 const photos_per_watch = Math.min(8, Number(flag("photos") ?? 6));
 /** Units of each currency per euro (store prices are EUR). Override with --rate INR=97. */
@@ -67,7 +74,35 @@ const note = (line: string) => report.push(line);
 const COLLECTION_NAMES: Record<Collection, string> = { diver: "Diver", gmt: "GMT", chronograph: "Chronograph", classic: "Classic", sport: "Sport" };
 /** Families named with their case size, like the catalogue ("Datejust 41"). */
 const SIZED = /^(Datejust|Day-Date|Yacht-Master|Oyster Perpetual|Constellation)$/;
-const PROPER = ["Rolex", "Omega", "Panerai", "Cartier", "Tudor", "IWC", "Hublot", "Breitling", "Patek Philippe", "Audemars Piguet", "Cerachrom", "Rolesor", "Everose", "Oyster", "Jubilee", "Oysterflex", "Luminor", "Marina", "Submariner", "Daytona", "Datejust", "GMT-Master II", "Sky-Dweller", "Yacht-Master", "Constellation", "Co-Axial", "Tank"];
+const PROPER = [
+    "Rolex",
+    "Omega",
+    "Panerai",
+    "Cartier",
+    "Tudor",
+    "IWC",
+    "Hublot",
+    "Breitling",
+    "Patek Philippe",
+    "Audemars Piguet",
+    "Cerachrom",
+    "Rolesor",
+    "Everose",
+    "Oyster",
+    "Jubilee",
+    "Oysterflex",
+    "Luminor",
+    "Marina",
+    "Submariner",
+    "Daytona",
+    "Datejust",
+    "GMT-Master II",
+    "Sky-Dweller",
+    "Yacht-Master",
+    "Constellation",
+    "Co-Axial",
+    "Tank",
+];
 
 const previous: DemoStoreSource | null = existsSync(`demos/${slug}.json`) ? JSON.parse(readFileSync(`demos/${slug}.json`, "utf8")) : null;
 
@@ -100,7 +135,11 @@ for (const [i, dir] of dirs.entries()) {
     const model = [family, SIZED.test(family) && caption.size_mm ? caption.size_mm : "", caption.nickname ? `“${caption.nickname}”` : ""].filter(Boolean).join(" ");
     const collection = caption.collection ?? "classic";
 
-    let piece_slug = [brand, family, caption.reference ?? dir].join(" ").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    let piece_slug = [brand, family, caption.reference ?? dir]
+        .join(" ")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
     while (used_slugs.has(piece_slug)) piece_slug += `-${dir}`;
     used_slugs.add(piece_slug);
 
@@ -114,7 +153,7 @@ for (const [i, dir] of dirs.entries()) {
 
     // Realistic defaults for what the caption does not say.
     const guessed: string[] = [];
-    const guess = <T,>(value: T | undefined, fallback: T, label: string): T => {
+    const guess = <T>(value: T | undefined, fallback: T, label: string): T => {
         if (value !== undefined) return value;
         guessed.push(label);
         return fallback;
@@ -151,7 +190,7 @@ for (const [i, dir] of dirs.entries()) {
         price = Math.round((eur(caption.retail) * 0.92) / 50) * 50;
         price_note = `price ESTIMATED at 92% of retail (${caption.retail.amount.toLocaleString("en-IN")} ${caption.retail.currency})`;
     } else {
-        price_note = "NO PRICE: add one to the config (or it shows \"price on request\" and cannot be bought)";
+        price_note = 'NO PRICE: add one to the config (or it shows "price on request" and cannot be bought)';
     }
 
     // Description: the caption's own sentences, then condition, scope of delivery and extras.
@@ -165,7 +204,8 @@ for (const [i, dir] of dirs.entries()) {
     const description = [lead, scope, condition, extras].filter(Boolean).join(" ").replace(/\s+/g, " ");
 
     // Photos: the first one is the site's (cards, brand and collection tiles); the others are the import's.
-    const square = (src: string, out: string) => sharp(src).rotate().resize(1200, 1200, { fit: "cover", position: "centre", withoutEnlargement: true }).withIccProfile("srgb").jpeg({ quality: 82, mozjpeg: true, progressive: true }).toFile(out);
+    const square = (src: string, out: string) =>
+        sharp(src).rotate().resize(1200, 1200, { fit: "cover", position: "centre", withoutEnlargement: true }).withIccProfile("srgb").jpeg({ quality: 82, mozjpeg: true, progressive: true }).toFile(out);
     const first = `watch-${dir}.jpg`;
     await square(path.join(folder, dir, photos[0]), path.join(OUT, first));
     const import_photos: string[] = [];
@@ -183,7 +223,7 @@ for (const [i, dir] of dirs.entries()) {
             slug: piece_slug,
             brand,
             model,
-            ...(price ? { price } : {}),
+            ...(price ? { price } : { price: 99999 }),
             description,
             images: [site(first)],
             ...(import_photos.length ? { import_photos } : {}),
@@ -196,6 +236,7 @@ for (const [i, dir] of dirs.entries()) {
 }
 
 if (!built.length) {
+    console.log(built)
     console.error("No watches found (each needs a folder with photos and a caption naming a known brand).");
     process.exit(1);
 }
@@ -227,7 +268,9 @@ async function cut_out(file: string): Promise<ReturnType<typeof sharp>> {
             if (p < width * (height - 1)) stack.push(p + width);
         }
     }
-    const png = await sharp(data, { raw: { width, height, channels: 4 } }).png().toBuffer();
+    const png = await sharp(data, { raw: { width, height, channels: 4 } })
+        .png()
+        .toBuffer();
     return sharp(png).trim({ threshold: 1 });
 }
 
@@ -252,7 +295,10 @@ if (existsSync(path.join(folder, "favicon.ico"))) {
     copyFileSync(path.join(folder, "favicon.ico"), path.join(OUT, "favicon.ico"));
     favicon = site("favicon.ico");
 } else {
-    await sharp(path.join(OUT, "logo-icon.png")).resize(64, 64, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toFile(path.join(OUT, "favicon.png"));
+    await sharp(path.join(OUT, "logo-icon.png"))
+        .resize(64, 64, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+        .png()
+        .toFile(path.join(OUT, "favicon.png"));
     favicon = site("favicon.png");
 }
 
@@ -263,7 +309,10 @@ async function accent_of(file: string): Promise<string | undefined> {
     for (let i = 0; i < data.length; i += 4) {
         if (data[i + 3] < 200) continue;
         const [r, g, b] = [data[i] / 255, data[i + 1] / 255, data[i + 2] / 255];
-        const max = Math.max(r, g, b), min = Math.min(r, g, b), l = (max + min) / 2, d = max - min;
+        const max = Math.max(r, g, b),
+            min = Math.min(r, g, b),
+            l = (max + min) / 2,
+            d = max - min;
         const s = d == 0 ? 0 : d / (1 - Math.abs(2 * l - 1));
         if (s < 0.4 || l < 0.45 || l > 0.8) continue;
         const h = d == 0 ? 0 : max == r ? ((g - b) / d + 6) % 6 : max == g ? (b - r) / d + 2 : (r - g) / d + 4;
@@ -273,7 +322,17 @@ async function accent_of(file: string): Promise<string | undefined> {
     }
     const top = [...buckets.values()].sort((a, b) => b.n - a.n)[0];
     if (!top || top.n < 30) return undefined;
-    return "#" + [top.r, top.g, top.b].map((v) => Math.round(v / top.n).toString(16).padStart(2, "0")).join("").toUpperCase();
+    return (
+        "#" +
+        [top.r, top.g, top.b]
+            .map((v) =>
+                Math.round(v / top.n)
+                    .toString(16)
+                    .padStart(2, "0"),
+            )
+            .join("")
+            .toUpperCase()
+    );
 }
 const accent = await accent_of(path.join(OUT, "logo.png"));
 
@@ -308,7 +367,31 @@ const collections = Object.entries(counts)
     .map(([key, list]) => ({ key, name: COLLECTION_NAMES[key as Collection], image: list[0].piece.images[0] }));
 const brands = [...new Set(built.map((b) => brand_name(b.piece.brand)))];
 const brand_list = brands.length > 1 ? `${brands.slice(0, -1).join(", ")} and ${brands.at(-1)}` : brands[0];
-const COUNTRIES: Record<string, string> = { mumbai: "India", delhi: "India", "new delhi": "India", bangalore: "India", bengaluru: "India", hyderabad: "India", chennai: "India", kolkata: "India", pune: "India", ahmedabad: "India", dubai: "United Arab Emirates", "abu dhabi": "United Arab Emirates", istanbul: "Türkiye", "i̇stanbul": "Türkiye", london: "United Kingdom", paris: "France", berlin: "Germany", munich: "Germany", milan: "Italy", madrid: "Spain", "hong kong": "Hong Kong", singapore: "Singapore", "new york": "United States" };
+const COUNTRIES: Record<string, string> = {
+    mumbai: "India",
+    delhi: "India",
+    "new delhi": "India",
+    bangalore: "India",
+    bengaluru: "India",
+    hyderabad: "India",
+    chennai: "India",
+    kolkata: "India",
+    pune: "India",
+    ahmedabad: "India",
+    dubai: "United Arab Emirates",
+    "abu dhabi": "United Arab Emirates",
+    istanbul: "Türkiye",
+    i̇stanbul: "Türkiye",
+    london: "United Kingdom",
+    paris: "France",
+    berlin: "Germany",
+    munich: "Germany",
+    milan: "Italy",
+    madrid: "Spain",
+    "hong kong": "Hong Kong",
+    singapore: "Singapore",
+    "new york": "United States",
+};
 const where = city ? ` in ${city}` : "";
 
 const config: DemoStoreSource = {
@@ -345,4 +428,6 @@ console.log(`\n${name} → demos/${slug}.json and ${OUT}/ (${built.length} watch
 console.log(`City: ${city ?? "none found"} · WhatsApp: ${whatsapp ?? "none found"} · Instagram: ${config.instagram ?? "none (add --instagram handle)"} · Accent: ${accent ?? "store gold"}`);
 console.log(`Collections: ${collections.map((c) => `${c.name} (${counts[c.key].length})`).join(", ")}\n`);
 for (const line of report) console.log(line);
-console.log(`\nCheck the watches above (titles, prices, guessed details), then import:\n  npx tsx --conditions=react-server scripts/create-demo.ts demos/${slug}.json   (local database; add --production for the live one)\nPreview: /${locale}/${slug}`);
+console.log(
+    `\nCheck the watches above (titles, prices, guessed details), then import:\n  npx tsx --conditions=react-server scripts/create-demo.ts demos/${slug}.json   (local database; add --production for the live one)\nPreview: /${locale}/${slug}`,
+);

@@ -1,0 +1,300 @@
+{
+    "slug": "mr-watch-malaysia",
+    "locale": "en",
+    "name": "MR Watch Malaysia",
+    "accent": "#D9C47A",
+    "label": "Private demo · Prepared for MR Watch Malaysia · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for MR Watch Malaysia. Payments are in test mode; no real payment is taken.",
+    "description": "MR Watch Malaysia: pre-owned luxury watches. Rolex and Richard Mille.",
+    "logo": {
+        "src": "/demos/mr-watch-malaysia/logo.png",
+        "width": 440,
+        "height": 323
+    },
+    "logo_icon": {
+        "src": "/demos/mr-watch-malaysia/logo-icon.png",
+        "width": 192,
+        "height": 141
+    },
+    "favicon": "/demos/mr-watch-malaysia/favicon.png",
+    "hero": {
+        "title": "MR WATCH MALAYSIA",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/mr-watch-malaysia/hero-poster.jpg",
+        "desktop_image": "/demos/mr-watch-malaysia/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/mr-watch-malaysia/watch-1.jpg"
+            },
+            {
+                "key": "diver",
+                "name": "Diver",
+                "image": "/demos/mr-watch-malaysia/watch-3.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/mr-watch-malaysia/watch-4.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/mr-watch-malaysia/trade.jpg",
+    "banner": {
+        "light": "/demos/mr-watch-malaysia/banner-light.jpg",
+        "dark": "/demos/mr-watch-malaysia/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "MR Watch Malaysia is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Rolex and Richard Mille, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-1",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust with a pink dial. Watch only.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-1.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Pink",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-watch-2",
+            "brand": "rolex",
+            "model": "Watch",
+            "description": "Rolex Watch. Watch only.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-2.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-sea-dweller-3",
+            "brand": "rolex",
+            "model": "Sea-Dweller",
+            "description": "Rolex Sea-Dweller. Watch only.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-3.jpg"
+            ],
+            "collection": "diver",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-4",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "description": "Rolex Cosmograph Daytona. Watch only. Unworn.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-4.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-179174",
+            "brand": "rolex",
+            "model": "Datejust 26",
+            "description": "Rolex Datejust 26 mm, 2007. Full set with box and warranty card.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-5.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "179174",
+                "year": 2007,
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 26,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-126234",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust with a blue dial, 2026. Watch only. Unworn.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-6.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "126234",
+                "year": 2026,
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "New",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-7",
+            "brand": "rolex",
+            "model": "Datejust 28",
+            "description": "Rolex Datejust 28 mm. Watch only.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-7.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 28,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Women",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-178274",
+            "brand": "rolex",
+            "model": "Datejust 36",
+            "description": "Rolex Datejust 36 mm in 18k white gold, 2016. Full set with box and warranty card.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-8.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "178274",
+                "year": 2016,
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "caseDiameterMm": 36,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": true,
+                "papers": true
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-datejust-116234",
+            "brand": "rolex",
+            "model": "Datejust",
+            "description": "Rolex Datejust. Watch only.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-9.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "reference": "116234",
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "richard-mille-watch-10",
+            "brand": "richard mille",
+            "model": "Watch",
+            "description": "Richard Mille Watch, 2022. Watch only.",
+            "images": [
+                "/demos/mr-watch-malaysia/watch-10.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "year": 2022,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}

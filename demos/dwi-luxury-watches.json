@@ -1,0 +1,517 @@
+{
+    "slug": "dwi-luxury-watches",
+    "locale": "en",
+    "name": "DWI Luxury Watches",
+    "accent": "#CFA36D",
+    "label": "Private demo · Prepared for DWI Luxury Watches · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for DWI Luxury Watches. Payments are in test mode; no real payment is taken.",
+    "description": "DWI Luxury Watches: pre-owned luxury watches. Richard Mille, Patek Philippe, Audemars Piguet and Rolex.",
+    "logo": {
+        "src": "/demos/dwi-luxury-watches/logo.png",
+        "width": 440,
+        "height": 440
+    },
+    "logo_icon": {
+        "src": "/demos/dwi-luxury-watches/logo-icon.png",
+        "width": 192,
+        "height": 192
+    },
+    "favicon": "/demos/dwi-luxury-watches/favicon.png",
+    "hero": {
+        "title": "DWI LUXURY WATCHES",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/dwi-luxury-watches/hero-poster.jpg",
+        "desktop_image": "/demos/dwi-luxury-watches/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/dwi-luxury-watches/watch-3.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/dwi-luxury-watches/watch-5.jpg"
+            },
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/dwi-luxury-watches/watch-1.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/dwi-luxury-watches/trade.jpg",
+    "banner": {
+        "light": "/demos/dwi-luxury-watches/banner-light.jpg",
+        "dark": "/demos/dwi-luxury-watches/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "DWI Luxury Watches is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Richard Mille, Patek Philippe, Audemars Piguet and Rolex, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "slug": "richard-mille-watch-shown",
+            "brand": "richard mille",
+            "model": "Watch",
+            "price": 99999,
+            "description": "Richard Mille Watch with a blue dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-1.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "SHOWN",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Rubber strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "patek-philippe-watch-are",
+            "brand": "patek philippe",
+            "model": "Watch",
+            "price": 99999,
+            "description": "Patek philippe annual-calendar watch, classic collection, with a blue dial and blue rubber strap. exact model and reference are not confirmed. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-2.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "ARE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Rubber strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "audemars-piguet-royal-oak-3",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "price": 99999,
+            "description": "Audemars Piguet Royal Oak with a green dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-3.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Green",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "audemars-piguet-royal-oak-4",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "price": 99999,
+            "description": "Audemars Piguet Royal Oak in stainless steel with a blue dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-4.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "audemars-piguet-royal-oak-offshore-5",
+            "brand": "audemars piguet",
+            "model": "Royal Oak Offshore",
+            "price": 99999,
+            "description": "Audemars Piguet Royal Oak Offshore in stainless steel with a black dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-5.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "audemars-piguet-royal-oak-offshore-6",
+            "brand": "audemars piguet",
+            "model": "Royal Oak Offshore",
+            "price": 99999,
+            "description": "Audemars Piguet Royal Oak Offshore in stainless steel with a black dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-6.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "patek-philippe-nautilus-7",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "price": 99999,
+            "description": "Patek Philippe Nautilus in stainless steel with a brown dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-7.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Brown",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "patek-philippe-nautilus-8",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "price": 99999,
+            "description": "Patek Philippe Nautilus with a champagne dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-8.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Champagne",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "patek-philippe-watch-are-9",
+            "brand": "patek philippe",
+            "model": "Watch",
+            "price": 99999,
+            "description": "Patek Philippe Watch with a blue dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-9.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "reference": "ARE",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Rubber strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "rolex-cosmograph-daytona-10",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "price": 99999,
+            "description": "Rolex Cosmograph Daytona in stainless steel with a black dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-10.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "audemars-piguet-royal-oak-11",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "price": 99999,
+            "description": "Audemars Piguet Royal Oak with a green dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-11.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Green",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "patek-philippe-nautilus-12",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "price": 99999,
+            "description": "Patek Philippe Nautilus in stainless steel. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-12.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "audemars-piguet-royal-oak-13",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "price": 99999,
+            "description": "Audemars Piguet Royal Oak. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-13.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "patek-philippe-aquanaut-14",
+            "brand": "patek philippe",
+            "model": "Aquanaut",
+            "price": 99999,
+            "description": "Patek Philippe Aquanaut with a black dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-14.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Rubber strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "rolex-cosmograph-daytona-15",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona",
+            "price": 99999,
+            "description": "Rolex Cosmograph Daytona. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-15.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "patek-philippe-nautilus-16",
+            "brand": "patek philippe",
+            "model": "Nautilus",
+            "price": 99999,
+            "description": "Patek Philippe Nautilus in stainless steel with a blue dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-16.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "audemars-piguet-royal-oak-17",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "price": 99999,
+            "description": "Audemars Piguet Royal Oak with a blue dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-17.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "patek-philippe-aquanaut-18",
+            "brand": "patek philippe",
+            "model": "Aquanaut",
+            "price": 99999,
+            "description": "Patek Philippe Aquanaut with a black dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-18.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Rubber strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "audemars-piguet-royal-oak-19",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "price": 99999,
+            "description": "Audemars Piguet Royal Oak. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-19.jpg"
+            ],
+            "collection": "sport",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "slug": "richard-mille-chronograph-shown",
+            "brand": "richard mille",
+            "model": "Chronograph",
+            "price": 99999,
+            "description": "Richard Mille Chronograph with a black dial. Watch only.",
+            "images": [
+                "/demos/dwi-luxury-watches/watch-20.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "reference": "SHOWN",
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Rubber strap",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}

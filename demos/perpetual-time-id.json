@@ -1,0 +1,513 @@
+{
+    "slug": "perpetual-time-id",
+    "locale": "en",
+    "name": "Perpetual Time ID",
+    "accent": "#E82D39",
+    "label": "Private demo · Prepared for Perpetual Time ID · Payments in test mode",
+    "footer_note": "This page is a private demo prepared for Perpetual Time ID. Payments are in test mode; no real payment is taken.",
+    "description": "Perpetual Time ID: pre-owned luxury watches. Rolex and Audemars Piguet.",
+    "logo": {
+        "src": "/demos/perpetual-time-id/logo.png",
+        "width": 440,
+        "height": 414
+    },
+    "logo_icon": {
+        "src": "/demos/perpetual-time-id/logo-icon.png",
+        "width": 192,
+        "height": 181
+    },
+    "favicon": "/demos/perpetual-time-id/favicon.png",
+    "hero": {
+        "title": "PERPETUAL TIME ID",
+        "subtitle": "Pre-owned luxury watches",
+        "poster": "/demos/perpetual-time-id/hero-poster.jpg",
+        "desktop_image": "/demos/perpetual-time-id/hero-desktop.jpg"
+    },
+    "new_arrivals": {
+        "heading": "New Arrivals",
+        "subtext": "The latest watches to join our collection."
+    },
+    "brands_subtext": "Our selection from the world's leading watchmakers.",
+    "collections": {
+        "heading": "Collections",
+        "subtext": "Explore our watches by collection.",
+        "items": [
+            {
+                "key": "classic",
+                "name": "Classic",
+                "image": "/demos/perpetual-time-id/watch-4.jpg"
+            },
+            {
+                "key": "chronograph",
+                "name": "Chronograph",
+                "image": "/demos/perpetual-time-id/watch-1.jpg"
+            },
+            {
+                "key": "gmt",
+                "name": "GMT",
+                "image": "/demos/perpetual-time-id/watch-9.jpg"
+            },
+            {
+                "key": "diver",
+                "name": "Diver",
+                "image": "/demos/perpetual-time-id/watch-2.jpg"
+            },
+            {
+                "key": "sport",
+                "name": "Sport",
+                "image": "/demos/perpetual-time-id/watch-5.jpg"
+            }
+        ]
+    },
+    "trade_image": "/demos/perpetual-time-id/trade.jpg",
+    "banner": {
+        "light": "/demos/perpetual-time-id/banner-light.jpg",
+        "dark": "/demos/perpetual-time-id/banner-dark.jpg"
+    },
+    "store": {
+        "address": {
+            "street": "",
+            "postcode": "",
+            "city": "",
+            "country": ""
+        },
+        "opening_hours": {
+            "monday": "11:00 – 20:00",
+            "tuesday": "11:00 – 20:00",
+            "wednesday": "11:00 – 20:00",
+            "thursday": "11:00 – 20:00",
+            "friday": "11:00 – 20:00",
+            "saturday": "11:00 – 20:00",
+            "sunday": ""
+        },
+        "about": "Perpetual Time ID is a dealer of pre-owned luxury watches. Every watch is inspected before it is offered: authenticity, movement and condition are checked one by one, and most come as full sets with box and papers.\n\nWe specialise in Rolex and Audemars Piguet, and we can help you find a specific model."
+    },
+    "pieces": [
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-1",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona “Panda”",
+            "description": "The Oyster perpetual cosmograph Daytona is designed for those with a passion for driving and speed. synonymous with excellence and reliability, Rolex watches are designed for everyday wear, and depending on the model, perfectly suited for a wide range of sports and other activities. built to last, these timepieces are characterized by their distinctive and timeless aesthetics. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-1.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-submariner-date-2",
+            "brand": "audemars piguet",
+            "model": "Submariner Date “Hulk”",
+            "description": "Audemars Piguet Submariner Date with a black dial, 2010. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-2.jpg"
+            ],
+            "collection": "diver",
+            "dial": "Black",
+            "details": {
+                "year": 2010,
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 300,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-day-date-4",
+            "brand": "rolex",
+            "model": "Day-Date",
+            "description": "The Oyster perpetual day-date 40 in 18 kt white gold with an olive green dial, fluted bezel and a president bracelet. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-4.jpg"
+            ],
+            "collection": "classic",
+            "dial": "White",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "braceletMaterial": "President bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-royal-oak-15510st",
+            "brand": "audemars piguet",
+            "model": "Royal Oak",
+            "description": "This 15510st 41 mm royal oak selfwinding endowed with the collection’s latest ergonomic design evolution marries stainless steel with an elegant green “grande tapisserie” pattern, white gold applied hour-markers and royal oak hands with luminescent coating. stainless steel bracelet with ap folding clasp. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-5.jpg"
+            ],
+            "collection": "sport",
+            "dial": "Green",
+            "details": {
+                "reference": "15510ST",
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-datejust-6",
+            "brand": "audemars piguet",
+            "model": "Datejust",
+            "description": "The dial is entirely coated with lacquer, a first for an ombré dial since the reintroduction of this design to the brand’s catalogue in 2019. Green lacquer is applied to the base plate, then, as with all ombré dials, the colour gradient is created by spraying black lacquer in concentric motions. the white inscriptions stand out particularly clearly, featuring chromalight index hour markers. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-6.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Black",
+            "details": {
+                "year": 2019,
+                "movement": "Automatic",
+                "caseMaterial": "Steel & White Gold",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-8",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona “Panda”",
+            "description": "The Oyster perpetual cosmograph Daytona is designed for those with a passion for driving and speed. synonymous with excellence and reliability, Rolex watches are designed for everyday wear, and depending on the model, perfectly suited for a wide range of sports and other activities. built to last, these timepieces are characterized by their distinctive and timeless aesthetics. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-8.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-9",
+            "brand": "rolex",
+            "model": "GMT-Master II “Pepsi”",
+            "description": "This model features a black dial and a two-colour Cerachrom bezel insert in blue and red ceramic. designed to show the time in two different time zones simultaneously during intercontinental flights, the GMT-Master II has come to be recognized for its robustness and versatile appearance. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-9.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-watch-11",
+            "brand": "audemars piguet",
+            "model": "Watch",
+            "description": "The land-dweller 40 in oystersteel and white gold with an intense white, honeycomb-motif dial and flat Jubilee bracelet. Specially designed for this watch, the flat Jubilee bracelet is a reinterpretation of the emblematic Jubilee bracelet. the flat Jubilee differs in that all the links are flat, and it merges seamlessly with the Oyster case to form a balanced, harmonious whole, with the alternation of polished and technical satin finishings. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-11.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Steel & White Gold",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-watch-12",
+            "brand": "audemars piguet",
+            "model": "Watch",
+            "description": "Audemars Piguet Watch with a black dial. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-12.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-watch-13",
+            "brand": "audemars piguet",
+            "model": "Watch",
+            "description": "Audemars Piguet Watch 41 mm. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-13.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "caseDiameterMm": 41,
+                "braceletMaterial": "Steel bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-watch-14",
+            "brand": "audemars piguet",
+            "model": "Watch “Ice Blue”",
+            "description": "The land-dweller 40 in platinum with an ice-blue, honeycomb-motif dial and flat Jubilee bracelet. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-14.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Blue",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Stainless Steel",
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-15",
+            "brand": "rolex",
+            "model": "GMT-Master II “Batman”",
+            "description": "This model features a black dial and a two-colour Cerachrom bezel insert in blue and black ceramic. designed to show the time in two different time zones simultaneously during intercontinental flights, the GMT-Master II has come to be recognized for its robustness and versatile appearance. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-15.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Jubilee bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-cosmograph-daytona-16",
+            "brand": "rolex",
+            "model": "Cosmograph Daytona “Panda”",
+            "description": "The Oyster perpetual cosmograph Daytona is designed for those with a passion for driving and speed. synonymous with excellence and reliability, Rolex watches are designed for everyday wear, and depending on the model, perfectly suited for a wide range of sports and other activities. built to last, these timepieces are characterized by their distinctive and timeless aesthetics. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-16.jpg"
+            ],
+            "collection": "chronograph",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "rolex-gmt-master-ii-17",
+            "brand": "rolex",
+            "model": "GMT-Master II “Batman”",
+            "description": "This model features a black dial and a two-colour Cerachrom bezel insert in blue and black ceramic. designed to show the time in two different time zones simultaneously during intercontinental flights, the GMT-Master II has come to be recognized for its robustness and versatile appearance. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-17.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "Oystersteel",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 100,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-gmt-master-ii-18",
+            "brand": "audemars piguet",
+            "model": "GMT-Master II “Rootbeer”",
+            "description": "The Oyster perpetual GMT-Master II in 18 ct Everose gold with a black dial and an Oyster bracelet. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-18.jpg"
+            ],
+            "collection": "gmt",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-day-date-lections",
+            "brand": "audemars piguet",
+            "model": "Day-Date “Sundust”",
+            "description": "The Oyster perpetual day-date 40 in 18 kt Everose gold, with a Sundust, diamond-set dial, diamond-set bezel and a president bracelet. This dial features 10 baguette-cut diamonds. the sunray finish creates delicate light reflections on many dials in the Oyster perpetual collection. it is obtained using masterful brushing techniques that create grooves running outwards from the centre of the dial. Light is diffused consistently along each engraving, creating a characteristic subtle glow that moves depending on the position of the wrist. once the sunray finish has been completed, the dial colour is applied using physical vapour deposition or electroplating. a light coat of varnish gives the dial its final look. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-19.jpg"
+            ],
+            "collection": "classic",
+            "dial": "Sundust Diamond",
+            "details": {
+                "reference": "LECTIONS",
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "President bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-cosmograph-daytona-20",
+            "brand": "audemars piguet",
+            "model": "Cosmograph Daytona",
+            "description": "Audemars Piguet Cosmograph Daytona in 18k white gold with a black dial. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-20.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Black",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k White Gold",
+                "braceletMaterial": "Oysterflex bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-cosmograph-daytona-21",
+            "brand": "audemars piguet",
+            "model": "Cosmograph Daytona “Sundust”",
+            "description": "Audemars Piguet Cosmograph Daytona in 18k rose gold with a sundust dial. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-21.jpg"
+            ],
+            "collection": "chronograph",
+            "dial": "Sundust",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "braceletMaterial": "Oyster bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        },
+        {
+            "price": 99999,
+            "slug": "audemars-piguet-watch-22",
+            "brand": "audemars piguet",
+            "model": "Watch",
+            "description": "Audemars Piguet Watch 40 mm in 18k rose gold. Watch only.",
+            "images": [
+                "/demos/perpetual-time-id/watch-22.jpg"
+            ],
+            "collection": "classic",
+            "details": {
+                "movement": "Automatic",
+                "caseMaterial": "18k Rose Gold",
+                "caseDiameterMm": 40,
+                "braceletMaterial": "Oysterflex bracelet",
+                "waterResistanceM": 50,
+                "condition": "Pre-Owned",
+                "gender": "Men",
+                "box": false,
+                "papers": false
+            }
+        }
+    ]
+}
