@@ -20,18 +20,16 @@ export async function save_visit(request: NextRequest) {
     let demo_name = request.nextUrl.pathname.split("/")[2];
 
     if (!ref && demo_name && (await (await private_demos_collection()).findOne({ slug: demo_name }))) ref = demo_name;
-    else return console.log("NAW NOT FOUND LEAD: ", demo_name);
-
-    console.log("bodies on bodies");
+    else return;
 
     const agent = request.headers.get("user-agent") ?? "";
 
     const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || request.headers.get("x-real-ip") || "";
     const ip_hash = hash_ip(ip);
 
+    track_visit();
+    
     const collection = await visitors_collection();
-
-    track_visit(request);
     if (ip_hash && (await collection.findOneAndUpdate({ ip_hash }, { $inc: { visits: 1 } }))) return;
 
     const visitor: Visitor = {

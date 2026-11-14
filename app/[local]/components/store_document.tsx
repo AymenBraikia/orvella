@@ -7,6 +7,7 @@ import { getDirection } from "@/i18n/direction";
 import AuthGate from "@/app/components/AuthGate";
 import "../globals.css";
 import AnalyticsTracker from "./analytics/tracker";
+import AnalyticsOneTime from "./analytics/one_time";
 
 /**
  * The storefront's document: fonts, theme, translations, and the header, footer and cart around the
@@ -20,6 +21,7 @@ export default async function StoreDocument({ local, fonts, forced_theme, accent
         <html lang={local} dir={direction} className={`${fonts} h-full antialiased`} suppressHydrationWarning>
             <body className="font-sans" style={accent ? ({ "--clr-gold": accent } as React.CSSProperties) : undefined}>
                 <Analytics />
+                <AnalyticsOneTime />
                 <AnalyticsTracker />
                 <SpeedInsights />
                 <NextIntlClientProvider messages={await client_messages(SITE_CLIENT_NAMESPACES)}>

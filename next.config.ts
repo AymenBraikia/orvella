@@ -6,10 +6,19 @@ import createNextIntlPlugin from "next-intl/plugin";
 const WHY_MEDIA = ["dashboard.mp4", "dashboard-poster.webp", "shot-overview.webp", "shot-order.webp", "shot-product.webp", "shot-lead.webp"];
 
 // Private lead demos (demos/<slug>.json, shown at /<locale>/<slug>): never indexed, pages and files alike.
-const LEAD_DEMOS = existsSync("demos") ? readdirSync("demos").filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -".json".length)) : [];
+const LEAD_DEMOS = existsSync("demos")
+    ? readdirSync("demos")
+          .filter((f) => f.endsWith(".json"))
+          .map((f) => f.slice(0, -".json".length))
+    : [];
 const NO_INDEX = [{ key: "X-Robots-Tag", value: "noindex, nofollow" }];
 
 const nextConfig: NextConfig = {
+    logging: {
+        browserToTerminal: "error",
+        incomingRequests: false,
+        serverFunctions: false,
+    },
     env: {
         // Lets the browser pick the upload path: Vercel Blob with a read-write token, Vercel Blob through presigned
         // URLs (newer stores, BLOB_STORE_ID only), or the dev-only local driver.

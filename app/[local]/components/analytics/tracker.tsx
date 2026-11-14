@@ -1,24 +1,19 @@
 "use client";
 
 import { useEffect } from "react";
-import { useParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const ENDPOINT = "/api/analytics/track";
-const CHECKPOINT_INTERVAL = 15_000;
+const CHECKPOINT_INTERVAL = 5e3;
 
 export default function AnalyticsTracker() {
-    const params = useParams<{ name: string }>();
     const pathname = usePathname();
 
-    const name = params.name;
+    const name = pathname.split("/")[2];
+    let clicks = 0;
 
     useEffect(() => {
         if (!name || !pathname) return;
-
-        // One session per browser tab.
-        let sessionId = sessionStorage.getItem("analytics_session_id");
-
-        if (!sessionId) return;
 
         let active = document.visibilityState === "visible";
         let lastTick = performance.now();
@@ -45,10 +40,10 @@ export default function AnalyticsTracker() {
 
             const payload = {
                 name,
-                sessionId,
                 path: pathname,
                 time_spent_seconds: duration,
                 scroll_y: maxScrollY,
+                clicks,
             };
 
             elapsed = 0;
@@ -95,6 +90,9 @@ export default function AnalyticsTracker() {
         }
 
         window.addEventListener("scroll", handleScroll, {
+            passive: true,
+        });
+        window.addEventListener("click", () => clicks++, {
             passive: true,
         });
 

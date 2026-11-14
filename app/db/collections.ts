@@ -17,8 +17,6 @@ let client: MongoClient | null = null;
 
 export async function db() {
     if (!client) {
-        console.clear();
-        console.log("Connecting to db...");
         client = await clientPromise;
         return client.db("orvella");
     } else return client.db("orvella");

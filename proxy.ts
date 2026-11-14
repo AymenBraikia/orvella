@@ -2,12 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 import { verifyJwt } from "./app/[local]/(auth)/auth/jwt";
-import { sanitizeRef } from "./i18n/brand";
 import { demo_slug_of } from "@/app/(site)/lib/private_demo_slugs";
-import { DEMO_MODE, DISABLE_DZ } from "@/app/(site)/lib/demo";
-import { save_visit } from "./app/server/save_visit";
+import { DISABLE_DZ } from "@/app/(site)/lib/demo";
 import { country_to_currency } from "@/app/(site)/lib/price_format";
 import { Supported_Countries, Supported_Currencies } from "./currency";
+import { createHmac } from "crypto";
 
 const handleI18nRouting = createMiddleware(routing);
 
@@ -72,17 +71,28 @@ export default function proxy(request: NextRequest) {
     if (DISABLE_DZ && (request.headers.get("x-vercel-ip-country") || request.headers.get("cf-ipcountry") || "").toUpperCase() == "DZ") {
         console.log("skipped algerian ip");
         return response;
+    } else if (!request.cookies.get("i")?.value) {
+        const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || request.headers.get("x-real-ip") || "";
+        
+
+        if (ip)
+            response.cookies.set("ip", ip, {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === "production",
+                sameSite: "lax",
+                path: "/",
+            });
     }
 
-    if (DEMO_MODE) {
-        const ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
-        if (ref) {
-            response.cookies.set("ref", ref, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
-            if (process.env.NODE_ENV == "production") save_visit(request);
-        } else if (request.nextUrl.searchParams.has("ref")) {
-            response.cookies.delete("ref");
-        } else if (request.nextUrl.pathname.split("/")[2]) save_visit(request);
-    }
+    // if (DEMO_MODE) {
+    //     const ref = sanitizeRef(request.nextUrl.searchParams.get("ref"));
+    //     if (ref) {
+    //         response.cookies.set("ref", ref, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
+    //         if (process.env.NODE_ENV == "production") save_visit(request);
+    //     } else if (request.nextUrl.searchParams.has("ref")) {
+    //         response.cookies.delete("ref");
+    //     } else if (request.nextUrl.pathname.split("/")[2]) save_visit(request);
+    // }
 
     return response;
 }

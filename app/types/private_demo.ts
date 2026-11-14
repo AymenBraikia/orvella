@@ -127,8 +127,8 @@ interface visit {
         height: number;
         os: string;
     };
-    local_date: Date;
+    local_date?: Date;
     network: { ip: string; isp: string; country: string };
 
-    visited_paths: { path: string; time_spent_seconds: number; scroll_y: number }[];
+    visited_paths: { path: string; time_spent_seconds: number; scroll_y: number; clicks: number }[];
 }

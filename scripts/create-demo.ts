@@ -118,12 +118,12 @@ for (const piece of pieces) {
 console.log(
     `Saved. ${pieces.length} pieces, ${pieces.reduce((n, p) => n + p.photos.length, 0)} photos, all readable. Live at /${spec.slug}${existing && !existing.enabled ? " once you enable it in the admin" : ""}; the store shows the changes from the next visit to that link.`,
 );
-
+console.log(spec_path);
 //creating visitor data
 const data: PrivateDemoData = {
-    name: spec_path.replace(".json", ""),
+    name: spec_path.replace(".json", "").replace("demos/", ""),
     pieces: pieces.length,
-    link: `https://corlane.store/${spec_path.replace(".json", "")}`,
+    link: `https://corlane.store/${spec_path.replace(".json", "").replace("demos/", "")}`,
     date: new Date(),
     visited: false,
     visits: [],

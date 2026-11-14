@@ -1,11 +1,15 @@
 import { collected_data_collection } from "@/app/db/collections";
+import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
     try {
-        const { name, sessionId, path, time_spent_seconds, scroll_y } = await req.json();
+        const cookieStore = await cookies();
+        const sessionId = cookieStore.get("analytics_session_id")?.value;
+
+        const { name, path, time_spent_seconds, scroll_y, clicks } = await req.json();
 
         // Validate payload
         if (
@@ -22,7 +26,9 @@ export async function POST(req: NextRequest) {
             time_spent_seconds <= 0 ||
             time_spent_seconds > 1800 ||
             !Number.isFinite(scroll_y) ||
-            scroll_y < 0
+            scroll_y < 0 ||
+            typeof clicks != "number" ||
+            clicks < 0
         ) {
             return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
         }
@@ -105,6 +111,14 @@ export async function POST(req: NextRequest) {
                                                                                                             $ifNull: ["$$p.scroll_y", 0],
                                                                                                         },
                                                                                                         { $literal: scroll_y },
+                                                                                                    ],
+                                                                                                },
+                                                                                                clicks: {
+                                                                                                    $max: [
+                                                                                                        {
+                                                                                                            $ifNull: ["$$p.clicks", 0],
+                                                                                                        },
+                                                                                                        { $literal: clicks },
                                                                                                     ],
                                                                                                 },
                                                                                             },
