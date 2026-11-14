@@ -15,7 +15,7 @@ export async function track_visit(
     const cookiesStore = await cookies();
     const session_id = cookiesStore.get("analytics_session_id")?.value;
 
-    if (session_id) return
+    if (session_id) return;
 
     const new_session_id = crypto.randomUUID();
 
@@ -26,12 +26,14 @@ export async function track_visit(
         path: "/",
     });
 
-    const ip = cookiesStore.get("ip")?.value || "";
+    const ip = process.env.NODE_ENV == "production" ? cookiesStore.get("ip")?.value || "" : (await (await fetch("https://api.ipify.org?format=json")).json()).ip;
+    console.clear();
 
     const network = await get_ip_info(ip);
+    console.log(ip, network);
 
     if (name && network) {
-        await (
+        const operation = await (
             await collected_data_collection()
         ).updateOne(
             { name },
@@ -48,6 +50,7 @@ export async function track_visit(
                 $set: { visited: true },
             },
         );
+        console.log("SHOULD UPDATE: ", operation.modifiedCount);
     }
 }
 
