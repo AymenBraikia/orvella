@@ -8,16 +8,16 @@
     "footer_note": "This page is a private demo prepared for Curated Luxury Watches. Payments are in test mode; no real payment is taken.",
     "description": "Curated Luxury Watches: pre-owned luxury watches in Available Now At Timescorner.. Rolex, Audemars Piguet, Vacheron Constantin and Patek Philippe.",
     "logo": {
-        "src": "/demos/curated-luxury-watches/logo.png",
-        "width": 440,
-        "height": 239
+        "src": "/logo.svg",
+        "width": 200,
+        "height": 150
     },
     "logo_icon": {
-        "src": "/demos/curated-luxury-watches/logo-icon.png",
-        "width": 192,
-        "height": 104
+        "src": "/logo_simple.svg",
+        "width": 100,
+        "height": 100
     },
-    "favicon": "/demos/curated-luxury-watches/favicon.png",
+    "favicon": "/favicon.ico",
     "hero": {
         "title": "CURATED LUXURY WATCHES",
         "subtitle": "Pre-owned luxury watches in Available Now At Timescorner.",

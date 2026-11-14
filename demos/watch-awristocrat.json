@@ -7,16 +7,16 @@
     "footer_note": "This page is a private demo prepared for Watch Awristocrat. Payments are in test mode; no real payment is taken.",
     "description": "Watch Awristocrat: pre-owned luxury watches. Grand Seiko, Cartier, Rolex, Audemars Piguet and Patek Philippe.",
     "logo": {
-        "src": "/demos/watch-awristocrat/logo.png",
-        "width": 440,
-        "height": 440
+        "src": "/logo.svg",
+        "width": 200,
+        "height": 150
     },
     "logo_icon": {
-        "src": "/demos/watch-awristocrat/logo-icon.png",
-        "width": 192,
-        "height": 192
+        "src": "/logo_simple.svg",
+        "width": 100,
+        "height": 100
     },
-    "favicon": "/demos/watch-awristocrat/favicon.png",
+    "favicon": "/favicon.ico",
     "hero": {
         "title": "WATCH AWRISTOCRAT",
         "subtitle": "Pre-owned luxury watches",

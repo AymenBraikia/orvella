@@ -7,16 +7,16 @@
     "footer_note": "This page is a private demo prepared for DWI Luxury Watches. Payments are in test mode; no real payment is taken.",
     "description": "DWI Luxury Watches: pre-owned luxury watches. Richard Mille, Patek Philippe, Audemars Piguet and Rolex.",
     "logo": {
-        "src": "/demos/dwi-luxury-watches/logo.png",
-        "width": 440,
-        "height": 440
+        "src": "/logo.svg",
+        "width": 200,
+        "height": 150
     },
     "logo_icon": {
-        "src": "/demos/dwi-luxury-watches/logo-icon.png",
-        "width": 192,
-        "height": 192
+        "src": "/logo_simple.svg",
+        "width": 100,
+        "height": 100
     },
-    "favicon": "/demos/dwi-luxury-watches/favicon.png",
+    "favicon": "/favicon.ico",
     "hero": {
         "title": "DWI LUXURY WATCHES",
         "subtitle": "Pre-owned luxury watches",
