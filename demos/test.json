@@ -2,19 +2,18 @@
     "slug": "test",
     "locale": "en",
     "name": "Test",
-    "accent": "#CFA36D",
     "label": "Private demo · Prepared for Test · Payments in test mode",
     "footer_note": "This page is a private demo prepared for Test. Payments are in test mode; no real payment is taken.",
     "description": "Test: pre-owned luxury watches. Richard Mille, Patek Philippe, Audemars Piguet and Rolex.",
     "logo": {
         "src": "/demos/test/logo.png",
-        "width": 440,
-        "height": 440
+        "width": 324,
+        "height": 340
     },
     "logo_icon": {
         "src": "/demos/test/logo-icon.png",
         "width": 192,
-        "height": 192
+        "height": 201
     },
     "favicon": "/demos/test/favicon.png",
     "hero": {
