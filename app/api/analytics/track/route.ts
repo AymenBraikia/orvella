@@ -11,14 +11,13 @@ export async function POST(req: NextRequest) {
 
         const { name, path, time_spent_seconds, scroll_y, clicks } = await req.json();
 
+        if (!sessionId || req.cookies.get("bot")?.value === "1") return new NextResponse(null, { status: 204 });
+
         // Validate payload
         if (
             typeof name !== "string" ||
             !name ||
             name.length > 200 ||
-            typeof sessionId !== "string" ||
-            !sessionId ||
-            sessionId.length > 100 ||
             typeof path !== "string" ||
             !path.startsWith("/") ||
             path.length > 2048 ||

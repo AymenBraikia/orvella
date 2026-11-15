@@ -10,10 +10,10 @@ export default function AnalyticsTracker() {
     const pathname = usePathname();
 
     const name = pathname.split("/")[2];
-    let clicks = 0;
 
     useEffect(() => {
         if (!name || !pathname) return;
+        let clicks = 0;
 
         let active = document.visibilityState === "visible";
         let lastTick = performance.now();
